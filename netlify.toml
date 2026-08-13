@@ -1,0 +1,16 @@
+# Netlify-Build-Konfiguration für KlarWerk Service (Vite + React SPA)
+# Netlify liest diese Datei beim Import automatisch – keine manuelle Eingabe nötig.
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# SPA-Fallback: alle Routen an index.html (React Router übernimmt das Routing).
+# (Dupliziert public/_redirects zur Sicherheit; schadet nicht.)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

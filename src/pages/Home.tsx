@@ -1,0 +1,314 @@
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { ArrowRight, MapPin } from 'lucide-react';
+import AnimatedSection from '../components/ui/AnimatedSection';
+import ServiceCard from '../components/ui/ServiceCard';
+import ServiceImage from '../components/ui/ServiceImage';
+import FAQAccordion from '../components/ui/FAQAccordion';
+import CTASection from '../components/ui/CTASection';
+import EquipmentSection from '../components/ui/EquipmentSection';
+import GoogleReviewsCarousel from '../components/ui/GoogleReviewsCarousel';
+import BranchenSection from '../components/ui/BranchenSection';
+import SEO from '../components/SEO';
+import { featuredServices } from '../data/services';
+import { cities as cityData } from '../data/cities';
+import { seoConfig } from '../config/seoConfig';
+
+const stats = [
+  { value: '756+', label: 'Erfolgreiche Einsätze' },
+  { value: '365 Tage', label: 'Erreichbar nach Vereinbarung' },
+  { value: '17+', label: 'Spezialisierte Leistungen' },
+  { value: '100%', label: 'Kundenzufriedenheit' },
+];
+
+const advantages = [
+  { title: 'Zuverlässiger Service', desc: 'Pünktlich, sorgfältig und immer gemäß Vereinbarung – darauf können Sie sich verlassen.' },
+  { title: 'Flexible Terminplanung', desc: 'Wir passen uns Ihrem Zeitplan an. Morgens, abends oder am Wochenende – kein Problem.' },
+  { title: 'Professionelle Qualität', desc: 'Geschultes Personal und modernes Equipment für erstklassige Ergebnisse.' },
+  { title: 'Persönlicher Ansprechpartner', desc: 'Ein fester Kontakt für alle Anliegen – schnell, direkt und unkompliziert.' },
+];
+
+const processSteps = [
+  { num: '01', title: 'Kontakt aufnehmen', desc: 'Kurze Anfrage per Telefon, E-Mail oder Kontaktformular genügt.' },
+  { num: '02', title: 'Besichtigung & Beratung', desc: 'Kostenlose Vor-Ort-Besichtigung und individuelle Beratung.' },
+  { num: '03', title: 'Individuelles Angebot', desc: 'Transparentes Angebot auf Basis Ihrer Anforderungen.' },
+  { num: '04', title: 'Professionelle Reinigung', desc: 'Wir kümmern uns zuverlässig um alles Weitere.' },
+];
+
+const cities = cityData.map((c) => ({ name: c.name, slug: c.slug }));
+
+const faqs = [
+  { question: 'In welchen Regionen sind Sie tätig?', answer: 'KlarWerk Service ist von seinem Sitz in Bordesholm aus schwerpunktmäßig in Schleswig-Holstein tätig – insbesondere in Kiel, Neumünster, Rendsburg, Preetz und Umgebung. Darüber hinaus sind wir in Hamburg im Einsatz.' },
+  { question: 'Für welche Kunden bieten Sie Reinigungsleistungen an?', answer: 'Wir betreuen Unternehmen, medizinische Praxen, Büros, Wohn- und Geschäftshäuser sowie private Immobilien. Unser Angebot richtet sich an gewerbliche und private Kunden gleichermaßen.' },
+  { question: 'Wie schnell erhalte ich ein Angebot?', answer: 'Nach Ihrer Anfrage und einer kurzen Besichtigung vor Ort erhalten Sie innerhalb von 24 Stunden ein individuelles und transparentes Angebot.' },
+  { question: 'Sind Ihre Mitarbeiter versichert?', answer: 'Ja, alle unsere Mitarbeiter sind sozialversicherungspflichtig beschäftigt und vollständig haftpflichtversichert. Sie können sich auf verlässliche und sichere Dienstleistungen verlassen.' },
+  { question: 'Bieten Sie auch Einmalreinigungen an?', answer: 'Ja. Neben regelmäßigen Reinigungsverträgen führen wir auch Einmalreinigungen durch, z.B. Grundreinigungen, Entrümpelungen oder saisonale Reinigungen.' },
+  { question: 'Wie werden die Preise berechnet?', answer: 'Preise richten sich nach Fläche, Häufigkeit, Art der Leistung und besonderen Anforderungen. Nach einer kostenfreien Besichtigung erhalten Sie einen Festpreis ohne versteckte Kosten.' },
+];
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({
+    '@type': 'Question',
+    name: f.question,
+    acceptedAnswer: { '@type': 'Answer', text: f.answer },
+  })),
+};
+
+export default function Home() {
+  return (
+    <div className="bg-white">
+      <SEO
+        {...seoConfig['/']}
+        keywords="Gebäudereinigung, Büroreinigung, Glasreinigung, Hausmeisterservice, Reinigungsfirma, Schleswig-Holstein, Kiel, Hamburg"
+        jsonLd={jsonLd}
+      />
+
+      {/* ── 1 HERO ─────────────────────────────────────────────────────────── */}
+      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <p className="text-sm font-semibold text-navy-900 uppercase tracking-widest mb-5">
+                Gebäudereinigung &amp; Gebäudeservice
+              </p>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-slate-900 leading-[1.1]">
+                Professionelle Reinigungslösungen für Unternehmen und Immobilien.
+              </h1>
+              <p className="mt-6 text-lg text-slate-500 leading-relaxed max-w-xl">
+                Zuverlässig, flexibel und persönlich betreut. Wir reinigen und pflegen
+                Bürogebäude, Praxen, Wohnanlagen und Geschäftsobjekte in Schleswig-Holstein,
+                Hamburg und NRW.
+              </p>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <Link to="/kontakt" className="btn-primary">
+                  Kostenloses Angebot
+                  <ArrowRight size={16} />
+                </Link>
+                <Link to="/leistungen" className="btn-secondary">
+                  Leistungen ansehen
+                </Link>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <img
+                src="/Kein_Titel_(1080_x_1080_px).png"
+                alt="Professionelle Gebäudereinigung durch KlarWerk Service in Schleswig-Holstein"
+                width={1080}
+                height={1080}
+                fetchPriority="high"
+                decoding="async"
+                className="rounded-2xl h-[420px] lg:h-[520px] w-full object-cover shadow-xl shadow-slate-900/10"
+              />
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── 2 VERTRAUENSZAHLEN ─────────────────────────────────────────────── */}
+      <section className="bg-navy-950 py-14">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+            {stats.map((s, i) => (
+              <AnimatedSection key={s.label} delay={i * 0.07}>
+                <p className="text-4xl font-black text-white">{s.value}</p>
+                <p className="mt-1.5 text-sm text-slate-400">{s.label}</p>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── 3 LEISTUNGEN ───────────────────────────────────────────────────── */}
+      <section id="leistungen" className="py-28 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <AnimatedSection>
+            <span className="text-navy-700 text-sm font-semibold uppercase tracking-widest">
+              Leistungen
+            </span>
+            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mt-3">
+              <h2 className="text-4xl md:text-5xl font-black tracking-tight">Unsere Leistungen</h2>
+              <Link
+                to="/leistungen"
+                className="inline-flex items-center gap-1.5 text-sm font-semibold text-navy-900 hover:gap-2.5 transition-all shrink-0"
+              >
+                Alle Leistungen <ArrowRight size={15} />
+              </Link>
+            </div>
+            <p className="mt-4 text-slate-500 text-lg max-w-2xl">
+              Individuelle Reinigungslösungen für private und gewerbliche Kunden in
+              Schleswig-Holstein, Hamburg und NRW.
+            </p>
+          </AnimatedSection>
+          <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {featuredServices.map((service, i) => (
+              <AnimatedSection key={service.id} delay={i * 0.07}>
+                <ServiceCard service={service} />
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── 4 BRANCHEN & ZIELGRUPPEN ───────────────────────────────────────── */}
+      <BranchenSection />
+
+      {/* ── 5 WARUM KLARWERK ───────────────────────────────────────────────── */}
+      <section className="py-28 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <AnimatedSection>
+              <ServiceImage
+                src="/Design_ohne_Titel.png"
+                alt="Warum KlarWerk Service"
+                className="rounded-3xl h-[480px] w-full"
+                imgClassName="shadow-xl shadow-slate-900/10"
+              />
+            </AnimatedSection>
+            <AnimatedSection delay={0.1}>
+              <span className="text-navy-700 text-sm font-semibold uppercase tracking-widest">
+                Warum wir
+              </span>
+              <h2 className="text-4xl md:text-5xl font-black mt-3 tracking-tight">
+                Warum KlarWerk Service?
+              </h2>
+              <p className="mt-5 text-slate-600 leading-relaxed">
+                Wir verstehen Gebäudereinigung als professionellen Service – nicht als bloße
+                Dienstleistung. Qualität, Zuverlässigkeit und persönliche Betreuung stehen bei
+                uns an erster Stelle.
+              </p>
+              <div className="mt-8 space-y-5">
+                {advantages.map((a) => (
+                  <div key={a.title} className="flex gap-4">
+                    <div className="w-2 h-2 rounded-full bg-navy-700 mt-2 shrink-0" />
+                    <div>
+                      <h4 className="font-bold text-slate-900">{a.title}</h4>
+                      <p className="mt-1 text-sm text-slate-600 leading-relaxed">{a.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <Link
+                to="/kontakt"
+                className="mt-10 inline-flex items-center gap-2 bg-navy-900 hover:bg-navy-800 text-white font-semibold px-7 py-3.5 rounded-xl text-sm transition-all duration-300 hover:-translate-y-0.5"
+              >
+                Kostenloses Angebot anfordern <ArrowRight size={15} />
+              </Link>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
+      {/* ── 6 PROFESSIONELLE AUSSTATTUNG ───────────────────────────────────── */}
+      <EquipmentSection />
+
+      {/* ── 8 ABLAUF DER ZUSAMMENARBEIT ────────────────────────────────────── */}
+      <section className="py-28 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-6">
+          <AnimatedSection>
+            <span className="text-navy-700 text-sm font-semibold uppercase tracking-widest">
+              Ablauf
+            </span>
+            <h2 className="text-4xl md:text-5xl font-black mt-3 tracking-tight">
+              So funktioniert die Zusammenarbeit
+            </h2>
+            <p className="mt-4 text-slate-500 text-lg max-w-2xl">
+              In vier einfachen Schritten zu einem sauberen Ergebnis – unkompliziert und transparent.
+            </p>
+          </AnimatedSection>
+          <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {processSteps.map((step, i) => (
+              <AnimatedSection key={step.num} delay={i * 0.09}>
+                <div className="relative bg-white border border-slate-100 rounded-2xl p-7 hover:border-navy-100 hover:shadow-md transition-all h-full">
+                  <span className="text-5xl font-black text-slate-100 leading-none">
+                    {step.num}
+                  </span>
+                  <h3 className="mt-3 font-bold text-slate-900">{step.title}</h3>
+                  <p className="mt-2 text-sm text-slate-500 leading-relaxed">{step.desc}</p>
+                  {i < processSteps.length - 1 && (
+                    <div className="hidden lg:flex absolute top-10 -right-3 z-10 w-6 h-6 bg-white rounded-full border border-slate-100 items-center justify-center">
+                      <ArrowRight size={12} className="text-slate-400" />
+                    </div>
+                  )}
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── 9 KUNDENBEWERTUNGEN ────────────────────────────────────────────── */}
+      <GoogleReviewsCarousel />
+
+      {/* ── 10 EINSATZGEBIET ───────────────────────────────────────────────── */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <AnimatedSection>
+            <span className="text-navy-700 text-sm font-semibold uppercase tracking-widest">
+              Einsatzgebiet
+            </span>
+            <h2 className="text-4xl font-black mt-3 tracking-tight">Unser Einsatzgebiet</h2>
+            <p className="mt-4 text-slate-500 text-lg">
+              Wir sind in ganz Schleswig-Holstein, Hamburg und NRW für Sie da.
+            </p>
+          </AnimatedSection>
+          <div className="mt-8 flex flex-wrap gap-3">
+            {cities.map((city, i) => (
+              <AnimatedSection key={city.slug} delay={i * 0.06}>
+                <Link
+                  to={`/einsatzgebiet/${city.slug}`}
+                  className="flex items-center gap-2 bg-slate-50 border border-slate-200 hover:border-navy-200 hover:bg-navy-50 px-5 py-2.5 rounded-full text-sm font-medium text-slate-700 transition-colors"
+                >
+                  <MapPin size={13} className="text-navy-600" />
+                  {city.name}
+                </Link>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── 11 FAQ ─────────────────────────────────────────────────────────── */}
+      <section className="py-28 bg-slate-50">
+        <div className="max-w-4xl mx-auto px-6">
+          <AnimatedSection className="text-center mb-12">
+            <span className="text-navy-700 text-sm font-semibold uppercase tracking-widest">FAQ</span>
+            <h2 className="text-4xl md:text-5xl font-black mt-3 tracking-tight">Häufige Fragen</h2>
+            <p className="mt-4 text-slate-500 text-lg">
+              Antworten auf die häufigsten Fragen rund um unsere Leistungen.
+            </p>
+          </AnimatedSection>
+          <AnimatedSection delay={0.1}>
+            <div className="bg-white rounded-2xl border border-slate-100 px-8 py-4 shadow-sm">
+              <FAQAccordion items={faqs} />
+            </div>
+          </AnimatedSection>
+          <AnimatedSection delay={0.15} className="mt-8 text-center">
+            <p className="text-slate-600 text-sm">
+              Weitere Fragen?{' '}
+              <Link
+                to="/kontakt"
+                className="text-navy-900 font-semibold underline underline-offset-2 hover:no-underline"
+              >
+                Kontaktieren Sie uns direkt.
+              </Link>
+            </p>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* ── 12 FINALER CTA ─────────────────────────────────────────────────── */}
+      <CTASection />
+    </div>
+  );
+}

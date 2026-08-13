@@ -1,0 +1,65 @@
+# robots.txt for KlarWerk Service
+# https://klarwerk-service.com
+#
+# This file explicitly allows all major AI crawlers and indexing bots
+# to access and index the site content so AI models (ChatGPT, Gemini,
+# Claude, Perplexity, etc.) can discover and understand our business.
+
+# ── AI Crawlers (explicit allow) ──────────────────────────────────────────────
+# OpenAI / ChatGPT — GPTBot
+User-agent: GPTBot
+Allow: /
+
+# Google Gemini / Vertex AI — Google-Extended (Gemini API training & indexing)
+User-agent: Google-Extended
+Allow: /
+
+# Anthropic / Claude — ClaudeBot and anthropic-ai crawler
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Perplexity — PerplexityBot
+User-agent: PerplexityBot
+Allow: /
+
+# You.com — YouBot
+User-agent: YouBot
+Allow: /
+
+# CCBot (Common Crawl — feeds many AI models)
+User-agent: CCBot
+Allow: /
+
+# ── Traditional Search Engine Crawlers ────────────────────────────────────────
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# ── All other crawlers ────────────────────────────────────────────────────────
+User-agent: *
+Allow: /
+
+# Block admin/internal pages from all bots
+Disallow: /admin/
+Disallow: /*?*session=
+Disallow: /*?*token=
+
+# ── Sitemap ───────────────────────────────────────────────────────────────────
+Sitemap: https://klarwerk-service.com/sitemap.xml

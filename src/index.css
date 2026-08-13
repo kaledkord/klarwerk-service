@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply font-sans antialiased text-slate-900 bg-white;
+    font-feature-settings: 'cv11', 'ss01';
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight;
+  }
+
+  ::selection {
+    @apply bg-navy-900 text-white;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-glass;
+  }
+
+  .glass-nav {
+    @apply bg-white/95 backdrop-blur-md shadow-sm;
+  }
+
+  .glass-dark {
+    @apply bg-navy-950/80 backdrop-blur-md border border-white/10;
+  }
+
+  .container-klw {
+    @apply max-w-7xl mx-auto px-6;
+  }
+
+  .section-klw {
+    @apply py-28;
+  }
+
+  .badge-klw {
+    @apply inline-flex items-center gap-2 text-xs font-semibold px-4 py-1.5 rounded-full uppercase tracking-wide;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-navy-900 hover:bg-navy-800 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg shadow-navy-900/20 hover:shadow-xl hover:shadow-navy-900/30 hover:-translate-y-0.5;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 border border-slate-200 hover:border-slate-300 hover:bg-slate-50 font-semibold px-8 py-4 rounded-xl transition-all duration-300 text-slate-700;
+  }
+
+  .card-klw {
+    @apply bg-white border border-slate-100 rounded-2xl transition-all duration-300;
+  }
+
+  .card-klw-hover {
+    @apply hover:border-navy-200 hover:shadow-lg hover:-translate-y-1;
+  }
+}
+
+@keyframes marquee-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  animation: marquee-scroll 45s linear infinite;
+}
+
+.marquee-track:hover,
+.marquee-viewport:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+@media (max-width: 640px) {
+  .marquee-track { animation-duration: 32s; }
+}
+
+@layer utilities {
+  .dot-grid {
+    background-image: radial-gradient(circle, #e2e8f0 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+
+  .dot-grid-dark {
+    background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  .bg-radial-fade {
+    background: radial-gradient(circle at 50% 0%, rgba(30, 45, 68, 0.04), transparent 60%);
+  }
+}

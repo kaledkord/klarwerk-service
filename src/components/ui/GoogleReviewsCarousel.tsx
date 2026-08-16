@@ -25,7 +25,7 @@ function Stars() {
 
 function ReviewCard({ name, meta, text }: { name: string; meta: string; text: string }) {
   return (
-    <div className="flex flex-col w-[320px] shrink-0 bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md transition-shadow duration-300 border-t-[3px] border-t-brand-500">
+    <div className="flex flex-col w-[320px] shrink-0 bg-white rounded-2xl p-6 border border-slate-200 shadow-sm shadow-sm hover:shadow-md transition-shadow duration-300 border-t-[3px] border-t-brand-500">
       <div className="flex items-center gap-3 mb-3">
         {GOOGLE_LOGO}
         <div>
@@ -52,7 +52,7 @@ export default function GoogleReviewsCarousel() {
         <p className="mt-4 text-slate-500 text-base leading-relaxed">
           Echte Google-Bewertungen von privaten und gewerblichen Kunden.
         </p>
-        <div className="inline-flex items-center gap-3 bg-white rounded-full px-5 py-2.5 mt-5 shadow-sm border border-slate-100">
+        <div className="inline-flex items-center gap-3 bg-white rounded-full px-5 py-2.5 mt-5 shadow-sm border border-slate-200">
           <div className="flex gap-0.5">
             {[1,2,3,4,5].map((s) => (
               <svg key={s} className="w-4 h-4 text-amber-400 fill-amber-400" viewBox="0 0 20 20">

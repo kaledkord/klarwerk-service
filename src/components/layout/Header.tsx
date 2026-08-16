@@ -40,7 +40,7 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? 'glass-nav border-b border-slate-100' : 'bg-white'
+        scrolled ? 'glass-nav border-b border-slate-200' : 'bg-white'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 h-18 py-4 flex items-center justify-between gap-8">
@@ -82,7 +82,7 @@ export default function Header() {
               {servicesOpen && (
                 <motion.div
                   {...dropdownMotion}
-                  className="absolute top-full left-1/2 -translate-x-1/2 mt-3 bg-white border border-slate-100 rounded-2xl shadow-xl shadow-slate-900/8 p-4 w-[680px] z-50"
+                  className="absolute top-full left-1/2 -translate-x-1/2 mt-3 bg-white border border-slate-200 rounded-2xl shadow-xl shadow-slate-900/8 p-4 w-[680px] z-50"
                 >
                   <div className="grid grid-cols-3 gap-1">
                     {services.map((s) => {
@@ -105,7 +105,7 @@ export default function Header() {
                       );
                     })}
                   </div>
-                  <div className="mt-3 pt-3 border-t border-slate-100">
+                  <div className="mt-3 pt-3 border-t border-slate-200">
                     <Link
                       to="/leistungen"
                       onClick={() => setServicesOpen(false)}
@@ -152,7 +152,7 @@ export default function Header() {
         {mobileOpen && (
           <motion.div
             {...mobileMenuMotion}
-            className="lg:hidden overflow-hidden border-t border-slate-100 bg-white"
+            className="lg:hidden overflow-hidden border-t border-slate-200 bg-white"
           >
             <div className="px-6 py-5 space-y-1">
               <Link to="/" onClick={closeMobile} className="block py-2.5 text-sm font-medium text-slate-700 hover:text-slate-900">
@@ -179,7 +179,7 @@ export default function Header() {
                       animate={{ opacity: 1, height: 'auto' }}
                       exit={{ opacity: 0, height: 0 }}
                       transition={{ duration: 0.2, ease: easeOut }}
-                      className="overflow-hidden pl-4 border-l border-slate-100 ml-2"
+                      className="overflow-hidden pl-4 border-l border-slate-200 ml-2"
                     >
                       {services.map((s) => (
                         <Link

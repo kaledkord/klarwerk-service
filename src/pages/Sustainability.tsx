@@ -69,7 +69,7 @@ export default function Sustainability() {
               const Icon = g.icon;
               return (
                 <AnimatedSection key={g.title} delay={i * 0.1}>
-                  <div className="bg-white border border-slate-100 rounded-2xl p-8 text-center hover:shadow-md transition-shadow h-full">
+                  <div className="bg-white border border-slate-200 rounded-2xl p-8 text-center shadow-sm hover:shadow-md transition-shadow h-full">
                     <div className="inline-flex items-center justify-center w-14 h-14 bg-success-50 rounded-2xl mb-5">
                       <Icon size={26} className="text-success-600" />
                     </div>

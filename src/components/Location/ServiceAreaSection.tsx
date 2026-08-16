@@ -56,7 +56,7 @@ export default function ServiceAreaSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: i * 0.05 }}
-                  className="bg-white border border-slate-100 rounded-xl p-4 hover:border-brand-200 hover:shadow-md transition-all"
+                  className="bg-white border border-slate-200 rounded-xl p-4 hover:border-brand-200 shadow-sm hover:shadow-md transition-all"
                 >
                   <div className="flex items-center gap-2 mb-2">
                     <MapPin size={15} className="text-brand-600 shrink-0" />
@@ -78,7 +78,7 @@ export default function ServiceAreaSection() {
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
             className="lg:sticky lg:top-28"
           >
-            <div className="rounded-2xl overflow-hidden shadow-xl shadow-slate-900/10 border border-slate-100">
+            <div className="rounded-2xl overflow-hidden shadow-xl shadow-slate-900/10 border border-slate-200">
               <iframe
                 src={mapSrc}
                 title={`${name} Einsatzgebiet ${address.city}`}

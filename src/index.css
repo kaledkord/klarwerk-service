@@ -57,7 +57,7 @@
   }
 
   .card-klw {
-    @apply bg-white border border-slate-100 rounded-2xl transition-all duration-300;
+    @apply bg-white border border-slate-200 rounded-2xl shadow-sm transition-all duration-300;
   }
 
   .card-klw-hover {

@@ -100,7 +100,7 @@ export default function BranchenSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-60px' }}
                 transition={{ duration: 0.5, delay: i * 0.07, ease: easeOut }}
-                className="group bg-white border border-slate-100 hover:border-slate-200 rounded-2xl p-7 hover:shadow-lg hover:shadow-slate-900/6 transition-all duration-300"
+                className="group bg-white border border-slate-200 hover:border-slate-200 rounded-2xl p-7 shadow-sm hover:shadow-lg hover:shadow-slate-900/6 transition-all duration-300"
               >
                 <div className={`inline-flex items-center justify-center w-11 h-11 rounded-xl mb-5 ${b.color}`}>
                   <Icon size={20} />

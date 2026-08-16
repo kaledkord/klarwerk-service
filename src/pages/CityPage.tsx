@@ -156,7 +156,7 @@ export default function CityPage() {
           <div className="mt-10 grid sm:grid-cols-2 gap-4">
             {city.highlights.map((h, i) => (
               <AnimatedSection key={i} delay={i * 0.06}>
-                <div className="flex items-start gap-3 bg-slate-50 border border-slate-100 rounded-xl px-5 py-4">
+                <div className="flex items-start gap-3 bg-slate-50 border border-slate-200 rounded-xl px-5 py-4">
                   <CheckCircle size={18} className="text-cyan-500 shrink-0 mt-0.5" />
                   <p className="text-slate-700 text-sm leading-relaxed">{h}</p>
                 </div>
@@ -183,7 +183,7 @@ export default function CityPage() {
               <AnimatedSection key={service.id} delay={i * 0.06}>
                 <Link
                   to={`/leistungen/${service.id}`}
-                  className="block bg-white border border-slate-100 rounded-2xl p-6 hover:border-brand-200 hover:shadow-md transition-all h-full group"
+                  className="block bg-white border border-slate-200 rounded-2xl p-6 hover:border-brand-200 shadow-sm hover:shadow-md transition-all h-full group"
                 >
                   <service.icon size={28} className="text-brand-700 mb-4" />
                   <h3 className="font-bold text-slate-900 group-hover:text-brand-700 transition-colors">
@@ -234,7 +234,7 @@ export default function CityPage() {
             </h2>
           </AnimatedSection>
           <AnimatedSection delay={0.1}>
-            <div className="bg-white rounded-2xl border border-slate-100 px-8 py-4 shadow-sm">
+            <div className="bg-white rounded-2xl border border-slate-200 px-8 py-4 shadow-sm">
               <FAQAccordion items={faqs} />
             </div>
           </AnimatedSection>

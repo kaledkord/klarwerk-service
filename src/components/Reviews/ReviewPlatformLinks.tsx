@@ -86,7 +86,7 @@ export default function ReviewPlatformLinks() {
           </p>
 
           {/* Rating badge */}
-          <div className="mt-8 inline-flex items-center gap-4 bg-slate-50 border border-slate-100 rounded-2xl px-6 py-3">
+          <div className="mt-8 inline-flex items-center gap-4 bg-slate-50 border border-slate-200 rounded-2xl px-6 py-3">
             <div className="text-left">
               <p className="text-3xl font-black text-slate-900 leading-none">{reviews.ratingValue}</p>
               <p className="text-xs text-slate-400 mt-0.5">von 5 Punkten</p>
@@ -116,7 +116,7 @@ export default function ReviewPlatformLinks() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
               whileHover={{ y: -4, transition: { duration: 0.18 } }}
-              className="group relative bg-white border border-slate-100 hover:border-slate-200 rounded-2xl p-6 text-center transition-all duration-200 hover:shadow-lg hover:shadow-slate-900/6"
+              className="group relative bg-white border border-slate-200 hover:border-slate-200 rounded-2xl p-6 text-center transition-all duration-200 shadow-sm hover:shadow-lg hover:shadow-slate-900/6"
             >
               <div className="flex justify-center mb-4">
                 <PlatformIcon icon={platform.icon} size={36} />

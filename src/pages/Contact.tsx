@@ -43,7 +43,7 @@ export default function Contact() {
                 const Icon = item.icon;
                 const content = (
                   <div className="flex items-start gap-4 p-5 bg-slate-50 rounded-2xl hover:bg-slate-100 transition-colors">
-                    <div className="w-11 h-11 bg-white rounded-xl flex items-center justify-center shrink-0 border border-slate-100">
+                    <div className="w-11 h-11 bg-white rounded-xl flex items-center justify-center shrink-0 border border-slate-200">
                       <Icon size={18} className="text-brand-700" />
                     </div>
                     <div>
@@ -62,7 +62,7 @@ export default function Contact() {
           </AnimatedSection>
 
           <AnimatedSection delay={0.1} className="lg:col-span-3">
-            <div className="bg-white border border-slate-100 rounded-3xl p-8 shadow-sm">
+            <div className="bg-white border border-slate-200 rounded-3xl p-8 shadow-sm">
               <h2 className="text-2xl font-bold text-slate-900 mb-6">Angebot anfordern</h2>
               <ContactForm />
             </div>

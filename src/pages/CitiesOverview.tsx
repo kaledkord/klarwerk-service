@@ -69,7 +69,7 @@ export default function CitiesOverview() {
               <AnimatedSection key={city.slug} delay={i * 0.06}>
                 <Link
                   to={`/einsatzgebiet/${city.slug}`}
-                  className="group block bg-white border border-slate-100 rounded-2xl overflow-hidden hover:border-brand-200 hover:shadow-lg transition-all"
+                  className="group block bg-white border border-slate-200 rounded-2xl overflow-hidden hover:border-brand-200 shadow-sm hover:shadow-lg transition-all"
                 >
                   <div className="relative h-48 overflow-hidden">
                     <img

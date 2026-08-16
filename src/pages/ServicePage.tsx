@@ -198,7 +198,7 @@ export default function ServicePage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {content.process.map((step, i) => (
               <AnimatedSection key={step.title} delay={i * 0.08}>
-                <div className="bg-white border border-slate-100 rounded-2xl p-8 h-full hover:shadow-md transition-shadow">
+                <div className="bg-white border border-slate-200 rounded-2xl p-8 h-full shadow-sm hover:shadow-md transition-shadow">
                   <div className="flex items-center gap-3 mb-4">
                     <span className="inline-flex items-center justify-center w-9 h-9 bg-brand-600 text-white text-sm font-bold rounded-lg">
                       {i + 1}
@@ -231,7 +231,7 @@ export default function ServicePage() {
             </p>
           </AnimatedSection>
           <AnimatedSection delay={0.1}>
-            <div className="bg-slate-50 border border-slate-100 rounded-3xl p-8 md:p-10">
+            <div className="bg-slate-50 border border-slate-200 rounded-3xl p-8 md:p-10">
               <div className="grid md:grid-cols-2 gap-x-10 gap-y-5">
                 {[
                   'Individueller Festpreis nach kostenloser Vor-Ort-Besichtigung – transparent und ohne versteckte Kosten',
@@ -278,7 +278,7 @@ export default function ServicePage() {
               const AIcon = a.icon;
               return (
                 <AnimatedSection key={a.title} delay={i * 0.08}>
-                  <div className="bg-white border border-slate-100 rounded-2xl p-8 h-full hover:shadow-md transition-shadow">
+                  <div className="bg-white border border-slate-200 rounded-2xl p-8 h-full shadow-sm hover:shadow-md transition-shadow">
                     <div className="inline-flex items-center justify-center w-12 h-12 bg-cyan-50 rounded-xl mb-5">
                       <AIcon size={22} className="text-cyan-600" />
                     </div>
@@ -311,7 +311,7 @@ export default function ServicePage() {
               const AIcon = area.icon;
               return (
                 <AnimatedSection key={area.label} delay={i * 0.05}>
-                  <div className="bg-white border border-slate-100 rounded-2xl p-6 flex flex-col items-center text-center gap-3 h-full hover:shadow-md transition-shadow">
+                  <div className="bg-white border border-slate-200 rounded-2xl p-6 flex flex-col items-center text-center gap-3 h-full shadow-sm hover:shadow-md transition-shadow">
                     <div className="inline-flex items-center justify-center w-12 h-12 bg-brand-50 rounded-xl">
                       <AIcon size={22} className="text-brand-700" />
                     </div>

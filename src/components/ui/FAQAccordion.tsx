@@ -14,7 +14,7 @@ interface Props {
 
 function FAQRow({ item, isOpen, onToggle }: { item: FAQItem; isOpen: boolean; onToggle: () => void }) {
   return (
-    <div className="border-b border-slate-100 last:border-0">
+    <div className="border-b border-slate-200 last:border-0">
       <button
         onClick={onToggle}
         className="w-full flex items-center justify-between gap-4 py-5 text-left group"

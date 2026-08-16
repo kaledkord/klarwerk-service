@@ -10,7 +10,7 @@
   }
 
   body {
-    @apply font-sans antialiased text-slate-900 bg-white;
+    @apply font-sans antialiased text-slate-900 bg-paper;
     font-feature-settings: 'cv11', 'ss01';
   }
 
@@ -19,7 +19,7 @@
   }
 
   ::selection {
-    @apply bg-navy-900 text-white;
+    @apply bg-brand-600 text-white;
   }
 }
 
@@ -49,11 +49,11 @@
   }
 
   .btn-primary {
-    @apply inline-flex items-center gap-2 bg-navy-900 hover:bg-navy-800 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg shadow-navy-900/20 hover:shadow-xl hover:shadow-navy-900/30 hover:-translate-y-0.5;
+    @apply inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-semibold px-8 py-4 rounded-xl transition duration-200 shadow-lg shadow-brand-600/25 hover:shadow-xl hover:shadow-brand-600/30 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center gap-2 border border-slate-200 hover:border-slate-300 hover:bg-slate-50 font-semibold px-8 py-4 rounded-xl transition-all duration-300 text-slate-700;
+    @apply inline-flex items-center gap-2 border border-slate-300 hover:border-slate-400 hover:bg-slate-100 font-semibold px-8 py-4 rounded-xl transition duration-200 text-slate-700 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2;
   }
 
   .card-klw {
@@ -61,7 +61,7 @@
   }
 
   .card-klw-hover {
-    @apply hover:border-navy-200 hover:shadow-lg hover:-translate-y-1;
+    @apply hover:border-brand-200 hover:shadow-lg hover:-translate-y-1;
   }
 }
 
@@ -105,4 +105,50 @@
   .bg-radial-fade {
     background: radial-gradient(circle at 50% 0%, rgba(30, 45, 68, 0.04), transparent 60%);
   }
+}
+
+/* ── Klar-Hero: Vorher/Nachher-Wisch (Marken-Konzept) ─────────────────────── */
+.klar-photo {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+}
+.klar-unclear {
+  z-index: 1;
+  filter: grayscale(0.8) contrast(0.88) brightness(0.8) blur(3px);
+  clip-path: inset(0 0 0 0);
+  animation: klar-wipe 1.9s cubic-bezier(0.22, 1, 0.36, 1) 0.45s forwards;
+}
+.klar-unclear::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(226, 235, 229, 0.34);
+}
+.klar-squeegee {
+  position: absolute;
+  top: -4%;
+  height: 108%;
+  width: 14px;
+  left: 0;
+  z-index: 3;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.16), rgba(255, 255, 255, 0.9), rgba(0, 0, 0, 0.16));
+  box-shadow: 0 0 26px 5px rgba(255, 255, 255, 0.5);
+  transform: skewX(-8deg);
+  animation: klar-squeegee 1.9s cubic-bezier(0.22, 1, 0.36, 1) 0.45s forwards;
+}
+@keyframes klar-wipe {
+  to { clip-path: inset(0 0 0 100%); }
+}
+@keyframes klar-squeegee {
+  from { left: -2%; opacity: 0; }
+  6%   { opacity: 1; }
+  94%  { opacity: 1; }
+  to   { left: 101%; opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .klar-unclear { animation: none; clip-path: inset(0 0 0 100%); }
+  .klar-squeegee { display: none; }
+  .marquee-track { animation: none; }
 }

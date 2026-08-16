@@ -16,13 +16,13 @@ export const cities: City[] = [
     name: 'Bordesholm',
     region: 'Schleswig-Holstein',
     description:
-      'Gebäudereinigung in Bordesholm: KlarWerk Service ist hier zu Hause. Professionelle Reinigung für Büros, Praxen, Wohnanlagen und Gewerbe – direkt vor Ort.',
+      'Gebäudereinigung in Bordesholm: professionelle Reinigung für Büros, Praxen, Wohnanlagen und Gewerbe – zuverlässig und persönlich vor Ort.',
     intro:
-      'Bordesholm ist der Sitz von KlarWerk Service. Von hier aus betreuen wir Unternehmen, Praxen, Immobilienverwaltungen und private Auftraggeber in der Gemeinde und im gesamten Amt Bordesholm zwischen Kiel und Neumünster. Kurze Wege, feste Ansprechpartner und schnelle Reaktionszeiten sind für uns direkt am Firmensitz selbstverständlich.',
+      'In Bordesholm und im gesamten Amt Bordesholm zwischen Kiel und Neumünster betreut KlarWerk Service Unternehmen, Praxen, Immobilienverwaltungen und private Auftraggeber. Feste Ansprechpartner, verlässliche Termine und gründliche Ergebnisse – von der regelmäßigen Unterhaltsreinigung bis zur einmaligen Grund- und Sonderreinigung.',
     highlights: [
-      'Reinigung für Gewerbe, Büros und Praxen direkt am Firmensitz Bordesholm',
+      'Reinigung für Gewerbe, Büros und Praxen in Bordesholm',
       'Treppenhaus- und Unterhaltsreinigung für Wohnanlagen im Amt Bordesholm',
-      'Kurze Anfahrtswege und kurzfristige Termine in Bordesholm und Umgebung',
+      'Feste Ansprechpartner und verlässliche Termine',
       'Hausmeisterservice, Winterdienst und Gartenpflege aus einer Hand',
     ],
     image: '/Design_ohne_Titel.png',

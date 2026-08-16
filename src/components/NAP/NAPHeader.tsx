@@ -7,7 +7,7 @@ import { businessConfig } from '../../config/businessConfig';
  * Shows phone (tel: link), city/service area, and a "Get a Free Quote" CTA.
  */
 export default function NAPHeader() {
-  const { phone, serviceArea } = businessConfig;
+  const { phone } = businessConfig;
 
   return (
     <div className="block bg-navy-950 text-white border-b border-white/5">
@@ -23,7 +23,7 @@ export default function NAPHeader() {
           <span className="text-slate-600 hidden md:inline">|</span>
           <span className="hidden md:flex items-center gap-2 text-slate-400">
             <MapPin size={13} className="text-cyan-400" />
-            {serviceArea.primaryCity} &amp; Umgebung, {serviceArea.regions.join(', ')}
+            Kiel · Neumünster · Rendsburg &amp; Umgebung
           </span>
         </div>
 

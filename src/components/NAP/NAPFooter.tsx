@@ -47,7 +47,7 @@ function PlatformIcon({ icon, size = 16 }: { icon: string; size?: number }) {
 }
 
 export default function NAPFooter() {
-  const { address, phone, email, hours, reviews } = businessConfig;
+  const { phone, email, hours, reviews } = businessConfig;
   const footerCities = cities.filter((c) => c.tier === 1).slice(0, 7);
 
   return (
@@ -65,14 +65,11 @@ export default function NAPFooter() {
             </Link>
             <address className="not-italic space-y-2.5 text-sm text-slate-400">
               <meta itemProp="name" content={businessConfig.name} />
-              <div className="flex items-start gap-2.5" itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
+              <div className="flex items-start gap-2.5">
                 <MapPin size={14} className="shrink-0 text-cyan-400 mt-0.5" />
                 <span>
-                  <span itemProp="streetAddress">{address.street}</span><br />
-                  <span itemProp="postalCode">{address.zip}</span>{' '}
-                  <span itemProp="addressLocality">{address.city}</span><br />
-                  <span itemProp="addressRegion">{address.state}</span>,{' '}
-                  <span itemProp="addressCountry">{address.countryName}</span>
+                  Gebäudereinigung in Schleswig-Holstein &amp; Hamburg –<br />
+                  tätig in Kiel, Neumünster, Rendsburg, Preetz u.&nbsp;a.
                 </span>
               </div>
               <a
@@ -165,7 +162,7 @@ export default function NAPFooter() {
               ))}
             </div>
             <div className="mt-5">
-              <Link to="/kontakt" className="inline-flex items-center gap-2 bg-cyan-500 hover:bg-cyan-600 text-white font-semibold px-5 py-2.5 rounded-xl text-sm transition-colors">
+              <Link to="/kontakt" className="inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-semibold px-5 py-2.5 rounded-xl text-sm transition-colors">
                 Angebot anfordern
               </Link>
             </div>

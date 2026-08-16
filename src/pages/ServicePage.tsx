@@ -321,7 +321,7 @@ export default function ServicePage() {
               {service.title} in Ihrer Region
             </h2>
             <p className="mt-4 text-slate-500 text-lg max-w-2xl">
-              KlarWerk Service ist von Bordesholm aus in ganz Schleswig-Holstein und Hamburg im Einsatz.
+              KlarWerk Service ist in ganz Schleswig-Holstein und Hamburg im Einsatz.
               Wählen Sie Ihren Standort für Details zur {service.title} vor Ort.
             </p>
           </AnimatedSection>

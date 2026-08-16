@@ -14,7 +14,7 @@ export const seoConfig = {
   '/': {
     title: 'Gebäudereinigung Kiel & Schleswig-Holstein',
     description:
-      'Gebäudereinigung & Gebäudeservice aus Bordesholm für Kiel, Neumünster, Rendsburg & ganz Schleswig-Holstein. Büro-, Glas- und Praxisreinigung, zuverlässig und persönlich. Jetzt kostenloses Angebot anfordern.',
+      'Gebäudereinigung & Gebäudeservice für Kiel, Neumünster, Rendsburg & ganz Schleswig-Holstein. Büro-, Glas- und Praxisreinigung, zuverlässig und persönlich. Jetzt kostenloses Angebot anfordern.',
     canonical: '/',
   },
   '/ueber-uns': {
@@ -44,7 +44,7 @@ export const seoConfig = {
   '/kontakt': {
     title: 'Kontakt – Angebot für Gebäudereinigung anfordern',
     description:
-      'Kontaktieren Sie KlarWerk Service in Bordesholm für Gebäudereinigung in Kiel, Neumünster & Schleswig-Holstein. Telefon, E-Mail oder Kontaktformular – Antwort innerhalb von 24 Stunden.',
+      'Kontaktieren Sie KlarWerk Service für Gebäudereinigung in Kiel, Neumünster & ganz Schleswig-Holstein. Telefon, E-Mail oder Kontaktformular – Antwort innerhalb von 24 Stunden.',
     canonical: '/kontakt',
   },
   '/impressum': {

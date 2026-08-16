@@ -89,7 +89,7 @@ export const serviceContents: Record<string, ServiceContent> = {
     id: 'gebaeudereinigung',
     h1: 'Gebäudereinigung in Schleswig-Holstein & Hamburg',
     intro:
-      'Professionelle Reinigung für Wohn- und Geschäftsobjekte – individuell geplant, zuverlässig ausgeführt und mit höchstem Qualitätsanspruch. Wir übernehmen Treppenhäuser, Gemeinschaftsflächen und komplette Wohn- und Geschäftsobjekte.',
+      'Ein gepflegtes Gebäude schützt Werte und hinterlässt bei Mietern, Kunden und Besuchern den richtigen Eindruck – doch im Alltag bleibt für gründliche Reinigung selten Zeit. KlarWerk Service übernimmt die komplette Gebäudereinigung für Wohn- und Geschäftsobjekte in Schleswig-Holstein und Hamburg: Treppenhäuser, Gemeinschaftsflächen, Büros und ganze Liegenschaften. Nach einem festen Reinigungsplan arbeitet ein eingespieltes Team, das Ihr Objekt kennt – termintreu, versichert und mit dokumentierter Qualitätskontrolle. So bleibt Ihr Gebäude dauerhaft sauber, ohne dass Sie sich darum kümmern müssen.',
     process: defaultProcess,
     advantages: defaultAdvantages,
     areas: defaultAreas,
@@ -114,7 +114,7 @@ export const serviceContents: Record<string, ServiceContent> = {
     id: 'bueroreinigung',
     h1: 'Büroreinigung für produktive Arbeitsräume',
     intro:
-      'Saubere Arbeitsplätze für mehr Produktivität und Wohlbefinden. Wir reinigen Büroräume, Besprechungszimmer und Sanitärbereiche gründlich und zuverlässig – für ein professionelles Arbeitsumfeld, das Ihre Mitarbeiter und Besucher überzeugt.',
+      'Volle Papierkörbe, streifige Konferenztische und vernachlässigte Sanitärbereiche kosten kein Geld, aber Ansehen – bei Mitarbeitern wie bei Besuchern. KlarWerk Service hält Ihre Büroräume, Besprechungszimmer, Küchen und Sanitäranlagen zuverlässig sauber, auf Wunsch früh morgens, abends oder am Wochenende, damit der Betrieb ungestört läuft. Sie erhalten ein festes Team mit festem Ansprechpartner, einen klaren Reinigungsplan und gleichbleibende Qualität – geprüft per Checkliste. Das Ergebnis ist ein professionelles Arbeitsumfeld, in dem sich konzentriert arbeiten lässt.',
     process: defaultProcess,
     advantages: defaultAdvantages,
     areas: defaultAreas,
@@ -139,7 +139,7 @@ export const serviceContents: Record<string, ServiceContent> = {
     id: 'unterhaltsreinigung',
     h1: 'Unterhaltsreinigung für dauerhaft saubere Räume',
     intro:
-      'Regelmäßige Unterhaltsreinigung nach festem Plan – für Büros, Praxen, Gewerbe und Wohnanlagen. Wir sorgen dauerhaft für Sauberkeit, Hygiene und Werterhalt, mit festem Team, verlässlichen Terminen und gleichbleibender Qualität.',
+      'Sauberkeit, die man nicht organisieren muss: Die Unterhaltsreinigung von KlarWerk Service hält Büros, Praxen, Gewerbe und Wohnanlagen dauerhaft in Form – nach einem festen Plan, in der Frequenz, die zu Ihrer Nutzung passt. Ein festes Team kennt Ihr Objekt, hält Termine verlässlich ein und sichert die Qualität über Reinigungspläne und regelmäßige Kontrollen. Böden, Oberflächen, Sanitär- und Sozialräume bleiben so konstant gepflegt, Ihre Flächen behalten ihren Wert – und Sie haben den Kopf frei fürs Kerngeschäft.',
     process: defaultProcess,
     advantages: defaultAdvantages,
     areas: defaultAreas,
@@ -164,7 +164,7 @@ export const serviceContents: Record<string, ServiceContent> = {
     id: 'glasreinigung',
     h1: 'Glasreinigung für klare Sicht und ein helles Raumgefühl',
     intro:
-      'Streifenfreie Glasreinigung für Fenster, Fassaden und Glasflächen jeder Art. Wir sorgen für maximale Lichtdurchlässigkeit und ein gepflegtes Erscheinungsbild – innen wie außen.',
+      'Fenster sind die Visitenkarte Ihres Objekts – und nichts wirkt ungepflegter als Schlieren, Kalkränder und Fingerabdrücke im Gegenlicht. KlarWerk Service reinigt Fenster, Glasfassaden, Schaufenster, Vitrinen und Spiegel streifenfrei, innen wie außen, mit professioneller Wischtechnik statt Haushaltsmitteln. Hohe und schwer erreichbare Flächen erreichen wir sicher mit Teleskop- und Leitersystemen; auf Wunsch reinigen wir Rahmen, Fensterbänke und Falze gleich mit. So gewinnen Ihre Räume Licht und Klarheit zurück – regelmäßig im Turnus oder einmalig zum Anlass, in Kiel, Neumünster und ganz Schleswig-Holstein.',
     process: defaultProcess,
     advantages: defaultAdvantages,
     areas: defaultAreas,
@@ -189,7 +189,7 @@ export const serviceContents: Record<string, ServiceContent> = {
     id: 'praxisreinigung',
     h1: 'Praxisreinigung nach hygienischen Standards',
     intro:
-      'Hygienische Reinigung für Arztpraxen und medizinische Einrichtungen. Von Wartebereichen über Behandlungsräume bis hin zu Sanitärbereichen – für eine saubere und sichere Umgebung für Ihre Patienten und Mitarbeiter.',
+      'In einer Praxis entscheidet Sauberkeit über Vertrauen – und über die Sicherheit von Patienten und Team. KlarWerk Service reinigt Wartebereiche, Behandlungsräume und Sanitäranlagen nach hygienischen Standards, mit fachgerechter Flächendesinfektion und nachvollziehbarer Dokumentation. Wir arbeiten bevorzugt außerhalb der Sprechzeiten, damit Ihr Praxisablauf ungestört bleibt, setzen VAH-gelistete Desinfektionsmittel gezielt nach Einsatzbereich ein und stellen auf Wunsch Hygienepläne bereit. So übergeben wir Ihnen Räume, die den Anforderungen an eine medizinische Einrichtung wirklich gerecht werden.',
     process: defaultProcess,
     advantages: defaultAdvantages,
     areas: defaultAreas,
@@ -214,7 +214,7 @@ export const serviceContents: Record<string, ServiceContent> = {
     id: 'hausmeisterservice',
     h1: 'Hausmeisterservice – Ihr zuverlässiger Partner vor Ort',
     intro:
-      'Umfassender Hausmeisterservice für Wohnanlagen und Gewerbeobjekte. Von der Treppenhausreinigung über Winterdienst bis hin zur kleinen Reparatur – wir halten Ihr Objekt in Schuss.',
+      'Ein Objekt läuft nur rund, wenn sich jemand verlässlich kümmert – vom sauberen Treppenhaus bis zur schnell gewechselten Lampe. Als Hausmeisterservice betreut KlarWerk Service Wohnanlagen und Gewerbeobjekte mit festem Personal und festen Einsatztagen: Treppenhaus- und Grünflächenpflege, Winterdienst, kleine Reparaturen, Kontrolle der Haustechnik und allgemeine Objektbetreuung. Über durchgeführte Tätigkeiten und den Zustand des Objekts berichten wir Ihnen regelmäßig. Ob einzelne Liegenschaft oder größeres Portfolio – Sie haben einen festen Ansprechpartner, der weiß, was zu tun ist.',
     process: defaultProcess,
     advantages: defaultAdvantages,
     areas: defaultAreas,
@@ -239,7 +239,7 @@ export const serviceContents: Record<string, ServiceContent> = {
     id: 'gartenpflege',
     h1: 'Gartenpflege für gepflegte Außenanlagen',
     intro:
-      'Professionelle Garten- und Außenanlagenpflege. Vom Rasenmähen über Heckenschnitt bis hin zur saisonalen Bepflanzung – wir halten Ihre Grünflächen das ganze Jahr über in Form.',
+      'Eine gepflegte Außenanlage ist der erste Eindruck – und der lässt sich nur mit kontinuierlicher Pflege halten. KlarWerk Service hält Ihre Grünflächen das ganze Jahr in Form: Rasenpflege, Heckenschnitt, Laubentfernung, Baumschnitt und saisonale Bepflanzung, abgestimmt auf die Vegetationsphasen. Auf Wunsch beraten wir bei der Pflanzenwahl, übernehmen die Anwuchspflege und entsorgen den Grünschnitt fachgerecht. Als Einzelleistung oder ganzjähriger Pflegevertrag, für private Gärten ebenso wie für gewerbliche und öffentliche Flächen in Schleswig-Holstein und Hamburg.',
     process: defaultProcess,
     advantages: defaultAdvantages,
     areas: defaultAreas,
@@ -264,7 +264,7 @@ export const serviceContents: Record<string, ServiceContent> = {
     id: 'grundreinigung',
     h1: 'Grundreinigung für einen sauberen Neuanfang',
     intro:
-      'Intensive Grundreinigung für Wohnungen, Büros oder Gewerbeobjekte. Ideal nach Bauarbeiten, vor Einzug oder als Jahresaktion – gründlich, zuverlässig und bis in die letzte Ecke.',
+      'Manchmal reicht die normale Reinigung nicht – vor dem Einzug, nach dem Umbau oder wenn sich über die Zeit Schichten festgesetzt haben. Die Grundreinigung von KlarWerk Service geht in die Tiefe: Böden, Sanitär, Küchen und schwer zugängliche Bereiche werden intensiv gereinigt, auf Wunsch inklusive Bodenversiegelung und Fensterreinigung. Vorab erhalten Sie ein transparentes Festpreis-Angebot mit klarer Zeitvorgabe, das benötigte Material und die Technik bringen wir mit. Das Ergebnis ist ein sauberer Neuanfang – bis in die letzte Ecke.',
     process: defaultProcess,
     advantages: defaultAdvantages,
     areas: defaultAreas,
@@ -289,7 +289,7 @@ export const serviceContents: Record<string, ServiceContent> = {
     id: 'bauendreinigung',
     h1: 'Bauendreinigung – sauberer Abschluss nach Bauarbeiten',
     intro:
-      'Professionelle Bauendreinigung nach Abschluss von Bau- oder Renovierungsarbeiten. Wir entfernen Baustaub, Farbreste und Materialrückstände – bereit zur Übergabe.',
+      'Nach dem letzten Gewerk steht der Übergabe nur noch der Baustaub im Weg – und der sitzt hartnäckig auf jeder Fläche. KlarWerk Service übernimmt die Bauendreinigung, sobald keine staubintensiven Arbeiten mehr anstehen: Wir entfernen Baustaub, Farb-, Mörtel- und Klebereste schonend von Flächen, Rahmen und Profilen und reinigen Fenster und Böden übergabefertig. Auf Wunsch ergänzen wir eine intensive Grundreinigung und organisieren die Entsorgung von Reststoffen. Sie erhalten eine verbindliche Zeitvorgabe im Angebot – und am Ende ein Objekt, das bezugsfertig ist.',
     process: defaultProcess,
     advantages: defaultAdvantages,
     areas: defaultAreas,
@@ -314,7 +314,7 @@ export const serviceContents: Record<string, ServiceContent> = {
     id: 'winterdienst',
     h1: 'Winterdienst – sicher durch den Winter',
     intro:
-      'Zuverlässiger Winterdienst für private und gewerbliche Objekte. Räumung von Schnee, Streuung von Splitt oder Salz – nach Vereinbarung oder auf Abruf. Wir halten Ihre Wege frei.',
+      'Bei Schnee und Eisglätte haftet der Eigentümer – und der erste Sturz kommt oft vor dem ersten Kaffee. KlarWerk Service übernimmt Ihre Räum- und Streupflicht zuverlässig, in der Regel frühmorgens vor Betriebsbeginn: Schneeräumung, Streuung mit umweltverträglichem Splitt und, wo sinnvoll und zulässig, Salz. Ob Saisonvertrag oder Einsatz auf Abruf bei unerwarteter Witterung – wir halten Wege und Flächen frei und dokumentieren jeden Einsatz rechtssicher. So sind Ihre Zugänge sicher und Sie rechtlich auf der sicheren Seite, ohne selbst zur Schippe greifen zu müssen.',
     process: defaultProcess,
     advantages: defaultAdvantages,
     areas: defaultAreas,
@@ -339,7 +339,7 @@ export const serviceContents: Record<string, ServiceContent> = {
     id: 'entruempelung',
     h1: 'Entrümpelung & fachgerechte Entsorgung',
     intro:
-      'Komplette Entrümpelung von Wohnungen, Kellern, Dachböden oder Gewerbeobjekten. Inklusive fachgerechter Entsorgung und Transport – schnell, sauber und diskret.',
+      'Eine Wohnungsauflösung oder ein voller Keller kostet Nerven, Zeit und oft auch Diskretion. KlarWerk Service entrümpelt Wohnungen, Keller, Dachböden, Garagen und Gewerbeobjekte vollständig – zuverlässig, sauber und diskret, gerade bei sensiblen Anlässen. Vorab besprechen wir, was behalten, verkauft oder entsorgt wird, und dokumentieren alles nachvollziehbar; die Materialien trennen und entsorgen wir fachgerecht, den Transport übernehmen wir. Nach einer Besichtigung erhalten Sie ein Festpreis-Angebot mit klarer Zeitvorgabe – und danach einen leeren, besenreinen Raum.',
     process: defaultProcess,
     advantages: defaultAdvantages,
     areas: defaultAreas,
@@ -364,7 +364,7 @@ export const serviceContents: Record<string, ServiceContent> = {
     id: 'moebelreinigung',
     h1: 'Möbelreinigung für Polster, Teppiche & Matratzen',
     intro:
-      'Tiefenreinigung von Polstermöbeln, Matratzen und Teppichen. Schonend zu Material und Farben, effektiv gegen Flecken und Gerüche – für ein frisches, hygienisches Wohngefühl.',
+      'Polster, Matratzen und Teppiche nehmen im Alltag Flecken, Staub und Gerüche auf – sichtbar und spürbar. KlarWerk Service reinigt sie in der Tiefe und trotzdem materialschonend: Flecken behandeln wir mit geeigneten Spezialmitteln, Hausstaub, Milben und Allergene werden gründlich entfernt, unangenehme Gerüche neutralisiert. Wir reinigen vor Ort – zu Hause oder im Büro – und nutzen schnelltrocknende Verfahren, damit Möbel rasch wieder nutzbar sind. So gewinnen Ihre Sitzmöbel, Matratzen und Teppiche Frische und Hygiene zurück, ohne dass etwas ausgebaut werden muss.',
     process: defaultProcess,
     advantages: defaultAdvantages,
     areas: defaultAreas,
@@ -389,7 +389,7 @@ export const serviceContents: Record<string, ServiceContent> = {
     id: 'schulreinigung',
     h1: 'Schulreinigung – Saubere Lernumgebungen für Schüler und Lehrkräfte',
     intro:
-      'KlarWerk Service bietet professionelle Schulreinigung für Bildungseinrichtungen. Unsere Reinigungskonzepte sorgen für hygienische, sichere und gepflegte Räume, in denen Schüler und Mitarbeiter sich wohlfühlen können.',
+      'Lernen gelingt in Räumen, die sauber und gesund sind – und in Schulen zählt dabei jede Fläche, von der Tafel bis zur Sporthalle. KlarWerk Service reinigt Bildungseinrichtungen nach einem abgestimmten Konzept: Klassenräume, Flure, Sanitäranlagen und Sportbereiche, außerhalb der Unterrichtszeiten und ohne Störung des Betriebs. In den Ferien führen wir intensive Grundreinigungen sowie Bodenpflege und -beschichtung durch, die im laufenden Betrieb nicht möglich sind. Wir setzen umwelt- und gesundheitsschonende Mittel ein – für hygienische Lernumgebungen, in denen sich Schüler und Lehrkräfte wohlfühlen.',
     process: defaultProcess,
     advantages: defaultAdvantages,
     areas: [
@@ -419,7 +419,7 @@ export const serviceContents: Record<string, ServiceContent> = {
     id: 'kita-reinigung',
     h1: 'Kita-Reinigung – Hygiene und Sicherheit für Kinder',
     intro:
-      'Die Reinigung von Kindertagesstätten erfordert besondere Hygienestandards. KlarWerk Service entwickelt Reinigungskonzepte speziell für sensible Bereiche mit Kindern.',
+      'Kleine Kinder fassen alles an, sitzen auf dem Boden und stecken Dinge in den Mund – deshalb gelten in Kitas besondere Hygienestandards. KlarWerk Service entwickelt Reinigungskonzepte speziell für sensible Bereiche: Gruppen- und Spielräume, Wickelbereiche und Sanitäranlagen werden mit geprüften, für Kindereinrichtungen zugelassenen Hygienemitteln gereinigt und desinfiziert. Bei Infektionswellen führen wir zusätzliche Desinfektionsreinigungen durch; Böden aus Linoleum, PVC oder Fliesen pflegen wir dauerhaft. Gereinigt wird außerhalb der Betreuungszeiten – für eine Umgebung, in der Kinder sicher spielen und lernen können.',
     process: defaultProcess,
     advantages: defaultAdvantages,
     areas: [
@@ -449,7 +449,7 @@ export const serviceContents: Record<string, ServiceContent> = {
     id: 'pflegeheimreinigung',
     h1: 'Pflegeheim-Reinigung – Hygiene mit Verantwortung',
     intro:
-      'Professionelle Reinigung für Pflegeeinrichtungen mit höchsten Anforderungen an Hygiene, Sauberkeit und Sicherheit. Wir schaffen eine Umgebung, in der sich Bewohner und Personal wohlfühlen.',
+      'In Pflegeeinrichtungen ist Reinigung mehr als Sauberkeit – sie ist Teil des Infektionsschutzes und der Würde der Bewohner. KlarWerk Service reinigt Bewohnerzimmer, Gemeinschaftsräume und Sanitäranlagen nach hygienischen Vorgaben, mit regelmäßiger Hygienereinigung und VAH-gelisteten Desinfektionsmitteln, die für den Einsatz in Pflegeeinrichtungen zugelassen sind. Wir stimmen uns rücksichtsvoll mit Bewohnern und Personal ab, dokumentieren alle Maßnahmen nachvollziehbar und übernehmen auf Wunsch auch die Fensterreinigung. So entsteht eine Umgebung, in der sich Bewohner und Pflegekräfte sicher und wohl fühlen.',
     process: defaultProcess,
     advantages: defaultAdvantages,
     areas: [
@@ -479,7 +479,7 @@ export const serviceContents: Record<string, ServiceContent> = {
     id: 'lagerhallenreinigung',
     h1: 'Lagerhallenreinigung – Saubere Arbeitsbereiche für effiziente Prozesse',
     intro:
-      'Professionelle Reinigung von Lagerhallen, Logistikzentren und Produktionsbetrieben. Wir sorgen für saubere Böden, staubfreie Regale und sichere Verkehrswege – für reibungslose Abläufe und ein sicheres Arbeitsumfeld.',
+      'In Lager und Logistik entscheiden saubere Böden und freie Verkehrswege über Sicherheit und reibungslose Abläufe – Staub und Ablagerungen dagegen bremsen und gefährden. KlarWerk Service reinigt Lagerhallen, Logistikzentren und Produktionsbetriebe jeder Größe: Böden per Scheuersaugmaschine, Regale und Ablagen staubfrei, Verladerampen und Verkehrswege sicher begehbar. Auf Wunsch arbeiten wir außerhalb der Betriebszeiten, damit Ihr Ablauf nicht ins Stocken gerät. Die Frequenz richtet sich nach Nutzung und Verschmutzung – wir erstellen dazu einen individuellen Reinigungsplan für dauerhaft sichere Arbeitsbereiche.',
     process: defaultProcess,
     advantages: defaultAdvantages,
     areas: [
@@ -509,7 +509,7 @@ export const serviceContents: Record<string, ServiceContent> = {
     id: 'gastronomiereinigung',
     h1: 'Gastronomiereinigung – Hygiene für Ihre Gäste und Mitarbeiter',
     intro:
-      'Professionelle Reinigung für Restaurants, Cafés, Gastronomiebetriebe und Kantinen. Hygiene ist die Grundlage für zufriedene Gäste und eine erfolgreiche Küche – wir sorgen dafür, dass sie eingehalten wird.',
+      'In der Gastronomie ist Hygiene kein Detail, sondern Geschäftsgrundlage – ein Kontrollbesuch oder eine schlechte Bewertung genügt, um Vertrauen zu kosten. KlarWerk Service reinigt Restaurants, Cafés, Kantinen und Gastronomiebetriebe gründlich: Küche inklusive Fettentfernung an Oberflächen, Abzügen und Böden, dazu Gasträume, Glasflächen und Sanitärbereiche. Gearbeitet wird außerhalb der Öffnungszeiten, nachts oder frühmorgens, damit Ihr Betrieb ungestört bleibt. Wir richten uns nach den Vorgaben der Lebensmittelhygiene und erstellen auf Wunsch einen festen Pflegevertrag – für Sauberkeit, auf die sich Gäste und Team verlassen.',
     process: defaultProcess,
     advantages: defaultAdvantages,
     areas: [
@@ -539,7 +539,7 @@ export const serviceContents: Record<string, ServiceContent> = {
     id: 'supermarktreinigung',
     h1: 'Supermarkt-Reinigung – Professionelle Sauberkeit für Verkaufsflächen',
     intro:
-      'Umfassende Reinigung für Supermärkte, Discounter, Getränkemärkte, Biomärkte, Einkaufszentren und Fachgeschäfte. Saubere Verkaufsflächen schaffen ein positives Einkaufserlebnis und stärken das Vertrauen Ihrer Kunden.',
+      'Im Einzelhandel entscheidet der erste Eindruck über den Einkauf – klebrige Böden oder staubige Regale schrecken Kunden ab, bevor sie den ersten Artikel in den Wagen legen. KlarWerk Service reinigt Supermärkte, Discounter, Fach- und Biomärkte sowie Einkaufszentren vor Öffnung oder nach Schließung, ohne den Kundenverkehr zu stören. Große Verkaufsflächen reinigen wir maschinell und streifenfrei, dazu Regale, Kühlbereiche, Kassenzonen und Sanitäranlagen; auf Wunsch übernehmen wir Grundreinigung, Bodenversiegelung, Fenster- und Fassadenreinigung. So präsentiert sich Ihr Markt jeden Tag von seiner besten Seite.',
     process: defaultProcess,
     advantages: defaultAdvantages,
     areas: [
@@ -571,7 +571,7 @@ export const serviceContents: Record<string, ServiceContent> = {
     id: 'schwimmbadreinigung',
     h1: 'Schwimmbad- & Schwimmhallenreinigung mit Hygiene-Fokus',
     intro:
-      'Hygienische Reinigung für Schwimmbäder, Schwimmhallen und Wellnessbereiche. Wir sorgen für einwandfreie Beckenumgänge, Umkleiden, Duschen und Sanitäranlagen – mit rutschhemmenden Reinigungsverfahren und gründlicher Desinfektion für die Sicherheit Ihrer Gäste.',
+      'Wo viele Menschen barfuß und im Nassen unterwegs sind, sind Hygiene und Trittsicherheit entscheidend – und genau hier verzeihen Gäste keine Nachlässigkeit. KlarWerk Service reinigt Schwimmbäder, Schwimmhallen und Wellnessbereiche mit klarem Hygiene-Fokus: Beckenumgänge, Umkleiden, Duschen und Sanitäranlagen werden hygienisch gereinigt und desinfiziert, Kalk-, Wasser- und Urinstein-Ablagerungen an Fliesen, Armaturen und Rinnen entfernt. An Nassbereichen setzen wir rutschhemmende Verfahren ein, Sauna- und Spa-Bereiche behandeln wir materialschonend. Gereinigt wird außerhalb der Badezeiten – nach einem individuellen Reinigungs- und Hygieneplan.',
     process: defaultProcess,
     advantages: defaultAdvantages,
     areas: [

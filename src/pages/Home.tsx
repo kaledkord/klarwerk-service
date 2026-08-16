@@ -69,12 +69,12 @@ export default function Home() {
       <section className="relative min-h-[85vh] flex items-center overflow-hidden bg-ink">
         <div
           className="klar-photo"
-          style={{ backgroundImage: "url('/image.png')" }}
+          style={{ backgroundImage: "url('/hero-objektpflege.jpg')" }}
           aria-hidden="true"
         />
         <div
           className="klar-photo klar-unclear"
-          style={{ backgroundImage: "url('/image.png')" }}
+          style={{ backgroundImage: "url('/hero-objektpflege.jpg')" }}
           aria-hidden="true"
         />
         <div className="klar-squeegee" aria-hidden="true" />

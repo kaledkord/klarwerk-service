@@ -29,6 +29,29 @@ const trustItems = [
   { icon: Sparkles, title: 'Professionelle Arbeitsweise', desc: 'Geschultes Personal, moderne Technik und durchdachte Abläufe für sichtbar bessere Resultate.' },
 ];
 
+// Preisfaktoren je Leistung – ehrlich, ohne konkrete Preise (Festpreis nach Besichtigung).
+const priceFactors: Record<string, string> = {
+  gebaeudereinigung: 'Größe des Objekts, Nutzung und Reinigungsfrequenz',
+  bueroreinigung: 'Fläche, Anzahl der Räume und Reinigungsfrequenz',
+  unterhaltsreinigung: 'Fläche, Frequenz und vereinbartem Leistungsumfang',
+  glasreinigung: 'Anzahl, Größe und Zugänglichkeit der Fenster und Glasflächen',
+  praxisreinigung: 'Praxisgröße, Raumanzahl und Hygieneanforderungen',
+  hausmeisterservice: 'Objektgröße, Aufgabenumfang und Einsatzhäufigkeit',
+  gartenpflege: 'Flächengröße, Pflegeumfang und Häufigkeit',
+  grundreinigung: 'Fläche, Zustand und gewünschtem Leistungsumfang',
+  bauendreinigung: 'Objektgröße, Verschmutzungsgrad und Bauart',
+  winterdienst: 'Fläche, Lage und Umfang der Räum- und Streupflicht',
+  entruempelung: 'Menge, Etage bzw. Zugang und Entsorgungsaufwand',
+  moebelreinigung: 'Art und Anzahl der Möbel sowie Verschmutzungsgrad',
+  schulreinigung: 'Gebäudegröße, Raumanzahl und Reinigungsfrequenz',
+  'kita-reinigung': 'Einrichtungsgröße, Gruppenanzahl und Hygieneanforderungen',
+  pflegeheimreinigung: 'Einrichtungsgröße, Bereichen und Hygieneanforderungen',
+  lagerhallenreinigung: 'Hallenfläche, Verschmutzungsgrad und Frequenz',
+  gastronomiereinigung: 'Betriebsgröße, Küchenumfang und Reinigungsfrequenz',
+  supermarktreinigung: 'Verkaufsfläche, Bereichen und Reinigungsfrequenz',
+  schwimmbadreinigung: 'Anlagengröße, Besucherfrequenz und Hygieneanforderungen',
+};
+
 export default function ServicePage() {
   const { serviceId } = useParams<{ serviceId: string }>();
   const service = serviceId ? getServiceById(serviceId) : undefined;
@@ -167,8 +190,9 @@ export default function ServicePage() {
             <h2 className="mt-3 text-3xl md:text-4xl font-black tracking-tight">
               Unsere Vorgehensweise
             </h2>
-            <p className="mt-4 text-slate-500 text-lg max-w-2xl mx-auto">
+            <p className="mt-4 text-slate-600 text-lg max-w-2xl mx-auto">
               Schritt für Schritt zu einem sauberen Ergebnis – transparent und zuverlässig.
+              Den genauen Zeitrahmen für Ihr Objekt nennen wir verbindlich im Angebot.
             </p>
           </AnimatedSection>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -186,6 +210,53 @@ export default function ServicePage() {
               </AnimatedSection>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Kosten & Bedingungen */}
+      <section className="py-24">
+        <div className="max-w-5xl mx-auto px-6">
+          <AnimatedSection className="text-center mb-12">
+            <span className="text-brand-700 text-sm font-semibold uppercase tracking-widest">
+              Kosten &amp; Bedingungen
+            </span>
+            <h2 className="mt-3 text-3xl md:text-4xl font-black tracking-tight">
+              Was kostet die {service.title}?
+            </h2>
+            <p className="mt-4 text-slate-600 text-lg max-w-2xl mx-auto">
+              Bei KlarWerk Service gibt es keinen Tarif von der Stange, sondern ein individuelles
+              Festpreis-Angebot, das genau zu Ihrem Objekt passt.
+            </p>
+          </AnimatedSection>
+          <AnimatedSection delay={0.1}>
+            <div className="bg-slate-50 border border-slate-100 rounded-3xl p-8 md:p-10">
+              <div className="grid md:grid-cols-2 gap-x-10 gap-y-5">
+                {[
+                  'Individueller Festpreis nach kostenloser Vor-Ort-Besichtigung – transparent und ohne versteckte Kosten',
+                  'Angebot innerhalb von 24 Stunden nach der Besichtigung',
+                  'Als einmalige Leistung oder im regelmäßigen Turnus – ganz nach Ihrem Bedarf',
+                  `Der Preis richtet sich nach: ${priceFactors[service.id] ?? 'Umfang, Häufigkeit und Zustand des Objekts'}`,
+                ].map((item) => (
+                  <div key={item} className="flex items-start gap-3 text-slate-700">
+                    <CheckCircle size={18} className="text-brand-600 shrink-0 mt-0.5" />
+                    <span className="text-sm leading-relaxed">{item}</span>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-8 pt-8 border-t border-slate-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                <p className="text-slate-600 text-sm max-w-md">
+                  Voraussetzung ist lediglich ein kurzer Besichtigungstermin – unverbindlich und kostenfrei.
+                </p>
+                <Link
+                  to="/kontakt"
+                  className="inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-semibold px-6 py-3 rounded-xl transition duration-200 active:scale-[0.98] shrink-0"
+                >
+                  Festpreis anfragen
+                  <ArrowRight size={16} />
+                </Link>
+              </div>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 

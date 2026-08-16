@@ -24,7 +24,7 @@ export default function About() {
       <section className="pt-36 pb-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}>
-            <span className="text-navy-700 text-sm font-semibold uppercase tracking-widest">Über uns</span>
+            <span className="text-brand-700 text-sm font-semibold uppercase tracking-widest">Über uns</span>
             <h1 className="mt-3 text-5xl md:text-6xl font-black tracking-tight">Ihr Partner für<br />saubere Lösungen.</h1>
             <p className="mt-6 text-lg text-slate-600 max-w-2xl leading-relaxed">
               KlarWerk Service ist Ihr zuverlässiger Partner für professionelle Gebäudereinigung und Gebäudeservice in Schleswig-Holstein, Hamburg und NRW. Seit über 10 Jahren stehen wir für Qualität, Zuverlässigkeit und persönliche Betreuung.
@@ -69,8 +69,8 @@ export default function About() {
               return (
                 <AnimatedSection key={v.title} delay={i * 0.1}>
                   <div className="bg-white border border-slate-100 rounded-2xl p-8 text-center hover:shadow-md transition-shadow h-full">
-                    <div className="inline-flex items-center justify-center w-14 h-14 bg-navy-50 rounded-2xl mb-5">
-                      <Icon size={26} className="text-navy-700" />
+                    <div className="inline-flex items-center justify-center w-14 h-14 bg-brand-50 rounded-2xl mb-5">
+                      <Icon size={26} className="text-brand-700" />
                     </div>
                     <h3 className="text-xl font-bold text-slate-900">{v.title}</h3>
                     <p className="mt-3 text-slate-600 leading-relaxed text-sm">{v.desc}</p>

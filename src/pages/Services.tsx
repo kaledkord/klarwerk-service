@@ -29,7 +29,7 @@ export default function Services() {
       <section className="pt-36 pb-16 bg-slate-50">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}>
-            <span className="text-navy-700 text-sm font-semibold uppercase tracking-widest">Leistungen</span>
+            <span className="text-brand-700 text-sm font-semibold uppercase tracking-widest">Leistungen</span>
             <h1 className="mt-3 text-5xl md:text-6xl font-black tracking-tight">Unsere Dienstleistungen</h1>
             <p className="mt-6 text-lg text-slate-600 max-w-2xl leading-relaxed">
               Von der regelmäßigen Büroreinigung bis zum kompletten Hausmeisterservice – wir bieten Ihnen maßgeschneiderte Lösungen für Ihr Objekt.

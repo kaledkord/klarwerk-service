@@ -66,11 +66,11 @@ export default function AnimatedBackground({ className }: AnimatedBackgroundProp
     function initOrbs() {
       orbs.length = 0;
       const palette = [
-        { r: 30, g: 45, b: 68 },    // navy-900
-        { r: 50, g: 74, b: 112 },   // navy-700
-        { r: 0, g: 128, b: 255 },    // electric blue
-        { r: 0, g: 200, b: 230 },    // cyan-ish
-        { r: 100, g: 130, b: 180 },  // muted blue-grey
+        { r: 33, g: 167, b: 74 },    // brand green #21A74A
+        { r: 52, g: 161, b: 218 },   // brand blue #34A1DA
+        { r: 111, g: 211, b: 152 },  // soft green
+        { r: 176, g: 219, b: 241 },  // soft blue
+        { r: 200, g: 210, b: 200 },  // neutral green-grey
       ];
 
       const orbCount = width < 768 ? 3 : 5;

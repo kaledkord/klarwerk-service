@@ -76,7 +76,7 @@ export default function ContactForm() {
   }
 
   const inputClass =
-    'w-full px-4 py-3 rounded-xl border border-slate-200 text-slate-900 placeholder-slate-400 text-sm focus:outline-none focus:border-navy-900 focus:ring-1 focus:ring-navy-900 transition-colors bg-white';
+    'w-full px-4 py-3 rounded-xl border border-slate-200 text-slate-900 placeholder-slate-400 text-sm focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-colors bg-white';
   const labelClass = 'block text-sm font-medium text-slate-700 mb-1.5';
 
   return (
@@ -190,7 +190,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={loading}
-        className="w-full flex items-center justify-center gap-2 bg-navy-900 hover:bg-navy-800 disabled:bg-slate-300 text-white font-semibold py-3.5 rounded-xl transition-colors"
+        className="w-full flex items-center justify-center gap-2 bg-brand-600 hover:bg-brand-700 disabled:bg-slate-300 text-white font-semibold py-3.5 rounded-xl transition-colors"
       >
         {loading ? (
           <>

@@ -44,7 +44,7 @@ export default function ServiceReviews({
     <section className="py-24 bg-slate-50">
       <div className="max-w-7xl mx-auto px-6">
         <AnimatedSection className="text-center max-w-2xl mx-auto mb-12">
-          <span className="text-navy-700 text-sm font-semibold uppercase tracking-widest">Bewertungen</span>
+          <span className="text-brand-700 text-sm font-semibold uppercase tracking-widest">Bewertungen</span>
           <h2 className="text-3xl md:text-4xl font-black mt-3 tracking-tight text-slate-900">
             Das sagen Kunden über KlarWerk Service
           </h2>
@@ -61,7 +61,7 @@ export default function ServiceReviews({
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {items.map((review, i) => (
             <AnimatedSection key={`${review.name}-${i}`} delay={i * 0.08}>
-              <figure className="flex flex-col h-full bg-white rounded-2xl p-6 border border-slate-100 shadow-sm border-t-[3px] border-t-navy-500">
+              <figure className="flex flex-col h-full bg-white rounded-2xl p-6 border border-slate-100 shadow-sm border-t-[3px] border-t-brand-500">
                 <div className="flex items-center gap-3 mb-3">
                   {GOOGLE_LOGO}
                   <figcaption>

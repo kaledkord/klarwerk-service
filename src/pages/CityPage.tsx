@@ -103,7 +103,7 @@ export default function CityPage() {
                 <span>/</span>
                 <span className="text-slate-600">{city.name}</span>
               </nav>
-              <p className="text-sm font-semibold text-navy-900 uppercase tracking-widest mb-5">
+              <p className="text-sm font-semibold text-brand-700 uppercase tracking-widest mb-5">
                 <MapPin size={14} className="inline mr-1.5 -mt-0.5" />
                 {city.region}
               </p>
@@ -148,7 +148,7 @@ export default function CityPage() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedSection>
-            <span className="text-navy-700 text-sm font-semibold uppercase tracking-widest">Leistungen vor Ort</span>
+            <span className="text-brand-700 text-sm font-semibold uppercase tracking-widest">Leistungen vor Ort</span>
             <h2 className="text-3xl md:text-4xl font-black mt-3 tracking-tight">
               Unsere Reinigungsleistungen in {city.name}
             </h2>
@@ -170,7 +170,7 @@ export default function CityPage() {
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedSection>
-            <span className="text-navy-700 text-sm font-semibold uppercase tracking-widest">Leistungen</span>
+            <span className="text-brand-700 text-sm font-semibold uppercase tracking-widest">Leistungen</span>
             <h2 className="text-3xl md:text-4xl font-black mt-3 tracking-tight">
               Reinigung & Service in {city.name}
             </h2>
@@ -183,14 +183,14 @@ export default function CityPage() {
               <AnimatedSection key={service.id} delay={i * 0.06}>
                 <Link
                   to={`/leistungen/${service.id}`}
-                  className="block bg-white border border-slate-100 rounded-2xl p-6 hover:border-navy-200 hover:shadow-md transition-all h-full group"
+                  className="block bg-white border border-slate-100 rounded-2xl p-6 hover:border-brand-200 hover:shadow-md transition-all h-full group"
                 >
-                  <service.icon size={28} className="text-navy-700 mb-4" />
-                  <h3 className="font-bold text-slate-900 group-hover:text-navy-900 transition-colors">
+                  <service.icon size={28} className="text-brand-700 mb-4" />
+                  <h3 className="font-bold text-slate-900 group-hover:text-brand-700 transition-colors">
                     {service.title} in {city.name}
                   </h3>
                   <p className="mt-2 text-sm text-slate-500 leading-relaxed">{service.shortDesc}</p>
-                  <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-navy-900">
+                  <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-700">
                     {service.title} ansehen <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
                   </span>
                 </Link>
@@ -204,7 +204,7 @@ export default function CityPage() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedSection>
-            <span className="text-navy-700 text-sm font-semibold uppercase tracking-widest">Einsatzgebiet</span>
+            <span className="text-brand-700 text-sm font-semibold uppercase tracking-widest">Einsatzgebiet</span>
             <h2 className="text-3xl md:text-4xl font-black mt-3 tracking-tight">Auch in Ihrer Nähe</h2>
             <p className="mt-4 text-slate-500 text-lg">Unser Schwerpunkt liegt in Schleswig-Holstein rund um Bordesholm, Kiel und Neumünster – darüber hinaus sind wir in Hamburg für Sie da.</p>
           </AnimatedSection>
@@ -213,10 +213,10 @@ export default function CityPage() {
               <AnimatedSection key={c.slug} delay={i * 0.05}>
                 <Link
                   to={`/einsatzgebiet/${c.slug}`}
-                  className="flex items-center gap-2 bg-white border border-slate-200 hover:border-navy-200 hover:bg-navy-50 px-5 py-2.5 rounded-full text-sm font-medium text-slate-700 transition-colors"
+                  className="flex items-center gap-2 bg-white border border-slate-200 hover:border-brand-200 hover:bg-brand-50 px-5 py-2.5 rounded-full text-sm font-medium text-slate-700 transition-colors"
                   aria-label={`Gebäudereinigung in ${c.name}`}
                 >
-                  <MapPin size={13} className="text-navy-600" />{c.name}
+                  <MapPin size={13} className="text-brand-600" />{c.name}
                 </Link>
               </AnimatedSection>
             ))}
@@ -228,7 +228,7 @@ export default function CityPage() {
       <section className="py-20 bg-slate-50">
         <div className="max-w-3xl mx-auto px-6">
           <AnimatedSection className="text-center mb-10">
-            <span className="text-navy-700 text-sm font-semibold uppercase tracking-widest">FAQ</span>
+            <span className="text-brand-700 text-sm font-semibold uppercase tracking-widest">FAQ</span>
             <h2 className="text-3xl md:text-4xl font-black mt-3 tracking-tight">
               Häufige Fragen zur Gebäudereinigung in {city.name}
             </h2>

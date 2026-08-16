@@ -44,7 +44,7 @@ export default function Sustainability() {
       <section className="pt-36 pb-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}>
-            <span className="text-navy-700 text-sm font-semibold uppercase tracking-widest">Nachhaltigkeit</span>
+            <span className="text-brand-700 text-sm font-semibold uppercase tracking-widest">Nachhaltigkeit</span>
             <h1 className="mt-3 text-5xl md:text-6xl font-black tracking-tight">
               Sauberkeit mit<br />Verantwortung.
             </h1>
@@ -190,7 +190,7 @@ export default function Sustainability() {
             <p className="mt-6 text-lg text-slate-600 leading-relaxed">
               Nachhaltigkeit funktioniert nur gemeinsam. Deshalb beraten wir unsere Kunden gerne, wie Reinigung und Pflege umweltbewusster gestaltet werden können.
             </p>
-            <p className="mt-6 text-base font-semibold text-navy-700">
+            <p className="mt-6 text-base font-semibold text-brand-700">
               KlarWerk Service – Sauberkeit, Qualität und Verantwortung.
             </p>
           </AnimatedSection>

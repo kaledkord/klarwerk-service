@@ -146,7 +146,7 @@ export default function Home() {
               <h2 className="text-4xl md:text-5xl font-black tracking-tight">Unsere Leistungen</h2>
               <Link
                 to="/leistungen"
-                className="inline-flex items-center gap-1.5 text-sm font-semibold text-navy-900 hover:gap-2.5 transition-all shrink-0"
+                className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-700 hover:gap-2.5 transition-all shrink-0"
               >
                 Alle Leistungen <ArrowRight size={15} />
               </Link>
@@ -196,7 +196,7 @@ export default function Home() {
               <div className="mt-8 space-y-5">
                 {advantages.map((a) => (
                   <div key={a.title} className="flex gap-4">
-                    <div className="w-2 h-2 rounded-full bg-navy-700 mt-2 shrink-0" />
+                    <div className="w-2 h-2 rounded-full bg-brand-600 mt-2 shrink-0" />
                     <div>
                       <h4 className="font-bold text-slate-900">{a.title}</h4>
                       <p className="mt-1 text-sm text-slate-600 leading-relaxed">{a.desc}</p>
@@ -235,7 +235,7 @@ export default function Home() {
           <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {processSteps.map((step, i) => (
               <AnimatedSection key={step.num} delay={i * 0.09}>
-                <div className="relative bg-white border border-slate-100 rounded-2xl p-7 hover:border-navy-100 hover:shadow-md transition-all h-full">
+                <div className="relative bg-white border border-slate-100 rounded-2xl p-7 hover:border-brand-200 hover:shadow-md transition-all h-full">
                   <span className="text-5xl font-black text-slate-100 leading-none">
                     {step.num}
                   </span>
@@ -304,7 +304,7 @@ export default function Home() {
               Weitere Fragen?{' '}
               <Link
                 to="/kontakt"
-                className="text-navy-900 font-semibold underline underline-offset-2 hover:no-underline"
+                className="text-brand-700 font-semibold underline underline-offset-2 hover:no-underline"
               >
                 Kontaktieren Sie uns direkt.
               </Link>

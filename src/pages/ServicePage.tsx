@@ -97,10 +97,10 @@ export default function ServicePage() {
               Alle Leistungen
             </Link>
             <div className="flex items-center gap-4 mb-4">
-              <div className="inline-flex items-center justify-center w-14 h-14 bg-navy-900 rounded-2xl">
+              <div className="inline-flex items-center justify-center w-14 h-14 bg-brand-600 rounded-2xl">
                 <Icon size={26} className="text-white" />
               </div>
-              <span className="text-navy-700 text-sm font-semibold uppercase tracking-widest">
+              <span className="text-brand-700 text-sm font-semibold uppercase tracking-widest">
                 {service.title}
               </span>
             </div>
@@ -113,7 +113,7 @@ export default function ServicePage() {
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
                 to="/kontakt"
-                className="inline-flex items-center gap-2 bg-navy-900 hover:bg-navy-950 text-white font-semibold px-6 py-3.5 rounded-xl transition-all duration-300 shadow-lg shadow-navy-900/20 hover:-translate-y-0.5"
+                className="inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-semibold px-6 py-3.5 rounded-xl transition-all duration-300 shadow-lg shadow-brand-600/20 hover:-translate-y-0.5"
               >
                 Kostenloses Angebot anfragen
                 <ArrowRight size={16} />
@@ -161,7 +161,7 @@ export default function ServicePage() {
       <section className="py-24 bg-slate-50">
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedSection className="text-center mb-14">
-            <span className="text-navy-700 text-sm font-semibold uppercase tracking-widest">
+            <span className="text-brand-700 text-sm font-semibold uppercase tracking-widest">
               Ablauf
             </span>
             <h2 className="mt-3 text-3xl md:text-4xl font-black tracking-tight">
@@ -176,7 +176,7 @@ export default function ServicePage() {
               <AnimatedSection key={step.title} delay={i * 0.08}>
                 <div className="bg-white border border-slate-100 rounded-2xl p-8 h-full hover:shadow-md transition-shadow">
                   <div className="flex items-center gap-3 mb-4">
-                    <span className="inline-flex items-center justify-center w-9 h-9 bg-navy-900 text-white text-sm font-bold rounded-lg">
+                    <span className="inline-flex items-center justify-center w-9 h-9 bg-brand-600 text-white text-sm font-bold rounded-lg">
                       {i + 1}
                     </span>
                     <h3 className="text-lg font-bold text-slate-900">{step.title}</h3>
@@ -193,7 +193,7 @@ export default function ServicePage() {
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedSection className="text-center mb-14">
-            <span className="text-navy-700 text-sm font-semibold uppercase tracking-widest">
+            <span className="text-brand-700 text-sm font-semibold uppercase tracking-widest">
               Vorteile
             </span>
             <h2 className="mt-3 text-3xl md:text-4xl font-black tracking-tight">
@@ -223,7 +223,7 @@ export default function ServicePage() {
       <section className="py-24 bg-slate-50">
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedSection className="text-center mb-14">
-            <span className="text-navy-700 text-sm font-semibold uppercase tracking-widest">
+            <span className="text-brand-700 text-sm font-semibold uppercase tracking-widest">
               Einsatzbereiche
             </span>
             <h2 className="mt-3 text-3xl md:text-4xl font-black tracking-tight">
@@ -239,8 +239,8 @@ export default function ServicePage() {
               return (
                 <AnimatedSection key={area.label} delay={i * 0.05}>
                   <div className="bg-white border border-slate-100 rounded-2xl p-6 flex flex-col items-center text-center gap-3 h-full hover:shadow-md transition-shadow">
-                    <div className="inline-flex items-center justify-center w-12 h-12 bg-navy-50 rounded-xl">
-                      <AIcon size={22} className="text-navy-700" />
+                    <div className="inline-flex items-center justify-center w-12 h-12 bg-brand-50 rounded-xl">
+                      <AIcon size={22} className="text-brand-700" />
                     </div>
                     <span className="text-sm font-semibold text-slate-700">{area.label}</span>
                   </div>
@@ -316,7 +316,7 @@ export default function ServicePage() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedSection>
-            <span className="text-navy-700 text-sm font-semibold uppercase tracking-widest">Vor Ort</span>
+            <span className="text-brand-700 text-sm font-semibold uppercase tracking-widest">Vor Ort</span>
             <h2 className="mt-3 text-3xl md:text-4xl font-black tracking-tight">
               {service.title} in Ihrer Region
             </h2>
@@ -330,7 +330,7 @@ export default function ServicePage() {
               <AnimatedSection key={c.slug} delay={i * 0.05}>
                 <Link
                   to={`/einsatzgebiet/${c.slug}`}
-                  className="flex items-center gap-2 bg-slate-50 border border-slate-200 hover:border-navy-200 hover:bg-navy-50 px-5 py-2.5 rounded-full text-sm font-medium text-slate-700 transition-colors"
+                  className="flex items-center gap-2 bg-slate-50 border border-slate-200 hover:border-brand-200 hover:bg-brand-50 px-5 py-2.5 rounded-full text-sm font-medium text-slate-700 transition-colors"
                   aria-label={`${service.title} in ${c.name}`}
                 >
                   {service.title} in {c.name}
@@ -348,7 +348,7 @@ export default function ServicePage() {
       <section className="py-24">
         <div className="max-w-3xl mx-auto px-6">
           <AnimatedSection className="text-center mb-14">
-            <span className="text-navy-700 text-sm font-semibold uppercase tracking-widest">
+            <span className="text-brand-700 text-sm font-semibold uppercase tracking-widest">
               FAQ
             </span>
             <h2 className="mt-3 text-3xl md:text-4xl font-black tracking-tight">
@@ -374,7 +374,7 @@ export default function ServicePage() {
             </div>
             <Link
               to={`/leistungen/${nextService.id}`}
-              className="inline-flex items-center gap-2 text-navy-900 font-semibold hover:gap-3 transition-all"
+              className="inline-flex items-center gap-2 text-brand-700 font-semibold hover:gap-3 transition-all"
             >
               Weiter zu {nextService.title}
               <ArrowRight size={16} />

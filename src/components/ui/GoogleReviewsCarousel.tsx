@@ -25,7 +25,7 @@ function Stars() {
 
 function ReviewCard({ name, meta, text }: { name: string; meta: string; text: string }) {
   return (
-    <div className="flex flex-col w-[320px] shrink-0 bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md transition-shadow duration-300 border-t-[3px] border-t-navy-500">
+    <div className="flex flex-col w-[320px] shrink-0 bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md transition-shadow duration-300 border-t-[3px] border-t-brand-500">
       <div className="flex items-center gap-3 mb-3">
         {GOOGLE_LOGO}
         <div>
@@ -45,7 +45,7 @@ export default function GoogleReviewsCarousel() {
   return (
     <section className="py-28 bg-slate-50 overflow-hidden">
       <AnimatedSection className="text-center max-w-2xl mx-auto px-6 mb-12">
-        <span className="text-navy-700 text-sm font-semibold uppercase tracking-widest">Bewertungen</span>
+        <span className="text-brand-700 text-sm font-semibold uppercase tracking-widest">Bewertungen</span>
         <h2 className="text-4xl md:text-5xl font-black mt-3 tracking-tight text-slate-900">
           Das sagen unsere Kunden
         </h2>

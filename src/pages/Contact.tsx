@@ -25,7 +25,7 @@ export default function Contact() {
       <section className="pt-36 pb-16 bg-slate-50">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}>
-            <span className="text-navy-700 text-sm font-semibold uppercase tracking-widest">Kontakt</span>
+            <span className="text-brand-700 text-sm font-semibold uppercase tracking-widest">Kontakt</span>
             <h1 className="mt-3 text-5xl md:text-6xl font-black tracking-tight">Kontaktieren Sie uns</h1>
             <p className="mt-6 text-lg text-slate-600 max-w-2xl leading-relaxed">
               Sie haben Fragen oder möchten ein Angebot anfordern? Füllen Sie das Formular aus oder kontaktieren Sie uns direkt – wir melden uns innerhalb von 24 Stunden.
@@ -44,7 +44,7 @@ export default function Contact() {
                 const content = (
                   <div className="flex items-start gap-4 p-5 bg-slate-50 rounded-2xl hover:bg-slate-100 transition-colors">
                     <div className="w-11 h-11 bg-white rounded-xl flex items-center justify-center shrink-0 border border-slate-100">
-                      <Icon size={18} className="text-navy-700" />
+                      <Icon size={18} className="text-brand-700" />
                     </div>
                     <div>
                       <p className="text-xs text-slate-500 uppercase tracking-wider font-semibold">{item.label}</p>

@@ -22,7 +22,7 @@ export default function ServiceAreaSection() {
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         >
-          <span className="text-navy-700 text-sm font-semibold uppercase tracking-widest">
+          <span className="text-brand-700 text-sm font-semibold uppercase tracking-widest">
             Einsatzgebiet
           </span>
           <h2 className="mt-3 text-4xl md:text-5xl font-black tracking-tight">
@@ -45,7 +45,7 @@ export default function ServiceAreaSection() {
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           >
             <h3 className="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
-              <Navigation size={20} className="text-navy-700" />
+              <Navigation size={20} className="text-brand-700" />
               Von uns betreute Orte
             </h3>
             <div className="grid sm:grid-cols-2 gap-3">
@@ -56,10 +56,10 @@ export default function ServiceAreaSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: i * 0.05 }}
-                  className="bg-white border border-slate-100 rounded-xl p-4 hover:border-navy-200 hover:shadow-md transition-all"
+                  className="bg-white border border-slate-100 rounded-xl p-4 hover:border-brand-200 hover:shadow-md transition-all"
                 >
                   <div className="flex items-center gap-2 mb-2">
-                    <MapPin size={15} className="text-navy-600 shrink-0" />
+                    <MapPin size={15} className="text-brand-600 shrink-0" />
                     <span className="font-semibold text-slate-900 text-sm">{loc.name}</span>
                   </div>
                   <p className="text-xs text-slate-500 leading-relaxed">
@@ -91,7 +91,7 @@ export default function ServiceAreaSection() {
               />
             </div>
             <div className="mt-4 flex items-center gap-3 text-sm text-slate-500">
-              <MapPin size={16} className="text-navy-600" />
+              <MapPin size={16} className="text-brand-600" />
               <span>
                 {address.street}, {address.zip} {address.city}, {address.state}
               </span>

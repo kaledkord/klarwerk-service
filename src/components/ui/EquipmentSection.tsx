@@ -182,7 +182,7 @@ export default function EquipmentSection() {
           transition={{ duration: 0.6, ease: easeOut }}
           className="max-w-3xl"
         >
-          <span className="text-navy-700 text-xs font-bold uppercase tracking-widest">
+          <span className="text-brand-700 text-xs font-bold uppercase tracking-widest">
             Professionelle Ausstattung von führenden Herstellern
           </span>
           <h2 className="mt-3 text-4xl md:text-5xl font-black tracking-tight text-slate-900">
@@ -254,7 +254,7 @@ export default function EquipmentSection() {
           </h3>
           <Link
             to="/kontakt"
-            className="mt-8 inline-flex items-center gap-2 bg-navy-900 hover:bg-navy-950 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg shadow-navy-900/20 hover:-translate-y-0.5"
+            className="mt-8 inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg shadow-brand-600/20 hover:-translate-y-0.5"
           >
             Kostenloses Angebot anfordern
             <ArrowRight size={16} />

@@ -30,7 +30,7 @@ export default function Header() {
   }, []);
 
   const navLinkClass = ({ isActive }: { isActive: boolean }) =>
-    `text-sm font-medium transition-colors ${isActive ? 'text-navy-900' : 'text-slate-600 hover:text-slate-900'}`;
+    `text-sm font-medium transition-colors ${isActive ? 'text-brand-700' : 'text-slate-600 hover:text-slate-900'}`;
 
   const closeMobile = () => {
     setMobileOpen(false);
@@ -96,7 +96,7 @@ export default function Header() {
                         >
                           <Icon
                             size={16}
-                            className="shrink-0 text-slate-400 group-hover:text-navy-900 transition-colors"
+                            className="shrink-0 text-slate-400 group-hover:text-brand-700 transition-colors"
                           />
                           <span className="text-sm font-medium text-slate-700 group-hover:text-slate-900 transition-colors">
                             {s.title}
@@ -109,7 +109,7 @@ export default function Header() {
                     <Link
                       to="/leistungen"
                       onClick={() => setServicesOpen(false)}
-                      className="flex items-center gap-1.5 text-sm font-semibold text-navy-900 hover:gap-2.5 transition-all px-3"
+                      className="flex items-center gap-1.5 text-sm font-semibold text-brand-700 hover:gap-2.5 transition-all px-3"
                     >
                       Alle Leistungen ansehen
                       <ArrowRight size={14} />
@@ -191,7 +191,7 @@ export default function Header() {
                           {s.title}
                         </Link>
                       ))}
-                      <Link to="/leistungen" onClick={closeMobile} className="block py-2 text-sm font-semibold text-navy-900">
+                      <Link to="/leistungen" onClick={closeMobile} className="block py-2 text-sm font-semibold text-brand-700">
                         Alle Leistungen →
                       </Link>
                     </motion.div>
@@ -211,7 +211,7 @@ export default function Header() {
               </Link>
 
               <div className="pt-4">
-                <Link to="/kontakt" onClick={closeMobile} className="block w-full text-center bg-navy-900 hover:bg-navy-800 text-white font-semibold py-3 rounded-xl transition-colors text-sm">
+                <Link to="/kontakt" onClick={closeMobile} className="block w-full text-center bg-brand-600 hover:bg-brand-700 text-white font-semibold py-3 rounded-xl transition-colors text-sm">
                   Angebot anfordern
                 </Link>
               </div>

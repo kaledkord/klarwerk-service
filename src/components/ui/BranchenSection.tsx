@@ -77,7 +77,7 @@ export default function BranchenSection() {
           transition={{ duration: 0.6, ease: easeOut }}
           className="max-w-3xl"
         >
-          <span className="text-navy-700 text-xs font-bold uppercase tracking-widest">
+          <span className="text-brand-700 text-xs font-bold uppercase tracking-widest">
             Branchen &amp; Zielgruppen
           </span>
           <h2 className="mt-3 text-4xl md:text-5xl font-black tracking-tight text-slate-900">
@@ -122,7 +122,7 @@ export default function BranchenSection() {
         >
           <Link
             to="/leistungen"
-            className="inline-flex items-center gap-1.5 text-sm font-semibold text-navy-900 hover:gap-2.5 transition-all"
+            className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-700 hover:gap-2.5 transition-all"
           >
             Alle Leistungen im Überblick <ArrowRight size={15} />
           </Link>

@@ -19,13 +19,13 @@ function FAQRow({ item, isOpen, onToggle }: { item: FAQItem; isOpen: boolean; on
         onClick={onToggle}
         className="w-full flex items-center justify-between gap-4 py-5 text-left group"
       >
-        <span className="font-semibold text-slate-900 group-hover:text-navy-900 transition-colors">
+        <span className="font-semibold text-slate-900 group-hover:text-brand-700 transition-colors">
           {item.question}
         </span>
         <motion.div
           animate={{ rotate: isOpen ? 180 : 0 }}
           transition={{ duration: 0.25 }}
-          className="shrink-0 text-slate-400 group-hover:text-navy-900 transition-colors"
+          className="shrink-0 text-slate-400 group-hover:text-brand-700 transition-colors"
         >
           <ChevronDown size={20} />
         </motion.div>

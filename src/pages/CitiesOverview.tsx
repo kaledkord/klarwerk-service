@@ -46,7 +46,7 @@ export default function CitiesOverview() {
             <span>/</span>
             <span className="text-slate-600">Einsatzgebiet</span>
           </nav>
-          <p className="text-sm font-semibold text-navy-900 uppercase tracking-widest mb-5">
+          <p className="text-sm font-semibold text-brand-700 uppercase tracking-widest mb-5">
             <MapPin size={14} className="inline mr-1.5 -mt-0.5" />
             Schleswig-Holstein, Hamburg &amp; NRW
           </p>
@@ -69,7 +69,7 @@ export default function CitiesOverview() {
               <AnimatedSection key={city.slug} delay={i * 0.06}>
                 <Link
                   to={`/einsatzgebiet/${city.slug}`}
-                  className="group block bg-white border border-slate-100 rounded-2xl overflow-hidden hover:border-navy-200 hover:shadow-lg transition-all"
+                  className="group block bg-white border border-slate-100 rounded-2xl overflow-hidden hover:border-brand-200 hover:shadow-lg transition-all"
                 >
                   <div className="relative h-48 overflow-hidden">
                     <img
@@ -91,7 +91,7 @@ export default function CitiesOverview() {
                     <p className="text-sm text-slate-500 leading-relaxed line-clamp-3">
                       {city.description}
                     </p>
-                    <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-navy-900">
+                    <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-700">
                       Gebäudereinigung in {city.name}
                       <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
                     </span>

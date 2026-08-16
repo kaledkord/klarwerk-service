@@ -92,7 +92,7 @@ export default function Header() {
                           key={s.id}
                           to={`/leistungen/${s.id}`}
                           onClick={() => setServicesOpen(false)}
-                          className="flex items-center gap-2.5 px-3 py-2.5 rounded-xl hover:bg-slate-50 group transition-colors"
+                          className="flex items-center gap-2.5 px-3 py-2.5 rounded-xl hover:bg-paper group transition-colors"
                         >
                           <Icon
                             size={16}

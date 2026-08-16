@@ -16,13 +16,13 @@ const contactInfo = [
 
 export default function Contact() {
   return (
-    <div className="bg-white">
+    <div className="bg-paper">
       <SEO
         {...seoConfig['/kontakt']}
         keywords="Kontakt KlarWerk Service, Gebäudereinigung Angebot, Reinigungsfirma Kontakt"
       />
 
-      <section className="pt-36 pb-16 bg-slate-50">
+      <section className="pt-36 pb-16 bg-paper">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}>
             <span className="text-brand-700 text-sm font-semibold uppercase tracking-widest">Kontakt</span>
@@ -42,7 +42,7 @@ export default function Contact() {
               {contactInfo.map((item) => {
                 const Icon = item.icon;
                 const content = (
-                  <div className="flex items-start gap-4 p-5 bg-slate-50 rounded-2xl hover:bg-slate-100 transition-colors">
+                  <div className="flex items-start gap-4 p-5 bg-paper rounded-2xl hover:bg-slate-100 transition-colors">
                     <div className="w-11 h-11 bg-white rounded-xl flex items-center justify-center shrink-0 border border-slate-200">
                       <Icon size={18} className="text-brand-700" />
                     </div>

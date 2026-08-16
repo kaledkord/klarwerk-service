@@ -171,7 +171,7 @@ const advantages: { icon: LucideIcon; title: string; text: string }[] = [
 
 export default function EquipmentSection() {
   return (
-    <section className="py-28 bg-slate-50">
+    <section className="py-28 bg-paper">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Header */}

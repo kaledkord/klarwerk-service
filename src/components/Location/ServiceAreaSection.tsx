@@ -13,7 +13,7 @@ export default function ServiceAreaSection() {
   const mapSrc = `https://www.google.com/maps?q=${geo.latitude},${geo.longitude}&z=11&output=embed`;
 
   return (
-    <section className="py-28 bg-slate-50">
+    <section className="py-28 bg-paper">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <motion.div

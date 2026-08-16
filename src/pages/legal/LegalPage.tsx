@@ -10,9 +10,9 @@ interface LegalPageProps {
 
 export default function LegalPage({ title, description, canonicalPath, children }: LegalPageProps) {
   return (
-    <div className="bg-white">
+    <div className="bg-paper">
       <SEO title={title} description={description} canonicalPath={canonicalPath} />
-      <section className="pt-36 pb-16 bg-slate-50">
+      <section className="pt-36 pb-16 bg-paper">
         <div className="max-w-7xl mx-auto px-6">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}

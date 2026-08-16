@@ -66,7 +66,7 @@ const branches = [
 
 export default function BranchenSection() {
   return (
-    <section className="py-28 bg-white">
+    <section className="py-28 bg-paper">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Header */}

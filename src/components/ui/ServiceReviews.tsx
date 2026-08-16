@@ -41,7 +41,7 @@ export default function ServiceReviews({
   const { reviews: r } = businessConfig;
 
   return (
-    <section className="py-24 bg-slate-50">
+    <section className="py-24 bg-paper">
       <div className="max-w-7xl mx-auto px-6">
         <AnimatedSection className="text-center max-w-2xl mx-auto mb-12">
           <span className="text-brand-700 text-sm font-semibold uppercase tracking-widest">Bewertungen</span>

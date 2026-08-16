@@ -15,13 +15,13 @@ const values = [
 
 export default function About() {
   return (
-    <div className="bg-white">
+    <div className="bg-paper">
       <SEO
         {...seoConfig['/ueber-uns']}
         keywords="Über KlarWerk Service, Gebäudereinigung Unternehmen, Reinigungsfirma Schleswig-Holstein"
       />
 
-      <section className="pt-36 pb-20 bg-slate-50">
+      <section className="pt-36 pb-20 bg-paper">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}>
             <span className="text-brand-700 text-sm font-semibold uppercase tracking-widest">Über uns</span>
@@ -57,7 +57,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-24 bg-slate-50">
+      <section className="py-24 bg-paper">
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedSection className="text-center mb-14">
             <h2 className="text-3xl md:text-4xl font-black tracking-tight">Unsere Werte</h2>

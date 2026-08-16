@@ -136,7 +136,7 @@ export default function Home() {
       </section>
 
       {/* ── 3 LEISTUNGEN ───────────────────────────────────────────────────── */}
-      <section id="leistungen" className="py-28 bg-white">
+      <section id="leistungen" className="py-28 bg-paper">
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedSection>
             <span className="text-brand-700 text-sm font-semibold uppercase tracking-widest">
@@ -170,7 +170,7 @@ export default function Home() {
       <BranchenSection />
 
       {/* ── 5 WARUM KLARWERK ───────────────────────────────────────────────── */}
-      <section className="py-28 bg-slate-50">
+      <section className="py-28 bg-paper">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <AnimatedSection>
@@ -219,7 +219,7 @@ export default function Home() {
       <EquipmentSection />
 
       {/* ── 8 ABLAUF DER ZUSAMMENARBEIT ────────────────────────────────────── */}
-      <section className="py-28 bg-slate-50">
+      <section className="py-28 bg-paper">
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedSection>
             <span className="text-brand-700 text-sm font-semibold uppercase tracking-widest">
@@ -257,7 +257,7 @@ export default function Home() {
       <GoogleReviewsCarousel />
 
       {/* ── 10 EINSATZGEBIET ───────────────────────────────────────────────── */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-paper">
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedSection>
             <span className="text-brand-700 text-sm font-semibold uppercase tracking-widest">
@@ -285,7 +285,7 @@ export default function Home() {
       </section>
 
       {/* ── 11 FAQ ─────────────────────────────────────────────────────────── */}
-      <section className="py-28 bg-slate-50">
+      <section className="py-28 bg-paper">
         <div className="max-w-4xl mx-auto px-6">
           <AnimatedSection className="text-center mb-12">
             <span className="text-brand-700 text-sm font-semibold uppercase tracking-widest">FAQ</span>

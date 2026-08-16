@@ -19,14 +19,14 @@ const jsonLd = {
 
 export default function Services() {
   return (
-    <div className="bg-white">
+    <div className="bg-paper">
       <SEO
         {...seoConfig['/leistungen']}
         keywords="Gebäudereinigung Leistungen, Büroreinigung, Glasreinigung, Hausmeisterservice, Gartenpflege, Schleswig-Holstein, Hamburg"
         jsonLd={jsonLd}
       />
 
-      <section className="pt-36 pb-16 bg-slate-50">
+      <section className="pt-36 pb-16 bg-paper">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}>
             <span className="text-brand-700 text-sm font-semibold uppercase tracking-widest">Leistungen</span>

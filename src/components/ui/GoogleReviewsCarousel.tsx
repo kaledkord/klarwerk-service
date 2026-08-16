@@ -43,7 +43,7 @@ export default function GoogleReviewsCarousel() {
   const doubled = [...reviews, ...reviews];
 
   return (
-    <section className="py-28 bg-slate-50 overflow-hidden">
+    <section className="py-28 bg-paper overflow-hidden">
       <AnimatedSection className="text-center max-w-2xl mx-auto px-6 mb-12">
         <span className="text-brand-700 text-sm font-semibold uppercase tracking-widest">Bewertungen</span>
         <h2 className="text-4xl md:text-5xl font-black mt-3 tracking-tight text-slate-900">

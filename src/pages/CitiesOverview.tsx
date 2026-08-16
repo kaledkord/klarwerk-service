@@ -31,7 +31,7 @@ export default function CitiesOverview() {
   };
 
   return (
-    <div className="bg-white">
+    <div className="bg-paper">
       <SEO
         {...seoConfig['/einsatzgebiet']}
         keywords="Gebäudereinigung Schleswig-Holstein, Gebäudereinigung Kiel, Reinigungsfirma Bordesholm, Reinigungsfirma Neumünster, Reinigungsfirma Rendsburg, Gebäudereinigung Hamburg"
@@ -39,7 +39,7 @@ export default function CitiesOverview() {
       />
 
       {/* HERO */}
-      <section className="relative pt-32 pb-16 lg:pt-40 lg:pb-20 bg-slate-50">
+      <section className="relative pt-32 pb-16 lg:pt-40 lg:pb-20 bg-paper">
         <div className="max-w-7xl mx-auto px-6">
           <nav className="flex items-center gap-2 text-sm text-slate-400 mb-6">
             <Link to="/" className="hover:text-slate-600 transition-colors">Start</Link>

@@ -95,7 +95,7 @@ export default function ServicePage() {
   };
 
   return (
-    <div className="bg-white">
+    <div className="bg-paper">
       <SEO
         title={content.seo.title}
         description={content.seo.description}
@@ -105,7 +105,7 @@ export default function ServicePage() {
       />
 
       {/* Hero */}
-      <section className="pt-36 pb-16 bg-slate-50">
+      <section className="pt-36 pb-16 bg-paper">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
@@ -181,7 +181,7 @@ export default function ServicePage() {
       </section>
 
       {/* Process */}
-      <section className="py-24 bg-slate-50">
+      <section className="py-24 bg-paper">
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedSection className="text-center mb-14">
             <span className="text-brand-700 text-sm font-semibold uppercase tracking-widest">
@@ -231,7 +231,7 @@ export default function ServicePage() {
             </p>
           </AnimatedSection>
           <AnimatedSection delay={0.1}>
-            <div className="bg-slate-50 border border-slate-200 rounded-3xl p-8 md:p-10">
+            <div className="bg-white border border-slate-200 rounded-3xl p-8 md:p-10">
               <div className="grid md:grid-cols-2 gap-x-10 gap-y-5">
                 {[
                   'Individueller Festpreis nach kostenloser Vor-Ort-Besichtigung – transparent und ohne versteckte Kosten',
@@ -293,7 +293,7 @@ export default function ServicePage() {
       </section>
 
       {/* Einsatzbereiche */}
-      <section className="py-24 bg-slate-50">
+      <section className="py-24 bg-paper">
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedSection className="text-center mb-14">
             <span className="text-brand-700 text-sm font-semibold uppercase tracking-widest">
@@ -403,7 +403,7 @@ export default function ServicePage() {
               <AnimatedSection key={c.slug} delay={i * 0.05}>
                 <Link
                   to={`/einsatzgebiet/${c.slug}`}
-                  className="flex items-center gap-2 bg-slate-50 border border-slate-200 hover:border-brand-200 hover:bg-brand-50 px-5 py-2.5 rounded-full text-sm font-medium text-slate-700 transition-colors"
+                  className="flex items-center gap-2 bg-white border border-slate-200 hover:border-brand-200 hover:bg-brand-50 px-5 py-2.5 rounded-full text-sm font-medium text-slate-700 transition-colors"
                   aria-label={`${service.title} in ${c.name}`}
                 >
                   {service.title} in {c.name}
@@ -438,7 +438,7 @@ export default function ServicePage() {
       </section>
 
       {/* Next service */}
-      <section className="py-16 bg-slate-50">
+      <section className="py-16 bg-paper">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
             <div>

@@ -56,9 +56,9 @@ export default {
         },
         // Off-White-Canvas & Ink (aus dem Foto abgeleitet, leichte Grün-Tendenz)
         paper: {
-          DEFAULT: '#eef1ec',
-          100: '#f4f6f2',
-          200: '#e3e8e1',
+          DEFAULT: '#e6ebf1',
+          100: '#eef2f6',
+          200: '#dae1ea',
         },
         ink: '#141c26',
         amber: {

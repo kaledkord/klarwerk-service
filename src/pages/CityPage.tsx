@@ -78,7 +78,7 @@ export default function CityPage() {
   };
 
   return (
-    <div className="bg-white">
+    <div className="bg-paper">
       <SEO
         title={cityTitle}
         description={cityDesc}
@@ -88,7 +88,7 @@ export default function CityPage() {
       />
 
       {/* HERO */}
-      <section className="relative pt-32 pb-16 lg:pt-40 lg:pb-24 bg-slate-50">
+      <section className="relative pt-32 pb-16 lg:pt-40 lg:pb-24 bg-paper">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <motion.div
@@ -156,7 +156,7 @@ export default function CityPage() {
           <div className="mt-10 grid sm:grid-cols-2 gap-4">
             {city.highlights.map((h, i) => (
               <AnimatedSection key={i} delay={i * 0.06}>
-                <div className="flex items-start gap-3 bg-slate-50 border border-slate-200 rounded-xl px-5 py-4">
+                <div className="flex items-start gap-3 bg-white border border-slate-200 rounded-xl px-5 py-4">
                   <CheckCircle size={18} className="text-cyan-500 shrink-0 mt-0.5" />
                   <p className="text-slate-700 text-sm leading-relaxed">{h}</p>
                 </div>
@@ -167,7 +167,7 @@ export default function CityPage() {
       </section>
 
       {/* SERVICES */}
-      <section className="py-20 bg-slate-50">
+      <section className="py-20 bg-paper">
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedSection>
             <span className="text-brand-700 text-sm font-semibold uppercase tracking-widest">Leistungen</span>
@@ -225,7 +225,7 @@ export default function CityPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-20 bg-slate-50">
+      <section className="py-20 bg-paper">
         <div className="max-w-3xl mx-auto px-6">
           <AnimatedSection className="text-center mb-10">
             <span className="text-brand-700 text-sm font-semibold uppercase tracking-widest">FAQ</span>

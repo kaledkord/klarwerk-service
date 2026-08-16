@@ -34,14 +34,14 @@ const gardenMeasures = [
 
 export default function Sustainability() {
   return (
-    <div className="bg-white">
+    <div className="bg-paper">
       <SEO
         {...seoConfig['/nachhaltigkeit']}
         keywords="Nachhaltigkeit Gebäudereinigung, umweltfreundliche Reinigung, ökologische Reinigungsmittel, KlarWerk Service Nachhaltigkeit"
       />
 
       {/* Hero */}
-      <section className="pt-36 pb-20 bg-slate-50">
+      <section className="pt-36 pb-20 bg-paper">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}>
             <span className="text-brand-700 text-sm font-semibold uppercase tracking-widest">Nachhaltigkeit</span>
@@ -84,7 +84,7 @@ export default function Sustainability() {
       </section>
 
       {/* Eco-friendly cleaning */}
-      <section className="py-24 bg-slate-50">
+      <section className="py-24 bg-paper">
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
           <AnimatedSection>
             <img
@@ -183,7 +183,7 @@ export default function Sustainability() {
       </section>
 
       {/* Closing statement */}
-      <section className="py-24 bg-slate-50">
+      <section className="py-24 bg-paper">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <AnimatedSection>
             <h2 className="text-3xl md:text-4xl font-black tracking-tight">Gemeinsam für eine saubere Zukunft</h2>

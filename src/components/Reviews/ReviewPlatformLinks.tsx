@@ -64,7 +64,7 @@ export default function ReviewPlatformLinks() {
   const { reviews } = businessConfig;
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24 bg-paper">
       <div className="max-w-5xl mx-auto px-6">
 
         {/* Header */}
@@ -86,7 +86,7 @@ export default function ReviewPlatformLinks() {
           </p>
 
           {/* Rating badge */}
-          <div className="mt-8 inline-flex items-center gap-4 bg-slate-50 border border-slate-200 rounded-2xl px-6 py-3">
+          <div className="mt-8 inline-flex items-center gap-4 bg-white border border-slate-200 rounded-2xl px-6 py-3">
             <div className="text-left">
               <p className="text-3xl font-black text-slate-900 leading-none">{reviews.ratingValue}</p>
               <p className="text-xs text-slate-400 mt-0.5">von 5 Punkten</p>

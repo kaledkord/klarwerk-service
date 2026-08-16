@@ -228,7 +228,7 @@ export default function EquipmentSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: '-60px' }}
                   transition={{ duration: 0.5, delay: i * 0.08, ease: easeOut }}
-                  className="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow"
+                  className="bg-white border border-slate-200 rounded-2xl p-8 shadow-md hover:shadow-md transition-shadow"
                 >
                   <div className="inline-flex items-center justify-center w-12 h-12 bg-cyan-50 rounded-xl mb-5">
                     <Icon size={22} className="text-cyan-600" />

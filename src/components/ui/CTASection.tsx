@@ -24,7 +24,7 @@ export default function CTASection({
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
           <Link
             to={primaryHref}
-            className="inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-semibold px-8 py-4 rounded-xl transition duration-200 shadow-lg shadow-brand-600/25 shadow-sm hover:shadow-xl hover:shadow-brand-600/35 active:scale-[0.98]"
+            className="inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-semibold px-8 py-4 rounded-xl transition duration-200 shadow-lg shadow-brand-600/25 shadow-md hover:shadow-xl hover:shadow-brand-600/35 active:scale-[0.98]"
           >
             {primaryLabel}
             <ArrowRight size={16} />

@@ -183,7 +183,7 @@ export default function CityPage() {
               <AnimatedSection key={service.id} delay={i * 0.06}>
                 <Link
                   to={`/leistungen/${service.id}`}
-                  className="block bg-white border border-slate-200 rounded-2xl p-6 hover:border-brand-200 shadow-sm hover:shadow-md transition-all h-full group"
+                  className="block bg-white border border-slate-200 rounded-2xl p-6 hover:border-brand-200 shadow-md hover:shadow-md transition-all h-full group"
                 >
                   <service.icon size={28} className="text-brand-700 mb-4" />
                   <h3 className="font-bold text-slate-900 group-hover:text-brand-700 transition-colors">
@@ -234,7 +234,7 @@ export default function CityPage() {
             </h2>
           </AnimatedSection>
           <AnimatedSection delay={0.1}>
-            <div className="bg-white rounded-2xl border border-slate-200 px-8 py-4 shadow-sm">
+            <div className="bg-white rounded-2xl border border-slate-200 px-8 py-4 shadow-md">
               <FAQAccordion items={faqs} />
             </div>
           </AnimatedSection>

@@ -56,7 +56,7 @@ export default function ServiceAreaSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: i * 0.05 }}
-                  className="bg-white border border-slate-200 rounded-xl p-4 hover:border-brand-200 shadow-sm hover:shadow-md transition-all"
+                  className="bg-white border border-slate-200 rounded-xl p-4 hover:border-brand-200 shadow-md hover:shadow-md transition-all"
                 >
                   <div className="flex items-center gap-2 mb-2">
                     <MapPin size={15} className="text-brand-600 shrink-0" />

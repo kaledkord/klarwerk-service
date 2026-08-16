@@ -62,7 +62,7 @@ export default function Contact() {
           </AnimatedSection>
 
           <AnimatedSection delay={0.1} className="lg:col-span-3">
-            <div className="bg-white border border-slate-200 rounded-3xl p-8 shadow-sm">
+            <div className="bg-white border border-slate-200 rounded-3xl p-8 shadow-md">
               <h2 className="text-2xl font-bold text-slate-900 mb-6">Angebot anfordern</h2>
               <ContactForm />
             </div>

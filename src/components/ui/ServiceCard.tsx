@@ -13,7 +13,7 @@ export default function ServiceCard({ service }: Props) {
   return (
     <motion.div
       whileHover={{ y: -6, transition: { duration: 0.25, ease: [0.4, 0, 0.2, 1] } }}
-      className="group flex flex-col bg-white border border-slate-200 rounded-2xl p-7 hover:border-brand-200 shadow-sm hover:shadow-xl transition-all duration-300 h-full"
+      className="group flex flex-col bg-white border border-slate-200 rounded-2xl p-7 hover:border-brand-200 shadow-md hover:shadow-xl transition-all duration-300 h-full"
     >
       <div className="inline-flex items-center justify-center w-12 h-12 bg-brand-50 rounded-xl mb-5 group-hover:bg-brand-600 transition-colors duration-300">
         <Icon

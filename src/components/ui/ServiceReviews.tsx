@@ -51,7 +51,7 @@ export default function ServiceReviews({
           <p className="mt-4 text-slate-500 leading-relaxed">
             Echte Google-Bewertungen rund um {serviceTitle} und weitere Leistungen.
           </p>
-          <div className="inline-flex items-center gap-3 bg-white rounded-full px-5 py-2.5 mt-5 shadow-sm border border-slate-200">
+          <div className="inline-flex items-center gap-3 bg-white rounded-full px-5 py-2.5 mt-5 shadow-md border border-slate-200">
             <Stars />
             <span className="text-sm font-bold text-slate-900">{r.ratingValue.replace('.', ',')}</span>
             <span className="text-sm text-slate-500">· {r.reviewCount}+ Google Bewertungen</span>
@@ -61,7 +61,7 @@ export default function ServiceReviews({
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {items.map((review, i) => (
             <AnimatedSection key={`${review.name}-${i}`} delay={i * 0.08}>
-              <figure className="flex flex-col h-full bg-white rounded-2xl p-6 border border-slate-200 shadow-sm border-t-[3px] border-t-brand-500">
+              <figure className="flex flex-col h-full bg-white rounded-2xl p-6 border border-slate-200 shadow-md border-t-[3px] border-t-brand-500">
                 <div className="flex items-center gap-3 mb-3">
                   {GOOGLE_LOGO}
                   <figcaption>

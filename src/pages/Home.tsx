@@ -235,7 +235,7 @@ export default function Home() {
           <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {processSteps.map((step, i) => (
               <AnimatedSection key={step.num} delay={i * 0.09}>
-                <div className="relative bg-white border border-slate-200 rounded-2xl p-7 hover:border-brand-200 shadow-sm hover:shadow-md transition-all h-full">
+                <div className="relative bg-white border border-slate-200 rounded-2xl p-7 hover:border-brand-200 shadow-md hover:shadow-md transition-all h-full">
                   <span className="text-5xl font-black text-slate-100 leading-none">
                     {step.num}
                   </span>
@@ -295,7 +295,7 @@ export default function Home() {
             </p>
           </AnimatedSection>
           <AnimatedSection delay={0.1}>
-            <div className="bg-white rounded-2xl border border-slate-200 px-8 py-4 shadow-sm">
+            <div className="bg-white rounded-2xl border border-slate-200 px-8 py-4 shadow-md">
               <FAQAccordion items={faqs} />
             </div>
           </AnimatedSection>

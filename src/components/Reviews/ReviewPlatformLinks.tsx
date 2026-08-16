@@ -116,7 +116,7 @@ export default function ReviewPlatformLinks() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
               whileHover={{ y: -4, transition: { duration: 0.18 } }}
-              className="group relative bg-white border border-slate-200 hover:border-slate-200 rounded-2xl p-6 text-center transition-all duration-200 shadow-sm hover:shadow-lg hover:shadow-slate-900/6"
+              className="group relative bg-white border border-slate-200 hover:border-slate-200 rounded-2xl p-6 text-center transition-all duration-200 shadow-md hover:shadow-lg hover:shadow-slate-900/6"
             >
               <div className="flex justify-center mb-4">
                 <PlatformIcon icon={platform.icon} size={36} />

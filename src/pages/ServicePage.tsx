@@ -372,7 +372,7 @@ export default function ServicePage() {
               return (
                 <AnimatedSection key={t.title} delay={i * 0.08}>
                   <div className="bg-white/5 border border-white/10 rounded-2xl p-8 h-full hover:bg-white/10 transition-colors">
-                    <div className="inline-flex items-center justify-center w-12 h-12 bg-cyan-500/150/10 rounded-xl mb-5">
+                    <div className="inline-flex items-center justify-center w-12 h-12 bg-cyan-500/10 rounded-xl mb-5">
                       <TIcon size={22} className="text-cyan-400" />
                     </div>
                     <h3 className="text-lg font-bold text-white">{t.title}</h3>

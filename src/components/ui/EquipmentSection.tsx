@@ -55,7 +55,7 @@ function LogoItem({ m }: { m: (typeof manufacturers)[0] }) {
       </div>
 
       {/* Separator dot */}
-      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1 h-1 rounded-full bg-white/15/40" />
+      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1 h-1 rounded-full bg-white/30" />
     </div>
   );
 }

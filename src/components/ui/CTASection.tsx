@@ -11,7 +11,7 @@ interface Props {
 
 export default function CTASection({
   title = 'Bereit für eine saubere Lösung?',
-  subtitle = 'Fordern Sie jetzt Ihr kostenloses und unverbindliches Angebot an. Wir melden uns innerhalb von 24 Stunden.',
+  subtitle = 'Fordern Sie jetzt Ihr kostenloses und unverbindliches Angebot an. Wir vereinbaren zeitnah eine Besichtigung und erstellen Ihnen ein faires Festpreis-Angebot.',
   primaryLabel = 'Kostenloses Angebot',
   primaryHref = '/kontakt',
   showPhone = true,

@@ -224,8 +224,10 @@ export default function ServicePage() {
               Was kostet die {service.title}?
             </h2>
             <p className="mt-4 text-slate-600 text-lg max-w-2xl mx-auto">
-              Bei KlarWerk Service gibt es keinen Tarif von der Stange, sondern ein individuelles
-              Festpreis-Angebot, das genau zu Ihrem Objekt passt.
+              Bei KlarWerk Service gibt es keinen Tarif von der Stange. Nach einer kostenlosen
+              Besichtigung erfassen wir alle Angaben in unserem eigenen Kalkulationsprogramm für die
+              Gebäudereinigung – und erstellen daraus ein faires, transparentes Festpreis-Angebot,
+              das genau zu Ihrem Objekt passt.
             </p>
           </AnimatedSection>
           <AnimatedSection delay={0.1}>
@@ -233,7 +235,7 @@ export default function ServicePage() {
               <div className="grid md:grid-cols-2 gap-x-10 gap-y-5">
                 {[
                   'Individueller Festpreis nach kostenloser Vor-Ort-Besichtigung – transparent und ohne versteckte Kosten',
-                  'Angebot innerhalb von 24 Stunden nach der Besichtigung',
+                  'Faire Kalkulation über unser eigenes Programm für Gebäudereinigung – für alle Kunden nach denselben Maßstäben',
                   'Als einmalige Leistung oder im regelmäßigen Turnus – ganz nach Ihrem Bedarf',
                   `Der Preis richtet sich nach: ${priceFactors[service.id] ?? 'Umfang, Häufigkeit und Zustand des Objekts'}`,
                 ].map((item) => (
@@ -456,7 +458,7 @@ export default function ServicePage() {
 
       <CTASection
         title={`Interesse an ${service.title}?`}
-        subtitle="Fordern Sie jetzt Ihr kostenloses und unverbindliches Angebot an. Wir melden uns innerhalb von 24 Stunden."
+        subtitle="Fordern Sie jetzt Ihr kostenloses und unverbindliches Angebot an. Wir vereinbaren zeitnah eine Besichtigung und erstellen Ihnen ein faires Festpreis-Angebot."
       />
     </div>
   );

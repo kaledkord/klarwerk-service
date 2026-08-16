@@ -28,7 +28,7 @@ export default function Contact() {
             <span className="text-brand-700 text-sm font-semibold uppercase tracking-widest">Kontakt</span>
             <h1 className="mt-3 text-5xl md:text-6xl font-black tracking-tight">Kontaktieren Sie uns</h1>
             <p className="mt-6 text-lg text-slate-600 max-w-2xl leading-relaxed">
-              Sie haben Fragen oder möchten ein Angebot anfordern? Füllen Sie das Formular aus oder kontaktieren Sie uns direkt – wir melden uns innerhalb von 24 Stunden.
+              Sie haben Fragen oder möchten ein Angebot anfordern? Füllen Sie das Formular aus oder kontaktieren Sie uns direkt – wir melden uns zeitnah und vereinbaren eine kostenlose Besichtigung.
             </p>
           </motion.div>
         </div>

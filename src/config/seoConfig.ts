@@ -44,7 +44,7 @@ export const seoConfig = {
   '/kontakt': {
     title: 'Kontakt – Angebot für Gebäudereinigung anfordern',
     description:
-      'Kontaktieren Sie KlarWerk Service für Gebäudereinigung in Kiel, Neumünster & ganz Schleswig-Holstein. Telefon, E-Mail oder Kontaktformular – Antwort innerhalb von 24 Stunden.',
+      'Kontaktieren Sie KlarWerk Service für Gebäudereinigung in Kiel, Neumünster & ganz Schleswig-Holstein. Telefon, E-Mail oder Kontaktformular – wir vereinbaren zeitnah eine kostenlose Besichtigung.',
     canonical: '/kontakt',
   },
   '/impressum': {

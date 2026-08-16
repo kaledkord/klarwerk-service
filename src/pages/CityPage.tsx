@@ -32,7 +32,7 @@ export default function CityPage() {
     },
     {
       question: `Wie erhalte ich ein Angebot für ${city.name}?`,
-      answer: `Kontaktieren Sie uns telefonisch oder über das Kontaktformular. Nach einer kostenlosen Vor-Ort-Besichtigung in ${city.name} erhalten Sie innerhalb von 24 Stunden ein individuelles Angebot.`,
+      answer: `Kontaktieren Sie uns telefonisch oder über das Kontaktformular. Nach einer kostenlosen Vor-Ort-Besichtigung in ${city.name} erhalten Sie ein individuelles, faires Festpreis-Angebot.`,
     },
     {
       question: `Reinigen Sie in ${city.name} auch außerhalb der Geschäftszeiten?`,

@@ -27,7 +27,7 @@ function LogoItem({ m }: { m: (typeof manufacturers)[0] }) {
         <div className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-400 blur-xl rounded-full bg-cyan-400/20" />
 
         {status === 'loading' && (
-          <div className="w-24 h-10 rounded bg-slate-200/60 animate-pulse" />
+          <div className="w-24 h-10 rounded bg-white/10 animate-pulse" />
         )}
 
         {status !== 'error' && (
@@ -49,13 +49,13 @@ function LogoItem({ m }: { m: (typeof manufacturers)[0] }) {
         {status === 'error' && (
           <div className="flex items-center gap-2 opacity-40">
             <Building2 size={20} className="text-slate-400" />
-            <span className="text-xs font-semibold text-slate-500 whitespace-nowrap">{m.name}</span>
+            <span className="text-xs font-semibold text-slate-400 whitespace-nowrap">{m.name}</span>
           </div>
         )}
       </div>
 
       {/* Separator dot */}
-      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1 h-1 rounded-full bg-slate-300/40" />
+      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1 h-1 rounded-full bg-white/15/40" />
     </div>
   );
 }
@@ -182,13 +182,13 @@ export default function EquipmentSection() {
           transition={{ duration: 0.6, ease: easeOut }}
           className="max-w-3xl"
         >
-          <span className="text-brand-700 text-xs font-bold uppercase tracking-widest">
+          <span className="text-brand-300 text-xs font-bold uppercase tracking-widest">
             Professionelle Ausstattung von führenden Herstellern
           </span>
-          <h2 className="mt-3 text-4xl md:text-5xl font-black tracking-tight text-slate-900">
+          <h2 className="mt-3 text-4xl md:text-5xl font-black tracking-tight text-white">
             Wir setzen auf professionelle Technik und Qualität
           </h2>
-          <p className="mt-5 text-lg text-slate-600 leading-relaxed">
+          <p className="mt-5 text-lg text-slate-300 leading-relaxed">
             Für unsere Kunden setzen wir auf moderne Reinigungssysteme, professionelle Maschinen
             und hochwertige Produkte führender Hersteller. Die Kombination aus Erfahrung,
             geschultem Personal und professioneller Ausstattung ermöglicht zuverlässige
@@ -208,13 +208,13 @@ export default function EquipmentSection() {
         </motion.div>
 
         {/* Advantages */}
-        <div className="mt-16 pt-14 border-t border-slate-200">
+        <div className="mt-16 pt-14 border-t border-white/10">
           <motion.h3
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.5, ease: easeOut }}
-            className="text-3xl md:text-4xl font-black tracking-tight text-slate-900 text-center"
+            className="text-3xl md:text-4xl font-black tracking-tight text-white text-center"
           >
             Professionelle Ausstattung bedeutet bessere Ergebnisse
           </motion.h3>
@@ -228,13 +228,13 @@ export default function EquipmentSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: '-60px' }}
                   transition={{ duration: 0.5, delay: i * 0.08, ease: easeOut }}
-                  className="bg-white border border-slate-200 rounded-2xl p-8 shadow-md hover:shadow-md transition-shadow"
+                  className="bg-paper-100 border border-white/10 rounded-2xl p-8 shadow-md hover:shadow-md transition-shadow"
                 >
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-cyan-50 rounded-xl mb-5">
-                    <Icon size={22} className="text-cyan-600" />
+                  <div className="inline-flex items-center justify-center w-12 h-12 bg-cyan-500/15 rounded-xl mb-5">
+                    <Icon size={22} className="text-cyan-400" />
                   </div>
-                  <h4 className="text-lg font-bold text-slate-900">{a.title}</h4>
-                  <p className="mt-2 text-sm text-slate-600 leading-relaxed">{a.text}</p>
+                  <h4 className="text-lg font-bold text-white">{a.title}</h4>
+                  <p className="mt-2 text-sm text-slate-300 leading-relaxed">{a.text}</p>
                 </motion.div>
               );
             })}
@@ -249,7 +249,7 @@ export default function EquipmentSection() {
           transition={{ duration: 0.6, ease: easeOut }}
           className="mt-20 text-center"
         >
-          <h3 className="text-2xl md:text-3xl font-black tracking-tight text-slate-900">
+          <h3 className="text-2xl md:text-3xl font-black tracking-tight text-white">
             Überzeugen Sie sich von professioneller Reinigungstechnik.
           </h3>
           <Link

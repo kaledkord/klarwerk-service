@@ -25,9 +25,9 @@ export default function Contact() {
       <section className="pt-36 pb-16 bg-paper">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}>
-            <span className="text-brand-700 text-sm font-semibold uppercase tracking-widest">Kontakt</span>
+            <span className="text-brand-300 text-sm font-semibold uppercase tracking-widest">Kontakt</span>
             <h1 className="mt-3 text-5xl md:text-6xl font-black tracking-tight">Kontaktieren Sie uns</h1>
-            <p className="mt-6 text-lg text-slate-600 max-w-2xl leading-relaxed">
+            <p className="mt-6 text-lg text-slate-300 max-w-2xl leading-relaxed">
               Sie haben Fragen oder möchten ein Angebot anfordern? Füllen Sie das Formular aus oder kontaktieren Sie uns direkt – wir melden uns zeitnah und vereinbaren eine kostenlose Besichtigung.
             </p>
           </motion.div>
@@ -37,18 +37,18 @@ export default function Contact() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-5 gap-12">
           <AnimatedSection className="lg:col-span-2">
-            <h2 className="text-2xl font-bold text-slate-900 mb-6">Direkt erreichbar</h2>
+            <h2 className="text-2xl font-bold text-white mb-6">Direkt erreichbar</h2>
             <div className="space-y-5">
               {contactInfo.map((item) => {
                 const Icon = item.icon;
                 const content = (
-                  <div className="flex items-start gap-4 p-5 bg-paper rounded-2xl hover:bg-slate-100 transition-colors">
-                    <div className="w-11 h-11 bg-white rounded-xl flex items-center justify-center shrink-0 border border-slate-200">
-                      <Icon size={18} className="text-brand-700" />
+                  <div className="flex items-start gap-4 p-5 bg-paper rounded-2xl hover:bg-white/10 transition-colors">
+                    <div className="w-11 h-11 bg-paper-100 rounded-xl flex items-center justify-center shrink-0 border border-white/10">
+                      <Icon size={18} className="text-brand-300" />
                     </div>
                     <div>
-                      <p className="text-xs text-slate-500 uppercase tracking-wider font-semibold">{item.label}</p>
-                      <p className="mt-1 font-semibold text-slate-900">{item.value}</p>
+                      <p className="text-xs text-slate-400 uppercase tracking-wider font-semibold">{item.label}</p>
+                      <p className="mt-1 font-semibold text-white">{item.value}</p>
                     </div>
                   </div>
                 );
@@ -62,8 +62,8 @@ export default function Contact() {
           </AnimatedSection>
 
           <AnimatedSection delay={0.1} className="lg:col-span-3">
-            <div className="bg-white border border-slate-200 rounded-3xl p-8 shadow-md">
-              <h2 className="text-2xl font-bold text-slate-900 mb-6">Angebot anfordern</h2>
+            <div className="bg-paper-100 border border-white/10 rounded-3xl p-8 shadow-md">
+              <h2 className="text-2xl font-bold text-white mb-6">Angebot anfordern</h2>
               <ContactForm />
             </div>
           </AnimatedSection>

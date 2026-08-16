@@ -48,13 +48,13 @@ const branches = [
     icon: Factory,
     title: 'Industrie & Produktion',
     desc: 'Industriereinigung, Maschinenpflege und Hallenreinigung für Produktionsbetriebe.',
-    color: 'bg-slate-100 text-slate-600',
+    color: 'bg-white/10 text-slate-300',
   },
   {
     icon: Hotel,
     title: 'Hotels & Gastronomie',
     desc: 'Zimmer-, Küchen- und Gemeinschaftsflächenreinigung mit höchstem Hygienestandard.',
-    color: 'bg-cyan-50 text-cyan-600',
+    color: 'bg-cyan-500/15 text-cyan-400',
   },
   {
     icon: Wrench,
@@ -77,13 +77,13 @@ export default function BranchenSection() {
           transition={{ duration: 0.6, ease: easeOut }}
           className="max-w-3xl"
         >
-          <span className="text-brand-700 text-xs font-bold uppercase tracking-widest">
+          <span className="text-brand-300 text-xs font-bold uppercase tracking-widest">
             Branchen &amp; Zielgruppen
           </span>
-          <h2 className="mt-3 text-4xl md:text-5xl font-black tracking-tight text-slate-900">
+          <h2 className="mt-3 text-4xl md:text-5xl font-black tracking-tight text-white">
             Für wen wir arbeiten
           </h2>
-          <p className="mt-5 text-lg text-slate-500 leading-relaxed">
+          <p className="mt-5 text-lg text-slate-400 leading-relaxed">
             Von kleinen Büros bis zu großen Industrieanlagen — wir bieten
             maßgeschneiderte Reinigungslösungen für jede Branche und jeden Bedarf.
           </p>
@@ -100,13 +100,13 @@ export default function BranchenSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-60px' }}
                 transition={{ duration: 0.5, delay: i * 0.07, ease: easeOut }}
-                className="group bg-white border border-slate-200 hover:border-slate-200 rounded-2xl p-7 shadow-md hover:shadow-lg hover:shadow-slate-900/6 transition-all duration-300"
+                className="group bg-paper-100 border border-white/10 hover:border-white/10 rounded-2xl p-7 shadow-md hover:shadow-lg hover:shadow-slate-900/6 transition-all duration-300"
               >
                 <div className={`inline-flex items-center justify-center w-11 h-11 rounded-xl mb-5 ${b.color}`}>
                   <Icon size={20} />
                 </div>
-                <h3 className="font-bold text-slate-900 leading-snug">{b.title}</h3>
-                <p className="mt-2.5 text-sm text-slate-500 leading-relaxed">{b.desc}</p>
+                <h3 className="font-bold text-white leading-snug">{b.title}</h3>
+                <p className="mt-2.5 text-sm text-slate-400 leading-relaxed">{b.desc}</p>
               </motion.div>
             );
           })}
@@ -122,7 +122,7 @@ export default function BranchenSection() {
         >
           <Link
             to="/leistungen"
-            className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-700 hover:gap-2.5 transition-all"
+            className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-300 hover:gap-2.5 transition-all"
           >
             Alle Leistungen im Überblick <ArrowRight size={15} />
           </Link>

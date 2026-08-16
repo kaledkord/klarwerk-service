@@ -25,16 +25,16 @@ function Stars() {
 
 function ReviewCard({ name, meta, text }: { name: string; meta: string; text: string }) {
   return (
-    <div className="flex flex-col w-[320px] shrink-0 bg-white rounded-2xl p-6 border border-slate-200 shadow-md shadow-md hover:shadow-md transition-shadow duration-300 border-t-[3px] border-t-brand-500">
+    <div className="flex flex-col w-[320px] shrink-0 bg-paper-100 rounded-2xl p-6 border border-white/10 shadow-md shadow-md hover:shadow-md transition-shadow duration-300 border-t-[3px] border-t-brand-500">
       <div className="flex items-center gap-3 mb-3">
         {GOOGLE_LOGO}
         <div>
-          <p className="text-sm font-bold text-slate-900 leading-tight">{name}</p>
+          <p className="text-sm font-bold text-white leading-tight">{name}</p>
           <p className="text-xs text-slate-400 mt-0.5">{meta}</p>
         </div>
       </div>
       <Stars />
-      <p className="mt-3 text-sm text-slate-600 leading-relaxed line-clamp-5">{text}</p>
+      <p className="mt-3 text-sm text-slate-300 leading-relaxed line-clamp-5">{text}</p>
     </div>
   );
 }
@@ -45,14 +45,14 @@ export default function GoogleReviewsCarousel() {
   return (
     <section className="py-28 bg-paper overflow-hidden">
       <AnimatedSection className="text-center max-w-2xl mx-auto px-6 mb-12">
-        <span className="text-brand-700 text-sm font-semibold uppercase tracking-widest">Bewertungen</span>
-        <h2 className="text-4xl md:text-5xl font-black mt-3 tracking-tight text-slate-900">
+        <span className="text-brand-300 text-sm font-semibold uppercase tracking-widest">Bewertungen</span>
+        <h2 className="text-4xl md:text-5xl font-black mt-3 tracking-tight text-white">
           Das sagen unsere Kunden
         </h2>
-        <p className="mt-4 text-slate-500 text-base leading-relaxed">
+        <p className="mt-4 text-slate-400 text-base leading-relaxed">
           Echte Google-Bewertungen von privaten und gewerblichen Kunden.
         </p>
-        <div className="inline-flex items-center gap-3 bg-white rounded-full px-5 py-2.5 mt-5 shadow-md border border-slate-200">
+        <div className="inline-flex items-center gap-3 bg-paper-100 rounded-full px-5 py-2.5 mt-5 shadow-md border border-white/10">
           <div className="flex gap-0.5">
             {[1,2,3,4,5].map((s) => (
               <svg key={s} className="w-4 h-4 text-amber-400 fill-amber-400" viewBox="0 0 20 20">
@@ -60,8 +60,8 @@ export default function GoogleReviewsCarousel() {
               </svg>
             ))}
           </div>
-          <span className="text-sm font-bold text-slate-900">5,0</span>
-          <span className="text-sm text-slate-500">· {businessConfig.reviews.reviewCount}+ Google Bewertungen</span>
+          <span className="text-sm font-bold text-white">5,0</span>
+          <span className="text-sm text-slate-400">· {businessConfig.reviews.reviewCount}+ Google Bewertungen</span>
         </div>
       </AnimatedSection>
 

@@ -44,11 +44,11 @@ export default function Sustainability() {
       <section className="pt-36 pb-20 bg-paper">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}>
-            <span className="text-brand-700 text-sm font-semibold uppercase tracking-widest">Nachhaltigkeit</span>
+            <span className="text-brand-300 text-sm font-semibold uppercase tracking-widest">Nachhaltigkeit</span>
             <h1 className="mt-3 text-5xl md:text-6xl font-black tracking-tight">
               Sauberkeit mit<br />Verantwortung.
             </h1>
-            <p className="mt-6 text-lg text-slate-600 max-w-2xl leading-relaxed">
+            <p className="mt-6 text-lg text-slate-300 max-w-2xl leading-relaxed">
               Bei KlarWerk Service verbinden wir professionelle Gebäudereinigung mit einem verantwortungsvollen Umgang mit unserer Umwelt. Unser Ziel ist es, hochwertige Reinigungslösungen anzubieten, die nicht nur gründlich reinigen, sondern auch Ressourcen schonen.
             </p>
           </motion.div>
@@ -60,7 +60,7 @@ export default function Sustainability() {
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedSection className="text-center mb-14">
             <h2 className="text-3xl md:text-4xl font-black tracking-tight">Unsere Nachhaltigkeits-Ziele</h2>
-            <p className="mt-4 text-slate-500 text-lg max-w-2xl mx-auto">
+            <p className="mt-4 text-slate-400 text-lg max-w-2xl mx-auto">
               Konkrete Maßnahmen statt großer Versprechen – das ist unser Ansatz.
             </p>
           </AnimatedSection>
@@ -69,12 +69,12 @@ export default function Sustainability() {
               const Icon = g.icon;
               return (
                 <AnimatedSection key={g.title} delay={i * 0.1}>
-                  <div className="bg-white border border-slate-200 rounded-2xl p-8 text-center shadow-md hover:shadow-md transition-shadow h-full">
-                    <div className="inline-flex items-center justify-center w-14 h-14 bg-success-50 rounded-2xl mb-5">
+                  <div className="bg-paper-100 border border-white/10 rounded-2xl p-8 text-center shadow-md hover:shadow-md transition-shadow h-full">
+                    <div className="inline-flex items-center justify-center w-14 h-14 bg-success-500/15 rounded-2xl mb-5">
                       <Icon size={26} className="text-success-600" />
                     </div>
-                    <h3 className="text-lg font-bold text-slate-900">{g.title}</h3>
-                    <p className="mt-2 text-slate-600 leading-relaxed text-sm">{g.desc}</p>
+                    <h3 className="text-lg font-bold text-white">{g.title}</h3>
+                    <p className="mt-2 text-slate-300 leading-relaxed text-sm">{g.desc}</p>
                   </div>
                 </AnimatedSection>
               );
@@ -95,12 +95,12 @@ export default function Sustainability() {
           </AnimatedSection>
           <AnimatedSection delay={0.1}>
             <h2 className="text-3xl md:text-4xl font-black tracking-tight">Umweltfreundliche Reinigung</h2>
-            <p className="mt-5 text-slate-600 leading-relaxed">
+            <p className="mt-5 text-slate-300 leading-relaxed">
               Wir setzen auf moderne und effiziente Reinigungsmethoden, um den Verbrauch von Wasser, Energie und Reinigungsmitteln zu reduzieren.
             </p>
             <div className="mt-8 space-y-3">
               {ecoMeasures.map((m) => (
-                <div key={m} className="flex items-start gap-3 text-slate-700">
+                <div key={m} className="flex items-start gap-3 text-slate-200">
                   <CheckCircle size={18} className="text-success-500 shrink-0 mt-0.5" />
                   <span className="text-sm leading-relaxed">{m}</span>
                 </div>
@@ -122,12 +122,12 @@ export default function Sustainability() {
           </AnimatedSection>
           <AnimatedSection delay={0.1} className="lg:order-1">
             <h2 className="text-3xl md:text-4xl font-black tracking-tight">Nachhaltige Arbeitsweise</h2>
-            <p className="mt-5 text-slate-600 leading-relaxed">
+            <p className="mt-5 text-slate-300 leading-relaxed">
               Nachhaltigkeit bedeutet für uns nicht nur Umweltbewusstsein, sondern auch verantwortungsvolles Handeln im täglichen Betrieb.
             </p>
             <div className="mt-8 space-y-3">
               {workMeasures.map((m) => (
-                <div key={m} className="flex items-start gap-3 text-slate-700">
+                <div key={m} className="flex items-start gap-3 text-slate-200">
                   <CheckCircle size={18} className="text-success-500 shrink-0 mt-0.5" />
                   <span className="text-sm leading-relaxed">{m}</span>
                 </div>
@@ -163,16 +163,16 @@ export default function Sustainability() {
             />
           </AnimatedSection>
           <AnimatedSection delay={0.1}>
-            <div className="inline-flex items-center justify-center w-14 h-14 bg-success-50 rounded-2xl mb-5">
+            <div className="inline-flex items-center justify-center w-14 h-14 bg-success-500/15 rounded-2xl mb-5">
               <Sprout size={26} className="text-success-600" />
             </div>
             <h2 className="text-3xl md:text-4xl font-black tracking-tight">Nachhaltige Pflege von Außenanlagen</h2>
-            <p className="mt-5 text-slate-600 leading-relaxed">
+            <p className="mt-5 text-slate-300 leading-relaxed">
               Auch im Bereich Gartenpflege achten wir auf einen bewussten Umgang mit der Natur.
             </p>
             <div className="mt-8 space-y-3">
               {gardenMeasures.map((m) => (
-                <div key={m} className="flex items-start gap-3 text-slate-700">
+                <div key={m} className="flex items-start gap-3 text-slate-200">
                   <CheckCircle size={18} className="text-success-500 shrink-0 mt-0.5" />
                   <span className="text-sm leading-relaxed">{m}</span>
                 </div>
@@ -187,10 +187,10 @@ export default function Sustainability() {
         <div className="max-w-4xl mx-auto px-6 text-center">
           <AnimatedSection>
             <h2 className="text-3xl md:text-4xl font-black tracking-tight">Gemeinsam für eine saubere Zukunft</h2>
-            <p className="mt-6 text-lg text-slate-600 leading-relaxed">
+            <p className="mt-6 text-lg text-slate-300 leading-relaxed">
               Nachhaltigkeit funktioniert nur gemeinsam. Deshalb beraten wir unsere Kunden gerne, wie Reinigung und Pflege umweltbewusster gestaltet werden können.
             </p>
-            <p className="mt-6 text-base font-semibold text-brand-700">
+            <p className="mt-6 text-base font-semibold text-brand-300">
               KlarWerk Service – Sauberkeit, Qualität und Verantwortung.
             </p>
           </AnimatedSection>

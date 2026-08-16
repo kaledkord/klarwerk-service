@@ -106,7 +106,7 @@ export default function NAPFooter() {
 
           {/* Hours */}
           <div>
-            <h4 className="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-4 flex items-center gap-2">
+            <h4 className="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-4 flex items-center gap-2">
               <Clock size={14} /> Öffnungszeiten
             </h4>
             <ul className="space-y-2 text-sm">
@@ -124,7 +124,7 @@ export default function NAPFooter() {
 
           {/* Service Area */}
           <div>
-            <h4 className="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-4">Einsatzgebiet</h4>
+            <h4 className="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-4">Einsatzgebiet</h4>
             <ul className="space-y-2 text-sm">
               {footerCities.map((c) => (
                 <li key={c.slug}>
@@ -146,7 +146,7 @@ export default function NAPFooter() {
 
           {/* Platform Profiles */}
           <div>
-            <h4 className="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-4">Folgen Sie uns</h4>
+            <h4 className="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-4">Folgen Sie uns</h4>
             <div className="grid grid-cols-2 gap-3">
               {platformProfiles.map((p) => (
                 <a
@@ -172,7 +172,7 @@ export default function NAPFooter() {
 
       <div className="border-t border-white/5">
         <div className="max-w-7xl mx-auto px-6 py-6">
-          <h4 className="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-3">Beliebte Leistungen</h4>
+          <h4 className="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-3">Beliebte Leistungen</h4>
           <nav className="flex flex-wrap gap-x-5 gap-y-2 text-sm">
             {featuredServices.map((s) => (
               <Link
@@ -191,7 +191,7 @@ export default function NAPFooter() {
       </div>
 
       <div className="border-t border-white/5">
-        <div className="max-w-7xl mx-auto px-6 py-5 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-600">
+        <div className="max-w-7xl mx-auto px-6 py-5 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-300">
           <p>&copy; {new Date().getFullYear()} {businessConfig.name}. Alle Rechte vorbehalten.</p>
           <nav className="flex flex-wrap justify-center gap-x-5 gap-y-1">
             <Link to="/impressum" className="hover:text-slate-300 transition-colors">Impressum</Link>

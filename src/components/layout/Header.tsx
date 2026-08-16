@@ -30,7 +30,7 @@ export default function Header() {
   }, []);
 
   const navLinkClass = ({ isActive }: { isActive: boolean }) =>
-    `text-sm font-medium transition-colors ${isActive ? 'text-brand-700' : 'text-slate-600 hover:text-slate-900'}`;
+    `text-sm font-medium transition-colors ${isActive ? 'text-brand-300' : 'text-slate-300 hover:text-white'}`;
 
   const closeMobile = () => {
     setMobileOpen(false);
@@ -40,7 +40,7 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? 'glass-nav border-b border-slate-200' : 'bg-white'
+        scrolled ? 'glass-nav border-b border-white/10' : 'bg-paper-100'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 h-18 py-4 flex items-center justify-between gap-8">
@@ -69,7 +69,7 @@ export default function Header() {
             <button
               onClick={() => navigate('/leistungen')}
               className={`flex items-center gap-1 text-sm font-medium transition-colors ${
-                servicesOpen ? 'text-slate-900' : 'text-slate-600 hover:text-slate-900'
+                servicesOpen ? 'text-white' : 'text-slate-300 hover:text-white'
               }`}
             >
               Leistungen
@@ -82,7 +82,7 @@ export default function Header() {
               {servicesOpen && (
                 <motion.div
                   {...dropdownMotion}
-                  className="absolute top-full left-1/2 -translate-x-1/2 mt-3 bg-white border border-slate-200 rounded-2xl shadow-xl shadow-slate-900/8 p-4 w-[680px] z-50"
+                  className="absolute top-full left-1/2 -translate-x-1/2 mt-3 bg-paper-100 border border-white/10 rounded-2xl shadow-xl shadow-slate-900/8 p-4 w-[680px] z-50"
                 >
                   <div className="grid grid-cols-3 gap-1">
                     {services.map((s) => {
@@ -96,20 +96,20 @@ export default function Header() {
                         >
                           <Icon
                             size={16}
-                            className="shrink-0 text-slate-400 group-hover:text-brand-700 transition-colors"
+                            className="shrink-0 text-slate-400 group-hover:text-brand-300 transition-colors"
                           />
-                          <span className="text-sm font-medium text-slate-700 group-hover:text-slate-900 transition-colors">
+                          <span className="text-sm font-medium text-slate-200 group-hover:text-white transition-colors">
                             {s.title}
                           </span>
                         </Link>
                       );
                     })}
                   </div>
-                  <div className="mt-3 pt-3 border-t border-slate-200">
+                  <div className="mt-3 pt-3 border-t border-white/10">
                     <Link
                       to="/leistungen"
                       onClick={() => setServicesOpen(false)}
-                      className="flex items-center gap-1.5 text-sm font-semibold text-brand-700 hover:gap-2.5 transition-all px-3"
+                      className="flex items-center gap-1.5 text-sm font-semibold text-brand-300 hover:gap-2.5 transition-all px-3"
                     >
                       Alle Leistungen ansehen
                       <ArrowRight size={14} />
@@ -140,7 +140,7 @@ export default function Header() {
         </div>
 
         <button
-          className="lg:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors"
+          className="lg:hidden p-2 rounded-lg hover:bg-white/10 transition-colors"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Menü"
         >
@@ -152,20 +152,20 @@ export default function Header() {
         {mobileOpen && (
           <motion.div
             {...mobileMenuMotion}
-            className="lg:hidden overflow-hidden border-t border-slate-200 bg-white"
+            className="lg:hidden overflow-hidden border-t border-white/10 bg-paper-100"
           >
             <div className="px-6 py-5 space-y-1">
-              <Link to="/" onClick={closeMobile} className="block py-2.5 text-sm font-medium text-slate-700 hover:text-slate-900">
+              <Link to="/" onClick={closeMobile} className="block py-2.5 text-sm font-medium text-slate-200 hover:text-white">
                 Startseite
               </Link>
-              <Link to="/ueber-uns" onClick={closeMobile} className="block py-2.5 text-sm font-medium text-slate-700 hover:text-slate-900">
+              <Link to="/ueber-uns" onClick={closeMobile} className="block py-2.5 text-sm font-medium text-slate-200 hover:text-white">
                 Über uns
               </Link>
 
               <div>
                 <button
                   onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
-                  className="w-full flex items-center justify-between py-2.5 text-sm font-medium text-slate-700"
+                  className="w-full flex items-center justify-between py-2.5 text-sm font-medium text-slate-200"
                 >
                   Leistungen
                   <motion.span animate={{ rotate: mobileServicesOpen ? 180 : 0 }} transition={{ duration: 0.2 }}>
@@ -179,19 +179,19 @@ export default function Header() {
                       animate={{ opacity: 1, height: 'auto' }}
                       exit={{ opacity: 0, height: 0 }}
                       transition={{ duration: 0.2, ease: easeOut }}
-                      className="overflow-hidden pl-4 border-l border-slate-200 ml-2"
+                      className="overflow-hidden pl-4 border-l border-white/10 ml-2"
                     >
                       {services.map((s) => (
                         <Link
                           key={s.id}
                           to={`/leistungen/${s.id}`}
                           onClick={closeMobile}
-                          className="block py-2 text-sm text-slate-600 hover:text-slate-900"
+                          className="block py-2 text-sm text-slate-300 hover:text-white"
                         >
                           {s.title}
                         </Link>
                       ))}
-                      <Link to="/leistungen" onClick={closeMobile} className="block py-2 text-sm font-semibold text-brand-700">
+                      <Link to="/leistungen" onClick={closeMobile} className="block py-2 text-sm font-semibold text-brand-300">
                         Alle Leistungen →
                       </Link>
                     </motion.div>
@@ -199,14 +199,14 @@ export default function Header() {
                 </AnimatePresence>
               </div>
 
-              <Link to="/einsatzgebiet" onClick={closeMobile} className="block py-2.5 text-sm font-medium text-slate-700 hover:text-slate-900">
+              <Link to="/einsatzgebiet" onClick={closeMobile} className="block py-2.5 text-sm font-medium text-slate-200 hover:text-white">
                 Einsatzgebiet
               </Link>
-              <Link to="/nachhaltigkeit" onClick={closeMobile} className="block py-2.5 text-sm font-medium text-slate-700 hover:text-slate-900">
+              <Link to="/nachhaltigkeit" onClick={closeMobile} className="block py-2.5 text-sm font-medium text-slate-200 hover:text-white">
                 Nachhaltigkeit
               </Link>
 
-              <Link to="/kontakt" onClick={closeMobile} className="block py-2.5 text-sm font-medium text-slate-700 hover:text-slate-900">
+              <Link to="/kontakt" onClick={closeMobile} className="block py-2.5 text-sm font-medium text-slate-200 hover:text-white">
                 Kontakt
               </Link>
 

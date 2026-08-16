@@ -42,18 +42,18 @@ export default function CitiesOverview() {
       <section className="relative pt-32 pb-16 lg:pt-40 lg:pb-20 bg-paper">
         <div className="max-w-7xl mx-auto px-6">
           <nav className="flex items-center gap-2 text-sm text-slate-400 mb-6">
-            <Link to="/" className="hover:text-slate-600 transition-colors">Start</Link>
+            <Link to="/" className="hover:text-slate-300 transition-colors">Start</Link>
             <span>/</span>
-            <span className="text-slate-600">Einsatzgebiet</span>
+            <span className="text-slate-300">Einsatzgebiet</span>
           </nav>
-          <p className="text-sm font-semibold text-brand-700 uppercase tracking-widest mb-5">
+          <p className="text-sm font-semibold text-brand-300 uppercase tracking-widest mb-5">
             <MapPin size={14} className="inline mr-1.5 -mt-0.5" />
             Schleswig-Holstein, Hamburg &amp; NRW
           </p>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-slate-900 leading-[1.1]">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.1]">
             Unser Einsatzgebiet
           </h1>
-          <p className="mt-6 text-lg text-slate-500 leading-relaxed max-w-2xl">
+          <p className="mt-6 text-lg text-slate-400 leading-relaxed max-w-2xl">
             KlarWerk Service ist in ganz Schleswig-Holstein, Hamburg und Nordrhein-Westfalen für Sie da.
             Wählen Sie Ihren Standort für detaillierte Informationen zu unseren
             Reinigungsleistungen vor Ort.
@@ -69,7 +69,7 @@ export default function CitiesOverview() {
               <AnimatedSection key={city.slug} delay={i * 0.06}>
                 <Link
                   to={`/einsatzgebiet/${city.slug}`}
-                  className="group block bg-white border border-slate-200 rounded-2xl overflow-hidden hover:border-brand-200 shadow-md hover:shadow-lg transition-all"
+                  className="group block bg-paper-100 border border-white/10 rounded-2xl overflow-hidden hover:border-brand-200 shadow-md hover:shadow-lg transition-all"
                 >
                   <div className="relative h-48 overflow-hidden">
                     <img
@@ -88,10 +88,10 @@ export default function CitiesOverview() {
                     </div>
                   </div>
                   <div className="p-6">
-                    <p className="text-sm text-slate-500 leading-relaxed line-clamp-3">
+                    <p className="text-sm text-slate-400 leading-relaxed line-clamp-3">
                       {city.description}
                     </p>
-                    <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-700">
+                    <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-300">
                       Gebäudereinigung in {city.name}
                       <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
                     </span>

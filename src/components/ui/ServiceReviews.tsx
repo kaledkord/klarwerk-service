@@ -44,33 +44,33 @@ export default function ServiceReviews({
     <section className="py-24 bg-paper">
       <div className="max-w-7xl mx-auto px-6">
         <AnimatedSection className="text-center max-w-2xl mx-auto mb-12">
-          <span className="text-brand-700 text-sm font-semibold uppercase tracking-widest">Bewertungen</span>
-          <h2 className="text-3xl md:text-4xl font-black mt-3 tracking-tight text-slate-900">
+          <span className="text-brand-300 text-sm font-semibold uppercase tracking-widest">Bewertungen</span>
+          <h2 className="text-3xl md:text-4xl font-black mt-3 tracking-tight text-white">
             Das sagen Kunden über KlarWerk Service
           </h2>
-          <p className="mt-4 text-slate-500 leading-relaxed">
+          <p className="mt-4 text-slate-400 leading-relaxed">
             Echte Google-Bewertungen rund um {serviceTitle} und weitere Leistungen.
           </p>
-          <div className="inline-flex items-center gap-3 bg-white rounded-full px-5 py-2.5 mt-5 shadow-md border border-slate-200">
+          <div className="inline-flex items-center gap-3 bg-paper-100 rounded-full px-5 py-2.5 mt-5 shadow-md border border-white/10">
             <Stars />
-            <span className="text-sm font-bold text-slate-900">{r.ratingValue.replace('.', ',')}</span>
-            <span className="text-sm text-slate-500">· {r.reviewCount}+ Google Bewertungen</span>
+            <span className="text-sm font-bold text-white">{r.ratingValue.replace('.', ',')}</span>
+            <span className="text-sm text-slate-400">· {r.reviewCount}+ Google Bewertungen</span>
           </div>
         </AnimatedSection>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {items.map((review, i) => (
             <AnimatedSection key={`${review.name}-${i}`} delay={i * 0.08}>
-              <figure className="flex flex-col h-full bg-white rounded-2xl p-6 border border-slate-200 shadow-md border-t-[3px] border-t-brand-500">
+              <figure className="flex flex-col h-full bg-paper-100 rounded-2xl p-6 border border-white/10 shadow-md border-t-[3px] border-t-brand-500">
                 <div className="flex items-center gap-3 mb-3">
                   {GOOGLE_LOGO}
                   <figcaption>
-                    <p className="text-sm font-bold text-slate-900 leading-tight">{review.name}</p>
+                    <p className="text-sm font-bold text-white leading-tight">{review.name}</p>
                     <p className="text-xs text-slate-400 mt-0.5">{review.meta}</p>
                   </figcaption>
                 </div>
                 <Stars />
-                <blockquote className="mt-3 text-sm text-slate-600 leading-relaxed">{review.text}</blockquote>
+                <blockquote className="mt-3 text-sm text-slate-300 leading-relaxed">{review.text}</blockquote>
               </figure>
             </AnimatedSection>
           ))}

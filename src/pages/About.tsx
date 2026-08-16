@@ -24,9 +24,9 @@ export default function About() {
       <section className="pt-36 pb-20 bg-paper">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}>
-            <span className="text-brand-700 text-sm font-semibold uppercase tracking-widest">Über uns</span>
+            <span className="text-brand-300 text-sm font-semibold uppercase tracking-widest">Über uns</span>
             <h1 className="mt-3 text-5xl md:text-6xl font-black tracking-tight">Ihr Partner für<br />saubere Lösungen.</h1>
-            <p className="mt-6 text-lg text-slate-600 max-w-2xl leading-relaxed">
+            <p className="mt-6 text-lg text-slate-300 max-w-2xl leading-relaxed">
               KlarWerk Service ist Ihr zuverlässiger Partner für professionelle Gebäudereinigung und Gebäudeservice in Schleswig-Holstein, Hamburg und NRW. Seit über 10 Jahren stehen wir für Qualität, Zuverlässigkeit und persönliche Betreuung.
             </p>
           </motion.div>
@@ -40,15 +40,15 @@ export default function About() {
           </AnimatedSection>
           <AnimatedSection delay={0.1}>
             <h2 className="text-3xl md:text-4xl font-black tracking-tight">Unsere Mission</h2>
-            <p className="mt-5 text-slate-600 leading-relaxed">
+            <p className="mt-5 text-slate-300 leading-relaxed">
               Wir glauben, dass Sauberkeit mehr ist als nur eine Aufgabe – sie ist ein Beitrag zu einem angenehmen Arbeits- und Wohnumfeld. Deshalb arbeiten wir mit Sorgfalt, Engagement und einem Auge fürs Detail.
             </p>
-            <p className="mt-4 text-slate-600 leading-relaxed">
+            <p className="mt-4 text-slate-300 leading-relaxed">
               Unser Team besteht aus geschulten und zuverlässigen Mitarbeitern, die ihr Handwerk verstehen. Wir behandeln jedes Objekt mit der gleichen Sorgfalt, als wäre es unser eigenes.
             </p>
             <div className="mt-8 space-y-3">
               {['Geschultes und motiviertes Personal', 'Moderne Reinigungstechnik und -mittel', 'Umweltbewusste Arbeitsweise', 'Fester Ansprechpartner für alle Anliegen'].map((t) => (
-                <div key={t} className="flex items-center gap-3 text-slate-700">
+                <div key={t} className="flex items-center gap-3 text-slate-200">
                   <CheckCircle size={18} className="text-success-500 shrink-0" />{t}
                 </div>
               ))}
@@ -61,19 +61,19 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedSection className="text-center mb-14">
             <h2 className="text-3xl md:text-4xl font-black tracking-tight">Unsere Werte</h2>
-            <p className="mt-4 text-slate-500 text-lg max-w-2xl mx-auto">Worauf wir bei KlarWerk Service besonders achten.</p>
+            <p className="mt-4 text-slate-400 text-lg max-w-2xl mx-auto">Worauf wir bei KlarWerk Service besonders achten.</p>
           </AnimatedSection>
           <div className="grid md:grid-cols-3 gap-6">
             {values.map((v, i) => {
               const Icon = v.icon;
               return (
                 <AnimatedSection key={v.title} delay={i * 0.1}>
-                  <div className="bg-white border border-slate-200 rounded-2xl p-8 text-center shadow-md hover:shadow-md transition-shadow h-full">
-                    <div className="inline-flex items-center justify-center w-14 h-14 bg-brand-50 rounded-2xl mb-5">
-                      <Icon size={26} className="text-brand-700" />
+                  <div className="bg-paper-100 border border-white/10 rounded-2xl p-8 text-center shadow-md hover:shadow-md transition-shadow h-full">
+                    <div className="inline-flex items-center justify-center w-14 h-14 bg-brand-500/15 rounded-2xl mb-5">
+                      <Icon size={26} className="text-brand-300" />
                     </div>
-                    <h3 className="text-xl font-bold text-slate-900">{v.title}</h3>
-                    <p className="mt-3 text-slate-600 leading-relaxed text-sm">{v.desc}</p>
+                    <h3 className="text-xl font-bold text-white">{v.title}</h3>
+                    <p className="mt-3 text-slate-300 leading-relaxed text-sm">{v.desc}</p>
                   </div>
                 </AnimatedSection>
               );
@@ -88,15 +88,15 @@ export default function About() {
             <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-emerald-100 mb-6">
               <Leaf className="w-7 h-7 text-emerald-600" />
             </div>
-            <h2 className="text-3xl md:text-4xl font-black tracking-tight text-slate-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-black tracking-tight text-white mb-4">
               Nachhaltigkeit ist uns wichtig
             </h2>
-            <p className="text-slate-600 text-lg leading-relaxed mb-4">
+            <p className="text-slate-300 text-lg leading-relaxed mb-4">
               Wir setzen auf umweltfreundliche Reinigungsmittel, ressourcenschonende Verfahren und
               eine verantwortungsvolle Betriebsführung. Unser Ziel: saubere Ergebnisse, die auch
               der Umwelt zugutekommen.
             </p>
-            <p className="text-slate-600 leading-relaxed mb-8">
+            <p className="text-slate-300 leading-relaxed mb-8">
               Von biologisch abbaubaren Produkten bis hin zur Optimierung unserer Fahrzeugrouten –
               Nachhaltigkeit ist nicht nur ein Schlagwort, sondern gelebte Praxis bei KlarWerk Service.
             </p>

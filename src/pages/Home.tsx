@@ -66,15 +66,15 @@ export default function Home() {
       />
 
       {/* ── 1 HERO ─────────────────────────────────────────────────────────── */}
-      <section className="relative min-h-[92vh] flex items-end overflow-hidden bg-ink">
+      <section className="relative min-h-[85vh] flex items-center overflow-hidden bg-ink">
         <div
           className="klar-photo"
-          style={{ backgroundImage: "url('/Kein_Titel_(1080_x_1080_px).png')" }}
+          style={{ backgroundImage: "url('/image.png')" }}
           aria-hidden="true"
         />
         <div
           className="klar-photo klar-unclear"
-          style={{ backgroundImage: "url('/Kein_Titel_(1080_x_1080_px).png')" }}
+          style={{ backgroundImage: "url('/image.png')" }}
           aria-hidden="true"
         />
         <div className="klar-squeegee" aria-hidden="true" />
@@ -87,7 +87,7 @@ export default function Home() {
           aria-hidden="true"
         />
 
-        <div className="relative z-[4] w-full max-w-7xl mx-auto px-6 pt-36 pb-16 lg:pb-24">
+        <div className="relative z-[4] w-full max-w-7xl mx-auto px-6 pt-28 pb-16">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
@@ -139,19 +139,19 @@ export default function Home() {
       <section id="leistungen" className="py-28 bg-paper">
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedSection>
-            <span className="text-brand-700 text-sm font-semibold uppercase tracking-widest">
+            <span className="text-brand-300 text-sm font-semibold uppercase tracking-widest">
               Leistungen
             </span>
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mt-3">
               <h2 className="text-4xl md:text-5xl font-black tracking-tight">Unsere Leistungen</h2>
               <Link
                 to="/leistungen"
-                className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-700 hover:gap-2.5 transition-all shrink-0"
+                className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-300 hover:gap-2.5 transition-all shrink-0"
               >
                 Alle Leistungen <ArrowRight size={15} />
               </Link>
             </div>
-            <p className="mt-4 text-slate-600 text-lg max-w-2xl">
+            <p className="mt-4 text-slate-300 text-lg max-w-2xl">
               Individuelle Reinigungslösungen für private und gewerbliche Kunden in
               Schleswig-Holstein und Hamburg.
             </p>
@@ -182,13 +182,13 @@ export default function Home() {
               />
             </AnimatedSection>
             <AnimatedSection delay={0.1}>
-              <span className="text-brand-700 text-sm font-semibold uppercase tracking-widest">
+              <span className="text-brand-300 text-sm font-semibold uppercase tracking-widest">
                 Warum wir
               </span>
               <h2 className="text-4xl md:text-5xl font-black mt-3 tracking-tight">
                 Warum KlarWerk Service?
               </h2>
-              <p className="mt-5 text-slate-600 leading-relaxed">
+              <p className="mt-5 text-slate-300 leading-relaxed">
                 Wir verstehen Gebäudereinigung als professionellen Service – nicht als bloße
                 Dienstleistung. Qualität, Zuverlässigkeit und persönliche Betreuung stehen bei
                 uns an erster Stelle.
@@ -198,8 +198,8 @@ export default function Home() {
                   <div key={a.title} className="flex gap-4">
                     <div className="w-2 h-2 rounded-full bg-brand-600 mt-2 shrink-0" />
                     <div>
-                      <h4 className="font-bold text-slate-900">{a.title}</h4>
-                      <p className="mt-1 text-sm text-slate-600 leading-relaxed">{a.desc}</p>
+                      <h4 className="font-bold text-white">{a.title}</h4>
+                      <p className="mt-1 text-sm text-slate-300 leading-relaxed">{a.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -222,27 +222,27 @@ export default function Home() {
       <section className="py-28 bg-paper">
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedSection>
-            <span className="text-brand-700 text-sm font-semibold uppercase tracking-widest">
+            <span className="text-brand-300 text-sm font-semibold uppercase tracking-widest">
               Ablauf
             </span>
             <h2 className="text-4xl md:text-5xl font-black mt-3 tracking-tight">
               So funktioniert die Zusammenarbeit
             </h2>
-            <p className="mt-4 text-slate-500 text-lg max-w-2xl">
+            <p className="mt-4 text-slate-400 text-lg max-w-2xl">
               In vier einfachen Schritten zu einem sauberen Ergebnis – unkompliziert und transparent.
             </p>
           </AnimatedSection>
           <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {processSteps.map((step, i) => (
               <AnimatedSection key={step.num} delay={i * 0.09}>
-                <div className="relative bg-white border border-slate-200 rounded-2xl p-7 hover:border-brand-200 shadow-md hover:shadow-md transition-all h-full">
+                <div className="relative bg-paper-100 border border-white/10 rounded-2xl p-7 hover:border-brand-200 shadow-md hover:shadow-md transition-all h-full">
                   <span className="text-5xl font-black text-slate-100 leading-none">
                     {step.num}
                   </span>
-                  <h3 className="mt-3 font-bold text-slate-900">{step.title}</h3>
-                  <p className="mt-2 text-sm text-slate-500 leading-relaxed">{step.desc}</p>
+                  <h3 className="mt-3 font-bold text-white">{step.title}</h3>
+                  <p className="mt-2 text-sm text-slate-400 leading-relaxed">{step.desc}</p>
                   {i < processSteps.length - 1 && (
-                    <div className="hidden lg:flex absolute top-10 -right-3 z-10 w-6 h-6 bg-white rounded-full border border-slate-200 items-center justify-center">
+                    <div className="hidden lg:flex absolute top-10 -right-3 z-10 w-6 h-6 bg-paper-100 rounded-full border border-white/10 items-center justify-center">
                       <ArrowRight size={12} className="text-slate-400" />
                     </div>
                   )}
@@ -260,11 +260,11 @@ export default function Home() {
       <section className="py-24 bg-paper">
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedSection>
-            <span className="text-brand-700 text-sm font-semibold uppercase tracking-widest">
+            <span className="text-brand-300 text-sm font-semibold uppercase tracking-widest">
               Einsatzgebiet
             </span>
             <h2 className="text-4xl font-black mt-3 tracking-tight">Unser Einsatzgebiet</h2>
-            <p className="mt-4 text-slate-600 text-lg">
+            <p className="mt-4 text-slate-300 text-lg">
               Wir sind in ganz Schleswig-Holstein und Hamburg für Sie da – schnell vor Ort, wo Sie uns brauchen.
             </p>
           </AnimatedSection>
@@ -273,9 +273,9 @@ export default function Home() {
               <AnimatedSection key={city.slug} delay={i * 0.06}>
                 <Link
                   to={`/einsatzgebiet/${city.slug}`}
-                  className="flex items-center gap-2 bg-white border border-slate-200 hover:border-brand-300 hover:bg-brand-50 px-5 py-2.5 rounded-full text-sm font-medium text-slate-700 transition-colors"
+                  className="flex items-center gap-2 bg-paper-100 border border-white/10 hover:border-brand-300 hover:bg-brand-500/15 px-5 py-2.5 rounded-full text-sm font-medium text-slate-200 transition-colors"
                 >
-                  <MapPin size={13} className="text-brand-600" />
+                  <MapPin size={13} className="text-brand-400" />
                   {city.name}
                 </Link>
               </AnimatedSection>
@@ -288,23 +288,23 @@ export default function Home() {
       <section className="py-28 bg-paper">
         <div className="max-w-4xl mx-auto px-6">
           <AnimatedSection className="text-center mb-12">
-            <span className="text-brand-700 text-sm font-semibold uppercase tracking-widest">FAQ</span>
+            <span className="text-brand-300 text-sm font-semibold uppercase tracking-widest">FAQ</span>
             <h2 className="text-4xl md:text-5xl font-black mt-3 tracking-tight">Häufige Fragen</h2>
-            <p className="mt-4 text-slate-500 text-lg">
+            <p className="mt-4 text-slate-400 text-lg">
               Antworten auf die häufigsten Fragen rund um unsere Leistungen.
             </p>
           </AnimatedSection>
           <AnimatedSection delay={0.1}>
-            <div className="bg-white rounded-2xl border border-slate-200 px-8 py-4 shadow-md">
+            <div className="bg-paper-100 rounded-2xl border border-white/10 px-8 py-4 shadow-md">
               <FAQAccordion items={faqs} />
             </div>
           </AnimatedSection>
           <AnimatedSection delay={0.15} className="mt-8 text-center">
-            <p className="text-slate-600 text-sm">
+            <p className="text-slate-300 text-sm">
               Weitere Fragen?{' '}
               <Link
                 to="/kontakt"
-                className="text-brand-700 font-semibold underline underline-offset-2 hover:no-underline"
+                className="text-brand-300 font-semibold underline underline-offset-2 hover:no-underline"
               >
                 Kontaktieren Sie uns direkt.
               </Link>

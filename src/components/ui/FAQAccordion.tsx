@@ -14,18 +14,18 @@ interface Props {
 
 function FAQRow({ item, isOpen, onToggle }: { item: FAQItem; isOpen: boolean; onToggle: () => void }) {
   return (
-    <div className="border-b border-slate-200 last:border-0">
+    <div className="border-b border-white/10 last:border-0">
       <button
         onClick={onToggle}
         className="w-full flex items-center justify-between gap-4 py-5 text-left group"
       >
-        <span className="font-semibold text-slate-900 group-hover:text-brand-700 transition-colors">
+        <span className="font-semibold text-white group-hover:text-brand-300 transition-colors">
           {item.question}
         </span>
         <motion.div
           animate={{ rotate: isOpen ? 180 : 0 }}
           transition={{ duration: 0.25 }}
-          className="shrink-0 text-slate-400 group-hover:text-brand-700 transition-colors"
+          className="shrink-0 text-slate-400 group-hover:text-brand-300 transition-colors"
         >
           <ChevronDown size={20} />
         </motion.div>
@@ -39,7 +39,7 @@ function FAQRow({ item, isOpen, onToggle }: { item: FAQItem; isOpen: boolean; on
             transition={{ duration: 0.3, ease: easeInOut }}
             className="overflow-hidden"
           >
-            <p className="pb-5 text-slate-600 leading-relaxed">{item.answer}</p>
+            <p className="pb-5 text-slate-300 leading-relaxed">{item.answer}</p>
           </motion.div>
         )}
       </AnimatePresence>

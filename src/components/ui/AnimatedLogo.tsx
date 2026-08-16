@@ -114,7 +114,7 @@ export default function AnimatedLogo() {
       {/* Card */}
       <motion.div
         ref={ref}
-        className="relative select-none cursor-pointer overflow-hidden rounded-3xl bg-white border border-slate-200"
+        className="relative select-none cursor-pointer overflow-hidden rounded-3xl bg-paper-100 border border-white/10"
         style={disabled ? {} : {
           rotateX: tiltX,
           rotateY: tiltY,

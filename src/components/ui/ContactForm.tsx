@@ -64,11 +64,11 @@ export default function ContactForm() {
   if (success) {
     return (
       <div className="flex flex-col items-center justify-center text-center py-16 px-8">
-        <div className="w-16 h-16 bg-success-50 rounded-full flex items-center justify-center mb-5">
+        <div className="w-16 h-16 bg-success-500/15 rounded-full flex items-center justify-center mb-5">
           <CheckCircle size={32} className="text-success-500" />
         </div>
-        <h3 className="text-2xl font-bold text-slate-900 mb-3">Vielen Dank!</h3>
-        <p className="text-slate-600 max-w-sm leading-relaxed">
+        <h3 className="text-2xl font-bold text-white mb-3">Vielen Dank!</h3>
+        <p className="text-slate-300 max-w-sm leading-relaxed">
           Ihre Anfrage wurde erfolgreich übermittelt. Wir melden uns zeitnah bei Ihnen, um eine kostenlose Besichtigung zu vereinbaren.
         </p>
       </div>
@@ -76,8 +76,8 @@ export default function ContactForm() {
   }
 
   const inputClass =
-    'w-full px-4 py-3 rounded-xl border border-slate-200 text-slate-900 placeholder-slate-400 text-sm focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-colors bg-white';
-  const labelClass = 'block text-sm font-medium text-slate-700 mb-1.5';
+    'w-full px-4 py-3 rounded-xl border border-white/10 text-white placeholder-slate-400 text-sm focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-colors bg-paper-100';
+  const labelClass = 'block text-sm font-medium text-slate-200 mb-1.5';
 
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
@@ -190,7 +190,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={loading}
-        className="w-full flex items-center justify-center gap-2 bg-brand-600 hover:bg-brand-700 disabled:bg-slate-300 text-white font-semibold py-3.5 rounded-xl transition-colors"
+        className="w-full flex items-center justify-center gap-2 bg-brand-600 hover:bg-brand-700 disabled:bg-white/15 text-white font-semibold py-3.5 rounded-xl transition-colors"
       >
         {loading ? (
           <>
@@ -204,7 +204,7 @@ export default function ContactForm() {
 
       <p className="text-xs text-slate-400 text-center">
         Mit dem Absenden stimmen Sie unserer{' '}
-        <Link to="/datenschutz" className="underline hover:text-slate-600">Datenschutzerklärung</Link>{' '}
+        <Link to="/datenschutz" className="underline hover:text-slate-300">Datenschutzerklärung</Link>{' '}
         zu.
       </p>
     </form>

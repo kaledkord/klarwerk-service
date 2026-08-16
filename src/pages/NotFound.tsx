@@ -5,7 +5,7 @@ import SEO from '../components/SEO';
 
 export default function NotFound() {
   return (
-    <div className="bg-white min-h-[70vh] flex items-center justify-center">
+    <div className="bg-paper-100 min-h-[70vh] flex items-center justify-center">
       <SEO
         title="Seite nicht gefunden"
         description="Die angeforderte Seite wurde nicht gefunden. Kehren Sie zur Startseite von KlarWerk Service zurück oder kontaktieren Sie uns für Gebäudereinigung und Gebäudeservice."
@@ -19,10 +19,10 @@ export default function NotFound() {
         className="text-center px-6 max-w-lg"
       >
         <span className="text-8xl font-black text-slate-100 leading-none block">404</span>
-        <h1 className="mt-4 text-3xl font-black text-slate-900 tracking-tight">
+        <h1 className="mt-4 text-3xl font-black text-white tracking-tight">
           Seite nicht gefunden
         </h1>
-        <p className="mt-3 text-slate-500 leading-relaxed">
+        <p className="mt-3 text-slate-400 leading-relaxed">
           Die angeforderte Seite existiert leider nicht. Möglicherweise wurde sie verschoben oder gelöscht.
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-3">

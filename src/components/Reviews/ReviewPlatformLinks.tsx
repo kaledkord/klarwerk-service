@@ -78,20 +78,20 @@ export default function ReviewPlatformLinks() {
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400 mb-4">
             Kundenbewertungen
           </p>
-          <h2 className="text-4xl md:text-5xl font-black tracking-tight text-slate-900">
+          <h2 className="text-4xl md:text-5xl font-black tracking-tight text-white">
             Was unsere Kunden sagen
           </h2>
-          <p className="mt-4 text-slate-500 text-lg max-w-xl mx-auto">
+          <p className="mt-4 text-slate-400 text-lg max-w-xl mx-auto">
             Teilen Sie Ihre Erfahrung — Ihr Feedback hilft uns und anderen Kunden.
           </p>
 
           {/* Rating badge */}
-          <div className="mt-8 inline-flex items-center gap-4 bg-white border border-slate-200 rounded-2xl px-6 py-3">
+          <div className="mt-8 inline-flex items-center gap-4 bg-paper-100 border border-white/10 rounded-2xl px-6 py-3">
             <div className="text-left">
-              <p className="text-3xl font-black text-slate-900 leading-none">{reviews.ratingValue}</p>
+              <p className="text-3xl font-black text-white leading-none">{reviews.ratingValue}</p>
               <p className="text-xs text-slate-400 mt-0.5">von 5 Punkten</p>
             </div>
-            <div className="w-px h-10 bg-slate-200" />
+            <div className="w-px h-10 bg-white/10" />
             <div className="flex flex-col items-start gap-1">
               <div className="flex items-center gap-0.5">
                 {[1, 2, 3, 4, 5].map((s) => (
@@ -116,12 +116,12 @@ export default function ReviewPlatformLinks() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
               whileHover={{ y: -4, transition: { duration: 0.18 } }}
-              className="group relative bg-white border border-slate-200 hover:border-slate-200 rounded-2xl p-6 text-center transition-all duration-200 shadow-md hover:shadow-lg hover:shadow-slate-900/6"
+              className="group relative bg-paper-100 border border-white/10 hover:border-white/10 rounded-2xl p-6 text-center transition-all duration-200 shadow-md hover:shadow-lg hover:shadow-slate-900/6"
             >
               <div className="flex justify-center mb-4">
                 <PlatformIcon icon={platform.icon} size={36} />
               </div>
-              <p className="font-semibold text-slate-800 text-sm">{platform.name}</p>
+              <p className="font-semibold text-slate-100 text-sm">{platform.name}</p>
               <p className="mt-1 text-xs text-slate-400">Jetzt bewerten</p>
               <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
                 <ExternalLink size={12} className="text-slate-300" />

@@ -4,8 +4,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
-        display: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['Plus Jakarta Sans', 'Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+        display: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
         mono: ['JetBrains Mono', 'ui-monospace', 'monospace'],
       },
       fontSize: {
@@ -55,10 +55,11 @@ export default {
           900: '#1c4b68',
         },
         // Off-White-Canvas & Ink (aus dem Foto abgeleitet, leichte Grün-Tendenz)
+        // Dunkles Theme: Basis (Sektionen), 100 = Karten, 200 = erhöht
         paper: {
-          DEFAULT: '#d8e0ea',
-          100: '#e6ebf1',
-          200: '#c9d3e0',
+          DEFAULT: '#0f1826',
+          100: '#18212e',
+          200: '#212c3b',
         },
         ink: '#141c26',
         amber: {

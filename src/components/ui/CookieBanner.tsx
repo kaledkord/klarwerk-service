@@ -31,15 +31,15 @@ export default function CookieBanner() {
           transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
           className="fixed bottom-0 left-0 right-0 z-50 p-4 sm:p-6"
         >
-          <div className="max-w-4xl mx-auto bg-white border border-slate-200 rounded-2xl shadow-2xl shadow-slate-900/10 p-5 sm:p-6 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+          <div className="max-w-4xl mx-auto bg-paper-100 border border-white/10 rounded-2xl shadow-2xl shadow-slate-900/10 p-5 sm:p-6 flex flex-col sm:flex-row items-start sm:items-center gap-4">
             <div className="flex items-start gap-3 flex-1 min-w-0">
-              <div className="w-9 h-9 bg-brand-50 rounded-xl flex items-center justify-center shrink-0 mt-0.5">
-                <Shield size={16} className="text-brand-700" />
+              <div className="w-9 h-9 bg-brand-500/15 rounded-xl flex items-center justify-center shrink-0 mt-0.5">
+                <Shield size={16} className="text-brand-300" />
               </div>
-              <p className="text-sm text-slate-600 leading-relaxed">
+              <p className="text-sm text-slate-300 leading-relaxed">
                 Wir verwenden nur technisch notwendige Funktionen. Keine Tracking-Cookies.
                 Mehr dazu in unserer{' '}
-                <Link to="/datenschutz" className="underline underline-offset-2 text-brand-700 font-medium hover:no-underline">
+                <Link to="/datenschutz" className="underline underline-offset-2 text-brand-300 font-medium hover:no-underline">
                   Datenschutzerklärung
                 </Link>.
               </p>

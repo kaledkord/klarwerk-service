@@ -10,7 +10,7 @@
   }
 
   body {
-    @apply font-sans antialiased text-slate-900 bg-paper;
+    @apply font-sans antialiased text-slate-200 bg-paper;
     font-feature-settings: 'cv11', 'ss01';
   }
 
@@ -25,11 +25,11 @@
 
 @layer components {
   .glass-card {
-    @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-glass;
+    @apply bg-white/5 backdrop-blur-md border border-white/10 shadow-glass;
   }
 
   .glass-nav {
-    @apply bg-white/95 backdrop-blur-md shadow-sm;
+    @apply bg-paper/85 backdrop-blur-md border-b border-white/10;
   }
 
   .glass-dark {
@@ -53,11 +53,11 @@
   }
 
   .btn-secondary {
-    @apply inline-flex items-center gap-2 border border-slate-300 hover:border-slate-400 hover:bg-slate-100 font-semibold px-8 py-4 rounded-xl transition duration-200 text-slate-700 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2;
+    @apply inline-flex items-center gap-2 border border-white/20 hover:border-white/40 hover:bg-white/5 font-semibold px-8 py-4 rounded-xl transition duration-200 text-slate-100 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500;
   }
 
   .card-klw {
-    @apply bg-white border border-slate-200 rounded-2xl shadow-md transition-all duration-300;
+    @apply bg-paper-100 border border-white/10 rounded-2xl shadow-md transition-all duration-300;
   }
 
   .card-klw-hover {

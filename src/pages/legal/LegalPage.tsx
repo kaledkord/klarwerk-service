@@ -26,7 +26,7 @@ export default function LegalPage({ title, description, canonicalPath, children 
       </section>
       <section className="py-16">
         <div className="max-w-3xl mx-auto px-6 prose prose-slate prose-sm max-w-none">
-          <div className="space-y-6 text-slate-600 leading-relaxed text-sm">
+          <div className="space-y-6 text-slate-300 leading-relaxed text-sm">
             {children}
           </div>
         </div>

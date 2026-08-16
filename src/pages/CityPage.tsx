@@ -97,20 +97,20 @@ export default function CityPage() {
               transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
             >
               <nav className="flex items-center gap-2 text-sm text-slate-400 mb-6">
-                <Link to="/" className="hover:text-slate-600 transition-colors">Start</Link>
+                <Link to="/" className="hover:text-slate-300 transition-colors">Start</Link>
                 <span>/</span>
-                <Link to="/einsatzgebiet" className="hover:text-slate-600 transition-colors">Einsatzgebiet</Link>
+                <Link to="/einsatzgebiet" className="hover:text-slate-300 transition-colors">Einsatzgebiet</Link>
                 <span>/</span>
-                <span className="text-slate-600">{city.name}</span>
+                <span className="text-slate-300">{city.name}</span>
               </nav>
-              <p className="text-sm font-semibold text-brand-700 uppercase tracking-widest mb-5">
+              <p className="text-sm font-semibold text-brand-300 uppercase tracking-widest mb-5">
                 <MapPin size={14} className="inline mr-1.5 -mt-0.5" />
                 {city.region}
               </p>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-slate-900 leading-[1.1]">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.1]">
                 Gebäudereinigung in {city.name}
               </h1>
-              <p className="mt-6 text-lg text-slate-500 leading-relaxed max-w-xl">
+              <p className="mt-6 text-lg text-slate-400 leading-relaxed max-w-xl">
                 {city.intro}
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
@@ -148,7 +148,7 @@ export default function CityPage() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedSection>
-            <span className="text-brand-700 text-sm font-semibold uppercase tracking-widest">Leistungen vor Ort</span>
+            <span className="text-brand-300 text-sm font-semibold uppercase tracking-widest">Leistungen vor Ort</span>
             <h2 className="text-3xl md:text-4xl font-black mt-3 tracking-tight">
               Unsere Reinigungsleistungen in {city.name}
             </h2>
@@ -156,9 +156,9 @@ export default function CityPage() {
           <div className="mt-10 grid sm:grid-cols-2 gap-4">
             {city.highlights.map((h, i) => (
               <AnimatedSection key={i} delay={i * 0.06}>
-                <div className="flex items-start gap-3 bg-white border border-slate-200 rounded-xl px-5 py-4">
+                <div className="flex items-start gap-3 bg-paper-100 border border-white/10 rounded-xl px-5 py-4">
                   <CheckCircle size={18} className="text-cyan-500 shrink-0 mt-0.5" />
-                  <p className="text-slate-700 text-sm leading-relaxed">{h}</p>
+                  <p className="text-slate-200 text-sm leading-relaxed">{h}</p>
                 </div>
               </AnimatedSection>
             ))}
@@ -170,11 +170,11 @@ export default function CityPage() {
       <section className="py-20 bg-paper">
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedSection>
-            <span className="text-brand-700 text-sm font-semibold uppercase tracking-widest">Leistungen</span>
+            <span className="text-brand-300 text-sm font-semibold uppercase tracking-widest">Leistungen</span>
             <h2 className="text-3xl md:text-4xl font-black mt-3 tracking-tight">
               Reinigung & Service in {city.name}
             </h2>
-            <p className="mt-4 text-slate-500 text-lg max-w-2xl">
+            <p className="mt-4 text-slate-400 text-lg max-w-2xl">
               Von Büroreinigung bis Winterdienst – wir bieten das komplette Spektrum der Gebäudereinigung in {city.name}.
             </p>
           </AnimatedSection>
@@ -183,14 +183,14 @@ export default function CityPage() {
               <AnimatedSection key={service.id} delay={i * 0.06}>
                 <Link
                   to={`/leistungen/${service.id}`}
-                  className="block bg-white border border-slate-200 rounded-2xl p-6 hover:border-brand-200 shadow-md hover:shadow-md transition-all h-full group"
+                  className="block bg-paper-100 border border-white/10 rounded-2xl p-6 hover:border-brand-200 shadow-md hover:shadow-md transition-all h-full group"
                 >
-                  <service.icon size={28} className="text-brand-700 mb-4" />
-                  <h3 className="font-bold text-slate-900 group-hover:text-brand-700 transition-colors">
+                  <service.icon size={28} className="text-brand-300 mb-4" />
+                  <h3 className="font-bold text-white group-hover:text-brand-300 transition-colors">
                     {service.title} in {city.name}
                   </h3>
-                  <p className="mt-2 text-sm text-slate-500 leading-relaxed">{service.shortDesc}</p>
-                  <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-700">
+                  <p className="mt-2 text-sm text-slate-400 leading-relaxed">{service.shortDesc}</p>
+                  <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-300">
                     {service.title} ansehen <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
                   </span>
                 </Link>
@@ -204,19 +204,19 @@ export default function CityPage() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedSection>
-            <span className="text-brand-700 text-sm font-semibold uppercase tracking-widest">Einsatzgebiet</span>
+            <span className="text-brand-300 text-sm font-semibold uppercase tracking-widest">Einsatzgebiet</span>
             <h2 className="text-3xl md:text-4xl font-black mt-3 tracking-tight">Auch in Ihrer Nähe</h2>
-            <p className="mt-4 text-slate-500 text-lg">Unser Schwerpunkt liegt in Schleswig-Holstein rund um Bordesholm, Kiel und Neumünster – darüber hinaus sind wir in Hamburg für Sie da.</p>
+            <p className="mt-4 text-slate-400 text-lg">Unser Schwerpunkt liegt in Schleswig-Holstein rund um Bordesholm, Kiel und Neumünster – darüber hinaus sind wir in Hamburg für Sie da.</p>
           </AnimatedSection>
           <div className="mt-8 flex flex-wrap gap-3">
             {cities.filter((c) => c.slug !== city.slug).map((c, i) => (
               <AnimatedSection key={c.slug} delay={i * 0.05}>
                 <Link
                   to={`/einsatzgebiet/${c.slug}`}
-                  className="flex items-center gap-2 bg-white border border-slate-200 hover:border-brand-200 hover:bg-brand-50 px-5 py-2.5 rounded-full text-sm font-medium text-slate-700 transition-colors"
+                  className="flex items-center gap-2 bg-paper-100 border border-white/10 hover:border-brand-200 hover:bg-brand-500/15 px-5 py-2.5 rounded-full text-sm font-medium text-slate-200 transition-colors"
                   aria-label={`Gebäudereinigung in ${c.name}`}
                 >
-                  <MapPin size={13} className="text-brand-600" />{c.name}
+                  <MapPin size={13} className="text-brand-400" />{c.name}
                 </Link>
               </AnimatedSection>
             ))}
@@ -228,13 +228,13 @@ export default function CityPage() {
       <section className="py-20 bg-paper">
         <div className="max-w-3xl mx-auto px-6">
           <AnimatedSection className="text-center mb-10">
-            <span className="text-brand-700 text-sm font-semibold uppercase tracking-widest">FAQ</span>
+            <span className="text-brand-300 text-sm font-semibold uppercase tracking-widest">FAQ</span>
             <h2 className="text-3xl md:text-4xl font-black mt-3 tracking-tight">
               Häufige Fragen zur Gebäudereinigung in {city.name}
             </h2>
           </AnimatedSection>
           <AnimatedSection delay={0.1}>
-            <div className="bg-white rounded-2xl border border-slate-200 px-8 py-4 shadow-md">
+            <div className="bg-paper-100 rounded-2xl border border-white/10 px-8 py-4 shadow-md">
               <FAQAccordion items={faqs} />
             </div>
           </AnimatedSection>

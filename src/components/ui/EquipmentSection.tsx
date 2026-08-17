@@ -118,16 +118,16 @@ function MarqueeTrack() {
 
   return (
     <div
-      className="relative overflow-hidden"
+      className="relative overflow-hidden bg-transparent"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
       {/* Left fade */}
       <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-24 md:w-40 z-10"
-        style={{ background: 'linear-gradient(to right, #f8fafc, transparent)' }} />
+        style={{ background: 'linear-gradient(to right, #0f1826, transparent)' }} />
       {/* Right fade */}
       <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-24 md:w-40 z-10"
-        style={{ background: 'linear-gradient(to left, #f8fafc, transparent)' }} />
+        style={{ background: 'linear-gradient(to left, #0f1826, transparent)' }} />
 
       <motion.div
         ref={trackRef}

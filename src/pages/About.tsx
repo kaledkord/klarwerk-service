@@ -82,11 +82,11 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-24 bg-emerald-50">
+      <section className="py-24 bg-paper">
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedSection className="max-w-3xl mx-auto text-center">
-            <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-emerald-100 mb-6">
-              <Leaf className="w-7 h-7 text-emerald-600" />
+            <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-brand-500/15 mb-6">
+              <Leaf className="w-7 h-7 text-brand-300" />
             </div>
             <h2 className="text-3xl md:text-4xl font-black tracking-tight text-white mb-4">
               Nachhaltigkeit ist uns wichtig
@@ -102,7 +102,7 @@ export default function About() {
             </p>
             <Link
               to="/nachhaltigkeit"
-              className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-8 py-3 rounded-lg transition-colors duration-200"
+              className="inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-semibold px-8 py-3 rounded-lg transition-colors duration-200"
             >
               <Leaf className="w-4 h-4" />
               Mehr zu unserer Nachhaltigkeit

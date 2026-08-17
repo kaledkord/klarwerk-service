@@ -74,7 +74,15 @@
   animation: marquee-scroll 45s linear infinite;
 }
 
-.marquee-track:hover {
+.marquee-track {
+  pointer-events: none;
+}
+
+.marquee-track > * {
+  pointer-events: auto;
+}
+
+.marquee-track:has(> :hover) {
   animation-play-state: paused;
 }
 

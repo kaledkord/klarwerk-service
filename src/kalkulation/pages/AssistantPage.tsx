@@ -18,8 +18,10 @@ import {
   User,
   X,
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { useKwStore } from '../lib/store';
 import { analyzeRequest, budgetState, estimateCostEur, type ChatTurn } from '../lib/ai/client';
+import { getGeminiKey } from '../lib/ai/keyStore';
 import { resolveDraft, type ResolvedDraftLine } from '../lib/ai/applyDraft';
 import type { AiDraft } from '../lib/ai/draftSchema';
 import { fmtEur, fmtNum, fmtPct } from '../lib/format';
@@ -51,7 +53,14 @@ export default function AssistantPage() {
   const [lastLogId, setLastLogId] = useState<string | null>(null);
   const [selection, setSelection] = useState<Record<number, boolean>>({});
   const [budgetOverride, setBudgetOverride] = useState(false);
+  const [hasKey, setHasKey] = useState(() => Boolean(getGeminiKey()));
   const scrollRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const check = () => setHasKey(Boolean(getGeminiKey()));
+    window.addEventListener('focus', check);
+    return () => window.removeEventListener('focus', check);
+  }, []);
 
   const budget = budgetState(data);
   const blocked = budget.blocked && !budgetOverride;
@@ -135,11 +144,22 @@ export default function AssistantPage() {
         crumbs={[{ label: 'KlarWerk Kalkulation', to: BASE }, { label: 'KI-Assistent' }]}
         title="KI-Kalkulationsassistent"
         sub={
-          <>
-            Beschreiben Sie das Objekt in eigenen Worten — der Assistent strukturiert Bereiche, Leistungen und Turnusse
-            aus Ihrer Leistungsbibliothek. Modell: <span className="font-semibold">{data.settings.ai.model}</span> · alle
-            Berechnungen macht die Kalkulations-Engine, nie die KI.
-          </>
+          <span className="flex flex-wrap items-center gap-x-2 gap-y-1">
+            <span>
+              Beschreiben Sie das Objekt in eigenen Worten — der Assistent strukturiert Bereiche, Leistungen und
+              Turnusse aus Ihrer Leistungsbibliothek; alle Berechnungen macht die Kalkulations-Engine.
+            </span>
+            {hasKey ? (
+              <Badge tone="green">Gemini-Direktverbindung aktiv · {data.settings.ai.model}</Badge>
+            ) : (
+              <span className="inline-flex items-center gap-1.5">
+                <Badge tone="amber">Lokale Analyse</Badge>
+                <Link to={`${BASE}/einstellungen?tab=ki`} className="text-cyan-700 hover:underline font-semibold">
+                  Für volle KI: Gemini-Schlüssel hinterlegen →
+                </Link>
+              </span>
+            )}
+          </span>
         }
       />
 
@@ -209,8 +229,14 @@ export default function AssistantPage() {
                   >
                     {m.text}
                     {m.local ? (
-                      <span className="mt-1.5 block">
-                        <Badge tone="amber">Lokale Analyse — KI-Backend nicht konfiguriert</Badge>
+                      <span className="mt-1.5 flex flex-wrap items-center gap-1.5">
+                        <Badge tone="amber">Lokale Analyse (ohne KI)</Badge>
+                        <Link
+                          to={`${BASE}/einstellungen?tab=ki`}
+                          className="text-[11px] font-semibold text-cyan-700 hover:underline"
+                        >
+                          Gemini-Schlüssel hinterlegen →
+                        </Link>
                       </span>
                     ) : null}
                   </div>

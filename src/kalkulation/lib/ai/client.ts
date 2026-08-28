@@ -1,24 +1,35 @@
 /**
- * Client für den KI-Kalkulationsassistenten.
+ * Client für den KI-Kalkulationsassistenten — drei Wege, in dieser Reihenfolge:
  *
- * Sicherheit: Der Gemini-API-Schlüssel liegt ausschließlich serverseitig
- * in der Supabase Edge Function `ai-kalkulation` (Secret GEMINI_API_KEY).
- * Das Frontend sendet nur die Anfrage plus kompakte Stammdaten-Auszüge
- * (Leistungsbibliothek, Turnusse, Einstellungen) als Tool-Kontext.
+ * 1. DIREKTVERBINDUNG (Standalone): eigener Gemini-API-Schlüssel aus den
+ *    Einstellungen (nur in diesem Browser gespeichert, nie im Datenexport).
+ * 2. SERVER-BACKEND: Supabase Edge Function `ai-kalkulation`
+ *    (Schlüssel als Server-Secret) — für eine gehostete Variante.
+ * 3. LOKALE ANALYSE: eingebauter Regel-Parser, klar gekennzeichnet.
+ *
+ * Jede KI-Antwort wird strikt validiert (zod); die Mathematik bleibt
+ * ausschließlich bei der Kalkulations-Engine.
  */
 
 import { supabase } from '../../../lib/supabase';
 import type { KwData } from '../types';
 import { aiDraftSchema, type AiAnalyzeResponse } from './draftSchema';
 import { localAnalyze } from './localAnalyzer';
+import { getGeminiKey } from './keyStore';
+import { analyzeDirectWithGemini } from './geminiDirect';
+import type { AiContextPayload } from './prompt';
 
 export interface ChatTurn {
   role: 'user' | 'model';
   text: string;
 }
 
+export type AiVia = 'direct' | 'server' | 'local';
+
+export type AnalyzeResult = AiAnalyzeResponse & { via: AiVia; local?: boolean };
+
 /** Kompakter Stammdaten-Kontext für die Function-Calling-Tools der KI. */
-export function buildAiContext(data: KwData) {
+export function buildAiContext(data: KwData): AiContextPayload {
   return {
     services: data.services
       .filter((s) => s.active)
@@ -33,7 +44,9 @@ export function buildAiContext(data: KwData) {
     frequencies: data.frequencies.filter((f) => f.active).map((f) => ({ id: f.id, name: f.name })),
     roomTypes: data.roomTypes.map((r) => r.name),
     objectTypes: data.objectTypes.map((o) => o.name),
-    materials: data.materials.filter((m) => m.active).map((m) => ({ name: m.name, kind: m.kind, unit: m.unit, costPerUnit: m.costPerUnit })),
+    materials: data.materials
+      .filter((m) => m.active)
+      .map((m) => ({ name: m.name, kind: m.kind, unit: m.unit, costPerUnit: m.costPerUnit })),
     machines: data.machines.filter((m) => m.active).map((m) => ({ name: m.name, hourlyRatePerHour: m.hourlyRate })),
     settings: {
       targetMarginPct: data.settings.calculation.targetMarginPct,
@@ -73,87 +86,84 @@ export function estimateCostEur(data: KwData, inputTokens: number, outputTokens:
   return (inputTokens / 1_000_000) * ai.priceInPer1M + (outputTokens / 1_000_000) * ai.priceOutPer1M;
 }
 
-/**
- * Analyse über die Edge Function; bei nicht konfiguriertem Backend
- * automatischer, klar gekennzeichneter lokaler Fallback.
- */
+/** Draft strikt validieren — ungültige KI-Antworten werden nicht übernommen. */
+function withValidatedDraft(payload: AiAnalyzeResponse, via: AiVia): AnalyzeResult {
+  if (!payload.ok || !payload.draft) return { ...payload, via };
+  const parsed = aiDraftSchema.safeParse(payload.draft);
+  if (!parsed.success) {
+    return {
+      ok: false,
+      error: 'Die KI-Antwort entsprach nicht dem erwarteten Schema und wurde verworfen. Bitte erneut analysieren.',
+      errorCode: 'invalid',
+      aiText: payload.aiText,
+      usage: payload.usage,
+      model: payload.model,
+      via,
+    };
+  }
+  return { ...payload, draft: parsed.data, via };
+}
+
+function localResult(message: string, data: KwData, note?: string): AnalyzeResult {
+  const fallback = localAnalyze(message, data);
+  return {
+    ok: true,
+    via: 'local',
+    local: true,
+    // Grund für den Fallback sichtbar machen (z. B. „keine Internetverbindung“)
+    aiText: note ? `${note}\n\n${fallback.aiText}` : fallback.aiText,
+    draft: aiDraftSchema.parse(fallback.draft),
+    usage: { inputTokens: 0, outputTokens: 0, calls: 0 },
+    model: 'lokale Analyse',
+    error: note,
+    errorCode: note ? 'not_configured' : undefined,
+  };
+}
+
 export async function analyzeRequest(
   message: string,
   history: ChatTurn[],
   data: KwData
-): Promise<AiAnalyzeResponse & { local?: boolean }> {
+): Promise<AnalyzeResult> {
+  const context = buildAiContext(data);
+  const config = {
+    model: data.settings.ai.model,
+    temperature: data.settings.ai.temperature,
+    maxOutputTokens: data.settings.ai.maxOutputTokens,
+    functionCalling: data.settings.ai.functionCalling,
+  };
+
+  // 1) Direktverbindung mit eigenem Schlüssel
+  const apiKey = getGeminiKey();
+  if (apiKey) {
+    const res = await analyzeDirectWithGemini(apiKey, message, history, context, config);
+    if (res.ok) return withValidatedDraft(res, 'direct');
+    if (res.networkError) {
+      return localResult(message, data, `${res.error} — stattdessen lokale Analyse verwendet.`);
+    }
+    // Echte API-Fehler (ungültiger Schlüssel, Kontingent …) klar anzeigen
+    return { ...res, via: 'direct' };
+  }
+
+  // 2) Server-Backend (Edge Function), 3) lokale Analyse
   try {
     const { data: res, error } = await supabase.functions.invoke('ai-kalkulation', {
-      body: {
-        message,
-        history,
-        context: buildAiContext(data),
-        config: {
-          model: data.settings.ai.model,
-          temperature: data.settings.ai.temperature,
-          maxOutputTokens: data.settings.ai.maxOutputTokens,
-          functionCalling: data.settings.ai.functionCalling,
-        },
-      },
+      body: { message, history, context, config },
     });
 
     if (error) {
-      // Function nicht erreichbar/deployt → lokaler Fallback
-      const fallback = localAnalyze(message, data);
-      return {
-        ok: true,
-        local: true,
-        aiText: fallback.aiText,
-        draft: aiDraftSchema.parse(fallback.draft),
-        usage: { inputTokens: 0, outputTokens: 0, calls: 0 },
-        model: 'lokale Analyse',
-        error: `KI-Backend nicht erreichbar (${error.message ?? 'Fehler'}).`,
-        errorCode: 'not_configured',
-      };
+      return localResult(message, data, `KI-Backend nicht erreichbar (${error.message ?? 'Fehler'}).`);
     }
 
     const payload = res as AiAnalyzeResponse;
     if (!payload.ok) {
       if (payload.errorCode === 'not_configured') {
-        const fallback = localAnalyze(message, data);
-        return {
-          ok: true,
-          local: true,
-          aiText: fallback.aiText,
-          draft: aiDraftSchema.parse(fallback.draft),
-          usage: { inputTokens: 0, outputTokens: 0, calls: 0 },
-          model: 'lokale Analyse',
-          error: payload.error,
-          errorCode: payload.errorCode,
-        };
+        return localResult(message, data, payload.error);
       }
-      return payload;
+      return { ...payload, via: 'server' };
     }
-
-    // Draft strikt validieren — ungültige KI-Antworten werden nicht übernommen
-    const parsed = aiDraftSchema.safeParse(payload.draft);
-    if (!parsed.success) {
-      return {
-        ok: false,
-        error: 'Die KI-Antwort entsprach nicht dem erwarteten Schema und wurde verworfen. Bitte erneut analysieren.',
-        errorCode: 'invalid',
-        aiText: payload.aiText,
-        usage: payload.usage,
-        model: payload.model,
-      };
-    }
-    return { ...payload, draft: parsed.data };
+    return withValidatedDraft(payload, 'server');
   } catch {
-    const fallback = localAnalyze(message, data);
-    return {
-      ok: true,
-      local: true,
-      aiText: fallback.aiText,
-      draft: aiDraftSchema.parse(fallback.draft),
-      usage: { inputTokens: 0, outputTokens: 0, calls: 0 },
-      model: 'lokale Analyse',
-      errorCode: 'not_configured',
-      error: 'KI-Backend nicht erreichbar.',
-    };
+    return localResult(message, data, 'KI-Backend nicht erreichbar.');
   }
 }

@@ -6,7 +6,9 @@
 
 import { useMemo, useRef, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { Download, Plus, RotateCcw, Trash2, Upload } from 'lucide-react';
+import { CheckCircle2, Download, Eye, EyeOff, Key, Loader2, Plus, RotateCcw, Trash2, Upload, XCircle } from 'lucide-react';
+import { getGeminiKey, looksLikeGeminiKey, maskKey, setGeminiKey } from '../lib/ai/keyStore';
+import { testGeminiKey } from '../lib/ai/geminiDirect';
 import type { FactorGroupKey, RoundingMode } from '../lib/types';
 import { FACTOR_GROUP_LABELS, ROUNDING_LABELS } from '../lib/types';
 import { employerRate, overheadInfo, FACTOR_GROUP_ORDER } from '../lib/engine';
@@ -632,6 +634,8 @@ function AiTab() {
 
   return (
     <div className="grid gap-4 lg:grid-cols-2">
+      <div className="space-y-4">
+      <GeminiKeyCard />
       <Card>
         <SectionTitle>KI-Anbieter & Modell</SectionTitle>
         <div className="grid grid-cols-2 gap-3">
@@ -665,11 +669,13 @@ function AiTab() {
           <Badge tone={ai.functionCalling ? 'green' : 'outline'}>Function Calling aktiv</Badge>
         </div>
         <Callout tone="info" className="mt-3">
-          Der Gemini-API-Schlüssel wird ausschließlich serverseitig als Secret der Supabase Edge Function{' '}
-          <code className="font-mono text-[10px]">ai-kalkulation</code> hinterlegt (<code className="font-mono text-[10px]">GEMINI_API_KEY</code>) —
-          niemals im Browser. Einrichtung: siehe README im Projekt.
+          Für eine später gehostete Mehrbenutzer-Version bleibt zusätzlich der Server-Weg bestehen
+          (Supabase Edge Function <code className="font-mono text-[10px]">ai-kalkulation</code> mit{' '}
+          <code className="font-mono text-[10px]">GEMINI_API_KEY</code> als Server-Secret) — er wird automatisch
+          genutzt, wenn hier kein eigener Schlüssel hinterlegt ist.
         </Callout>
       </Card>
+      </div>
 
       <div className="space-y-4">
         <Card>
@@ -775,6 +781,153 @@ function AiTab() {
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
+
+/** Eigener Gemini-Schlüssel für die Direktverbindung (private Nutzung). */
+function GeminiKeyCard() {
+  const model = useKwStore((st) => st.data.settings.ai.model);
+  const [stored, setStored] = useState<string | null>(() => getGeminiKey());
+  const [draft, setDraft] = useState('');
+  const [show, setShow] = useState(false);
+  const [testing, setTesting] = useState(false);
+  const [testResult, setTestResult] = useState<{ ok: boolean; message: string } | null>(null);
+
+  const save = () => {
+    const key = draft.trim();
+    if (!key) return;
+    if (!looksLikeGeminiKey(key)) {
+      toast('Das sieht nicht wie ein Google-API-Schlüssel aus (beginnt üblicherweise mit „AIza…“).', 'error');
+      return;
+    }
+    setGeminiKey(key);
+    setStored(key);
+    setDraft('');
+    setTestResult(null);
+    toast('Schlüssel gespeichert — die KI nutzt jetzt die Direktverbindung.');
+  };
+
+  const runTest = async () => {
+    const key = draft.trim() || stored;
+    if (!key) return;
+    setTesting(true);
+    setTestResult(null);
+    const res = await testGeminiKey(key, model);
+    setTesting(false);
+    setTestResult(res);
+  };
+
+  return (
+    <Card className="!border-brand-200">
+      <SectionTitle
+        right={
+          stored ? (
+            <Badge tone="green">
+              <CheckCircle2 size={11} /> Direktverbindung aktiv
+            </Badge>
+          ) : (
+            <Badge tone="amber">Kein Schlüssel — lokale Analyse</Badge>
+          )
+        }
+      >
+        <span className="inline-flex items-center gap-1.5">
+          <Key size={14} className="text-brand-600" /> Google-Gemini-Schlüssel (Direktverbindung)
+        </span>
+      </SectionTitle>
+
+      {stored ? (
+        <div className="mb-3 flex flex-wrap items-center gap-2 rounded-lg bg-brand-50 border border-brand-200 px-3 py-2 text-xs text-brand-800">
+          <span>
+            Gespeicherter Schlüssel: <span className="font-mono font-bold">{maskKey(stored)}</span> — der KI-Assistent
+            spricht direkt mit Google Gemini.
+          </span>
+          <span className="ml-auto flex gap-2">
+            <Button size="sm" variant="outline" onClick={runTest} disabled={testing}>
+              {testing ? <Loader2 size={12} className="animate-spin" /> : 'Testen'}
+            </Button>
+            <Button
+              size="sm"
+              variant="ghost"
+              className="!text-error-600"
+              onClick={() => {
+                setGeminiKey(null);
+                setStored(null);
+                setTestResult(null);
+                toast('Schlüssel entfernt — der Assistent nutzt wieder die lokale Analyse.', 'info');
+              }}
+            >
+              Entfernen
+            </Button>
+          </span>
+        </div>
+      ) : null}
+
+      <FieldLabel>{stored ? 'Schlüssel ersetzen' : 'API-Schlüssel eintragen'}</FieldLabel>
+      <div className="flex items-center gap-2">
+        <div className="relative flex-1">
+          <TextInput
+            type={show ? 'text' : 'password'}
+            className="!pr-9 font-mono !text-xs"
+            placeholder="AIza…"
+            value={draft}
+            onChange={(e) => setDraft(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter') save();
+            }}
+            autoComplete="off"
+            spellCheck={false}
+          />
+          <button
+            type="button"
+            className="absolute right-2 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600"
+            onClick={() => setShow((v) => !v)}
+            title={show ? 'Verbergen' : 'Anzeigen'}
+          >
+            {show ? <EyeOff size={14} /> : <Eye size={14} />}
+          </button>
+        </div>
+        <Button onClick={save} disabled={draft.trim().length === 0}>
+          Speichern
+        </Button>
+        {!stored ? (
+          <Button variant="outline" onClick={runTest} disabled={testing || draft.trim().length === 0}>
+            {testing ? <Loader2 size={13} className="animate-spin" /> : 'Testen'}
+          </Button>
+        ) : null}
+      </div>
+
+      {testResult ? (
+        <p
+          className={`mt-2 flex items-start gap-1.5 rounded-lg border px-3 py-2 text-xs ${
+            testResult.ok
+              ? 'border-brand-200 bg-brand-50 text-brand-800'
+              : 'border-error-200 bg-error-50 text-error-700'
+          }`}
+        >
+          {testResult.ok ? (
+            <CheckCircle2 size={13} className="mt-0.5 shrink-0" />
+          ) : (
+            <XCircle size={13} className="mt-0.5 shrink-0" />
+          )}
+          {testResult.message}
+        </p>
+      ) : null}
+
+      <div className="mt-3 rounded-lg bg-slate-50 border border-slate-200 px-3 py-2.5 text-[11px] text-slate-600 space-y-1">
+        <p className="font-bold text-slate-700">So bekommen Sie den Schlüssel (kostenlos):</p>
+        <p>
+          1. <a href="https://aistudio.google.com/apikey" target="_blank" rel="noreferrer" className="text-cyan-700 underline">aistudio.google.com/apikey</a>{' '}
+          öffnen und mit Ihrem Google-Konto anmelden
+        </p>
+        <p>2. „API-Schlüssel erstellen“ klicken und den Schlüssel kopieren (beginnt mit „AIza…“)</p>
+        <p>3. Hier einfügen, „Speichern“, dann „Testen“</p>
+        <p className="pt-1 text-slate-500">
+          Der Schlüssel wird nur in diesem Browser auf diesem Gerät gespeichert — er ist <strong>nie</strong> im
+          JSON-Datenexport enthalten und kann hier jederzeit entfernt werden (zusätzlich in Google AI Studio
+          widerrufbar). Das monatliche KI-Budget unten gilt auch für die Direktverbindung.
+        </p>
+      </div>
+    </Card>
+  );
+}
 
 function DataTab() {
   const exportJson = useKwStore((st) => st.exportJson);

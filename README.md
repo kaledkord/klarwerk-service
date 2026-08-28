@@ -92,23 +92,25 @@ getestet (`npm run test`, 27 Tests).
 
 ### KI-Assistent
 
-Der Assistent besitzt eine **eingebaute lokale Analyse** (Regel-Parser),
-die ohne jede Einrichtung funktioniert und klar gekennzeichnet ist.
+Drei Wege, automatisch in dieser Reihenfolge gewählt:
 
-Optional kann die volle **Google-Gemini-KI** angebunden werden — über
-eine Supabase Edge Function, damit der API-Schlüssel niemals im Browser
-liegt:
+1. **Direktverbindung (empfohlen für die private Standalone-Nutzung):**
+   Eigenen Google-Gemini-API-Schlüssel unter *Einstellungen → KI*
+   eintragen (kostenlos über [aistudio.google.com/apikey](https://aistudio.google.com/apikey)).
+   Der Schlüssel wird ausschließlich im localStorage dieses Browsers
+   gespeichert, ist **nie** im JSON-Datenexport enthalten und jederzeit
+   entfern-/widerrufbar. Das monatliche KI-Budget der App greift auch hier.
+   Hinweis: Dieser Weg ist für die unverteilte Einzelplatz-Datei gedacht —
+   für eine öffentlich gehostete Version gehört der Schlüssel auf den Server.
+2. **Server-Backend** (für eine gehostete Mehrbenutzer-Variante):
+   Supabase Edge Function mit Server-Secret —
+   `supabase secrets set GEMINI_API_KEY=… && supabase functions deploy ai-kalkulation`.
+3. **Lokale Analyse:** eingebauter Regel-Parser ohne jede Einrichtung,
+   klar gekennzeichnet.
 
-```bash
-supabase secrets set GEMINI_API_KEY=IHR_SCHLUESSEL
-supabase functions deploy ai-kalkulation
-```
-
-Die Function (`supabase/functions/ai-kalkulation`) nutzt Function Calling
-auf die eigenen Stammdaten und liefert schema-validierte Entwürfe; die
-Mathematik bleibt immer bei der Kalkulations-Engine. Budget, Modellwahl
-und Protokoll: *Einstellungen → KI*. In der Standalone-Datei greift ohne
-konfiguriertes Backend automatisch die lokale Analyse.
+Alle Wege nutzen Function Calling auf die eigenen Stammdaten und liefern
+schema-validierte Entwürfe (zod); die Mathematik bleibt immer bei der
+Kalkulations-Engine. Budget, Modellwahl und Protokoll: *Einstellungen → KI*.
 
 ---
 

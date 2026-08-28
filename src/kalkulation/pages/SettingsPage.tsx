@@ -794,6 +794,15 @@ function GeminiKeyCard() {
   const save = () => {
     const key = draft.trim();
     if (!key) return;
+    // Häufigste Verwechslung: Google zeigt im selben Dialog mehrere Werte mit je
+    // eigenem Kopier-Symbol — Projekt-ID/-nummer statt des API-Schlüssels.
+    if (/^(projects\/)?gen-lang-client-/i.test(key) || /^projects\/\d/.test(key)) {
+      toast(
+        'Das ist die Projekt-ID von Google, nicht der API-Schlüssel. Bitte im Google-Fenster die ALLERERSTE Zeile ganz oben verwenden, dort wo „API-Schlüssel“ steht (nicht „Name“, „Projektname“ oder „Projektnummer“).',
+        'error'
+      );
+      return;
+    }
     if (!looksLikeGeminiKey(key)) {
       toast('Das sieht nicht nach einem vollständigen API-Schlüssel aus (zu kurz oder mit Leerzeichen). Bitte den Schlüssel vollständig aus Google AI Studio einfügen.', 'error');
       return;
@@ -917,9 +926,11 @@ function GeminiKeyCard() {
           1. <a href="https://aistudio.google.com/apikey" target="_blank" rel="noreferrer" className="text-cyan-700 underline">aistudio.google.com/apikey</a>{' '}
           öffnen und mit Ihrem Google-Konto anmelden
         </p>
-        <p>
-          2. „API-Schlüssel erstellen“ klicken, dann bei „Details zum API-Schlüssel“ das Kopier-Symbol neben dem
-          Feld „API-Schlüssel“ verwenden (nicht Name oder Projektnummer)
+        <p>2. „API-Schlüssel erstellen“ klicken — es öffnet sich „Details zum API-Schlüssel“ mit mehreren Zeilen</p>
+        <p className="rounded bg-amber-50 border border-amber-200 px-2 py-1.5 text-amber-800">
+          ⚠️ Nur die <strong>allererste Zeile ganz oben</strong> verwenden, dort wo klein „API-Schlüssel“ steht — das
+          Kopier-Symbol direkt daneben antippen. Die Zeilen „Name“, „Projektname“ und „Projektnummer“ darunter{' '}
+          <strong>nicht</strong> verwenden, auch wenn sie ebenfalls ein Kopier-Symbol haben.
         </p>
         <p>3. Hier einfügen, „Speichern“, dann „Testen“ — Google-Schlüssel gibt es in mehreren Formaten, das ist normal</p>
         <p className="pt-1 text-slate-500">

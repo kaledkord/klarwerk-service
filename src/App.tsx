@@ -15,6 +15,7 @@ const Datenschutz = lazy(() => import('./pages/legal/Datenschutz'));
 const AGB = lazy(() => import('./pages/legal/AGB'));
 const RechtlicheHinweise = lazy(() => import('./pages/legal/RechtlicheHinweise'));
 const NotFound = lazy(() => import('./pages/NotFound'));
+const KalkulationApp = lazy(() => import('./kalkulation/KalkulationApp'));
 
 function PageLoader() {
   return (
@@ -29,6 +30,8 @@ export default function App() {
     <BrowserRouter>
         <Suspense fallback={<PageLoader />}>
           <Routes>
+            {/* Interne Kalkulations-App (eigene Shell, kein Website-Layout) */}
+            <Route path="/kalkulation/*" element={<KalkulationApp />} />
             <Route path="/" element={<Layout />}>
               <Route index element={<Home />} />
               <Route path="ueber-uns" element={<About />} />

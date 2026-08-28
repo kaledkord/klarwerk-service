@@ -35,7 +35,7 @@ function sanitizeModel(model?: string): string {
 
 function friendlyError(status: number, body: string): string {
   if (status === 400 && body.includes('API_KEY_INVALID')) {
-    return 'Google hat den API-Schlüssel abgelehnt (ungültig). Bitte den Schlüssel in den Einstellungen prüfen — er beginnt üblicherweise mit „AIza“.';
+    return 'Google hat den API-Schlüssel abgelehnt (ungültig). Bitte in den Einstellungen prüfen, ob der Schlüssel vollständig und ohne zusätzliche Leerzeichen eingefügt wurde — am besten direkt aus Google AI Studio über das Kopier-Symbol neu einfügen.';
   }
   if (status === 400 && body.includes('API key expired')) {
     return 'Der API-Schlüssel ist abgelaufen. Bitte in Google AI Studio einen neuen Schlüssel erstellen.';

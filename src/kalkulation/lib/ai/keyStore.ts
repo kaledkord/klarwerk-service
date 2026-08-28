@@ -37,8 +37,18 @@ export function maskKey(key: string): string {
   return `${key.slice(0, 4)}…${key.slice(-4)}`;
 }
 
-/** Grobe Plausibilitätsprüfung (Google-AI-Studio-Schlüssel beginnen mit „AIza“). */
+/**
+ * Grobe Plausibilitätsprüfung — bewusst großzügig.
+ *
+ * Google verwendet mehrere Schlüsselformate nebeneinander (klassisch
+ * „AIzaSy…“, neuere Varianten wie „AQ.…“ inkl. Punkt) und kann dies
+ * jederzeit ändern. Ein hartes Format-Muster hier würde echte Schlüssel
+ * fälschlich blockieren, bevor überhaupt ein Google-Aufruf stattfindet.
+ * Diese Prüfung fängt nur offensichtliche Fehleingaben ab (leer, zu kurz,
+ * ganze Sätze mit Leerzeichen) — die eigentliche Prüfung übernimmt immer
+ * der echte Verbindungstest gegen die Google-API.
+ */
 export function looksLikeGeminiKey(key: string): boolean {
   const k = key.trim();
-  return k.length >= 30 && /^[A-Za-z0-9_\-]+$/.test(k);
+  return k.length >= 15 && !/\s/.test(k);
 }

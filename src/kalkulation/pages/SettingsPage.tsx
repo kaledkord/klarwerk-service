@@ -795,7 +795,7 @@ function GeminiKeyCard() {
     const key = draft.trim();
     if (!key) return;
     if (!looksLikeGeminiKey(key)) {
-      toast('Das sieht nicht wie ein Google-API-Schlüssel aus (beginnt üblicherweise mit „AIza…“).', 'error');
+      toast('Das sieht nicht nach einem vollständigen API-Schlüssel aus (zu kurz oder mit Leerzeichen). Bitte den Schlüssel vollständig aus Google AI Studio einfügen.', 'error');
       return;
     }
     setGeminiKey(key);
@@ -866,7 +866,7 @@ function GeminiKeyCard() {
           <TextInput
             type={show ? 'text' : 'password'}
             className="!pr-9 font-mono !text-xs"
-            placeholder="AIza…"
+            placeholder="Ihr Gemini-API-Schlüssel"
             value={draft}
             onChange={(e) => setDraft(e.target.value)}
             onKeyDown={(e) => {
@@ -917,8 +917,11 @@ function GeminiKeyCard() {
           1. <a href="https://aistudio.google.com/apikey" target="_blank" rel="noreferrer" className="text-cyan-700 underline">aistudio.google.com/apikey</a>{' '}
           öffnen und mit Ihrem Google-Konto anmelden
         </p>
-        <p>2. „API-Schlüssel erstellen“ klicken und den Schlüssel kopieren (beginnt mit „AIza…“)</p>
-        <p>3. Hier einfügen, „Speichern“, dann „Testen“</p>
+        <p>
+          2. „API-Schlüssel erstellen“ klicken, dann bei „Details zum API-Schlüssel“ das Kopier-Symbol neben dem
+          Feld „API-Schlüssel“ verwenden (nicht Name oder Projektnummer)
+        </p>
+        <p>3. Hier einfügen, „Speichern“, dann „Testen“ — Google-Schlüssel gibt es in mehreren Formaten, das ist normal</p>
         <p className="pt-1 text-slate-500">
           Der Schlüssel wird nur in diesem Browser auf diesem Gerät gespeichert — er ist <strong>nie</strong> im
           JSON-Datenexport enthalten und kann hier jederzeit entfernt werden (zusätzlich in Google AI Studio

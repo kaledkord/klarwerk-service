@@ -31,9 +31,12 @@ describe('Gemini-Schlüsselspeicher (Direktverbindung)', () => {
     expect(maskKey('kurz')).toBe('••••');
   });
 
-  it('erkennt plausible Google-Schlüssel', async () => {
+  it('erkennt plausible Google-Schlüssel (klassisches und neueres Format)', async () => {
     const { looksLikeGeminiKey } = await import('../keyStore');
+    // klassisches Format
     expect(looksLikeGeminiKey('AIzaSyB1234567890abcdefghijklmnopqrstu')).toBe(true);
+    // neueres Format mit Punkt (z. B. aus Google AI Studio, "AQ.…") — Beispielwert, kein echter Schlüssel
+    expect(looksLikeGeminiKey('AQ.FreiErfundenerBeispielwertZumTesten123456')).toBe(true);
     expect(looksLikeGeminiKey('zu kurz')).toBe(false);
     expect(looksLikeGeminiKey('enthält leerzeichen und ist trotzdem lang genug!!')).toBe(false);
   });

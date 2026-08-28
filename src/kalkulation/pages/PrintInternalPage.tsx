@@ -8,6 +8,7 @@ import { useKwStore } from '../lib/store';
 import { useCalcResults } from '../components/domain';
 import { CALCULATION_STATUS_LABELS } from '../lib/types';
 import { fmtDate, fmtEur, fmtHours, fmtNum, fmtPct, fmtSqm } from '../lib/format';
+import logoUrl from '../assets/klarwerk-logo.png';
 import '../kalkulation.css';
 
 export default function PrintInternalPage() {
@@ -70,7 +71,7 @@ export default function PrintInternalPage() {
                   {object ? ` · ${object.name}` : ''}
                 </p>
               </div>
-              <img src="/kalkulation-logo-160.png" alt="KlarWerk" className="h-12 w-12 rounded-lg" />
+              <img src={logoUrl} alt="KlarWerk" className="h-12 w-12 rounded-lg" />
             </div>
 
             {/* Kennzahlen */}

@@ -8,6 +8,7 @@ import type { Calculation, CleaningObject, Customer, OfferConfig } from '../../l
 import { useKwStore } from '../../lib/store';
 import type { CalcTotals } from '../../lib/engine';
 import { fmtDate, fmtEur, fmtNum } from '../../lib/format';
+import logoUrl from '../../assets/klarwerk-logo.png';
 
 export function OfferDocument({
   calc,
@@ -76,7 +77,7 @@ export function OfferDocument({
           <p>{company.website}</p>
         </div>
         <div className="flex items-center gap-3">
-          <img src="/kalkulation-logo-160.png" alt="KlarWerk Service" className="h-16 w-16 rounded-xl" />
+          <img src={logoUrl} alt="KlarWerk Service" className="h-16 w-16 rounded-xl" />
         </div>
       </div>
 

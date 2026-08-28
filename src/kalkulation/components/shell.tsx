@@ -24,8 +24,21 @@ import {
 import { useKwStore } from '../lib/store';
 import { CALCULATION_STATUS_LABELS } from '../lib/types';
 import { cx } from './ui';
+import logoUrl from '../assets/klarwerk-logo.png';
 
 export const BASE = '/kalkulation';
+
+/**
+ * Öffnet eine App-Route in neuem Tab — funktioniert im Web (Pfad-Routing)
+ * und in der Standalone-Datei (Hash-Routing, file://) gleichermaßen.
+ */
+export function openAppRoute(path: string) {
+  if (window.location.hash.startsWith('#/')) {
+    window.open(`${window.location.pathname}${window.location.search}#${path}`, '_blank');
+  } else {
+    window.open(path, '_blank');
+  }
+}
 
 const NAV_ITEMS = [
   { to: `${BASE}`, label: 'Dashboard', icon: LayoutDashboard, end: true },
@@ -46,11 +59,7 @@ function SidebarContent({ onNavigate }: { onNavigate?: () => void }) {
         onClick={onNavigate}
         className="flex items-center gap-3 px-4 pt-5 pb-4"
       >
-        <img
-          src="/kalkulation-logo-160.png"
-          alt="KlarWerk Service Logo"
-          className="h-11 w-11 rounded-xl"
-        />
+        <img src={logoUrl} alt="KlarWerk Service Logo" className="h-11 w-11 rounded-xl" />
         <div className="min-w-0">
           <p className="text-[15px] font-extrabold leading-tight text-white tracking-tight">
             KlarWerk <span className="bg-gradient-to-r from-cyan-400 to-brand-400 bg-clip-text text-transparent">Kalkulation</span>

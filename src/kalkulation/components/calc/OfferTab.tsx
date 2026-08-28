@@ -24,7 +24,7 @@ import {
   Toggle,
 } from '../ui';
 import { OfferDocument } from './OfferDocument';
-import { BASE } from '../shell';
+import { BASE, openAppRoute } from '../shell';
 
 export function OfferTab({
   calc,
@@ -114,14 +114,14 @@ export function OfferTab({
           <Button
             variant="outline"
             icon={<Printer size={14} />}
-            onClick={() => window.open(`${BASE}/druck/angebot/${calc.id}`, '_blank')}
+            onClick={() => openAppRoute(`${BASE}/druck/angebot/${calc.id}`)}
           >
             Angebot als PDF
           </Button>
           <Button
             variant="outline"
             icon={<Printer size={14} />}
-            onClick={() => window.open(`${BASE}/druck/intern/${calc.id}`, '_blank')}
+            onClick={() => openAppRoute(`${BASE}/druck/intern/${calc.id}`)}
           >
             Interne Kalkulation als PDF
           </Button>

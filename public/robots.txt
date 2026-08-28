@@ -58,6 +58,8 @@ Allow: /
 
 # Block admin/internal pages from all bots
 Disallow: /admin/
+Disallow: /kalkulation
+Disallow: /kalkulation/
 Disallow: /*?*session=
 Disallow: /*?*token=
 

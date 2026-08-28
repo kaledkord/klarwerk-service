@@ -299,14 +299,16 @@ export default function CalculationDetailPage() {
             </InfoTip>
           }
         />
-        <div className="kw-card p-4 flex items-center gap-3">
-          <HealthRing score={health.score} size={46} />
-          <div className="min-w-0">
-            <p className="text-[11px] font-semibold uppercase tracking-wide text-slate-500">Kalkulationsqualität</p>
-            <p className="text-sm font-bold text-slate-800 kw-tnum">{health.score}/100</p>
-            <InfoTip label="Prüfungen anzeigen">
-              <HealthChecklist health={health} />
-            </InfoTip>
+        <div className="kw-card p-4 flex items-center gap-2.5 min-w-0">
+          <HealthRing score={health.score} size={42} />
+          <div className="min-w-0 flex-1">
+            <p className="truncate text-[11px] font-semibold uppercase tracking-wide text-slate-500">Qualität</p>
+            <p className="flex items-center gap-1 text-sm font-bold text-slate-800 kw-tnum">
+              {health.score}/100
+              <InfoTip label="Prüfungen anzeigen">
+                <HealthChecklist health={health} />
+              </InfoTip>
+            </p>
           </div>
         </div>
       </div>

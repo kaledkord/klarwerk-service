@@ -336,7 +336,7 @@ describe('Nachkalkulation', () => {
     const a = analyzePostCalc(calc, t, ctx)!;
     expect(a).not.toBeNull();
     expect(a.months).toBe(3);
-    expect(a.avgActualHours).toBeCloseTo((96 + 92 + 90) / 3, 3);
+    expect(a.avgActualHours).toBeCloseTo((62 + 59 + 58) / 3, 3);
     expect(a.hoursDeltaPct).toBeGreaterThan(0);
     expect(a.actualMarginPct).toBeLessThan(a.plannedMarginPct);
   });

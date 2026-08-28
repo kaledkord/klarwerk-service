@@ -118,7 +118,7 @@ export function LinesTab({ calc, results, update, object }: TabProps) {
       ) : (
         <Card padded={false} className="overflow-hidden">
           <div className="overflow-x-auto">
-            <table className="kw-table min-w-[1080px]">
+            <table className="kw-table min-w-[1320px]">
               <thead>
                 <tr>
                   <th className="w-8">Nr.</th>
@@ -263,6 +263,7 @@ export function LinesTab({ calc, results, update, object }: TabProps) {
                           <td className="w-44">
                             <FrequencyPicker
                               cell
+                              className="min-w-[10rem]"
                               value={line.frequencyId}
                               onChange={(fid) =>
                                 update((c) => {

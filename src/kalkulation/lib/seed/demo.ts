@@ -675,7 +675,7 @@ export const SEED_CALCULATIONS: Calculation[] = [
       {
         id: 'pc_px_1',
         month: '2026-05',
-        actualHours: 96,
+        actualHours: 62,
         actualMaterialCost: 148,
         reasons: ['Verschmutzung unterschätzt'],
         note: 'Einarbeitung des Teams, zusätzliche Wischgänge im Wartebereich.',
@@ -683,14 +683,14 @@ export const SEED_CALCULATIONS: Calculation[] = [
       {
         id: 'pc_px_2',
         month: '2026-06',
-        actualHours: 92,
+        actualHours: 59,
         actualMaterialCost: 132,
         reasons: ['Zusatzleistungen erbracht'],
       },
       {
         id: 'pc_px_3',
         month: '2026-07',
-        actualHours: 90,
+        actualHours: 58,
         actualMaterialCost: 128,
         reasons: [],
       },

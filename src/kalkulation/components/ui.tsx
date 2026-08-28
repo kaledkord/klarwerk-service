@@ -224,8 +224,8 @@ export function NumberInput({
   const commit = (raw: string) => {
     const trimmed = raw.trim();
     if (trimmed === '') {
-      onChange(null);
       setInvalid(false);
+      if (value != null) onChange(null);
       return;
     }
     const parsed = parseGermanNumber(trimmed);
@@ -237,7 +237,9 @@ export function NumberInput({
     if (min != null && v < min) v = min;
     if (max != null && v > max) v = max;
     setInvalid(false);
-    onChange(v);
+    // Nur committen, wenn sich der Wert tatsächlich geändert hat —
+    // verhindert ungewollte „manuell angepasst“-Markierungen.
+    if (value == null || Math.abs(v - value) > 1e-9) onChange(v);
   };
 
   const input = (

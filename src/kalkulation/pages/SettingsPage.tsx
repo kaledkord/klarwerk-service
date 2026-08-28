@@ -8,7 +8,7 @@ import { useMemo, useRef, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { CheckCircle2, Download, Eye, EyeOff, Key, Loader2, Plus, RotateCcw, Trash2, Upload, XCircle } from 'lucide-react';
 import { getGeminiKey, looksLikeGeminiKey, maskKey, setGeminiKey } from '../lib/ai/keyStore';
-import { testGeminiKey } from '../lib/ai/geminiDirect';
+import { listAvailableModels, testGeminiKey, type AvailableModel } from '../lib/ai/geminiDirect';
 import type { FactorGroupKey, RoundingMode } from '../lib/types';
 import { FACTOR_GROUP_LABELS, ROUNDING_LABELS } from '../lib/types';
 import { employerRate, overheadInfo, FACTOR_GROUP_ORDER } from '../lib/engine';
@@ -785,11 +785,15 @@ function AiTab() {
 /** Eigener Gemini-Schlüssel für die Direktverbindung (private Nutzung). */
 function GeminiKeyCard() {
   const model = useKwStore((st) => st.data.settings.ai.model);
+  const updateSettings = useKwStore((st) => st.updateSettings);
   const [stored, setStored] = useState<string | null>(() => getGeminiKey());
   const [draft, setDraft] = useState('');
   const [show, setShow] = useState(false);
   const [testing, setTesting] = useState(false);
   const [testResult, setTestResult] = useState<{ ok: boolean; message: string } | null>(null);
+  const [modelsLoading, setModelsLoading] = useState(false);
+  const [models, setModels] = useState<AvailableModel[] | null>(null);
+  const [modelsError, setModelsError] = useState<string | null>(null);
 
   const save = () => {
     const key = draft.trim();
@@ -824,6 +828,24 @@ function GeminiKeyCard() {
     setTestResult(res);
   };
 
+  const loadModels = async () => {
+    const key = draft.trim() || stored;
+    if (!key) return;
+    setModelsLoading(true);
+    setModelsError(null);
+    setModels(null);
+    const res = await listAvailableModels(key);
+    setModelsLoading(false);
+    if (res.ok && res.models) setModels(res.models);
+    else setModelsError(res.message ?? 'Unbekannter Fehler.');
+  };
+
+  const chooseModel = (id: string) => {
+    updateSettings((s) => void (s.ai.model = id));
+    setTestResult(null);
+    toast(`Modell „${id}“ übernommen.`);
+  };
+
   return (
     <Card className="!border-brand-200">
       <SectionTitle
@@ -843,29 +865,73 @@ function GeminiKeyCard() {
       </SectionTitle>
 
       {stored ? (
-        <div className="mb-3 flex flex-wrap items-center gap-2 rounded-lg bg-brand-50 border border-brand-200 px-3 py-2 text-xs text-brand-800">
-          <span>
-            Gespeicherter Schlüssel: <span className="font-mono font-bold">{maskKey(stored)}</span> — der KI-Assistent
-            spricht direkt mit Google Gemini.
-          </span>
-          <span className="ml-auto flex gap-2">
-            <Button size="sm" variant="outline" onClick={runTest} disabled={testing}>
-              {testing ? <Loader2 size={12} className="animate-spin" /> : 'Testen'}
-            </Button>
-            <Button
-              size="sm"
-              variant="ghost"
-              className="!text-error-600"
-              onClick={() => {
-                setGeminiKey(null);
-                setStored(null);
-                setTestResult(null);
-                toast('Schlüssel entfernt — der Assistent nutzt wieder die lokale Analyse.', 'info');
-              }}
-            >
-              Entfernen
-            </Button>
-          </span>
+        <div className="mb-3 rounded-lg bg-brand-50 border border-brand-200 px-3 py-2 text-xs text-brand-800">
+          <div className="flex flex-wrap items-center gap-2">
+            <span>
+              Gespeicherter Schlüssel: <span className="font-mono font-bold">{maskKey(stored)}</span> — der
+              KI-Assistent spricht direkt mit Google Gemini.
+            </span>
+            <span className="ml-auto flex gap-2">
+              <Button size="sm" variant="outline" onClick={runTest} disabled={testing}>
+                {testing ? <Loader2 size={12} className="animate-spin" /> : 'Testen'}
+              </Button>
+              <Button
+                size="sm"
+                variant="ghost"
+                className="!text-error-600"
+                onClick={() => {
+                  setGeminiKey(null);
+                  setStored(null);
+                  setTestResult(null);
+                  setModels(null);
+                  setModelsError(null);
+                  toast('Schlüssel entfernt — der Assistent nutzt wieder die lokale Analyse.', 'info');
+                }}
+              >
+                Entfernen
+              </Button>
+            </span>
+          </div>
+
+          <div className="mt-2 border-t border-brand-200/70 pt-2">
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="text-brand-700">
+                Aktuelles Modell: <span className="font-mono font-bold">{model}</span>
+              </span>
+              <Button size="sm" variant="outline" onClick={loadModels} disabled={modelsLoading} className="ml-auto">
+                {modelsLoading ? <Loader2 size={12} className="animate-spin" /> : 'Verfügbare Modelle für diesen Schlüssel anzeigen'}
+              </Button>
+            </div>
+            {modelsError ? (
+              <p className="mt-2 flex items-start gap-1.5 rounded-lg border border-error-200 bg-error-50 px-2.5 py-2 text-error-700">
+                <XCircle size={13} className="mt-0.5 shrink-0" /> {modelsError}
+              </p>
+            ) : null}
+            {models ? (
+              <div className="mt-2">
+                <p className="mb-1 text-[10px] font-bold uppercase tracking-wide text-brand-600">
+                  {models.length} Modell(e) freigeschaltet — anklicken zum Übernehmen
+                </p>
+                <div className="flex flex-wrap gap-1.5">
+                  {models.map((m) => (
+                    <button
+                      key={m.id}
+                      type="button"
+                      onClick={() => chooseModel(m.id)}
+                      title={m.displayName}
+                      className={`kw-press rounded-full border px-2.5 py-1 font-mono text-[11px] ${
+                        m.id === model
+                          ? 'border-brand-600 bg-brand-600 text-white'
+                          : 'border-brand-300 bg-white text-brand-700 hover:bg-brand-100'
+                      }`}
+                    >
+                      {m.id}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            ) : null}
+          </div>
         </div>
       ) : null}
 

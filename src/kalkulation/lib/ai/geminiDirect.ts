@@ -82,6 +82,45 @@ function candidateParts(data: Record<string, unknown>): Part[] {
   return candidates?.[0]?.content?.parts ?? [];
 }
 
+export interface AvailableModel {
+  id: string;
+  displayName: string;
+}
+
+/**
+ * Fragt bei Google ab, welche Modelle DIESER Schlüssel tatsächlich nutzen
+ * darf (Google-Endpunkt „ListModels“). Google-Konten sind unterschiedlich
+ * freigeschaltet — statt Modellnamen zu raten, zeigt dies die echte Liste.
+ */
+export async function listAvailableModels(
+  apiKey: string
+): Promise<{ ok: boolean; models?: AvailableModel[]; message?: string }> {
+  let res: Response;
+  try {
+    res = await fetch(API_BASE, { headers: { 'x-goog-api-key': apiKey } });
+  } catch {
+    return { ok: false, message: 'Keine Verbindung zur Google-API — bitte Internetverbindung prüfen.' };
+  }
+  if (!res.ok) {
+    const text = await res.text().catch(() => '');
+    return { ok: false, message: friendlyError(res.status, text) };
+  }
+  const data = (await res.json()) as {
+    models?: { name: string; displayName?: string; supportedGenerationMethods?: string[] }[];
+  };
+  const models = (data.models ?? [])
+    .filter((m) => m.supportedGenerationMethods?.includes('generateContent') && m.name.includes('gemini'))
+    .map((m) => ({ id: m.name.replace(/^models\//, ''), displayName: m.displayName || m.name }));
+  if (models.length === 0) {
+    return {
+      ok: false,
+      message:
+        'Dieser Schlüssel hat laut Google aktuell keinen Zugriff auf ein Gemini-Modell für Textgenerierung. Bitte in Google AI Studio prüfen, ob die „Generative Language API“ für dieses Projekt aktiviert ist.',
+    };
+  }
+  return { ok: true, models };
+}
+
 export interface DirectConfig {
   model: string;
   temperature: number;

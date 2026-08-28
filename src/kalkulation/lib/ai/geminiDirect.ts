@@ -49,7 +49,19 @@ function friendlyError(status: number, body: string): string {
   if (status === 404) {
     return 'Das gewählte Modell wurde nicht gefunden (404). Bitte in den Einstellungen ein anderes Gemini-Modell wählen.';
   }
+  if (status === 503) {
+    return 'Die Google-Server sind gerade kurzzeitig überlastet (503) — das liegt an Google, nicht an Ihrer Einrichtung. Die App hat es bereits automatisch mehrfach erneut versucht. Bitte in ein bis zwei Minuten noch einmal senden.';
+  }
   return `Google-API-Fehler (${status}): ${body.slice(0, 200)}`;
+}
+
+/** Bei Überlastung/Kontingent kurz erneut versuchen — Google nennt dies selbst "meist vorübergehend". */
+const RETRYABLE_STATUSES = new Set([503, 429]);
+const MAX_RETRIES = 2;
+const RETRY_DELAYS_MS = [1500, 3000];
+
+function delay(ms: number): Promise<void> {
+  return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 async function callGemini(
@@ -57,24 +69,30 @@ async function callGemini(
   model: string,
   body: Record<string, unknown>
 ): Promise<{ data: Record<string, unknown>; usage: GeminiUsage }> {
-  let res: Response;
-  try {
-    res = await fetch(`${API_BASE}/${model}:generateContent`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'x-goog-api-key': apiKey },
-      body: JSON.stringify(body),
-    });
-  } catch {
-    throw Object.assign(new Error('Keine Verbindung zur Google-API — bitte Internetverbindung prüfen.'), {
-      network: true,
-    });
-  }
-  if (!res.ok) {
+  for (let attempt = 0; ; attempt++) {
+    let res: Response;
+    try {
+      res = await fetch(`${API_BASE}/${model}:generateContent`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'x-goog-api-key': apiKey },
+        body: JSON.stringify(body),
+      });
+    } catch {
+      throw Object.assign(new Error('Keine Verbindung zur Google-API — bitte Internetverbindung prüfen.'), {
+        network: true,
+      });
+    }
+    if (res.ok) {
+      const data = (await res.json()) as Record<string, unknown>;
+      return { data, usage: (data.usageMetadata ?? {}) as GeminiUsage };
+    }
     const text = await res.text().catch(() => '');
+    if (RETRYABLE_STATUSES.has(res.status) && attempt < MAX_RETRIES) {
+      await delay(RETRY_DELAYS_MS[attempt]);
+      continue;
+    }
     throw Object.assign(new Error(friendlyError(res.status, text)), { status: res.status });
   }
-  const data = (await res.json()) as Record<string, unknown>;
-  return { data, usage: (data.usageMetadata ?? {}) as GeminiUsage };
 }
 
 function candidateParts(data: Record<string, unknown>): Part[] {

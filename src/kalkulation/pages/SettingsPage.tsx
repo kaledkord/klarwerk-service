@@ -511,6 +511,37 @@ function TravelMaterialTab() {
             <option value="separat">Wird separat abgerechnet</option>
           </Select>
         </div>
+        <div className="mt-4 border-t border-slate-100 pt-3">
+          <FieldLabel>Vorschlagswerte für prozentuale Kostenermittlung (% der Personalkosten)</FieldLabel>
+          <div className="grid grid-cols-2 gap-3 max-w-md">
+            <div>
+              <FieldLabel hint="(branchenüblich 3–6 %)">Material</FieldLabel>
+              <NumberInput
+                value={settings.costSuggestions.materialPctOfLabor}
+                min={0}
+                max={50}
+                onChange={(v) => v != null && update((s) => void (s.costSuggestions.materialPctOfLabor = v))}
+                suffix="%"
+                alignRight={false}
+              />
+            </div>
+            <div>
+              <FieldLabel>Maschinen</FieldLabel>
+              <NumberInput
+                value={settings.costSuggestions.machinePctOfLabor}
+                min={0}
+                max={50}
+                onChange={(v) => v != null && update((s) => void (s.costSuggestions.machinePctOfLabor = v))}
+                suffix="%"
+                alignRight={false}
+              />
+            </div>
+          </div>
+          <p className="mt-1.5 text-[11px] text-slate-400">
+            Diese Sätze erscheinen im Kalkulations-Tab „Kosten & Personal“ als Vorschlag, wenn Material- oder
+            Maschinenkosten prozentual vom Personal angesetzt werden — dort jederzeit durch einen eigenen Satz ersetzbar.
+          </p>
+        </div>
       </Card>
     </div>
   );

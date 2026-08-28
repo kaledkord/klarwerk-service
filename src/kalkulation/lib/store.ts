@@ -24,8 +24,10 @@ import type {
   Settings,
 } from './types';
 import { createSeedData, DATA_VERSION } from './seed';
+import { migrateData } from './migrate';
 import { uid, formatSequence } from './id';
 import type { EngineContext } from './engine';
+import { DEFAULT_COST_OVERRIDE } from './types';
 
 const STORAGE_KEY = 'klarwerk-kalkulation-v1';
 const MAX_VERSIONS = 20;
@@ -183,6 +185,8 @@ export const useKwStore = create<KwStore>()(
             tripsPerMonth: null,
             payTravelTime: s.travel.payTravelTimeDefault,
           },
+          materialOverride: { ...DEFAULT_COST_OVERRIDE },
+          machineOverride: { ...DEFAULT_COST_OVERRIDE },
           overheadEnabled: s.overhead.enabledByDefault,
           overheadRatePerHour: null,
           riskKey: s.calculation.defaultRiskKey,
@@ -449,7 +453,7 @@ export const useKwStore = create<KwStore>()(
             return { ok: false, error: 'Die Datei enthält keinen gültigen KlarWerk-Datenexport.' };
           }
           set((st) => {
-            st.data = { ...createSeedData(), ...data, dataVersion: DATA_VERSION };
+            st.data = migrateData({ ...createSeedData(), ...data, dataVersion: DATA_VERSION });
             st.undo = {};
           });
           return { ok: true };
@@ -463,6 +467,15 @@ export const useKwStore = create<KwStore>()(
       version: DATA_VERSION,
       storage: createJSONStorage(() => localStorage),
       partialize: (st) => ({ data: st.data }),
+      /** Ältere Datenstände (v1) verlustfrei auf die aktuelle Struktur heben. */
+      migrate: (persisted) => {
+        const st = persisted as { data?: KwData };
+        if (st?.data) {
+          st.data = migrateData(st.data);
+          st.data.dataVersion = DATA_VERSION;
+        }
+        return persisted;
+      },
       onRehydrateStorage: () => (state) => {
         state?.setHydrated(true);
       },

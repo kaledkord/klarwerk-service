@@ -8,8 +8,9 @@ import type { Calculation } from '../../lib/types';
 import { useKwStore } from '../../lib/store';
 import { fmtEur, fmtHours, fmtNum, fmtPct } from '../../lib/format';
 import type { CalcResults } from '../domain';
-import { Card, cx, FieldLabel, NumberInput, SectionTitle, Select, Toggle } from '../ui';
+import { Card, cx, FieldLabel, NumberInput, SectionTitle, SegmentedControl, Select, Toggle } from '../ui';
 import { BASE } from '../shell';
+import type { CostOverrideMode } from '../../lib/types';
 
 export function CostsTab({
   calc,
@@ -209,48 +210,171 @@ export function CostsTab({
         </div>
       </Card>
 
-      {/* Material */}
+      {/* Material — individuelle Ermittlung */}
       <Card>
         <SectionTitle>Material</SectionTitle>
-        <div className="flex items-baseline justify-between text-sm">
-          <span className="text-slate-600">Materialkosten/Monat (aus den Positionen)</span>
+        <FieldLabel>Ermittlung der Materialkosten für diese Kalkulation</FieldLabel>
+        <SegmentedControl
+          size="sm"
+          value={calc.materialOverride.mode}
+          onChange={(m: CostOverrideMode) => update((c) => void (c.materialOverride.mode = m))}
+          options={[
+            { value: 'lines', label: 'Aus Positionen' },
+            { value: 'pctOfLabor', label: '% vom Personal' },
+            { value: 'fixed', label: 'Fester Betrag' },
+          ]}
+        />
+
+        {calc.materialOverride.mode === 'pctOfLabor' ? (
+          <div className="mt-3">
+            <FieldLabel hint={`(leer = Vorschlag ${fmtNum(settings.costSuggestions.materialPctOfLabor, 1)} %)`}>
+              Eigener Prozentsatz
+            </FieldLabel>
+            <div className="flex items-center gap-2 max-w-[16rem]">
+              <NumberInput
+                value={calc.materialOverride.pct}
+                min={0}
+                max={100}
+                onChange={(v) => update((c) => void (c.materialOverride.pct = v))}
+                placeholder={fmtNum(settings.costSuggestions.materialPctOfLabor, 1)}
+                suffix="%"
+                alignRight={false}
+              />
+            </div>
+            <p className="mt-1.5 text-[11px] text-slate-500">
+              Vorschlag: <strong>{fmtNum(settings.costSuggestions.materialPctOfLabor, 1)} %</strong> der Personalkosten
+              (branchenüblich 3–6 %) ={' '}
+              <span className="kw-tnum">
+                {fmtEur((totals.laborCost * settings.costSuggestions.materialPctOfLabor) / 100)}
+              </span>
+              . Angewendet: {fmtNum(totals.materialSource.pctUsed ?? 0, 1)} %
+              {totals.materialSource.pctIsSuggestion ? ' (Vorschlag)' : ' (eigener Satz)'}.
+            </p>
+          </div>
+        ) : null}
+        {calc.materialOverride.mode === 'fixed' ? (
+          <div className="mt-3 max-w-[16rem]">
+            <FieldLabel>Fester Betrag je Monat</FieldLabel>
+            <NumberInput
+              value={calc.materialOverride.fixed}
+              min={0}
+              onChange={(v) => update((c) => void (c.materialOverride.fixed = v))}
+              suffix="€"
+              alignRight={false}
+            />
+          </div>
+        ) : null}
+        {calc.materialOverride.mode === 'lines' ? (
+          <p className="mt-3 text-[11px] text-slate-500">
+            Summe aus den Positionen (€/Stunde, €/Durchführung, €/m²·Monat oder pauschal — im Detail jeder Position
+            einstellbar): <span className="kw-tnum">{fmtEur(totals.materialSource.lineSum)}</span>
+          </p>
+        ) : (
+          <p className="mt-1.5 text-[10px] text-slate-400">
+            Zum Vergleich — Summe aus den Positionen: {fmtEur(totals.materialSource.lineSum)}
+          </p>
+        )}
+
+        <div className="mt-3 flex items-baseline justify-between border-t border-slate-100 pt-2 text-sm">
+          <span className="text-slate-600">Materialkosten/Monat</span>
           <span className="kw-tnum font-bold text-slate-900">{fmtEur(totals.materialCost)}</span>
         </div>
         <p className="mt-2 text-[11px] text-slate-400">
-          Material wird je Position berechnet (€/Stunde, €/Durchführung, €/m²·Monat oder pauschal) — im Tab
-          „Räume & Leistungen“ über das Detail einer Position einstellbar. Verbrauchsmaterial (Papier, Seife) wird laut
-          Standardeinstellung {settings.material.consumablesDefault === 'auftraggeber' ? 'vom Auftraggeber gestellt' : settings.material.consumablesDefault === 'auftragnehmer' ? 'von uns gestellt' : 'separat abgerechnet'}.
+          Verbrauchsmaterial (Papier, Seife) wird laut Standardeinstellung{' '}
+          {settings.material.consumablesDefault === 'auftraggeber'
+            ? 'vom Auftraggeber gestellt'
+            : settings.material.consumablesDefault === 'auftragnehmer'
+              ? 'von uns gestellt'
+              : 'separat abgerechnet'}
+          .
         </p>
       </Card>
 
-      {/* Maschinen */}
+      {/* Maschinen — individuelle Ermittlung */}
       <Card>
         <SectionTitle>Maschinen</SectionTitle>
-        {machineLines.length === 0 ? (
-          <p className="text-xs text-slate-400">
-            Keine Maschinen zugeordnet. Maschinen werden je Position zugewiesen (Detail einer Position) und mit ihrem
-            Stundensatz auf die Monatsstunden der Position gerechnet.
-          </p>
-        ) : (
-          <div className="space-y-1.5 text-xs">
-            {machineLines.map((l) => {
-              const machine = data.machines.find((m) => m.id === l.machineId);
-              const r = totals.lines.find((x) => x.lineId === l.id);
-              return (
-                <div key={l.id} className="flex items-baseline justify-between gap-2">
-                  <span className="min-w-0 truncate text-slate-600">
-                    {machine?.name ?? 'Maschine'} <span className="text-slate-400">({l.serviceName})</span>
-                  </span>
-                  <span className="kw-tnum shrink-0">{fmtEur(r?.machineCost ?? 0)}</span>
-                </div>
-              );
-            })}
-            <div className="flex justify-between border-t border-slate-200 pt-1.5 font-bold text-slate-800">
-              <span>Maschinenkosten/Monat</span>
-              <span className="kw-tnum">{fmtEur(totals.machineCost)}</span>
+        <FieldLabel>Ermittlung der Maschinenkosten für diese Kalkulation</FieldLabel>
+        <SegmentedControl
+          size="sm"
+          value={calc.machineOverride.mode}
+          onChange={(m: CostOverrideMode) => update((c) => void (c.machineOverride.mode = m))}
+          options={[
+            { value: 'lines', label: 'Aus Positionen' },
+            { value: 'pctOfLabor', label: '% vom Personal' },
+            { value: 'fixed', label: 'Fester Betrag' },
+          ]}
+        />
+
+        {calc.machineOverride.mode === 'pctOfLabor' ? (
+          <div className="mt-3">
+            <FieldLabel hint={`(leer = Vorschlag ${fmtNum(settings.costSuggestions.machinePctOfLabor, 1)} %)`}>
+              Eigener Prozentsatz
+            </FieldLabel>
+            <div className="max-w-[16rem]">
+              <NumberInput
+                value={calc.machineOverride.pct}
+                min={0}
+                max={100}
+                onChange={(v) => update((c) => void (c.machineOverride.pct = v))}
+                placeholder={fmtNum(settings.costSuggestions.machinePctOfLabor, 1)}
+                suffix="%"
+                alignRight={false}
+              />
             </div>
+            <p className="mt-1.5 text-[11px] text-slate-500">
+              Vorschlag: <strong>{fmtNum(settings.costSuggestions.machinePctOfLabor, 1)} %</strong> der Personalkosten ={' '}
+              <span className="kw-tnum">
+                {fmtEur((totals.laborCost * settings.costSuggestions.machinePctOfLabor) / 100)}
+              </span>
+              . Angewendet: {fmtNum(totals.machineSource.pctUsed ?? 0, 1)} %
+              {totals.machineSource.pctIsSuggestion ? ' (Vorschlag)' : ' (eigener Satz)'}.
+            </p>
           </div>
+        ) : null}
+        {calc.machineOverride.mode === 'fixed' ? (
+          <div className="mt-3 max-w-[16rem]">
+            <FieldLabel>Fester Betrag je Monat</FieldLabel>
+            <NumberInput
+              value={calc.machineOverride.fixed}
+              min={0}
+              onChange={(v) => update((c) => void (c.machineOverride.fixed = v))}
+              suffix="€"
+              alignRight={false}
+            />
+          </div>
+        ) : null}
+        {calc.machineOverride.mode === 'lines' ? (
+          machineLines.length === 0 ? (
+            <p className="mt-3 text-xs text-slate-400">
+              Keine Maschinen zugeordnet. Maschinen werden je Position zugewiesen (Detail einer Position) und mit ihrem
+              Stundensatz auf die Monatsstunden gerechnet — oder oben prozentual/fest ansetzen.
+            </p>
+          ) : (
+            <div className="mt-3 space-y-1.5 text-xs">
+              {machineLines.map((l) => {
+                const machine = data.machines.find((m) => m.id === l.machineId);
+                const r = totals.lines.find((x) => x.lineId === l.id);
+                return (
+                  <div key={l.id} className="flex items-baseline justify-between gap-2">
+                    <span className="min-w-0 truncate text-slate-600">
+                      {machine?.name ?? 'Maschine'} <span className="text-slate-400">({l.serviceName})</span>
+                    </span>
+                    <span className="kw-tnum shrink-0">{fmtEur(r?.machineCost ?? 0)}</span>
+                  </div>
+                );
+              })}
+            </div>
+          )
+        ) : (
+          <p className="mt-1.5 text-[10px] text-slate-400">
+            Zum Vergleich — Summe aus den Positionen: {fmtEur(totals.machineSource.lineSum)}
+          </p>
         )}
+
+        <div className="mt-3 flex items-baseline justify-between border-t border-slate-100 pt-2 text-sm">
+          <span className="text-slate-600">Maschinenkosten/Monat</span>
+          <span className="kw-tnum font-bold text-slate-900">{fmtEur(totals.machineCost)}</span>
+        </div>
       </Card>
 
       {/* Summen */}

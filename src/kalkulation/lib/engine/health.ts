@@ -179,7 +179,10 @@ export function computeHealth(
   add(
     'Materialkosten berücksichtigt',
     8,
-    hasLines && (totals.materialCost > 0 || calc.lines.some((l) => l.materialMode !== 'none'))
+    hasLines &&
+      (totals.materialCost > 0 ||
+        calc.materialOverride.mode !== 'lines' ||
+        calc.lines.some((l) => l.materialMode !== 'none'))
   );
   add('Fahrtkosten aktiviert', 8, calc.travel.enabled);
   add('Gemeinkosten aktiviert', 10, calc.overheadEnabled);

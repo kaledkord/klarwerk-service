@@ -109,7 +109,7 @@ function SidebarContent({ onNavigate }: { onNavigate?: () => void }) {
           <ExternalLink size={12} />
           klarwerk-service.com
         </a>
-        <p className="mt-1 text-[10px] text-slate-600">KlarWerk Kalkulation · v1.0</p>
+        <p className="mt-1 text-[10px] text-slate-600">KlarWerk Kalkulation · v1.1</p>
       </div>
     </div>
   );

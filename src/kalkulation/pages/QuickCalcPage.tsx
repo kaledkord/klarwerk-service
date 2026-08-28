@@ -63,6 +63,8 @@ export default function QuickCalcPage() {
       status: 'entwurf',
       lines,
       travel: { enabled: (distance ?? 0) > 0, distanceKm: distance ?? 0, tripsPerMonth: null, payTravelTime: s.travel.payTravelTimeDefault },
+      materialOverride: { mode: 'lines', pct: null, fixed: null },
+      machineOverride: { mode: 'lines', pct: null, fixed: null },
       overheadEnabled: s.overhead.enabledByDefault,
       overheadRatePerHour: null,
       riskKey: s.calculation.defaultRiskKey,

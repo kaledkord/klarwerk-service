@@ -415,14 +415,20 @@ export function PerfDerivationView({ perf, unit }: { perf: PerfDerivation; unit:
 // ─────────────────────────────────────────────────────────────────────────────
 
 export function CostBreakdown({ totals, showTitle = true }: { totals: CalcTotals; showTitle?: boolean }) {
+  const sourceSub = (src: CalcTotals['materialSource']) =>
+    src.mode === 'pctOfLabor'
+      ? `${fmtNum(src.pctUsed ?? 0, 1)} % der Personalkosten${src.pctIsSuggestion ? ' (Vorschlag)' : ''}`
+      : src.mode === 'fixed'
+        ? 'fester Betrag je Monat'
+        : undefined;
   const rows: { label: string; value: number; sub?: string }[] = [
     {
       label: 'Personalkosten',
       value: totals.laborCost,
       sub: `${fmtHours(totals.monthlyHours)} × ${fmtEur(totals.rate.employerRate)}/h (AG-Satz)`,
     },
-    { label: 'Material', value: totals.materialCost },
-    { label: 'Maschinen', value: totals.machineCost },
+    { label: 'Material', value: totals.materialCost, sub: sourceSub(totals.materialSource) },
+    { label: 'Maschinen', value: totals.machineCost, sub: sourceSub(totals.machineSource) },
     {
       label: 'Fahrtkosten',
       value: totals.travel.total,

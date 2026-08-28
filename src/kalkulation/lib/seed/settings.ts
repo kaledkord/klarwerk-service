@@ -81,6 +81,10 @@ export const SEED_SETTINGS: Settings = {
     defaultValue: 0.9,
     consumablesDefault: 'auftraggeber',
   },
+  costSuggestions: {
+    materialPctOfLabor: 4,
+    machinePctOfLabor: 2,
+  },
   performanceFactors: {
     soiling: [
       { key: 'gering', label: 'Gering', multiplier: 1.1 },

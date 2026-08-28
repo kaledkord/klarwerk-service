@@ -301,6 +301,24 @@ export interface TravelConfig {
   payTravelTime: boolean;
 }
 
+/**
+ * Individuelle Kostenermittlung je Kalkulation für Material bzw. Maschinen:
+ *  - 'lines':      Summe aus den einzelnen Leistungspositionen (Standard)
+ *  - 'pctOfLabor': Prozentsatz der Personalkosten (mit Vorschlagswert)
+ *  - 'fixed':      fester Betrag je Monat
+ */
+export type CostOverrideMode = 'lines' | 'pctOfLabor' | 'fixed';
+
+export interface CostOverride {
+  mode: CostOverrideMode;
+  /** Eigener Prozentsatz; null = Vorschlagswert aus den Einstellungen. */
+  pct: number | null;
+  /** Fester Betrag €/Monat (Modus 'fixed'). */
+  fixed: number | null;
+}
+
+export const DEFAULT_COST_OVERRIDE: CostOverride = { mode: 'lines', pct: null, fixed: null };
+
 export type PriceStrategy = 'min' | 'target' | 'premium' | 'competitor' | 'custom';
 
 export interface Scenario {
@@ -356,6 +374,10 @@ export interface Calculation {
   status: CalculationStatus;
   lines: CalcLine[];
   travel: TravelConfig;
+  /** Materialkosten dieser Kalkulation: aus Positionen, % vom Personal oder fest. */
+  materialOverride: CostOverride;
+  /** Maschinenkosten dieser Kalkulation: aus Positionen, % vom Personal oder fest. */
+  machineOverride: CostOverride;
   overheadEnabled: boolean;
   /** null = Wert aus den Einstellungen. */
   overheadRatePerHour: number | null;
@@ -476,6 +498,11 @@ export interface Settings {
     defaultMode: MaterialMode;
     defaultValue: number;
     consumablesDefault: 'auftraggeber' | 'auftragnehmer' | 'separat';
+  };
+  /** Vorschlagswerte für die prozentuale Kostenermittlung (% der Personalkosten). */
+  costSuggestions: {
+    materialPctOfLabor: number;
+    machinePctOfLabor: number;
   };
   performanceFactors: PerformanceFactorConfig;
   offer: {

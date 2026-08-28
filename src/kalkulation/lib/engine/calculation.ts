@@ -284,6 +284,18 @@ export interface TravelResult {
   total: number;
 }
 
+/** Herkunft der Material-/Maschinenkosten (Positionen, % vom Personal, fest). */
+export interface CostSourceInfo {
+  mode: 'lines' | 'pctOfLabor' | 'fixed';
+  /** Angewendeter Prozentsatz (bei 'pctOfLabor'). */
+  pctUsed: number | null;
+  /** true, wenn der Vorschlagswert aus den Einstellungen verwendet wurde. */
+  pctIsSuggestion: boolean;
+  /** Summe aus den Positionen (zum Vergleich immer mitgeliefert). */
+  lineSum: number;
+  value: number;
+}
+
 export interface CalcTotals {
   lines: LineResult[];
   monthlyHours: number;
@@ -291,6 +303,8 @@ export interface CalcTotals {
   laborCost: number;
   materialCost: number;
   machineCost: number;
+  materialSource: CostSourceInfo;
+  machineSource: CostSourceInfo;
   directCost: number;
   travel: TravelResult;
   overheadRate: number;
@@ -328,8 +342,44 @@ export function computeCalculation(calc: Calculation, ctx: EngineContext): CalcT
   const recurringLines = lines.filter((l) => l.recurring);
   const monthlyHours = recurringLines.reduce((s, l) => s + l.monthlyHours, 0);
   const laborCost = recurringLines.reduce((s, l) => s + l.laborCost, 0);
-  const materialCost = recurringLines.reduce((s, l) => s + l.materialCost, 0);
-  const machineCost = recurringLines.reduce((s, l) => s + l.machineCost, 0);
+  const lineMaterialSum = recurringLines.reduce((s, l) => s + l.materialCost, 0);
+  const lineMachineSum = recurringLines.reduce((s, l) => s + l.machineCost, 0);
+
+  // Individuelle Kostenermittlung: aus Positionen, % vom Personal oder fest
+  const resolveOverride = (
+    override: Calculation['materialOverride'],
+    lineSum: number,
+    suggestedPct: number
+  ): CostSourceInfo => {
+    const mode = override?.mode ?? 'lines';
+    if (mode === 'pctOfLabor') {
+      const pctUsed = override.pct != null ? override.pct : suggestedPct;
+      return {
+        mode,
+        pctUsed,
+        pctIsSuggestion: override.pct == null,
+        lineSum,
+        value: (laborCost * pctUsed) / 100,
+      };
+    }
+    if (mode === 'fixed') {
+      return { mode, pctUsed: null, pctIsSuggestion: false, lineSum, value: override.fixed ?? 0 };
+    }
+    return { mode: 'lines', pctUsed: null, pctIsSuggestion: false, lineSum, value: lineSum };
+  };
+
+  const materialSource = resolveOverride(
+    calc.materialOverride,
+    lineMaterialSum,
+    settings.costSuggestions.materialPctOfLabor
+  );
+  const machineSource = resolveOverride(
+    calc.machineOverride,
+    lineMachineSum,
+    settings.costSuggestions.machinePctOfLabor
+  );
+  const materialCost = materialSource.value;
+  const machineCost = machineSource.value;
   const directCost = laborCost + materialCost + machineCost;
 
   // Fahrtkosten
@@ -420,13 +470,21 @@ export function computeCalculation(calc: Calculation, ctx: EngineContext): CalcT
         }
       : null;
 
-  // Anteilige Vollkosten & Preis je Position
+  // Anteilige Vollkosten & Preis je Position.
+  // Bei prozentualer/fester Material-/Maschinenermittlung wird nur der
+  // positionsbezogene Anteil (Personal + ggf. Positionsmaterial/-maschine)
+  // als Verteilungsschlüssel verwendet.
   const perLine: Record<string, { fullCost: number; price: number }> = {};
-  const costFactor = directCost > 0 ? selfCost / directCost : 1;
+  const allocBase = (l: LineResult) =>
+    l.laborCost +
+    (materialSource.mode === 'lines' ? l.materialCost : 0) +
+    (machineSource.mode === 'lines' ? l.machineCost : 0);
+  const allocSum = recurringLines.reduce((s, l) => s + allocBase(l), 0);
+  const costFactor = allocSum > 0 ? selfCost / allocSum : 1;
   const priceFactor = selfCost > 0 ? selected.net / selfCost : 1;
   for (const l of lines) {
     if (l.recurring) {
-      const fullCost = l.directCost * costFactor;
+      const fullCost = allocBase(l) * costFactor;
       perLine[l.lineId] = { fullCost, price: fullCost * priceFactor };
     } else {
       const fullCost = l.perExecutionCost * (1 + riskPct / 100);
@@ -455,6 +513,8 @@ export function computeCalculation(calc: Calculation, ctx: EngineContext): CalcT
     laborCost,
     materialCost,
     machineCost,
+    materialSource,
+    machineSource,
     directCost,
     travel,
     overheadRate,

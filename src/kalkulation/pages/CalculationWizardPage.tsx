@@ -46,6 +46,8 @@ interface WizardRoom {
   areaLabel: string;
   areaSqm: number | null;
   template: TemplateKey;
+  /** Haupt-Turnus DIESES Raums/Bereichs (Spezialleistungen behalten eigene Turnusse). */
+  mainFrequencyId: string;
   fromStructure?: boolean;
   structureRoomId?: string;
   soiling: string;
@@ -89,6 +91,7 @@ export default function CalculationWizardPage() {
           areaSqm: r.areaSqm,
           template:
             templateForRoomTypeName(data.roomTypes.find((t) => t.id === r.roomTypeId)?.name ?? r.name) ?? 'buero',
+          mainFrequencyId: 'fq_2w',
           fromStructure: true,
           structureRoomId: r.id,
           soiling: r.factors.soiling,
@@ -122,7 +125,7 @@ export default function CalculationWizardPage() {
             roomLabel: room.name,
             roomId: room.structureRoomId,
             quantity: service.unit === 'm²' ? area : item.qty(area),
-            frequencyId: item.freq === 'main' ? mainFreq : item.freq,
+            frequencyId: item.freq === 'main' ? room.mainFrequencyId : item.freq,
             factors: structureRoom ? { ...structureRoom.factors } : { ...NEUTRAL_FACTORS, soiling: room.soiling },
             sortOrder: sort,
           })
@@ -130,7 +133,7 @@ export default function CalculationWizardPage() {
       }
     }
     return lines;
-  }, [rooms, mainFreq, data, object]);
+  }, [rooms, data, object]);
 
   const previewCalc = useMemo((): Calculation => {
     const s = data.settings;
@@ -148,6 +151,8 @@ export default function CalculationWizardPage() {
         tripsPerMonth: null,
         payTravelTime: payTravel,
       },
+      materialOverride: { mode: 'lines', pct: null, fixed: null },
+      machineOverride: { mode: 'lines', pct: null, fixed: null },
       overheadEnabled: overhead,
       overheadRatePerHour: null,
       riskKey,
@@ -308,6 +313,7 @@ export default function CalculationWizardPage() {
                       areaLabel: '',
                       areaSqm: null,
                       template: 'buero',
+                      mainFrequencyId: 'fq_2w',
                       soiling: 'normal',
                     },
                   ])
@@ -333,7 +339,7 @@ export default function CalculationWizardPage() {
           <div className="space-y-2">
             {rooms.map((room) => (
               <div key={room.id} className="grid grid-cols-12 items-end gap-2 rounded-lg border border-slate-200 p-2.5">
-                <div className="col-span-6 sm:col-span-3">
+                <div className="col-span-6 lg:col-span-3">
                   <FieldLabel>Raum/Bereich</FieldLabel>
                   <TextInput
                     className="!py-1.5 !text-xs"
@@ -341,8 +347,8 @@ export default function CalculationWizardPage() {
                     onChange={(e) => setRooms((rs) => rs.map((r) => (r.id === room.id ? { ...r, name: e.target.value } : r)))}
                   />
                 </div>
-                <div className="col-span-6 sm:col-span-2">
-                  <FieldLabel>Fläche (m²)</FieldLabel>
+                <div className="col-span-6 lg:col-span-1">
+                  <FieldLabel>m²</FieldLabel>
                   <NumberInput
                     cell
                     value={room.areaSqm}
@@ -351,7 +357,7 @@ export default function CalculationWizardPage() {
                     inputClassName="!py-1.5 !border-slate-200 !bg-white"
                   />
                 </div>
-                <div className="col-span-6 sm:col-span-3">
+                <div className="col-span-6 lg:col-span-2">
                   <FieldLabel>Leistungspaket</FieldLabel>
                   <Select
                     className="!py-1.5 !text-xs"
@@ -367,7 +373,17 @@ export default function CalculationWizardPage() {
                     ))}
                   </Select>
                 </div>
-                <div className="col-span-5 sm:col-span-3">
+                <div className="col-span-6 lg:col-span-3">
+                  <FieldLabel>Wie oft reinigen? (Turnus)</FieldLabel>
+                  <FrequencyPicker
+                    value={room.mainFrequencyId}
+                    onChange={(fid) =>
+                      setRooms((rs) => rs.map((r) => (r.id === room.id ? { ...r, mainFrequencyId: fid } : r)))
+                    }
+                    className="!py-1.5 !text-xs"
+                  />
+                </div>
+                <div className="col-span-10 lg:col-span-2">
                   <FieldLabel>Verschmutzung</FieldLabel>
                   <Select
                     className="!py-1.5 !text-xs"
@@ -381,7 +397,7 @@ export default function CalculationWizardPage() {
                     ))}
                   </Select>
                 </div>
-                <div className="col-span-1 flex justify-end">
+                <div className="col-span-2 lg:col-span-1 flex justify-end">
                   <button
                     type="button"
                     className="kw-press rounded p-1.5 text-slate-400 hover:text-error-600 hover:bg-error-50"
@@ -407,12 +423,28 @@ export default function CalculationWizardPage() {
       {step === 2 ? (
         <Card>
           <SectionTitle>Leistungen und Turnus</SectionTitle>
-          <div className="mb-4 max-w-sm">
-            <FieldLabel>Haupt-Turnus der Grundleistungen</FieldLabel>
-            <FrequencyPicker value={mainFreq} onChange={setMainFreq} />
-            <p className="mt-1 text-[10px] text-slate-400">
-              Jede Leistung behält ihren eigenen Turnus: Spezialleistungen (Sockelleisten monatlich, Fenster monatlich,
-              Fliesen monatlich …) bleiben unabhängig vom Haupt-Turnus.
+          <p className="mb-3 text-xs text-slate-500">
+            Der Turnus wurde je Raum/Bereich in Schritt 2 festgelegt. Spezialleistungen (Sockelleisten monatlich,
+            Fenster monatlich, Fliesen monatlich …) behalten automatisch ihren eigenen Turnus — jede Position bleibt
+            einzeln anpassbar.
+          </p>
+          <div className="mb-4 flex flex-wrap items-end gap-2 rounded-lg border border-slate-200 bg-slate-50/60 p-3">
+            <div className="max-w-[13rem]">
+              <FieldLabel>Alle Räume auf einen Turnus setzen</FieldLabel>
+              <FrequencyPicker value={mainFreq} onChange={setMainFreq} />
+            </div>
+            <Button
+              size="sm"
+              variant="outline"
+              onClick={() => {
+                setRooms((rs) => rs.map((r) => ({ ...r, mainFrequencyId: mainFreq })));
+                toast('Turnus für alle Räume übernommen — Spezialleistungen bleiben unberührt.');
+              }}
+            >
+              Auf alle anwenden
+            </Button>
+            <p className="w-full text-[10px] text-slate-400">
+              Optional — überschreibt die Turnusse aus Schritt 2 für die Grundleistungen aller Räume.
             </p>
           </div>
           <div className="overflow-x-auto rounded-lg border border-slate-200">

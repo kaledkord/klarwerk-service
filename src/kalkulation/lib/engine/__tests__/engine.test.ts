@@ -16,6 +16,7 @@ import { derivePerformanceValue } from '../performance';
 import { computeHealth, computeWarnings } from '../health';
 import { computeScenario } from '../scenario';
 import { analyzePostCalc } from '../postcalc';
+import { migrateData } from '../../migrate';
 
 const data = createSeedData();
 const ctx: EngineContext = {
@@ -57,6 +58,8 @@ function makeCalc(partial: Partial<Calculation>): Calculation {
     status: 'entwurf',
     lines: [],
     travel: { enabled: false, distanceKm: 0, tripsPerMonth: null, payTravelTime: false },
+    materialOverride: { mode: 'lines', pct: null, fixed: null },
+    machineOverride: { mode: 'lines', pct: null, fixed: null },
     overheadEnabled: false,
     overheadRatePerHour: null,
     riskKey: 'gering',
@@ -266,6 +269,92 @@ describe('Gesamtkalkulation', () => {
     expect(t.selected.marginPct).toBeCloseTo(15, 0.5);
     expect(t.avgHourlyRevenue).toBeGreaterThan(30);
     expect(t.avgHourlyRevenue).toBeLessThan(80);
+  });
+});
+
+describe('Individuelle Material- und Maschinenkosten', () => {
+  const lines = [makeLine({ id: 'a', materialMode: 'perHour', materialValue: 1 })]; // 2,167 h/Monat
+
+  it("Modus 'lines': Summe aus den Positionen", () => {
+    const calc = makeCalc({ lines });
+    const t = computeCalculation(calc, ctx);
+    expect(t.materialSource.mode).toBe('lines');
+    expect(t.materialCost).toBeCloseTo(t.lines[0].materialCost, 6);
+  });
+
+  it("Modus 'pctOfLabor' nutzt den Vorschlagswert aus den Einstellungen", () => {
+    const calc = makeCalc({
+      lines,
+      materialOverride: { mode: 'pctOfLabor', pct: null, fixed: null },
+    });
+    const t = computeCalculation(calc, ctx);
+    const suggested = data.settings.costSuggestions.materialPctOfLabor;
+    expect(t.materialSource.pctUsed).toBe(suggested);
+    expect(t.materialSource.pctIsSuggestion).toBe(true);
+    expect(t.materialCost).toBeCloseTo((t.laborCost * suggested) / 100, 6);
+  });
+
+  it("Modus 'pctOfLabor' mit eigenem Prozentsatz", () => {
+    const calc = makeCalc({
+      lines,
+      materialOverride: { mode: 'pctOfLabor', pct: 7.5, fixed: null },
+    });
+    const t = computeCalculation(calc, ctx);
+    expect(t.materialSource.pctIsSuggestion).toBe(false);
+    expect(t.materialCost).toBeCloseTo(t.laborCost * 0.075, 6);
+    // Selbstkosten und Preis bauen auf dem Override auf
+    expect(t.selfCost).toBeCloseTo(t.laborCost + t.materialCost, 4);
+  });
+
+  it("Modus 'fixed': fester Monatsbetrag für Maschinen", () => {
+    const calc = makeCalc({
+      lines,
+      machineOverride: { mode: 'fixed', pct: null, fixed: 85 },
+    });
+    const t = computeCalculation(calc, ctx);
+    expect(t.machineCost).toBe(85);
+    expect(t.machineSource.mode).toBe('fixed');
+  });
+
+  it('verteilt Vollkosten auch bei Override vollständig auf die Positionen', () => {
+    const two = [
+      makeLine({ id: 'a', quantity: 300 }),
+      makeLine({ id: 'b', quantity: 100 }),
+    ];
+    const calc = makeCalc({
+      lines: two,
+      materialOverride: { mode: 'pctOfLabor', pct: 5, fixed: null },
+    });
+    const t = computeCalculation(calc, ctx);
+    const sum = Object.values(t.perLine).reduce((s, p) => s + p.fullCost, 0);
+    expect(sum).toBeCloseTo(t.selfCost, 4);
+  });
+});
+
+describe('Daten-Migration', () => {
+  it('ergänzt fehlende Felder in v1-Datenbeständen ohne Datenverlust', () => {
+    const old = createSeedData();
+    // v1 simulieren: neue Felder entfernen
+    const legacy = JSON.parse(JSON.stringify(old));
+    delete legacy.settings.costSuggestions;
+    for (const c of legacy.calculations) {
+      delete c.materialOverride;
+      delete c.machineOverride;
+    }
+    legacy.customers[0].company = 'Bestandskunde GmbH';
+
+    const migrated = migrateData(legacy);
+    expect(migrated.settings.costSuggestions.materialPctOfLabor).toBe(4);
+    expect(migrated.calculations[0].materialOverride.mode).toBe('lines');
+    expect(migrated.calculations[0].machineOverride.mode).toBe('lines');
+    expect(migrated.customers[0].company).toBe('Bestandskunde GmbH');
+    // Migrierte Daten sind voll berechenbar
+    const t = computeCalculation(migrated.calculations[0], {
+      settings: migrated.settings,
+      frequencies: migrated.frequencies,
+      machines: migrated.machines,
+    });
+    expect(t.selfCost).toBeGreaterThan(0);
   });
 });
 

@@ -37,7 +37,7 @@ export default function AGB() {
       </div>
       <div>
         <h2 className="text-lg font-bold text-white mb-3">§ 8 Schlussbestimmungen</h2>
-        <p>Es gilt das Recht der Bundesrepublik Deutschland. Gerichtsstand ist, soweit gesetzlich zulässig, der Sitz von KlarWerk Service. Sollte eine Bestimmung dieser AGB unwirksam sein oder werden, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt.</p>
+        <p>Es gilt das Recht der Bundesrepublik Deutschland. Gerichtsstand ist [Ort], soweit gesetzlich zulässig. Sollte eine Bestimmung dieser AGB unwirksam sein, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt.</p>
       </div>
     </LegalPage>
   );

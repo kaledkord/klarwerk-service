@@ -15,10 +15,10 @@ export default function Datenschutz() {
         <h2 className="text-lg font-bold text-white mb-3">2. Verantwortliche Stelle</h2>
         <p>Verantwortlich für die Datenverarbeitung auf dieser Website ist:</p>
         <p className="whitespace-pre-line mt-2">
-          Khaled Saleh<br>
-          Am Blöcken 4<br>
-          24582 Bordesholm<br>
-          Telefon: +49 176 31287131<br>
+          KlarWerk Service
+          Am Blöcken 4
+          24582 Bordesholm
+          Telefon: +49 176 31287131
           E-Mail: info@klarwerk-service.com
         </p>
       </div>

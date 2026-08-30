@@ -10,20 +10,16 @@ export default function Impressum() {
       <div>
         <h2 className="text-lg font-bold text-white mb-3">Angaben gemäß § 5 DDG</h2>
         <p className="whitespace-pre-line">
-          KlarWerk Service
-          Einzelunternehmen, Inhaber: [Vor- und Nachname des Inhabers]
-          Am Blöcken 4
-          24582 Bordesholm
+          KlarWerk Service<br />
+          Einzelunternehmen, Inhaber: Khaled Saleh<br />
+          Am Blöcken 4<br />
+          24582 Bordesholm<br />
         </p>
       </div>
       <div>
         <h2 className="text-lg font-bold text-white mb-3">Kontakt</h2>
         <p>Telefon: +49 176 31287131</p>
         <p>E-Mail: info@klarwerk-service.com</p>
-      </div>
-      <div>
-        <h2 className="text-lg font-bold text-white mb-3">Umsatzsteuer-ID</h2>
-        <p>Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz: [USt-IdNr.]</p>
       </div>
       <div>
         <h2 className="text-lg font-bold text-white mb-3">Berufsbezeichnung und berufsrechtliche Regelungen</h2>

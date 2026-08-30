@@ -10,9 +10,9 @@ export default function Impressum() {
       <div>
         <h2 className="text-lg font-bold text-white mb-3">Angaben gemäß § 5 DDG</h2>
         <p className="whitespace-pre-line">
-          KlarWerk Service
-          Einzelunternehmen, Inhaber: [Vor- und Nachname des Inhabers]
-          Am Blöcken 4
+          KlarWerk Service<br>
+          Einzelunternehmen, Inhaber: Khaled Saleh<br>
+          Am Blöcken 4<br>
           24582 Bordesholm
         </p>
       </div>
@@ -22,16 +22,12 @@ export default function Impressum() {
         <p>E-Mail: info@klarwerk-service.com</p>
       </div>
       <div>
-        <h2 className="text-lg font-bold text-white mb-3">Umsatzsteuer-ID</h2>
-        <p>Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz: [USt-IdNr.]</p>
-      </div>
-      <div>
         <h2 className="text-lg font-bold text-white mb-3">Berufsbezeichnung und berufsrechtliche Regelungen</h2>
         <p>Berufsbezeichnung: Gebäudereiniger (verliehen in der Bundesrepublik Deutschland)</p>
       </div>
       <div>
         <h2 className="text-lg font-bold text-white mb-3">Redaktionell verantwortlich</h2>
-        <p>[Name des Verantwortlichen]</p>
+        <p>Khaled Saleh</p>
       </div>
       <div>
         <h2 className="text-lg font-bold text-white mb-3">Haftung für Inhalte</h2>

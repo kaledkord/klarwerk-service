@@ -1,0 +1,243 @@
+/**
+ * KlarWerk Kalkulation — App-Design-Tokens und Basiskomponenten.
+ * Farbwelt aus dem KlarWerk-Logo: Navy #0f1827, Blau #34a1da,
+ * Grün #21a74a, Orange #f5891f, Rot #f0552b.
+ */
+
+.kw-app {
+  /* Design Tokens */
+  --kw-navy: #0f1827;
+  --kw-navy-2: #16233a;
+  --kw-blue: #34a1da;
+  --kw-green: #21a74a;
+  --kw-orange: #f5891f;
+  --kw-red: #f0552b;
+  --kw-bg: #f4f7fa;
+  --kw-surface: #ffffff;
+  --kw-border: #e2e9f0;
+  --kw-text: #14202e;
+  --kw-text-2: #5b6b7b;
+  --kw-ease: cubic-bezier(0.23, 1, 0.32, 1);
+
+  background: var(--kw-bg);
+  color: var(--kw-text);
+  min-height: 100vh;
+  font-feature-settings: 'cv11', 'ss01';
+}
+
+.kw-app ::selection {
+  background: var(--kw-green);
+  color: #fff;
+}
+
+.kw-tnum {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Karten */
+.kw-card {
+  background: var(--kw-surface);
+  border: 1px solid var(--kw-border);
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 2px rgba(15, 24, 39, 0.04), 0 4px 16px rgba(15, 24, 39, 0.04);
+}
+
+/* Eingaben */
+.kw-input {
+  width: 100%;
+  background: #fff;
+  border: 1px solid var(--kw-border);
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  color: var(--kw-text);
+  transition: border-color 140ms var(--kw-ease), box-shadow 140ms var(--kw-ease);
+  outline: none;
+}
+.kw-input::placeholder {
+  color: #9aa8b5;
+}
+.kw-input:focus {
+  border-color: var(--kw-blue);
+  box-shadow: 0 0 0 3px rgba(52, 161, 218, 0.18);
+}
+.kw-input:disabled {
+  background: #f1f5f8;
+  color: #8795a3;
+  cursor: not-allowed;
+}
+.kw-input--invalid {
+  border-color: #ef4444;
+}
+.kw-input--invalid:focus {
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15);
+}
+
+select.kw-input {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%235b6b7b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.6rem center;
+  padding-right: 2rem;
+}
+
+/* Zellen-Eingaben in Tabellen */
+.kw-cell-input {
+  width: 100%;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 0.375rem;
+  padding: 0.25rem 0.4rem;
+  font-size: 0.8125rem;
+  color: var(--kw-text);
+  outline: none;
+  transition: border-color 120ms var(--kw-ease), background-color 120ms var(--kw-ease), box-shadow 120ms var(--kw-ease);
+  font-variant-numeric: tabular-nums;
+}
+.kw-cell-input:hover {
+  border-color: var(--kw-border);
+  background: #fff;
+}
+.kw-cell-input:focus {
+  border-color: var(--kw-blue);
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(52, 161, 218, 0.15);
+}
+
+select.kw-cell-input {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%239aa8b5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.3rem center;
+  padding-right: 1.4rem;
+  cursor: pointer;
+}
+
+/* Buttons: aktives Drücken spürbar machen */
+.kw-press {
+  transition: transform 150ms var(--kw-ease), background-color 150ms var(--kw-ease),
+    border-color 150ms var(--kw-ease), color 150ms var(--kw-ease), box-shadow 150ms var(--kw-ease);
+}
+.kw-press:active {
+  transform: scale(0.97);
+}
+
+/* Tabellen */
+.kw-table {
+  width: 100%;
+  font-size: 0.8125rem;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+.kw-table th {
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--kw-text-2);
+  padding: 0.5rem 0.65rem;
+  border-bottom: 1px solid var(--kw-border);
+  background: #f8fafc;
+  white-space: nowrap;
+}
+.kw-table td {
+  padding: 0.45rem 0.65rem;
+  border-bottom: 1px solid #edf2f7;
+  vertical-align: middle;
+}
+.kw-table tbody tr {
+  transition: background-color 120ms var(--kw-ease);
+}
+.kw-table tbody tr:hover {
+  background: #f6fafd;
+}
+.kw-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Modale */
+.kw-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 24, 39, 0.45);
+  backdrop-filter: blur(2px);
+  z-index: 60;
+  opacity: 1;
+  transition: opacity 180ms var(--kw-ease);
+}
+.kw-modal-overlay[data-state='closed'] {
+  opacity: 0;
+}
+.kw-modal-panel {
+  transition: transform 200ms var(--kw-ease), opacity 200ms var(--kw-ease);
+  transform: scale(1);
+  opacity: 1;
+}
+.kw-modal-panel[data-state='closed'] {
+  transform: scale(0.96);
+  opacity: 0;
+}
+
+/* Scrollbars dezent */
+.kw-app *::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.kw-app *::-webkit-scrollbar-thumb {
+  background: #cfd9e2;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+.kw-app *::-webkit-scrollbar-thumb:hover {
+  background: #b6c4d1;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+.kw-app *::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kw-press,
+  .kw-modal-panel,
+  .kw-modal-overlay {
+    transition-duration: 1ms;
+  }
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+ * Druckausgaben (PDF über Browser-Druck)
+ * ──────────────────────────────────────────────────────────────────────────── */
+
+.kw-print-page {
+  background: #fff;
+  color: #17222e;
+  max-width: 210mm;
+  margin: 0 auto;
+  padding: 14mm 16mm;
+  font-size: 10.5pt;
+  line-height: 1.5;
+}
+
+@media print {
+  body {
+    background: #fff !important;
+  }
+  .kw-no-print {
+    display: none !important;
+  }
+  .kw-print-page {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+  .kw-print-avoid-break {
+    break-inside: avoid;
+  }
+  @page {
+    size: A4;
+    margin: 14mm 16mm;
+  }
+}

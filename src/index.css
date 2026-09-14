@@ -114,48 +114,13 @@
   }
 }
 
-/* ── Klar-Hero: Vorher/Nachher-Wisch (Marken-Konzept) ─────────────────────── */
+/* ── Klar-Hero: Hintergrundfoto (Wisch-Animation auf Kundenwunsch entfernt, 15.09.2026) ── */
 .klar-photo {
   position: absolute;
   inset: 0;
   background-size: cover;
   background-position: center;
 }
-.klar-unclear {
-  z-index: 1;
-  filter: grayscale(0.8) contrast(0.88) brightness(0.8) blur(3px);
-  clip-path: inset(0 0 0 0);
-  animation: klar-wipe 1.9s cubic-bezier(0.22, 1, 0.36, 1) 0.45s forwards;
-}
-.klar-unclear::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(226, 235, 229, 0.34);
-}
-.klar-squeegee {
-  position: absolute;
-  top: -4%;
-  height: 108%;
-  width: 14px;
-  left: 0;
-  z-index: 3;
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.16), rgba(255, 255, 255, 0.9), rgba(0, 0, 0, 0.16));
-  box-shadow: 0 0 26px 5px rgba(255, 255, 255, 0.5);
-  transform: skewX(-8deg);
-  animation: klar-squeegee 1.9s cubic-bezier(0.22, 1, 0.36, 1) 0.45s forwards;
-}
-@keyframes klar-wipe {
-  to { clip-path: inset(0 0 0 100%); }
-}
-@keyframes klar-squeegee {
-  from { left: -2%; opacity: 0; }
-  6%   { opacity: 1; }
-  94%  { opacity: 1; }
-  to   { left: 101%; opacity: 0; }
-}
 @media (prefers-reduced-motion: reduce) {
-  .klar-unclear { animation: none; clip-path: inset(0 0 0 100%); }
-  .klar-squeegee { display: none; }
   .marquee-track { animation: none; }
 }

@@ -73,12 +73,6 @@ export default function Home() {
           aria-hidden="true"
         />
         <div
-          className="klar-photo klar-unclear"
-          style={{ backgroundImage: "url('/hero-objektpflege.jpg')" }}
-          aria-hidden="true"
-        />
-        <div className="klar-squeegee" aria-hidden="true" />
-        <div
           className="absolute inset-0 z-[2]"
           style={{
             background:

@@ -1,6 +1,8 @@
 {
-  "$schema": "https://openapi.vercel.sh/vercel.json",
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/impresseum", "destination": "/impressum", "permanent": true },
+    { "source": "/category/:path*", "destination": "/leistungen", "permanent": true }
   ]
 }

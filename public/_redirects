@@ -1,1 +1,11 @@
-/*    /index.html   200
+# Netlify-Weiterleitungen
+#
+# Alte URLs der Vorgänger-Website, die Google laut Search Console noch kennt,
+# dauerhaft (301) auf die passende neue Seite leiten:
+/impresseum              /impressum    301
+/category/all-products   /leistungen   301
+/category/*              /leistungen   301
+
+# KEIN SPA-Catch-all mehr (/* → /index.html 200): Alle Routen liegen nach dem Build
+# als vorgerenderte HTML-Dateien in dist/ (scripts/prerender.mjs). Unbekannte URLs
+# bekommen dadurch die dist/404.html mit echtem Status 404 statt eines Soft-404.

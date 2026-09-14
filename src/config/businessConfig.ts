@@ -123,7 +123,7 @@ export const businessConfig = {
   images: {
     logo: 'https://klarwerk-service.com/Kein_Titel_(580_x_140_px)_20260715_025604_0000.svg',
     // Selbst gehostetes Standard-OG-/Sharing-Bild (kein externer Unsplash-Hotlink).
-    primary: 'https://klarwerk-service.com/og-default.png',
+    primary: 'https://klarwerk-service.com/og-default.jpg',
   },
 
   // ── Pricing ──────────────────────────────────────────────────────────────────

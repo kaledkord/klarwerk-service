@@ -51,7 +51,7 @@ export default function NAPFooter() {
   const footerCities = cities.filter((c) => c.tier === 1).slice(0, 7);
 
   return (
-    <footer className="bg-navy-950 text-white" itemScope itemType="https://schema.org/LocalBusiness">
+    <footer className="bg-navy-950 text-white">
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* NAP Block */}
@@ -64,7 +64,6 @@ export default function NAPFooter() {
               />
             </Link>
             <address className="not-italic space-y-2.5 text-sm text-slate-400">
-              <meta itemProp="name" content={businessConfig.name} />
               <div className="flex items-start gap-2.5">
                 <MapPin size={14} className="shrink-0 text-cyan-400 mt-0.5" />
                 <span>
@@ -75,7 +74,6 @@ export default function NAPFooter() {
               <a
                 href={`tel:${phone.raw}`}
                 className="flex items-center gap-2.5 hover:text-white transition-colors"
-                itemProp="telephone"
               >
                 <Phone size={14} className="shrink-0 text-cyan-400" />
                 {phone.display}
@@ -83,7 +81,6 @@ export default function NAPFooter() {
               <a
                 href={`mailto:${email}`}
                 className="flex items-center gap-2.5 hover:text-white transition-colors"
-                itemProp="email"
               >
                 <Mail size={14} className="shrink-0 text-cyan-400" />
                 {email}
@@ -100,7 +97,6 @@ export default function NAPFooter() {
               <span className="text-xs text-slate-400">
                 {reviews.ratingValue} ({reviews.reviewCount} Bewertungen)
               </span>
-              <meta itemProp="aggregateRating" content={reviews.ratingValue} />
             </div>
           </div>
 
@@ -119,7 +115,6 @@ export default function NAPFooter() {
                 </li>
               ))}
             </ul>
-            <meta itemProp="openingHours" content="Mo-Fr 07:00-19:00, Sa 09:00-14:00" />
           </div>
 
           {/* Service Area */}

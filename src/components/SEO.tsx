@@ -43,7 +43,13 @@ export default function SEO({
   noindex = false,
 }: SEOProps) {
   const fullTitle = title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`;
-  const canonicalUrl = canonical ?? `${BASE_URL}${canonicalPath}`;
+  // Immer eine absolute Canonical-URL ausgeben: seoConfig liefert relative Pfade ('/kontakt'),
+  // ein relativer Canonical/og:url wäre für Google/Facebook mehrdeutig.
+  const canonicalUrl = canonical
+    ? canonical.startsWith('http')
+      ? canonical
+      : `${BASE_URL}${canonical}`
+    : `${BASE_URL}${canonicalPath}`;
   const robots = noindex ? 'noindex, follow' : 'index, follow';
 
   return (

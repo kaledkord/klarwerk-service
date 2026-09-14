@@ -1,5 +1,5 @@
 import { lazy, Suspense } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Layout from './components/layout/Layout';
 
 const Home = lazy(() => import('./pages/Home'));
@@ -24,28 +24,30 @@ function PageLoader() {
   );
 }
 
+/**
+ * Routen-Baum ohne Router-Hülle: im Browser (src/main.tsx) steckt er in einem
+ * BrowserRouter, beim Vorrendern (src/entry-server.tsx) in einem StaticRouter.
+ */
 export default function App() {
   return (
-    <BrowserRouter>
-        <Suspense fallback={<PageLoader />}>
-          <Routes>
-            <Route path="/" element={<Layout />}>
-              <Route index element={<Home />} />
-              <Route path="ueber-uns" element={<About />} />
-              <Route path="leistungen" element={<Services />} />
-              <Route path="leistungen/:serviceId" element={<ServicePage />} />
-              <Route path="einsatzgebiet" element={<CitiesOverview />} />
-              <Route path="einsatzgebiet/:citySlug" element={<CityPage />} />
-              <Route path="nachhaltigkeit" element={<Sustainability />} />
-              <Route path="kontakt" element={<Contact />} />
-              <Route path="impressum" element={<Impressum />} />
-              <Route path="datenschutz" element={<Datenschutz />} />
-              <Route path="agb" element={<AGB />} />
-              <Route path="rechtliche-hinweise" element={<RechtlicheHinweise />} />
-              <Route path="*" element={<NotFound />} />
-            </Route>
-          </Routes>
-        </Suspense>
-      </BrowserRouter>
+    <Suspense fallback={<PageLoader />}>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="ueber-uns" element={<About />} />
+          <Route path="leistungen" element={<Services />} />
+          <Route path="leistungen/:serviceId" element={<ServicePage />} />
+          <Route path="einsatzgebiet" element={<CitiesOverview />} />
+          <Route path="einsatzgebiet/:citySlug" element={<CityPage />} />
+          <Route path="nachhaltigkeit" element={<Sustainability />} />
+          <Route path="kontakt" element={<Contact />} />
+          <Route path="impressum" element={<Impressum />} />
+          <Route path="datenschutz" element={<Datenschutz />} />
+          <Route path="agb" element={<AGB />} />
+          <Route path="rechtliche-hinweise" element={<RechtlicheHinweise />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>
+      </Routes>
+    </Suspense>
   );
 }

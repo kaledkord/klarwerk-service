@@ -1,5 +1,6 @@
-# Netlify-Build-Konfiguration für KlarWerk Service (Vite + React SPA)
+# Netlify-Build-Konfiguration für KlarWerk Service (Vite + React, vorgerendert)
 # Netlify liest diese Datei beim Import automatisch – keine manuelle Eingabe nötig.
+# Bei Deploys über Bolt gelten zusätzlich public/_redirects und public/_headers (liegen in dist/).
 
 [build]
   command = "npm run build"
@@ -8,9 +9,26 @@
 [build.environment]
   NODE_VERSION = "20"
 
-# SPA-Fallback: alle Routen an index.html (React Router übernimmt das Routing).
-# (Dupliziert public/_redirects zur Sicherheit; schadet nicht.)
+# Alte URLs der Vorgänger-Website (Search Console) → neue Seiten (dupliziert public/_redirects)
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+  from = "/impresseum"
+  to = "/impressum"
+  status = 301
+
+[[redirects]]
+  from = "/category/all-products"
+  to = "/leistungen"
+  status = 301
+
+[[redirects]]
+  from = "/category/*"
+  to = "/leistungen"
+  status = 301
+
+# Kein SPA-Catch-all: jede Route ist als HTML-Datei vorgerendert (scripts/prerender.mjs),
+# unbekannte URLs liefern dist/404.html mit echtem Status 404.
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

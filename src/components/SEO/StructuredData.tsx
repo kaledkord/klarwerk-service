@@ -45,6 +45,8 @@ export default function StructuredData({
     legalName: businessConfig.legalName,
     url: BASE_URL,
     logo: businessConfig.images.logo,
+    // Von Google empfohlenes (optionales) Feld – Test für Rich-Suchergebnisse meldete es als fehlend.
+    image: businessConfig.images.primary,
     description: businessConfig.description,
     email: businessConfig.email,
     telephone: businessConfig.phone.raw,

@@ -20,7 +20,7 @@ export const seoConfig = {
   '/ueber-uns': {
     title: 'Über uns',
     description:
-      'Lernen Sie KlarWerk Service kennen: Ihre professionelle Gebäudereinigung und Ihr Gebäudeservice für Schleswig-Holstein, Hamburg und Nordrhein-Westfalen mit über zehn Jahren Erfahrung.',
+      'Lernen Sie KlarWerk Service kennen: inhabergeführte Gebäudereinigung und Gebäudeservice für Schleswig-Holstein, Hamburg und NRW – geschultes Team, persönliche Betreuung.',
     canonical: '/ueber-uns',
   },
   '/leistungen': {

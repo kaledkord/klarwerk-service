@@ -27,7 +27,7 @@ export default function About() {
             <span className="text-brand-300 text-sm font-semibold uppercase tracking-widest">Über uns</span>
             <h1 className="mt-3 text-5xl md:text-6xl font-black tracking-tight">Ihr Partner für<br />saubere Lösungen.</h1>
             <p className="mt-6 text-lg text-slate-300 max-w-2xl leading-relaxed">
-              KlarWerk Service ist Ihr zuverlässiger Partner für professionelle Gebäudereinigung und Gebäudeservice in Schleswig-Holstein, Hamburg und NRW. Seit über 10 Jahren stehen wir für Qualität, Zuverlässigkeit und persönliche Betreuung.
+              KlarWerk Service ist Ihr zuverlässiger Partner für professionelle Gebäudereinigung und Gebäudeservice in Schleswig-Holstein, Hamburg und NRW. Als inhabergeführtes Unternehmen stehen wir für Qualität, Zuverlässigkeit und persönliche Betreuung – mit festen Ansprechpartnern, einem geschulten Team und moderner Reinigungstechnik.
             </p>
           </motion.div>
         </div>

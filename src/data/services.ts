@@ -189,7 +189,8 @@ export const services: Service[] = [
     description: 'Professionelle Reinigung von Schwimmbädern, Schwimmhallen und zugehörigen Bereichen. Wir sorgen für hygienisch einwandfreie Beckenumgänge, Umkleidekabinen, Duschen und Sanitäranlagen – mit rutschhemmenden Reinigungsverfahren und gründlicher Desinfektion für die Sicherheit und das Wohlbefinden Ihrer Gäste.',
     icon: Waves,
     features: ['Reinigung von Beckenumgängen', 'Reinigung von Umkleidekabinen', 'Reinigung von Duschen und Sanitärbereichen', 'Reinigung von WC-Anlagen', 'Bodenreinigung mit rutschhemmenden Reinigungsverfahren', 'Glas- und Fensterreinigung', 'Reinigung von Eingangs- und Kassenbereichen', 'Desinfektion von Kontaktflächen', 'Entfernung von Kalk- und Wasserablagerungen', 'Reinigung von Wellness-, Sauna- und Spa-Bereichen'],
-    image: 'https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=900&q=80',
+    // Hallenbad mit Beckenumgang – Foto: Mariusz Smenzyk, Unsplash-Lizenz (unsplash.com/photos/xs9r8fPUats), lokal auf 1600 px als WebP
+    image: '/schwimmbadreinigung-hallenbad.webp',
   },
   {
     id: 'supermarktreinigung',

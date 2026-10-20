@@ -9,6 +9,7 @@ import CTASection from '../components/ui/CTASection';
 import EquipmentSection from '../components/ui/EquipmentSection';
 import GoogleReviewsCarousel from '../components/ui/GoogleReviewsCarousel';
 import BranchenSection from '../components/ui/BranchenSection';
+import HeroVideo from '../components/ui/HeroVideo';
 import SEO from '../components/SEO';
 import { featuredServices } from '../data/services';
 import { cities as cityData } from '../data/cities';
@@ -72,6 +73,7 @@ export default function Home() {
           style={{ backgroundImage: "url('/hero-objektpflege.jpg')" }}
           aria-hidden="true"
         />
+        <HeroVideo src="/hero-objektpflege.mp4" />
         <div
           className="absolute inset-0 z-[2]"
           style={{

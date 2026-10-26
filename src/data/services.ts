@@ -109,6 +109,7 @@ export const services: Service[] = [
     icon: Sparkles,
     features: ['Bodenversiegelung', 'Desinfektion', 'Küchen- und Badreinigung', 'Fenster inklusive'],
     image: '/image copy copy copy copy copy copy copy copy copy.png',
+    featured: true,
   },
   {
     id: 'bauendreinigung',
@@ -118,6 +119,7 @@ export const services: Service[] = [
     icon: PaintRoller,
     features: ['Baustaubentfernung', 'Farb- und Mörtelreste', 'Fensterreinigung', 'Bodenreinigung'],
     image: '/logos/files_10953933-2026-07-17T16-21-08-771Z-files_10953933-2026-07-17T16-15-18-497Z-image.webp',
+    featured: true,
   },
   {
     id: 'winterdienst',

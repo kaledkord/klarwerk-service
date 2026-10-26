@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import { ArrowRight, MapPin } from 'lucide-react';
 import AnimatedSection from '../components/ui/AnimatedSection';
+import AblaufDialog from '../components/ui/AblaufDialog';
+import CountUp from '../components/ui/CountUp';
 import ServiceCard from '../components/ui/ServiceCard';
 import ServiceImage from '../components/ui/ServiceImage';
 import FAQAccordion from '../components/ui/FAQAccordion';
@@ -83,37 +84,38 @@ export default function Home() {
           aria-hidden="true"
         />
 
+        {/* Abfolge per CSS (index.css, „Startbereich“): läuft schon im vorgerenderten HTML und wartet beim ersten Besuch auf den Loader. */}
         <div className="relative z-[4] w-full max-w-7xl mx-auto px-6 pt-28 pb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-            className="max-w-2xl"
-          >
-            <p className="text-sm font-semibold uppercase tracking-widest text-brand-300">
+          <div className="max-w-2xl">
+            <p className="klw-hero-dach text-sm font-semibold uppercase tracking-widest text-brand-300">
               Gebäudereinigung · Schleswig-Holstein &amp; Hamburg
             </p>
             <h1 className="mt-4 text-white font-black tracking-tight leading-[1.02] text-5xl sm:text-6xl lg:text-7xl">
-              Erst unklar.<br />
-              Dann <span className="text-brand-400">klar.</span>
+              <span className="klw-hero-z1">Erst unklar.</span>{' '}
+              <span className="klw-hero-z2">
+                Dann <span className="klw-glanz">klar.</span>
+              </span>
             </h1>
-            <p className="mt-6 max-w-xl text-lg text-slate-200 leading-relaxed">
+            <p className="klw-hero-text mt-6 max-w-xl text-lg text-slate-200 leading-relaxed">
               Professionelle Gebäudereinigung, die man sieht — für Büros, Praxen und
               Objekte in Kiel, Neumünster, Rendsburg und Umgebung.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="klw-hero-knoepfe mt-8 flex flex-wrap gap-3">
               <Link to="/kontakt" className="btn-primary">
                 Kostenloses Angebot
                 <ArrowRight size={16} />
               </Link>
               <Link
                 to="/leistungen"
-                className="inline-flex items-center gap-2 border border-white/30 hover:border-white/60 hover:bg-white/10 text-white font-semibold px-8 py-4 rounded-xl transition duration-200 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
+                className="inline-flex items-center gap-2 border border-white/30 hover:border-white/60 hover:bg-white/10 hover:-translate-y-0.5 text-white font-semibold px-8 py-4 rounded-xl transition duration-200 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
               >
                 Leistungen ansehen
               </Link>
             </div>
-          </motion.div>
+            <div className="klw-hero-info mt-4">
+              <AblaufDialog schritte={processSteps} />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -123,7 +125,7 @@ export default function Home() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((s, i) => (
               <AnimatedSection key={s.label} delay={i * 0.07}>
-                <p className="text-4xl font-black text-white">{s.value}</p>
+                <CountUp value={s.value} className="text-4xl font-black text-white" />
                 <p className="mt-1.5 text-sm text-slate-400">{s.label}</p>
               </AnimatedSection>
             ))}

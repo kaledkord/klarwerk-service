@@ -1,6 +1,7 @@
 import { lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Layout from './components/layout/Layout';
+import SaeulenLader from './components/ui/SaeulenLader';
 
 const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
@@ -19,7 +20,7 @@ const NotFound = lazy(() => import('./pages/NotFound'));
 function PageLoader() {
   return (
     <div className="min-h-screen flex items-center justify-center">
-      <div className="w-8 h-8 border-3 border-white/10 border-t-brand-600 rounded-full animate-spin" />
+      <SaeulenLader label="Seite wird geladen" />
     </div>
   );
 }

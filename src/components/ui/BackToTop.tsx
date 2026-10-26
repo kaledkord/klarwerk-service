@@ -25,10 +25,11 @@ export default function BackToTop() {
           exit={{ opacity: 0, y: 16 }}
           transition={{ duration: 0.25 }}
           onClick={scrollUp}
-          className="fixed bottom-6 right-6 z-40 w-11 h-11 bg-brand-600 hover:bg-brand-700 text-white rounded-xl shadow-lg shadow-brand-600/20 flex items-center justify-center transition-colors"
+          className="klw-tooltip-anker fixed bottom-6 right-6 z-40 w-11 h-11 bg-brand-600 hover:bg-brand-700 text-white rounded-xl shadow-lg shadow-brand-600/20 flex items-center justify-center transition-colors"
           aria-label="Nach oben scrollen"
         >
           <ArrowUp size={18} />
+          <span className="klw-tooltip" aria-hidden="true">Nach oben</span>
         </motion.button>
       )}
     </AnimatePresence>

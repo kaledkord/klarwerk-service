@@ -1,12 +1,16 @@
 import { useState, useRef, useEffect } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronDown, Menu, X, ArrowRight } from 'lucide-react';
+import { ChevronDown, ArrowRight } from 'lucide-react';
 import { services } from '../../data/services';
 import { dropdownMotion, mobileMenuMotion, easeOut } from '../../lib/motion';
 
+// Ab hier verschwindet die Kopfzeile beim Runterscrollen und kommt beim Hochscrollen sofort zurück.
+const AUSBLENDEN_AB_PX = 160;
+
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
+  const [hidden, setHidden] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
@@ -14,10 +18,22 @@ export default function Header() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 12);
+    const ruhig = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let lastY = window.scrollY;
+    const onScroll = () => {
+      const y = window.scrollY;
+      setScrolled(y > 12);
+      if (!ruhig) {
+        if (y > AUSBLENDEN_AB_PX && y > lastY + 4) setHidden(true);
+        else if (y < lastY - 4 || y <= AUSBLENDEN_AB_PX) setHidden(false);
+      }
+      lastY = y;
+    };
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
+
+  const versteckt = hidden && !mobileOpen && !servicesOpen;
 
   useEffect(() => {
     const handler = (e: MouseEvent) => {
@@ -39,16 +55,20 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? 'glass-nav border-b border-white/10' : 'bg-paper-100'
-      }`}
+      className={`klw-kopf fixed top-0 w-full z-50 transition-all duration-300 ${
+        scrolled ? 'glass-nav border-b border-white/10 shadow-lg shadow-black/20' : 'bg-paper-100'
+      } ${versteckt ? '-translate-y-full' : ''}`}
     >
-      <div className="max-w-7xl mx-auto px-6 h-18 py-4 flex items-center justify-between gap-8">
+      <div
+        className={`max-w-7xl mx-auto px-6 flex items-center justify-between gap-8 transition-all duration-300 ${
+          scrolled ? 'py-2.5' : 'h-18 py-4'
+        }`}
+      >
         <Link to="/" className="shrink-0" onClick={closeMobile}>
           <img
             src="/Kein_Titel_(580_x_140_px)_20260715_025604_0000.svg"
             alt="KlarWerk Service"
-            className="h-10 w-auto object-contain"
+            className={`w-auto object-contain transition-all duration-300 ${scrolled ? 'h-8' : 'h-10'}`}
           />
         </Link>
 
@@ -140,29 +160,34 @@ export default function Header() {
         </div>
 
         <button
-          className="lg:hidden p-2 rounded-lg hover:bg-white/10 transition-colors"
+          className="klw-burger lg:hidden w-11 h-11 grid place-content-center gap-[5px] rounded-lg text-white hover:bg-white/10 transition-colors"
           onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label="Menü"
+          aria-expanded={mobileOpen}
+          aria-controls="mobil-menue"
+          aria-label={mobileOpen ? 'Menü schließen' : 'Menü öffnen'}
         >
-          {mobileOpen ? <X size={22} /> : <Menu size={22} />}
+          <span />
+          <span />
+          <span />
         </button>
       </div>
 
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
+            id="mobil-menue"
             {...mobileMenuMotion}
             className="lg:hidden overflow-hidden border-t border-white/10 bg-paper-100"
           >
             <div className="px-6 py-5 space-y-1">
-              <Link to="/" onClick={closeMobile} className="block py-2.5 text-sm font-medium text-slate-200 hover:text-white">
+              <Link to="/" onClick={closeMobile} className="klw-menue-eintrag block py-2.5 text-sm font-medium text-slate-200 hover:text-white" style={{ '--k': 0 } as React.CSSProperties}>
                 Startseite
               </Link>
-              <Link to="/ueber-uns" onClick={closeMobile} className="block py-2.5 text-sm font-medium text-slate-200 hover:text-white">
+              <Link to="/ueber-uns" onClick={closeMobile} className="klw-menue-eintrag block py-2.5 text-sm font-medium text-slate-200 hover:text-white" style={{ '--k': 1 } as React.CSSProperties}>
                 Über uns
               </Link>
 
-              <div>
+              <div className="klw-menue-eintrag" style={{ '--k': 2 } as React.CSSProperties}>
                 <button
                   onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
                   className="w-full flex items-center justify-between py-2.5 text-sm font-medium text-slate-200"
@@ -199,18 +224,18 @@ export default function Header() {
                 </AnimatePresence>
               </div>
 
-              <Link to="/einsatzgebiet" onClick={closeMobile} className="block py-2.5 text-sm font-medium text-slate-200 hover:text-white">
+              <Link to="/einsatzgebiet" onClick={closeMobile} className="klw-menue-eintrag block py-2.5 text-sm font-medium text-slate-200 hover:text-white" style={{ '--k': 3 } as React.CSSProperties}>
                 Einsatzgebiet
               </Link>
-              <Link to="/nachhaltigkeit" onClick={closeMobile} className="block py-2.5 text-sm font-medium text-slate-200 hover:text-white">
+              <Link to="/nachhaltigkeit" onClick={closeMobile} className="klw-menue-eintrag block py-2.5 text-sm font-medium text-slate-200 hover:text-white" style={{ '--k': 4 } as React.CSSProperties}>
                 Nachhaltigkeit
               </Link>
 
-              <Link to="/kontakt" onClick={closeMobile} className="block py-2.5 text-sm font-medium text-slate-200 hover:text-white">
+              <Link to="/kontakt" onClick={closeMobile} className="klw-menue-eintrag block py-2.5 text-sm font-medium text-slate-200 hover:text-white" style={{ '--k': 5 } as React.CSSProperties}>
                 Kontakt
               </Link>
 
-              <div className="pt-4">
+              <div className="klw-menue-eintrag pt-4" style={{ '--k': 7 } as React.CSSProperties}>
                 <Link to="/kontakt" onClick={closeMobile} className="block w-full text-center bg-brand-600 hover:bg-brand-700 text-white font-semibold py-3 rounded-xl transition-colors text-sm">
                   Angebot anfordern
                 </Link>

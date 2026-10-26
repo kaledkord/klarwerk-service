@@ -1,6 +1,7 @@
 import { Outlet, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, MotionConfig } from 'framer-motion';
 import Header from './Header';
+import Seitenwechsel from './Seitenwechsel';
 import NAPFooter from '../NAP/NAPFooter';
 import NAPHeader from '../NAP/NAPHeader';
 import ScrollToTop from '../ScrollToTop';
@@ -15,29 +16,33 @@ export default function Layout() {
   const location = useLocation();
 
   return (
-    <div className="flex flex-col min-h-screen">
-      <ScrollToTop />
-      <AnimatedBackground />
-      <LocalBusinessSchema />
-      <StructuredData organization />
-      <NAPHeader />
-      <Header />
-      <main className="flex-1">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={location.pathname}
-            variants={pageTransition}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-          >
-            <Outlet />
-          </motion.div>
-        </AnimatePresence>
-      </main>
-      <NAPFooter />
-      <BackToTop />
-      <CookieBanner />
-    </div>
+    // reducedMotion="user": bei „Bewegung reduzieren“ keine Bewegungen, nur Ein- und Ausblenden.
+    <MotionConfig reducedMotion="user">
+      <div className="flex flex-col min-h-screen">
+        <ScrollToTop />
+        <Seitenwechsel />
+        <AnimatedBackground />
+        <LocalBusinessSchema />
+        <StructuredData organization />
+        <NAPHeader />
+        <Header />
+        <main className="flex-1">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={location.pathname}
+              variants={pageTransition}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+            >
+              <Outlet />
+            </motion.div>
+          </AnimatePresence>
+        </main>
+        <NAPFooter />
+        <BackToTop />
+        <CookieBanner />
+      </div>
+    </MotionConfig>
   );
 }

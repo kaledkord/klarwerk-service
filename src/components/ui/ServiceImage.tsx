@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 
 interface ServiceImageProps {
@@ -26,6 +26,8 @@ export default function ServiceImage({
 }: ServiceImageProps) {
   const [isHovered, setIsHovered] = useState(false);
   const [isTouchDevice, setIsTouchDevice] = useState(false);
+  const [geladen, setGeladen] = useState(false);
+  const imgRef = useRef<HTMLImageElement>(null);
   const reduceMotion = useReducedMotion();
 
   useEffect(() => {
@@ -36,7 +38,11 @@ export default function ServiceImage({
     return () => mq.removeEventListener('change', handler);
   }, []);
 
-  const useGrayscale = !isTouchDevice && !reduceMotion;
+  // Vorgerenderte Bilder können schon vor dem Hydrieren fertig geladen sein.
+  useEffect(() => {
+    if (imgRef.current?.complete) setGeladen(true);
+  }, []);
+
   const useScale = !reduceMotion;
 
   const filter = isTouchDevice || reduceMotion
@@ -47,26 +53,41 @@ export default function ServiceImage({
 
   const scale = useScale && !isTouchDevice && isHovered ? 1.06 : 1;
 
+  // Bilder oben auf der Seite (eager) erscheinen sofort, damit sie nicht auf JavaScript warten.
+  const einblenden = loading === 'lazy';
+
   return (
     <div
-      className={`overflow-hidden ${className}`}
+      className={`overflow-hidden ${geladen ? '' : 'klw-schimmer'} ${className}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <motion.img
-        src={src}
-        alt={alt}
-        loading={loading}
-        decoding="async"
-        width={width}
-        height={height}
-        animate={{ filter, scale }}
-        transition={{
-          duration: reduceMotion ? 0 : DURATION,
-          ease: EASE,
-        }}
-        className={`h-full w-full object-cover will-change-transform ${imgClassName}`}
-      />
+      {/* Image Reveal „weich“: blendet beim Hineinscrollen ein und setzt sich von 108 auf 100 %. */}
+      <motion.div
+        className="h-full w-full"
+        initial={einblenden ? { opacity: 0, scale: 1.08 } : false}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true, margin: '-60px' }}
+        transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+      >
+        <motion.img
+          ref={imgRef}
+          src={src}
+          alt={alt}
+          loading={loading}
+          decoding="async"
+          width={width}
+          height={height}
+          onLoad={() => setGeladen(true)}
+          animate={{ filter, scale, opacity: einblenden && !geladen ? 0 : 1 }}
+          transition={{
+            duration: reduceMotion ? 0 : DURATION,
+            ease: EASE,
+            opacity: { duration: 0.4 },
+          }}
+          className={`h-full w-full object-cover will-change-transform ${imgClassName}`}
+        />
+      </motion.div>
     </div>
   );
 }

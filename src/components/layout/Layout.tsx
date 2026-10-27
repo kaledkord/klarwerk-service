@@ -17,8 +17,8 @@ export default function Layout() {
   const location = useLocation();
 
   return (
-    // reducedMotion="user": bei „Bewegung reduzieren“ keine Bewegungen, nur Ein- und Ausblenden.
-    <MotionConfig reducedMotion="user">
+    // reducedMotion="never": alle Bewegungen laufen auch bei „Bewegung reduzieren“ (Wunsch von Khaled).
+    <MotionConfig reducedMotion="never">
       <div className="flex flex-col min-h-screen">
         <ScrollToTop />
         <ScrollFortschritt />

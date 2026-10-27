@@ -1,11 +1,15 @@
 import { motion } from 'framer-motion';
-import { CheckCircle, Users, Award, HeartHandshake, Leaf } from 'lucide-react';
+import { Users, Award, HeartHandshake, Leaf } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import AnimatedSection from '../components/ui/AnimatedSection';
 import AnimatedLogo from '../components/ui/AnimatedLogo';
 import CTASection from '../components/ui/CTASection';
+import LeuchtPunkt from '../components/ui/LeuchtPunkt';
+import ScrollKarte from '../components/ui/ScrollKarte';
+import SeitenKopf from '../components/ui/SeitenKopf';
 import SEO from '../components/SEO';
 import { seoConfig } from '../config/seoConfig';
+import { useSpalten } from '../lib/scrollEffekte';
 
 const values = [
   { icon: Award, title: 'Qualität', desc: 'Wir liefern konstant hohe Qualität – nicht nur beim ersten Mal, sondern jeden Tag aufs Neue.' },
@@ -14,6 +18,8 @@ const values = [
 ];
 
 export default function About() {
+  // Werte stehen ab md (768 px) in drei Spalten.
+  const spaltenWerte = useSpalten(1, 3, 1, 3);
   return (
     <div className="bg-paper">
       <SEO
@@ -22,7 +28,7 @@ export default function About() {
       />
 
       <section className="pt-36 pb-20 bg-paper">
-        <div className="max-w-7xl mx-auto px-6">
+        <SeitenKopf className="max-w-7xl mx-auto px-6">
           <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}>
             <span className="text-brand-300 text-sm font-semibold uppercase tracking-widest">Über uns</span>
             <h1 className="mt-3 text-5xl md:text-6xl font-black tracking-tight">Ihr Partner für<br />saubere Lösungen.</h1>
@@ -30,7 +36,7 @@ export default function About() {
               KlarWerk Service ist Ihr zuverlässiger Partner für professionelle Gebäudereinigung und Gebäudeservice in Schleswig-Holstein, Hamburg und NRW. Als inhabergeführtes Unternehmen stehen wir für Qualität, Zuverlässigkeit und persönliche Betreuung – mit festen Ansprechpartnern, einem geschulten Team und moderner Reinigungstechnik.
             </p>
           </motion.div>
-        </div>
+        </SeitenKopf>
       </section>
 
       <section className="py-24">
@@ -48,9 +54,9 @@ export default function About() {
             </p>
             <div className="mt-8 space-y-3">
               {['Geschultes und motiviertes Personal', 'Moderne Reinigungstechnik und -mittel', 'Umweltbewusste Arbeitsweise', 'Fester Ansprechpartner für alle Anliegen'].map((t) => (
-                <div key={t} className="flex items-center gap-3 text-slate-200">
-                  <CheckCircle size={18} className="text-success-500 shrink-0" />{t}
-                </div>
+                <LeuchtPunkt key={t} textKlasse="">
+                  {t}
+                </LeuchtPunkt>
               ))}
             </div>
           </AnimatedSection>
@@ -67,7 +73,7 @@ export default function About() {
             {values.map((v, i) => {
               const Icon = v.icon;
               return (
-                <AnimatedSection key={v.title} delay={i * 0.1}>
+                <ScrollKarte key={v.title} spalte={i % spaltenWerte}>
                   <div className="bg-paper-100 border border-white/10 rounded-2xl p-8 text-center shadow-md hover:shadow-md transition-shadow h-full">
                     <div className="inline-flex items-center justify-center w-14 h-14 bg-brand-500/15 rounded-2xl mb-5">
                       <Icon size={26} className="text-brand-300" />
@@ -75,7 +81,7 @@ export default function About() {
                     <h3 className="text-xl font-bold text-white">{v.title}</h3>
                     <p className="mt-3 text-slate-300 leading-relaxed text-sm">{v.desc}</p>
                   </div>
-                </AnimatedSection>
+                </ScrollKarte>
               );
             })}
           </div>

@@ -3,6 +3,7 @@ import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import SEO from '../components/SEO';
 import AnimatedSection from '../components/ui/AnimatedSection';
 import ContactForm from '../components/ui/ContactForm';
+import SeitenKopf from '../components/ui/SeitenKopf';
 import { seoConfig } from '../config/seoConfig';
 import { businessConfig } from '../config/businessConfig';
 
@@ -23,7 +24,7 @@ export default function Contact() {
       />
 
       <section className="pt-36 pb-16 bg-paper">
-        <div className="max-w-7xl mx-auto px-6">
+        <SeitenKopf className="max-w-7xl mx-auto px-6">
           <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}>
             <span className="text-brand-300 text-sm font-semibold uppercase tracking-widest">Kontakt</span>
             <h1 className="mt-3 text-5xl md:text-6xl font-black tracking-tight">Kontaktieren Sie uns</h1>
@@ -31,7 +32,7 @@ export default function Contact() {
               Sie haben Fragen oder möchten ein Angebot anfordern? Füllen Sie das Formular aus oder kontaktieren Sie uns direkt – wir melden uns zeitnah und vereinbaren eine kostenlose Besichtigung.
             </p>
           </motion.div>
-        </div>
+        </SeitenKopf>
       </section>
 
       <section className="py-20">

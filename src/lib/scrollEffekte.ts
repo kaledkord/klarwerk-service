@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { useReducedMotion } from 'framer-motion';
 
 // Hilfen für die Effekte, die direkt am Scrollen hängen (Fortschritt, Parallaxe, angeheftete Abschnitte).
 
@@ -10,30 +9,31 @@ export const auslaufen = (t: number) => 1 - Math.pow(1 - t, 3);
 export const weich = (t: number) => t * t * (3 - 2 * t);
 
 /**
- * true erst nach dem Hydrieren und nur ohne „Bewegung reduzieren“. Vorher bleibt alles so stehen,
- * wie es vorgerendert ist: ohne JavaScript und für Suchmaschinen ist jeder Inhalt sichtbar.
+ * true erst nach dem Hydrieren. Vorher bleibt alles so stehen, wie es vorgerendert ist: ohne
+ * JavaScript und für Suchmaschinen ist jeder Inhalt sichtbar. Die Effekte laufen auch bei
+ * „Bewegung reduzieren“ (Wunsch von Khaled, Oktober 2026).
  */
 export function useScrollEffekte() {
-  const ruhig = useReducedMotion();
   const [bereit, setBereit] = useState(false);
   useEffect(() => setBereit(true), []);
-  return bereit && !ruhig;
+  return bereit;
 }
 
-/** Spaltenzahl eines Rasters wie in Tailwind: 1, ab sm (640 px) `sm`, ab lg (1024 px) `lg`. */
-export function useSpalten(sm: number, lg: number) {
-  const [spalten, setSpalten] = useState(1);
+/**
+ * Spaltenzahl eines Rasters wie in Tailwind: `basis` darunter, ab sm (640 px) `sm`,
+ * ab md (768 px) `md` (ohne Angabe wie sm), ab lg (1024 px) `lg`.
+ */
+export function useSpalten(sm: number, lg: number, basis = 1, md = sm) {
+  const [spalten, setSpalten] = useState(basis);
   useEffect(() => {
     const mqLg = window.matchMedia('(min-width: 1024px)');
+    const mqMd = window.matchMedia('(min-width: 768px)');
     const mqSm = window.matchMedia('(min-width: 640px)');
-    const aktualisieren = () => setSpalten(mqLg.matches ? lg : mqSm.matches ? sm : 1);
+    const aktualisieren = () =>
+      setSpalten(mqLg.matches ? lg : mqMd.matches ? md : mqSm.matches ? sm : basis);
     aktualisieren();
-    mqLg.addEventListener('change', aktualisieren);
-    mqSm.addEventListener('change', aktualisieren);
-    return () => {
-      mqLg.removeEventListener('change', aktualisieren);
-      mqSm.removeEventListener('change', aktualisieren);
-    };
-  }, [sm, lg]);
+    [mqLg, mqMd, mqSm].forEach((mq) => mq.addEventListener('change', aktualisieren));
+    return () => [mqLg, mqMd, mqSm].forEach((mq) => mq.removeEventListener('change', aktualisieren));
+  }, [sm, lg, basis, md]);
   return spalten;
 }

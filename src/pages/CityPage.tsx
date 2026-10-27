@@ -4,9 +4,13 @@ import { ArrowRight, MapPin, Phone, CheckCircle } from 'lucide-react';
 import AnimatedSection from '../components/ui/AnimatedSection';
 import CTASection from '../components/ui/CTASection';
 import FAQAccordion from '../components/ui/FAQAccordion';
+import ScrollKarte from '../components/ui/ScrollKarte';
+import SeitenKopf from '../components/ui/SeitenKopf';
+import StaedteWaagerecht from '../components/ui/StaedteWaagerecht';
 import SEO from '../components/SEO';
-import { getCityBySlug, cities } from '../data/cities';
+import { getCityBySlug } from '../data/cities';
 import { featuredServices } from '../data/services';
+import { useSpalten } from '../lib/scrollEffekte';
 
 const PHONE = '+49 176 31287131';
 const EMAIL = 'info@klarwerk-service.com';
@@ -15,6 +19,9 @@ const BASE_URL = 'https://klarwerk-service.com';
 export default function CityPage() {
   const { citySlug } = useParams<{ citySlug: string }>();
   const city = citySlug ? getCityBySlug(citySlug) : undefined;
+  // Spalten der Raster für den versetzten Aufstieg der Karten (vor dem frühen Return, wegen der Hook-Regeln).
+  const spaltenHighlights = useSpalten(2, 2);
+  const spaltenLeistungen = useSpalten(2, 3);
 
   if (!city) return <Navigate to="/" replace />;
 
@@ -89,7 +96,7 @@ export default function CityPage() {
 
       {/* HERO */}
       <section className="relative pt-32 pb-16 lg:pt-40 lg:pb-24 bg-paper">
-        <div className="max-w-7xl mx-auto px-6">
+        <SeitenKopf className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, y: 24 }}
@@ -141,7 +148,7 @@ export default function CityPage() {
               />
             </motion.div>
           </div>
-        </div>
+        </SeitenKopf>
       </section>
 
       {/* HIGHLIGHTS */}
@@ -155,12 +162,12 @@ export default function CityPage() {
           </AnimatedSection>
           <div className="mt-10 grid sm:grid-cols-2 gap-4">
             {city.highlights.map((h, i) => (
-              <AnimatedSection key={i} delay={i * 0.06}>
-                <div className="flex items-start gap-3 bg-paper-100 border border-white/10 rounded-xl px-5 py-4">
+              <ScrollKarte key={i} spalte={i % spaltenHighlights}>
+                <div className="flex h-full items-start gap-3 bg-paper-100 border border-white/10 rounded-xl px-5 py-4">
                   <CheckCircle size={18} className="text-cyan-500 shrink-0 mt-0.5" />
                   <p className="text-slate-200 text-sm leading-relaxed">{h}</p>
                 </div>
-              </AnimatedSection>
+              </ScrollKarte>
             ))}
           </div>
         </div>
@@ -180,7 +187,7 @@ export default function CityPage() {
           </AnimatedSection>
           <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {featuredServices.map((service, i) => (
-              <AnimatedSection key={service.id} delay={i * 0.06}>
+              <ScrollKarte key={service.id} spalte={i % spaltenLeistungen}>
                 <Link
                   to={`/leistungen/${service.id}`}
                   className="block bg-paper-100 border border-white/10 rounded-2xl p-6 hover:border-brand-200 shadow-md hover:shadow-md transition-all h-full group"
@@ -194,35 +201,18 @@ export default function CityPage() {
                     {service.title} ansehen <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
                   </span>
                 </Link>
-              </AnimatedSection>
+              </ScrollKarte>
             ))}
           </div>
         </div>
       </section>
 
-      {/* OTHER CITIES */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <AnimatedSection>
-            <span className="text-brand-300 text-sm font-semibold uppercase tracking-widest">Einsatzgebiet</span>
-            <h2 className="text-3xl md:text-4xl font-black mt-3 tracking-tight">Auch in Ihrer Nähe</h2>
-            <p className="mt-4 text-slate-400 text-lg">Unser Schwerpunkt liegt in Schleswig-Holstein rund um Bordesholm, Kiel und Neumünster – darüber hinaus sind wir in Hamburg für Sie da.</p>
-          </AnimatedSection>
-          <div className="mt-8 flex flex-wrap gap-3">
-            {cities.filter((c) => c.slug !== city.slug).map((c, i) => (
-              <AnimatedSection key={c.slug} delay={i * 0.05}>
-                <Link
-                  to={`/einsatzgebiet/${c.slug}`}
-                  className="flex items-center gap-2 bg-paper-100 border border-white/10 hover:border-brand-200 hover:bg-brand-500/15 px-5 py-2.5 rounded-full text-sm font-medium text-slate-200 transition-colors"
-                  aria-label={`Gebäudereinigung in ${c.name}`}
-                >
-                  <MapPin size={13} className="text-brand-400" />{c.name}
-                </Link>
-              </AnimatedSection>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* OTHER CITIES (waagerecht, angeheftet) */}
+      <StaedteWaagerecht
+        titel="Auch in Ihrer Nähe"
+        text="Unser Schwerpunkt liegt in Schleswig-Holstein rund um Bordesholm, Kiel und Neumünster – darüber hinaus sind wir in Hamburg für Sie da."
+        ohne={city.slug}
+      />
 
       {/* FAQ */}
       <section className="py-20 bg-paper">

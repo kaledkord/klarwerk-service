@@ -111,8 +111,7 @@ export default function BranchenSection() {
   useEffect(() => {
     if (offen === null) return;
     const t = window.setTimeout(() => {
-      const ruhig = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      feldRef.current?.scrollIntoView({ block: 'nearest', behavior: ruhig ? 'auto' : 'smooth' });
+      feldRef.current?.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
     }, 380);
     return () => window.clearTimeout(t);
   }, [offen]);

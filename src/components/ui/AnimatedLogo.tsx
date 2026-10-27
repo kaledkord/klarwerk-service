@@ -1,5 +1,5 @@
 import { useRef, useState, useCallback, useEffect } from 'react';
-import { motion, useMotionValue, useTransform, useSpring, useReducedMotion } from 'framer-motion';
+import { motion, useMotionValue, useTransform, useSpring } from 'framer-motion';
 
 // Ripple burst that appears on click
 function Ripple({ x, y, id, onDone }: { x: number; y: number; id: number; onDone: () => void }) {
@@ -23,7 +23,6 @@ function Ripple({ x, y, id, onDone }: { x: number; y: number; id: number; onDone
 }
 
 export default function AnimatedLogo() {
-  const prefersReduced = useReducedMotion();
   const ref = useRef<HTMLDivElement>(null);
   const [isHovered, setIsHovered] = useState(false);
   const [ripples, setRipples] = useState<{ id: number; x: number; y: number }[]>([]);
@@ -48,13 +47,13 @@ export default function AnimatedLogo() {
   const glowOpacity = useSpring(0, { stiffness: 180, damping: 25 });
 
   const handleMouseMove = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
-    if (prefersReduced || !ref.current) return;
+    if (!ref.current) return;
     const rect = ref.current.getBoundingClientRect();
     const cx = rect.left + rect.width / 2;
     const cy = rect.top + rect.height / 2;
     rawX.set((e.clientX - cx) / (rect.width / 2));
     rawY.set((e.clientY - cy) / (rect.height / 2));
-  }, [prefersReduced, rawX, rawY]);
+  }, [rawX, rawY]);
 
   const handleMouseEnter = useCallback(() => {
     setIsHovered(true);
@@ -71,13 +70,13 @@ export default function AnimatedLogo() {
   }, [rawX, rawY, shimmerOpacity, glowOpacity]);
 
   const handleClick = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
-    if (prefersReduced || !ref.current) return;
+    if (!ref.current) return;
     const rect = ref.current.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
     const id = ++rippleCounter.current;
     setRipples((prev) => [...prev, { id, x, y }]);
-  }, [prefersReduced]);
+  }, []);
 
   const removeRipple = useCallback((id: number) => {
     setRipples((prev) => prev.filter((r) => r.id !== id));
@@ -85,8 +84,6 @@ export default function AnimatedLogo() {
 
   // Reset tilt on unmount
   useEffect(() => () => { rawX.set(0); rawY.set(0); }, [rawX, rawY]);
-
-  const disabled = !!prefersReduced;
 
   // Shimmer gradient (moves across logo on hover)
   const shimmerGradient = useTransform(shimmerX, (x) =>
@@ -103,7 +100,7 @@ export default function AnimatedLogo() {
       {/* Ambient outer glow ring */}
       <motion.div
         className="absolute inset-0 rounded-3xl pointer-events-none"
-        animate={!disabled && isHovered ? {
+        animate={isHovered ? {
           boxShadow: '0 0 60px 12px rgba(52,161,218,0.18), 0 0 120px 30px rgba(33,168,65,0.10)',
         } : {
           boxShadow: '0 8px 32px rgba(0,0,0,0.08)',
@@ -115,18 +112,18 @@ export default function AnimatedLogo() {
       <motion.div
         ref={ref}
         className="relative select-none cursor-pointer overflow-hidden rounded-3xl bg-paper-100 border border-white/10"
-        style={disabled ? {} : {
+        style={{
           rotateX: tiltX,
           rotateY: tiltY,
           transformStyle: 'preserve-3d',
           transformPerspective: 900,
         }}
-        whileHover={disabled ? {} : { scale: 1.05 }}
-        whileTap={disabled ? {} : {
+        whileHover={{ scale: 1.05 }}
+        whileTap={{
           scale: 0.95,
           transition: { type: 'spring', stiffness: 600, damping: 20 },
         }}
-        animate={disabled ? {} : isHovered ? {} : {
+        animate={isHovered ? {} : {
           scale: 1,
           transition: { type: 'spring', stiffness: 300, damping: 25 },
         }}
@@ -147,20 +144,16 @@ export default function AnimatedLogo() {
         </div>
 
         {/* Shimmer overlay */}
-        {!disabled && (
-          <motion.div
-            className="absolute inset-0 pointer-events-none rounded-3xl"
-            style={{ background: shimmerGradient, opacity: shimmerOpacity }}
-          />
-        )}
+        <motion.div
+          className="absolute inset-0 pointer-events-none rounded-3xl"
+          style={{ background: shimmerGradient, opacity: shimmerOpacity }}
+        />
 
         {/* Mouse-tracked glow */}
-        {!disabled && (
-          <motion.div
-            className="absolute inset-0 pointer-events-none rounded-3xl"
-            style={{ background: glowGradient, opacity: glowOpacity }}
-          />
-        )}
+        <motion.div
+          className="absolute inset-0 pointer-events-none rounded-3xl"
+          style={{ background: glowGradient, opacity: glowOpacity }}
+        />
 
         {/* Click ripples */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden rounded-3xl">

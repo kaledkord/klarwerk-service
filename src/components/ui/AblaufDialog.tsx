@@ -27,8 +27,7 @@ export default function AblaufDialog({ schritte }: { schritte: Schritt[] }) {
 
   const schliessen = () => {
     setOffen(false);
-    const ruhig = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    window.setTimeout(() => ref.current?.close(), ruhig ? 0 : SCHLIESSEN_MS);
+    window.setTimeout(() => ref.current?.close(), SCHLIESSEN_MS);
   };
 
   return (

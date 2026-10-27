@@ -16,7 +16,6 @@ export default function Seitenwechsel() {
     // Vergleich statt „erster Aufruf“, damit StrictMode den Lader nicht beim Laden auslöst.
     if (vorher.current === pathname) return;
     vorher.current = pathname;
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     setAktiv(true);
     const t = window.setTimeout(() => setAktiv(false), HALTEN_MS);
     return () => window.clearTimeout(t);

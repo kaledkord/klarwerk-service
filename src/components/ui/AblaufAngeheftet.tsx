@@ -20,10 +20,20 @@ const GROESSEN = {
 /**
  * Scroll-Effekt 6: Der Ablauf bleibt stehen, die Linie füllt sich, Schritt für Schritt in den Logofarben.
  * Der aktuelle Schritt wird groß und hell, der Zähler blättert um. Ein Klick auf einen Schritt
- * scrollt dorthin. Ohne Effekte (vorgerendert, „Bewegung reduzieren“) stehen alle Schritte ganz
+ * scrollt dorthin. Ohne Effekte (vorgerendert, ohne JavaScript) stehen alle Schritte ganz
  * normal untereinander.
  */
-export default function AblaufAngeheftet({ schritte }: { schritte: Schritt[] }) {
+export default function AblaufAngeheftet({
+  schritte,
+  eyebrow = 'Ablauf',
+  titel = 'So funktioniert die Zusammenarbeit',
+  text = 'In vier einfachen Schritten zu einem sauberen Ergebnis – unkompliziert und transparent.',
+}: {
+  schritte: Schritt[];
+  eyebrow?: string;
+  titel?: string;
+  text?: string;
+}) {
   const ref = useRef<HTMLElement>(null);
   const effekte = useScrollEffekte();
   // Ab 640 px ist genug Platz für die großen Schriften, auch wenn der Ablauf noch einspaltig steht.
@@ -59,11 +69,9 @@ export default function AblaufAngeheftet({ schritte }: { schritte: Schritt[] }) 
       <div className={effekte ? 'sticky top-0 flex h-screen items-center' : 'py-28'}>
         <div className="mx-auto grid w-full max-w-7xl items-center gap-6 px-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] lg:gap-14">
           <div className="flex flex-col gap-3 lg:gap-4">
-            <span className="text-brand-300 text-sm font-semibold uppercase tracking-widest">Ablauf</span>
-            <h2 className="text-3xl md:text-5xl font-black tracking-tight">So funktioniert die Zusammenarbeit</h2>
-            <p className="max-w-[40ch] text-slate-400 lg:text-lg">
-              In vier einfachen Schritten zu einem sauberen Ergebnis – unkompliziert und transparent.
-            </p>
+            <span className="text-brand-300 text-sm font-semibold uppercase tracking-widest">{eyebrow}</span>
+            <h2 className="text-3xl md:text-5xl font-black tracking-tight">{titel}</h2>
+            <p className="max-w-[40ch] text-slate-400 lg:text-lg">{text}</p>
             <p
               aria-hidden="true"
               className="mt-1 flex items-end text-5xl font-black leading-none tracking-tighter text-white tabular-nums lg:mt-3 lg:text-[clamp(56px,9vw,128px)]"

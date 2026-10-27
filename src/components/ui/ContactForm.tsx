@@ -275,7 +275,7 @@ export default function ContactForm() {
       </Feld>
 
       {error && (
-        <p className="motion-safe:animate-fade-in-up text-sm text-error-600 bg-error-50 border border-error-100 rounded-xl px-4 py-3">
+        <p className="animate-fade-in-up text-sm text-error-600 bg-error-50 border border-error-100 rounded-xl px-4 py-3">
           {error}
         </p>
       )}

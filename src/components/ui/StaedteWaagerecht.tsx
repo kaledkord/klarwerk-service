@@ -10,7 +10,19 @@ import { begrenzen, useScrollEffekte } from '../../lib/scrollEffekte';
  * nach links durch, die Fotos bewegen sich leicht in ihren Rahmen. Die Höhe des Abschnitts ergibt
  * sich aus der Breite der Reihe. Ohne Effekte lässt sich die Reihe seitlich wischen.
  */
-export default function StaedteWaagerecht() {
+export default function StaedteWaagerecht({
+  eyebrow = 'Einsatzgebiet',
+  titel = 'Unser Einsatzgebiet',
+  text = 'Wir sind in ganz Schleswig-Holstein und Hamburg für Sie da – schnell vor Ort, wo Sie uns brauchen.',
+  ohne,
+}: {
+  eyebrow?: string;
+  titel?: string;
+  text?: string;
+  /** Stadt, die nicht in der Reihe erscheint (auf ihrer eigenen Seite) */
+  ohne?: string;
+}) {
+  const staedte = cities.filter((c) => c.slug !== ohne);
   const ref = useRef<HTMLElement>(null);
   const viewRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
@@ -73,11 +85,9 @@ export default function StaedteWaagerecht() {
     >
       <div className={effekte ? 'sticky top-0 flex h-screen flex-col justify-center gap-7 overflow-hidden' : 'flex flex-col gap-8 py-24'}>
         <div className="mx-auto w-full max-w-7xl px-6">
-          <span className="text-brand-300 text-sm font-semibold uppercase tracking-widest">Einsatzgebiet</span>
-          <h2 id="einsatzgebiet-titel" className="text-4xl font-black mt-3 tracking-tight">Unser Einsatzgebiet</h2>
-          <p className="mt-4 text-slate-300 text-lg">
-            Wir sind in ganz Schleswig-Holstein und Hamburg für Sie da – schnell vor Ort, wo Sie uns brauchen.
-          </p>
+          <span className="text-brand-300 text-sm font-semibold uppercase tracking-widest">{eyebrow}</span>
+          <h2 id="einsatzgebiet-titel" className="text-4xl font-black mt-3 tracking-tight">{titel}</h2>
+          <p className="mt-4 max-w-3xl text-slate-300 text-lg">{text}</p>
         </div>
 
         <div ref={viewRef} className={effekte ? 'overflow-hidden' : 'overflow-x-auto pb-4'}>
@@ -86,7 +96,7 @@ export default function StaedteWaagerecht() {
             className="relative flex w-max gap-5 pl-[max(1.5rem,calc((100vw-80rem)/2+1.5rem))] pr-12"
             style={effekte ? { x } : undefined}
           >
-            {cities.map((c, i) => (
+            {staedte.map((c, i) => (
               <Link
                 key={c.slug}
                 ref={(el) => {

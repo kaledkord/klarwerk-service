@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import SEO from '../components/SEO';
 import ServiceCard from '../components/ui/ServiceCard';
 import ScrollKarte from '../components/ui/ScrollKarte';
+import SeitenKopf from '../components/ui/SeitenKopf';
 import CTASection from '../components/ui/CTASection';
 import { services } from '../data/services';
 import { seoConfig } from '../config/seoConfig';
@@ -29,15 +30,15 @@ export default function Services() {
       />
 
       <section className="pt-36 pb-16 bg-paper">
-        <div className="max-w-7xl mx-auto px-6">
+        <SeitenKopf className="max-w-7xl mx-auto px-6">
           <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}>
             <span className="text-brand-300 text-sm font-semibold uppercase tracking-widest">Leistungen</span>
-            <h1 className="mt-3 text-5xl md:text-6xl font-black tracking-tight">Unsere Dienstleistungen</h1>
+            <h1 className="mt-3 text-4xl sm:text-5xl md:text-6xl font-black tracking-tight hyphens-auto">Unsere Dienstleistungen</h1>
             <p className="mt-6 text-lg text-slate-300 max-w-2xl leading-relaxed">
               Von der regelmäßigen Büroreinigung bis zum kompletten Hausmeisterservice – wir bieten Ihnen maßgeschneiderte Lösungen für Ihr Objekt.
             </p>
           </motion.div>
-        </div>
+        </SeitenKopf>
       </section>
 
       <section className="py-20">

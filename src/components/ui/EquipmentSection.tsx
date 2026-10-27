@@ -1,6 +1,6 @@
 import { useRef, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { motion, useInView, useMotionValue, useReducedMotion, useTransform } from 'framer-motion';
+import { motion, useInView, useMotionValue, useTransform } from 'framer-motion';
 import { Cpu, BadgeCheck, ShieldCheck, Leaf, ArrowRight, Building2, type LucideIcon } from 'lucide-react';
 import { manufacturers } from '../../data/manufacturers';
 import { easeOut } from '../../lib/motion';
@@ -58,14 +58,13 @@ function LogoItem({ m }: { m: (typeof manufacturers)[0] }) {
 const DURATION = 35; // seconds per full loop
 
 // Scroll-Effekt 8: Das Band läuft schneller, je schneller man scrollt, folgt der Scrollrichtung
-// und neigt sich dabei leicht. Ohne Scrollen läuft es ruhig weiter; bei „Bewegung reduzieren“ steht es.
+// und neigt sich dabei leicht. Ohne Scrollen läuft es ruhig weiter.
 // Die Schleife läuft nur, solange das Band im Bild ist.
 function MarqueeTrack() {
   const bandRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
   const x = useMotionValue(0);
   const skewX = useMotionValue(0);
-  const ruhig = useReducedMotion();
   const imBild = useInView(bandRef, { margin: '100px 0px' });
   const pausiert = useRef(false);
   const [trackWidth, setTrackWidth] = useState(0);
@@ -92,7 +91,7 @@ function MarqueeTrack() {
   }, []);
 
   useEffect(() => {
-    if (ruhig || !imBild || trackWidth === 0) return;
+    if (!imBild || trackWidth === 0) return;
     let id = 0;
     let letzteZeit = 0;
     letztesY.current = null;
@@ -120,7 +119,7 @@ function MarqueeTrack() {
     };
     id = requestAnimationFrame(schritt);
     return () => cancelAnimationFrame(id);
-  }, [ruhig, imBild, trackWidth, x, skewX]);
+  }, [imBild, trackWidth, x, skewX]);
 
   const translateX = useTransform(x, (v) => `${v}px`);
 

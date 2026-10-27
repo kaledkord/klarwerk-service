@@ -13,6 +13,11 @@ import {
 } from 'lucide-react';
 import SEO from '../components/SEO';
 import AnimatedSection from '../components/ui/AnimatedSection';
+import AblaufAngeheftet from '../components/ui/AblaufAngeheftet';
+import LeuchtPunkt from '../components/ui/LeuchtPunkt';
+import OeffnendesBild from '../components/ui/OeffnendesBild';
+import ScrollKarte from '../components/ui/ScrollKarte';
+import SeitenKopf from '../components/ui/SeitenKopf';
 import ServiceImage from '../components/ui/ServiceImage';
 import FAQAccordion from '../components/ui/FAQAccordion';
 import ServiceReviews from '../components/ui/ServiceReviews';
@@ -21,6 +26,7 @@ import { businessConfig } from '../config/businessConfig';
 import { getServiceById, services } from '../data/services';
 import { serviceContents } from '../data/serviceContent';
 import { cities } from '../data/cities';
+import { useSpalten } from '../lib/scrollEffekte';
 
 const trustItems = [
   { icon: Award, title: 'Qualitätsversprechen', desc: 'Wir arbeiten nach festen Qualitätsstandards und prüfen jedes Ergebnis vor der Übergabe.' },
@@ -56,6 +62,10 @@ export default function ServicePage() {
   const { serviceId } = useParams<{ serviceId: string }>();
   const service = serviceId ? getServiceById(serviceId) : undefined;
   const content = serviceId ? serviceContents[serviceId] : undefined;
+  // Spalten der Raster für den versetzten Aufstieg der Karten (vor dem frühen Return, wegen der Hook-Regeln).
+  const spaltenVorteile = useSpalten(2, 3);
+  const spaltenBereiche = useSpalten(3, 4, 2);
+  const spaltenVertrauen = useSpalten(2, 4);
 
   if (!service || !content) return <Navigate to="/leistungen" replace />;
 
@@ -106,7 +116,7 @@ export default function ServicePage() {
 
       {/* Hero */}
       <section className="pt-36 pb-16 bg-paper">
-        <div className="max-w-7xl mx-auto px-6">
+        <SeitenKopf className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
@@ -150,7 +160,7 @@ export default function ServicePage() {
               </a>
             </div>
           </motion.div>
-        </div>
+        </SeitenKopf>
       </section>
 
       {/* Features image + checklist */}
@@ -168,50 +178,21 @@ export default function ServicePage() {
             </p>
             <div className="mt-8 space-y-4">
               {service.features.map((f) => (
-                <div key={f} className="flex items-center gap-3 text-slate-200">
-                  <div className="w-6 h-6 rounded-full bg-success-500/15 flex items-center justify-center shrink-0">
-                    <CheckCircle size={14} className="text-success-500" />
-                  </div>
+                <LeuchtPunkt key={f} textKlasse="">
                   {f}
-                </div>
+                </LeuchtPunkt>
               ))}
             </div>
           </AnimatedSection>
         </div>
       </section>
 
-      {/* Process */}
-      <section className="py-24 bg-paper">
-        <div className="max-w-7xl mx-auto px-6">
-          <AnimatedSection className="text-center mb-14">
-            <span className="text-brand-300 text-sm font-semibold uppercase tracking-widest">
-              Ablauf
-            </span>
-            <h2 className="mt-3 text-3xl md:text-4xl font-black tracking-tight">
-              Unsere Vorgehensweise
-            </h2>
-            <p className="mt-4 text-slate-300 text-lg max-w-2xl mx-auto">
-              Schritt für Schritt zu einem sauberen Ergebnis – transparent und zuverlässig.
-              Den genauen Zeitrahmen für Ihr Objekt nennen wir verbindlich im Angebot.
-            </p>
-          </AnimatedSection>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {content.process.map((step, i) => (
-              <AnimatedSection key={step.title} delay={i * 0.08}>
-                <div className="bg-paper-100 border border-white/10 rounded-2xl p-8 h-full shadow-md hover:shadow-md transition-shadow">
-                  <div className="flex items-center gap-3 mb-4">
-                    <span className="inline-flex items-center justify-center w-9 h-9 bg-brand-600 text-white text-sm font-bold rounded-lg">
-                      {i + 1}
-                    </span>
-                    <h3 className="text-lg font-bold text-white">{step.title}</h3>
-                  </div>
-                  <p className="text-slate-300 text-sm leading-relaxed">{step.desc}</p>
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Process (angeheftet wie auf der Startseite) */}
+      <AblaufAngeheftet
+        schritte={content.process}
+        titel="Unsere Vorgehensweise"
+        text="Schritt für Schritt zu einem sauberen Ergebnis – transparent und zuverlässig. Den genauen Zeitrahmen für Ihr Objekt nennen wir verbindlich im Angebot."
+      />
 
       {/* Kosten & Bedingungen */}
       <section className="py-24">
@@ -277,7 +258,7 @@ export default function ServicePage() {
             {content.advantages.map((a, i) => {
               const AIcon = a.icon;
               return (
-                <AnimatedSection key={a.title} delay={i * 0.08}>
+                <ScrollKarte key={a.title} spalte={i % spaltenVorteile}>
                   <div className="bg-paper-100 border border-white/10 rounded-2xl p-8 h-full shadow-md hover:shadow-md transition-shadow">
                     <div className="inline-flex items-center justify-center w-12 h-12 bg-cyan-500/15 rounded-xl mb-5">
                       <AIcon size={22} className="text-cyan-400" />
@@ -285,7 +266,7 @@ export default function ServicePage() {
                     <h3 className="text-lg font-bold text-white">{a.title}</h3>
                     <p className="mt-2 text-slate-300 text-sm leading-relaxed">{a.desc}</p>
                   </div>
-                </AnimatedSection>
+                </ScrollKarte>
               );
             })}
           </div>
@@ -310,14 +291,14 @@ export default function ServicePage() {
             {content.areas.map((area, i) => {
               const AIcon = area.icon;
               return (
-                <AnimatedSection key={area.label} delay={i * 0.05}>
+                <ScrollKarte key={area.label} spalte={i % spaltenBereiche}>
                   <div className="bg-paper-100 border border-white/10 rounded-2xl p-6 flex flex-col items-center text-center gap-3 h-full shadow-md hover:shadow-md transition-shadow">
                     <div className="inline-flex items-center justify-center w-12 h-12 bg-brand-500/15 rounded-xl">
                       <AIcon size={22} className="text-brand-300" />
                     </div>
                     <span className="text-sm font-semibold text-slate-200">{area.label}</span>
                   </div>
-                </AnimatedSection>
+                </ScrollKarte>
               );
             })}
           </div>
@@ -339,16 +320,15 @@ export default function ServicePage() {
             </p>
             <div className="mt-8 space-y-4">
               {content.sustainability.map((s) => (
-                <div key={s} className="flex items-start gap-3 text-slate-200">
-                  <CheckCircle size={18} className="text-success-500 shrink-0 mt-0.5" />
-                  <span className="text-sm leading-relaxed">{s}</span>
-                </div>
+                <LeuchtPunkt key={s}>{s}</LeuchtPunkt>
               ))}
             </div>
           </AnimatedSection>
-          <AnimatedSection delay={0.1}>
-            <ServiceImage src="https://images.unsplash.com/photo-1638068109209-002be3ae4950?auto=format&fit=crop&w=900&q=80" alt="Nachhaltigkeit bei KlarWerk Service" className="rounded-3xl h-[420px] w-full" imgClassName="shadow-xl shadow-slate-900/10" />
-          </AnimatedSection>
+          <OeffnendesBild
+            src="https://images.unsplash.com/photo-1638068109209-002be3ae4950?auto=format&fit=crop&w=900&q=80"
+            alt="Nachhaltigkeit bei KlarWerk Service"
+            className="h-[420px] w-full"
+          />
         </div>
       </section>
 
@@ -370,7 +350,7 @@ export default function ServicePage() {
             {trustItems.map((t, i) => {
               const TIcon = t.icon;
               return (
-                <AnimatedSection key={t.title} delay={i * 0.08}>
+                <ScrollKarte key={t.title} spalte={i % spaltenVertrauen}>
                   <div className="bg-white/5 border border-white/10 rounded-2xl p-8 h-full hover:bg-white/10 transition-colors">
                     <div className="inline-flex items-center justify-center w-12 h-12 bg-cyan-500/10 rounded-xl mb-5">
                       <TIcon size={22} className="text-cyan-400" />
@@ -378,7 +358,7 @@ export default function ServicePage() {
                     <h3 className="text-lg font-bold text-white">{t.title}</h3>
                     <p className="mt-2 text-slate-400 text-sm leading-relaxed">{t.desc}</p>
                   </div>
-                </AnimatedSection>
+                </ScrollKarte>
               );
             })}
           </div>

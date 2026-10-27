@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { motion, useReducedMotion } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 interface ServiceImageProps {
   src: string;
@@ -28,7 +28,6 @@ export default function ServiceImage({
   const [isTouchDevice, setIsTouchDevice] = useState(false);
   const [geladen, setGeladen] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
-  const reduceMotion = useReducedMotion();
 
   useEffect(() => {
     const mq = window.matchMedia('(hover: none)');
@@ -43,15 +42,13 @@ export default function ServiceImage({
     if (imgRef.current?.complete) setGeladen(true);
   }, []);
 
-  const useScale = !reduceMotion;
-
-  const filter = isTouchDevice || reduceMotion
+  const filter = isTouchDevice
     ? 'grayscale(0%) brightness(1)'
     : isHovered
       ? 'grayscale(0%) brightness(1)'
       : 'grayscale(100%) brightness(0.85)';
 
-  const scale = useScale && !isTouchDevice && isHovered ? 1.06 : 1;
+  const scale = !isTouchDevice && isHovered ? 1.06 : 1;
 
   // Bilder oben auf der Seite (eager) erscheinen sofort, damit sie nicht auf JavaScript warten.
   const einblenden = loading === 'lazy';
@@ -81,7 +78,7 @@ export default function ServiceImage({
           onLoad={() => setGeladen(true)}
           animate={{ filter, scale, opacity: einblenden && !geladen ? 0 : 1 }}
           transition={{
-            duration: reduceMotion ? 0 : DURATION,
+            duration: DURATION,
             ease: EASE,
             opacity: { duration: 0.4 },
           }}

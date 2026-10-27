@@ -29,12 +29,12 @@
       Loader beim ersten Besuch: Logo mit Werkzeugen (Entwurf A aus dem Logo-Entwurf), zerlegt in Dach,
       Säulen, Werkzeuge und Schrift. Steht außerhalb von #root, damit React ihn nicht anfasst.
       Das Skript setzt die Klasse vor dem ersten Bild, die CSS-Animationen brauchen kein JavaScript-Bundle.
-      Nur einmal je Sitzung, nie bei „Bewegung reduzieren“. Nach 2 s ist er weg.
+      Nur einmal je Sitzung, auch bei „Bewegung reduzieren“. Nach 2 s ist er weg.
     -->
     <script>
       (function () {
         try {
-          if (sessionStorage.getItem('klw-intro') || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+          if (sessionStorage.getItem('klw-intro')) return;
           sessionStorage.setItem('klw-intro', '1');
           var html = document.documentElement;
           html.classList.add('klw-intro');

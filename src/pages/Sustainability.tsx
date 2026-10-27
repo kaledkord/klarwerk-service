@@ -1,9 +1,15 @@
 import { motion } from 'framer-motion';
-import { CheckCircle, Leaf, Droplets, Recycle, Route, Sprout, ArrowRight } from 'lucide-react';
+import { Leaf, Droplets, Recycle, Route, Sprout } from 'lucide-react';
 import AnimatedSection from '../components/ui/AnimatedSection';
+import AnspruchText from '../components/ui/AnspruchText';
 import CTASection from '../components/ui/CTASection';
+import LeuchtPunkt from '../components/ui/LeuchtPunkt';
+import OeffnendesBild from '../components/ui/OeffnendesBild';
+import ScrollKarte from '../components/ui/ScrollKarte';
+import SeitenKopf from '../components/ui/SeitenKopf';
 import SEO from '../components/SEO';
 import { seoConfig } from '../config/seoConfig';
+import { useSpalten } from '../lib/scrollEffekte';
 
 const goals = [
   { icon: Leaf, title: 'Weniger Chemie', desc: 'Optimierter Einsatz von Reinigungsmitteln.' },
@@ -33,6 +39,7 @@ const gardenMeasures = [
 ];
 
 export default function Sustainability() {
+  const spaltenZiele = useSpalten(2, 4);
   return (
     <div className="bg-paper">
       <SEO
@@ -42,17 +49,17 @@ export default function Sustainability() {
 
       {/* Hero */}
       <section className="pt-36 pb-20 bg-paper">
-        <div className="max-w-7xl mx-auto px-6">
+        <SeitenKopf className="max-w-7xl mx-auto px-6">
           <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}>
             <span className="text-brand-300 text-sm font-semibold uppercase tracking-widest">Nachhaltigkeit</span>
-            <h1 className="mt-3 text-5xl md:text-6xl font-black tracking-tight">
+            <h1 className="mt-3 text-4xl sm:text-5xl md:text-6xl font-black tracking-tight hyphens-auto">
               Sauberkeit mit<br />Verantwortung.
             </h1>
             <p className="mt-6 text-lg text-slate-300 max-w-2xl leading-relaxed">
               Bei KlarWerk Service verbinden wir professionelle Gebäudereinigung mit einem verantwortungsvollen Umgang mit unserer Umwelt. Unser Ziel ist es, hochwertige Reinigungslösungen anzubieten, die nicht nur gründlich reinigen, sondern auch Ressourcen schonen.
             </p>
           </motion.div>
-        </div>
+        </SeitenKopf>
       </section>
 
       {/* Goals grid */}
@@ -68,7 +75,7 @@ export default function Sustainability() {
             {goals.map((g, i) => {
               const Icon = g.icon;
               return (
-                <AnimatedSection key={g.title} delay={i * 0.1}>
+                <ScrollKarte key={g.title} spalte={i % spaltenZiele}>
                   <div className="bg-paper-100 border border-white/10 rounded-2xl p-8 text-center shadow-md hover:shadow-md transition-shadow h-full">
                     <div className="inline-flex items-center justify-center w-14 h-14 bg-success-500/15 rounded-2xl mb-5">
                       <Icon size={26} className="text-success-600" />
@@ -76,7 +83,7 @@ export default function Sustainability() {
                     <h3 className="text-lg font-bold text-white">{g.title}</h3>
                     <p className="mt-2 text-slate-300 leading-relaxed text-sm">{g.desc}</p>
                   </div>
-                </AnimatedSection>
+                </ScrollKarte>
               );
             })}
           </div>
@@ -86,13 +93,7 @@ export default function Sustainability() {
       {/* Eco-friendly cleaning */}
       <section className="py-24 bg-paper">
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
-          <AnimatedSection>
-            <img
-              src="/images.jpg"
-              alt="Umweltfreundliche Reinigung"
-              className="rounded-3xl h-[420px] w-full object-cover"
-            />
-          </AnimatedSection>
+          <OeffnendesBild src="/images.jpg" alt="Umweltfreundliche Reinigung" className="h-[420px] w-full" />
           <AnimatedSection delay={0.1}>
             <h2 className="text-3xl md:text-4xl font-black tracking-tight">Umweltfreundliche Reinigung</h2>
             <p className="mt-5 text-slate-300 leading-relaxed">
@@ -100,10 +101,7 @@ export default function Sustainability() {
             </p>
             <div className="mt-8 space-y-3">
               {ecoMeasures.map((m) => (
-                <div key={m} className="flex items-start gap-3 text-slate-200">
-                  <CheckCircle size={18} className="text-success-500 shrink-0 mt-0.5" />
-                  <span className="text-sm leading-relaxed">{m}</span>
-                </div>
+                <LeuchtPunkt key={m}>{m}</LeuchtPunkt>
               ))}
             </div>
           </AnimatedSection>
@@ -113,13 +111,11 @@ export default function Sustainability() {
       {/* Sustainable work practices */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
-          <AnimatedSection className="lg:order-2">
-            <img
-              src="/1096661_028b195047ea5ccd409ca5192a87c92d.jpg"
-              alt="Nachhaltige Arbeitsweise"
-              className="rounded-3xl h-[420px] w-full object-cover"
-            />
-          </AnimatedSection>
+          <OeffnendesBild
+            src="/1096661_028b195047ea5ccd409ca5192a87c92d.jpg"
+            alt="Nachhaltige Arbeitsweise"
+            className="h-[420px] w-full lg:order-2"
+          />
           <AnimatedSection delay={0.1} className="lg:order-1">
             <h2 className="text-3xl md:text-4xl font-black tracking-tight">Nachhaltige Arbeitsweise</h2>
             <p className="mt-5 text-slate-300 leading-relaxed">
@@ -127,10 +123,7 @@ export default function Sustainability() {
             </p>
             <div className="mt-8 space-y-3">
               {workMeasures.map((m) => (
-                <div key={m} className="flex items-start gap-3 text-slate-200">
-                  <CheckCircle size={18} className="text-success-500 shrink-0 mt-0.5" />
-                  <span className="text-sm leading-relaxed">{m}</span>
-                </div>
+                <LeuchtPunkt key={m}>{m}</LeuchtPunkt>
               ))}
             </div>
           </AnimatedSection>
@@ -155,13 +148,11 @@ export default function Sustainability() {
       {/* Garden care */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
-          <AnimatedSection>
-            <img
-              src="/landscape-tree-nature-forest-grass-wilderness-911049-pxhere.com.jpg"
-              alt="Nachhaltige Gartenpflege"
-              className="rounded-3xl h-[420px] w-full object-cover"
-            />
-          </AnimatedSection>
+          <OeffnendesBild
+            src="/landscape-tree-nature-forest-grass-wilderness-911049-pxhere.com.jpg"
+            alt="Nachhaltige Gartenpflege"
+            className="h-[420px] w-full"
+          />
           <AnimatedSection delay={0.1}>
             <div className="inline-flex items-center justify-center w-14 h-14 bg-success-500/15 rounded-2xl mb-5">
               <Sprout size={26} className="text-success-600" />
@@ -172,30 +163,21 @@ export default function Sustainability() {
             </p>
             <div className="mt-8 space-y-3">
               {gardenMeasures.map((m) => (
-                <div key={m} className="flex items-start gap-3 text-slate-200">
-                  <CheckCircle size={18} className="text-success-500 shrink-0 mt-0.5" />
-                  <span className="text-sm leading-relaxed">{m}</span>
-                </div>
+                <LeuchtPunkt key={m}>{m}</LeuchtPunkt>
               ))}
             </div>
           </AnimatedSection>
         </div>
       </section>
 
-      {/* Closing statement */}
-      <section className="py-24 bg-paper">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <AnimatedSection>
-            <h2 className="text-3xl md:text-4xl font-black tracking-tight">Gemeinsam für eine saubere Zukunft</h2>
-            <p className="mt-6 text-lg text-slate-300 leading-relaxed">
-              Nachhaltigkeit funktioniert nur gemeinsam. Deshalb beraten wir unsere Kunden gerne, wie Reinigung und Pflege umweltbewusster gestaltet werden können.
-            </p>
-            <p className="mt-6 text-base font-semibold text-brand-300">
-              KlarWerk Service – Sauberkeit, Qualität und Verantwortung.
-            </p>
-          </AnimatedSection>
-        </div>
-      </section>
+      {/* Closing statement: Wort für Wort, wie „Unser Anspruch“ auf der Startseite */}
+      <AnspruchText
+        titel="Gemeinsam für eine saubere Zukunft"
+        titelAlsUeberschrift
+        satz="Nachhaltigkeit funktioniert nur gemeinsam. Deshalb beraten wir unsere Kunden gerne, wie Reinigung und Pflege umweltbewusster gestaltet werden können."
+        hervor={['gemeinsam.', 'umweltbewusster']}
+        absender="KlarWerk Service – Sauberkeit, Qualität und Verantwortung."
+      />
 
       <CTASection
         title="Gemeinsam nachhaltig reinigen?"

@@ -18,15 +18,12 @@ export default function Header() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const ruhig = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     let lastY = window.scrollY;
     const onScroll = () => {
       const y = window.scrollY;
       setScrolled(y > 12);
-      if (!ruhig) {
-        if (y > AUSBLENDEN_AB_PX && y > lastY + 4) setHidden(true);
-        else if (y < lastY - 4 || y <= AUSBLENDEN_AB_PX) setHidden(false);
-      }
+      if (y > AUSBLENDEN_AB_PX && y > lastY + 4) setHidden(true);
+      else if (y < lastY - 4 || y <= AUSBLENDEN_AB_PX) setHidden(false);
       lastY = y;
     };
     window.addEventListener('scroll', onScroll, { passive: true });

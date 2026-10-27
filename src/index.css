@@ -121,14 +121,11 @@
   background-size: cover;
   background-position: center;
 }
-@media (prefers-reduced-motion: reduce) {
-  .marquee-track { animation: none; }
-}
 
 /* ── Animationen (Oktober 2026) ──────────────────────────────────────────────────────────
    Startbereich, Knöpfe, Karten, Lader, Formular, Dialog, Tooltip. Der Loader selbst steht in
-   index.html. Alles nur mit transform und opacity (außer der Unschärfe der Überschrift); bei
-   „Bewegung reduzieren“ greift der Block am Ende. */
+   index.html. Alles nur mit transform und opacity (außer der Unschärfe der Überschrift); die
+   Animationen laufen auch bei „Bewegung reduzieren“ (Wunsch von Khaled, Oktober 2026). */
 :root {
   --klw-ease: cubic-bezier(.22, 1, .36, 1);
   --klw-ease-io: cubic-bezier(.65, 0, .35, 1);
@@ -231,7 +228,6 @@ html.klw-intro .klw-kopf { animation: klw-von-oben .5s var(--klw-ease) 1.55s bot
 .klw-saeulen i:nth-child(3) { background: #f0552b; clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%); animation-delay: .24s; }
 .klw-saeulen i:nth-child(4) { background: #21a841; height: 70%; clip-path: polygon(0 0, 100% 28%, 100% 100%, 0 100%); animation-delay: .36s; }
 @keyframes klw-huepfen { 0%, 100% { transform: scaleY(.45); } 50% { transform: scaleY(1); } }
-@keyframes klw-pulsieren { 0%, 100% { opacity: .4; } 50% { opacity: 1; } }
 .klw-ring { width: 1.375rem; height: 1.375rem; border-radius: 50%; border: 2.5px solid rgba(255, 255, 255, .35); border-top-color: #fff; animation: klw-drehen .8s linear infinite; }
 @keyframes klw-drehen { to { transform: rotate(360deg); } }
 
@@ -353,39 +349,3 @@ html.klw-intro .klw-kopf { animation: klw-von-oben .5s var(--klw-ease) 1.55s bot
 .klw-funken i { position: absolute; left: 50%; top: 50%; width: 7px; height: 7px; margin: -3.5px; border-radius: 2px; opacity: 0; animation: klw-funke .65s var(--klw-ease) .2s both; }
 @keyframes klw-funke { 0% { opacity: 1; transform: translate(calc(var(--x) * .55), calc(var(--y) * .55)) scale(1); } 100% { opacity: 0; transform: translate(var(--x), var(--y)) scale(.5); } }
 .klw-erfolg-text { animation: klw-hoch .5s var(--klw-ease) .45s both; }
-
-/* „Bewegung reduzieren“: nichts gleitet, wackelt oder glänzt; Lader pulsieren nur ruhig */
-@media (prefers-reduced-motion: reduce) {
-  .klar-photo,
-  .klw-kopf,
-  .klw-hero-dach,
-  .klw-hero-z1,
-  .klw-hero-z2,
-  .klw-glanz,
-  .klw-hero-text,
-  .klw-hero-knoepfe,
-  .klw-hero-info,
-  .klw-menue-eintrag,
-  .klw-dialog.klw-offen .klw-schritt,
-  .klw-wackeln,
-  .klw-feld-hinweis,
-  .klw-erfolg-kreis,
-  .klw-haken,
-  .klw-erfolg-text,
-  .klw-schimmer { animation: none !important; }
-  .klw-funken,
-  .btn-primary::after { display: none; }
-  .btn-primary:hover,
-  .btn-secondary:hover,
-  .btn-primary:hover svg,
-  .klw-karte:hover .klw-karte-icon,
-  .klw-karte:focus-within .klw-karte-icon,
-  .klw-karte[data-offen="true"] .klw-karte-icon { transform: none; }
-  .klw-karte::before,
-  .klw-burger span,
-  .klw-dialog,
-  .klw-dialog::backdrop,
-  .klw-senden { transition: none; }
-  .klw-saeulen i { animation: klw-pulsieren 1.8s ease-in-out infinite; transform: none; }
-  .klw-ring { animation-duration: 2.4s; }
-}

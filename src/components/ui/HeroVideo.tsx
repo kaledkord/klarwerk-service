@@ -12,9 +12,9 @@ export default function HeroVideo({ src }: { src: string }) {
   useEffect(() => {
     const video = ref.current;
     if (!video) return;
-    // Ohne Video: weniger Bewegung gewünscht oder Datensparmodus – dann bleibt das Foto.
+    // Ohne Video im Datensparmodus – dann bleibt das Foto.
     const sparmodus = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection?.saveData;
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || sparmodus) return;
+    if (sparmodus) return;
 
     let ausgeblendet = false;
     const amEnde = () => video.duration > 0 && video.currentTime >= video.duration - AUSBLENDEN_VOR_ENDE_S;

@@ -1,14 +1,17 @@
 import { Link } from 'react-router-dom';
 import { MapPin, ArrowRight } from 'lucide-react';
-import AnimatedSection from '../components/ui/AnimatedSection';
 import CTASection from '../components/ui/CTASection';
+import ScrollKarte from '../components/ui/ScrollKarte';
+import SeitenKopf from '../components/ui/SeitenKopf';
 import SEO from '../components/SEO';
 import { seoConfig } from '../config/seoConfig';
 import { cities } from '../data/cities';
+import { useSpalten } from '../lib/scrollEffekte';
 
 const BASE_URL = 'https://klarwerk-service.com';
 
 export default function CitiesOverview() {
+  const spalten = useSpalten(2, 3);
   const itemListJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
@@ -40,7 +43,7 @@ export default function CitiesOverview() {
 
       {/* HERO */}
       <section className="relative pt-32 pb-16 lg:pt-40 lg:pb-20 bg-paper">
-        <div className="max-w-7xl mx-auto px-6">
+        <SeitenKopf className="max-w-7xl mx-auto px-6">
           <nav className="flex items-center gap-2 text-sm text-slate-400 mb-6">
             <Link to="/" className="hover:text-slate-300 transition-colors">Start</Link>
             <span>/</span>
@@ -58,7 +61,7 @@ export default function CitiesOverview() {
             Wählen Sie Ihren Standort für detaillierte Informationen zu unseren
             Reinigungsleistungen vor Ort.
           </p>
-        </div>
+        </SeitenKopf>
       </section>
 
       {/* CITY CARDS */}
@@ -66,10 +69,10 @@ export default function CitiesOverview() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {cities.map((city, i) => (
-              <AnimatedSection key={city.slug} delay={i * 0.06}>
+              <ScrollKarte key={city.slug} spalte={i % spalten}>
                 <Link
                   to={`/einsatzgebiet/${city.slug}`}
-                  className="group block bg-paper-100 border border-white/10 rounded-2xl overflow-hidden hover:border-brand-200 shadow-md hover:shadow-lg transition-all"
+                  className="group block h-full bg-paper-100 border border-white/10 rounded-2xl overflow-hidden hover:border-brand-200 shadow-md hover:shadow-lg transition-all"
                 >
                   <div className="relative h-48 overflow-hidden">
                     <img
@@ -97,7 +100,7 @@ export default function CitiesOverview() {
                     </span>
                   </div>
                 </Link>
-              </AnimatedSection>
+              </ScrollKarte>
             ))}
           </div>
         </div>

@@ -1,10 +1,11 @@
 import { motion } from 'framer-motion';
 import SEO from '../components/SEO';
 import ServiceCard from '../components/ui/ServiceCard';
-import { StaggerGroup, StaggerItem } from '../components/ui/AnimatedSection';
+import ScrollKarte from '../components/ui/ScrollKarte';
 import CTASection from '../components/ui/CTASection';
 import { services } from '../data/services';
 import { seoConfig } from '../config/seoConfig';
+import { useSpalten } from '../lib/scrollEffekte';
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -18,6 +19,7 @@ const jsonLd = {
 };
 
 export default function Services() {
+  const spalten = useSpalten(2, 3);
   return (
     <div className="bg-paper">
       <SEO
@@ -40,13 +42,14 @@ export default function Services() {
 
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6">
-          <StaggerGroup className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {services.map((service) => (
-              <StaggerItem key={service.id}>
+          {/* Scroll-Effekt 3: Karten steigen beim Scrollen auf, Spalte für Spalte versetzt. */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {services.map((service, i) => (
+              <ScrollKarte key={service.id} spalte={i % spalten}>
                 <ServiceCard service={service} />
-              </StaggerItem>
+              </ScrollKarte>
             ))}
-          </StaggerGroup>
+          </div>
         </div>
       </section>
 

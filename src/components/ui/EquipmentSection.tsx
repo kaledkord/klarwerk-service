@@ -1,6 +1,6 @@
 import { useRef, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { motion, useAnimationFrame, useMotionValue, useTransform } from 'framer-motion';
+import { motion, useInView, useMotionValue, useReducedMotion, useTransform } from 'framer-motion';
 import { Cpu, BadgeCheck, ShieldCheck, Leaf, ArrowRight, Building2, type LucideIcon } from 'lucide-react';
 import { manufacturers } from '../../data/manufacturers';
 import { easeOut } from '../../lib/motion';
@@ -57,14 +57,21 @@ function LogoItem({ m }: { m: (typeof manufacturers)[0] }) {
 
 const DURATION = 35; // seconds per full loop
 
+// Scroll-Effekt 8: Das Band läuft schneller, je schneller man scrollt, folgt der Scrollrichtung
+// und neigt sich dabei leicht. Ohne Scrollen läuft es ruhig weiter; bei „Bewegung reduzieren“ steht es.
+// Die Schleife läuft nur, solange das Band im Bild ist.
 function MarqueeTrack() {
+  const bandRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
   const x = useMotionValue(0);
-  const [paused, setPaused] = useState(false);
+  const skewX = useMotionValue(0);
+  const ruhig = useReducedMotion();
+  const imBild = useInView(bandRef, { margin: '100px 0px' });
+  const pausiert = useRef(false);
   const [trackWidth, setTrackWidth] = useState(0);
-  const [scrollSpeed, setScrollSpeed] = useState(1);
-  const lastScrollY = useRef(0);
-  const scrollTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const letztesY = useRef<number | null>(null);
+  const tempo = useRef(0);
+  const richtung = useRef(1);
 
   // Deduplicate: remove the duplicate "Kärcher Professional" (same logo as Kärcher)
   const items = manufacturers.filter((m) => m.name !== 'Kärcher Professional');
@@ -84,36 +91,49 @@ function MarqueeTrack() {
     return () => window.removeEventListener('resize', measure);
   }, []);
 
-  // Scroll acceleration
   useEffect(() => {
-    const onScroll = () => {
-      const delta = Math.abs(window.scrollY - lastScrollY.current);
-      lastScrollY.current = window.scrollY;
-      const boost = Math.min(1 + delta * 0.08, 4);
-      setScrollSpeed(boost);
-
-      if (scrollTimer.current) clearTimeout(scrollTimer.current);
-      scrollTimer.current = setTimeout(() => setScrollSpeed(1), 300);
+    if (ruhig || !imBild || trackWidth === 0) return;
+    let id = 0;
+    let letzteZeit = 0;
+    letztesY.current = null;
+    const schritt = (zeit: number) => {
+      const delta = letzteZeit ? Math.min(50, zeit - letzteZeit) : 16.7;
+      letzteZeit = zeit;
+      // Scrolltempo je Bild, geglättet; die Richtung wechselt erst bei spürbarem Scrollen.
+      const y = window.scrollY;
+      const dy = letztesY.current === null ? 0 : y - letztesY.current;
+      letztesY.current = y;
+      tempo.current += (dy - tempo.current) * 0.18;
+      if (Math.abs(tempo.current) > 0.4) richtung.current = tempo.current > 0 ? 1 : -1;
+      skewX.set(Math.max(-9, Math.min(9, -tempo.current * 0.35)));
+      // Unter der Maus anhalten, außer es wird gerade gescrollt.
+      if (!pausiert.current || Math.abs(tempo.current) >= 0.4) {
+        const grund = (trackWidth / (DURATION * 1000)) * delta;
+        const extra = Math.min(Math.abs(tempo.current) * 0.45, 26) * (delta / 16.7);
+        let next = x.get() - (grund + extra) * richtung.current;
+        // Nach einer ganzen Runde nahtlos zurücksetzen, in beide Richtungen.
+        if (next <= -trackWidth) next += trackWidth;
+        if (next > 0) next -= trackWidth;
+        x.set(next);
+      }
+      id = requestAnimationFrame(schritt);
     };
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
-
-  useAnimationFrame((_, delta) => {
-    if (paused || trackWidth === 0) return;
-    const pxPerMs = (trackWidth / (DURATION * 1000)) * scrollSpeed;
-    const next = x.get() - pxPerMs * delta;
-    // Reset when we've scrolled one full set width
-    x.set(next <= -trackWidth ? next + trackWidth : next);
-  });
+    id = requestAnimationFrame(schritt);
+    return () => cancelAnimationFrame(id);
+  }, [ruhig, imBild, trackWidth, x, skewX]);
 
   const translateX = useTransform(x, (v) => `${v}px`);
 
   return (
     <div
+      ref={bandRef}
       className="relative overflow-hidden bg-transparent"
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
+      onMouseEnter={() => {
+        pausiert.current = true;
+      }}
+      onMouseLeave={() => {
+        pausiert.current = false;
+      }}
     >
       {/* Left fade */}
       <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-24 md:w-40 z-10"
@@ -124,7 +144,7 @@ function MarqueeTrack() {
 
       <motion.div
         ref={trackRef}
-        style={{ translateX, willChange: 'transform' }}
+        style={{ translateX, skewX, willChange: 'transform' }}
         className="flex items-center py-4"
       >
         {loopedItems.map((m, i) => (

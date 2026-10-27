@@ -1,10 +1,17 @@
+import { useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, MapPin } from 'lucide-react';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { ArrowRight } from 'lucide-react';
 import AnimatedSection from '../components/ui/AnimatedSection';
 import AblaufDialog from '../components/ui/AblaufDialog';
+import AblaufAngeheftet from '../components/ui/AblaufAngeheftet';
+import AnspruchText from '../components/ui/AnspruchText';
 import CountUp from '../components/ui/CountUp';
+import OeffnendesBild from '../components/ui/OeffnendesBild';
+import ScrollKarte from '../components/ui/ScrollKarte';
 import ServiceCard from '../components/ui/ServiceCard';
-import ServiceImage from '../components/ui/ServiceImage';
+import StaedteWaagerecht from '../components/ui/StaedteWaagerecht';
+import VorteilPunkt from '../components/ui/VorteilPunkt';
 import FAQAccordion from '../components/ui/FAQAccordion';
 import CTASection from '../components/ui/CTASection';
 import EquipmentSection from '../components/ui/EquipmentSection';
@@ -13,8 +20,8 @@ import BranchenSection from '../components/ui/BranchenSection';
 import HeroVideo from '../components/ui/HeroVideo';
 import SEO from '../components/SEO';
 import { featuredServices } from '../data/services';
-import { cities as cityData } from '../data/cities';
 import { seoConfig } from '../config/seoConfig';
+import { begrenzen, useScrollEffekte, useSpalten } from '../lib/scrollEffekte';
 
 const stats = [
   { value: '756+', label: 'Erfolgreiche Einsätze' },
@@ -37,8 +44,6 @@ const processSteps = [
   { num: '04', title: 'Professionelle Reinigung', desc: 'Wir kümmern uns zuverlässig um alles Weitere.' },
 ];
 
-const cities = cityData.map((c) => ({ name: c.name, slug: c.slug }));
-
 const faqs = [
   { question: 'In welchen Regionen sind Sie tätig?', answer: 'KlarWerk Service ist schwerpunktmäßig in Schleswig-Holstein tätig – insbesondere in Kiel, Neumünster, Rendsburg, Preetz und Umgebung. Darüber hinaus sind wir in Hamburg im Einsatz.' },
   { question: 'Für welche Kunden bieten Sie Reinigungsleistungen an?', answer: 'Wir betreuen Unternehmen, medizinische Praxen, Büros, Wohn- und Geschäftshäuser sowie private Immobilien. Unser Angebot richtet sich an gewerbliche und private Kunden gleichermaßen.' },
@@ -59,6 +64,18 @@ const jsonLd = {
 };
 
 export default function Home() {
+  const effekte = useScrollEffekte();
+  const spalten = useSpalten(2, 3);
+
+  // Scroll-Effekt 2: Foto und Video bleiben zurück und zoomen leicht, der Text gleitet nach oben weg.
+  const heroRef = useRef<HTMLElement>(null);
+  const { scrollYProgress: heroP } = useScroll({ target: heroRef, offset: ['start start', 'end start'] });
+  const bildY = useTransform(heroP, (p) => `${(p * 28).toFixed(2)}%`);
+  const bildScale = useTransform(heroP, (p) => 1.04 + p * 0.1);
+  const textY = useTransform(heroP, (p) => p * -150);
+  const textOpacity = useTransform(heroP, (p) => begrenzen(1 - p * 1.7));
+  const abdunkeln = useTransform(heroP, (p) => p * 0.7);
+
   return (
     <div className="bg-paper">
       <SEO
@@ -68,13 +85,18 @@ export default function Home() {
       />
 
       {/* ── 1 HERO ─────────────────────────────────────────────────────────── */}
-      <section className="relative min-h-[85vh] flex items-center overflow-hidden bg-ink">
-        <div
-          className="klar-photo"
-          style={{ backgroundImage: "url('/hero-objektpflege.jpg')" }}
+      <section ref={heroRef} className="relative min-h-[85vh] flex items-center overflow-hidden bg-ink">
+        <motion.div
+          className="absolute inset-0"
+          style={effekte ? { y: bildY, scale: bildScale } : undefined}
           aria-hidden="true"
-        />
-        <HeroVideo src="/hero-objektpflege.mp4" />
+        >
+          <div
+            className="klar-photo"
+            style={{ backgroundImage: "url('/hero-objektpflege.jpg')" }}
+          />
+          <HeroVideo src="/hero-objektpflege.mp4" />
+        </motion.div>
         <div
           className="absolute inset-0 z-[2]"
           style={{
@@ -83,10 +105,15 @@ export default function Home() {
           }}
           aria-hidden="true"
         />
+        <motion.div
+          className="pointer-events-none absolute inset-0 z-[3] bg-paper"
+          style={{ opacity: effekte ? abdunkeln : 0 }}
+          aria-hidden="true"
+        />
 
         {/* Abfolge per CSS (index.css, „Startbereich“): läuft schon im vorgerenderten HTML und wartet beim ersten Besuch auf den Loader. */}
         <div className="relative z-[4] w-full max-w-7xl mx-auto px-6 pt-28 pb-16">
-          <div className="max-w-2xl">
+          <motion.div className="max-w-2xl" style={effekte ? { y: textY, opacity: textOpacity } : undefined}>
             <p className="klw-hero-dach text-sm font-semibold uppercase tracking-widest text-brand-300">
               Gebäudereinigung · Schleswig-Holstein &amp; Hamburg
             </p>
@@ -115,7 +142,7 @@ export default function Home() {
             <div className="klw-hero-info mt-4">
               <AblaufDialog schritte={processSteps} />
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -156,9 +183,9 @@ export default function Home() {
           </AnimatedSection>
           <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {featuredServices.map((service, i) => (
-              <AnimatedSection key={service.id} delay={i * 0.07}>
+              <ScrollKarte key={service.id} spalte={i % spalten}>
                 <ServiceCard service={service} />
-              </AnimatedSection>
+              </ScrollKarte>
             ))}
           </div>
         </div>
@@ -167,18 +194,15 @@ export default function Home() {
       {/* ── 4 BRANCHEN & ZIELGRUPPEN ───────────────────────────────────────── */}
       <BranchenSection />
 
+      {/* ── 4b ANSPRUCH, Wort für Wort ─────────────────────────────────────── */}
+      <AnspruchText />
+
       {/* ── 5 WARUM KLARWERK ───────────────────────────────────────────────── */}
       <section className="py-28 bg-paper">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <AnimatedSection>
-              <ServiceImage
-                src="/Design_ohne_Titel.png"
-                alt="Warum KlarWerk Service"
-                className="rounded-3xl h-[480px] w-full"
-                imgClassName="shadow-xl shadow-slate-900/10"
-              />
-            </AnimatedSection>
+            {/* Seitenverhältnis wie das Foto (1200 × 800), damit nichts angeschnitten wird */}
+            <OeffnendesBild src="/Design_ohne_Titel.png" alt="Warum KlarWerk Service" className="aspect-[3/2] w-full" />
             <AnimatedSection delay={0.1}>
               <span className="text-brand-300 text-sm font-semibold uppercase tracking-widest">
                 Warum wir
@@ -186,20 +210,10 @@ export default function Home() {
               <h2 className="text-4xl md:text-5xl font-black mt-3 tracking-tight">
                 Warum KlarWerk Service?
               </h2>
-              <p className="mt-5 text-slate-300 leading-relaxed">
-                Wir verstehen Gebäudereinigung als professionellen Service – nicht als bloße
-                Dienstleistung. Qualität, Zuverlässigkeit und persönliche Betreuung stehen bei
-                uns an erster Stelle.
-              </p>
+              {/* Der Satz zum Anspruch steht jetzt groß im Abschnitt darüber. */}
               <div className="mt-8 space-y-5">
                 {advantages.map((a) => (
-                  <div key={a.title} className="flex gap-4">
-                    <div className="w-2 h-2 rounded-full bg-brand-600 mt-2 shrink-0" />
-                    <div>
-                      <h4 className="font-bold text-white">{a.title}</h4>
-                      <p className="mt-1 text-sm text-slate-300 leading-relaxed">{a.desc}</p>
-                    </div>
-                  </div>
+                  <VorteilPunkt key={a.title} title={a.title} desc={a.desc} />
                 ))}
               </div>
               <Link
@@ -216,71 +230,14 @@ export default function Home() {
       {/* ── 6 PROFESSIONELLE AUSSTATTUNG ───────────────────────────────────── */}
       <EquipmentSection />
 
-      {/* ── 8 ABLAUF DER ZUSAMMENARBEIT ────────────────────────────────────── */}
-      <section className="py-28 bg-paper">
-        <div className="max-w-7xl mx-auto px-6">
-          <AnimatedSection>
-            <span className="text-brand-300 text-sm font-semibold uppercase tracking-widest">
-              Ablauf
-            </span>
-            <h2 className="text-4xl md:text-5xl font-black mt-3 tracking-tight">
-              So funktioniert die Zusammenarbeit
-            </h2>
-            <p className="mt-4 text-slate-400 text-lg max-w-2xl">
-              In vier einfachen Schritten zu einem sauberen Ergebnis – unkompliziert und transparent.
-            </p>
-          </AnimatedSection>
-          <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {processSteps.map((step, i) => (
-              <AnimatedSection key={step.num} delay={i * 0.09}>
-                <div className="relative bg-paper-100 border border-white/10 rounded-2xl p-7 hover:border-brand-200 shadow-md hover:shadow-md transition-all h-full">
-                  <span className="text-5xl font-black text-slate-100 leading-none">
-                    {step.num}
-                  </span>
-                  <h3 className="mt-3 font-bold text-white">{step.title}</h3>
-                  <p className="mt-2 text-sm text-slate-400 leading-relaxed">{step.desc}</p>
-                  {i < processSteps.length - 1 && (
-                    <div className="hidden lg:flex absolute top-10 -right-3 z-10 w-6 h-6 bg-paper-100 rounded-full border border-white/10 items-center justify-center">
-                      <ArrowRight size={12} className="text-slate-400" />
-                    </div>
-                  )}
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* ── 8 ABLAUF DER ZUSAMMENARBEIT (angeheftet) ──────────────────────── */}
+      <AblaufAngeheftet schritte={processSteps} />
 
       {/* ── 9 KUNDENBEWERTUNGEN ────────────────────────────────────────────── */}
       <GoogleReviewsCarousel />
 
-      {/* ── 10 EINSATZGEBIET ───────────────────────────────────────────────── */}
-      <section className="py-24 bg-paper">
-        <div className="max-w-7xl mx-auto px-6">
-          <AnimatedSection>
-            <span className="text-brand-300 text-sm font-semibold uppercase tracking-widest">
-              Einsatzgebiet
-            </span>
-            <h2 className="text-4xl font-black mt-3 tracking-tight">Unser Einsatzgebiet</h2>
-            <p className="mt-4 text-slate-300 text-lg">
-              Wir sind in ganz Schleswig-Holstein und Hamburg für Sie da – schnell vor Ort, wo Sie uns brauchen.
-            </p>
-          </AnimatedSection>
-          <div className="mt-8 flex flex-wrap gap-3">
-            {cities.map((city, i) => (
-              <AnimatedSection key={city.slug} delay={i * 0.06}>
-                <Link
-                  to={`/einsatzgebiet/${city.slug}`}
-                  className="flex items-center gap-2 bg-paper-100 border border-white/10 hover:border-brand-300 hover:bg-brand-500/15 px-5 py-2.5 rounded-full text-sm font-medium text-slate-200 transition-colors"
-                >
-                  <MapPin size={13} className="text-brand-400" />
-                  {city.name}
-                </Link>
-              </AnimatedSection>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* ── 10 EINSATZGEBIET (Städte waagerecht) ──────────────────────────── */}
+      <StaedteWaagerecht />
 
       {/* ── 11 FAQ ─────────────────────────────────────────────────────────── */}
       <section className="py-28 bg-paper">

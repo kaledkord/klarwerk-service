@@ -15,7 +15,9 @@ import {
   X,
 } from 'lucide-react';
 import { easeOut, easeInOut } from '../../lib/motion';
+import { useSpalten } from '../../lib/scrollEffekte';
 import { services } from '../../data/services';
+import ScrollKarte from './ScrollKarte';
 
 // Logofarben in der Reihenfolge der vier Säulen; jede Reihe der Karten liest sich wie das Logo.
 const LOGOFARBEN = ['#35A1DA', '#F5891F', '#F0552B', '#21A841'];
@@ -82,25 +84,6 @@ const branches = [
 
 const titelVon = (id: string) => services.find((s) => s.id === id)?.title ?? id;
 
-// Spalten wie im Raster unten (Tailwind sm = 640 px, lg = 1024 px). Das Feld mit den
-// Details öffnet sich unter der Reihe der angeklickten Karte und braucht dafür die Spaltenzahl.
-function useSpalten() {
-  const [spalten, setSpalten] = useState(1);
-  useEffect(() => {
-    const lg = window.matchMedia('(min-width: 1024px)');
-    const sm = window.matchMedia('(min-width: 640px)');
-    const aktualisieren = () => setSpalten(lg.matches ? 4 : sm.matches ? 2 : 1);
-    aktualisieren();
-    lg.addEventListener('change', aktualisieren);
-    sm.addEventListener('change', aktualisieren);
-    return () => {
-      lg.removeEventListener('change', aktualisieren);
-      sm.removeEventListener('change', aktualisieren);
-    };
-  }, []);
-  return spalten;
-}
-
 // Inhalt des Felds kommt nacheinander: Titel, Text, Leistungen, Knopf.
 const nacheinander = {
   hidden: {},
@@ -113,7 +96,8 @@ const teil = {
 
 export default function BranchenSection() {
   const [offen, setOffen] = useState<number | null>(null);
-  const spalten = useSpalten();
+  // Spalten wie im Raster unten; das Feld mit den Details öffnet sich unter der Reihe der angeklickten Karte.
+  const spalten = useSpalten(2, 4);
   const basisId = useId();
   const detailId = `${basisId}-detail`;
   const feldRef = useRef<HTMLDivElement | null>(null);
@@ -166,15 +150,13 @@ export default function BranchenSection() {
             const reiheEndetHier = i % spalten === spalten - 1 || i === branches.length - 1;
             return (
               <Fragment key={branche.title}>
+                {/* Scroll-Effekt 3: Karten steigen beim Scrollen auf, Spalte für Spalte versetzt. */}
+                <ScrollKarte spalte={i % spalten}>
                 <motion.div
-                  initial={{ opacity: 0, y: 24 }}
-                  whileInView={{ opacity: 1, y: 0 }}
                   whileHover={istOffen ? undefined : { y: -4, transition: { duration: 0.25, ease: [0.4, 0, 0.2, 1] } }}
-                  viewport={{ once: true, margin: '-60px' }}
-                  transition={{ duration: 0.5, delay: i * 0.07, ease: easeOut }}
                   data-offen={istOffen}
                   style={{ '--c': LOGOFARBEN[i % LOGOFARBEN.length] } as React.CSSProperties}
-                  className="klw-karte bg-paper-100 border border-white/10 rounded-2xl shadow-md transition-[border-color,box-shadow] duration-300"
+                  className="klw-karte h-full bg-paper-100 border border-white/10 rounded-2xl shadow-md transition-[border-color,box-shadow] duration-300"
                 >
                   <button
                     type="button"
@@ -202,6 +184,7 @@ export default function BranchenSection() {
                     </span>
                   </button>
                 </motion.div>
+                </ScrollKarte>
 
                 {/* Feld mit Details über die ganze Breite, direkt unter der Reihe der geöffneten Karte */}
                 {reiheEndetHier && (

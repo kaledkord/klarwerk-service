@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, Phone } from 'lucide-react';
+import WerkzeugHaus from './WerkzeugHaus';
 
 interface Props {
   title?: string;
@@ -19,6 +20,7 @@ export default function CTASection({
   return (
     <section className="py-24 bg-navy-950">
       <div className="max-w-7xl mx-auto px-6 text-center">
+        <WerkzeugHaus className="mx-auto mb-8 w-[min(220px,55vw)]" />
         <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight">{title}</h2>
         <p className="mt-5 text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed">{subtitle}</p>
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4">

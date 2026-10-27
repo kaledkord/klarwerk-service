@@ -2,6 +2,7 @@ import { Outlet, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence, MotionConfig } from 'framer-motion';
 import Header from './Header';
 import Seitenwechsel from './Seitenwechsel';
+import ScrollFortschritt from './ScrollFortschritt';
 import NAPFooter from '../NAP/NAPFooter';
 import NAPHeader from '../NAP/NAPHeader';
 import ScrollToTop from '../ScrollToTop';
@@ -20,6 +21,7 @@ export default function Layout() {
     <MotionConfig reducedMotion="user">
       <div className="flex flex-col min-h-screen">
         <ScrollToTop />
+        <ScrollFortschritt />
         <Seitenwechsel />
         <AnimatedBackground />
         <LocalBusinessSchema />

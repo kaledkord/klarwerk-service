@@ -65,17 +65,20 @@ export default function GoogleReviewsCarousel() {
         </div>
       </AnimatedSection>
 
-      <div
-        className="marquee-viewport relative w-full overflow-hidden"
-        style={{
-          WebkitMaskImage: 'linear-gradient(to right, transparent 0, #000 80px, #000 calc(100% - 80px), transparent 100%)',
-          maskImage: 'linear-gradient(to right, transparent 0, #000 80px, #000 calc(100% - 80px), transparent 100%)',
-        }}
-      >
-        <div className="marquee-track flex gap-5 w-max px-5">
-          {doubled.map((r, i) => (
-            <ReviewCard key={i} {...r} />
-          ))}
+      {/* In der Seitenbreite wie die anderen Abschnitte, nicht über den ganzen Bildschirm. */}
+      <div className="max-w-7xl mx-auto px-6">
+        <div
+          className="marquee-viewport relative w-full overflow-hidden"
+          style={{
+            WebkitMaskImage: 'linear-gradient(to right, transparent 0, #000 64px, #000 calc(100% - 64px), transparent 100%)',
+            maskImage: 'linear-gradient(to right, transparent 0, #000 64px, #000 calc(100% - 64px), transparent 100%)',
+          }}
+        >
+          <div className="marquee-track flex gap-5 w-max py-2">
+            {doubled.map((r, i) => (
+              <ReviewCard key={i} {...r} />
+            ))}
+          </div>
         </div>
       </div>
     </section>

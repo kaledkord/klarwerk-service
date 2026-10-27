@@ -47,7 +47,7 @@ function PlatformIcon({ icon, size = 16 }: { icon: string; size?: number }) {
 }
 
 export default function NAPFooter() {
-  const { phone, email, hours, reviews } = businessConfig;
+  const { phone, email, hours, reviews, address } = businessConfig;
   const footerCities = cities.filter((c) => c.tier === 1).slice(0, 7);
 
   return (
@@ -67,8 +67,15 @@ export default function NAPFooter() {
               <div className="flex items-start gap-2.5">
                 <MapPin size={14} className="shrink-0 text-cyan-400 mt-0.5" />
                 <span>
-                  Gebäudereinigung in Schleswig-Holstein &amp; Hamburg –<br />
-                  tätig in Kiel, Neumünster, Rendsburg, Preetz u.&nbsp;a.
+                  <span className="block text-slate-200">
+                    {address.street}
+                    <br />
+                    {address.zip} {address.city}
+                  </span>
+                  <span className="mt-1.5 block">
+                    Gebäudereinigung in Schleswig-Holstein &amp; Hamburg –
+                    tätig in Kiel, Neumünster, Rendsburg, Preetz u.&nbsp;a.
+                  </span>
                 </span>
               </div>
               <a

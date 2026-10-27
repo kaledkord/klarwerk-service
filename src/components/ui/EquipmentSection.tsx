@@ -20,14 +20,13 @@ function LogoItem({ m }: { m: (typeof manufacturers)[0] }) {
     }
   };
 
+  // Helle Kachel mit dem Logo in Originalfarben: auf dem dunklen Hintergrund waren die
+  // grau gefilterten Logos kaum zu erkennen (dunkle Schrift wie bei Kärcher verschwand ganz).
   return (
-    <div className="marquee-item group relative flex items-center justify-center px-10 md:px-14 flex-shrink-0">
-      <div className="relative flex items-center justify-center transition-transform duration-300 ease-out group-hover:scale-110">
-        {/* Glow */}
-        <div className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-400 blur-xl rounded-full bg-cyan-400/20" />
-
+    <div className="marquee-item group flex-shrink-0 px-3 md:px-4 py-2">
+      <div className="relative flex items-center justify-center h-16 md:h-[4.5rem] w-40 md:w-48 px-5 rounded-2xl bg-white/95 shadow-md shadow-black/30 transition-all duration-300 ease-out group-hover:-translate-y-1 group-hover:bg-white group-hover:shadow-lg">
         {status === 'loading' && (
-          <div className="w-24 h-10 rounded bg-white/10 animate-pulse" />
+          <div className="w-24 h-8 rounded bg-slate-200 animate-pulse" />
         )}
 
         {status !== 'error' && (
@@ -37,25 +36,19 @@ function LogoItem({ m }: { m: (typeof manufacturers)[0] }) {
             loading="lazy"
             onLoad={() => setStatus('loaded')}
             onError={handleError}
-            className={`object-contain h-8 md:h-10 w-auto max-w-[110px] md:max-w-[140px] relative z-10 transition-all duration-300 ${
-              status === 'loaded' ? 'opacity-60 group-hover:opacity-100' : 'opacity-0 absolute'
+            className={`object-contain h-8 md:h-10 w-auto max-w-full transition-opacity duration-300 ${
+              status === 'loaded' ? 'opacity-100' : 'opacity-0 absolute'
             }`}
-            style={{ filter: 'grayscale(100%) contrast(0.8)', transition: 'filter 0.3s, opacity 0.3s' }}
-            onMouseEnter={(e) => ((e.currentTarget as HTMLImageElement).style.filter = 'grayscale(0%) contrast(1)')}
-            onMouseLeave={(e) => ((e.currentTarget as HTMLImageElement).style.filter = 'grayscale(100%) contrast(0.8)')}
           />
         )}
 
         {status === 'error' && (
-          <div className="flex items-center gap-2 opacity-40">
-            <Building2 size={20} className="text-slate-400" />
-            <span className="text-xs font-semibold text-slate-400 whitespace-nowrap">{m.name}</span>
+          <div className="flex items-center gap-2">
+            <Building2 size={20} className="text-slate-500" />
+            <span className="text-xs font-semibold text-slate-600 whitespace-nowrap">{m.name}</span>
           </div>
         )}
       </div>
-
-      {/* Separator dot */}
-      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1 h-1 rounded-full bg-white/30" />
     </div>
   );
 }
@@ -132,7 +125,7 @@ function MarqueeTrack() {
       <motion.div
         ref={trackRef}
         style={{ translateX, willChange: 'transform' }}
-        className="flex items-center py-6"
+        className="flex items-center py-4"
       >
         {loopedItems.map((m, i) => (
           <LogoItem key={`${m.name}-${i}`} m={m} />

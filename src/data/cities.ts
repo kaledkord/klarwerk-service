@@ -8,6 +8,8 @@ export interface City {
   image: string;
   /** Priorität für Sortierung/Signale: 1 = Kernregion SH, 2 = Hamburg, 3 = überregional. */
   tier: 1 | 2 | 3;
+  /** Optionaler eigener Seitentitel (inkl. Marke), sonst „Gebäudereinigung {Ort} | KlarWerk Service“. */
+  seoTitle?: string;
 }
 
 export const cities: City[] = [
@@ -16,7 +18,8 @@ export const cities: City[] = [
     name: 'Bordesholm',
     region: 'Schleswig-Holstein',
     description:
-      'Gebäudereinigung in Bordesholm: professionelle Reinigung für Büros, Praxen, Wohnanlagen und Gewerbe – zuverlässig und persönlich vor Ort.',
+      'Gebäudereinigung mit Firmensitz in Bordesholm: Büros, Praxen und Wohnanlagen im Amt Bordesholm, kurze Wege, fester Ansprechpartner. Angebot anfragen.',
+    seoTitle: 'Gebäudereinigung aus Bordesholm | KlarWerk Service',
     intro:
       'In Bordesholm und im gesamten Amt Bordesholm zwischen Kiel und Neumünster betreut KlarWerk Service Unternehmen, Praxen, Immobilienverwaltungen und private Auftraggeber. Feste Ansprechpartner, verlässliche Termine und gründliche Ergebnisse – von der regelmäßigen Unterhaltsreinigung bis zur einmaligen Grund- und Sonderreinigung.',
     highlights: [
@@ -33,7 +36,8 @@ export const cities: City[] = [
     name: 'Kiel',
     region: 'Schleswig-Holstein',
     description:
-      'Gebäudereinigung in Kiel: Professionelle Reinigung für Büros, Praxen, Wohnanlagen und Geschäftsobjekte. Regelmäßig, zuverlässig und persönlich betreut.',
+      'Gebäudereinigung in Kiel für Büros, Arztpraxen und Geschäftsobjekte: Unterhalts-, Praxis- und Glasreinigung aus einer Hand, mit festem Ansprechpartner.',
+    seoTitle: 'Gebäudereinigung Kiel für Büro & Praxis | KlarWerk Service',
     intro:
       'Als regional verwurzelte Reinigungsfirma bieten wir Gebäudereinigung in Kiel für gewerbliche und private Kunden an. Von der regelmäßigen Büroreinigung über Treppenhausreinigung bis hin zu Glasreinigung und Hausmeisterservice – KlarWerk Service ist Ihr zuverlässiger Partner in der Landeshauptstadt Schleswig-Holsteins.',
     highlights: [
@@ -50,7 +54,7 @@ export const cities: City[] = [
     name: 'Neumünster',
     region: 'Schleswig-Holstein',
     description:
-      'Gebäudereinigung in Neumünster: Professionelle Reinigung für Büros, Praxen und Wohnanlagen. Flexibel, zuverlässig und persönlich betreut.',
+      'Gebäudereinigung in Neumünster für Büros, Praxen und Gewerbe: Unterhalts-, Glas- und Grundreinigung, fester Ansprechpartner, kurze Anfahrt aus Bordesholm.',
     intro:
       'In Neumünster bieten wir umfassende Gebäudereinigung für gewerbliche und private Kunden an. Ob Büroreinigung, Glasreinigung oder Hausmeisterservice – KlarWerk Service sorgt für Sauberkeit in der Mittelstadt zwischen Kiel und Hamburg.',
     highlights: [

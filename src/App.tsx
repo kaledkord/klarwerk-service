@@ -8,6 +8,7 @@ const About = lazy(() => import('./pages/About'));
 const Services = lazy(() => import('./pages/Services'));
 const Contact = lazy(() => import('./pages/Contact'));
 const ServicePage = lazy(() => import('./pages/ServicePage'));
+const LokaleLeistungsseite = lazy(() => import('./pages/LokaleLeistungsseite'));
 const CitiesOverview = lazy(() => import('./pages/CitiesOverview'));
 const CityPage = lazy(() => import('./pages/CityPage'));
 const Sustainability = lazy(() => import('./pages/Sustainability'));
@@ -38,6 +39,7 @@ export default function App() {
           <Route path="ueber-uns" element={<About />} />
           <Route path="leistungen" element={<Services />} />
           <Route path="leistungen/:serviceId" element={<ServicePage />} />
+          <Route path="leistungen/:serviceId/:citySlug" element={<LokaleLeistungsseite />} />
           <Route path="einsatzgebiet" element={<CitiesOverview />} />
           <Route path="einsatzgebiet/:citySlug" element={<CityPage />} />
           <Route path="nachhaltigkeit" element={<Sustainability />} />

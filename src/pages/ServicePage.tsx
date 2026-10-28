@@ -26,6 +26,7 @@ import { businessConfig } from '../config/businessConfig';
 import { getServiceById, services } from '../data/services';
 import { serviceContents } from '../data/serviceContent';
 import { cities } from '../data/cities';
+import { getLokaleSeite, lokalerPfad } from '../data/lokaleSeiten';
 import { useSpalten } from '../lib/scrollEffekte';
 
 const trustItems = [
@@ -382,7 +383,11 @@ export default function ServicePage() {
             {cities.filter((c) => c.tier === 1).map((c, i) => (
               <AnimatedSection key={c.slug} delay={i * 0.05}>
                 <Link
-                  to={`/einsatzgebiet/${c.slug}`}
+                  to={
+                    getLokaleSeite(service.id, c.slug)
+                      ? lokalerPfad({ serviceId: service.id, citySlug: c.slug })
+                      : `/einsatzgebiet/${c.slug}`
+                  }
                   className="flex items-center gap-2 bg-paper-100 border border-white/10 hover:border-brand-200 hover:bg-brand-500/15 px-5 py-2.5 rounded-full text-sm font-medium text-slate-200 transition-colors"
                   aria-label={`${service.title} in ${c.name}`}
                 >

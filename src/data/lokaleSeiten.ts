@@ -16,7 +16,8 @@ export interface LokaleSeite {
   seo: { title: string; description: string; keywords: string };
   h1: string;
   intro: string;
-  bild: { src: string; alt: string };
+  /** Hauptfoto. Ohne `src` wird automatisch das Foto der allgemeinen Leistungsseite genommen. */
+  bild: { src?: string; alt: string };
   /** Kurze Fakten unter dem Hero. */
   eckdaten: { titel: string; text: string }[];
   zielgruppen: { titel: string; text: string }[];
@@ -47,7 +48,7 @@ export const lokaleSeiten: LokaleSeite[] = [
     intro:
       'Ihre Praxis soll morgens sauber, hygienisch und ohne Nachfragen bereitstehen – ob in der Innenstadt, auf dem Westufer oder am Ostufer. KlarWerk Service reinigt Arzt-, Zahnarzt- und Therapiepraxen in Kiel nach Ihrem Hygieneplan, außerhalb der Sprechzeiten und mit einem festen Ansprechpartner, der Ihre Räume kennt. Unser Sitz in Bordesholm liegt nur rund 20 Kilometer südlich von Kiel.',
     bild: {
-      src: 'https://images.unsplash.com/photo-1669101602108-fa5ba89507ee?auto=format&fit=crop&w=900&q=80',
+      // gleiches Foto wie auf /leistungen/praxisreinigung (kommt aus services.ts)
       alt: 'Saubere Praxisräume – Praxisreinigung in Kiel durch KlarWerk Service',
     },
     eckdaten: [

@@ -155,7 +155,7 @@ export default function LokaleLeistungsseite() {
               transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
             >
               <img
-                src={seite.bild.src}
+                src={seite.bild.src ?? service.image}
                 alt={seite.bild.alt}
                 width={720}
                 height={480}

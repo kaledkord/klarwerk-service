@@ -1,0 +1,31 @@
+name: Vorschau (temporär, wird vor dem Merge entfernt)
+
+# Baut den Branch und legt dist/ auf einen eigenen Vorschau-Branch,
+# damit die Seite vor dem Livegang als Bild geprüft werden kann.
+on:
+  push:
+    branches: ['mira/praxisreinigung-kiel']
+
+permissions:
+  contents: write
+
+jobs:
+  vorschau:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - run: npm ci
+      - run: npm run build
+      - name: dist auf Vorschau-Branch legen
+        run: |
+          cd dist
+          git init -q -b vorschau
+          git config user.name "vorschau-bot"
+          git config user.email "actions@github.com"
+          git add -A
+          git commit -qm "Vorschau ${GITHUB_SHA}"
+          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git" vorschau:vorschau/praxisreinigung-kiel

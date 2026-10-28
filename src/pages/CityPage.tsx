@@ -10,6 +10,7 @@ import StaedteWaagerecht from '../components/ui/StaedteWaagerecht';
 import SEO from '../components/SEO';
 import { getCityBySlug } from '../data/cities';
 import { featuredServices } from '../data/services';
+import { getLokaleSeite, lokalerPfad } from '../data/lokaleSeiten';
 import { useSpalten } from '../lib/scrollEffekte';
 
 const PHONE = '+49 176 31287131';
@@ -189,7 +190,11 @@ export default function CityPage() {
             {featuredServices.map((service, i) => (
               <ScrollKarte key={service.id} spalte={i % spaltenLeistungen}>
                 <Link
-                  to={`/leistungen/${service.id}`}
+                  to={
+                    getLokaleSeite(service.id, city.slug)
+                      ? lokalerPfad({ serviceId: service.id, citySlug: city.slug })
+                      : `/leistungen/${service.id}`
+                  }
                   className="block bg-paper-100 border border-white/10 rounded-2xl p-6 hover:border-brand-200 shadow-md hover:shadow-md transition-all h-full group"
                 >
                   <service.icon size={28} className="text-brand-300 mb-4" />

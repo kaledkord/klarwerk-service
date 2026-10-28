@@ -203,9 +203,9 @@ export const serviceContents: Record<string, ServiceContent> = {
       { question: 'Bieten Sie auch die Entsorgung von Praxisabfällen an?', answer: 'Die Entsorgung von Hausmüll übernehmen wir; für medizinische Abfälle arbeiten wir mit zertifizierten Partnern zusammen.' },
     ],
     seo: {
-      title: 'Praxisreinigung Kiel & Neumünster | KlarWerk Service',
+      title: 'Praxisreinigung Neumünster & Rendsburg | KlarWerk Service',
       description:
-        'Praxisreinigung für Arzt- und Therapiepraxen in Kiel, Neumünster und Umgebung: nach Ihren Sprechzeiten, hygienisch, mit festem Ansprechpartner.',
+        'Praxisreinigung für Arzt-, Zahnarzt- und Therapiepraxen in Neumünster, Rendsburg und Umgebung: nach Sprechschluss, hygienisch, fester Ansprechpartner.',
       keywords: `Praxisreinigung, Arztpraxisreinigung, Desinfektion, Hygiene, Reinigung medizinische Einrichtungen, ${localKeywords}`,
     },
   },

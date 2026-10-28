@@ -46,6 +46,8 @@ Schwerpunkt Schleswig-Holstein: Kiel, Neumünster, Rendsburg, Preetz, Plön, Eck
 - [Startseite](https://klarwerk-service.com/)
 - [Leistungen](https://klarwerk-service.com/leistungen)
 - [Glasreinigung](https://klarwerk-service.com/leistungen/glasreinigung)
+- [Praxisreinigung](https://klarwerk-service.com/leistungen/praxisreinigung)
+- [Praxisreinigung in Kiel](https://klarwerk-service.com/leistungen/praxisreinigung/kiel): Arzt-, Zahnarzt- und Therapiepraxen in Kiel und Umland, außerhalb der Sprechzeiten, nach dem Hygieneplan der Praxis
 - [Einsatzgebiet](https://klarwerk-service.com/einsatzgebiet)
 - [Über uns](https://klarwerk-service.com/ueber-uns)
 - [Kontakt](https://klarwerk-service.com/kontakt)

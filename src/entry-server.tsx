@@ -5,6 +5,7 @@ import type { HelmetServerState } from 'react-helmet-async';
 import App from './App';
 import { services } from './data/services';
 import { cities } from './data/cities';
+import { lokaleSeiten, lokalerPfad } from './data/lokaleSeiten';
 
 export interface HelmetContext {
   helmet?: HelmetServerState;
@@ -34,6 +35,7 @@ export const routes: string[] = [
   '/',
   '/leistungen',
   ...services.map((s) => `/leistungen/${s.id}`),
+  ...lokaleSeiten.map(lokalerPfad),
   '/einsatzgebiet',
   ...cities.map((c) => `/einsatzgebiet/${c.slug}`),
   '/ueber-uns',

@@ -25,7 +25,7 @@ export default function CityPage() {
 
   if (!city) return <Navigate to="/" replace />;
 
-  const cityTitle = `Gebäudereinigung ${city.name} | KlarWerk Service`;
+  const cityTitle = city.seoTitle ?? `Gebäudereinigung ${city.name} | KlarWerk Service`;
   const cityDesc = city.description;
 
   const faqs = [

@@ -103,9 +103,9 @@ export const serviceContents: Record<string, ServiceContent> = {
       { question: 'Arbeiten Sie auch außerhalb von Schleswig-Holstein?', answer: 'Unser Schwerpunkt liegt in Schleswig-Holstein rund um Bordesholm, Kiel und Neumünster. Darüber hinaus sind wir in Hamburg tätig; überregionale Anfragen prüfen wir gerne individuell.' },
     ],
     seo: {
-      title: 'Gebäudereinigung in Schleswig-Holstein & Hamburg | KlarWerk Service',
+      title: 'Gebäudereinigung Schleswig-Holstein | KlarWerk Service',
       description:
-        'Professionelle Gebäude­reinigung für Wohn- und Geschäftsobjekte in Schleswig-Holstein & Hamburg. Regelmäßige Reinigung, Treppenhäuser, Gemeinschaftsflächen. Jetzt kostenloses Angebot anfragen.',
+        'Gebäudereinigung für Büros, Praxen, Wohnanlagen und Gewerbe in Kiel, Neumünster und ganz Schleswig-Holstein. Fester Ansprechpartner. Angebot anfragen.',
       keywords: `Gebäudereinigung, Treppenhausreinigung, Wohnungsreinigung, Geschäftsobjekte, ${localKeywords}`,
     },
   },
@@ -128,9 +128,9 @@ export const serviceContents: Record<string, ServiceContent> = {
       { question: 'Wie schnell können Sie starten?', answer: 'Nach der Besichtigung und Angebotsfreigabe starten wir in der Regel innerhalb von ein bis zwei Wochen.' },
     ],
     seo: {
-      title: 'Büroreinigung in Schleswig-Holstein & Hamburg | KlarWerk Service',
+      title: 'Büroreinigung Kiel, Neumünster & SH | KlarWerk Service',
       description:
-        'Zuverlässige Büroreinigung für produktive Arbeitsplätze in Schleswig-Holstein & Hamburg. Schreibtische, Böden, Sanitärbereiche, Küche. Flexible Termine, festes Team. Jetzt anfragen.',
+        'Büroreinigung in Kiel, Neumünster und Umgebung: fester Reinigungsplan, fester Ansprechpartner, Vertretung bei Urlaub und Krankheit. Angebot anfragen.',
       keywords: `Büroreinigung, Büroreinigung Hamburg, Büroreinigung Kiel, Schreibtischreinigung, Bodenpflege, ${localKeywords}`,
     },
   },
@@ -153,9 +153,9 @@ export const serviceContents: Record<string, ServiceContent> = {
       { question: 'Wie wird die Qualität sichergestellt?', answer: 'Wir arbeiten mit Reinigungsplänen und Checklisten und führen regelmäßige Qualitätskontrollen durch – so bleibt das Ergebnis dauerhaft auf hohem Niveau.' },
     ],
     seo: {
-      title: 'Unterhaltsreinigung in Schleswig-Holstein & Hamburg | KlarWerk Service',
+      title: 'Unterhaltsreinigung Kiel & Neumünster | KlarWerk Service',
       description:
-        'Regelmäßige Unterhaltsreinigung für Büros, Praxen & Gewerbe in Schleswig-Holstein & Hamburg. Fester Reinigungsplan, festes Team, gleichbleibende Qualität. Jetzt anfragen.',
+        'Unterhaltsreinigung für Büros, Praxen und Gewerbe in Kiel, Neumünster und Umgebung. Fester Plan, regelmäßige Qualitätskontrollen, ein Ansprechpartner.',
       keywords: `Unterhaltsreinigung, unterhaltsreinigung Kiel, Gebäudereinigung regelmäßig, Büroreinigung Vertrag, ${localKeywords}`,
     },
   },
@@ -178,9 +178,9 @@ export const serviceContents: Record<string, ServiceContent> = {
       { question: 'Was kostet eine Glasreinigung?', answer: 'Die Kosten richten sich nach Anzahl, Größe und Zugänglichkeit der Fenster. Nach einer Besichtigung erhalten Sie ein Festpreis-Angebot.' },
     ],
     seo: {
-      title: 'Glasreinigung & Fensterreinigung in Schleswig-Holstein | KlarWerk Service',
+      title: 'Glasreinigung Kiel, Neumünster & SH | KlarWerk Service',
       description:
-        'Streifenfreie Glas- und Fensterreinigung in Schleswig-Holstein & Hamburg. Fenster, Fassaden, Spiegel. Innen & außen. Flexible Termine, festes Team. Jetzt kostenloses Angebot.',
+        'Glas- und Fensterreinigung für Büros, Praxen und Geschäfte in Kiel, Neumünster und Rendsburg. Innen und außen, feste Termine. Angebot anfragen.',
       keywords: `Glasreinigung, Fensterreinigung, Fassadenreinigung, streifenfreie Reinigung, ${localKeywords}`,
     },
   },
@@ -203,9 +203,9 @@ export const serviceContents: Record<string, ServiceContent> = {
       { question: 'Bieten Sie auch die Entsorgung von Praxisabfällen an?', answer: 'Die Entsorgung von Hausmüll übernehmen wir; für medizinische Abfälle arbeiten wir mit zertifizierten Partnern zusammen.' },
     ],
     seo: {
-      title: 'Praxisreinigung für Arztpraxen in Schleswig-Holstein | KlarWerk Service',
+      title: 'Praxisreinigung Kiel & Neumünster | KlarWerk Service',
       description:
-        'Hygienische Praxisreinigung nach RKI-Standards in Schleswig-Holstein & Hamburg. Wartebereiche, Behandlungsräume, Sanitärbereiche. Desinfektion & Dokumentation. Jetzt anfragen.',
+        'Praxisreinigung für Arzt- und Therapiepraxen in Kiel, Neumünster und Umgebung: nach Ihren Sprechzeiten, hygienisch, mit festem Ansprechpartner.',
       keywords: `Praxisreinigung, Arztpraxisreinigung, Desinfektion, Hygiene, Reinigung medizinische Einrichtungen, ${localKeywords}`,
     },
   },

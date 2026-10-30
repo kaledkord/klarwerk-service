@@ -1,23 +1,6 @@
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import {
-  Activity,
-  ArrowLeft,
-  ArrowRight,
-  Brain,
-  Building2,
-  CheckCircle,
-  ClipboardCheck,
-  FileText,
-  Lock,
-  MapPin,
-  MinusCircle,
-  Phone,
-  Smile,
-  Stethoscope,
-  UserCheck,
-  type LucideIcon,
-} from 'lucide-react';
+import { ArrowLeft, ArrowRight, CheckCircle, MapPin, MinusCircle, Phone } from 'lucide-react';
 import SEO from '../components/SEO';
 import AnimatedSection from '../components/ui/AnimatedSection';
 import AblaufAngeheftet from '../components/ui/AblaufAngeheftet';
@@ -35,12 +18,8 @@ import { useSpalten } from '../lib/scrollEffekte';
 const PHONE = '+49 176 31287131';
 const BASE_URL = businessConfig.url;
 
-// Symbole für die Zielgruppen-Karten, in der Reihenfolge der Daten.
-const ZIELGRUPPEN_ICONS: LucideIcon[] = [Stethoscope, Smile, Activity, Brain, Building2];
-const VERTRAUEN_ICONS: LucideIcon[] = [ClipboardCheck, FileText, Lock, UserCheck];
-
 /**
- * Lokale Leistungsseite (z. B. /leistungen/praxisreinigung/kiel).
+ * Lokale Leistungsseite (z. B. /leistungen/praxisreinigung/kiel, /leistungen/bueroreinigung/kiel).
  * Inhalte kommen vollständig aus src/data/lokaleSeiten.ts – unbekannte Kombinationen
  * leiten auf die allgemeine Leistungsseite weiter.
  */
@@ -60,6 +39,7 @@ export default function LokaleLeistungsseite() {
 
   const pfad = lokalerPfad(seite);
   const titelOrt = `${seite.leistung} in ${seite.ort}`;
+  const { texte, icons } = seite;
 
   const serviceJsonLd = {
     '@context': 'https://schema.org',
@@ -184,17 +164,13 @@ export default function LokaleLeistungsseite() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedSection>
-            <span className="text-brand-300 text-sm font-semibold uppercase tracking-widest">Für Ihre Praxis</span>
-            <h2 className="text-3xl md:text-4xl font-black mt-3 tracking-tight">
-              Jede Praxis in {seite.ort} braucht etwas anderes
-            </h2>
-            <p className="mt-4 text-slate-400 text-lg max-w-2xl">
-              Wir richten Reinigungsplan und Rhythmus nach Ihrer Praxisart aus – nicht nach einer Standardliste.
-            </p>
+            <span className="text-brand-300 text-sm font-semibold uppercase tracking-widest">{texte.zielgruppenLabel}</span>
+            <h2 className="text-3xl md:text-4xl font-black mt-3 tracking-tight">{texte.zielgruppenTitel}</h2>
+            <p className="mt-4 text-slate-400 text-lg max-w-2xl">{texte.zielgruppenText}</p>
           </AnimatedSection>
           <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {seite.zielgruppen.map((z, i) => {
-              const ZIcon = ZIELGRUPPEN_ICONS[i % ZIELGRUPPEN_ICONS.length];
+              const ZIcon = icons.zielgruppen[i % icons.zielgruppen.length];
               return (
                 <ScrollKarte key={z.titel} spalte={i % spaltenGruppen}>
                   <div className="bg-paper-100 border border-white/10 rounded-2xl p-7 h-full shadow-md">
@@ -233,12 +209,10 @@ export default function LokaleLeistungsseite() {
             </AnimatedSection>
             <AnimatedSection className="lg:col-span-2" delay={0.1}>
               <div className="border border-white/10 rounded-2xl p-8 h-full">
-                <h3 className="text-xl font-bold text-white mb-2">Das bleibt bei Ihrem Praxisteam</h3>
-                <p className="text-slate-400 text-sm leading-relaxed mb-6">
-                  Klare Grenzen schützen Patienten, Geräte und Ihre Haftung.
-                </p>
+                <h3 className="text-xl font-bold text-white mb-2">{texte.grenzenTitel}</h3>
+                <p className="text-slate-400 text-sm leading-relaxed mb-6">{texte.grenzenText}</p>
                 <ul className="space-y-4">
-                  {seite.umfang.praxis.map((p) => (
+                  {seite.umfang.beiIhnen.map((p) => (
                     <li key={p} className="flex items-start gap-3 text-slate-300">
                       <MinusCircle size={18} className="text-slate-500 shrink-0 mt-0.5" />
                       <span className="text-sm leading-relaxed">{p}</span>
@@ -274,7 +248,7 @@ export default function LokaleLeistungsseite() {
       {/* ABLAUF */}
       <AblaufAngeheftet
         schritte={seite.ablauf}
-        titel="So starten wir in Ihrer Praxis"
+        titel={texte.ablaufTitel}
         text="Vom ersten Anruf bis zur laufenden Betreuung – in fünf klaren Schritten."
       />
 
@@ -282,14 +256,14 @@ export default function LokaleLeistungsseite() {
       <section className="py-24 bg-navy-950">
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedSection className="text-center mb-14">
-            <span className="text-cyan-400 text-sm font-semibold uppercase tracking-widest">Hygiene &amp; Vertrauen</span>
+            <span className="text-cyan-400 text-sm font-semibold uppercase tracking-widest">{texte.vertrauenLabel}</span>
             <h2 className="mt-3 text-3xl md:text-4xl font-black text-white tracking-tight">
               Worauf Sie sich verlassen können
             </h2>
           </AnimatedSection>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {seite.vertrauen.map((v, i) => {
-              const VIcon = VERTRAUEN_ICONS[i % VERTRAUEN_ICONS.length];
+              const VIcon = icons.vertrauen[i % icons.vertrauen.length];
               return (
                 <ScrollKarte key={v.titel} spalte={i % spaltenVertrauen}>
                   <div className="bg-white/5 border border-white/10 rounded-2xl p-7 h-full">
@@ -342,7 +316,7 @@ export default function LokaleLeistungsseite() {
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedSection>
             <span className="text-brand-300 text-sm font-semibold uppercase tracking-widest">Passt dazu</span>
-            <h2 className="text-3xl md:text-4xl font-black mt-3 tracking-tight">Alles für Ihre Praxis aus einer Hand</h2>
+            <h2 className="text-3xl md:text-4xl font-black mt-3 tracking-tight">{texte.ergaenzungTitel}</h2>
           </AnimatedSection>
           <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {seite.ergaenzungen.map((e, i) => {
@@ -407,7 +381,7 @@ export default function LokaleLeistungsseite() {
 
       <CTASection
         title={`${titelOrt} anfragen`}
-        subtitle={`Wir kommen zur kostenlosen Besichtigung in Ihre Praxis in ${seite.ort} und erstellen Ihnen ein Festpreis-Angebot mit klarem Leistungsverzeichnis.`}
+        subtitle={texte.ctaText}
       />
     </div>
   );

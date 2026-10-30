@@ -255,7 +255,7 @@ export const lokaleSeiten: LokaleSeite[] = [
     leistung: 'Büroreinigung',
     ort: 'Kiel',
     seo: {
-      title: 'Büroreinigung Kiel – fester Ansprechpartner | KlarWerk',
+      title: 'Büroreinigung Kiel nach Feierabend | KlarWerk Service',
       description:
         'Büroreinigung in Kiel für Kanzleien, Agenturen und Bürogebäude: außerhalb der Arbeitszeit, mit festem Ansprechpartner und eingearbeiteter Vertretung.',
       keywords:

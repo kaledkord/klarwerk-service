@@ -162,9 +162,9 @@ export const lokaleSeiten: LokaleSeite[] = [
     ],
     anfahrt: {
       titel: 'Kurze Wege in ganz Kiel',
-      text: 'Von Bordesholm sind wir über die A215 schnell in Kiel. Wir reinigen Praxen in allen Stadtteilen und im direkten Umland – auch dort, wo Sie für Ihre Praxis feste, verlässliche Zeiten brauchen.',
-      westufer: ['Innenstadt & Altstadt', 'Düsternbrook', 'Ravensberg', 'Wik', 'Holtenau', 'Suchsdorf', 'Mettenhof', 'Hassee', 'Russee', 'Friedrichsort', 'Schilksee'],
-      ostufer: ['Gaarden', 'Elmschenhagen', 'Wellingdorf', 'Neumühlen-Dietrichsdorf', 'Ellerbek'],
+      text: 'Von Bordesholm sind wir über die A215 schnell in Kiel. Wir reinigen Praxen im ganzen Stadtgebiet und im direkten Umland – zum Beispiel in Ravensberg, Brunswik, Schreventeich, Hassee und Suchsdorf.',
+      westufer: ['Innenstadt', 'Ravensberg', 'Brunswik', 'Schreventeich', 'Wik', 'Hassee', 'Suchsdorf', 'Südfriedhof', 'Mettenhof', 'Friedrichsort'],
+      ostufer: ['Gaarden-Ost', 'Neumühlen-Dietrichsdorf', 'Wellsee'],
       umland: ['Kronshagen', 'Altenholz', 'Molfsee', 'Flintbek', 'Schwentinental', 'Heikendorf'],
     },
     ablauf: [
@@ -340,10 +340,10 @@ export const lokaleSeiten: LokaleSeite[] = [
       },
     ],
     anfahrt: {
-      titel: 'Büroreinigung in allen Kieler Stadtteilen',
-      text: 'Von Bordesholm sind wir über die A215 schnell in Kiel – in der Innenstadt, auf beiden Ufern der Förde und im direkten Umland. Kurze Wege machen Besichtigung, Kontrollen und kurzfristige Absprachen einfach.',
-      westufer: ['Innenstadt & Altstadt', 'Brunswik', 'Düsternbrook', 'Ravensberg', 'Wik', 'Holtenau', 'Suchsdorf', 'Mettenhof', 'Hassee', 'Russee', 'Friedrichsort'],
-      ostufer: ['Gaarden', 'Elmschenhagen', 'Wellsee', 'Wellingdorf', 'Neumühlen-Dietrichsdorf', 'Ellerbek'],
+      titel: 'Büroreinigung in ganz Kiel',
+      text: 'Von Bordesholm sind wir über die A215 schnell in Kiel – in Bürolagen wie der Wik, Ravensberg, Brunswik und am Südfriedhof ebenso wie in den Gewerbegebieten in Wellsee und Friedrichsort. Kurze Wege machen Besichtigung, Kontrollen und kurzfristige Absprachen einfach.',
+      westufer: ['Innenstadt', 'Wik', 'Ravensberg', 'Brunswik', 'Südfriedhof', 'Schreventeich', 'Suchsdorf', 'Hassee', 'Mettenhof', 'Friedrichsort'],
+      ostufer: ['Wellsee', 'Gaarden-Ost', 'Neumühlen-Dietrichsdorf'],
       umland: ['Kronshagen', 'Altenholz', 'Molfsee', 'Flintbek', 'Schwentinental', 'Heikendorf'],
     },
     ablauf: [

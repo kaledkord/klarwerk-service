@@ -128,10 +128,11 @@ export const serviceContents: Record<string, ServiceContent> = {
       { question: 'Wie schnell können Sie starten?', answer: 'Nach der Besichtigung und Angebotsfreigabe starten wir in der Regel innerhalb von ein bis zwei Wochen.' },
     ],
     seo: {
-      title: 'Büroreinigung Kiel, Neumünster & SH | KlarWerk Service',
+      // Kiel hat eine eigene Seite (/leistungen/bueroreinigung/kiel), deshalb hier Neumünster & Bordesholm.
+      title: 'Büroreinigung Neumünster & Bordesholm | KlarWerk Service',
       description:
-        'Büroreinigung in Kiel, Neumünster und Umgebung: fester Reinigungsplan, fester Ansprechpartner, Vertretung bei Urlaub und Krankheit. Angebot anfragen.',
-      keywords: `Büroreinigung, Büroreinigung Hamburg, Büroreinigung Kiel, Schreibtischreinigung, Bodenpflege, ${localKeywords}`,
+        'Büroreinigung in Neumünster, Bordesholm und Umgebung: fester Reinigungsplan, fester Ansprechpartner, Vertretung bei Urlaub und Krankheit. Jetzt anfragen.',
+      keywords: `Büroreinigung, Büroreinigung Neumünster, Büroreinigung Bordesholm, Schreibtischreinigung, Bodenpflege, ${localKeywords}`,
     },
   },
 

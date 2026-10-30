@@ -6,6 +6,40 @@
  * Ortsbezug. Eine neue Seite kommt nur dazu, wenn sie wirklich eigene Inhalte hat.
  */
 
+import {
+  Activity,
+  Brain,
+  Briefcase,
+  Building2,
+  ClipboardCheck,
+  FileText,
+  KeyRound,
+  Laptop,
+  Lock,
+  Scale,
+  Smile,
+  Stethoscope,
+  Store,
+  UserCheck,
+  Users,
+  type LucideIcon,
+} from 'lucide-react';
+
+/** Überschriften und Zwischentexte, die je nach Leistung anders lauten (Praxis vs. Büro usw.). */
+export interface LokaleTexte {
+  /** Kleine Zeile über den Zielgruppen, z. B. „Für Ihre Praxis“. */
+  zielgruppenLabel: string;
+  zielgruppenTitel: string;
+  zielgruppenText: string;
+  /** Kasten „Das bleibt bei Ihnen“ im Leistungsumfang. */
+  grenzenTitel: string;
+  grenzenText: string;
+  ablaufTitel: string;
+  vertrauenLabel: string;
+  ergaenzungTitel: string;
+  ctaText: string;
+}
+
 export interface LokaleSeite {
   serviceId: string;
   citySlug: string;
@@ -21,7 +55,8 @@ export interface LokaleSeite {
   /** Kurze Fakten unter dem Hero. */
   eckdaten: { titel: string; text: string }[];
   zielgruppen: { titel: string; text: string }[];
-  umfang: { wir: string[]; praxis: string[] };
+  /** `wir`: was wir reinigen. `beiIhnen`: was bewusst beim Kunden bleibt. */
+  umfang: { wir: string[]; beiIhnen: string[] };
   zeiten: { titel: string; text: string; punkte: string[] };
   vertrauen: { titel: string; text: string }[];
   anfahrt: { titel: string; text: string; westufer: string[]; ostufer: string[]; umland: string[] };
@@ -29,6 +64,9 @@ export interface LokaleSeite {
   faqs: { question: string; answer: string }[];
   /** Passende Ergänzungsleistungen (IDs aus services.ts) mit Begründung. */
   ergaenzungen: { serviceId: string; text: string }[];
+  texte: LokaleTexte;
+  /** Symbole für Zielgruppen- und Vertrauenskarten, in der Reihenfolge der Daten. */
+  icons: { zielgruppen: LucideIcon[]; vertrauen: LucideIcon[] };
 }
 
 export const lokaleSeiten: LokaleSeite[] = [
@@ -88,7 +126,7 @@ export const lokaleSeiten: LokaleSeite[] = [
         'Sozialraum und Teeküche, Papierkörbe und Hausmüll',
         'Glasflächen innen: Eingangstür, Glaswände und Spiegel',
       ],
-      praxis: [
+      beiIhnen: [
         'Aufbereitung von Instrumenten und Medizinprodukten',
         'Desinfektion medizinischer Geräte nach Herstellervorgabe',
         'Patientenakten, Unterlagen und Bildschirme – die fassen wir nicht an',
@@ -193,6 +231,201 @@ export const lokaleSeiten: LokaleSeite[] = [
       { serviceId: 'grundreinigung', text: 'Böden gründlich reinigen und neu einpflegen, ideal in den Praxisferien.' },
       { serviceId: 'unterhaltsreinigung', text: 'Für Büro- und Verwaltungsflächen im selben Haus nach festem Plan.' },
     ],
+    texte: {
+      zielgruppenLabel: 'Für Ihre Praxis',
+      zielgruppenTitel: 'Jede Praxis in Kiel braucht etwas anderes',
+      zielgruppenText: 'Wir richten Reinigungsplan und Rhythmus nach Ihrer Praxisart aus – nicht nach einer Standardliste.',
+      grenzenTitel: 'Das bleibt bei Ihrem Praxisteam',
+      grenzenText: 'Klare Grenzen schützen Patienten, Geräte und Ihre Haftung.',
+      ablaufTitel: 'So starten wir in Ihrer Praxis',
+      vertrauenLabel: 'Hygiene & Vertrauen',
+      ergaenzungTitel: 'Alles für Ihre Praxis aus einer Hand',
+      ctaText:
+        'Wir kommen zur kostenlosen Besichtigung in Ihre Praxis in Kiel und erstellen Ihnen ein Festpreis-Angebot mit klarem Leistungsverzeichnis.',
+    },
+    icons: {
+      zielgruppen: [Stethoscope, Smile, Activity, Brain, Building2],
+      vertrauen: [ClipboardCheck, FileText, Lock, UserCheck],
+    },
+  },
+
+  {
+    serviceId: 'bueroreinigung',
+    citySlug: 'kiel',
+    leistung: 'Büroreinigung',
+    ort: 'Kiel',
+    seo: {
+      title: 'Büroreinigung Kiel – fester Ansprechpartner | KlarWerk',
+      description:
+        'Büroreinigung in Kiel für Kanzleien, Agenturen und Bürogebäude: außerhalb der Arbeitszeit, mit festem Ansprechpartner und eingearbeiteter Vertretung.',
+      keywords:
+        'Büroreinigung Kiel, Reinigungsfirma Büro Kiel, Büroreinigung Kanzlei Kiel, Unterhaltsreinigung Büro Kiel, Büroreinigung Kronshagen, Büroreinigung Altenholz',
+    },
+    h1: 'Büroreinigung in Kiel',
+    intro:
+      'Saubere Schreibtische, eine gepflegte Teeküche und frische Sanitärräume – jeden Morgen, ohne dass Sie Reinigung organisieren, kontrollieren oder Ausfälle auffangen müssen. KlarWerk Service reinigt Büros, Kanzleien und Agenturen in Kiel nach festem Plan, außerhalb Ihrer Arbeitszeiten und mit einem festen Ansprechpartner, der Ihre Räume kennt. Unser Sitz in Bordesholm liegt nur rund 20 Kilometer südlich von Kiel.',
+    bild: {
+      // gleiches Foto wie auf /leistungen/bueroreinigung (kommt aus services.ts)
+      alt: 'Gepflegte Büroräume – Büroreinigung in Kiel durch KlarWerk Service',
+    },
+    eckdaten: [
+      { titel: 'Außerhalb der Arbeitszeit', text: 'Abends, früh morgens oder an festen Wochentagen' },
+      { titel: 'Ein fester Ansprechpartner', text: 'Für Plan, Schlüssel, Rückfragen und Kontrollen' },
+      { titel: 'Vertretung, die Ihr Büro kennt', text: 'Bei Urlaub und Krankheit läuft die Reinigung weiter' },
+    ],
+    zielgruppen: [
+      {
+        titel: 'Kanzleien und Steuerbüros',
+        text: 'Mandantengespräche, Akten auf dem Tisch, Diskretion als Pflicht: Wir reinigen freigeräumte Flächen, Böden, Besprechungsraum und Empfang – Unterlagen bleiben, wo sie liegen.',
+      },
+      {
+        titel: 'Agenturen und IT-Büros',
+        text: 'Offene Arbeitsflächen, viel genutzte Teeküche, Besprechungsräume im Dauereinsatz. Hier zählen eine feste Routine für Küche und Sanitär und Böden, die den Tag mitmachen.',
+      },
+      {
+        titel: 'Büros mit Kundenverkehr',
+        text: 'Makler, Versicherungsagenturen, Immobilienbüros: Eingang, Glastür und Wartebereich sind Ihre Visitenkarte und werden bei jeder Reinigung mitgenommen.',
+      },
+      {
+        titel: 'Kleine Büros',
+        text: 'Wenige Arbeitsplätze, überschaubare Fläche: Oft reicht eine Reinigung an ein oder zwei festen Wochentagen – mit genauso festem Ansprechpartner wie bei großen Objekten.',
+      },
+      {
+        titel: 'Bürogebäude und Hausverwaltungen',
+        text: 'Mehrere Mieter, gemeinsame Flure, Treppenhaus und Eingangsbereich: ein Ansprechpartner, ein abgestimmter Plan für Mietflächen und Gemeinschaftsflächen.',
+      },
+    ],
+    umfang: {
+      wir: [
+        'Arbeitsplätze: freigeräumte Schreibtische, Ablagen und Fensterbänke',
+        'Böden in allen Räumen – Hartböden gewischt, Teppichböden gesaugt',
+        'Teeküche: Spüle, Arbeitsflächen, Fronten und Geräte außen',
+        'Sanitärräume gründlich und hygienisch, Verbrauchsmaterial auf Wunsch',
+        'Kontaktflächen wie Türklinken, Lichtschalter und Handläufe',
+        'Empfang, Flure und Besprechungsräume, Papierkörbe und Mülltrennung',
+        'Glas innen: Glastüren, Glaswände und Spiegel',
+      ],
+      beiIhnen: [
+        'Akten, Unterlagen und volle Schreibtische – die räumen wir nicht um',
+        'Geschirr und Spülmaschine, wenn nicht ausdrücklich vereinbart',
+        'Server- und Technikräume nur nach Absprache und Einweisung',
+      ],
+    },
+    zeiten: {
+      titel: 'Reinigung, wenn Ihr Büro leer ist',
+      text: 'Ihr Team soll von der Reinigung nichts merken außer dem Ergebnis. Wie oft wir kommen, hängt von Fläche, Mitarbeiterzahl und Kundenverkehr ab – den Rhythmus legen wir nach der Besichtigung gemeinsam fest.',
+      punkte: [
+        'Abends nach Feierabend',
+        'Früh morgens vor Arbeitsbeginn',
+        'An festen Wochentagen statt täglich, wenn das reicht',
+        'Grundreinigung der Böden in ruhigen Zeiten, etwa zwischen den Jahren',
+      ],
+    },
+    vertrauen: [
+      {
+        titel: 'Ein fester Ansprechpartner',
+        text: 'Pro Objekt eine Person, die Ihre Räume, Wünsche und Besonderheiten kennt. Sie müssen nichts zweimal erklären.',
+      },
+      {
+        titel: 'Regelmäßige Qualitätskontrollen',
+        text: 'Wir prüfen das Ergebnis vor Ort und stimmen Anpassungen mit Ihnen ab – bevor Ihnen etwas auffällt.',
+      },
+      {
+        titel: 'Eingearbeitete Vertretung',
+        text: 'Bei Urlaub und Krankheit übernimmt jemand, der Ihr Büro und den Reinigungsplan kennt. Keine Lücke, keine neue Einweisung.',
+      },
+      {
+        titel: 'Schlüssel in guten Händen',
+        text: 'Schlüssel oder Transponder behandeln wir vertraulich, die Übergabe und Ihre Alarmregelung halten wir schriftlich fest.',
+      },
+    ],
+    anfahrt: {
+      titel: 'Büroreinigung in allen Kieler Stadtteilen',
+      text: 'Von Bordesholm sind wir über die A215 schnell in Kiel – in der Innenstadt, auf beiden Ufern der Förde und im direkten Umland. Kurze Wege machen Besichtigung, Kontrollen und kurzfristige Absprachen einfach.',
+      westufer: ['Innenstadt & Altstadt', 'Brunswik', 'Düsternbrook', 'Ravensberg', 'Wik', 'Holtenau', 'Suchsdorf', 'Mettenhof', 'Hassee', 'Russee', 'Friedrichsort'],
+      ostufer: ['Gaarden', 'Elmschenhagen', 'Wellsee', 'Wellingdorf', 'Neumühlen-Dietrichsdorf', 'Ellerbek'],
+      umland: ['Kronshagen', 'Altenholz', 'Molfsee', 'Flintbek', 'Schwentinental', 'Heikendorf'],
+    },
+    ablauf: [
+      {
+        title: 'Kurze Anfrage',
+        desc: 'Per Telefon, E-Mail oder Formular: Art des Büros, ungefähre Fläche und Ihre Wunschzeiten genügen für den Anfang.',
+      },
+      {
+        title: 'Besichtigung in Ihrem Büro',
+        desc: 'Kostenlos vor Ort in Kiel: Wir gehen Räume, Bodenbeläge, Teeküche und Sanitär gemeinsam durch und klären, was wie oft gereinigt wird.',
+      },
+      {
+        title: 'Festpreis-Angebot',
+        desc: 'Mit klarem Leistungsverzeichnis nach Bereichen und Rhythmus – Sie sehen genau, was Sie bekommen.',
+      },
+      {
+        title: 'Start mit Einweisung',
+        desc: 'Schlüssel- und Alarmregelung, Zeiten, Zuständigkeiten und Reinigungsplan halten wir vor dem ersten Einsatz schriftlich fest.',
+      },
+      {
+        title: 'Laufende Betreuung',
+        desc: 'Fester Ansprechpartner, regelmäßige Kontrollen und eine eingearbeitete Vertretung bei Urlaub oder Krankheit.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Reinigen Sie Büros in ganz Kiel?',
+        answer:
+          'Ja. Wir betreuen Büros in allen Kieler Stadtteilen, vom Westufer bis zum Ostufer, sowie im direkten Umland wie Kronshagen, Altenholz, Molfsee und Schwentinental. Unser Sitz in Bordesholm liegt rund 20 Kilometer südlich von Kiel.',
+      },
+      {
+        question: 'Wann wird unser Büro gereinigt?',
+        answer:
+          'Außerhalb Ihrer Arbeitszeiten: abends nach Feierabend, früh morgens vor Arbeitsbeginn oder an festen Wochentagen. Wir richten uns nach Ihrem Betriebsablauf.',
+      },
+      {
+        question: 'Wie oft sollte ein Büro gereinigt werden?',
+        answer:
+          'Das hängt von Fläche, Mitarbeiterzahl und Kundenverkehr ab. Nach der Besichtigung empfehlen wir Ihnen einen passenden Rhythmus – von täglich bis zu festen Wochentagen.',
+      },
+      {
+        question: 'Wer reinigt bei Urlaub oder Krankheit?',
+        answer:
+          'Eine eingearbeitete Vertretung, die Ihr Büro und den Reinigungsplan kennt. Ihr fester Ansprechpartner bleibt derselbe – Sie müssen nichts neu erklären.',
+      },
+      {
+        question: 'Wie läuft das mit Schlüssel und Alarmanlage?',
+        answer:
+          'Schlüssel oder Transponder behandeln wir vertraulich. Übergabe, Zutrittszeiten und Ihre Alarmregelung halten wir vor dem ersten Einsatz schriftlich fest.',
+      },
+      {
+        question: 'Übernehmen Sie auch die Fenster?',
+        answer:
+          'Glastüren, Glaswände und Spiegel innen gehören zur laufenden Büroreinigung. Fenster innen und außen reinigen wir auf Wunsch als eigenen Termin im Rahmen der Glasreinigung.',
+      },
+      {
+        question: 'Was kostet die Büroreinigung in Kiel?',
+        answer:
+          'Das hängt von Fläche, Bodenbelägen, Ausstattung und Reinigungsrhythmus ab. Nach einer kostenlosen Besichtigung erhalten Sie ein Festpreis-Angebot mit klarem Leistungsverzeichnis – ohne versteckte Kosten.',
+      },
+    ],
+    ergaenzungen: [
+      { serviceId: 'glasreinigung', text: 'Fenster, Glasfassade und Eingangstür – streifenfrei, innen und außen, im festen Turnus.' },
+      { serviceId: 'grundreinigung', text: 'Teppich- und Hartböden gründlich reinigen und neu einpflegen, ideal in ruhigen Wochen.' },
+      { serviceId: 'hausmeisterservice', text: 'Kleine Reparaturen, Kontrollgänge und Außenanlagen für Ihr Bürogebäude.' },
+    ],
+    texte: {
+      zielgruppenLabel: 'Für Ihr Büro',
+      zielgruppenTitel: 'Jedes Büro in Kiel braucht etwas anderes',
+      zielgruppenText: 'Wir richten Reinigungsplan und Rhythmus nach Ihrem Büro aus – nicht nach einer Standardliste.',
+      grenzenTitel: 'Das bleibt bei Ihnen',
+      grenzenText: 'Klare Absprachen schützen Ihre Unterlagen, Ihre Technik und Ihre Abläufe.',
+      ablaufTitel: 'So starten wir in Ihrem Büro',
+      vertrauenLabel: 'Verlässlichkeit',
+      ergaenzungTitel: 'Alles für Ihr Büro aus einer Hand',
+      ctaText:
+        'Wir kommen zur kostenlosen Besichtigung in Ihr Büro in Kiel und erstellen Ihnen ein Festpreis-Angebot mit klarem Leistungsverzeichnis.',
+    },
+    icons: {
+      zielgruppen: [Scale, Laptop, Store, Briefcase, Building2],
+      vertrauen: [UserCheck, ClipboardCheck, Users, KeyRound],
+    },
   },
 ];
 

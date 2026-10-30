@@ -35,6 +35,7 @@ export const siteRoutes = [
   { path: '/leistungen', changefreq: 'monthly', priority: '0.9' },
   { path: '/leistungen/gebaeudereinigung', changefreq: 'monthly', priority: '0.8' },
   { path: '/leistungen/bueroreinigung', changefreq: 'monthly', priority: '0.8' },
+  { path: '/leistungen/bueroreinigung/kiel', changefreq: 'monthly', priority: '0.8' },
   { path: '/leistungen/glasreinigung', changefreq: 'monthly', priority: '0.8' },
   { path: '/leistungen/praxisreinigung', changefreq: 'monthly', priority: '0.8' },
   { path: '/leistungen/praxisreinigung/kiel', changefreq: 'monthly', priority: '0.8' },

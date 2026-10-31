@@ -1344,6 +1344,369 @@ export const lokaleSeiten: LokaleSeite[] = [
       vertrauen: [CalendarCheck, ClipboardCheck, UserCheck, ShieldCheck],
     },
   },
+
+  // ---- Glasreinigung · Kiel ------------------------------------------------------------
+  {
+    serviceId: 'glasreinigung',
+    citySlug: 'kiel',
+    leistung: 'Glasreinigung',
+    ort: 'Kiel',
+    seo: {
+      title: 'Glasreinigung Kiel für Büros & Gewerbe | KlarWerk Service',
+      description:
+        'Glas- und Fensterreinigung in Kiel für Büros, Praxen, Geschäfte und Autohäuser: streifenfrei innen und außen, im Turnus oder einmalig. Jetzt anfragen.',
+      keywords:
+        'Glasreinigung Kiel, Fensterreinigung Kiel, Fensterputzer Kiel, Schaufensterreinigung Kiel, Glasreinigung Büro Kiel, Glasreinigung Kronshagen, Glasreinigung Altenholz',
+    },
+    h1: 'Glasreinigung in Kiel',
+    intro:
+      'An der Förde zeigt sich jede Schliere: Wind und Seeluft legen auf Fenster und Glasfronten schnell einen Film, und im tief stehenden Licht fällt er sofort auf. KlarWerk Service reinigt Fenster und Glasflächen in Kiel streifenfrei, innen und außen, im festen Turnus oder einmalig zum Anlass – für Büros, Praxen, Geschäfte, Autohäuser und Wohnanlagen. Unser Sitz in Bordesholm liegt nur rund 20 Kilometer südlich von Kiel.',
+    bild: {
+      // gleiches Foto wie auf /leistungen/glasreinigung (kommt aus services.ts)
+      alt: 'Streifenfreie Fenster – Glasreinigung in Kiel durch KlarWerk Service',
+    },
+    eckdaten: [
+      { titel: 'Innen und außen', text: 'Scheiben, auf Wunsch mit Rahmen und Fensterbänken' },
+      { titel: 'Fester Turnus oder einmalig', text: 'Regelmäßig über das Jahr oder zum Anlass' },
+      { titel: 'Ein Ansprechpartner', text: 'Termine abgestimmt, auch mit Ihrer laufenden Reinigung' },
+    ],
+    zielgruppen: [
+      {
+        titel: 'Büros und Verwaltungen',
+        text: 'Mehr Tageslicht am Arbeitsplatz und ein gepflegter Eindruck für Besucher: Bürofenster, Glastüren und Glaswände im festen Rhythmus – abgestimmt auf Ihre Arbeitszeiten.',
+      },
+      {
+        titel: 'Praxen',
+        text: 'Praxisfenster, Eingangstür und Glas im Empfang – gereinigt außerhalb der Sprechzeiten, damit Wartezimmer und Behandlung ungestört bleiben.',
+      },
+      {
+        titel: 'Geschäfte und Schaufenster',
+        text: 'In der Innenstadt und in den Einkaufsstraßen entscheidet das Schaufenster, ob jemand stehen bleibt. Scheiben und Eingangstür reinigen wir vor Ladenöffnung oder nach Geschäftsschluss.',
+      },
+      {
+        titel: 'Autohäuser und Ausstellungsflächen',
+        text: 'Große Glasfronten zeigen, was drinnen steht. Wir stimmen die Termine so ab, dass Ausstellung und Verkauf weiterlaufen.',
+      },
+      {
+        titel: 'Wohnanlagen und Hausverwaltungen',
+        text: 'Treppenhausfenster, Haustüren und Glas in Gemeinschaftsbereichen – planbar im Turnus, mit einem Ansprechpartner für die ganze Anlage.',
+      },
+    ],
+    umfang: {
+      wir: [
+        'Fensterscheiben innen und außen, streifenfrei',
+        'Rahmen, Falze und Fensterbänke auf Wunsch',
+        'Schaufenster, Eingangstüren und Glasvordächer, soweit sicher erreichbar',
+        'Glastüren, Glaswände und Trennwände im Innenbereich',
+        'Spiegel und Glas in Empfang, Treppenhaus und Sanitär',
+        'Höher gelegene Flächen mit Teleskop- und Leitersystemen',
+      ],
+      beiIhnen: [
+        'Fensterbänke freiräumen, Deko und Pflanzen zur Seite stellen',
+        'Fassadenflächen, die Hubsteiger oder Gerüst brauchen – nur nach Absprache',
+        'Beschädigte oder undichte Fenster – Auffälliges melden wir, reparieren aber nicht',
+      ],
+    },
+    zeiten: {
+      titel: 'Glasreinigung im passenden Rhythmus',
+      text: 'Seeluft und Wind an der Förde, Pollen im Frühjahr, Regen und Spritzwasser im Herbst: Wie oft sich eine Glasreinigung lohnt, hängt von Lage, Laufkundschaft und Witterung ab. Ein Schaufenster an einer belebten Straße braucht mehr Pflege als ein Bürofenster zum Hof. Den Rhythmus legen wir nach der Besichtigung gemeinsam fest.',
+      punkte: [
+        'Schaufenster und Eingangstüren in kurzen Abständen',
+        'Bürofenster im festen Turnus über das Jahr',
+        'Einmalig nach dem Winter, nach Bauarbeiten oder vor einem Anlass',
+        'Früh morgens vor Ladenöffnung oder nach Geschäftsschluss',
+      ],
+    },
+    vertrauen: [
+      {
+        titel: 'Streifenfrei mit Profi-Technik',
+        text: 'Professionelle Wischtechnik statt Haushaltsmittel – damit die Scheibe auch im Gegenlicht klar bleibt.',
+      },
+      {
+        titel: 'Ein fester Ansprechpartner',
+        text: 'Eine Person für Termine, Rückfragen und Kontrollen. Sie müssen niemandem Ihr Objekt zweimal erklären.',
+      },
+      {
+        titel: 'Sicher in der Höhe',
+        text: 'Teleskop- und Leitersysteme für höher gelegene Fenster. Was nur mit Hubsteiger oder Gerüst geht, klären wir vorab offen.',
+      },
+      {
+        titel: 'Kombinierbar',
+        text: 'Glasreinigung lässt sich mit Büro-, Praxis- oder Unterhaltsreinigung verbinden: ein Plan, ein Ansprechpartner, abgestimmte Termine.',
+      },
+    ],
+    anfahrt: {
+      titel: 'Glasreinigung in ganz Kiel',
+      text: 'Von Bordesholm sind wir über die A215 schnell in Kiel – an den Büro- und Praxisstandorten auf dem Westufer, bei den Geschäften in der Innenstadt und in den Gewerbegebieten auf dem Ostufer. Kurze Wege machen Besichtigung, festen Turnus und kurzfristige Termine einfach.',
+      gruppen: [
+        { titel: 'Kiel Westufer', orte: ['Innenstadt', 'Wik', 'Ravensberg', 'Brunswik', 'Südfriedhof', 'Schreventeich', 'Suchsdorf', 'Hassee', 'Mettenhof', 'Friedrichsort'] },
+        { titel: 'Kiel Ostufer', orte: ['Wellsee', 'Gaarden-Ost', 'Neumühlen-Dietrichsdorf'] },
+      ],
+      umland: ['Kronshagen', 'Altenholz', 'Molfsee', 'Flintbek', 'Schwentinental', 'Heikendorf'],
+    },
+    ablauf: [
+      {
+        title: 'Kurze Anfrage',
+        desc: 'Art des Objekts, ungefähre Zahl und Größe der Fenster – ein paar Fotos genügen für eine erste Einschätzung.',
+      },
+      {
+        title: 'Besichtigung vor Ort',
+        desc: 'Kostenlos in Kiel: Wir sehen uns Glasflächen, Höhen und Zugänge an und klären, was innen und außen dazugehört.',
+      },
+      {
+        title: 'Festpreis-Angebot',
+        desc: 'Ein fester Preis je Termin oder für den Turnus – Sie wissen vorher genau, was Sie zahlen.',
+      },
+      {
+        title: 'Erster Termin',
+        desc: 'Zu einer Zeit, die Ihren Betrieb nicht stört: vor Öffnung, nach Feierabend oder am Wochenende nach Absprache.',
+      },
+      {
+        title: 'Fester Turnus',
+        desc: 'Auf Wunsch kommen wir regelmäßig wieder – Ihr Ansprechpartner hält die Termine im Blick.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Reinigen Sie Fenster in ganz Kiel?',
+        answer:
+          'Ja. Wir sind auf dem Westufer und dem Ostufer unterwegs und im Umland, etwa in Kronshagen, Altenholz, Molfsee und Schwentinental. Unser Sitz in Bordesholm liegt nur rund 20 Kilometer südlich von Kiel.',
+      },
+      {
+        question: 'Wie oft sollten Fenster in Kiel gereinigt werden?',
+        answer:
+          'Das hängt von Lage und Nutzung ab. Nahe am Wasser und an viel befahrenen Straßen setzen sich Fenster schneller zu, Schaufenster und Eingangstüren brauchen kurze Abstände, Bürofenster meist einen festen Turnus über das Jahr. Nach der Besichtigung empfehlen wir einen passenden Rhythmus.',
+      },
+      {
+        question: 'Reinigen Sie auch Fenster in oberen Etagen?',
+        answer:
+          'Ja, soweit sie mit Teleskop- und Leitersystemen sicher erreichbar sind. Flächen, die einen Hubsteiger oder ein Gerüst brauchen, besprechen wir vorab mit Ihnen.',
+      },
+      {
+        question: 'Gehören Rahmen und Fensterbänke dazu?',
+        answer:
+          'Auf Wunsch ja. Rahmen, Falze und Fensterbänke reinigen wir mit, wenn das im Angebot so vereinbart ist.',
+      },
+      {
+        question: 'Können Sie außerhalb der Öffnungszeiten reinigen?',
+        answer:
+          'Ja. Schaufenster und Eingänge reinigen wir gern vor Ladenöffnung oder nach Geschäftsschluss, Praxisfenster außerhalb der Sprechzeiten.',
+      },
+      {
+        question: 'Lässt sich die Glasreinigung mit der Büro- oder Praxisreinigung verbinden?',
+        answer:
+          'Ja. Glas innen kann Teil der laufenden Reinigung sein, Fenster außen kommen im eigenen Turnus dazu – mit einem gemeinsamen Plan und einem Ansprechpartner.',
+      },
+      {
+        question: 'Was kostet die Glasreinigung in Kiel?',
+        answer:
+          'Das hängt von Anzahl, Größe und Erreichbarkeit der Glasflächen ab. Nach einer kostenlosen Besichtigung erhalten Sie ein Festpreis-Angebot – einmalig oder für den Turnus.',
+      },
+    ],
+    ergaenzungen: [
+      { serviceId: 'bueroreinigung', text: 'Büros, Teeküchen und Sanitärräume in Kiel aus einer Hand mit Ihren Fenstern.' },
+      { serviceId: 'praxisreinigung', text: 'Praxisräume nach Hygieneplan, außerhalb der Sprechzeiten – Glas gleich mit eingeplant.' },
+      { serviceId: 'unterhaltsreinigung', text: 'Glas innen gleich in die laufende Reinigung einplanen – mit festem Rhythmus.' },
+    ],
+    texte: {
+      zielgruppenLabel: 'Für Ihr Objekt',
+      zielgruppenTitel: 'Glasflächen in Kiel – je nach Objekt anders',
+      zielgruppenText: 'Ein Schaufenster braucht einen anderen Rhythmus als ein Treppenhausfenster. Wir planen nach Ihrem Objekt.',
+      grenzenTitel: 'Das klären wir vorab',
+      grenzenText: 'Damit am Termin nichts überrascht.',
+      ablaufTitel: 'So läuft Ihre Glasreinigung',
+      vertrauenLabel: 'Qualität',
+      ergaenzungTitel: 'Rund um Ihr Objekt aus einer Hand',
+      ctaText:
+        'Wir sehen uns Ihre Glasflächen in Kiel kostenlos an und erstellen Ihnen ein Festpreis-Angebot – einmalig oder im festen Turnus.',
+    },
+    icons: {
+      zielgruppen: [Building2, Stethoscope, Store, Car, Home],
+      vertrauen: [Sparkles, UserCheck, ShieldCheck, CalendarCheck],
+    },
+  },
+
+  // ---- Büroreinigung · Rendsburg -------------------------------------------------------
+  {
+    serviceId: 'bueroreinigung',
+    citySlug: 'rendsburg',
+    leistung: 'Büroreinigung',
+    ort: 'Rendsburg',
+    seo: {
+      title: 'Büroreinigung Rendsburg nach Feierabend | KlarWerk Service',
+      description:
+        'Büroreinigung in Rendsburg für Kanzleien, Verwaltungen und Betriebe am Kanal: außerhalb der Arbeitszeit, fester Ansprechpartner, eingearbeitete Vertretung.',
+      keywords:
+        'Büroreinigung Rendsburg, Reinigungsfirma Büro Rendsburg, Büroreinigung Kanzlei Rendsburg, Unterhaltsreinigung Büro Rendsburg, Büroreinigung Büdelsdorf, Büroreinigung Osterrönfeld, Büroreinigung Fockbek',
+    },
+    h1: 'Büroreinigung in Rendsburg',
+    intro:
+      'Rendsburg ist Kreisstadt und Verwaltungssitz, Standort von Kanzleien und Dienstleistern und zugleich Industrie- und Hafenstadt am Nord-Ostsee-Kanal. Entsprechend verschieden sind die Büros: vom Altbau in der Altstadt bis zum Bürotrakt im Gewerbegebiet. KlarWerk Service reinigt Büros in Rendsburg nach festem Plan, außerhalb Ihrer Arbeitszeiten und mit einem festen Ansprechpartner, der Ihre Räume kennt. Von Bordesholm aus sind wir über die A7 schnell bei Ihnen.',
+    bild: {
+      // gleiches Foto wie auf /leistungen/bueroreinigung (kommt aus services.ts)
+      alt: 'Saubere Büroräume – Büroreinigung in Rendsburg durch KlarWerk Service',
+    },
+    eckdaten: [
+      { titel: 'Außerhalb der Arbeitszeit', text: 'Nach Büroschluss, früh morgens oder an festen Wochentagen' },
+      { titel: 'Ein fester Ansprechpartner', text: 'Für Plan, Schlüssel, Rückfragen und Kontrollen' },
+      { titel: 'Vertretung, die Ihr Büro kennt', text: 'Bei Urlaub und Krankheit läuft die Reinigung weiter' },
+    ],
+    zielgruppen: [
+      {
+        titel: 'Kanzleien und Steuerbüros',
+        text: 'Mandantengespräche, Akten auf dem Tisch, Diskretion als Pflicht: Wir reinigen freigeräumte Flächen, Böden, Besprechungsraum und Empfang – Unterlagen bleiben, wo sie liegen.',
+      },
+      {
+        titel: 'Verwaltungen und Dienstleister',
+        text: 'Büroetagen mit Empfang, Besprechungsräumen und Teeküche – gereinigt, bevor der erste Termin beginnt, und mit festen Zeiten für Küche und Sanitär.',
+      },
+      {
+        titel: 'Büros in Industrie- und Hafenbetrieben',
+        text: 'Bürotrakt, Sozial- und Pausenräume, Umkleiden und Sanitär am Kanal und in den Gewerbegebieten: Bereiche, die von vielen Menschen genutzt werden und eine feste Routine brauchen.',
+      },
+      {
+        titel: 'Autohäuser mit Verkaufsräumen',
+        text: 'Verkaufsbüros, Kundenbereich und Sanitär im Autohaus – abgestimmt auf Öffnungszeiten und Ausstellung.',
+      },
+      {
+        titel: 'Kleine Büros',
+        text: 'Wenige Arbeitsplätze, überschaubare Fläche: Oft reichen ein oder zwei feste Wochentage – mit genauso festem Ansprechpartner.',
+      },
+    ],
+    umfang: {
+      wir: [
+        'Arbeitsplätze: freigeräumte Schreibtische, Ablagen und Fensterbänke',
+        'Böden in allen Räumen – Hartböden gewischt, Teppichböden gesaugt',
+        'Teeküche, Sozial- und Pausenräume',
+        'Sanitärräume und Umkleiden gründlich und hygienisch',
+        'Kontaktflächen wie Türklinken, Lichtschalter und Handläufe',
+        'Empfang, Flure und Besprechungsräume, Papierkörbe und Mülltrennung',
+        'Glas innen: Glastüren, Glaswände und Spiegel',
+      ],
+      beiIhnen: [
+        'Akten, Unterlagen und volle Schreibtische – die räumen wir nicht um',
+        'Lager-, Werkstatt- und Produktionsflächen – dafür gibt es ein eigenes Angebot',
+        'Server- und Technikräume nur nach Absprache und Einweisung',
+      ],
+    },
+    zeiten: {
+      titel: 'Reinigung, die zu Ihrem Betrieb passt',
+      text: 'Ob klassische Bürozeiten, Publikumsverkehr oder Schichtbetrieb: Wir reinigen dann, wenn die Räume frei sind. Wie oft, hängt von Fläche, Mitarbeiterzahl und Kundenverkehr ab – das legen wir nach der Besichtigung gemeinsam fest.',
+      punkte: [
+        'Abends nach Büroschluss',
+        'Früh morgens vor Arbeitsbeginn',
+        'Im Schichtbetrieb zwischen den Schichten, nach Absprache',
+        'An festen Wochentagen statt täglich, wenn das reicht',
+      ],
+    },
+    vertrauen: [
+      {
+        titel: 'Ein fester Ansprechpartner',
+        text: 'Pro Objekt eine Person, die Ihre Räume und Wünsche kennt – auch wenn Büro, Sozialräume und Umkleiden dazugehören.',
+      },
+      {
+        titel: 'Regelmäßige Qualitätskontrollen',
+        text: 'Wir prüfen das Ergebnis vor Ort und stimmen Anpassungen mit Ihnen ab, bevor Ihnen etwas auffällt.',
+      },
+      {
+        titel: 'Eingearbeitete Vertretung',
+        text: 'Bei Urlaub und Krankheit übernimmt jemand, der Ihr Objekt und den Reinigungsplan kennt. Keine Lücke, keine neue Einweisung.',
+      },
+      {
+        titel: 'Schlüssel in guten Händen',
+        text: 'Schlüssel, Transponder und Alarmregelung halten wir vor dem ersten Einsatz schriftlich fest.',
+      },
+    ],
+    anfahrt: {
+      titel: 'Büroreinigung in ganz Rendsburg',
+      text: 'Von Bordesholm sind wir über die A7 schnell in Rendsburg – in der Altstadt und in Neuwerk, in den Büro- und Wohnlagen nördlich der Eider und in den Gewerbegebieten am Kanal, ebenso in Büdelsdorf, Osterrönfeld und Fockbek. Kurze Wege machen Besichtigung, Kontrollen und kurzfristige Absprachen einfach.',
+      gruppen: [
+        { titel: 'Nördlich der Eider', orte: ['Rendsburg-Nord', 'Mastbrook', 'Rotenhof', 'Kronwerk', 'Duten', 'Seemühlen', 'Suhmsheide'] },
+        { titel: 'An Eider und Kanal', orte: ['Altstadt', 'Neuwerk', 'Parksiedlung', 'Nobiskrug', 'Hoheluft', 'Schleife', 'Hochfeld', 'Kreishafen', 'Rendsburg-Süd', 'Marienhöh'] },
+      ],
+      umland: ['Büdelsdorf', 'Osterrönfeld', 'Westerrönfeld', 'Schacht-Audorf', 'Fockbek', 'Alt Duvenstedt', 'Rickert', 'Nübbel'],
+    },
+    ablauf: [
+      {
+        title: 'Kurze Anfrage',
+        desc: 'Per Telefon, E-Mail oder Formular: Art des Büros, ungefähre Fläche und Ihre Wunschzeiten genügen für den Anfang.',
+      },
+      {
+        title: 'Besichtigung vor Ort',
+        desc: 'Kostenlos in Rendsburg: Wir gehen Büros, Sozialräume, Sanitär und Bodenbeläge gemeinsam durch und klären, was wie oft gereinigt wird.',
+      },
+      {
+        title: 'Festpreis-Angebot',
+        desc: 'Mit klarem Leistungsverzeichnis nach Bereichen und Rhythmus – Sie sehen genau, was Sie bekommen.',
+      },
+      {
+        title: 'Start mit Einweisung',
+        desc: 'Zutritt, Alarmregelung, Zeiten und Zuständigkeiten halten wir vor dem ersten Einsatz schriftlich fest.',
+      },
+      {
+        title: 'Laufende Betreuung',
+        desc: 'Fester Ansprechpartner, regelmäßige Kontrollen und eine eingearbeitete Vertretung bei Urlaub oder Krankheit.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Reinigen Sie Büros in ganz Rendsburg?',
+        answer:
+          'Ja. Wir betreuen Büros in allen Stadtteilen von Rendsburg und in den Nachbargemeinden, etwa in Büdelsdorf, Osterrönfeld, Westerrönfeld und Fockbek. Von unserem Sitz in Bordesholm sind wir über die A7 schnell vor Ort.',
+      },
+      {
+        question: 'Reinigen Sie auch Sozialräume und Umkleiden im Betrieb?',
+        answer:
+          'Ja. Sozial- und Pausenräume, Teeküchen, Umkleiden und Sanitärbereiche nehmen wir in den Reinigungsplan auf. Lager-, Werkstatt- und Produktionsflächen bieten wir getrennt an.',
+      },
+      {
+        question: 'Wann wird gereinigt?',
+        answer:
+          'Außerhalb Ihrer Arbeitszeiten: abends, früh morgens oder – bei Schichtbetrieb – nach Absprache zwischen den Schichten.',
+      },
+      {
+        question: 'Wer reinigt bei Urlaub oder Krankheit?',
+        answer:
+          'Eine eingearbeitete Vertretung, die Ihr Objekt und den Reinigungsplan kennt. Ihr fester Ansprechpartner bleibt derselbe.',
+      },
+      {
+        question: 'Wie läuft das mit Schlüssel und Alarmanlage?',
+        answer:
+          'Schlüssel oder Transponder behandeln wir vertraulich. Übergabe, Zutrittszeiten und Alarmregelung halten wir vor dem ersten Einsatz schriftlich fest.',
+      },
+      {
+        question: 'Übernehmen Sie auch die Fenster?',
+        answer:
+          'Glastüren, Glaswände und Spiegel innen gehören zur laufenden Büroreinigung. Fenster innen und außen reinigen wir auf Wunsch als eigenen Termin im Rahmen der Glasreinigung.',
+      },
+      {
+        question: 'Was kostet die Büroreinigung in Rendsburg?',
+        answer:
+          'Das hängt von Fläche, Bodenbelägen, Ausstattung und Rhythmus ab. Nach einer kostenlosen Besichtigung erhalten Sie ein Festpreis-Angebot mit klarem Leistungsverzeichnis.',
+      },
+    ],
+    ergaenzungen: [
+      { serviceId: 'glasreinigung', text: 'Bürofenster, Glastüren und Eingang – im festen Turnus, innen und außen.' },
+      { serviceId: 'unterhaltsreinigung', text: 'Weitere Bereiche wie Treppenhaus, Lager oder Verkaufsfläche nach festem Plan.' },
+      { serviceId: 'grundreinigung', text: 'Böden und Flächen einmal gründlich aufarbeiten – vor dem Einzug oder zum Jahreswechsel.' },
+    ],
+    texte: {
+      zielgruppenLabel: 'Für Ihr Büro',
+      zielgruppenTitel: 'Büros in Rendsburg – von der Altstadt bis zum Gewerbegebiet am Kanal',
+      zielgruppenText: 'Wir richten Reinigungsplan und Rhythmus nach Ihrem Betrieb aus – nicht nach einer Standardliste.',
+      grenzenTitel: 'Das bleibt bei Ihnen',
+      grenzenText: 'Klare Absprachen schützen Ihre Unterlagen, Ihre Technik und Ihre Abläufe.',
+      ablaufTitel: 'So starten wir in Ihrem Büro',
+      vertrauenLabel: 'Verlässlichkeit',
+      ergaenzungTitel: 'Alles für Ihren Betrieb aus einer Hand',
+      ctaText:
+        'Wir kommen zur kostenlosen Besichtigung in Ihr Büro in Rendsburg und erstellen Ihnen ein Festpreis-Angebot mit klarem Leistungsverzeichnis.',
+    },
+    icons: {
+      zielgruppen: [Scale, Building2, Warehouse, Car, Briefcase],
+      vertrauen: [UserCheck, ClipboardCheck, Users, KeyRound],
+    },
+  },
 ];
 
 export function getLokaleSeite(serviceId: string, citySlug: string): LokaleSeite | undefined {

@@ -58,6 +58,11 @@ export default function StructuredData({
       postalCode: businessConfig.address.zip,
       addressCountry: businessConfig.address.country,
     },
+    // Regionen und die Städte rund um den Sitz Bordesholm (Nähe-Signal, 31.10.2026).
+    areaServed: [
+      ...businessConfig.serviceArea.regions.map((name) => ({ '@type': 'AdministrativeArea', name })),
+      ...['Bordesholm', 'Kiel', 'Neumünster', 'Rendsburg'].map((name) => ({ '@type': 'City', name })),
+    ],
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: businessConfig.phone.raw,

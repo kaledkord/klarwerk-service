@@ -14,7 +14,7 @@ export const seoConfig = {
   '/': {
     title: 'Gebäudereinigung Kiel & Schleswig-Holstein | KlarWerk',
     description:
-      'Gebäudereinigung für Kiel, Neumünster, Rendsburg und ganz Schleswig-Holstein: Büro-, Glas- und Praxisreinigung mit festem Ansprechpartner.',
+      'Gebäudereinigung aus Bordesholm für Kiel, Neumünster, Rendsburg und Schleswig-Holstein: Büro-, Glas- und Praxisreinigung mit festem Ansprechpartner.',
     canonical: '/',
   },
   '/ueber-uns': {

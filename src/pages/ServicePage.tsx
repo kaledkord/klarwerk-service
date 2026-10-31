@@ -1,5 +1,4 @@
 import { useParams, Link, Navigate } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import {
   CheckCircle,
   ArrowRight,
@@ -118,11 +117,7 @@ export default function ServicePage() {
       {/* Hero */}
       <section className="pt-36 pb-16 bg-paper">
         <SeitenKopf className="max-w-7xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-          >
+          <div className="klw-auftritt">
             <Link
               to="/leistungen"
               className="inline-flex items-center gap-1.5 text-sm text-slate-400 hover:text-white transition-colors mb-6"
@@ -160,7 +155,7 @@ export default function ServicePage() {
                 +49 176 31287131
               </a>
             </div>
-          </motion.div>
+          </div>
         </SeitenKopf>
       </section>
 

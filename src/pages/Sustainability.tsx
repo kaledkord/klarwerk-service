@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import { Leaf, Droplets, Recycle, Route, Sprout } from 'lucide-react';
 import AnimatedSection from '../components/ui/AnimatedSection';
 import AnspruchText from '../components/ui/AnspruchText';
@@ -50,7 +49,7 @@ export default function Sustainability() {
       {/* Hero */}
       <section className="pt-36 pb-20 bg-paper">
         <SeitenKopf className="max-w-7xl mx-auto px-6">
-          <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}>
+          <div className="klw-auftritt">
             <span className="text-brand-300 text-sm font-semibold uppercase tracking-widest">Nachhaltigkeit</span>
             <h1 className="mt-3 text-4xl sm:text-5xl md:text-6xl font-black tracking-tight hyphens-auto">
               Sauberkeit mit<br />Verantwortung.
@@ -58,7 +57,7 @@ export default function Sustainability() {
             <p className="mt-6 text-lg text-slate-300 max-w-2xl leading-relaxed">
               Bei KlarWerk Service verbinden wir professionelle Gebäudereinigung mit einem verantwortungsvollen Umgang mit unserer Umwelt. Unser Ziel ist es, hochwertige Reinigungslösungen anzubieten, die nicht nur gründlich reinigen, sondern auch Ressourcen schonen.
             </p>
-          </motion.div>
+          </div>
         </SeitenKopf>
       </section>
 

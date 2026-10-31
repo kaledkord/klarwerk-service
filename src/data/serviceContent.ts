@@ -282,9 +282,9 @@ export const serviceContents: Record<string, ServiceContent> = {
       { question: 'Stellen Sie das Material bereit?', answer: 'Ja, wir bringen alle benötigten Reinigungs- und Pflegemittel sowie die passende Technik mit.' },
     ],
     seo: {
-      title: 'Grundreinigung in Schleswig-Holstein & Hamburg | KlarWerk Service',
+      title: 'Grundreinigung Kiel, Neumünster & SH | KlarWerk Service',
       description:
-        'Intensive Grundreinigung für Wohnungen, Büros & Gewerbe in Schleswig-Holstein & Hamburg. Bodenversiegelung, Desinfektion, Fenster. Vor Einzug oder nach Bauarbeiten. Jetzt anfragen.',
+        'Grundreinigung für Büros, Gewerbe und Wohnungen in Kiel, Neumünster und Schleswig-Holstein: Böden, Sanitär, Fenster, Bodenversiegelung. Festpreis-Angebot.',
       keywords: `Grundreinigung, Intensivreinigung, Bodenversiegelung, Desinfektion, ${localKeywords}`,
     },
   },
@@ -413,9 +413,9 @@ export const serviceContents: Record<string, ServiceContent> = {
       { question: 'Bieten Sie Bodenpflege und Beschichtung an?', answer: 'Ja, wir pflegen und beschichten verschiedene Bodenbeläge für langfristigen Werterhalt.' },
     ],
     seo: {
-      title: 'Schulreinigung für Bildungseinrichtungen in Schleswig-Holstein | KlarWerk Service',
+      title: 'Schulreinigung Kiel, Neumünster & SH | KlarWerk Service',
       description:
-        'Professionelle Schulreinigung in Schleswig-Holstein & Hamburg. Klassenräume, Flure, Sanitäranlagen, Sporthallen, Ferien-Grundreinigung. Hygienische Lernumgebungen. Jetzt anfragen.',
+        'Schulreinigung in Kiel, Neumünster und Schleswig-Holstein: Klassenräume, Flure, Sanitär und Sporthallen außerhalb des Unterrichts, Ferien-Grundreinigung.',
       keywords: `Schulreinigung, Schulreinigung Hamburg, Schulreinigung Kiel, Berufsschulreinigung, Bildungseinrichtung reinigen, ${localKeywords}`,
     },
   },

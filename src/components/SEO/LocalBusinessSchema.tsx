@@ -1,12 +1,14 @@
 import { Helmet } from 'react-helmet-async';
 import { businessConfig, sameAsUrls } from '../../config/businessConfig';
+import { useBewertung } from '../../lib/bewertung';
 
 /**
  * Injects a <script type="application/ld+json"> tag with LocalBusiness + HouseCleaning
  * structured data. Renders globally on every page via Layout.
  */
 export default function LocalBusinessSchema() {
-  const { address, geo, hours, services, serviceArea, reviews, images } = businessConfig;
+  const { address, geo, hours, services, serviceArea, images } = businessConfig;
+  const reviews = useBewertung();
 
   const openingHoursSpecification = hours
     .filter((h) => h.open && h.close)

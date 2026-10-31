@@ -22,6 +22,8 @@ export interface PlatformProfile {
   icon: 'google' | 'facebook' | 'instagram' | 'tiktok';
 }
 
+import { bewertungFallback } from '../data/bewertung';
+
 export const businessConfig = {
   // ── NAP ──────────────────────────────────────────────────────────────────
   name: 'KlarWerk Service',
@@ -114,9 +116,11 @@ export const businessConfig = {
   } as Record<string, string>,
 
   // ── Review/rating aggregate ─────────────────────────────────────────────────
+  // Rückfallwert aus data/bewertung.ts. Angezeigt wird der Live-Wert von Google
+  // (Hook useBewertung in lib/bewertung.ts), solange die Funktion /api/bewertung antwortet.
   reviews: {
-    ratingValue: '5.0',
-    reviewCount: 30,
+    ratingValue: bewertungFallback.ratingValue,
+    reviewCount: bewertungFallback.reviewCount,
   },
 
   // ── Images ──────────────────────────────────────────────────────────────────

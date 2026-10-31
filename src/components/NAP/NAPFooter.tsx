@@ -3,6 +3,8 @@ import { Phone, Mail, MapPin, Clock, Star } from 'lucide-react';
 import { businessConfig, platformProfiles } from '../../config/businessConfig';
 import { cities } from '../../data/cities';
 import { featuredServices } from '../../data/services';
+import { useBewertung } from '../../lib/bewertung';
+import { bewertungAnzeige } from '../../data/bewertung';
 
 function PlatformIcon({ icon, size = 16 }: { icon: string; size?: number }) {
   switch (icon) {
@@ -47,7 +49,8 @@ function PlatformIcon({ icon, size = 16 }: { icon: string; size?: number }) {
 }
 
 export default function NAPFooter() {
-  const { phone, email, hours, reviews, address } = businessConfig;
+  const { phone, email, hours, address } = businessConfig;
+  const bewertung = useBewertung();
   const footerCities = cities.filter((c) => c.tier === 1).slice(0, 7);
 
   return (
@@ -102,7 +105,7 @@ export default function NAPFooter() {
                 ))}
               </div>
               <span className="text-xs text-slate-400">
-                {reviews.ratingValue} ({reviews.reviewCount} Bewertungen)
+                {bewertungAnzeige(bewertung.ratingValue)} ({bewertung.reviewCount} Google-Bewertungen)
               </span>
             </div>
           </div>

@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 import { Star, ExternalLink } from 'lucide-react';
 import { businessConfig } from '../../config/businessConfig';
+import { useBewertung } from '../../lib/bewertung';
+import { bewertungAnzeige } from '../../data/bewertung';
 
 interface ReviewPlatform {
   name: string;
@@ -61,7 +63,7 @@ function PlatformIcon({ icon, size = 28 }: { icon: string; size?: number }) {
 }
 
 export default function ReviewPlatformLinks() {
-  const { reviews } = businessConfig;
+  const reviews = useBewertung();
 
   return (
     <section className="py-24 bg-paper">
@@ -88,7 +90,7 @@ export default function ReviewPlatformLinks() {
           {/* Rating badge */}
           <div className="mt-8 inline-flex items-center gap-4 bg-paper-100 border border-white/10 rounded-2xl px-6 py-3">
             <div className="text-left">
-              <p className="text-3xl font-black text-white leading-none">{reviews.ratingValue}</p>
+              <p className="text-3xl font-black text-white leading-none">{bewertungAnzeige(reviews.ratingValue)}</p>
               <p className="text-xs text-slate-400 mt-0.5">von 5 Punkten</p>
             </div>
             <div className="w-px h-10 bg-white/10" />
@@ -98,7 +100,7 @@ export default function ReviewPlatformLinks() {
                   <Star key={s} size={16} className="text-amber-400 fill-amber-400" />
                 ))}
               </div>
-              <p className="text-xs text-slate-400">{reviews.reviewCount} verifizierte Bewertungen</p>
+              <p className="text-xs text-slate-400">{reviews.reviewCount} Google-Bewertungen</p>
             </div>
           </div>
         </motion.div>

@@ -1,5 +1,6 @@
 import AnimatedSection from './AnimatedSection';
-import { businessConfig } from '../../config/businessConfig';
+import { useBewertung } from '../../lib/bewertung';
+import { bewertungAnzeige } from '../../data/bewertung';
 import { getReviewsForService } from '../../data/reviews';
 
 const GOOGLE_LOGO = (
@@ -35,10 +36,9 @@ export default function ServiceReviews({
   serviceId: string;
   serviceTitle: string;
 }) {
+  const r = useBewertung();
   const items = getReviewsForService(serviceId, 3);
   if (items.length === 0) return null;
-
-  const { reviews: r } = businessConfig;
 
   return (
     <section className="py-24 bg-paper">
@@ -53,8 +53,8 @@ export default function ServiceReviews({
           </p>
           <div className="inline-flex items-center gap-3 bg-paper-100 rounded-full px-5 py-2.5 mt-5 shadow-md border border-white/10">
             <Stars />
-            <span className="text-sm font-bold text-white">{r.ratingValue.replace('.', ',')}</span>
-            <span className="text-sm text-slate-400">· {r.reviewCount}+ Google Bewertungen</span>
+            <span className="text-sm font-bold text-white">{bewertungAnzeige(r.ratingValue)}</span>
+            <span className="text-sm text-slate-400">· {r.reviewCount} Google-Bewertungen</span>
           </div>
         </AnimatedSection>
 

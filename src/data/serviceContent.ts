@@ -206,10 +206,11 @@ export const serviceContents: Record<string, ServiceContent> = {
       { question: 'Bieten Sie auch die Entsorgung von Praxisabfällen an?', answer: 'Die Entsorgung von Hausmüll übernehmen wir; für medizinische Abfälle arbeiten wir mit zertifizierten Partnern zusammen.' },
     ],
     seo: {
-      // Kiel und Neumünster haben eigene Seiten (/leistungen/praxisreinigung/kiel, /neumuenster).
-      title: 'Praxisreinigung Rendsburg & Bordesholm | KlarWerk Service',
+      // Kiel, Neumünster und Rendsburg haben eigene Seiten (/leistungen/praxisreinigung/<stadt>);
+      // die allgemeine Seite trägt deshalb keinen Stadtnamen im Title (Mira, 01.11.2026).
+      title: 'Praxisreinigung in Schleswig-Holstein | KlarWerk Service',
       description:
-        'Praxisreinigung für Arzt-, Zahnarzt- und Therapiepraxen in Rendsburg, Bordesholm und Umgebung: nach Sprechschluss, hygienisch, fester Ansprechpartner.',
+        'Praxisreinigung in Schleswig-Holstein für Arzt-, Zahnarzt- und Therapiepraxen: nach Sprechschluss, nach Hygieneplan, fester Ansprechpartner aus Bordesholm.',
       keywords: `Praxisreinigung, Arztpraxisreinigung, Desinfektion, Hygiene, Reinigung medizinische Einrichtungen, ${localKeywords}`,
     },
   },

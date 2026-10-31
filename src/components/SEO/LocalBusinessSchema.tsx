@@ -1,6 +1,5 @@
 import { Helmet } from 'react-helmet-async';
 import { businessConfig, sameAsUrls } from '../../config/businessConfig';
-import { useBewertung } from '../../lib/bewertung';
 
 /**
  * Injects a <script type="application/ld+json"> tag with LocalBusiness + HouseCleaning
@@ -8,7 +7,6 @@ import { useBewertung } from '../../lib/bewertung';
  */
 export default function LocalBusinessSchema() {
   const { address, geo, hours, services, serviceArea, images } = businessConfig;
-  const reviews = useBewertung();
 
   const openingHoursSpecification = hours
     .filter((h) => h.open && h.close)
@@ -64,13 +62,10 @@ export default function LocalBusinessSchema() {
       longitude: geo.longitude,
     },
     openingHoursSpecification,
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: reviews.ratingValue,
-      reviewCount: reviews.reviewCount,
-      bestRating: '5',
-      worstRating: '1',
-    },
+    // Kein aggregateRating: Googles Richtlinien für Bewertungs-Snippets verlangen auf der
+    // eigenen Seite gesammelte Bewertungen und werten ein LocalBusiness, das sich selbst
+    // bewertet, als Eigenwerbung. Die Google-Zahl steht sichtbar in Fußzeile und
+    // Bewertungsblöcken (lib/bewertung.ts), nicht in den strukturierten Daten.
     hasOfferCatalog: offerCatalog,
     areaServed,
     sameAs: sameAsUrls,

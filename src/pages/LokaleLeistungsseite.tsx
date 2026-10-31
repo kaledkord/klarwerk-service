@@ -289,11 +289,7 @@ export default function LokaleLeistungsseite() {
             <p className="mt-4 text-slate-400 text-lg max-w-2xl">{seite.anfahrt.text}</p>
           </AnimatedSection>
           <div className="mt-10 grid md:grid-cols-3 gap-6">
-            {[
-              { titel: `${seite.ort} Westufer`, orte: seite.anfahrt.westufer },
-              { titel: `${seite.ort} Ostufer`, orte: seite.anfahrt.ostufer },
-              { titel: 'Umland', orte: seite.anfahrt.umland },
-            ].map((gruppe, i) => (
+            {[...seite.anfahrt.gruppen, { titel: 'Umland', orte: seite.anfahrt.umland }].map((gruppe, i) => (
               <AnimatedSection key={gruppe.titel} delay={i * 0.05}>
                 <div className="bg-paper-100 border border-white/10 rounded-2xl p-6 h-full">
                   <h3 className="font-bold text-white mb-4">{gruppe.titel}</h3>
@@ -325,7 +321,7 @@ export default function LokaleLeistungsseite() {
               return (
                 <ScrollKarte key={e.serviceId} spalte={i % spaltenErgaenzung}>
                   <Link
-                    to={`/leistungen/${s.id}`}
+                    to={getLokaleSeite(s.id, seite.citySlug) ? lokalerPfad({ serviceId: s.id, citySlug: seite.citySlug }) : `/leistungen/${s.id}`}
                     className="block bg-paper-100 border border-white/10 rounded-2xl p-6 hover:border-brand-200 shadow-md transition-all h-full group"
                   >
                     <s.icon size={28} className="text-brand-300 mb-4" />

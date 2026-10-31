@@ -613,7 +613,7 @@ export const lokaleSeiten: LokaleSeite[] = [
       grenzenText: 'Damit am Termin nichts überrascht.',
       ablaufTitel: 'So läuft Ihre Glasreinigung',
       vertrauenLabel: 'Qualität',
-      ergaenzungTitel: 'Passt gut dazu',
+      ergaenzungTitel: 'Rund um Ihr Objekt aus einer Hand',
       ctaText:
         'Wir sehen uns Ihre Glasflächen in Neumünster kostenlos an und erstellen Ihnen ein Festpreis-Angebot – einmalig oder im festen Turnus.',
     },
@@ -1155,7 +1155,7 @@ export const lokaleSeiten: LokaleSeite[] = [
       grenzenText: 'Damit das Leistungsverzeichnis klar bleibt.',
       ablaufTitel: 'So starten wir in Ihrem Objekt',
       vertrauenLabel: 'Verlässlichkeit',
-      ergaenzungTitel: 'Passt gut dazu',
+      ergaenzungTitel: 'Ergänzt Ihre laufende Reinigung',
       ctaText:
         'Wir kommen zur kostenlosen Besichtigung in Neumünster und erstellen Ihnen ein Festpreis-Angebot mit klarem Leistungsverzeichnis.',
     },

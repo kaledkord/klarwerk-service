@@ -10,7 +10,7 @@ import LeuchtPunkt from '../components/ui/LeuchtPunkt';
 import ScrollKarte from '../components/ui/ScrollKarte';
 import SeitenKopf from '../components/ui/SeitenKopf';
 import { businessConfig } from '../config/businessConfig';
-import { getLokaleSeite, lokalerPfad } from '../data/lokaleSeiten';
+import { getLokaleSeite, lokaleSeiten, lokaleSeitenFuerStadt, lokalerPfad } from '../data/lokaleSeiten';
 import { getServiceById } from '../data/services';
 import { getCityBySlug } from '../data/cities';
 import { useSpalten } from '../lib/scrollEffekte';
@@ -40,6 +40,9 @@ export default function LokaleLeistungsseite() {
   const pfad = lokalerPfad(seite);
   const titelOrt = `${seite.leistung} in ${seite.ort}`;
   const { texte, icons } = seite;
+  // Querverlinkung der Ortsseiten: weitere Leistungen am selben Ort, gleiche Leistung in anderen Städten.
+  const weitereVorOrt = lokaleSeitenFuerStadt(seite.citySlug).filter((s) => s.serviceId !== seite.serviceId);
+  const gleicheLeistungAnderswo = lokaleSeiten.filter((s) => s.serviceId === seite.serviceId && s.citySlug !== seite.citySlug);
 
   const serviceJsonLd = {
     '@context': 'https://schema.org',
@@ -354,6 +357,52 @@ export default function LokaleLeistungsseite() {
           </AnimatedSection>
         </div>
       </section>
+
+      {/* WEITERE ORTSSEITEN */}
+      {(weitereVorOrt.length > 0 || gleicheLeistungAnderswo.length > 0) && (
+        <section className="pb-12">
+          <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-6">
+            {weitereVorOrt.length > 0 && (
+              <AnimatedSection>
+                <div className="bg-paper-100 border border-white/10 rounded-2xl p-6 h-full">
+                  <h2 className="font-bold text-white mb-4">Weitere Leistungen in {seite.ort}</h2>
+                  <ul className="flex flex-wrap gap-2">
+                    {weitereVorOrt.map((s) => (
+                      <li key={s.serviceId}>
+                        <Link
+                          to={lokalerPfad(s)}
+                          className="inline-flex px-3 py-1.5 rounded-full border border-white/10 text-sm text-slate-300 hover:border-brand-200 hover:text-white transition-colors"
+                        >
+                          {s.leistung} in {s.ort}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </AnimatedSection>
+            )}
+            {gleicheLeistungAnderswo.length > 0 && (
+              <AnimatedSection delay={0.05}>
+                <div className="bg-paper-100 border border-white/10 rounded-2xl p-6 h-full">
+                  <h2 className="font-bold text-white mb-4">{seite.leistung} in weiteren Städten</h2>
+                  <ul className="flex flex-wrap gap-2">
+                    {gleicheLeistungAnderswo.map((s) => (
+                      <li key={s.citySlug}>
+                        <Link
+                          to={lokalerPfad(s)}
+                          className="inline-flex px-3 py-1.5 rounded-full border border-white/10 text-sm text-slate-300 hover:border-brand-200 hover:text-white transition-colors"
+                        >
+                          {s.leistung} in {s.ort}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </AnimatedSection>
+            )}
+          </div>
+        </section>
+      )}
 
       {/* WEITERFÜHRENDE LINKS */}
       <section className="pb-16">

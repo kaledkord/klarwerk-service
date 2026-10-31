@@ -30,13 +30,14 @@ export default function CityPage() {
   const cityDesc = city.description;
 
   const faqs = [
+    ...(city.faqs ?? []),
     {
       question: `Bietet KlarWerk Service Gebäudereinigung in ${city.name} an?`,
       answer: `Ja, KlarWerk Service bietet professionelle Gebäudereinigung in ${city.name} und Umgebung an. Wir betreuen Büros, Praxen, Wohnanlagen und Geschäftsobjekte – regelmäßig, zuverlässig und persönlich betreut.`,
     },
     {
       question: `Welche Leistungen bieten Sie in ${city.name} an?`,
-      answer: `In ${city.name} bieten wir Büroreinigung, Glasreinigung, Treppenhausreinigung, Hausmeisterservice, Gartenpflege, Grundreinigung, Bauendreinigung und Winterdienst an.`,
+      answer: `In ${city.name} bieten wir Büroreinigung, Glasreinigung, Treppenhausreinigung, Hausmeisterservice, Gartenpflege, Grundreinigung und Bauendreinigung an.`,
     },
     {
       question: `Wie erhalte ich ein Angebot für ${city.name}?`,
@@ -117,6 +118,19 @@ export default function CityPage() {
               <p className="mt-6 text-lg text-slate-400 leading-relaxed max-w-xl">
                 {city.intro}
               </p>
+              {city.eigeneSeiten && (
+                <p className="mt-4 text-lg text-slate-400 leading-relaxed max-w-xl">
+                  {city.eigeneSeiten.vorspann}{' '}
+                  {city.eigeneSeiten.links.map((l, i, alle) => (
+                    <span key={l.to}>
+                      <Link to={l.to} className="text-brand-300 font-semibold underline underline-offset-2 hover:no-underline">
+                        {l.label}
+                      </Link>
+                      {i < alle.length - 2 ? ', ' : i === alle.length - 2 ? ' und ' : '.'}
+                    </span>
+                  ))}
+                </p>
+              )}
               <div className="mt-8 flex flex-wrap gap-3">
                 <Link to="/kontakt" className="btn-primary">
                   Kostenloses Angebot
@@ -156,10 +170,23 @@ export default function CityPage() {
           <div className="mt-10 grid sm:grid-cols-2 gap-4">
             {city.highlights.map((h, i) => (
               <ScrollKarte key={i} spalte={i % spaltenHighlights}>
-                <div className="flex h-full items-start gap-3 bg-paper-100 border border-white/10 rounded-xl px-5 py-4">
-                  <CheckCircle size={18} className="text-cyan-500 shrink-0 mt-0.5" />
-                  <p className="text-slate-200 text-sm leading-relaxed">{h}</p>
-                </div>
+                {typeof h === 'string' ? (
+                  <div className="flex h-full items-start gap-3 bg-paper-100 border border-white/10 rounded-xl px-5 py-4">
+                    <CheckCircle size={18} className="text-cyan-500 shrink-0 mt-0.5" />
+                    <p className="text-slate-200 text-sm leading-relaxed">{h}</p>
+                  </div>
+                ) : (
+                  <Link
+                    to={h.to}
+                    className="flex h-full items-start gap-3 bg-paper-100 border border-white/10 hover:border-brand-200 rounded-xl px-5 py-4 transition-colors group"
+                  >
+                    <CheckCircle size={18} className="text-cyan-500 shrink-0 mt-0.5" />
+                    <span className="text-slate-200 group-hover:text-brand-300 text-sm leading-relaxed transition-colors">
+                      {h.text}
+                      <ArrowRight size={14} className="inline ml-1.5 -mt-0.5 opacity-70" />
+                    </span>
+                  </Link>
+                )}
               </ScrollKarte>
             ))}
           </div>
@@ -175,7 +202,7 @@ export default function CityPage() {
               Reinigung & Service in {city.name}
             </h2>
             <p className="mt-4 text-slate-400 text-lg max-w-2xl">
-              Von Büroreinigung bis Winterdienst – wir bieten das komplette Spektrum der Gebäudereinigung in {city.name}.
+              Von Büroreinigung bis Hausmeisterservice – wir bieten das komplette Spektrum der Gebäudereinigung in {city.name}.
             </p>
           </AnimatedSection>
           <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">

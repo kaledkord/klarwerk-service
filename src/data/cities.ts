@@ -1,10 +1,17 @@
+/** Stichpunkt unter „Unsere Reinigungsleistungen in …“, auf Wunsch mit Link auf die passende Seite. */
+export type CityHighlight = string | { text: string; to: string };
+
 export interface City {
   slug: string;
   name: string;
   region: string;
   description: string;
   intro: string;
-  highlights: string[];
+  /** Satz nach der Einleitung mit Links auf die Ortsseiten der Leistungen (nur Städte mit eigenen Seiten). */
+  eigeneSeiten?: { vorspann: string; links: { label: string; to: string }[] };
+  highlights: CityHighlight[];
+  /** Zusätzliche Fragen vor den allgemeinen FAQ der Stadtseite. */
+  faqs?: { question: string; answer: string }[];
   image: string;
   /** Priorität für Sortierung/Signale: 1 = Kernregion SH, 2 = Hamburg, 3 = überregional. */
   tier: 1 | 2 | 3;
@@ -26,7 +33,7 @@ export const cities: City[] = [
       'Reinigung für Gewerbe, Büros und Praxen in Bordesholm',
       'Treppenhaus- und Unterhaltsreinigung für Wohnanlagen im Amt Bordesholm',
       'Feste Ansprechpartner und verlässliche Termine',
-      'Hausmeisterservice, Winterdienst und Gartenpflege aus einer Hand',
+      'Hausmeisterservice und Gartenpflege aus einer Hand',
     ],
     image: '/bilder/leistung-unterhaltsreinigung.jpg',
     tier: 1,
@@ -36,15 +43,30 @@ export const cities: City[] = [
     name: 'Kiel',
     region: 'Schleswig-Holstein',
     description:
-      'Gebäudereinigung in Kiel für Büros, Arztpraxen und Geschäftsobjekte: Unterhalts-, Praxis- und Glasreinigung aus einer Hand, mit festem Ansprechpartner.',
+      'Gebäudereinigung in Kiel: Büro-, Praxis- und Glasreinigung mit festem Ansprechpartner, von Bordesholm in 20 Minuten im ganzen Stadtgebiet und Umland.',
     seoTitle: 'Gebäudereinigung Kiel für Büro & Praxis | KlarWerk Service',
     intro:
-      'Als regional verwurzelte Reinigungsfirma bieten wir Gebäudereinigung in Kiel für gewerbliche und private Kunden an. Von der regelmäßigen Büroreinigung über Treppenhausreinigung bis hin zu Glasreinigung und Hausmeisterservice – KlarWerk Service ist Ihr zuverlässiger Partner in der Landeshauptstadt Schleswig-Holsteins.',
+      'KlarWerk Service reinigt Büros, Praxen, Geschäfte und Wohnanlagen in ganz Kiel – auf dem Westufer von der Innenstadt über Ravensberg, Schreventeich und Wik bis Mettenhof und Friedrichsort, auf dem Ostufer in Gaarden, Neumühlen-Dietrichsdorf und Wellsee. Unser Sitz in Bordesholm liegt rund 20 Kilometer südlich, über die A215 sind wir in 20 Minuten bei Ihnen.',
+    eigeneSeiten: {
+      vorspann: 'Für die drei häufigsten Aufträge haben wir eigene Seiten:',
+      links: [
+        { label: 'Büroreinigung', to: '/leistungen/bueroreinigung/kiel' },
+        { label: 'Praxisreinigung', to: '/leistungen/praxisreinigung/kiel' },
+        { label: 'Glasreinigung in Kiel', to: '/leistungen/glasreinigung/kiel' },
+      ],
+    },
     highlights: [
-      'Büroreinigung für Unternehmen im Kieler Zentrum und Hafenviertel',
-      'Treppenhausreinigung für Wohnanlagen in Kiel und Umgebung',
-      'Glasreinigung für Geschäftsobjekte und Praxen',
-      'Hausmeisterservice für Immobilienverwaltungen in Kiel',
+      { text: 'Büroreinigung in Kiel nach Feierabend', to: '/leistungen/bueroreinigung/kiel' },
+      { text: 'Praxisreinigung in Kiel nach Hygieneplan', to: '/leistungen/praxisreinigung/kiel' },
+      { text: 'Glasreinigung in Kiel, streifenfrei innen und außen', to: '/leistungen/glasreinigung/kiel' },
+      { text: 'Treppenhausreinigung für Wohnanlagen in Kiel', to: '/leistungen/unterhaltsreinigung' },
+    ],
+    faqs: [
+      {
+        question: 'In welchen Stadtteilen von Kiel reinigen Sie?',
+        answer:
+          'Im ganzen Stadtgebiet: auf dem Westufer in der Innenstadt, in Ravensberg, Brunswik, Schreventeich, Wik, Hassee, Suchsdorf, am Südfriedhof, in Mettenhof und Friedrichsort, auf dem Ostufer in Gaarden, Neumühlen-Dietrichsdorf und Wellsee. Dazu kommt das Umland mit Kronshagen, Altenholz, Molfsee, Flintbek, Schwentinental und Heikendorf.',
+      },
     ],
     image: '/bilder/stadt-kiel.jpg',
     tier: 1,
@@ -78,7 +100,7 @@ export const cities: City[] = [
       'Büroreinigung im Rendsburger Stadtgebiet',
       'Glasreinigung für Geschäftsobjekte und Praxen',
       'Treppenhausreinigung für Wohnanlagen in Rendsburg',
-      'Hausmeisterservice mit Winterdienst',
+      'Hausmeisterservice für Wohnanlagen und Gewerbe',
     ],
     image: '/bilder/stadt-rendsburg.jpg',
     tier: 1,
@@ -94,7 +116,7 @@ export const cities: City[] = [
     highlights: [
       'Regelmäßige Reinigung für Wohnanlagen in Preetz',
       'Büroreinigung für kleine und mittlere Unternehmen',
-      'Hausmeisterservice mit Winterdienst',
+      'Hausmeisterservice für Wohnanlagen und Gewerbe',
       'Gartenpflege für Außenanlagen in Preetz',
     ],
     image: '/bilder/stadt-preetz.jpg',
@@ -111,7 +133,7 @@ export const cities: City[] = [
     highlights: [
       'Büroreinigung für Unternehmen in Plön und Eckernförde',
       'Treppenhausreinigung für Wohnanlagen',
-      'Hausmeisterservice mit Winterdienst',
+      'Hausmeisterservice für Wohnanlagen und Gewerbe',
       'Gartenpflege und Außenanlagenpflege',
     ],
     image: '/bilder/stadt-ploen-eckernfoerde.jpg',
@@ -129,7 +151,7 @@ export const cities: City[] = [
       'Büroreinigung im Bad Segeberger Stadtgebiet',
       'Treppenhausreinigung für Wohnanlagen',
       'Glasreinigung für Geschäfte und Praxen',
-      'Hausmeisterservice mit Winterdienst in Bad Segeberg',
+      'Hausmeisterservice für Wohnanlagen in Bad Segeberg',
     ],
     image: '/bilder/stadt-bad-segeberg.jpg',
     tier: 1,
@@ -145,7 +167,7 @@ export const cities: City[] = [
     highlights: [
       'Büroreinigung für Unternehmen in Eutin',
       'Treppenhausreinigung für Wohnanlagen',
-      'Hausmeisterservice mit Winterdienst',
+      'Hausmeisterservice für Wohnanlagen und Gewerbe',
       'Gartenpflege und Außenanlagenpflege in Eutin',
     ],
     image: '/bilder/stadt-eutin.jpg',
@@ -163,7 +185,7 @@ export const cities: City[] = [
       'Büroreinigung im Lübecker Zentrum und Vororten',
       'Glasreinigung für historische und moderne Fassaden',
       'Treppenhausreinigung für Wohnanlagen in Lübeck',
-      'Hausmeisterservice mit Winterdienst',
+      'Hausmeisterservice für Wohnanlagen und Gewerbe',
     ],
     image: '/bilder/stadt-luebeck.jpg',
     tier: 1,
@@ -180,7 +202,7 @@ export const cities: City[] = [
       'Büroreinigung im Hamburger Zentrum und der HafenCity',
       'Glasreinigung für Bürogebäude und Geschäftsobjekte',
       'Treppenhausreinigung für Hamburger Wohnanlagen',
-      'Hausmeisterservice mit Winterdienst in Hamburg',
+      'Hausmeisterservice für Wohnanlagen in Hamburg',
     ],
     image: '/bilder/stadt-hamburg.jpg',
     tier: 2,
@@ -197,7 +219,7 @@ export const cities: City[] = [
       'Büroreinigung in Köln, Düsseldorf und im Ruhrgebiet',
       'Glasreinigung für Bürogebäude und Geschäftsobjekte',
       'Treppenhausreinigung für Wohnanlagen in NRW',
-      'Hausmeisterservice mit Winterdienst',
+      'Hausmeisterservice für Wohnanlagen und Gewerbe',
     ],
     image: '/bilder/stadt-nordrhein-westfalen.jpg',
     tier: 3,

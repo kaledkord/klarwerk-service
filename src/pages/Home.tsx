@@ -32,6 +32,13 @@ const stats = [
   { value: '100%', label: 'Kundenzufriedenheit' },
 ];
 
+/** Städte mit eigener Seite, verlinkt unter den Vertrauenszahlen. */
+const staedteLinks = [
+  { label: 'Gebäudereinigung in Kiel', to: '/einsatzgebiet/kiel' },
+  { label: 'Gebäudereinigung in Neumünster', to: '/einsatzgebiet/neumuenster' },
+  { label: 'Gebäudereinigung in Rendsburg', to: '/einsatzgebiet/rendsburg' },
+];
+
 const advantages = [
   { title: 'Zuverlässiger Service', desc: 'Pünktlich, sorgfältig und immer gemäß Vereinbarung – darauf können Sie sich verlassen.' },
   { title: 'Flexible Terminplanung', desc: 'Wir passen uns Ihrem Zeitplan an. Morgens, abends oder am Wochenende – kein Problem.' },
@@ -182,6 +189,24 @@ export default function Home() {
               </AnimatedSection>
             ))}
           </div>
+          {/* Nähe-Signal für die Suche: Sitz und die drei Städte mit eigener Seite (Konrad/Mira, 31.10.2026). */}
+          <AnimatedSection delay={0.3} className="mt-10 border-t border-white/10 pt-8">
+            <p className="text-slate-300 text-base leading-relaxed max-w-3xl">
+              Wir sitzen in Bordesholm, mitten zwischen Kiel, Neumünster und Rendsburg. Besichtigung, Kontrolle und
+              kurzfristige Absprachen sind so immer kurze Wege.
+            </p>
+            <p className="mt-3 flex flex-wrap gap-x-6 gap-y-2 text-sm font-semibold">
+              {staedteLinks.map((s) => (
+                <Link
+                  key={s.to}
+                  to={s.to}
+                  className="inline-flex items-center gap-1.5 text-brand-300 hover:gap-2.5 transition-all"
+                >
+                  {s.label} <ArrowRight size={14} />
+                </Link>
+              ))}
+            </p>
+          </AnimatedSection>
         </div>
       </section>
 
@@ -193,7 +218,9 @@ export default function Home() {
               Leistungen
             </span>
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mt-3">
-              <h2 className="text-4xl md:text-5xl font-black tracking-tight">Unsere Leistungen</h2>
+              <h2 className="text-4xl md:text-5xl font-black tracking-tight">
+                Gebäudereinigung in Kiel, Neumünster und Rendsburg
+              </h2>
               <Link
                 to="/leistungen"
                 className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-300 hover:gap-2.5 transition-all shrink-0"
@@ -238,7 +265,7 @@ export default function Home() {
                 Warum wir
               </span>
               <h2 className="text-4xl md:text-5xl font-black mt-3 tracking-tight">
-                Warum KlarWerk Service?
+                Warum KlarWerk Service für Ihre Gebäudereinigung?
               </h2>
               {/* Der Satz zum Anspruch steht jetzt groß im Abschnitt darüber. */}
               <div className="mt-8 space-y-5">
@@ -274,7 +301,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto px-6">
           <AnimatedSection className="text-center mb-12">
             <span className="text-brand-300 text-sm font-semibold uppercase tracking-widest">FAQ</span>
-            <h2 className="text-4xl md:text-5xl font-black mt-3 tracking-tight">Häufige Fragen</h2>
+            <h2 className="text-4xl md:text-5xl font-black mt-3 tracking-tight">Häufige Fragen zur Gebäudereinigung</h2>
             <p className="mt-4 text-slate-400 text-lg">
               Antworten auf die häufigsten Fragen rund um unsere Leistungen.
             </p>

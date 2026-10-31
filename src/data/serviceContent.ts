@@ -128,11 +128,11 @@ export const serviceContents: Record<string, ServiceContent> = {
       { question: 'Wie schnell können Sie starten?', answer: 'Nach der Besichtigung und Angebotsfreigabe starten wir in der Regel innerhalb von ein bis zwei Wochen.' },
     ],
     seo: {
-      // Kiel hat eine eigene Seite (/leistungen/bueroreinigung/kiel), deshalb hier Neumünster & Bordesholm.
-      title: 'Büroreinigung Neumünster & Bordesholm | KlarWerk Service',
+      // Kiel und Neumünster haben eigene Seiten (/leistungen/bueroreinigung/kiel, /neumuenster).
+      title: 'Büroreinigung Bordesholm, Rendsburg & SH | KlarWerk Service',
       description:
-        'Büroreinigung in Neumünster, Bordesholm und Umgebung: fester Reinigungsplan, fester Ansprechpartner, Vertretung bei Urlaub und Krankheit. Jetzt anfragen.',
-      keywords: `Büroreinigung, Büroreinigung Neumünster, Büroreinigung Bordesholm, Schreibtischreinigung, Bodenpflege, ${localKeywords}`,
+        'Büroreinigung in Bordesholm, Rendsburg und Schleswig-Holstein: fester Reinigungsplan, fester Ansprechpartner, Vertretung bei Urlaub und Krankheit.',
+      keywords: `Büroreinigung, Büroreinigung Bordesholm, Büroreinigung Rendsburg, Schreibtischreinigung, Bodenpflege, ${localKeywords}`,
     },
   },
 
@@ -154,9 +154,10 @@ export const serviceContents: Record<string, ServiceContent> = {
       { question: 'Wie wird die Qualität sichergestellt?', answer: 'Wir arbeiten mit Reinigungsplänen und Checklisten und führen regelmäßige Qualitätskontrollen durch – so bleibt das Ergebnis dauerhaft auf hohem Niveau.' },
     ],
     seo: {
-      title: 'Unterhaltsreinigung Kiel & Neumünster | KlarWerk Service',
+      // Neumünster hat eine eigene Seite (/leistungen/unterhaltsreinigung/neumuenster).
+      title: 'Unterhaltsreinigung Kiel & Umgebung | KlarWerk Service',
       description:
-        'Unterhaltsreinigung für Büros, Praxen und Gewerbe in Kiel, Neumünster und Umgebung. Fester Plan, regelmäßige Qualitätskontrollen, ein Ansprechpartner.',
+        'Unterhaltsreinigung für Büros, Praxen und Gewerbe in Kiel und Umgebung. Fester Plan, regelmäßige Qualitätskontrollen, ein Ansprechpartner.',
       keywords: `Unterhaltsreinigung, unterhaltsreinigung Kiel, Gebäudereinigung regelmäßig, Büroreinigung Vertrag, ${localKeywords}`,
     },
   },
@@ -179,9 +180,10 @@ export const serviceContents: Record<string, ServiceContent> = {
       { question: 'Was kostet eine Glasreinigung?', answer: 'Die Kosten richten sich nach Anzahl, Größe und Zugänglichkeit der Fenster. Nach einer Besichtigung erhalten Sie ein Festpreis-Angebot.' },
     ],
     seo: {
-      title: 'Glasreinigung Kiel, Neumünster & SH | KlarWerk Service',
+      // Neumünster hat eine eigene Seite (/leistungen/glasreinigung/neumuenster).
+      title: 'Glasreinigung Kiel, Rendsburg & SH | KlarWerk Service',
       description:
-        'Glas- und Fensterreinigung für Büros, Praxen und Geschäfte in Kiel, Neumünster und Rendsburg. Innen und außen, feste Termine. Angebot anfragen.',
+        'Glas- und Fensterreinigung für Büros, Praxen und Geschäfte in Kiel, Rendsburg und Umgebung. Innen und außen, feste Termine. Angebot anfragen.',
       keywords: `Glasreinigung, Fensterreinigung, Fassadenreinigung, streifenfreie Reinigung, ${localKeywords}`,
     },
   },
@@ -204,9 +206,10 @@ export const serviceContents: Record<string, ServiceContent> = {
       { question: 'Bieten Sie auch die Entsorgung von Praxisabfällen an?', answer: 'Die Entsorgung von Hausmüll übernehmen wir; für medizinische Abfälle arbeiten wir mit zertifizierten Partnern zusammen.' },
     ],
     seo: {
-      title: 'Praxisreinigung Neumünster & Rendsburg | KlarWerk Service',
+      // Kiel und Neumünster haben eigene Seiten (/leistungen/praxisreinigung/kiel, /neumuenster).
+      title: 'Praxisreinigung Rendsburg & Bordesholm | KlarWerk Service',
       description:
-        'Praxisreinigung für Arzt-, Zahnarzt- und Therapiepraxen in Neumünster, Rendsburg und Umgebung: nach Sprechschluss, hygienisch, fester Ansprechpartner.',
+        'Praxisreinigung für Arzt-, Zahnarzt- und Therapiepraxen in Rendsburg, Bordesholm und Umgebung: nach Sprechschluss, hygienisch, fester Ansprechpartner.',
       keywords: `Praxisreinigung, Arztpraxisreinigung, Desinfektion, Hygiene, Reinigung medizinische Einrichtungen, ${localKeywords}`,
     },
   },
@@ -304,9 +307,10 @@ export const serviceContents: Record<string, ServiceContent> = {
       { question: 'Stellen Sie Container für den Bauschutt?', answer: 'Die Entsorgung von Reststoffen organisieren wir auf Wunsch gerne für Sie.' },
     ],
     seo: {
-      title: 'Bauendreinigung in Schleswig-Holstein & Hamburg | KlarWerk Service',
+      // Neumünster hat eine eigene Seite (/leistungen/bauendreinigung/neumuenster).
+      title: 'Bauendreinigung Schleswig-Holstein | KlarWerk Service',
       description:
-        'Professionelle Bauendreinigung in Schleswig-Holstein & Hamburg. Baustaub, Farbreste, Fenster, Böden. Sauberer Abschluss nach Bau- und Renovierungsarbeiten. Jetzt anfragen.',
+        'Bauendreinigung in Schleswig-Holstein: Baustaub, Farb- und Mörtelreste, Fenster und Böden – übergabefertig nach Bau und Renovierung. Jetzt anfragen.',
       keywords: `Bauendreinigung, Baureinigung, Baustaub entfernen, Farbreste entfernen, ${localKeywords}`,
     },
   },

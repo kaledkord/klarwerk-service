@@ -34,19 +34,37 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://klarwerk-service.com/leistungen/bueroreinigung/neumuenster</loc>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://klarwerk-service.com/leistungen/glasreinigung</loc>
-    <lastmod>2026-09-14</lastmod>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://klarwerk-service.com/leistungen/glasreinigung/neumuenster</loc>
+    <lastmod>2026-10-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://klarwerk-service.com/leistungen/praxisreinigung</loc>
-    <lastmod>2026-09-14</lastmod>
+    <lastmod>2026-10-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://klarwerk-service.com/leistungen/praxisreinigung/kiel</loc>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://klarwerk-service.com/leistungen/praxisreinigung/neumuenster</loc>
     <lastmod>2026-10-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -59,7 +77,13 @@
   </url>
   <url>
     <loc>https://klarwerk-service.com/leistungen/unterhaltsreinigung</loc>
-    <lastmod>2026-09-14</lastmod>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://klarwerk-service.com/leistungen/unterhaltsreinigung/neumuenster</loc>
+    <lastmod>2026-10-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -77,9 +101,15 @@
   </url>
   <url>
     <loc>https://klarwerk-service.com/leistungen/bauendreinigung</loc>
-    <lastmod>2026-09-14</lastmod>
+    <lastmod>2026-10-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://klarwerk-service.com/leistungen/bauendreinigung/neumuenster</loc>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://klarwerk-service.com/leistungen/winterdienst</loc>

@@ -1,5 +1,6 @@
 import AnimatedSection from './AnimatedSection';
-import { businessConfig } from '../../config/businessConfig';
+import { useBewertung } from '../../lib/bewertung';
+import { bewertungAnzeige } from '../../data/bewertung';
 import { reviews } from '../../data/reviews';
 
 const GOOGLE_LOGO = (
@@ -41,6 +42,7 @@ function ReviewCard({ name, meta, text }: { name: string; meta: string; text: st
 
 export default function GoogleReviewsCarousel() {
   const doubled = [...reviews, ...reviews];
+  const bewertung = useBewertung();
 
   return (
     <section className="py-28 bg-paper overflow-hidden">
@@ -60,8 +62,8 @@ export default function GoogleReviewsCarousel() {
               </svg>
             ))}
           </div>
-          <span className="text-sm font-bold text-white">5,0</span>
-          <span className="text-sm text-slate-400">· {businessConfig.reviews.reviewCount}+ Google Bewertungen</span>
+          <span className="text-sm font-bold text-white">{bewertungAnzeige(bewertung.ratingValue)}</span>
+          <span className="text-sm text-slate-400">· {bewertung.reviewCount} Google-Bewertungen</span>
         </div>
       </AnimatedSection>
 

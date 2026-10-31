@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import { Home, ArrowRight } from 'lucide-react';
 import SEO from '../components/SEO';
 
@@ -12,12 +11,7 @@ export default function NotFound() {
         canonicalPath="/404"
         noindex
       />
-      <motion.div
-        initial={{ opacity: 0, y: 24 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-        className="text-center px-6 max-w-lg"
-      >
+      <div className="klw-auftritt-kurz text-center px-6 max-w-lg">
         <span className="text-8xl font-black text-slate-100 leading-none block">404</span>
         <h1 className="mt-4 text-3xl font-black text-white tracking-tight">
           Seite nicht gefunden
@@ -35,7 +29,7 @@ export default function NotFound() {
             <ArrowRight size={14} />
           </Link>
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 }

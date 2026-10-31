@@ -29,7 +29,13 @@ export default function Layout() {
         <NAPHeader />
         <Header />
         <main className="flex-1">
-          <AnimatePresence mode="wait">
+          {/*
+            initial={false}: Beim ersten Laden steht die vorgerenderte Seite sofort sichtbar da. Vorher lag
+            der Wrapper bis zur Hydration auf opacity:0 (im HTML mitgeliefert) – die Seite blieb leer, bis
+            rund 180 KB JavaScript geladen und ausgeführt waren, und kein Bild zählte für den LCP.
+            Der Übergang zwischen Seiten (Ausblenden, Einblenden) läuft unverändert.
+          */}
+          <AnimatePresence mode="wait" initial={false}>
             <motion.div
               key={location.pathname}
               variants={pageTransition}

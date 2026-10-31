@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import { Leaf, Droplets, Recycle, Route, Sprout } from 'lucide-react';
 import AnimatedSection from '../components/ui/AnimatedSection';
 import AnspruchText from '../components/ui/AnspruchText';
@@ -50,7 +49,7 @@ export default function Sustainability() {
       {/* Hero */}
       <section className="pt-36 pb-20 bg-paper">
         <SeitenKopf className="max-w-7xl mx-auto px-6">
-          <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}>
+          <div className="klw-auftritt">
             <span className="text-brand-300 text-sm font-semibold uppercase tracking-widest">Nachhaltigkeit</span>
             <h1 className="mt-3 text-4xl sm:text-5xl md:text-6xl font-black tracking-tight hyphens-auto">
               Sauberkeit mit<br />Verantwortung.
@@ -58,7 +57,7 @@ export default function Sustainability() {
             <p className="mt-6 text-lg text-slate-300 max-w-2xl leading-relaxed">
               Bei KlarWerk Service verbinden wir professionelle Gebäudereinigung mit einem verantwortungsvollen Umgang mit unserer Umwelt. Unser Ziel ist es, hochwertige Reinigungslösungen anzubieten, die nicht nur gründlich reinigen, sondern auch Ressourcen schonen.
             </p>
-          </motion.div>
+          </div>
         </SeitenKopf>
       </section>
 
@@ -93,7 +92,7 @@ export default function Sustainability() {
       {/* Eco-friendly cleaning */}
       <section className="py-24 bg-paper">
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
-          <OeffnendesBild src="/images.jpg" alt="Umweltfreundliche Reinigung" className="h-[420px] w-full" />
+          <OeffnendesBild src="/bilder/nachhaltigkeit-umwelt.jpg" alt="Umweltfreundliche Reinigung" sizes="(min-width: 1024px) 50vw, 100vw" className="h-[420px] w-full" />
           <AnimatedSection delay={0.1}>
             <h2 className="text-3xl md:text-4xl font-black tracking-tight">Umweltfreundliche Reinigung</h2>
             <p className="mt-5 text-slate-300 leading-relaxed">
@@ -112,8 +111,9 @@ export default function Sustainability() {
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
           <OeffnendesBild
-            src="/1096661_028b195047ea5ccd409ca5192a87c92d.jpg"
+            src="/bilder/nachhaltigkeit-arbeitsweise.jpg"
             alt="Nachhaltige Arbeitsweise"
+            sizes="(min-width: 1024px) 50vw, 100vw"
             className="h-[420px] w-full lg:order-2"
           />
           <AnimatedSection delay={0.1} className="lg:order-1">
@@ -149,8 +149,9 @@ export default function Sustainability() {
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
           <OeffnendesBild
-            src="/landscape-tree-nature-forest-grass-wilderness-911049-pxhere.com.jpg"
+            src="/bilder/nachhaltigkeit-garten.jpg"
             alt="Nachhaltige Gartenpflege"
+            sizes="(min-width: 1024px) 50vw, 100vw"
             className="h-[420px] w-full"
           />
           <AnimatedSection delay={0.1}>

@@ -1,0 +1,206 @@
+{
+  "/bilder/hero-objektpflege.jpg": {
+    "w": 960,
+    "h": 640,
+    "avif": "/bilder/hero-objektpflege-640.avif 640w, /bilder/hero-objektpflege-960.avif 960w, /bilder/hero-objektpflege-1280.avif 1280w, /bilder/hero-objektpflege-1920.avif 1920w",
+    "webp": "/bilder/hero-objektpflege-640.webp 640w, /bilder/hero-objektpflege-960.webp 960w, /bilder/hero-objektpflege-1280.webp 1280w, /bilder/hero-objektpflege-1920.webp 1920w"
+  },
+  "/bilder/leistung-gebaeudereinigung.jpg": {
+    "w": 1200,
+    "h": 1200,
+    "avif": "/bilder/leistung-gebaeudereinigung-480.avif 480w, /bilder/leistung-gebaeudereinigung-800.avif 800w, /bilder/leistung-gebaeudereinigung-1200.avif 1200w, /bilder/leistung-gebaeudereinigung-1600.avif 1600w",
+    "webp": "/bilder/leistung-gebaeudereinigung-480.webp 480w, /bilder/leistung-gebaeudereinigung-800.webp 800w, /bilder/leistung-gebaeudereinigung-1200.webp 1200w, /bilder/leistung-gebaeudereinigung-1600.webp 1600w"
+  },
+  "/bilder/leistung-bueroreinigung.jpg": {
+    "w": 1200,
+    "h": 1200,
+    "avif": "/bilder/leistung-bueroreinigung-480.avif 480w, /bilder/leistung-bueroreinigung-800.avif 800w, /bilder/leistung-bueroreinigung-1200.avif 1200w, /bilder/leistung-bueroreinigung-1600.avif 1600w",
+    "webp": "/bilder/leistung-bueroreinigung-480.webp 480w, /bilder/leistung-bueroreinigung-800.webp 800w, /bilder/leistung-bueroreinigung-1200.webp 1200w, /bilder/leistung-bueroreinigung-1600.webp 1600w"
+  },
+  "/bilder/leistung-unterhaltsreinigung.jpg": {
+    "w": 1200,
+    "h": 800,
+    "avif": "/bilder/leistung-unterhaltsreinigung-480.avif 480w, /bilder/leistung-unterhaltsreinigung-800.avif 800w, /bilder/leistung-unterhaltsreinigung-1200.avif 1200w",
+    "webp": "/bilder/leistung-unterhaltsreinigung-480.webp 480w, /bilder/leistung-unterhaltsreinigung-800.webp 800w, /bilder/leistung-unterhaltsreinigung-1200.webp 1200w"
+  },
+  "/bilder/leistung-glasreinigung.jpg": {
+    "w": 1200,
+    "h": 1200,
+    "avif": "/bilder/leistung-glasreinigung-480.avif 480w, /bilder/leistung-glasreinigung-800.avif 800w, /bilder/leistung-glasreinigung-1200.avif 1200w, /bilder/leistung-glasreinigung-1600.avif 1600w",
+    "webp": "/bilder/leistung-glasreinigung-480.webp 480w, /bilder/leistung-glasreinigung-800.webp 800w, /bilder/leistung-glasreinigung-1200.webp 1200w, /bilder/leistung-glasreinigung-1600.webp 1600w"
+  },
+  "/bilder/leistung-praxisreinigung.jpg": {
+    "w": 1200,
+    "h": 800,
+    "avif": "/bilder/leistung-praxisreinigung-480.avif 480w, /bilder/leistung-praxisreinigung-800.avif 800w, /bilder/leistung-praxisreinigung-1200.avif 1200w, /bilder/leistung-praxisreinigung-1600.avif 1600w",
+    "webp": "/bilder/leistung-praxisreinigung-480.webp 480w, /bilder/leistung-praxisreinigung-800.webp 800w, /bilder/leistung-praxisreinigung-1200.webp 1200w, /bilder/leistung-praxisreinigung-1600.webp 1600w"
+  },
+  "/bilder/leistung-hausmeisterservice.jpg": {
+    "w": 1200,
+    "h": 778,
+    "avif": "/bilder/leistung-hausmeisterservice-480.avif 480w, /bilder/leistung-hausmeisterservice-800.avif 800w, /bilder/leistung-hausmeisterservice-1200.avif 1200w, /bilder/leistung-hausmeisterservice-1600.avif 1600w",
+    "webp": "/bilder/leistung-hausmeisterservice-480.webp 480w, /bilder/leistung-hausmeisterservice-800.webp 800w, /bilder/leistung-hausmeisterservice-1200.webp 1200w, /bilder/leistung-hausmeisterservice-1600.webp 1600w"
+  },
+  "/bilder/leistung-gartenpflege.jpg": {
+    "w": 1200,
+    "h": 800,
+    "avif": "/bilder/leistung-gartenpflege-480.avif 480w, /bilder/leistung-gartenpflege-800.avif 800w, /bilder/leistung-gartenpflege-1200.avif 1200w, /bilder/leistung-gartenpflege-1600.avif 1600w",
+    "webp": "/bilder/leistung-gartenpflege-480.webp 480w, /bilder/leistung-gartenpflege-800.webp 800w, /bilder/leistung-gartenpflege-1200.webp 1200w, /bilder/leistung-gartenpflege-1600.webp 1600w"
+  },
+  "/bilder/leistung-grundreinigung.jpg": {
+    "w": 1200,
+    "h": 800,
+    "avif": "/bilder/leistung-grundreinigung-480.avif 480w, /bilder/leistung-grundreinigung-800.avif 800w, /bilder/leistung-grundreinigung-1200.avif 1200w, /bilder/leistung-grundreinigung-1600.avif 1600w",
+    "webp": "/bilder/leistung-grundreinigung-480.webp 480w, /bilder/leistung-grundreinigung-800.webp 800w, /bilder/leistung-grundreinigung-1200.webp 1200w, /bilder/leistung-grundreinigung-1600.webp 1600w"
+  },
+  "/bilder/leistung-bauendreinigung.jpg": {
+    "w": 1200,
+    "h": 800,
+    "avif": "/bilder/leistung-bauendreinigung-480.avif 480w, /bilder/leistung-bauendreinigung-800.avif 800w, /bilder/leistung-bauendreinigung-1200.avif 1200w, /bilder/leistung-bauendreinigung-1313.avif 1313w",
+    "webp": "/bilder/leistung-bauendreinigung-480.webp 480w, /bilder/leistung-bauendreinigung-800.webp 800w, /bilder/leistung-bauendreinigung-1200.webp 1200w, /bilder/leistung-bauendreinigung-1313.webp 1313w"
+  },
+  "/bilder/leistung-winterdienst.jpg": {
+    "w": 1200,
+    "h": 800,
+    "avif": "/bilder/leistung-winterdienst-480.avif 480w, /bilder/leistung-winterdienst-800.avif 800w, /bilder/leistung-winterdienst-1200.avif 1200w, /bilder/leistung-winterdienst-1600.avif 1600w",
+    "webp": "/bilder/leistung-winterdienst-480.webp 480w, /bilder/leistung-winterdienst-800.webp 800w, /bilder/leistung-winterdienst-1200.webp 1200w, /bilder/leistung-winterdienst-1600.webp 1600w"
+  },
+  "/bilder/leistung-entruempelung.jpg": {
+    "w": 1200,
+    "h": 675,
+    "avif": "/bilder/leistung-entruempelung-480.avif 480w, /bilder/leistung-entruempelung-800.avif 800w, /bilder/leistung-entruempelung-1200.avif 1200w, /bilder/leistung-entruempelung-1430.avif 1430w",
+    "webp": "/bilder/leistung-entruempelung-480.webp 480w, /bilder/leistung-entruempelung-800.webp 800w, /bilder/leistung-entruempelung-1200.webp 1200w, /bilder/leistung-entruempelung-1430.webp 1430w"
+  },
+  "/bilder/leistung-moebelreinigung.jpg": {
+    "w": 1200,
+    "h": 1802,
+    "avif": "/bilder/leistung-moebelreinigung-480.avif 480w, /bilder/leistung-moebelreinigung-800.avif 800w, /bilder/leistung-moebelreinigung-1200.avif 1200w, /bilder/leistung-moebelreinigung-1600.avif 1600w",
+    "webp": "/bilder/leistung-moebelreinigung-480.webp 480w, /bilder/leistung-moebelreinigung-800.webp 800w, /bilder/leistung-moebelreinigung-1200.webp 1200w, /bilder/leistung-moebelreinigung-1600.webp 1600w"
+  },
+  "/bilder/leistung-schulreinigung.jpg": {
+    "w": 1200,
+    "h": 798,
+    "avif": "/bilder/leistung-schulreinigung-480.avif 480w, /bilder/leistung-schulreinigung-800.avif 800w, /bilder/leistung-schulreinigung-1200.avif 1200w, /bilder/leistung-schulreinigung-1600.avif 1600w",
+    "webp": "/bilder/leistung-schulreinigung-480.webp 480w, /bilder/leistung-schulreinigung-800.webp 800w, /bilder/leistung-schulreinigung-1200.webp 1200w, /bilder/leistung-schulreinigung-1600.webp 1600w"
+  },
+  "/bilder/leistung-kita-reinigung.jpg": {
+    "w": 1200,
+    "h": 800,
+    "avif": "/bilder/leistung-kita-reinigung-480.avif 480w, /bilder/leistung-kita-reinigung-800.avif 800w, /bilder/leistung-kita-reinigung-1200.avif 1200w, /bilder/leistung-kita-reinigung-1600.avif 1600w",
+    "webp": "/bilder/leistung-kita-reinigung-480.webp 480w, /bilder/leistung-kita-reinigung-800.webp 800w, /bilder/leistung-kita-reinigung-1200.webp 1200w, /bilder/leistung-kita-reinigung-1600.webp 1600w"
+  },
+  "/bilder/leistung-pflegeheimreinigung.jpg": {
+    "w": 1200,
+    "h": 800,
+    "avif": "/bilder/leistung-pflegeheimreinigung-480.avif 480w, /bilder/leistung-pflegeheimreinigung-800.avif 800w, /bilder/leistung-pflegeheimreinigung-1200.avif 1200w, /bilder/leistung-pflegeheimreinigung-1600.avif 1600w",
+    "webp": "/bilder/leistung-pflegeheimreinigung-480.webp 480w, /bilder/leistung-pflegeheimreinigung-800.webp 800w, /bilder/leistung-pflegeheimreinigung-1200.webp 1200w, /bilder/leistung-pflegeheimreinigung-1600.webp 1600w"
+  },
+  "/bilder/leistung-lagerhallenreinigung.jpg": {
+    "w": 1200,
+    "h": 673,
+    "avif": "/bilder/leistung-lagerhallenreinigung-480.avif 480w, /bilder/leistung-lagerhallenreinigung-800.avif 800w, /bilder/leistung-lagerhallenreinigung-1200.avif 1200w, /bilder/leistung-lagerhallenreinigung-1600.avif 1600w",
+    "webp": "/bilder/leistung-lagerhallenreinigung-480.webp 480w, /bilder/leistung-lagerhallenreinigung-800.webp 800w, /bilder/leistung-lagerhallenreinigung-1200.webp 1200w, /bilder/leistung-lagerhallenreinigung-1600.webp 1600w"
+  },
+  "/bilder/leistung-schwimmbadreinigung.jpg": {
+    "w": 1200,
+    "h": 675,
+    "avif": "/bilder/leistung-schwimmbadreinigung-480.avif 480w, /bilder/leistung-schwimmbadreinigung-800.avif 800w, /bilder/leistung-schwimmbadreinigung-1200.avif 1200w, /bilder/leistung-schwimmbadreinigung-1600.avif 1600w",
+    "webp": "/bilder/leistung-schwimmbadreinigung-480.webp 480w, /bilder/leistung-schwimmbadreinigung-800.webp 800w, /bilder/leistung-schwimmbadreinigung-1200.webp 1200w, /bilder/leistung-schwimmbadreinigung-1600.webp 1600w"
+  },
+  "/bilder/leistung-supermarktreinigung.jpg": {
+    "w": 1200,
+    "h": 800,
+    "avif": "/bilder/leistung-supermarktreinigung-480.avif 480w, /bilder/leistung-supermarktreinigung-800.avif 800w, /bilder/leistung-supermarktreinigung-1200.avif 1200w, /bilder/leistung-supermarktreinigung-1600.avif 1600w",
+    "webp": "/bilder/leistung-supermarktreinigung-480.webp 480w, /bilder/leistung-supermarktreinigung-800.webp 800w, /bilder/leistung-supermarktreinigung-1200.webp 1200w, /bilder/leistung-supermarktreinigung-1600.webp 1600w"
+  },
+  "/bilder/leistung-gastronomiereinigung.jpg": {
+    "w": 1200,
+    "h": 800,
+    "avif": "/bilder/leistung-gastronomiereinigung-480.avif 480w, /bilder/leistung-gastronomiereinigung-800.avif 800w, /bilder/leistung-gastronomiereinigung-1200.avif 1200w, /bilder/leistung-gastronomiereinigung-1600.avif 1600w",
+    "webp": "/bilder/leistung-gastronomiereinigung-480.webp 480w, /bilder/leistung-gastronomiereinigung-800.webp 800w, /bilder/leistung-gastronomiereinigung-1200.webp 1200w, /bilder/leistung-gastronomiereinigung-1600.webp 1600w"
+  },
+  "/bilder/stadt-kiel.jpg": {
+    "w": 800,
+    "h": 530,
+    "avif": "/bilder/stadt-kiel-480.avif 480w, /bilder/stadt-kiel-800.avif 800w",
+    "webp": "/bilder/stadt-kiel-480.webp 480w, /bilder/stadt-kiel-800.webp 800w"
+  },
+  "/bilder/stadt-neumuenster.jpg": {
+    "w": 1200,
+    "h": 630,
+    "avif": "/bilder/stadt-neumuenster-480.avif 480w, /bilder/stadt-neumuenster-800.avif 800w, /bilder/stadt-neumuenster-1200.avif 1200w, /bilder/stadt-neumuenster-1600.avif 1600w",
+    "webp": "/bilder/stadt-neumuenster-480.webp 480w, /bilder/stadt-neumuenster-800.webp 800w, /bilder/stadt-neumuenster-1200.webp 1200w, /bilder/stadt-neumuenster-1600.webp 1600w"
+  },
+  "/bilder/stadt-rendsburg.jpg": {
+    "w": 1200,
+    "h": 900,
+    "avif": "/bilder/stadt-rendsburg-480.avif 480w, /bilder/stadt-rendsburg-800.avif 800w, /bilder/stadt-rendsburg-1200.avif 1200w, /bilder/stadt-rendsburg-1600.avif 1600w",
+    "webp": "/bilder/stadt-rendsburg-480.webp 480w, /bilder/stadt-rendsburg-800.webp 800w, /bilder/stadt-rendsburg-1200.webp 1200w, /bilder/stadt-rendsburg-1600.webp 1600w"
+  },
+  "/bilder/stadt-preetz.jpg": {
+    "w": 1200,
+    "h": 900,
+    "avif": "/bilder/stadt-preetz-480.avif 480w, /bilder/stadt-preetz-800.avif 800w, /bilder/stadt-preetz-1200.avif 1200w",
+    "webp": "/bilder/stadt-preetz-480.webp 480w, /bilder/stadt-preetz-800.webp 800w, /bilder/stadt-preetz-1200.webp 1200w"
+  },
+  "/bilder/stadt-ploen-eckernfoerde.jpg": {
+    "w": 547,
+    "h": 365,
+    "avif": "/bilder/stadt-ploen-eckernfoerde-480.avif 480w, /bilder/stadt-ploen-eckernfoerde-547.avif 547w",
+    "webp": "/bilder/stadt-ploen-eckernfoerde-480.webp 480w, /bilder/stadt-ploen-eckernfoerde-547.webp 547w"
+  },
+  "/bilder/stadt-bad-segeberg.jpg": {
+    "w": 547,
+    "h": 365,
+    "avif": "/bilder/stadt-bad-segeberg-480.avif 480w, /bilder/stadt-bad-segeberg-547.avif 547w",
+    "webp": "/bilder/stadt-bad-segeberg-480.webp 480w, /bilder/stadt-bad-segeberg-547.webp 547w"
+  },
+  "/bilder/stadt-eutin.jpg": {
+    "w": 547,
+    "h": 365,
+    "avif": "/bilder/stadt-eutin-480.avif 480w, /bilder/stadt-eutin-547.avif 547w",
+    "webp": "/bilder/stadt-eutin-480.webp 480w, /bilder/stadt-eutin-547.webp 547w"
+  },
+  "/bilder/stadt-luebeck.jpg": {
+    "w": 527,
+    "h": 379,
+    "avif": "/bilder/stadt-luebeck-480.avif 480w, /bilder/stadt-luebeck-527.avif 527w",
+    "webp": "/bilder/stadt-luebeck-480.webp 480w, /bilder/stadt-luebeck-527.webp 527w"
+  },
+  "/bilder/stadt-hamburg.jpg": {
+    "w": 615,
+    "h": 345,
+    "avif": "/bilder/stadt-hamburg-480.avif 480w, /bilder/stadt-hamburg-615.avif 615w",
+    "webp": "/bilder/stadt-hamburg-480.webp 480w, /bilder/stadt-hamburg-615.webp 615w"
+  },
+  "/bilder/stadt-nordrhein-westfalen.jpg": {
+    "w": 592,
+    "h": 337,
+    "avif": "/bilder/stadt-nordrhein-westfalen-480.avif 480w, /bilder/stadt-nordrhein-westfalen-592.avif 592w",
+    "webp": "/bilder/stadt-nordrhein-westfalen-480.webp 480w, /bilder/stadt-nordrhein-westfalen-592.webp 592w"
+  },
+  "/bilder/nachhaltigkeit-umwelt.jpg": {
+    "w": 547,
+    "h": 365,
+    "avif": "/bilder/nachhaltigkeit-umwelt-480.avif 480w, /bilder/nachhaltigkeit-umwelt-547.avif 547w",
+    "webp": "/bilder/nachhaltigkeit-umwelt-480.webp 480w, /bilder/nachhaltigkeit-umwelt-547.webp 547w"
+  },
+  "/bilder/nachhaltigkeit-arbeitsweise.jpg": {
+    "w": 1024,
+    "h": 574,
+    "avif": "/bilder/nachhaltigkeit-arbeitsweise-480.avif 480w, /bilder/nachhaltigkeit-arbeitsweise-800.avif 800w, /bilder/nachhaltigkeit-arbeitsweise-1024.avif 1024w",
+    "webp": "/bilder/nachhaltigkeit-arbeitsweise-480.webp 480w, /bilder/nachhaltigkeit-arbeitsweise-800.webp 800w, /bilder/nachhaltigkeit-arbeitsweise-1024.webp 1024w"
+  },
+  "/bilder/nachhaltigkeit-garten.jpg": {
+    "w": 720,
+    "h": 404,
+    "avif": "/bilder/nachhaltigkeit-garten-480.avif 480w, /bilder/nachhaltigkeit-garten-720.avif 720w",
+    "webp": "/bilder/nachhaltigkeit-garten-480.webp 480w, /bilder/nachhaltigkeit-garten-720.webp 720w"
+  },
+  "/bilder/nachhaltigkeit-leistung.jpg": {
+    "w": 1200,
+    "h": 1200,
+    "avif": "/bilder/nachhaltigkeit-leistung-480.avif 480w, /bilder/nachhaltigkeit-leistung-800.avif 800w, /bilder/nachhaltigkeit-leistung-1200.avif 1200w, /bilder/nachhaltigkeit-leistung-1600.avif 1600w",
+    "webp": "/bilder/nachhaltigkeit-leistung-480.webp 480w, /bilder/nachhaltigkeit-leistung-800.webp 800w, /bilder/nachhaltigkeit-leistung-1200.webp 1200w, /bilder/nachhaltigkeit-leistung-1600.webp 1600w"
+  }
+}

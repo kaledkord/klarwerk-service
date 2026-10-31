@@ -101,7 +101,8 @@ function preloadTags(route) {
   const tags = [];
   for (const datei of dateien) {
     if (template.includes(`/${datei}`)) continue; // index-*.js, vendor-*.js stehen schon in der Vorlage
-    tags.push(`<link rel="modulepreload" crossorigin href="/${datei}">`);
+    // fetchpriority="low": früh anstoßen, aber Bandbreite zuerst dem Hero-Bild, CSS und der Schrift lassen.
+    tags.push(`<link rel="modulepreload" crossorigin fetchpriority="low" href="/${datei}">`);
   }
   for (const datei of css) {
     if (template.includes(`/${datei}`)) continue;

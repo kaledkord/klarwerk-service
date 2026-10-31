@@ -71,7 +71,7 @@ export const cities: City[] = [
     name: 'Rendsburg',
     region: 'Schleswig-Holstein',
     description:
-      'Gebäudereinigung in Rendsburg: Professionelle Reinigung für Büros, Praxen, Wohnanlagen und Geschäftsobjekte. Regelmäßig, zuverlässig und persönlich betreut.',
+      'Gebäudereinigung in Rendsburg für Büros, Praxen, Wohnanlagen und Geschäftsobjekte: regelmäßig, zuverlässig und persönlich betreut.',
     intro:
       'KlarWerk Service bietet Gebäudereinigung in Rendsburg für Unternehmen, Praxen, Immobilienverwaltungen und private Auftraggeber. An der Eider und im gesamten Kreis Rendsburg-Eckernförde sorgen wir für Sauberkeit in Bürogebäuden, Wohnanlagen und Geschäftsobjekten.',
     highlights: [
@@ -122,7 +122,7 @@ export const cities: City[] = [
     name: 'Bad Segeberg',
     region: 'Schleswig-Holstein',
     description:
-      'Gebäudereinigung in Bad Segeberg: Professionelle Reinigung für Büros, Praxen, Wohnanlagen und Geschäftsobjekte. Regelmäßig, zuverlässig und persönlich betreut.',
+      'Gebäudereinigung in Bad Segeberg für Büros, Praxen, Wohnanlagen und Geschäftsobjekte: regelmäßig, zuverlässig und persönlich betreut.',
     intro:
       'In Bad Segeberg bietet KlarWerk Service umfassende Gebäudereinigung für gewerbliche und private Kunden. Vom Kurort bis ins Umland sorgen wir für Sauberkeit in Bürogebäuden, Wohnanlagen und Geschäftsobjekten.',
     highlights: [
@@ -190,7 +190,7 @@ export const cities: City[] = [
     name: 'Nordrhein-Westfalen',
     region: 'Nordrhein-Westfalen',
     description:
-      'Gebäudereinigung in Nordrhein-Westfalen: Professionelle Reinigung für Büros, Praxen, Wohnanlagen und Geschäftsobjekte. Flexibel, zuverlässig und persönlich betreut.',
+      'Gebäudereinigung in Nordrhein-Westfalen für Büros, Praxen, Wohnanlagen und Geschäftsobjekte: flexibel, zuverlässig und persönlich betreut.',
     intro:
       'KlarWerk Service ist auch in Nordrhein-Westfalen für gewerbliche und private Kunden tätig. Von Köln über Düsseldorf bis ins Ruhrgebiet sorgen wir für Sauberkeit in Bürogebäuden, Wohnanlagen und Geschäftsobjekten mit persönlichem Engagement.',
     highlights: [

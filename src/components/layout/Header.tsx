@@ -65,6 +65,9 @@ export default function Header() {
           <img
             src="/Kein_Titel_(580_x_140_px)_20260715_025604_0000.svg"
             alt="KlarWerk Service"
+            width={580}
+            height={140}
+            decoding="async"
             className={`w-auto object-contain transition-all duration-300 ${scrolled ? 'h-8' : 'h-10'}`}
           />
         </Link>

@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import SEO from '../components/SEO';
 import AnimatedSection from '../components/ui/AnimatedSection';
@@ -25,13 +24,13 @@ export default function Contact() {
 
       <section className="pt-36 pb-16 bg-paper">
         <SeitenKopf className="max-w-7xl mx-auto px-6">
-          <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}>
+          <div className="klw-auftritt">
             <span className="text-brand-300 text-sm font-semibold uppercase tracking-widest">Kontakt</span>
             <h1 className="mt-3 text-5xl md:text-6xl font-black tracking-tight">Kontaktieren Sie uns</h1>
             <p className="mt-6 text-lg text-slate-300 max-w-2xl leading-relaxed">
               Sie haben Fragen oder möchten ein Angebot anfordern? Füllen Sie das Formular aus oder kontaktieren Sie uns direkt – wir melden uns zeitnah und vereinbaren eine kostenlose Besichtigung.
             </p>
-          </motion.div>
+          </div>
         </SeitenKopf>
       </section>
 

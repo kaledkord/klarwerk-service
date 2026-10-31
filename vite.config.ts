@@ -15,12 +15,18 @@ export default defineConfig(({ isSsrBuild }) => ({
   build: isSsrBuild
     ? {}
     : {
+        // .vite/manifest.json: scripts/prerender.mjs liest daraus, welche Datei jede Seite braucht,
+        // und schreibt <link rel="modulepreload"> dafür ins vorgerenderte HTML (ein Umlauf weniger).
+        manifest: true,
         rollupOptions: {
           output: {
+            // Kleinstdateien (einzelne Icons, 300–500 Bytes) in größere Chunks legen: weniger Anfragen.
+            experimentalMinChunkSize: 8192,
+            // Selten wechselnde Bibliotheken in eigene, lange cachebare Dateien.
+            // (@supabase/supabase-js wird im Client nicht importiert – kein Chunk dafür.)
             manualChunks: {
               'vendor-react': ['react', 'react-dom', 'react-router-dom'],
               'vendor-motion': ['framer-motion'],
-              'vendor-supabase': ['@supabase/supabase-js'],
             },
           },
         },

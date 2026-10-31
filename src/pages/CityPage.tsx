@@ -1,5 +1,5 @@
+import Bild from '../components/ui/Bild';
 import { useParams, Link, Navigate } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import { ArrowRight, MapPin, Phone, CheckCircle } from 'lucide-react';
 import AnimatedSection from '../components/ui/AnimatedSection';
 import CTASection from '../components/ui/CTASection';
@@ -99,11 +99,7 @@ export default function CityPage() {
       <section className="relative pt-32 pb-16 lg:pt-40 lg:pb-24 bg-paper">
         <SeitenKopf className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <motion.div
-              initial={{ opacity: 0, y: 24 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            >
+            <div className="klw-auftritt">
               <nav className="flex items-center gap-2 text-sm text-slate-400 mb-6">
                 <Link to="/" className="hover:text-slate-300 transition-colors">Start</Link>
                 <span>/</span>
@@ -131,23 +127,19 @@ export default function CityPage() {
                   Jetzt anrufen
                 </a>
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 24 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-            >
-              <img
+            <div className="klw-auftritt-spaet">
+              <Bild
                 src={city.image}
                 alt={`Professionelle Gebäudereinigung in ${city.name} durch KlarWerk Service`}
                 width={720}
                 height={480}
-                loading="eager"
-                decoding="async"
+                prioritaet
+                sizes="(min-width: 1024px) 50vw, 100vw"
                 className="rounded-2xl h-[420px] lg:h-[480px] w-full object-cover shadow-xl shadow-slate-900/10"
               />
-            </motion.div>
+            </div>
           </div>
         </SeitenKopf>
       </section>

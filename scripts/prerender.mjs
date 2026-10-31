@@ -43,6 +43,74 @@ for (const marker of ['<!--app-head-->', '<!--app-html-->']) {
   }
 }
 
+// ── Modulepreload je Seite ──────────────────────────────────────────────────────────────────
+// Die Seiten sind lazy (React.lazy in src/App.tsx). Ohne Hinweis lädt der Browser den Seiten-Chunk
+// erst, nachdem index-*.js ausgeführt wurde – ein zusätzlicher Umlauf vor dem Hydrieren. Aus Vites
+// Manifest (build.manifest in vite.config.ts) bekommt jede vorgerenderte Seite ihren Chunk samt
+// statischer Importe als <link rel="modulepreload">; eigenes CSS eines Chunks als <link rel="stylesheet">.
+const manifestFile = join(dist, '.vite', 'manifest.json');
+const manifest = existsSync(manifestFile) ? JSON.parse(readFileSync(manifestFile, 'utf8')) : null;
+if (!manifest) console.warn('  Hinweis: dist/.vite/manifest.json fehlt – kein modulepreload je Seite.');
+
+const seitenModul = (route) => {
+  const fest = {
+    '/': 'Home',
+    '/leistungen': 'Services',
+    '/einsatzgebiet': 'CitiesOverview',
+    '/ueber-uns': 'About',
+    '/nachhaltigkeit': 'Sustainability',
+    '/kontakt': 'Contact',
+    '/impressum': 'legal/Impressum',
+    '/datenschutz': 'legal/Datenschutz',
+    '/agb': 'legal/AGB',
+    '/rechtliche-hinweise': 'legal/RechtlicheHinweise',
+    '/404': 'NotFound',
+  };
+  if (fest[route]) return `src/pages/${fest[route]}.tsx`;
+  const teile = route.split('/').filter(Boolean);
+  if (teile[0] === 'leistungen') return teile.length === 2 ? 'src/pages/ServicePage.tsx' : 'src/pages/LokaleLeistungsseite.tsx';
+  if (teile[0] === 'einsatzgebiet') return 'src/pages/CityPage.tsx';
+  throw new Error(`Kein Seitenmodul für ${route} bekannt (scripts/prerender.mjs, seitenModul).`);
+};
+
+/** <link>-Tags für den Chunk der Seite und alles, was er statisch importiert und die Vorlage noch nicht lädt. */
+function preloadTags(route) {
+  if (!manifest) return '';
+  let modul = seitenModul(route);
+  if (!manifest[modul]) {
+    // Rollup legt kleine Seiten zusammen (experimentalMinChunkSize); der gemeinsame Chunk heißt dann
+    // „_<Seite>-<hash>.js“ nach einer der Seiten. Passt der Name, diesen nehmen; sonst ohne Vorabladen.
+    const basis = modul.replace(/^.*\//, '').replace(/\.tsx$/, '');
+    const ersatz = Object.keys(manifest).find((k) => k.startsWith(`_${basis}-`));
+    if (!ersatz) {
+      console.log(`  (kein modulepreload für ${route}: ${basis} liegt in einem zusammengelegten Chunk)`);
+      return '';
+    }
+    modul = ersatz;
+  }
+  const dateien = new Set();
+  const css = new Set();
+  const besuche = (key) => {
+    const eintrag = manifest[key];
+    if (!eintrag || dateien.has(eintrag.file)) return;
+    dateien.add(eintrag.file);
+    for (const c of eintrag.css ?? []) css.add(c);
+    for (const imp of eintrag.imports ?? []) besuche(imp);
+  };
+  besuche(modul);
+  const tags = [];
+  for (const datei of dateien) {
+    if (template.includes(`/${datei}`)) continue; // index-*.js, vendor-*.js stehen schon in der Vorlage
+    // fetchpriority="low": früh anstoßen, aber Bandbreite zuerst dem Hero-Bild, CSS und der Schrift lassen.
+    tags.push(`<link rel="modulepreload" crossorigin fetchpriority="low" href="/${datei}">`);
+  }
+  for (const datei of css) {
+    if (template.includes(`/${datei}`)) continue;
+    tags.push(`<link rel="stylesheet" crossorigin href="/${datei}">`);
+  }
+  return tags.join('\n    ');
+}
+
 /** Rendert einen React-Baum vollständig (wartet auch auf lazy()-Seiten) zu einem HTML-String. */
 function renderToHtml(element) {
   return new Promise((resolvePromise, reject) => {
@@ -99,6 +167,8 @@ for (const route of pages) {
 
   const head = [helmet.title, helmet.meta, helmet.link, helmet.script]
     .map((part) => part.toString())
+    .filter(Boolean)
+    .concat(preloadTags(route))
     .filter(Boolean)
     .join('\n    ');
 

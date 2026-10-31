@@ -63,6 +63,10 @@ export default function NAPFooter() {
               <img
                 src="/Kein_Titel_(580_x_140_px)_20260715_025604_0000.svg"
                 alt={businessConfig.name}
+                width={580}
+                height={140}
+                loading="lazy"
+                decoding="async"
                 className="h-10 w-auto object-contain"
               />
             </Link>

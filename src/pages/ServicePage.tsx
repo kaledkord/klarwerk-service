@@ -1,5 +1,4 @@
 import { useParams, Link, Navigate } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import {
   CheckCircle,
   ArrowRight,
@@ -118,11 +117,7 @@ export default function ServicePage() {
       {/* Hero */}
       <section className="pt-36 pb-16 bg-paper">
         <SeitenKopf className="max-w-7xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-          >
+          <div className="klw-auftritt">
             <Link
               to="/leistungen"
               className="inline-flex items-center gap-1.5 text-sm text-slate-400 hover:text-white transition-colors mb-6"
@@ -160,7 +155,7 @@ export default function ServicePage() {
                 +49 176 31287131
               </a>
             </div>
-          </motion.div>
+          </div>
         </SeitenKopf>
       </section>
 
@@ -168,7 +163,7 @@ export default function ServicePage() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-start">
           <AnimatedSection>
-            <ServiceImage src={service.image} alt={`${service.title} durch KlarWerk Service`} loading="eager" className="rounded-3xl h-[460px] w-full" imgClassName="shadow-xl shadow-slate-900/10" />
+            <ServiceImage src={service.image} alt={`${service.title} durch KlarWerk Service`} loading="eager" sizes="(min-width: 1024px) 50vw, 100vw" className="rounded-3xl h-[460px] w-full" imgClassName="shadow-xl shadow-slate-900/10" />
           </AnimatedSection>
           <AnimatedSection delay={0.1}>
             <h2 className="text-2xl md:text-3xl font-black tracking-tight text-white">
@@ -326,8 +321,9 @@ export default function ServicePage() {
             </div>
           </AnimatedSection>
           <OeffnendesBild
-            src="https://images.unsplash.com/photo-1638068109209-002be3ae4950?auto=format&fit=crop&w=900&q=80"
+            src="/bilder/nachhaltigkeit-leistung.jpg"
             alt="Nachhaltigkeit bei KlarWerk Service"
+            sizes="(min-width: 1024px) 50vw, 100vw"
             className="h-[420px] w-full"
           />
         </div>

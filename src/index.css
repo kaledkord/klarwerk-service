@@ -140,6 +140,14 @@ html.klw-intro { --klw-intro: 1.3s; }
 @keyframes klw-glanz { from { background-position: 100% 0; } to { background-position: 0 0; } }
 @keyframes klw-setzen { from { transform: scale(1.08); } to { transform: scale(1); } }
 
+/* Auftritt der Seitenköpfe (Unterseiten): von unten einblenden, wie vorher mit framer-motion
+   (0,6 s bzw. 0,7 s mit 0,1 s Verzögerung, 24 px). Als CSS läuft es ab dem ersten Bild aus dem
+   vorgerenderten HTML und wartet nicht auf JavaScript – gut für den LCP. */
+@keyframes klw-auftritt { from { opacity: 0; transform: translateY(var(--klw-auftritt-y, 24px)); } to { opacity: 1; transform: none; } }
+.klw-auftritt { animation: klw-auftritt .6s var(--klw-ease) both; }
+.klw-auftritt-spaet { animation: klw-auftritt .7s var(--klw-ease) .1s both; }
+.klw-auftritt-kurz { animation: klw-auftritt .5s var(--klw-ease) both; }
+
 /* Startbereich: „Erst unklar.“ wird scharf, dann „Dann klar.“, zuletzt ein Glanz über „klar.“ */
 .klar-photo { animation: klw-setzen 2.4s var(--klw-ease) var(--klw-intro) both; }
 html.klw-intro .klw-kopf { animation: klw-von-oben .5s var(--klw-ease) 1.55s both; }

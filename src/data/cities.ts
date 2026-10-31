@@ -28,7 +28,7 @@ export const cities: City[] = [
       'Feste Ansprechpartner und verlässliche Termine',
       'Hausmeisterservice, Winterdienst und Gartenpflege aus einer Hand',
     ],
-    image: '/Design_ohne_Titel.png',
+    image: '/bilder/leistung-unterhaltsreinigung.jpg',
     tier: 1,
   },
   {
@@ -46,7 +46,7 @@ export const cities: City[] = [
       'Glasreinigung für Geschäftsobjekte und Praxen',
       'Hausmeisterservice für Immobilienverwaltungen in Kiel',
     ],
-    image: '/image copy copy copy copy copy copy copy copy copy copy copy.png',
+    image: '/bilder/stadt-kiel.jpg',
     tier: 1,
   },
   {
@@ -63,7 +63,7 @@ export const cities: City[] = [
       'Glasreinigung für Geschäfte und Praxen',
       'Grundreinigung und Bauendreinigung in Neumünster',
     ],
-    image: '/image copy copy copy copy copy copy copy copy copy copy copy copy.png',
+    image: '/bilder/stadt-neumuenster.jpg',
     tier: 1,
   },
   {
@@ -80,7 +80,7 @@ export const cities: City[] = [
       'Treppenhausreinigung für Wohnanlagen in Rendsburg',
       'Hausmeisterservice mit Winterdienst',
     ],
-    image: '/image copy copy copy copy copy copy copy copy copy copy copy copy copy.png',
+    image: '/bilder/stadt-rendsburg.jpg',
     tier: 1,
   },
   {
@@ -97,7 +97,7 @@ export const cities: City[] = [
       'Hausmeisterservice mit Winterdienst',
       'Gartenpflege für Außenanlagen in Preetz',
     ],
-    image: '/2942_1075_1_g.jpg',
+    image: '/bilder/stadt-preetz.jpg',
     tier: 1,
   },
   {
@@ -114,7 +114,7 @@ export const cities: City[] = [
       'Hausmeisterservice mit Winterdienst',
       'Gartenpflege und Außenanlagenpflege',
     ],
-    image: '/Plon&Eckenforde.jpg',
+    image: '/bilder/stadt-ploen-eckernfoerde.jpg',
     tier: 1,
   },
   {
@@ -131,7 +131,7 @@ export const cities: City[] = [
       'Glasreinigung für Geschäfte und Praxen',
       'Hausmeisterservice mit Winterdienst in Bad Segeberg',
     ],
-    image: '/Bad_Segeberg.jpg',
+    image: '/bilder/stadt-bad-segeberg.jpg',
     tier: 1,
   },
   {
@@ -148,7 +148,7 @@ export const cities: City[] = [
       'Hausmeisterservice mit Winterdienst',
       'Gartenpflege und Außenanlagenpflege in Eutin',
     ],
-    image: '/Eutin.jpg',
+    image: '/bilder/stadt-eutin.jpg',
     tier: 1,
   },
   {
@@ -165,7 +165,7 @@ export const cities: City[] = [
       'Treppenhausreinigung für Wohnanlagen in Lübeck',
       'Hausmeisterservice mit Winterdienst',
     ],
-    image: '/Lubeck.jpg',
+    image: '/bilder/stadt-luebeck.jpg',
     tier: 1,
   },
   {
@@ -182,7 +182,7 @@ export const cities: City[] = [
       'Treppenhausreinigung für Hamburger Wohnanlagen',
       'Hausmeisterservice mit Winterdienst in Hamburg',
     ],
-    image: '/Hamburg.jpg',
+    image: '/bilder/stadt-hamburg.jpg',
     tier: 2,
   },
   {
@@ -199,7 +199,7 @@ export const cities: City[] = [
       'Treppenhausreinigung für Wohnanlagen in NRW',
       'Hausmeisterservice mit Winterdienst',
     ],
-    image: '/Koln.jpg',
+    image: '/bilder/stadt-nordrhein-westfalen.jpg',
     tier: 3,
   },
 ];

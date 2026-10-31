@@ -1,3 +1,4 @@
+import Bild from './Bild';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useMotionValue, useMotionValueEvent, useScroll } from 'framer-motion';
@@ -106,14 +107,13 @@ export default function StaedteWaagerecht({
                 className="group flex w-[clamp(240px,30vw,380px)] flex-none flex-col gap-3 rounded-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400"
               >
                 <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-paper-100">
-                  <img
+                  <Bild
                     ref={(el) => {
                       bilder.current[i] = el;
                     }}
                     src={c.image}
                     alt={`Gebäudereinigung in ${c.name}`}
-                    loading="lazy"
-                    decoding="async"
+                    sizes="(min-width: 1280px) 380px, 30vw"
                     className="h-full w-full object-cover transition-[filter] duration-300 group-hover:brightness-110"
                   />
                 </div>

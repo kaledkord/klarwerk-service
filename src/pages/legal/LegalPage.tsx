@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import SEO from '../../components/SEO';
 
 interface LegalPageProps {
@@ -14,14 +13,9 @@ export default function LegalPage({ title, description, canonicalPath, children 
       <SEO title={title} description={description} canonicalPath={canonicalPath} />
       <section className="pt-36 pb-16 bg-paper">
         <div className="max-w-7xl mx-auto px-6">
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-            className="text-4xl md:text-5xl font-black tracking-tight"
-          >
+          <h1 className="klw-auftritt-kurz text-4xl md:text-5xl font-black tracking-tight" style={{ "--klw-auftritt-y": "20px" } as React.CSSProperties}>
             {title}
-          </motion.h1>
+          </h1>
         </div>
       </section>
       <section className="py-16">

@@ -232,9 +232,9 @@ export const serviceContents: Record<string, ServiceContent> = {
       { question: 'Können Sie mehrere Objekte betreuen?', answer: 'Ja, wir betreuen sowohl einzelne Wohnanlagen als auch größere Portfolios mit mehreren Liegenschaften.' },
     ],
     seo: {
-      title: 'Hausmeisterservice in Schleswig-Holstein & Hamburg | KlarWerk Service',
+      title: 'Hausmeisterservice Schleswig-Holstein & Hamburg | KlarWerk',
       description:
-        'Kompletter Hausmeisterservice in Schleswig-Holstein & Hamburg. Treppenhausreinigung, Winterdienst, kleine Reparaturen, Objektbetreuung. Fester Ansprechpartner. Jetzt anfragen.',
+        'Hausmeisterservice in Schleswig-Holstein und Hamburg: Treppenhausreinigung, Grünpflege, kleine Reparaturen und Objektbetreuung mit festem Personal.',
       keywords: `Hausmeisterservice, Hausmeister, Objektbetreuung, Winterdienst, Treppenhausreinigung, ${localKeywords}`,
     },
   },
@@ -257,9 +257,9 @@ export const serviceContents: Record<string, ServiceContent> = {
       { question: 'Was kostet die Gartenpflege?', answer: 'Nach einer Besichtigung erstellen wir ein individuelles Angebot – als Einzelleistung oder als ganzjähriger Pflegevertrag.' },
     ],
     seo: {
-      title: 'Gartenpflege & Außenanlagenpflege in Schleswig-Holstein | KlarWerk Service',
+      title: 'Gartenpflege & Außenanlagen in Schleswig-Holstein | KlarWerk',
       description:
-        'Professionelle Gartenpflege in Schleswig-Holstein & Hamburg. Rasen, Hecken, Laub, saisonale Bepflanzung. Ganzjährige Pflege für private & gewerbliche Flächen. Jetzt anfragen.',
+        'Gartenpflege in Schleswig-Holstein und Hamburg: Rasen, Hecken, Laub und saisonale Bepflanzung, ganzjährig für private und gewerbliche Außenanlagen.',
       keywords: `Gartenpflege, Außenanlagenpflege, Rasenmähen, Heckenschnitt, Laubentsorgung, ${localKeywords}`,
     },
   },
@@ -282,9 +282,9 @@ export const serviceContents: Record<string, ServiceContent> = {
       { question: 'Stellen Sie das Material bereit?', answer: 'Ja, wir bringen alle benötigten Reinigungs- und Pflegemittel sowie die passende Technik mit.' },
     ],
     seo: {
-      title: 'Grundreinigung in Schleswig-Holstein & Hamburg | KlarWerk Service',
+      title: 'Grundreinigung in Schleswig-Holstein & Hamburg | KlarWerk',
       description:
-        'Intensive Grundreinigung für Wohnungen, Büros & Gewerbe in Schleswig-Holstein & Hamburg. Bodenversiegelung, Desinfektion, Fenster. Vor Einzug oder nach Bauarbeiten. Jetzt anfragen.',
+        'Grundreinigung für Büros, Praxen und Gewerbe in Schleswig-Holstein und Hamburg: gründlich bis in die Tiefe, vor Einzug oder nach Umbau, zum Festpreis.',
       keywords: `Grundreinigung, Intensivreinigung, Bodenversiegelung, Desinfektion, ${localKeywords}`,
     },
   },
@@ -333,9 +333,9 @@ export const serviceContents: Record<string, ServiceContent> = {
       { question: 'Wie wird der Einsatz dokumentiert?', answer: 'Sie erhalten einen Räum- und Streuplan sowie Protokolle über die durchgeführten Einsätze.' },
     ],
     seo: {
-      title: 'Winterdienst & Räumdienst in Schleswig-Holstein & Hamburg | KlarWerk Service',
+      title: 'Winterdienst & Räumdienst in Schleswig-Holstein | KlarWerk',
       description:
-        'Zuverlässiger Winterdienst in Schleswig-Holstein & Hamburg. Schneeräumung, Streudienst, Flächenfreihaltung. Saisonvertrag oder Abruf. Rechtssichere Dokumentation. Jetzt anfragen.',
+        'Winterdienst in Schleswig-Holstein und Hamburg: Schneeräumung und Streudienst vor Betriebsbeginn, als Saisonvertrag oder auf Abruf, mit Dokumentation.',
       keywords: `Winterdienst, Räumdienst, Schneeräumung, Streudienst, Splitt, ${localKeywords}`,
     },
   },
@@ -358,9 +358,9 @@ export const serviceContents: Record<string, ServiceContent> = {
       { question: 'Was kostet eine Entrümpelung?', answer: 'Die Kosten hängen von Menge, Etagen und Entsorgungsaufwand ab. Nach einer Besichtigung erhalten Sie ein Festpreis-Angebot.' },
     ],
     seo: {
-      title: 'Entrümpelung & Wohnungsauflösung in Schleswig-Holstein | KlarWerk Service',
+      title: 'Entrümpelung in Schleswig-Holstein & Hamburg | KlarWerk',
       description:
-        'Professionelle Entrümpelung in Schleswig-Holstein & Hamburg. Wohnungen, Keller, Dachböden, Gewerbe. Inklusive fachgerechter Entsorgung & Transport. Diskret & schnell. Jetzt anfragen.',
+        'Entrümpelung von Wohnungen, Kellern, Dachböden und Gewerbeobjekten in Schleswig-Holstein und Hamburg: diskret, mit fachgerechter Entsorgung und Transport.',
       keywords: `Entrümpelung, Wohnungsauflösung, Entsorgung, Kellerentrümpelung, ${localKeywords}`,
     },
   },
@@ -383,9 +383,9 @@ export const serviceContents: Record<string, ServiceContent> = {
       { question: 'Müssen die Möbel ausgebaut werden?', answer: 'Nein, wir reinigen vor Ort – egal ob zu Hause oder im Büro.' },
     ],
     seo: {
-      title: 'Möbelreinigung & Polsterreinigung in Schleswig-Holstein | KlarWerk Service',
+      title: 'Möbel- & Polsterreinigung in Schleswig-Holstein | KlarWerk',
       description:
-        'Schonende Möbelreinigung in Schleswig-Holstein & Hamburg. Polster, Teppiche, Matratzen. Flecken- und Geruchsentfernung. Allergiker-geeignet. Reinigung vor Ort. Jetzt anfragen.',
+        'Möbel- und Polsterreinigung in Schleswig-Holstein und Hamburg: Polster, Teppiche und Matratzen schonend vor Ort gereinigt, Flecken und Gerüche entfernt.',
       keywords: `Möbelreinigung, Polsterreinigung, Teppichreinigung, Matratzenreinigung, Fleckenentfernung, ${localKeywords}`,
     },
   },
@@ -413,9 +413,9 @@ export const serviceContents: Record<string, ServiceContent> = {
       { question: 'Bieten Sie Bodenpflege und Beschichtung an?', answer: 'Ja, wir pflegen und beschichten verschiedene Bodenbeläge für langfristigen Werterhalt.' },
     ],
     seo: {
-      title: 'Schulreinigung für Bildungseinrichtungen in Schleswig-Holstein | KlarWerk Service',
+      title: 'Schulreinigung in Schleswig-Holstein & Hamburg | KlarWerk',
       description:
-        'Professionelle Schulreinigung in Schleswig-Holstein & Hamburg. Klassenräume, Flure, Sanitäranlagen, Sporthallen, Ferien-Grundreinigung. Hygienische Lernumgebungen. Jetzt anfragen.',
+        'Schulreinigung in Schleswig-Holstein und Hamburg: Klassenräume, Flure und Sporthallen außerhalb des Unterrichts, Grundreinigung in den Ferien.',
       keywords: `Schulreinigung, Schulreinigung Hamburg, Schulreinigung Kiel, Berufsschulreinigung, Bildungseinrichtung reinigen, ${localKeywords}`,
     },
   },
@@ -443,9 +443,9 @@ export const serviceContents: Record<string, ServiceContent> = {
       { question: 'Wann findet die Reinigung statt?', answer: 'In der Regel außerhalb der Betreuungszeiten – frühmorgens oder abends, um den Kita-Alltag nicht zu stören.' },
     ],
     seo: {
-      title: 'Kita-Reinigung für Kindertagesstätten in Schleswig-Holstein | KlarWerk Service',
+      title: 'Kita-Reinigung in Schleswig-Holstein & Hamburg | KlarWerk',
       description:
-        'Hygienische Kita-Reinigung in Schleswig-Holstein & Hamburg. Gruppenräume, Wickelbereiche, Sanitär, Bodenpflege. Kindersichere Reinigungsmittel. Jetzt anfragen.',
+        'Kita-Reinigung in Schleswig-Holstein und Hamburg: Gruppenräume, Wickelbereiche und Sanitär mit für Kindereinrichtungen zugelassenen Hygienemitteln.',
       keywords: `Kita-Reinigung, Kindergartenreinigung, Krippenreinigung, Hygiene Kita, ${localKeywords}`,
     },
   },
@@ -473,9 +473,9 @@ export const serviceContents: Record<string, ServiceContent> = {
       { question: 'Können Sie auch die Fensterreinigung übernehmen?', answer: 'Ja, Fenster- und Glasreinigung gehören zu unserem Leistungsumfang für Pflegeeinrichtungen.' },
     ],
     seo: {
-      title: 'Pflegeheim-Reinigung in Schleswig-Holstein & Hamburg | KlarWerk Service',
+      title: 'Pflegeheimreinigung Schleswig-Holstein & Hamburg | KlarWerk',
       description:
-        'Hygienische Pflegeheim-Reinigung in Schleswig-Holstein & Hamburg. Bewohnerzimmer, Gemeinschaftsräume, Sanitär, Hygienereinigung. RKI-Standards. Jetzt anfragen.',
+        'Pflegeheimreinigung in Schleswig-Holstein und Hamburg: Bewohnerzimmer, Gemeinschaftsräume und Sanitär nach Hygienevorgaben, VAH-gelistete Desinfektion.',
       keywords: `Pflegeheimreinigung, Seniorenresidenz reinigen, Pflegeeinrichtung Hygiene, ${localKeywords}`,
     },
   },
@@ -503,7 +503,7 @@ export const serviceContents: Record<string, ServiceContent> = {
       { question: 'Wie oft sollte eine Lagerhalle gereinigt werden?', answer: 'Die Frequenz richtet sich nach Nutzung und Verschmutzungsgrad – wir erstellen einen individuellen Reinigungsplan.' },
     ],
     seo: {
-      title: 'Lagerhallenreinigung in Schleswig-Holstein & Hamburg | KlarWerk Service',
+      title: 'Lagerhallenreinigung in Schleswig-Holstein | KlarWerk',
       description:
         'Professionelle Lagerhallenreinigung in Schleswig-Holstein & Hamburg. Lagerböden, Regale, Verkehrswege, Rampen. Maschinelle Bodenreinigung. Jetzt anfragen.',
       keywords: `Lagerhallenreinigung, Logistikreinigung, Lagerreinigung, Produktionshalle reinigen, ${localKeywords}`,
@@ -533,9 +533,9 @@ export const serviceContents: Record<string, ServiceContent> = {
       { question: 'Beachten Sie die Hygienevorschriften?', answer: 'Ja, wir arbeiten nach den Vorgaben der Lebensmittelhygieneverordnung und der Berufsgenossenschaft.' },
     ],
     seo: {
-      title: 'Gastronomiereinigung in Schleswig-Holstein & Hamburg | KlarWerk Service',
+      title: 'Gastronomiereinigung in Schleswig-Holstein | KlarWerk',
       description:
-        'Professionelle Gastronomiereinigung in Schleswig-Holstein & Hamburg. Küche, Fettentfernung, Gastraum, Sanitär. Hygiene nach LMHV. Flexible Termine. Jetzt anfragen.',
+        'Gastronomiereinigung in Schleswig-Holstein und Hamburg: Küche mit Fettentfernung, Gastraum, Glas und Sanitär, außerhalb der Öffnungszeiten.',
       keywords: `Gastronomiereinigung, Restaurantreinigung, Küchenreinigung, Fettentfernung, Kantinenreinigung, ${localKeywords}`,
     },
   },
@@ -565,9 +565,9 @@ export const serviceContents: Record<string, ServiceContent> = {
       { question: 'Können Sie auch Fassadenreinigung übernehmen?', answer: 'Ja, auf Wunsch übernehmen wir Fassadenreinigung und Reinigung nach Renovierungen oder Umbauten.' },
     ],
     seo: {
-      title: 'Supermarkt-Reinigung & Einzelhandelsreinigung in Schleswig-Holstein | KlarWerk Service',
+      title: 'Supermarktreinigung in Schleswig-Holstein | KlarWerk',
       description:
-        'Professionelle Supermarkt-Reinigung in Schleswig-Holstein & Hamburg. Verkaufsflächen, Kassenbereiche, Regale, Sanitär, Lager. Maschinelle Bodenreinigung. Jetzt anfragen.',
+        'Supermarktreinigung in Schleswig-Holstein: Verkaufsflächen maschinell gereinigt, dazu Regale, Kassen und Sanitär, vor Öffnung oder nach Ladenschluss.',
       keywords: `Supermarktreinigung, Einzelhandelsreinigung, Verkaufsflächenreinigung, Discounterreinigung, ${localKeywords}`,
     },
   },
@@ -595,9 +595,9 @@ export const serviceContents: Record<string, ServiceContent> = {
       { question: 'Wie oft sollte ein Schwimmbad gereinigt werden?', answer: 'Das hängt von Besucherzahl und Nutzung ab. Nach einer Besichtigung erstellen wir einen individuellen Reinigungs- und Hygieneplan.' },
     ],
     seo: {
-      title: 'Schwimmbadreinigung & Schwimmhallenreinigung in Schleswig-Holstein | KlarWerk Service',
+      title: 'Schwimmbadreinigung in Schleswig-Holstein | KlarWerk',
       description:
-        'Hygienische Schwimmbad- und Schwimmhallenreinigung in Schleswig-Holstein & Hamburg. Beckenumgänge, Umkleiden, Duschen, Sauna. Rutschhemmend & desinfizierend. Jetzt anfragen.',
+        'Schwimmbad- und Schwimmhallenreinigung in Schleswig-Holstein: Beckenumgänge, Umkleiden, Duschen und Sanitär hygienisch gereinigt und desinfiziert.',
       keywords: `Schwimmbadreinigung, Schwimmhallenreinigung, Beckenumgang reinigen, Wellnessreinigung, ${localKeywords}`,
     },
   },

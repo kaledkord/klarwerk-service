@@ -42,7 +42,9 @@ export default function SEO({
   jsonLd,
   noindex = false,
 }: SEOProps) {
-  const fullTitle = title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`;
+  // Enthält der Titel die Marke schon (voll „| KlarWerk Service“ oder kurz „| KlarWerk“, wenn der
+  // volle Name die 60 Zeichen sprengen würde), wird nichts angehängt.
+  const fullTitle = title.includes(SITE_NAME) || title.includes('| KlarWerk') ? title : `${title} | ${SITE_NAME}`;
   // Immer eine absolute Canonical-URL ausgeben: seoConfig liefert relative Pfade ('/kontakt'),
   // ein relativer Canonical/og:url wäre für Google/Facebook mehrdeutig.
   const canonicalUrl = canonical

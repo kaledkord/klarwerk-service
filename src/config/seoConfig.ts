@@ -12,39 +12,39 @@ interface SeoEntry {
 export const seoConfig = {
   // ── Static pages ───────────────────────────────────────────────────────────
   '/': {
-    title: 'Gebäudereinigung Kiel & Schleswig-Holstein',
+    title: 'Gebäudereinigung Kiel & Schleswig-Holstein | KlarWerk',
     description:
-      'Gebäudereinigung & Gebäudeservice für Kiel, Neumünster, Rendsburg & ganz Schleswig-Holstein. Büro-, Glas- und Praxisreinigung, zuverlässig und persönlich. Jetzt kostenloses Angebot anfordern.',
+      'Gebäudereinigung für Kiel, Neumünster, Rendsburg und ganz Schleswig-Holstein: Büro-, Glas- und Praxisreinigung mit festem Ansprechpartner.',
     canonical: '/',
   },
   '/ueber-uns': {
     title: 'Über uns',
     description:
-      'Über KlarWerk Service: inhabergeführte Gebäudereinigung und Gebäudeservice für Schleswig-Holstein, Hamburg und NRW – geschultes Team, persönliche Betreuung.',
+      'Über KlarWerk Service: inhabergeführte Gebäudereinigung und Gebäudeservice für Schleswig-Holstein, Hamburg und NRW mit persönlicher Betreuung.',
     canonical: '/ueber-uns',
   },
   '/leistungen': {
-    title: 'Leistungen – Gebäudereinigung & Gebäudeservice',
+    title: 'Leistungen – Gebäudereinigung & Gebäudeservice | KlarWerk',
     description:
-      'Alle Leistungen von KlarWerk Service: Gebäudereinigung, Büroreinigung, Glasreinigung, Praxisreinigung, Hausmeisterservice, Gartenpflege, Grundreinigung, Bauendreinigung und mehr.',
+      'Alle Leistungen von KlarWerk Service im Überblick: Büro-, Glas-, Praxis- und Grundreinigung, Bauendreinigung, Hausmeisterservice und Gartenpflege.',
     canonical: '/leistungen',
   },
   '/einsatzgebiet': {
-    title: 'Einsatzgebiet – Gebäudereinigung Schleswig-Holstein',
+    title: 'Unser Einsatzgebiet in Schleswig-Holstein | KlarWerk',
     description:
-      'KlarWerk Service reinigt in Bordesholm, Kiel, Neumünster, Rendsburg, Preetz und ganz Schleswig-Holstein – dazu Hamburg. Wählen Sie Ihren Standort und fragen Sie vor Ort an.',
+      'KlarWerk Service reinigt in Bordesholm, Kiel, Neumünster, Rendsburg, Preetz und ganz Schleswig-Holstein sowie in Hamburg. Wählen Sie Ihren Standort.',
     canonical: '/einsatzgebiet',
   },
   '/nachhaltigkeit': {
-    title: 'Nachhaltigkeit – Sauberkeit mit Verantwortung',
+    title: 'Nachhaltigkeit – Sauberkeit mit Verantwortung | KlarWerk',
     description:
-      'Nachhaltigkeit bei KlarWerk Service: umweltschonende Reinigungsmittel, dosierte Anwendung, wiederverwendbare Textilien, effiziente Wegeplanung und Werterhalt statt Wegwerfen.',
+      'Nachhaltig reinigen: umweltschonende Mittel, genaue Dosierung, wiederverwendbare Textilien und kurze Wege. Werterhalt statt Wegwerfen.',
     canonical: '/nachhaltigkeit',
   },
   '/kontakt': {
-    title: 'Kontakt – Angebot für Gebäudereinigung anfordern',
+    title: 'Kontakt – Angebot für Gebäudereinigung anfordern | KlarWerk',
     description:
-      'Kontaktieren Sie KlarWerk Service für Gebäudereinigung in Kiel, Neumünster & ganz Schleswig-Holstein. Telefon, E-Mail oder Kontaktformular – wir vereinbaren zeitnah eine kostenlose Besichtigung.',
+      'Gebäudereinigung in Kiel, Neumünster und Schleswig-Holstein anfragen: per Telefon, E-Mail oder Formular. Die Besichtigung vor Ort ist kostenlos.',
     canonical: '/kontakt',
   },
   '/impressum': {

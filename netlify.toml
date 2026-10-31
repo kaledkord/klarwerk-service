@@ -1,6 +1,7 @@
 # Netlify-Build-Konfiguration für KlarWerk Service (Vite + React, vorgerendert)
 # Netlify liest diese Datei beim Import automatisch – keine manuelle Eingabe nötig.
 # Bei Deploys über Bolt gelten zusätzlich public/_redirects und public/_headers (liegen in dist/).
+# Header hier und in public/_headers immer gleich halten.
 
 [build]
   command = "npm run build"
@@ -28,7 +29,69 @@
 # Kein SPA-Catch-all: jede Route ist als HTML-Datei vorgerendert (scripts/prerender.mjs),
 # unbekannte URLs liefern dist/404.html mit echtem Status 404.
 
+# ── Caching ──────────────────────────────────────────────────────────────────────────────────
+# HTML-Seiten: kein eigener Header – Netlify liefert sie mit "max-age=0, must-revalidate" und ETag,
+# so sind Textänderungen sofort sichtbar.
+
+# Gehashte Build-Dateien (JS, CSS): Dateiname ändert sich bei jeder Änderung → ein Jahr, unveränderlich.
 [[headers]]
   for = "/assets/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
+
+# Selbst gehostete Schrift (Plus Jakarta Sans, variabel): ändert sich praktisch nie.
+[[headers]]
+  for = "/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Optimierte Fotos (AVIF/WebP/JPEG aus scripts/bilder-erzeugen.py): 30 Tage, danach im
+# Hintergrund erneuern. Wechselt ein Motiv, bekommt es am besten einen neuen Schlüssel.
+[[headers]]
+  for = "/bilder/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000, stale-while-revalidate=604800"
+
+# Herstellerlogos, Favicons, Originalfotos und das Hero-Video: ein Tag, eine Woche im Hintergrund erneuern.
+[[headers]]
+  for = "/logos/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400, stale-while-revalidate=604800"
+
+[[headers]]
+  for = "/*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=86400, stale-while-revalidate=604800"
+
+[[headers]]
+  for = "/*.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=86400, stale-while-revalidate=604800"
+
+[[headers]]
+  for = "/*.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=86400, stale-while-revalidate=604800"
+
+[[headers]]
+  for = "/*.webp"
+  [headers.values]
+    Cache-Control = "public, max-age=86400, stale-while-revalidate=604800"
+
+[[headers]]
+  for = "/*.mp4"
+  [headers.values]
+    Cache-Control = "public, max-age=604800, stale-while-revalidate=604800"
+    Accept-Ranges = "bytes"
+
+# ── Sicherheit (für alle Antworten) ──────────────────────────────────────────────────────────
+# Kein Erraten von Inhaltstypen, keine Einbettung in fremde Seiten, sparsamer Referrer,
+# keine Kamera-, Mikrofon- oder Standortabfragen, HTTPS für ein Jahr festschreiben.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"

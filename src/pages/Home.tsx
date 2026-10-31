@@ -18,6 +18,8 @@ import EquipmentSection from '../components/ui/EquipmentSection';
 import GoogleReviewsCarousel from '../components/ui/GoogleReviewsCarousel';
 import BranchenSection from '../components/ui/BranchenSection';
 import HeroVideo from '../components/ui/HeroVideo';
+import Bild, { bildEintrag } from '../components/ui/Bild';
+import { Helmet } from 'react-helmet-async';
 import SEO from '../components/SEO';
 import { featuredServices } from '../data/services';
 import { seoConfig } from '../config/seoConfig';
@@ -63,6 +65,12 @@ const jsonLd = {
   })),
 };
 
+// Größtes Element über dem Falz: Foto hinter dem Startbereich. Vorab laden, damit der Browser es
+// nicht erst nach CSS und JavaScript entdeckt (LCP). AVIF-Browser nehmen die AVIF-Liste, alle anderen
+// ignorieren den Preload mit type="image/avif" und laden das Bild normal über <picture>.
+const HERO_BILD = '/bilder/hero-objektpflege.jpg';
+const heroEintrag = bildEintrag(HERO_BILD);
+
 export default function Home() {
   const effekte = useScrollEffekte();
   const spalten = useSpalten(2, 3);
@@ -83,6 +91,18 @@ export default function Home() {
         keywords="Gebäudereinigung, Büroreinigung, Glasreinigung, Hausmeisterservice, Reinigungsfirma, Schleswig-Holstein, Kiel, Hamburg"
         jsonLd={jsonLd}
       />
+      {heroEintrag && (
+        <Helmet>
+          <link
+            rel="preload"
+            as="image"
+            type="image/avif"
+            imageSrcSet={heroEintrag.avif}
+            imageSizes="100vw"
+            {...({ fetchpriority: 'high' } as Record<string, string>)}
+          />
+        </Helmet>
+      )}
 
       {/* ── 1 HERO ─────────────────────────────────────────────────────────── */}
       <section ref={heroRef} className="relative min-h-[85vh] flex items-center overflow-hidden bg-ink">
@@ -91,10 +111,15 @@ export default function Home() {
           style={effekte ? { y: bildY, scale: bildScale } : undefined}
           aria-hidden="true"
         >
-          <div
-            className="klar-photo"
-            style={{ backgroundImage: "url('/hero-objektpflege.jpg')" }}
-          />
+          <div className="klar-photo">
+            <Bild
+              src={HERO_BILD}
+              alt=""
+              sizes="100vw"
+              prioritaet
+              className="absolute inset-0 h-full w-full object-cover"
+            />
+          </div>
           <HeroVideo src="/hero-objektpflege.mp4" />
         </motion.div>
         <div
@@ -202,7 +227,12 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Seitenverhältnis wie das Foto (1200 × 800), damit nichts angeschnitten wird */}
-            <OeffnendesBild src="/Design_ohne_Titel.png" alt="Warum KlarWerk Service" className="aspect-[3/2] w-full" />
+            <OeffnendesBild
+              src="/bilder/leistung-unterhaltsreinigung.jpg"
+              alt="Warum KlarWerk Service"
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              className="aspect-[3/2] w-full"
+            />
             <AnimatedSection delay={0.1}>
               <span className="text-brand-300 text-sm font-semibold uppercase tracking-widest">
                 Warum wir

@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
+import { BildQuellen, bildEintrag } from './Bild';
 
 interface ServiceImageProps {
   src: string;
@@ -10,6 +11,8 @@ interface ServiceImageProps {
   loading?: 'lazy' | 'eager';
   width?: number;
   height?: number;
+  /** Breite im Layout für die Auswahl der Bildgröße (Standard: volle Breite). */
+  sizes?: string;
 }
 
 const EASE = [0.16, 1, 0.3, 1] as const;
@@ -23,7 +26,9 @@ export default function ServiceImage({
   loading = 'lazy',
   width,
   height,
+  sizes = '100vw',
 }: ServiceImageProps) {
+  const eintrag = bildEintrag(src);
   const [isHovered, setIsHovered] = useState(false);
   const [isTouchDevice, setIsTouchDevice] = useState(false);
   const [geladen, setGeladen] = useState(false);
@@ -67,23 +72,27 @@ export default function ServiceImage({
         viewport={{ once: true, margin: '-60px' }}
         transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
       >
-        <motion.img
-          ref={imgRef}
-          src={src}
-          alt={alt}
-          loading={loading}
-          decoding="async"
-          width={width}
-          height={height}
-          onLoad={() => setGeladen(true)}
-          animate={{ filter, scale, opacity: einblenden && !geladen ? 0 : 1 }}
-          transition={{
-            duration: DURATION,
-            ease: EASE,
-            opacity: { duration: 0.4 },
-          }}
-          className={`h-full w-full object-cover will-change-transform ${imgClassName}`}
-        />
+        <picture className="contents">
+          <BildQuellen src={src} sizes={sizes} />
+          <motion.img
+            ref={imgRef}
+            src={src}
+            alt={alt}
+            loading={loading}
+            decoding="async"
+            width={width ?? eintrag?.w}
+            height={height ?? eintrag?.h}
+            {...(loading === 'eager' ? ({ fetchpriority: 'high' } as Record<string, string>) : {})}
+            onLoad={() => setGeladen(true)}
+            animate={{ filter, scale, opacity: einblenden && !geladen ? 0 : 1 }}
+            transition={{
+              duration: DURATION,
+              ease: EASE,
+              opacity: { duration: 0.4 },
+            }}
+            className={`h-full w-full object-cover will-change-transform ${imgClassName}`}
+          />
+        </picture>
       </motion.div>
     </div>
   );

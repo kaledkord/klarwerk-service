@@ -168,7 +168,7 @@ export default function ServicePage() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-start">
           <AnimatedSection>
-            <ServiceImage src={service.image} alt={`${service.title} durch KlarWerk Service`} loading="eager" className="rounded-3xl h-[460px] w-full" imgClassName="shadow-xl shadow-slate-900/10" />
+            <ServiceImage src={service.image} alt={`${service.title} durch KlarWerk Service`} loading="eager" sizes="(min-width: 1024px) 50vw, 100vw" className="rounded-3xl h-[460px] w-full" imgClassName="shadow-xl shadow-slate-900/10" />
           </AnimatedSection>
           <AnimatedSection delay={0.1}>
             <h2 className="text-2xl md:text-3xl font-black tracking-tight text-white">
@@ -326,8 +326,9 @@ export default function ServicePage() {
             </div>
           </AnimatedSection>
           <OeffnendesBild
-            src="https://images.unsplash.com/photo-1638068109209-002be3ae4950?auto=format&fit=crop&w=900&q=80"
+            src="/bilder/nachhaltigkeit-leistung.jpg"
             alt="Nachhaltigkeit bei KlarWerk Service"
+            sizes="(min-width: 1024px) 50vw, 100vw"
             className="h-[420px] w-full"
           />
         </div>

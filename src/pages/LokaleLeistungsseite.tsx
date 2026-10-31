@@ -1,3 +1,4 @@
+import Bild from '../components/ui/Bild';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowLeft, ArrowRight, CheckCircle, MapPin, MinusCircle, Phone } from 'lucide-react';
@@ -137,13 +138,13 @@ export default function LokaleLeistungsseite() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
             >
-              <img
+              <Bild
                 src={seite.bild.src ?? service.image}
                 alt={seite.bild.alt}
                 width={720}
                 height={480}
-                loading="eager"
-                decoding="async"
+                prioritaet
+                sizes="(min-width: 1024px) 50vw, 100vw"
                 className="rounded-2xl h-[360px] lg:h-[460px] w-full object-cover shadow-xl shadow-slate-900/10"
               />
             </motion.div>

@@ -1,3 +1,4 @@
+import Bild from '../components/ui/Bild';
 import { Link } from 'react-router-dom';
 import { MapPin, ArrowRight } from 'lucide-react';
 import CTASection from '../components/ui/CTASection';
@@ -75,13 +76,12 @@ export default function CitiesOverview() {
                   className="group block h-full bg-paper-100 border border-white/10 rounded-2xl overflow-hidden hover:border-brand-200 shadow-md hover:shadow-lg transition-all"
                 >
                   <div className="relative h-48 overflow-hidden">
-                    <img
+                    <Bild
                       src={city.image}
                       alt={`Gebäudereinigung in ${city.name} durch KlarWerk Service`}
                       width={400}
                       height={192}
-                      loading="lazy"
-                      decoding="async"
+                      sizes="(min-width: 1024px) 400px, (min-width: 640px) 50vw, 100vw"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-navy-950/40 to-transparent" />

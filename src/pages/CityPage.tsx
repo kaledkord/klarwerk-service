@@ -1,3 +1,4 @@
+import Bild from '../components/ui/Bild';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight, MapPin, Phone, CheckCircle } from 'lucide-react';
@@ -138,13 +139,13 @@ export default function CityPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
             >
-              <img
+              <Bild
                 src={city.image}
                 alt={`Professionelle Gebäudereinigung in ${city.name} durch KlarWerk Service`}
                 width={720}
                 height={480}
-                loading="eager"
-                decoding="async"
+                prioritaet
+                sizes="(min-width: 1024px) 50vw, 100vw"
                 className="rounded-2xl h-[420px] lg:h-[480px] w-full object-cover shadow-xl shadow-slate-900/10"
               />
             </motion.div>

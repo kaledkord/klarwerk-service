@@ -93,7 +93,7 @@ export default function Sustainability() {
       {/* Eco-friendly cleaning */}
       <section className="py-24 bg-paper">
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
-          <OeffnendesBild src="/images.jpg" alt="Umweltfreundliche Reinigung" className="h-[420px] w-full" />
+          <OeffnendesBild src="/bilder/nachhaltigkeit-umwelt.jpg" alt="Umweltfreundliche Reinigung" sizes="(min-width: 1024px) 50vw, 100vw" className="h-[420px] w-full" />
           <AnimatedSection delay={0.1}>
             <h2 className="text-3xl md:text-4xl font-black tracking-tight">Umweltfreundliche Reinigung</h2>
             <p className="mt-5 text-slate-300 leading-relaxed">
@@ -112,8 +112,9 @@ export default function Sustainability() {
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
           <OeffnendesBild
-            src="/1096661_028b195047ea5ccd409ca5192a87c92d.jpg"
+            src="/bilder/nachhaltigkeit-arbeitsweise.jpg"
             alt="Nachhaltige Arbeitsweise"
+            sizes="(min-width: 1024px) 50vw, 100vw"
             className="h-[420px] w-full lg:order-2"
           />
           <AnimatedSection delay={0.1} className="lg:order-1">
@@ -149,8 +150,9 @@ export default function Sustainability() {
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
           <OeffnendesBild
-            src="/landscape-tree-nature-forest-grass-wilderness-911049-pxhere.com.jpg"
+            src="/bilder/nachhaltigkeit-garten.jpg"
             alt="Nachhaltige Gartenpflege"
+            sizes="(min-width: 1024px) 50vw, 100vw"
             className="h-[420px] w-full"
           />
           <AnimatedSection delay={0.1}>

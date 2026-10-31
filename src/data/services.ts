@@ -38,7 +38,7 @@ export const services: Service[] = [
     description: 'Professionelle Reinigung sämtlicher Gebäudearten. Von Treppenhäusern über Gemeinschaftsflächen bis hin zu kompletten Wohn- und Geschäftsobjekten. Wir passen uns Ihren Anforderungen an.',
     icon: Building2,
     features: ['Treppenhausreinigung', 'Gemeinschaftsflächen', 'Wohnungsreinigung', 'Geschäftsobjekte'],
-    image: 'https://images.unsplash.com/photo-1549857165-208ef848ab92?auto=format&fit=crop&w=900&q=80',
+    image: '/bilder/leistung-gebaeudereinigung.jpg',
     featured: true,
   },
   {
@@ -48,7 +48,7 @@ export const services: Service[] = [
     description: 'Gründliche und zuverlässige Reinigung von Büroräumen, Besprechungszimmern und Sanitärbereichen. Für ein professionelles Arbeitsumfeld.',
     icon: Sparkles,
     features: ['Schreibtisch- und Stuhlreinigung', 'Bodenpflege', 'Sanitärbereiche', 'Küchenbereiche'],
-    image: 'https://images.unsplash.com/photo-1706689656095-168768dc20a5?auto=format&fit=crop&w=900&q=80',
+    image: '/bilder/leistung-bueroreinigung.jpg',
     featured: true,
   },
   {
@@ -58,7 +58,7 @@ export const services: Service[] = [
     description: 'Regelmäßige Unterhaltsreinigung für Büros, Praxen, Gewerbe und Wohnanlagen. Nach einem festen Reinigungsplan sorgen wir dauerhaft für Sauberkeit, Hygiene und Werterhalt – mit festem Team und verlässlichen Terminen.',
     icon: Sparkles,
     features: ['Fester Reinigungsplan', 'Böden, Oberflächen & Sanitär', 'Küchen- und Sozialräume', 'Gleichbleibende Qualität'],
-    image: '/Design_ohne_Titel.png',
+    image: '/bilder/leistung-unterhaltsreinigung.jpg',
     featured: true,
   },
   {
@@ -68,7 +68,7 @@ export const services: Service[] = [
     description: 'Professionelle Glasreinigung ohne Streifen. Von Fenstern über Glasfassaden bis hin zu Vitrinen und Spiegeln.',
     icon: Droplets,
     features: ['Fensterreinigung', 'Glasfassaden', 'Rahmenreinigung', 'Streifenfreie Ausführung'],
-    image: 'https://images.unsplash.com/photo-1650348303193-b414465f1179?auto=format&fit=crop&w=900&q=80',
+    image: '/bilder/leistung-glasreinigung.jpg',
     featured: true,
   },
   {
@@ -78,7 +78,7 @@ export const services: Service[] = [
     description: 'Professionelle Praxisreinigung nach hygienischen Standards. Von Wartebereichen über Behandlungsräume bis hin zu Sanitärbereichen – für eine saubere und sichere Umgebung für Ihre Patienten und Mitarbeiter.',
     icon: Stethoscope,
     features: ['Desinfektion von Oberflächen', 'Behandlungsräume', 'Wartebereich & Rezeption', 'Sanitärbereiche'],
-    image: 'https://images.unsplash.com/photo-1669101602108-fa5ba89507ee?auto=format&fit=crop&w=900&q=80',
+    image: '/bilder/leistung-praxisreinigung.jpg',
     featured: true,
   },
   {
@@ -88,7 +88,7 @@ export const services: Service[] = [
     description: 'Umfassender Hausmeisterservice für Wohnanlagen und Gewerbeobjekte. Von der Treppenhausreinigung über Winterdienste bis hin zur kleinen Reparatur.',
     icon: Wrench,
     features: ['Treppenhausreinigung', 'Winterdienst', 'Kleine Reparaturen', 'Objektbetreuung'],
-    image: 'https://images.unsplash.com/photo-1567361808960-dec9cb578182?auto=format&fit=crop&w=900&q=80',
+    image: '/bilder/leistung-hausmeisterservice.jpg',
     featured: true,
   },
   {
@@ -98,7 +98,7 @@ export const services: Service[] = [
     description: 'Professionelle Garten- und Außenanlagenpflege. Vom Rasenmähen über Heckenschnitt bis hin zur saisonalen Bepflanzung.',
     icon: Trees,
     features: ['Rasenpflege', 'Heckenschnitt', 'Laubentfernung', 'Saisonale Bepflanzung'],
-    image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=900&q=80',
+    image: '/bilder/leistung-gartenpflege.jpg',
     featured: true,
   },
   {
@@ -108,7 +108,7 @@ export const services: Service[] = [
     description: 'Eine umfassende Grundreinigung für Wohnungen, Büros oder Gewerbeobjekte. Ideal nach Bauarbeiten, vor Einzug oder als Jahresaktion.',
     icon: Sparkles,
     features: ['Bodenversiegelung', 'Desinfektion', 'Küchen- und Badreinigung', 'Fenster inklusive'],
-    image: '/image copy copy copy copy copy copy copy copy copy.png',
+    image: '/bilder/leistung-grundreinigung.jpg',
     featured: true,
   },
   {
@@ -118,7 +118,7 @@ export const services: Service[] = [
     description: 'Professionelle Bauendreinigung nach Abschluss von Bau- oder Renovierungsarbeiten. Entfernung von Baustaub, Farbresten und Materialrückständen.',
     icon: PaintRoller,
     features: ['Baustaubentfernung', 'Farb- und Mörtelreste', 'Fensterreinigung', 'Bodenreinigung'],
-    image: '/logos/files_10953933-2026-07-17T16-21-08-771Z-files_10953933-2026-07-17T16-15-18-497Z-image.webp',
+    image: '/bilder/leistung-bauendreinigung.jpg',
     featured: true,
   },
   {
@@ -128,7 +128,7 @@ export const services: Service[] = [
     description: 'Zuverlässiger Winterdienst für private und gewerbliche Objekte. Räumung von Schnee, Streuung von Splitt oder Salz – nach Vereinbarung oder auf Abruf.',
     icon: Snowflake,
     features: ['Schneeräumung', 'Streudienst', 'Flächenfreihaltung', 'Auf Abruf'],
-    image: '/image copy copy.png',
+    image: '/bilder/leistung-winterdienst.jpg',
   },
   {
     id: 'entruempelung',
@@ -137,7 +137,7 @@ export const services: Service[] = [
     description: 'Komplette Entrümpelung von Wohnungen, Keller, Dachböden oder Gewerbeobjekten. Inklusive fachgerechter Entsorgung und Transport.',
     icon: Trash2,
     features: ['Wohnung & Keller', 'Dachboden & Garage', 'Fachgerechte Entsorgung', 'Transport inklusive'],
-    image: '/logos/files_10953933-2026-07-17T16-26-52-648Z-image.webp',
+    image: '/bilder/leistung-entruempelung.jpg',
   },
   {
     id: 'moebelreinigung',
@@ -146,7 +146,7 @@ export const services: Service[] = [
     description: 'Tiefenreinigung von Polstermöbeln, Matratzen und Teppichen. Schonend zu Material und Farben, effektiv gegen Flecken und Gerüche.',
     icon: Sofa,
     features: ['Polsterreinigung', 'Teppichreinigung', 'Matratzenreinigung', 'Fleckenentfernung'],
-    image: 'https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?auto=format&fit=crop&w=900&q=80',
+    image: '/bilder/leistung-moebelreinigung.jpg',
   },
   {
     id: 'schulreinigung',
@@ -155,7 +155,7 @@ export const services: Service[] = [
     description: 'KlarWerk Service bietet professionelle Schulreinigung für Bildungseinrichtungen. Unsere Reinigungskonzepte sorgen für hygienische, sichere und gepflegte Räume, in denen Schüler und Mitarbeiter sich wohlfühlen können.',
     icon: GraduationCap,
     features: ['Klassenraumreinigung', 'Flurreinigung', 'Sanitäranlagen', 'Sporthallenreinigung', 'Ferien-Grundreinigung', 'Bodenpflege und Beschichtung'],
-    image: '/image copy copy copy copy.png',
+    image: '/bilder/leistung-schulreinigung.jpg',
   },
   {
     id: 'kita-reinigung',
@@ -164,7 +164,7 @@ export const services: Service[] = [
     description: 'Die Reinigung von Kindertagesstätten erfordert besondere Hygienestandards. KlarWerk Service entwickelt Reinigungskonzepte speziell für sensible Bereiche mit Kindern.',
     icon: Baby,
     features: ['Tägliche Unterhaltsreinigung', 'Gruppenräume und Spielbereiche', 'Hygienische Wickelbereichreinigung', 'Sanitärreinigung mit geprüften Hygienemitteln', 'Bodenpflege für Linoleum, PVC, Fliesen', 'Desinfektionsreinigung bei Bedarf'],
-    image: '/image copy copy copy copy copy.png',
+    image: '/bilder/leistung-kita-reinigung.jpg',
   },
   {
     id: 'pflegeheimreinigung',
@@ -173,7 +173,7 @@ export const services: Service[] = [
     description: 'Professionelle Reinigung für Pflegeeinrichtungen mit höchsten Anforderungen an Hygiene, Sauberkeit und Sicherheit.',
     icon: HeartPulse,
     features: ['Bewohnerzimmer', 'Gemeinschaftsräume', 'Sanitärbereiche', 'Hygienereinigung', 'Fensterreinigung', 'Grundreinigung'],
-    image: '/image copy copy copy copy copy copy.png',
+    image: '/bilder/leistung-pflegeheimreinigung.jpg',
   },
   {
     id: 'lagerhallenreinigung',
@@ -182,7 +182,7 @@ export const services: Service[] = [
     description: 'Professionelle Reinigung von Lagerhallen, Logistikzentren und Produktionsbetrieben. Wir sorgen für saubere Böden, staubfreie Regale und sichere Verkehrswege.',
     icon: Warehouse,
     features: ['Lagerbodenreinigung', 'Staub- und Ablagerungsentfernung', 'Reinigung von Verkehrswegen', 'Reinigung von Regalanlagen', 'Reinigung von Rampenbereichen'],
-    image: '/image copy copy copy copy copy copy copy.png',
+    image: '/bilder/leistung-lagerhallenreinigung.jpg',
   },
   {
     id: 'schwimmbadreinigung',
@@ -192,7 +192,7 @@ export const services: Service[] = [
     icon: Waves,
     features: ['Reinigung von Beckenumgängen', 'Reinigung von Umkleidekabinen', 'Reinigung von Duschen und Sanitärbereichen', 'Reinigung von WC-Anlagen', 'Bodenreinigung mit rutschhemmenden Reinigungsverfahren', 'Glas- und Fensterreinigung', 'Reinigung von Eingangs- und Kassenbereichen', 'Desinfektion von Kontaktflächen', 'Entfernung von Kalk- und Wasserablagerungen', 'Reinigung von Wellness-, Sauna- und Spa-Bereichen'],
     // Hallenbad mit Beckenumgang – Foto: Mariusz Smenzyk, Unsplash-Lizenz (unsplash.com/photos/xs9r8fPUats), lokal auf 1600 px als WebP
-    image: '/schwimmbadreinigung-hallenbad.webp',
+    image: '/bilder/leistung-schwimmbadreinigung.jpg',
   },
   {
     id: 'supermarktreinigung',
@@ -201,7 +201,7 @@ export const services: Service[] = [
     description: 'Umfassende Reinigung für Supermärkte, Discounter, Getränkemärkte, Biomärkte, Einkaufszentren und Fachgeschäfte. Saubere Verkaufsflächen schaffen ein positives Einkaufserlebnis und stärken das Vertrauen Ihrer Kunden.',
     icon: ShoppingCart,
     features: ['Tägliche Bodenreinigung', 'Maschinelle Bodenreinigung mit Scheuersaugmaschine', 'Kassenbereichreinigung', 'Regal- und Verkaufsflächenreinigung', 'Sanitäranlagen', 'Grundreinigung außerhalb der Öffnungszeiten'],
-    image: '/image copy copy copy copy copy copy copy copy.png',
+    image: '/bilder/leistung-supermarktreinigung.jpg',
   },
   {
     id: 'gastronomiereinigung',
@@ -210,7 +210,7 @@ export const services: Service[] = [
     description: 'Professionelle Reinigung für Restaurants, Cafés, Gastronomiebetriebe und Kantinen. Wir übernehmen Küchen- und Fettentfernung, Gastraum- und Sanitärreinigung – zuverlässig außerhalb Ihrer Öffnungszeiten.',
     icon: UtensilsCrossed,
     features: ['Küchenreinigung & Fettentfernung', 'Gastraumreinigung', 'Sanitärbereiche', 'Reinigung nach LMHV'],
-    image: 'https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=900&q=80',
+    image: '/bilder/leistung-gastronomiereinigung.jpg',
   },
 ];
 

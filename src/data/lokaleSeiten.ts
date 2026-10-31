@@ -1707,6 +1707,187 @@ export const lokaleSeiten: LokaleSeite[] = [
       vertrauen: [UserCheck, ClipboardCheck, Users, KeyRound],
     },
   },
+  // ── Praxisreinigung Rendsburg (Entwurf Mira, 31.10.2026; Einsatzgebiet wie Büroreinigung Rendsburg) ──
+  {
+    serviceId: 'praxisreinigung',
+    citySlug: 'rendsburg',
+    leistung: 'Praxisreinigung',
+    ort: 'Rendsburg',
+    seo: {
+      title: 'Praxisreinigung Rendsburg nach Feierabend | KlarWerk Service',
+      description:
+        'Praxisreinigung in Rendsburg für Arzt-, Zahnarzt- und Therapiepraxen: nach Ihrem Hygieneplan, außerhalb der Sprechzeiten, mit festem Ansprechpartner.',
+      keywords:
+        'Praxisreinigung Rendsburg, Reinigung Arztpraxis Rendsburg, Zahnarztpraxis Reinigung Rendsburg, Physiotherapie Reinigung Rendsburg, Praxisreinigung Büdelsdorf, Praxisreinigung Osterrönfeld',
+    },
+    h1: 'Praxisreinigung in Rendsburg',
+    intro:
+      'Rendsburg ist Kreisstadt und Versorgungszentrum für den Kreis Rendsburg-Eckernförde: Hausarzt- und Facharztpraxen in der Altstadt und in Neuwerk, Ärztehäuser und Therapiepraxen in den Wohnlagen nördlich der Eider, dazu Praxen in Büdelsdorf, Osterrönfeld und Fockbek. KlarWerk Service reinigt Praxen in Rendsburg nach Ihrem Hygieneplan, außerhalb der Sprechzeiten und mit einem festen Ansprechpartner, der Ihre Räume kennt. Von Bordesholm aus sind wir über die A7 in rund 30 Minuten bei Ihnen.',
+    bild: {
+      // gleiches Foto wie auf /leistungen/praxisreinigung (kommt aus services.ts)
+      alt: 'Saubere Praxisräume – Praxisreinigung in Rendsburg durch KlarWerk Service',
+    },
+    eckdaten: [
+      { titel: 'Außerhalb der Sprechzeiten', text: 'Abends, früh morgens oder am freien Nachmittag' },
+      { titel: 'Nach Ihrem Hygieneplan', text: 'Bereiche, Mittel und Intervalle wie bei Ihnen festgelegt' },
+      { titel: 'Fester Ansprechpartner', text: 'Auch bei Urlaub und Krankheit eine eingearbeitete Vertretung' },
+    ],
+    zielgruppen: [
+      {
+        titel: 'Hausarzt- und Facharztpraxen',
+        text: 'Volles Wartezimmer, viel Laufverkehr am Empfang – in der Altstadt wie in den Praxen nördlich der Eider: Böden, Wartebereich und häufig berührte Flächen wie Türklinken, Tresen und Armlehnen werden bei jeder Reinigung gereinigt und nach Plan desinfiziert.',
+      },
+      {
+        titel: 'Zahnarztpraxen',
+        text: 'Behandlungszimmer mit Böden und Oberflächen rund um die Behandlungseinheit, dazu Rezeption, Wartebereich und Sanitär. Was am Gerät selbst passiert, bleibt bei Ihrem Praxisteam.',
+      },
+      {
+        titel: 'Physio-, Ergo- und Logopädiepraxen',
+        text: 'Therapieliegen, Ablagen, Trainingsflächen, Umkleiden und Duschen – Räume, die den ganzen Tag genutzt werden und dafür eine feste Routine brauchen.',
+      },
+      {
+        titel: 'Psychotherapie und kleine Praxen',
+        text: 'Wenige Räume, ruhige Atmosphäre, Diskretion zählt. Hier reicht oft eine Reinigung an festen Wochentagen statt täglich.',
+      },
+      {
+        titel: 'MVZ, Praxisgemeinschaften und Ärztehäuser',
+        text: 'Mehrere Praxen auf einer Etage oder in einem Haus: ein Ansprechpartner, ein abgestimmter Plan – und auf Wunsch Leistungsverzeichnis und Rechnung getrennt nach Praxis.',
+      },
+    ],
+    umfang: {
+      wir: [
+        'Böden in allen Räumen – feucht gewischt, in sensiblen Bereichen desinfizierend',
+        'Wartebereich, Empfang und Flure',
+        'Kontaktflächen wie Türklinken, Lichtschalter, Tresen und Armlehnen',
+        'Behandlungs- und Therapieräume: Liegen, Arbeitsflächen und Ablagen',
+        'Sanitärbereiche für Patienten und Team',
+        'Sozialraum und Teeküche, Papierkörbe und Hausmüll',
+        'Glasflächen innen: Eingangstür, Glaswände und Spiegel',
+      ],
+      beiIhnen: [
+        'Aufbereitung von Instrumenten und Medizinprodukten',
+        'Desinfektion medizinischer Geräte nach Herstellervorgabe',
+        'Patientenakten, Unterlagen und Bildschirme – die fassen wir nicht an',
+      ],
+    },
+    zeiten: {
+      titel: 'Reinigung, wenn Ihre Praxis leer ist',
+      text: 'Patienten und Team sollen von der Reinigung nichts merken außer dem Ergebnis. Den Rhythmus – täglich oder an festen Wochentagen – legen wir nach Praxisgröße und Hygieneplan gemeinsam fest.',
+      punkte: [
+        'Abends nach der letzten Sprechstunde',
+        'Früh morgens vor Praxisbeginn',
+        'An Ihren freien Nachmittagen, etwa mittwochs oder freitags',
+        'Grundreinigung der Böden in den Praxisferien',
+      ],
+    },
+    vertrauen: [
+      {
+        titel: 'Ihr Hygieneplan ist die Vorgabe',
+        text: 'Wir übernehmen Ihre Festlegungen zu Bereichen, Mitteln und Intervallen und setzen VAH-gelistete Desinfektionsmittel passend zum Einsatzbereich ein.',
+      },
+      {
+        titel: 'Jede Reinigung dokumentiert',
+        text: 'Sie sehen jederzeit, was wann gereinigt wurde – hilfreich für Ihre Hygienedokumentation und bei Begehungen.',
+      },
+      {
+        titel: 'Diskret und verschwiegen',
+        text: 'Wer in einer Praxis reinigt, sieht vieles. Auf Wunsch unterschreiben wir eine Verschwiegenheitsvereinbarung für Ihre Praxis.',
+      },
+      {
+        titel: 'Kontrolle statt Hoffnung',
+        text: 'Regelmäßige Qualitätskontrollen durch Ihren festen Ansprechpartner – Mängel werden behoben, bevor sie Ihnen auffallen.',
+      },
+    ],
+    anfahrt: {
+      titel: 'Praxisreinigung in ganz Rendsburg',
+      text: 'Von Bordesholm sind wir über die A7 in rund 30 Minuten in Rendsburg – in der Altstadt und in Neuwerk, in den Wohn- und Praxislagen nördlich der Eider und ebenso in Büdelsdorf, Osterrönfeld und Fockbek. Kurze Wege machen Besichtigung, Kontrollen und kurzfristige Absprachen einfach.',
+      gruppen: [
+        { titel: 'Nördlich der Eider', orte: ['Rendsburg-Nord', 'Mastbrook', 'Rotenhof', 'Kronwerk', 'Duten', 'Seemühlen', 'Suhmsheide'] },
+        { titel: 'An Eider und Kanal', orte: ['Altstadt', 'Neuwerk', 'Parksiedlung', 'Nobiskrug', 'Hoheluft', 'Schleife', 'Hochfeld', 'Kreishafen', 'Rendsburg-Süd', 'Marienhöh'] },
+      ],
+      umland: ['Büdelsdorf', 'Osterrönfeld', 'Westerrönfeld', 'Schacht-Audorf', 'Fockbek', 'Alt Duvenstedt', 'Rickert', 'Nübbel'],
+    },
+    ablauf: [
+      {
+        title: 'Kurze Anfrage',
+        desc: 'Per Telefon, E-Mail oder Formular: Praxisart, ungefähre Raumzahl und Ihre Wunschzeiten genügen für den Anfang.',
+      },
+      {
+        title: 'Besichtigung in Ihrer Praxis',
+        desc: 'Kostenlos vor Ort in Rendsburg: Wir gehen Räume, Bodenbeläge und Ihren Hygieneplan gemeinsam durch.',
+      },
+      {
+        title: 'Festpreis-Angebot',
+        desc: 'Mit klarem Leistungsverzeichnis nach Räumen und Rhythmus, kalkuliert mit unserem eigenen Programm für die Gebäudereinigung.',
+      },
+      {
+        title: 'Start mit Einweisung',
+        desc: 'Schlüssel- und Alarmregelung, Zuständigkeiten und Reinigungsplan halten wir vor dem ersten Einsatz schriftlich fest.',
+      },
+      {
+        title: 'Laufende Betreuung',
+        desc: 'Fester Ansprechpartner, regelmäßige Kontrollen und eine eingearbeitete Vertretung bei Urlaub oder Krankheit.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Reinigen Sie Praxen in ganz Rendsburg?',
+        answer:
+          'Ja. Wir betreuen Praxen in allen Stadtteilen von Rendsburg – nördlich der Eider ebenso wie in der Altstadt, in Neuwerk und am Kanal – sowie in den Nachbargemeinden, etwa in Büdelsdorf, Osterrönfeld, Westerrönfeld und Fockbek. Von unserem Sitz in Bordesholm sind wir über die A7 in rund 30 Minuten vor Ort.',
+      },
+      {
+        question: 'Reinigen Sie während der Sprechzeiten?',
+        answer:
+          'In der Regel nicht. Wir reinigen abends nach der letzten Sprechstunde, früh morgens vor Praxisbeginn oder an Ihren freien Nachmittagen. Ob täglich oder an festen Wochentagen, richtet sich nach Ihrer Praxisgröße und Ihrem Hygieneplan.',
+      },
+      {
+        question: 'Arbeiten Sie nach unserem Hygieneplan?',
+        answer:
+          'Ja. Wir übernehmen die Vorgaben Ihres Hygieneplans zu Bereichen, Mitteln und Intervallen, setzen VAH-gelistete Desinfektionsmittel ein und dokumentieren jede Reinigung nachvollziehbar.',
+      },
+      {
+        question: 'Wer reinigt bei Urlaub oder Krankheit?',
+        answer:
+          'Eine eingearbeitete Vertretung, die Ihre Praxis und den Reinigungsplan kennt. Ihr fester Ansprechpartner bleibt derselbe – Sie müssen nichts neu erklären.',
+      },
+      {
+        question: 'Übernehmen Sie auch die Aufbereitung von Instrumenten?',
+        answer:
+          'Nein. Die Aufbereitung von Medizinprodukten und die Desinfektion medizinischer Geräte bleiben bei Ihrem Praxisteam. Wir reinigen und desinfizieren Böden, Oberflächen, Kontaktflächen und Sanitärbereiche.',
+      },
+      {
+        question: 'Wie gehen Sie mit Patientendaten um?',
+        answer:
+          'Diskret: Akten, Unterlagen und Bildschirme fassen wir nicht an. Auf Wunsch unterschreiben wir eine Verschwiegenheitsvereinbarung für Ihre Praxis.',
+      },
+      {
+        question: 'Was kostet die Praxisreinigung in Rendsburg?',
+        answer:
+          'Das hängt von Praxisgröße, Raumanzahl, Bodenbelägen und Reinigungsrhythmus ab. Nach einer kostenlosen Besichtigung in Ihrer Praxis erhalten Sie ein Festpreis-Angebot mit klarem Leistungsverzeichnis – ohne versteckte Kosten.',
+      },
+    ],
+    ergaenzungen: [
+      { serviceId: 'glasreinigung', text: 'Praxisfenster, Eingangstür und Praxisschild – streifenfrei, innen und außen.' },
+      { serviceId: 'grundreinigung', text: 'Böden gründlich reinigen und neu einpflegen, ideal in den Praxisferien.' },
+      { serviceId: 'bueroreinigung', text: 'Für Büro- und Verwaltungsflächen im selben Haus – unsere Büroreinigung in Rendsburg.' },
+    ],
+    texte: {
+      zielgruppenLabel: 'Für Ihre Praxis',
+      zielgruppenTitel: 'Jede Praxis in Rendsburg braucht etwas anderes',
+      zielgruppenText: 'Wir richten Reinigungsplan und Rhythmus nach Ihrer Praxisart aus – nicht nach einer Standardliste.',
+      grenzenTitel: 'Das bleibt bei Ihrem Praxisteam',
+      grenzenText: 'Klare Grenzen schützen Patienten, Geräte und Ihre Haftung.',
+      ablaufTitel: 'So starten wir in Ihrer Praxis',
+      vertrauenLabel: 'Hygiene & Vertrauen',
+      ergaenzungTitel: 'Alles für Ihre Praxis aus einer Hand',
+      ctaText:
+        'Wir kommen zur kostenlosen Besichtigung in Ihre Praxis in Rendsburg und erstellen Ihnen ein Festpreis-Angebot mit klarem Leistungsverzeichnis.',
+    },
+    icons: {
+      zielgruppen: [Stethoscope, Smile, Activity, Brain, Building2],
+      vertrauen: [ClipboardCheck, FileText, Lock, UserCheck],
+    },
+  },
 ];
 
 export function getLokaleSeite(serviceId: string, citySlug: string): LokaleSeite | undefined {

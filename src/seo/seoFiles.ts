@@ -44,6 +44,7 @@ export const siteRoutes = [
   { path: '/leistungen/praxisreinigung', changefreq: 'monthly', priority: '0.8' },
   { path: '/leistungen/praxisreinigung/kiel', changefreq: 'monthly', priority: '0.8' },
   { path: '/leistungen/praxisreinigung/neumuenster', changefreq: 'monthly', priority: '0.8' },
+  { path: '/leistungen/praxisreinigung/rendsburg', changefreq: 'monthly', priority: '0.8' },
   { path: '/leistungen/hausmeisterservice', changefreq: 'monthly', priority: '0.8' },
   { path: '/leistungen/unterhaltsreinigung', changefreq: 'monthly', priority: '0.8' },
   { path: '/leistungen/unterhaltsreinigung/neumuenster', changefreq: 'monthly', priority: '0.8' },

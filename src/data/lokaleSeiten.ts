@@ -2094,7 +2094,7 @@ export const lokaleSeiten: LokaleSeite[] = [
     eckdaten: [
       { titel: 'In den Ferien oder nach Betriebsschluss', text: 'Termin nach Absprache, wenn das Haus leer ist' },
       { titel: 'Auf den Belag abgestimmt', text: 'Mittel und Verfahren nach Bodenart und Herstellerangaben' },
-      { titel: 'Versiegelung auf Wunsch', text: 'Nur, wenn sie zu Belag und Nutzung passt' },
+      { titel: 'Alles aus einer Hand', text: 'Ausräumen, Reinigung, Versiegelung und Einräumen durch unser Team' },
     ],
     zielgruppen: [
       {
@@ -2119,12 +2119,13 @@ export const lokaleSeiten: LokaleSeite[] = [
         'Gründliche Reinigung der Bodenflächen, abgestimmt auf den jeweiligen Belag',
         'Entfernen von Pflegeresten, Schmutzfilmen und Gebrauchsspuren',
         'Eingangsbereiche, Flure, Gruppen- und Klassenräume, Sanitärbereiche',
-        'Versiegelung oder Einpflege des Bodens, wenn Belag und Zustand es sinnvoll machen',
-        'Abschlusskontrolle gemeinsam mit Ihnen vor Ort',
+        'Versiegelung oder Einpflege des Bodens durch unser eigenes Team, wenn Belag und Zustand es sinnvoll machen',
+        'Aus- und Einräumen der Räume: Möbel, Spielmaterial und Stühle stellen wir zur Seite und wieder zurück',
+        'Abschlusskontrolle gemeinsam mit Ihnen und zügige Übergabe, damit der Betrieb pünktlich weitergeht',
         'Pflegehinweise für die Zeit nach der Grundreinigung',
       ],
       beiIhnen: [
-        'Räume freiräumen: Möbel und Spielmaterial stellen wir nach Absprache zur Seite, Regale und Schränke bleiben bei Ihnen',
+        'Persönliche Sachen, Unterlagen und Bastelarbeiten der Kinder – die fassen wir nicht an',
         'Beschädigte Beläge, lose Fliesen oder Fugen – Auffälliges melden wir, reparieren aber nicht',
         'Beläge, deren Hersteller keine Versiegelung vorsieht, bleiben ohne Versiegelung',
       ],
@@ -2151,6 +2152,10 @@ export const lokaleSeiten: LokaleSeite[] = [
       {
         titel: 'Geeignete Mittel für Kinderräume',
         text: 'Wir setzen Reinigungs- und Pflegemittel ein, die für den Einsatz in Kitas und Schulen geeignet sind, und halten Trocknungs- und Lüftungszeiten ein, bevor die Räume wieder genutzt werden.',
+      },
+      {
+        titel: 'Versiegelung aus einer Hand',
+        text: 'Reinigung und Versiegelung macht unser eigenes Team – kein Subunternehmer, ein Ansprechpartner, ein Zeitplan. Das Ergebnis ist professionell und die Übergabe schnell.',
       },
       {
         titel: 'Abnahme vor Ort',
@@ -2185,7 +2190,7 @@ export const lokaleSeiten: LokaleSeite[] = [
       },
       {
         title: 'Durchführung und Abnahme',
-        desc: 'Eingearbeitetes Personal mit festem Ansprechpartner, danach gemeinsame Abnahme und Pflegehinweise.',
+        desc: 'Wir räumen aus, reinigen, versiegeln auf Wunsch und räumen wieder ein – danach gemeinsame Abnahme, Pflegehinweise und zügige Übergabe.',
       },
     ],
     faqs: [
@@ -2215,6 +2220,16 @@ export const lokaleSeiten: LokaleSeite[] = [
           'Erst nach unserer Freigabe. Trocknungs- und Lüftungszeiten hängen von Belag und Verfahren ab und stehen vorher im Zeitplan, den wir mit Ihnen abstimmen.',
       },
       {
+        question: 'Machen Sie die Versiegelung selbst?',
+        answer:
+          'Ja. Reinigung und Versiegelung übernimmt unser eigenes Team, wir geben nichts an Subunternehmer ab. So bleiben Ansprechpartner, Zeitplan und Qualität in einer Hand.',
+      },
+      {
+        question: 'Müssen wir die Räume vorher ausräumen?',
+        answer:
+          'Nein. Möbel, Stühle und Spielmaterial stellen wir zur Seite und räumen nach der Grundreinigung wieder ein. Persönliche Sachen und Unterlagen fassen wir nicht an.',
+      },
+      {
         question: 'Übernehmen Sie danach auch die laufende Reinigung?',
         answer:
           'Ja. Wer nach der Grundreinigung die laufende Pflege abgeben möchte, kann sie mit unserer Unterhaltsreinigung verbinden – mit demselben Ansprechpartner.',
@@ -2240,11 +2255,11 @@ export const lokaleSeiten: LokaleSeite[] = [
       vertrauenLabel: 'Qualität & Sicherheit',
       ergaenzungTitel: 'Rund um Ihre Einrichtung aus einer Hand',
       ctaText:
-        'Wir sehen uns Böden und Räume Ihrer Einrichtung in Kiel kostenlos an und erstellen Ihnen ein schriftliches Angebot für Grundreinigung und Versiegelung.',
+        'Wir sehen uns Böden und Räume Ihrer Einrichtung in Kiel kostenlos an und erstellen Ihnen ein schriftliches Angebot für Grundreinigung und Versiegelung – Ausräumen und Einräumen inklusive.',
     },
     icons: {
       zielgruppen: [Baby, Users, Briefcase, Home],
-      vertrauen: [ClipboardCheck, UserCheck, ShieldCheck, CalendarCheck],
+      vertrauen: [ClipboardCheck, UserCheck, ShieldCheck, Sparkles, CalendarCheck],
     },
   },
 ];

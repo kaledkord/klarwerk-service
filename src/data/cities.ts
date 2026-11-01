@@ -54,13 +54,17 @@ export const cities: City[] = [
         { label: 'Praxisreinigung', to: '/leistungen/praxisreinigung/kiel' },
         { label: 'Glasreinigung', to: '/leistungen/glasreinigung/kiel' },
         { label: 'Grundreinigung für Kitas und Schulen in Kiel', to: '/leistungen/grundreinigung/kiel' },
+        { label: 'Unterhaltsreinigung', to: '/leistungen/unterhaltsreinigung/kiel' },
+        { label: 'Bauendreinigung', to: '/leistungen/bauendreinigung/kiel' },
+        { label: 'Kita-Reinigung', to: '/leistungen/kita-reinigung/kiel' },
+        { label: 'Schulreinigung', to: '/leistungen/schulreinigung/kiel' },
       ],
     },
     highlights: [
       { text: 'Büroreinigung in Kiel nach Feierabend', to: '/leistungen/bueroreinigung/kiel' },
       { text: 'Praxisreinigung in Kiel nach Hygieneplan', to: '/leistungen/praxisreinigung/kiel' },
       { text: 'Glasreinigung in Kiel, streifenfrei innen und außen', to: '/leistungen/glasreinigung/kiel' },
-      { text: 'Treppenhausreinigung für Wohnanlagen in Kiel', to: '/leistungen/unterhaltsreinigung' },
+      { text: 'Treppenhausreinigung für Wohnanlagen in Kiel', to: '/leistungen/unterhaltsreinigung/kiel' },
     ],
     faqs: [
       {

@@ -112,6 +112,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://klarwerk-service.com/leistungen/unterhaltsreinigung/kiel</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://klarwerk-service.com/leistungen/grundreinigung</loc>
     <lastmod>2026-09-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -142,6 +148,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://klarwerk-service.com/leistungen/bauendreinigung/kiel</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://klarwerk-service.com/leistungen/winterdienst</loc>
     <lastmod>2026-09-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -166,10 +178,22 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://klarwerk-service.com/leistungen/schulreinigung/kiel</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://klarwerk-service.com/leistungen/kita-reinigung</loc>
     <lastmod>2026-09-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://klarwerk-service.com/leistungen/kita-reinigung/kiel</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://klarwerk-service.com/leistungen/pflegeheimreinigung</loc>

@@ -96,11 +96,19 @@ export const cities: City[] = [
       'Gebäudereinigung in Rendsburg für Büros, Praxen, Wohnanlagen und Geschäftsobjekte: regelmäßig, zuverlässig und persönlich betreut.',
     intro:
       'KlarWerk Service bietet Gebäudereinigung in Rendsburg für Unternehmen, Praxen, Immobilienverwaltungen und private Auftraggeber. An der Eider und im gesamten Kreis Rendsburg-Eckernförde sorgen wir für Sauberkeit in Bürogebäuden, Wohnanlagen und Geschäftsobjekten.',
+    eigeneSeiten: {
+      vorspann: 'Für die drei häufigsten Aufträge in Rendsburg haben wir eigene Seiten:',
+      links: [
+        { label: 'Büroreinigung', to: '/leistungen/bueroreinigung/rendsburg' },
+        { label: 'Praxisreinigung', to: '/leistungen/praxisreinigung/rendsburg' },
+        { label: 'Glasreinigung in Rendsburg', to: '/leistungen/glasreinigung/rendsburg' },
+      ],
+    },
     highlights: [
-      'Büroreinigung im Rendsburger Stadtgebiet',
-      'Glasreinigung für Geschäftsobjekte und Praxen',
+      { text: 'Büroreinigung in Rendsburg nach Feierabend', to: '/leistungen/bueroreinigung/rendsburg' },
+      { text: 'Praxisreinigung in Rendsburg nach Hygieneplan', to: '/leistungen/praxisreinigung/rendsburg' },
+      { text: 'Glasreinigung in Rendsburg, streifenfrei innen und außen', to: '/leistungen/glasreinigung/rendsburg' },
       'Treppenhausreinigung für Wohnanlagen in Rendsburg',
-      'Hausmeisterservice für Wohnanlagen und Gewerbe',
     ],
     image: '/bilder/stadt-rendsburg.jpg',
     tier: 1,

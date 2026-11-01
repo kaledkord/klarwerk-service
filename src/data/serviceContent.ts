@@ -180,10 +180,10 @@ export const serviceContents: Record<string, ServiceContent> = {
       { question: 'Was kostet eine Glasreinigung?', answer: 'Die Kosten richten sich nach Anzahl, Größe und Zugänglichkeit der Fenster. Nach einer Besichtigung erhalten Sie ein Festpreis-Angebot.' },
     ],
     seo: {
-      // Neumünster hat eine eigene Seite (/leistungen/glasreinigung/neumuenster).
-      title: 'Glasreinigung Kiel, Rendsburg & SH | KlarWerk Service',
+      // Kiel, Neumünster und Rendsburg haben eigene Seiten (/leistungen/glasreinigung/<stadt>).
+      title: 'Glasreinigung in Schleswig-Holstein | KlarWerk Service',
       description:
-        'Glas- und Fensterreinigung für Büros, Praxen und Geschäfte in Kiel, Rendsburg und Umgebung. Innen und außen, feste Termine. Angebot anfragen.',
+        'Glas- und Fensterreinigung für Büros, Praxen und Geschäfte in Bordesholm und ganz Schleswig-Holstein. Innen und außen, feste Termine. Angebot anfragen.',
       keywords: `Glasreinigung, Fensterreinigung, Fassadenreinigung, streifenfreie Reinigung, ${localKeywords}`,
     },
   },

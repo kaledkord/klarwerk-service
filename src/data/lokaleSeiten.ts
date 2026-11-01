@@ -1888,6 +1888,190 @@ export const lokaleSeiten: LokaleSeite[] = [
       vertrauen: [ClipboardCheck, FileText, Lock, UserCheck],
     },
   },
+  {
+    serviceId: 'glasreinigung',
+    citySlug: 'rendsburg',
+    leistung: 'Glasreinigung',
+    ort: 'Rendsburg',
+    seo: {
+      title: 'Glasreinigung Rendsburg: Büro & Gewerbe | KlarWerk Service',
+      description:
+        'Glasreinigung in Rendsburg für Büros, Praxen und Geschäfte: Fenster und Glasfronten streifenfrei, innen und außen, im festen Turnus. Jetzt anfragen.',
+      keywords:
+        'Glasreinigung Rendsburg, Fensterreinigung Rendsburg, Fensterputzer Rendsburg, Schaufensterreinigung Rendsburg, Glasreinigung Büro Rendsburg, Glasreinigung Büdelsdorf, Glasreinigung Osterrönfeld',
+    },
+    h1: 'Glasreinigung in Rendsburg',
+    intro:
+      'Zwischen Eider und Nord-Ostsee-Kanal weht fast immer Wind, und mit ihm legt sich ein feiner Film auf Fenster, Glasfronten und Eingangstüren – im tief stehenden Licht fällt jede Schliere auf. KlarWerk Service reinigt Fenster und Glasflächen in Rendsburg streifenfrei, innen und außen, im festen Turnus oder einmalig zum Anlass – für Büros, Praxen, Geschäfte in der Altstadt und Gewerbeobjekte am Kanal. Von unserem Sitz in Bordesholm sind wir über die A7 in rund 30 Minuten bei Ihnen.',
+    bild: {
+      // gleiches Foto wie auf /leistungen/glasreinigung (kommt aus services.ts)
+      alt: 'Streifenfreie Fenster – Glasreinigung in Rendsburg durch KlarWerk Service',
+    },
+    eckdaten: [
+      { titel: 'Innen und außen', text: 'Scheiben, auf Wunsch mit Rahmen und Fensterbänken' },
+      { titel: 'Fester Turnus oder einmalig', text: 'Regelmäßig über das Jahr oder zum Anlass' },
+      { titel: 'Ein Ansprechpartner', text: 'Termine abgestimmt, auch mit Ihrer laufenden Reinigung' },
+    ],
+    zielgruppen: [
+      {
+        titel: 'Büros und Verwaltungen',
+        text: 'Mehr Tageslicht am Arbeitsplatz und ein gepflegter Eindruck für Besucher: Bürofenster, Glastüren und Glaswände im festen Rhythmus – abgestimmt auf Ihre Arbeitszeiten, in der Kreisstadt wie in Büdelsdorf.',
+      },
+      {
+        titel: 'Praxen und Ärztehäuser',
+        text: 'Praxisfenster, Eingangstür und Glas im Empfang – gereinigt außerhalb der Sprechzeiten, damit Wartezimmer und Behandlung ungestört bleiben.',
+      },
+      {
+        titel: 'Geschäfte und Schaufenster',
+        text: 'In der Altstadt und den Einkaufsstraßen entscheidet das Schaufenster, ob jemand stehen bleibt. Scheiben und Eingangstür reinigen wir vor Ladenöffnung oder nach Geschäftsschluss.',
+      },
+      {
+        titel: 'Autohäuser und Ausstellungsflächen',
+        text: 'Große Glasfronten zeigen, was drinnen steht. Wir stimmen die Termine so ab, dass Ausstellung und Verkauf weiterlaufen.',
+      },
+      {
+        titel: 'Wohnanlagen und Hausverwaltungen',
+        text: 'Treppenhausfenster, Haustüren und Glas in Gemeinschaftsbereichen – planbar im Turnus, mit einem Ansprechpartner für die ganze Anlage.',
+      },
+    ],
+    umfang: {
+      wir: [
+        'Fensterscheiben innen und außen, streifenfrei',
+        'Rahmen, Falze und Fensterbänke auf Wunsch',
+        'Schaufenster, Eingangstüren und Glasvordächer, soweit sicher erreichbar',
+        'Glastüren, Glaswände und Trennwände im Innenbereich',
+        'Spiegel und Glas in Empfang, Treppenhaus und Sanitär',
+        'Höher gelegene Flächen mit Teleskop- und Leitersystemen',
+      ],
+      beiIhnen: [
+        'Fensterbänke freiräumen, Deko und Pflanzen zur Seite stellen',
+        'Fassadenflächen, die Hubsteiger oder Gerüst brauchen – nur nach Absprache',
+        'Beschädigte oder undichte Fenster – Auffälliges melden wir, reparieren aber nicht',
+      ],
+    },
+    zeiten: {
+      titel: 'Glasreinigung im passenden Rhythmus',
+      text: 'Wind und Feuchtigkeit an Eider und Kanal, Pollen im Frühjahr, Regen und Spritzwasser im Herbst: Wie oft sich eine Glasreinigung lohnt, hängt von Lage, Laufkundschaft und Witterung ab. Ein Schaufenster in der Altstadt braucht mehr Pflege als ein Bürofenster zum Hof. Den Rhythmus legen wir nach der Besichtigung gemeinsam fest.',
+      punkte: [
+        'Schaufenster und Eingangstüren in kurzen Abständen',
+        'Bürofenster im festen Turnus über das Jahr',
+        'Einmalig nach dem Winter, nach Bauarbeiten oder vor einem Anlass',
+        'Früh morgens vor Ladenöffnung oder nach Geschäftsschluss',
+      ],
+    },
+    vertrauen: [
+      {
+        titel: 'Streifenfrei mit Profi-Technik',
+        text: 'Professionelle Wischtechnik statt Haushaltsmittel – damit die Scheibe auch im Gegenlicht klar bleibt.',
+      },
+      {
+        titel: 'Ein fester Ansprechpartner',
+        text: 'Eine Person für Termine, Rückfragen und Kontrollen. Bei Urlaub und Krankheit übernimmt eine eingearbeitete Vertretung, damit kein Termin ausfällt.',
+      },
+      {
+        titel: 'Sicher in der Höhe',
+        text: 'Teleskop- und Leitersysteme für höher gelegene Fenster. Was nur mit Hubsteiger oder Gerüst geht, klären wir vorab offen.',
+      },
+      {
+        titel: 'Kombinierbar',
+        text: 'Glasreinigung lässt sich mit unserer Büro- oder Praxisreinigung in Rendsburg verbinden: ein Plan, ein Ansprechpartner, abgestimmte Termine.',
+      },
+    ],
+    anfahrt: {
+      titel: 'Glasreinigung in ganz Rendsburg',
+      text: 'Von Bordesholm sind wir über die A7 in rund 30 Minuten in Rendsburg – bei den Geschäften in der Altstadt und in Neuwerk, an den Büro- und Praxisstandorten nördlich der Eider und in den Gewerbelagen am Kanal und in Büdelsdorf. Kurze Wege machen Besichtigung, festen Turnus und kurzfristige Termine einfach.',
+      gruppen: [
+        { titel: 'Nördlich der Eider', orte: ['Rendsburg-Nord', 'Mastbrook', 'Rotenhof', 'Kronwerk', 'Duten', 'Seemühlen', 'Suhmsheide'] },
+        { titel: 'An Eider und Kanal', orte: ['Altstadt', 'Neuwerk', 'Parksiedlung', 'Nobiskrug', 'Hoheluft', 'Schleife', 'Hochfeld', 'Kreishafen', 'Rendsburg-Süd', 'Marienhöh'] },
+      ],
+      umland: ['Büdelsdorf', 'Osterrönfeld', 'Westerrönfeld', 'Schacht-Audorf', 'Fockbek', 'Alt Duvenstedt', 'Rickert', 'Nübbel'],
+    },
+    ablauf: [
+      {
+        title: 'Kurze Anfrage',
+        desc: 'Art des Objekts, ungefähre Zahl und Größe der Fenster – ein paar Fotos genügen für eine erste Einschätzung.',
+      },
+      {
+        title: 'Besichtigung vor Ort',
+        desc: 'Kostenlos in Rendsburg: Wir sehen uns Glasflächen, Höhen und Zugänge an und klären, was innen und außen dazugehört.',
+      },
+      {
+        title: 'Festpreis-Angebot',
+        desc: 'Ein fester Preis je Termin oder für den Turnus – Sie wissen vorher genau, was Sie zahlen.',
+      },
+      {
+        title: 'Erster Termin',
+        desc: 'Zu einer Zeit, die Ihren Betrieb nicht stört: vor Öffnung, nach Feierabend oder am Wochenende nach Absprache.',
+      },
+      {
+        title: 'Fester Turnus',
+        desc: 'Auf Wunsch kommen wir regelmäßig wieder – Ihr Ansprechpartner hält die Termine im Blick und kontrolliert das Ergebnis.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Reinigen Sie Fenster in ganz Rendsburg?',
+        answer:
+          'Ja. Wir sind in allen Stadtteilen unterwegs – nördlich der Eider ebenso wie in der Altstadt, in Neuwerk und am Kanal – und im Umland, etwa in Büdelsdorf, Osterrönfeld, Westerrönfeld und Fockbek. Von unserem Sitz in Bordesholm sind wir über die A7 in rund 30 Minuten vor Ort.',
+      },
+      {
+        question: 'Wie oft sollten Fenster in Rendsburg gereinigt werden?',
+        answer:
+          'Das hängt von Lage und Nutzung ab. Nahe am Wasser und an viel befahrenen Straßen setzen sich Fenster schneller zu, Schaufenster und Eingangstüren brauchen kurze Abstände, Bürofenster meist einen festen Turnus über das Jahr. Nach der Besichtigung empfehlen wir einen passenden Rhythmus und passen ihn bei Bedarf an.',
+      },
+      {
+        question: 'Reinigen Sie auch einmalig?',
+        answer:
+          'Ja. Neben der regelmäßigen Glasreinigung übernehmen wir einmalige Einsätze, etwa nach dem Winter, nach Bauarbeiten oder vor einem Anlass. Unser Schwerpunkt sind aber wiederkehrende Aufträge.',
+      },
+      {
+        question: 'Reinigen Sie auch Fenster in oberen Etagen?',
+        answer:
+          'Ja, soweit sie mit Teleskop- und Leitersystemen sicher erreichbar sind. Flächen, die einen Hubsteiger oder ein Gerüst brauchen, besprechen wir vorab mit Ihnen.',
+      },
+      {
+        question: 'Gehören Rahmen und Fensterbänke dazu?',
+        answer:
+          'Auf Wunsch ja. Rahmen, Falze und Fensterbänke reinigen wir mit, wenn das im Angebot so vereinbart ist.',
+      },
+      {
+        question: 'Lässt sich die Glasreinigung mit der Büro- oder Praxisreinigung verbinden?',
+        answer:
+          'Ja. Glas innen kann Teil der laufenden Reinigung sein, Fenster außen kommen im eigenen Turnus dazu – mit einem gemeinsamen Plan und einem Ansprechpartner. Für Rendsburg haben wir eigene Seiten zur Büroreinigung und zur Praxisreinigung.',
+      },
+      {
+        question: 'Was passiert, wenn der Ansprechpartner ausfällt?',
+        answer:
+          'Eine eingearbeitete Vertretung übernimmt, damit Termine nicht ausfallen. Ihr fester Ansprechpartner bleibt derselbe – Sie müssen nichts neu erklären.',
+      },
+      {
+        question: 'Was kostet die Glasreinigung in Rendsburg?',
+        answer:
+          'Das hängt von Anzahl, Größe und Erreichbarkeit der Glasflächen ab. Nach einer kostenlosen Besichtigung erhalten Sie ein Festpreis-Angebot – einmalig oder für den Turnus.',
+      },
+    ],
+    ergaenzungen: [
+      { serviceId: 'bueroreinigung', text: 'Büros, Teeküchen und Sanitärräume in Rendsburg aus einer Hand mit Ihren Fenstern.' },
+      { serviceId: 'praxisreinigung', text: 'Praxisräume nach Hygieneplan, außerhalb der Sprechzeiten – Glas gleich mit eingeplant.' },
+      { serviceId: 'unterhaltsreinigung', text: 'Glas innen gleich in die laufende Reinigung einplanen – mit festem Rhythmus.' },
+    ],
+    texte: {
+      zielgruppenLabel: 'Für Ihr Objekt',
+      zielgruppenTitel: 'Glasflächen in Rendsburg – je nach Objekt anders',
+      zielgruppenText: 'Ein Schaufenster braucht einen anderen Rhythmus als ein Treppenhausfenster. Wir planen nach Ihrem Objekt.',
+      grenzenTitel: 'Das klären wir vorab',
+      grenzenText: 'Damit am Termin nichts überrascht.',
+      ablaufTitel: 'So läuft Ihre Glasreinigung',
+      vertrauenLabel: 'Qualität',
+      ergaenzungTitel: 'Rund um Ihr Objekt aus einer Hand',
+      ctaText:
+        'Wir sehen uns Ihre Glasflächen in Rendsburg kostenlos an und erstellen Ihnen ein Festpreis-Angebot – einmalig oder im festen Turnus.',
+    },
+    icons: {
+      zielgruppen: [Building2, Stethoscope, Store, Car, Home],
+      vertrauen: [Sparkles, UserCheck, ShieldCheck, CalendarCheck],
+    },
+  },
 ];
 
 export function getLokaleSeite(serviceId: string, citySlug: string): LokaleSeite | undefined {

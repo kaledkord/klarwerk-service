@@ -21,19 +21,20 @@ export function useScrollEffekte() {
 
 /**
  * Spaltenzahl eines Rasters wie in Tailwind: `basis` darunter, ab sm (640 px) `sm`,
- * ab md (768 px) `md` (ohne Angabe wie sm), ab lg (1024 px) `lg`.
+ * ab md (768 px) `md` (ohne Angabe wie sm), ab lg (1024 px) `lg`, ab xl (1280 px) `xl` (ohne Angabe wie lg).
  */
-export function useSpalten(sm: number, lg: number, basis = 1, md = sm) {
+export function useSpalten(sm: number, lg: number, basis = 1, md = sm, xl = lg) {
   const [spalten, setSpalten] = useState(basis);
   useEffect(() => {
+    const mqXl = window.matchMedia('(min-width: 1280px)');
     const mqLg = window.matchMedia('(min-width: 1024px)');
     const mqMd = window.matchMedia('(min-width: 768px)');
     const mqSm = window.matchMedia('(min-width: 640px)');
     const aktualisieren = () =>
-      setSpalten(mqLg.matches ? lg : mqMd.matches ? md : mqSm.matches ? sm : basis);
+      setSpalten(mqXl.matches ? xl : mqLg.matches ? lg : mqMd.matches ? md : mqSm.matches ? sm : basis);
     aktualisieren();
-    [mqLg, mqMd, mqSm].forEach((mq) => mq.addEventListener('change', aktualisieren));
-    return () => [mqLg, mqMd, mqSm].forEach((mq) => mq.removeEventListener('change', aktualisieren));
-  }, [sm, lg, basis, md]);
+    [mqXl, mqLg, mqMd, mqSm].forEach((mq) => mq.addEventListener('change', aktualisieren));
+    return () => [mqXl, mqLg, mqMd, mqSm].forEach((mq) => mq.removeEventListener('change', aktualisieren));
+  }, [sm, lg, basis, md, xl]);
   return spalten;
 }

@@ -18,6 +18,7 @@ import {
   UtensilsCrossed,
   type LucideIcon,
 } from 'lucide-react';
+import type { Bereich } from './leistungsbereiche';
 
 export interface Service {
   id: string;
@@ -28,11 +29,14 @@ export interface Service {
   features: string[];
   image: string;
   featured?: boolean;
+  /** Leistungsbereich auf /leistungen und im Menü (leistungsbereiche.ts) */
+  bereich: Bereich;
 }
 
 export const services: Service[] = [
   {
     id: 'gebaeudereinigung',
+    bereich: 'regelmaessig',
     title: 'Gebäudereinigung',
     shortDesc: 'Umfassende Reinigung für Wohn- und Geschäftsgebäude – regelmäßig oder auf Anfrage.',
     description: 'Professionelle Reinigung sämtlicher Gebäudearten. Von Treppenhäusern über Gemeinschaftsflächen bis hin zu kompletten Wohn- und Geschäftsobjekten. Wir passen uns Ihren Anforderungen an.',
@@ -43,6 +47,7 @@ export const services: Service[] = [
   },
   {
     id: 'bueroreinigung',
+    bereich: 'regelmaessig',
     title: 'Büroreinigung',
     shortDesc: 'Saubere Arbeitsplätze für mehr Produktivität und Wohlbefinden im Büro.',
     description: 'Gründliche und zuverlässige Reinigung von Büroräumen, Besprechungszimmern und Sanitärbereichen. Für ein professionelles Arbeitsumfeld.',
@@ -53,6 +58,7 @@ export const services: Service[] = [
   },
   {
     id: 'unterhaltsreinigung',
+    bereich: 'regelmaessig',
     title: 'Unterhaltsreinigung',
     shortDesc: 'Regelmäßige Reinigung für gleichbleibende Sauberkeit – planbar und zuverlässig.',
     description: 'Regelmäßige Unterhaltsreinigung für Büros, Praxen, Gewerbe und Wohnanlagen. Nach einem festen Reinigungsplan sorgen wir dauerhaft für Sauberkeit, Hygiene und Werterhalt – mit festem Team und verlässlichen Terminen.',
@@ -63,6 +69,7 @@ export const services: Service[] = [
   },
   {
     id: 'glasreinigung',
+    bereich: 'regelmaessig',
     title: 'Glasreinigung',
     shortDesc: 'Klare Sicht – für Fenster, Fassaden und Glasflächen jeder Art.',
     description: 'Professionelle Glasreinigung ohne Streifen. Von Fenstern über Glasfassaden bis hin zu Vitrinen und Spiegeln.',
@@ -73,6 +80,7 @@ export const services: Service[] = [
   },
   {
     id: 'praxisreinigung',
+    bereich: 'branchen',
     title: 'Praxisreinigung',
     shortDesc: 'Hygienische Reinigung für Arztpraxen und medizinische Einrichtungen.',
     description: 'Professionelle Praxisreinigung nach hygienischen Standards. Von Wartebereichen über Behandlungsräume bis hin zu Sanitärbereichen – für eine saubere und sichere Umgebung für Ihre Patienten und Mitarbeiter.',
@@ -83,6 +91,7 @@ export const services: Service[] = [
   },
   {
     id: 'hausmeisterservice',
+    bereich: 'haus-aussen',
     title: 'Hausmeisterservice',
     shortDesc: 'Ihr zuverlässiger Partner für alle Haus- und Betreuungsarbeiten.',
     description: 'Umfassender Hausmeisterservice für Wohnanlagen und Gewerbeobjekte. Von der Treppenhausreinigung über Winterdienste bis hin zur kleinen Reparatur.',
@@ -93,6 +102,7 @@ export const services: Service[] = [
   },
   {
     id: 'gartenpflege',
+    bereich: 'haus-aussen',
     title: 'Gartenpflege',
     shortDesc: 'Pflege und Instandhaltung von Außenanlagen und Gärten.',
     description: 'Professionelle Garten- und Außenanlagenpflege. Vom Rasenmähen über Heckenschnitt bis hin zur saisonalen Bepflanzung.',
@@ -103,6 +113,7 @@ export const services: Service[] = [
   },
   {
     id: 'grundreinigung',
+    bereich: 'einmalig',
     title: 'Grundreinigung',
     shortDesc: 'Intensive Reinigung für einen Neuanfang – gründlich und zuverlässig.',
     description: 'Eine umfassende Grundreinigung für Wohnungen, Büros oder Gewerbeobjekte. Ideal nach Bauarbeiten, vor Einzug oder als Jahresaktion.',
@@ -113,6 +124,7 @@ export const services: Service[] = [
   },
   {
     id: 'bauendreinigung',
+    bereich: 'einmalig',
     title: 'Bauendreinigung',
     shortDesc: 'Sauberer Abschluss nach Bauarbeiten – bereit zur Übergabe.',
     description: 'Professionelle Bauendreinigung nach Abschluss von Bau- oder Renovierungsarbeiten. Entfernung von Baustaub, Farbresten und Materialrückständen.',
@@ -123,6 +135,7 @@ export const services: Service[] = [
   },
   {
     id: 'winterdienst',
+    bereich: 'haus-aussen',
     title: 'Winterdienst',
     shortDesc: 'Sicher durch den Winter – Räum- und Streudienst für Wege und Flächen.',
     description: 'Zuverlässiger Winterdienst für private und gewerbliche Objekte. Räumung von Schnee, Streuung von Splitt oder Salz – nach Vereinbarung oder auf Abruf.',
@@ -132,6 +145,7 @@ export const services: Service[] = [
   },
   {
     id: 'entruempelung',
+    bereich: 'einmalig',
     title: 'Entrümpelung',
     shortDesc: 'Weg damit – professionelle Entrümpelung und Entsorgung.',
     description: 'Komplette Entrümpelung von Wohnungen, Keller, Dachböden oder Gewerbeobjekten. Inklusive fachgerechter Entsorgung und Transport.',
@@ -141,6 +155,7 @@ export const services: Service[] = [
   },
   {
     id: 'moebelreinigung',
+    bereich: 'einmalig',
     title: 'Möbelreinigung',
     shortDesc: 'Schonende und gründliche Reinigung von Polstermöbeln und Teppichen.',
     description: 'Tiefenreinigung von Polstermöbeln, Matratzen und Teppichen. Schonend zu Material und Farben, effektiv gegen Flecken und Gerüche.',
@@ -150,6 +165,7 @@ export const services: Service[] = [
   },
   {
     id: 'schulreinigung',
+    bereich: 'branchen',
     title: 'Schulreinigung',
     shortDesc: 'Saubere Lernumgebungen für Schüler und Lehrkräfte.',
     description: 'KlarWerk Service bietet professionelle Schulreinigung für Bildungseinrichtungen. Unsere Reinigungskonzepte sorgen für hygienische, sichere und gepflegte Räume, in denen Schüler und Mitarbeiter sich wohlfühlen können.',
@@ -159,6 +175,7 @@ export const services: Service[] = [
   },
   {
     id: 'kita-reinigung',
+    bereich: 'branchen',
     title: 'Kita-Reinigung',
     shortDesc: 'Hygiene und Sicherheit für Kinder in Kindertagesstätten.',
     description: 'Die Reinigung von Kindertagesstätten erfordert besondere Hygienestandards. KlarWerk Service entwickelt Reinigungskonzepte speziell für sensible Bereiche mit Kindern.',
@@ -168,6 +185,7 @@ export const services: Service[] = [
   },
   {
     id: 'pflegeheimreinigung',
+    bereich: 'branchen',
     title: 'Pflegeheim-Reinigung',
     shortDesc: 'Hygiene mit Verantwortung für Pflegeheime und Seniorenresidenzen.',
     description: 'Professionelle Reinigung für Pflegeeinrichtungen mit höchsten Anforderungen an Hygiene, Sauberkeit und Sicherheit.',
@@ -177,6 +195,7 @@ export const services: Service[] = [
   },
   {
     id: 'lagerhallenreinigung',
+    bereich: 'branchen',
     title: 'Lagerhallenreinigung',
     shortDesc: 'Saubere Arbeitsbereiche für effiziente Prozesse in Lager und Logistik.',
     description: 'Professionelle Reinigung von Lagerhallen, Logistikzentren und Produktionsbetrieben. Wir sorgen für saubere Böden, staubfreie Regale und sichere Verkehrswege.',
@@ -186,6 +205,7 @@ export const services: Service[] = [
   },
   {
     id: 'schwimmbadreinigung',
+    bereich: 'branchen',
     title: 'Schwimmbad- & Schwimmhallenreinigung',
     shortDesc: 'Hygienische Sauberkeit für Schwimmbäder, Schwimmhallen und Wellnessbereiche.',
     description: 'Professionelle Reinigung von Schwimmbädern, Schwimmhallen und zugehörigen Bereichen. Wir sorgen für hygienisch einwandfreie Beckenumgänge, Umkleidekabinen, Duschen und Sanitäranlagen – mit rutschhemmenden Reinigungsverfahren und gründlicher Desinfektion für die Sicherheit und das Wohlbefinden Ihrer Gäste.',
@@ -196,6 +216,7 @@ export const services: Service[] = [
   },
   {
     id: 'supermarktreinigung',
+    bereich: 'branchen',
     title: 'Supermarkt-Reinigung',
     shortDesc: 'Professionelle Sauberkeit für Verkaufsflächen im Einzelhandel.',
     description: 'Umfassende Reinigung für Supermärkte, Discounter, Getränkemärkte, Biomärkte, Einkaufszentren und Fachgeschäfte. Saubere Verkaufsflächen schaffen ein positives Einkaufserlebnis und stärken das Vertrauen Ihrer Kunden.',
@@ -205,6 +226,7 @@ export const services: Service[] = [
   },
   {
     id: 'gastronomiereinigung',
+    bereich: 'branchen',
     title: 'Gastronomiereinigung',
     shortDesc: 'Hygiene für Restaurants, Cafés und Kantinen – nach den Vorgaben der Lebensmittelhygiene.',
     description: 'Professionelle Reinigung für Restaurants, Cafés, Gastronomiebetriebe und Kantinen. Wir übernehmen Küchen- und Fettentfernung, Gastraum- und Sanitärreinigung – zuverlässig außerhalb Ihrer Öffnungszeiten.',

@@ -16,6 +16,11 @@
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-display tracking-tight;
+    /* Lange Wörter („Schwimmhallenreinigung“) liefen auf dem Handy sonst seitlich aus dem Bild. */
+    overflow-wrap: break-word;
+  }
+  @media (max-width: 639px) {
+    h1, h2 { hyphens: auto; }
   }
 
   ::selection {
@@ -186,6 +191,14 @@ html.klw-intro .klw-kopf { animation: klw-von-oben .5s var(--klw-ease) 1.55s bot
 .btn-secondary:hover { transform: translateY(-2px); }
 .btn-primary:active,
 .btn-secondary:active { transform: translateY(0) scale(.98); }
+
+/* Säule wie im Logo, oben schräg angeschnitten (Leistungsbereiche auf /leistungen und im Menü) */
+.klw-saeule { clip-path: polygon(0 0, 100% 28%, 100% 100%, 0 100%); }
+
+/* Sprungleiste auf /leistungen: hängt unter der Kopfzeile (Höhe setzt Header.tsx) und rückt nach oben,
+   sobald die Kopfzeile beim Runterscrollen verschwindet. */
+.klw-sprungleiste { top: var(--klw-kopf-hoehe, 0px); transition: top .3s; }
+html[data-kopf-weg] .klw-sprungleiste { top: 0; }
 
 /* Leistungskarten: Leiste und Symbol in der Logofarbe der Leistung (--c) */
 .klw-karte { position: relative; overflow: hidden; }

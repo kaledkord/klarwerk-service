@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, ArrowRight } from 'lucide-react';
-import { services } from '../../data/services';
+import { LOGOFARBE, LOGOFARBE_HELL, leistungenIm, leistungsbereiche } from '../../data/leistungsbereiche';
 import { dropdownMotion, mobileMenuMotion, easeOut } from '../../lib/motion';
 
 // Ab hier verschwindet die Kopfzeile beim Runterscrollen und kommt beim Hochscrollen sofort zurück.
@@ -15,6 +15,8 @@ export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const kopfRef = useRef<HTMLElement>(null);
+  const schliessenNach = useRef<number>();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -31,6 +33,21 @@ export default function Header() {
   }, []);
 
   const versteckt = hidden && !mobileOpen && !servicesOpen;
+
+  // Für die Sprungleiste auf /leistungen (index.css): wie hoch die Kopfzeile ist und ob sie gerade weg ist.
+  useEffect(() => {
+    const kopf = kopfRef.current;
+    if (!kopf) return;
+    const setzen = () => document.documentElement.style.setProperty('--klw-kopf-hoehe', `${kopf.offsetHeight}px`);
+    setzen();
+    const beobachter = new ResizeObserver(setzen);
+    beobachter.observe(kopf);
+    return () => beobachter.disconnect();
+  }, []);
+
+  useEffect(() => {
+    document.documentElement.toggleAttribute('data-kopf-weg', versteckt);
+  }, [versteckt]);
 
   useEffect(() => {
     const handler = (e: MouseEvent) => {
@@ -52,12 +69,13 @@ export default function Header() {
 
   return (
     <header
+      ref={kopfRef}
       className={`klw-kopf fixed top-0 w-full z-50 transition-all duration-300 ${
         scrolled ? 'glass-nav border-b border-white/10 shadow-lg shadow-black/20' : 'bg-paper-100'
       } ${versteckt ? '-translate-y-full' : ''}`}
     >
       <div
-        className={`max-w-7xl mx-auto px-6 flex items-center justify-between gap-8 transition-all duration-300 ${
+        className={`relative max-w-7xl mx-auto px-6 flex items-center justify-between gap-8 transition-all duration-300 ${
           scrolled ? 'py-2.5' : 'h-18 py-4'
         }`}
       >
@@ -80,11 +98,17 @@ export default function Header() {
             Über uns
           </NavLink>
 
+          {/* Das Menü richtet sich an der ganzen Kopfzeile aus (nicht am Knopf), damit die vier Spalten Platz haben. */}
           <div
             ref={dropdownRef}
-            className="relative"
-            onMouseEnter={() => setServicesOpen(true)}
-            onMouseLeave={() => setServicesOpen(false)}
+            onMouseEnter={() => {
+              window.clearTimeout(schliessenNach.current);
+              setServicesOpen(true);
+            }}
+            // Kurz warten, damit der Weg vom Knopf über die Lücke ins Menü es nicht schließt.
+            onMouseLeave={() => {
+              schliessenNach.current = window.setTimeout(() => setServicesOpen(false), 200);
+            }}
           >
             <button
               onClick={() => navigate('/leistungen')}
@@ -102,28 +126,40 @@ export default function Header() {
               {servicesOpen && (
                 <motion.div
                   {...dropdownMotion}
-                  className="absolute top-full left-1/2 -translate-x-1/2 mt-3 bg-paper-100 border border-white/10 rounded-2xl shadow-xl shadow-slate-900/8 p-4 w-[680px] z-50"
+                  className="absolute top-full inset-x-0 mx-auto mt-2 w-[calc(100%-3rem)] max-w-[960px] bg-paper-100 border border-white/10 rounded-2xl shadow-xl shadow-slate-900/8 p-5 z-50"
                 >
-                  <div className="grid grid-cols-3 gap-1">
-                    {services.map((s) => {
-                      const Icon = s.icon;
-                      return (
-                        <Link
-                          key={s.id}
-                          to={`/leistungen/${s.id}`}
-                          onClick={() => setServicesOpen(false)}
-                          className="flex items-center gap-2.5 px-3 py-2.5 rounded-xl hover:bg-paper group transition-colors"
+                  {/* Nach den vier Leistungsbereichen, wie auf /leistungen */}
+                  <div className="grid grid-cols-4 gap-4">
+                    {leistungsbereiche.map((b) => (
+                      <div key={b.id}>
+                        <p
+                          className="mb-1.5 flex items-center gap-2 px-3 text-xs font-bold uppercase tracking-[0.1em]"
+                          style={{ color: LOGOFARBE_HELL[b.farbe] }}
                         >
-                          <Icon
-                            size={16}
-                            className="shrink-0 text-slate-400 group-hover:text-brand-300 transition-colors"
-                          />
-                          <span className="text-sm font-medium text-slate-200 group-hover:text-white transition-colors">
-                            {s.title}
-                          </span>
-                        </Link>
-                      );
-                    })}
+                          <span aria-hidden="true" className="klw-saeule w-2 h-5" style={{ background: LOGOFARBE[b.farbe] }} />
+                          {b.kurz}
+                        </p>
+                        {leistungenIm(b.id).map((s) => {
+                          const Icon = s.icon;
+                          return (
+                            <Link
+                              key={s.id}
+                              to={`/leistungen/${s.id}`}
+                              onClick={() => setServicesOpen(false)}
+                              className="flex items-center gap-2.5 px-3 py-2 rounded-xl hover:bg-paper group transition-colors"
+                            >
+                              <Icon
+                                size={16}
+                                className="shrink-0 text-slate-400 group-hover:text-brand-300 transition-colors"
+                              />
+                              <span className="text-sm font-medium text-slate-200 group-hover:text-white transition-colors">
+                                {s.title}
+                              </span>
+                            </Link>
+                          );
+                        })}
+                      </div>
+                    ))}
                   </div>
                   <div className="mt-3 pt-3 border-t border-white/10">
                     <Link
@@ -206,15 +242,22 @@ export default function Header() {
                       transition={{ duration: 0.2, ease: easeOut }}
                       className="overflow-hidden pl-4 border-l border-white/10 ml-2"
                     >
-                      {services.map((s) => (
-                        <Link
-                          key={s.id}
-                          to={`/leistungen/${s.id}`}
-                          onClick={closeMobile}
-                          className="block py-2 text-sm text-slate-300 hover:text-white"
-                        >
-                          {s.title}
-                        </Link>
+                      {leistungsbereiche.map((b) => (
+                        <div key={b.id} className="pt-2 first:pt-0">
+                          <p className="pt-1 text-[11px] font-bold uppercase tracking-[0.1em]" style={{ color: LOGOFARBE_HELL[b.farbe] }}>
+                            {b.kurz}
+                          </p>
+                          {leistungenIm(b.id).map((s) => (
+                            <Link
+                              key={s.id}
+                              to={`/leistungen/${s.id}`}
+                              onClick={closeMobile}
+                              className="block py-2 text-sm text-slate-300 hover:text-white"
+                            >
+                              {s.title}
+                            </Link>
+                          ))}
+                        </div>
                       ))}
                       <Link to="/leistungen" onClick={closeMobile} className="block py-2 text-sm font-semibold text-brand-300">
                         Alle Leistungen →

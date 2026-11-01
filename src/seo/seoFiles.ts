@@ -41,6 +41,7 @@ export const siteRoutes = [
   { path: '/leistungen/glasreinigung', changefreq: 'monthly', priority: '0.8' },
   { path: '/leistungen/glasreinigung/neumuenster', changefreq: 'monthly', priority: '0.8' },
   { path: '/leistungen/glasreinigung/kiel', changefreq: 'monthly', priority: '0.8' },
+  { path: '/leistungen/glasreinigung/rendsburg', changefreq: 'monthly', priority: '0.8' },
   { path: '/leistungen/praxisreinigung', changefreq: 'monthly', priority: '0.8' },
   { path: '/leistungen/praxisreinigung/kiel', changefreq: 'monthly', priority: '0.8' },
   { path: '/leistungen/praxisreinigung/neumuenster', changefreq: 'monthly', priority: '0.8' },

@@ -16,6 +16,7 @@ import {
   Car,
   ClipboardCheck,
   FileText,
+  GraduationCap,
   HardHat,
   Home,
   KeyRound,
@@ -2260,6 +2261,752 @@ export const lokaleSeiten: LokaleSeite[] = [
     icons: {
       zielgruppen: [Baby, Users, Briefcase, Home],
       vertrauen: [ClipboardCheck, UserCheck, ShieldCheck, Sparkles, CalendarCheck],
+    },
+  },
+
+  // ---- Unterhaltsreinigung · Kiel ------------------------------------------------------
+  {
+    serviceId: 'unterhaltsreinigung',
+    citySlug: 'kiel',
+    leistung: 'Unterhaltsreinigung',
+    ort: 'Kiel',
+    seo: {
+      title: 'Unterhaltsreinigung in Kiel | KlarWerk Service',
+      description:
+        'Unterhaltsreinigung in Kiel für Wohnanlagen, Gewerbe und Geschäfte: Leistungsverzeichnis mit Intervallen je Bereich, Kontrollen, ein Ansprechpartner.',
+      keywords:
+        'Unterhaltsreinigung Kiel, Treppenhausreinigung Kiel, Reinigungsfirma Kiel, Gebäudereinigung Kiel regelmäßig, Hausverwaltung Reinigung Kiel, Unterhaltsreinigung Kronshagen, Unterhaltsreinigung Altenholz',
+    },
+    h1: 'Unterhaltsreinigung in Kiel',
+    intro:
+      'Treppenhaus, Eingang, Sozialraum, Sanitär: Die Bereiche, die jeden Tag viele Menschen nutzen, müssen jeden Tag funktionieren. KlarWerk Service übernimmt die laufende Reinigung von Wohnanlagen, Gewerbeobjekten, Vereinsgebäuden und Geschäften in Kiel nach einem festen Leistungsverzeichnis – mit eigenen Intervallen je Bereich, regelmäßigen Kontrollen und einem festen Ansprechpartner. Unser Sitz in Bordesholm liegt rund 20 Kilometer südlich von Kiel.',
+    bild: {
+      // gleiches Foto wie auf /leistungen/unterhaltsreinigung (kommt aus services.ts)
+      alt: 'Gepflegtes Treppenhaus einer Wohnanlage – Unterhaltsreinigung in Kiel durch KlarWerk Service',
+    },
+    eckdaten: [
+      { titel: 'Leistungsverzeichnis', text: 'Jeder Bereich mit eigenem Intervall, schwarz auf weiß' },
+      { titel: 'Ein Ansprechpartner', text: 'Kennt Ihr Objekt und ist für Verwaltung und Nutzer da' },
+      { titel: 'Keine Lücken', text: 'Eingearbeitete Vertretung bei Urlaub und Krankheit' },
+    ],
+    zielgruppen: [
+      {
+        titel: 'Hausverwaltungen und Wohnungsunternehmen',
+        text: 'Treppenhäuser, Hauseingänge, Aufzüge, Keller- und Müllräume in Kieler Wohnanlagen – im festen Turnus, mit einem Ansprechpartner für die Verwaltung und Rückmeldungen aus der Hausgemeinschaft.',
+      },
+      {
+        titel: 'Gewerbe, Handwerk und Werkstätten',
+        text: 'Sozial- und Pausenräume, Umkleiden, Sanitär und Bürotrakt in Betrieben – Bereiche mit vielen Nutzern, die morgens sauber sein müssen, ohne den Betrieb zu stören.',
+      },
+      {
+        titel: 'Vereine und Gemeinschaftseinrichtungen',
+        text: 'Vereinsheime, Versammlungsräume, Sanitär und Küchen, die oft abends und am Wochenende genutzt werden – wir reinigen dazwischen, wenn die Räume leer sind.',
+      },
+      {
+        titel: 'Geschäfte und Dienstleister',
+        text: 'Verkaufsraum, Kassenzone, Eingang und Personalräume – gereinigt vor Öffnung oder nach Ladenschluss, abgestimmt auf Ihre Öffnungszeiten.',
+      },
+      {
+        titel: 'Büros und Praxen',
+        text: 'Für Büros und Praxen in Kiel haben wir eigene Seiten mit allen Details – der Plan dort geht auf Arbeitsplätze und Hygienevorgaben ein.',
+      },
+    ],
+    umfang: {
+      wir: [
+        'Böden aller Art: kehren, saugen, nass wischen – nach Belag und Nutzung',
+        'Treppenhäuser mit Handläufen, Geländern, Briefkastenanlagen und Hauseingängen',
+        'Sanitärräume, Umkleiden und Duschen',
+        'Sozial- und Pausenräume, Teeküchen',
+        'Aufzüge, Flure, Keller- und Müllstandplätze nach Absprache',
+        'Kontaktflächen wie Türklinken, Lichtschalter und Klingeltableaus',
+        'Papierkörbe, Abfallbehälter und Mülltrennung',
+        'Glas innen: Hauseingangstüren, Trennwände und Spiegel',
+      ],
+      beiIhnen: [
+        'Grundreinigung und Bodenpflege mit Versiegelung – eigener Termin im Jahresplan',
+        'Fenster außen – eigener Turnus in der Glasreinigung',
+        'Außenanlagen und Wege – darum kümmert sich Ihr Hausmeister',
+        'Produktions- und Maschinenbereiche – nur nach Absprache und Einweisung',
+      ],
+    },
+    zeiten: {
+      titel: 'Jeder Bereich in seinem Intervall',
+      text: 'Ein Kellerflur braucht nicht die Frequenz einer Umkleide. Im Leistungsverzeichnis legen wir für jeden Bereich fest, was wie oft passiert – und zu welcher Zeit, damit Bewohner, Mitarbeiter oder Kunden nichts davon mitbekommen.',
+      punkte: [
+        'Täglich oder mehrmals pro Woche: Sanitär, Sozialräume, Eingänge',
+        'Wöchentlich oder vierzehntägig: Treppenhäuser, Flure, Nebenräume',
+        'Vor Öffnung, nach Feierabend oder zwischen den Nutzungen',
+        'Grund- und Glasreinigung als eigene Termine im Jahresplan',
+      ],
+    },
+    vertrauen: [
+      {
+        titel: 'Klares Leistungsverzeichnis',
+        text: 'Sie sehen, welcher Bereich wie oft gereinigt wird. Das gilt für die Verwaltung genauso wie für Rückfragen aus dem Haus.',
+      },
+      {
+        titel: 'Ein fester Ansprechpartner',
+        text: 'Pro Objekt eine Person, die Ihre Räume, Zugänge und Besonderheiten kennt und Anpassungen kurzfristig umsetzt.',
+      },
+      {
+        titel: 'Eingearbeitete Vertretung',
+        text: 'Bei Urlaub und Krankheit übernimmt jemand, der das Objekt kennt. Die Reinigung läuft nach Plan weiter.',
+      },
+      {
+        titel: 'Regelmäßige Kontrollen',
+        text: 'Wir prüfen das Ergebnis vor Ort und passen das Leistungsverzeichnis an, wenn sich die Nutzung ändert.',
+      },
+    ],
+    anfahrt: {
+      titel: 'Unterhaltsreinigung in ganz Kiel',
+      text: 'Von Bordesholm sind wir über die A215 in rund 20 Minuten in Kiel – in Wohnanlagen auf dem Westufer von der Innenstadt bis Mettenhof und Friedrichsort, in Betrieben und Vereinsheimen auf dem Ostufer in Gaarden, Neumühlen-Dietrichsdorf und Wellsee. Kurze Wege machen Kontrollen und Rückfragen einfach.',
+      gruppen: [
+        { titel: 'Kiel Westufer', orte: ['Innenstadt', 'Wik', 'Ravensberg', 'Brunswik', 'Südfriedhof', 'Schreventeich', 'Suchsdorf', 'Hassee', 'Mettenhof', 'Friedrichsort'] },
+        { titel: 'Kiel Ostufer', orte: ['Wellsee', 'Gaarden-Ost', 'Neumühlen-Dietrichsdorf'] },
+      ],
+      umland: ['Kronshagen', 'Altenholz', 'Molfsee', 'Flintbek', 'Schwentinental', 'Heikendorf'],
+    },
+    ablauf: [
+      {
+        title: 'Kurze Anfrage',
+        desc: 'Art des Objekts, Bereiche und gewünschter Rhythmus – mehr braucht es für den Anfang nicht.',
+      },
+      {
+        title: 'Besichtigung vor Ort',
+        desc: 'Kostenlos in Kiel: Wir gehen alle Bereiche durch und klären, was wie oft gereinigt werden soll.',
+      },
+      {
+        title: 'Leistungsverzeichnis und Festpreis',
+        desc: 'Bereiche, Intervalle und Preis übersichtlich in einem Angebot.',
+      },
+      {
+        title: 'Start mit Einweisung',
+        desc: 'Schlüssel, Zeiten, Ansprechpartner und Besonderheiten des Objekts halten wir vor dem ersten Einsatz fest.',
+      },
+      {
+        title: 'Laufende Betreuung',
+        desc: 'Regelmäßige Kontrollen, kurze Wege für Rückfragen und eine eingearbeitete Vertretung.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Reinigen Sie Treppenhäuser für Hausverwaltungen in Kiel?',
+        answer:
+          'Ja. Treppenhäuser, Hauseingänge, Aufzüge und Gemeinschaftsflächen reinigen wir im festen Turnus – mit einem Ansprechpartner für die Verwaltung und einem Leistungsverzeichnis, das auch Bewohner nachlesen können.',
+      },
+      {
+        question: 'Was gehört zur Unterhaltsreinigung?',
+        answer:
+          'Die regelmäßige Reinigung nach festem Plan: Böden, Sanitär, Sozialräume, Treppenhäuser, Kontaktflächen und Abfall. Was genau dazugehört und wie oft, steht im Leistungsverzeichnis.',
+      },
+      {
+        question: 'Was ist der Unterschied zur Grundreinigung?',
+        answer:
+          'Die Unterhaltsreinigung läuft regelmäßig. Die Grundreinigung ist eine seltene, besonders gründliche Reinigung – zum Beispiel ein- bis zweimal im Jahr. Sie steht als eigener Termin im Jahresplan.',
+      },
+      {
+        question: 'In welchen Stadtteilen von Kiel sind Sie unterwegs?',
+        answer:
+          'Im ganzen Stadtgebiet: auf dem Westufer von der Innenstadt über Wik, Ravensberg, Brunswik, Schreventeich und Hassee bis Mettenhof und Friedrichsort, auf dem Ostufer in Gaarden, Neumühlen-Dietrichsdorf und Wellsee. Dazu das Umland mit Kronshagen, Altenholz, Molfsee, Flintbek, Schwentinental und Heikendorf.',
+      },
+      {
+        question: 'Wie oft wird gereinigt?',
+        answer:
+          'Das legen wir je Bereich fest: Sanitär und Sozialräume meist täglich oder mehrmals pro Woche, Treppenhäuser und Flure wöchentlich oder vierzehntägig. Der Rhythmus steht im Leistungsverzeichnis und lässt sich anpassen.',
+      },
+      {
+        question: 'Wer reinigt bei Urlaub oder Krankheit?',
+        answer:
+          'Eine eingearbeitete Vertretung, die Ihr Objekt kennt. So entstehen keine Lücken im Plan.',
+      },
+      {
+        question: 'Sind Reinigungsmittel und Material inklusive?',
+        answer:
+          'Ja, Reinigungsmittel, Material und Technik bringen wir mit. Verbrauchsmaterial wie Seife oder Papier können wir auf Wunsch mitliefern.',
+      },
+      {
+        question: 'Was kostet die Unterhaltsreinigung in Kiel?',
+        answer:
+          'Das hängt von Fläche, Bereichen und Intervallen ab. Nach einer kostenlosen Besichtigung erhalten Sie ein Festpreis-Angebot mit Leistungsverzeichnis.',
+      },
+    ],
+    ergaenzungen: [
+      { serviceId: 'glasreinigung', text: 'Fenster und Glasflächen in Kiel im eigenen Turnus, abgestimmt mit der laufenden Reinigung.' },
+      { serviceId: 'grundreinigung', text: 'Einmal oder zweimal im Jahr gründlich – für Böden, die lange halten sollen.' },
+      { serviceId: 'hausmeisterservice', text: 'Kontrollgänge, kleine Reparaturen und Außenanlagen für Ihr Objekt.' },
+    ],
+    texte: {
+      zielgruppenLabel: 'Für Ihr Objekt',
+      zielgruppenTitel: 'Unterhaltsreinigung für jedes Objekt in Kiel',
+      zielgruppenText: 'Wohnanlage, Betrieb, Vereinsheim oder Geschäft – der Plan richtet sich nach Ihrem Objekt.',
+      grenzenTitel: 'Das planen wir separat',
+      grenzenText: 'Damit das Leistungsverzeichnis klar bleibt.',
+      ablaufTitel: 'So starten wir in Ihrem Objekt',
+      vertrauenLabel: 'Verlässlichkeit',
+      ergaenzungTitel: 'Ergänzt Ihre laufende Reinigung',
+      ctaText:
+        'Wir kommen zur kostenlosen Besichtigung in Kiel und erstellen Ihnen ein Festpreis-Angebot mit klarem Leistungsverzeichnis.',
+    },
+    icons: {
+      zielgruppen: [Home, Warehouse, Users, Store, Briefcase],
+      vertrauen: [ClipboardCheck, UserCheck, Users, CalendarCheck],
+    },
+  },
+
+  // ---- Bauendreinigung · Kiel ----------------------------------------------------------
+  {
+    serviceId: 'bauendreinigung',
+    citySlug: 'kiel',
+    leistung: 'Bauendreinigung',
+    ort: 'Kiel',
+    seo: {
+      title: 'Bauendreinigung Kiel: grob & fein | KlarWerk Service',
+      description:
+        'Bauendreinigung in Kiel: Baugrobreinigung zwischen den Gewerken und Feinreinigung zur Übergabe – für Bauunternehmen, Bauträger, Verwaltungen und Bauherren.',
+      keywords:
+        'Bauendreinigung Kiel, Baureinigung Kiel, Baugrobreinigung Kiel, Bauschlussreinigung Kiel, Feinreinigung Neubau Kiel, Reinigung nach Sanierung Kiel, Bauendreinigung Kronshagen',
+    },
+    h1: 'Bauendreinigung in Kiel',
+    intro:
+      'Neubau, Sanierung im Bestand oder Umbau von Laden, Praxis und Büro: Am Ende steht der Übergabe nur noch der Baustaub im Weg. KlarWerk Service reinigt Baustellen in Kiel in den Stufen, die Ihr Bauablauf braucht – von der Grobreinigung zwischen den Gewerken bis zur Feinreinigung vor Abnahme und Einzug, abgestimmt mit Bauleitung und Handwerkern. Unser Sitz in Bordesholm liegt rund 20 Kilometer südlich von Kiel.',
+    bild: {
+      // gleiches Foto wie auf /leistungen/bauendreinigung (kommt aus services.ts)
+      alt: 'Übergabefertige Räume nach dem Bau – Bauendreinigung in Kiel durch KlarWerk Service',
+    },
+    eckdaten: [
+      { titel: 'Grob- und Feinreinigung', text: 'Zwischen den Gewerken und vor der Übergabe' },
+      { titel: 'Nach Ihrem Bauzeitenplan', text: 'Termine abgestimmt mit Bauleitung und Gewerken' },
+      { titel: 'Verbindliches Angebot', text: 'Festpreis und Zeitvorgabe nach Besichtigung' },
+    ],
+    zielgruppen: [
+      {
+        titel: 'Bauunternehmen und Generalunternehmer',
+        text: 'Grobreinigung, damit Maler, Bodenleger und Elektriker sauber weiterarbeiten, und Feinreinigung vor der Abnahme – terminiert nach Ihrem Bauzeitenplan.',
+      },
+      {
+        titel: 'Bauträger und Wohnungsunternehmen',
+        text: 'Neubauwohnungen und Gewerbeeinheiten in Kiel übergabefertig für Käufer und Mieter – Einheit für Einheit, in der Reihenfolge Ihrer Übergaben.',
+      },
+      {
+        titel: 'Hausverwaltungen nach Sanierung',
+        text: 'Nach Modernisierung, Dachausbau oder Mieterwechsel mit Renovierung im Kieler Altbau: Baustaub raus, Treppenhaus und Wohnung bezugsfertig.',
+      },
+      {
+        titel: 'Laden-, Praxis- und Büroumbau',
+        text: 'Ladenbau in der Innenstadt, neue Praxisräume, umgebaute Büros: sauber zur Eröffnung, damit der Betrieb pünktlich starten kann.',
+      },
+      {
+        titel: 'Private Bauherren',
+        text: 'Nach dem Neubau oder der Sanierung im Eigenheim – vor dem Einzug einmal gründlich, von den Fenstern bis zu den Böden.',
+      },
+    ],
+    umfang: {
+      wir: [
+        'Baugrobreinigung: Bauschmutz, Verpackungsreste und groben Staub besenrein entfernen',
+        'Baustaub von Böden, Heizkörpern, Türen, Zargen, Leuchten und abwaschbaren Flächen',
+        'Farb-, Mörtel-, Gips- und Klebereste schonend von Flächen, Rahmen und Profilen',
+        'Fenster, Rahmen und Fensterbänke innen und außen, Glastüren und Glasbrüstungen',
+        'Sanitär- und Küchenbereiche einschließlich Armaturen und Fliesen übergabefertig',
+        'Treppenhäuser und Gemeinschaftsflächen im Mehrfamilienhaus',
+        'Böden je nach Belag gesaugt und gewischt, auf Wunsch mit Grundreinigung und Ersteinpflege',
+      ],
+      beiIhnen: [
+        'Bauschutt und Container – klären wir vorab, Reststoffe entsorgen wir auf Wunsch',
+        'Feinreinigung erst, wenn keine staubintensiven Arbeiten mehr anstehen',
+        'Baumängel und Schäden – Auffälliges melden wir, beseitigen es aber nicht',
+        'Schutzfolien auf Fenstern und Böden – entfernen wir nach Absprache, Herstellervorgaben gehen vor',
+      ],
+    },
+    zeiten: {
+      titel: 'Die richtige Reinigung zur richtigen Bauphase',
+      text: 'Eine Feinreinigung, nach der noch gebohrt oder geschliffen wird, ist verschenktes Geld. Deshalb planen wir die Reinigung in Stufen und richten uns nach Ihrem Bauzeitenplan – auch wenn er sich verschiebt.',
+      punkte: [
+        'Baugrobreinigung während der Bauphase, zwischen den Gewerken',
+        'Zwischenreinigung, bevor empfindliche Gewerke wie Bodenleger beginnen',
+        'Bauendreinigung als Feinreinigung vor Abnahme, Übergabe und Einzug',
+        'Auf Wunsch Grund- oder Glasreinigung im Anschluss',
+      ],
+    },
+    vertrauen: [
+      {
+        titel: 'Abgestimmt mit der Bauleitung',
+        text: 'Termine nach Ihrem Bauzeitenplan, Absprachen direkt mit Bauleitung, Polier oder Bauherr. Verschiebt sich ein Gewerk, verschieben wir mit.',
+      },
+      {
+        titel: 'Verbindliche Zeitvorgabe',
+        text: 'Im Angebot steht, wie lange wir für jede Stufe brauchen – damit Sie Abnahme und Übergabe sicher planen können.',
+      },
+      {
+        titel: 'Ein fester Ansprechpartner',
+        text: 'Eine Person für alle Reinigungsstufen, die Ihr Objekt von der Grob- bis zur Feinreinigung kennt.',
+      },
+      {
+        titel: 'Schonend für neue Flächen',
+        text: 'Farb-, Mörtel- und Klebereste entfernen wir so, dass neue Böden, Rahmen und Profile keinen Schaden nehmen – nach den Vorgaben der Hersteller.',
+      },
+    ],
+    anfahrt: {
+      titel: 'Baureinigung in ganz Kiel',
+      text: 'Von Bordesholm sind wir über die A215 in rund 20 Minuten auf Ihrer Baustelle in Kiel – bei Neubauten und Sanierungen auf dem Westufer von der Innenstadt bis Mettenhof und Friedrichsort und auf dem Ostufer in Gaarden, Neumühlen-Dietrichsdorf und Wellsee. Auch kurzfristige Termine vor einer Übergabe sind so machbar.',
+      gruppen: [
+        { titel: 'Kiel Westufer', orte: ['Innenstadt', 'Wik', 'Ravensberg', 'Brunswik', 'Südfriedhof', 'Schreventeich', 'Suchsdorf', 'Hassee', 'Mettenhof', 'Friedrichsort'] },
+        { titel: 'Kiel Ostufer', orte: ['Wellsee', 'Gaarden-Ost', 'Neumühlen-Dietrichsdorf'] },
+      ],
+      umland: ['Kronshagen', 'Altenholz', 'Molfsee', 'Flintbek', 'Schwentinental', 'Heikendorf'],
+    },
+    ablauf: [
+      {
+        title: 'Kurze Anfrage',
+        desc: 'Objektart, ungefähre Fläche, Bauphase und geplanter Übergabetermin genügen für den Anfang.',
+      },
+      {
+        title: 'Besichtigung auf der Baustelle',
+        desc: 'Kostenlos in Kiel: Wir sehen uns Stand, Flächen und Verschmutzung an und klären, welche Reinigungsstufen nötig sind.',
+      },
+      {
+        title: 'Festpreis mit Zeitvorgabe',
+        desc: 'Ein verbindliches Angebot je Reinigungsstufe – mit Preis und Dauer.',
+      },
+      {
+        title: 'Reinigung nach Bauplan',
+        desc: 'Grobreinigung während der Bauphase, Feinreinigung, sobald die staubintensiven Arbeiten beendet sind.',
+      },
+      {
+        title: 'Gemeinsame Abnahme',
+        desc: 'Am Ende gehen wir die Flächen mit Ihnen durch – bereit für Übergabe oder Einzug.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Was ist der Unterschied zwischen Grob- und Feinreinigung?',
+        answer:
+          'Die Baugrobreinigung entfernt während der Bauphase groben Schmutz, Reste und Staub, damit die nächsten Gewerke sauber arbeiten können. Die Feinreinigung ist die eigentliche Bauendreinigung: Sie macht das Objekt übergabe- oder bezugsfertig.',
+      },
+      {
+        question: 'Wann sollte die Bauendreinigung in Kiel stattfinden?',
+        answer:
+          'Nach Abschluss aller Gewerke, sobald keine staubintensiven Arbeiten mehr anstehen. Wir planen den Termin mit Ihrer Bauleitung und verschieben mit, wenn sich der Bauzeitenplan ändert.',
+      },
+      {
+        question: 'Reinigen Sie auch einzelne Wohnungen nach Sanierung oder Mieterwechsel?',
+        answer:
+          'Ja. Einzelne Wohnungen, Gewerbeeinheiten oder Treppenhäuser nach Renovierung reinigen wir bezugsfertig – auch im Kieler Altbau.',
+      },
+      {
+        question: 'Entfernen Sie Farb-, Gips- und Mörtelreste?',
+        answer:
+          'Ja, wir entfernen Farb-, Gips-, Mörtel- und Klebereste schonend von Flächen, Rahmen und Profilen – so, dass neue Oberflächen keinen Schaden nehmen.',
+      },
+      {
+        question: 'Sind Fenster und Glasflächen inklusive?',
+        answer:
+          'Fenster, Rahmen, Fensterbänke, Glastüren und Glasbrüstungen gehören zur Bauendreinigung. Was genau dazugehört, steht im Angebot.',
+      },
+      {
+        question: 'Kümmern Sie sich um Bauschutt und Schutzfolien?',
+        answer:
+          'Die Entsorgung von Reststoffen organisieren wir auf Wunsch, Bauschutt und Container klären wir vorab. Schutzfolien entfernen wir nach Absprache, wenn die Herstellervorgaben es zulassen.',
+      },
+      {
+        question: 'Wie schnell können Sie in Kiel vor Ort sein?',
+        answer:
+          'Von Bordesholm sind wir in rund 20 Minuten in Kiel. Termine stimmen wir mit Ihrem Bauzeitenplan ab – auch kurzfristig vor einer Übergabe, wenn unsere Planung es zulässt.',
+      },
+      {
+        question: 'Was kostet die Bauendreinigung in Kiel?',
+        answer:
+          'Das hängt von Fläche, Verschmutzung und Reinigungsstufen ab. Nach einer kostenlosen Besichtigung erhalten Sie ein Festpreis-Angebot mit verbindlicher Zeitvorgabe.',
+      },
+    ],
+    ergaenzungen: [
+      { serviceId: 'grundreinigung', text: 'Böden nach dem Bau gründlich reinigen und für die Nutzung einpflegen.' },
+      { serviceId: 'glasreinigung', text: 'Glasfronten und Fenster in Kiel nach dem Bau streifenfrei – auch im festen Turnus danach.' },
+      { serviceId: 'unterhaltsreinigung', text: 'Nach dem Einzug nahtlos in die laufende Reinigung in Kiel übergehen.' },
+    ],
+    texte: {
+      zielgruppenLabel: 'Für Ihr Bauprojekt',
+      zielgruppenTitel: 'Baureinigung für jedes Projekt in Kiel',
+      zielgruppenText: 'Vom Mehrfamilienhaus bis zum Ladenumbau – wir planen nach Ihrem Bauablauf.',
+      grenzenTitel: 'Das klären wir vorab',
+      grenzenText: 'Damit die Reinigung zum Bauablauf passt.',
+      ablaufTitel: 'So läuft Ihre Bauendreinigung',
+      vertrauenLabel: 'Verlässlichkeit',
+      ergaenzungTitel: 'Nach dem Bau',
+      ctaText:
+        'Wir sehen uns Ihre Baustelle in Kiel kostenlos an und erstellen Ihnen ein Festpreis-Angebot mit verbindlicher Zeitvorgabe.',
+    },
+    icons: {
+      zielgruppen: [HardHat, Building2, Home, Store, Users],
+      vertrauen: [CalendarCheck, ClipboardCheck, UserCheck, ShieldCheck],
+    },
+  },
+
+  // ---- Kita-Reinigung · Kiel -----------------------------------------------------------
+  {
+    serviceId: 'kita-reinigung',
+    citySlug: 'kiel',
+    leistung: 'Kita-Reinigung',
+    ort: 'Kiel',
+    seo: {
+      title: 'Kita-Reinigung Kiel nach Hygieneplan | KlarWerk Service',
+      description:
+        'Kita-Reinigung in Kiel: Gruppenräume, Wickel- und Sanitärbereiche nach dem Hygieneplan Ihrer Einrichtung, außerhalb der Betreuungszeiten. Jetzt anfragen.',
+      keywords:
+        'Kita-Reinigung Kiel, Kindergartenreinigung Kiel, Krippenreinigung Kiel, Reinigung Kindertagesstätte Kiel, Hygieneplan Kita Kiel, Kita Reinigung Kronshagen, Hortreinigung Kiel',
+    },
+    h1: 'Kita-Reinigung in Kiel',
+    intro:
+      'In einer Kita wird auf dem Boden gespielt, gegessen, gekrabbelt und gewickelt. Die tägliche Reinigung muss deshalb mehr leisten als in einem Büro – und sie muss fertig sein, bevor morgens das erste Kind kommt. KlarWerk Service reinigt Kindertagesstätten, Krippen und Horte in Kiel nach dem Hygieneplan der Einrichtung, außerhalb der Betreuungszeiten, mit festem Team und festem Ansprechpartner für Leitung und Träger. Unser Sitz in Bordesholm liegt rund 20 Kilometer südlich von Kiel.',
+    bild: {
+      // gleiches Foto wie auf /leistungen/kita-reinigung (kommt aus services.ts)
+      alt: 'Sauberer Gruppenraum einer Kindertagesstätte – Kita-Reinigung in Kiel durch KlarWerk Service',
+    },
+    eckdaten: [
+      { titel: 'Nach Ihrem Hygieneplan', text: 'Umfang und Intervalle wie in der Einrichtung festgelegt' },
+      { titel: 'Außerhalb der Betreuung', text: 'Frühmorgens oder nach Schließung, nie zwischen den Kindern' },
+      { titel: 'Festes Team', text: 'Bekannte Gesichter mit Vertretung bei Urlaub und Krankheit' },
+    ],
+    zielgruppen: [
+      {
+        titel: 'Kommunale Kitas und Träger',
+        text: 'Mehrere Einrichtungen, ein Ansprechpartner: Wir reinigen nach dem Hygieneplan jeder Kita und stimmen Leistungsverzeichnis, Termine und Kontrollen zentral mit dem Träger ab.',
+      },
+      {
+        titel: 'Freie Träger und Elterninitiativen',
+        text: 'Kleine Einrichtungen mit wenig Verwaltung im Hintergrund – wir halten den Aufwand für Leitung und Vorstand klein und bleiben erreichbar, wenn sich etwas ändert.',
+      },
+      {
+        titel: 'Krippen und Kleinkindgruppen',
+        text: 'Wickelbereiche, Schlafräume und Bodenflächen, auf denen gekrabbelt wird: Hier zählen Kontaktflächen, Sanitär und Böden jeden Tag.',
+      },
+      {
+        titel: 'Horte und Ganztagsbetreuung',
+        text: 'Räume, die nachmittags voll und abends leer sind – wir reinigen nach Betreuungsschluss, damit morgens alles bereit ist.',
+      },
+    ],
+    umfang: {
+      wir: [
+        'Gruppen- und Spielräume: Böden, Tische, Stühle und erreichbare Flächen',
+        'Wickelbereiche und Sanitärräume mit kindgerechten Toiletten und Waschrinnen',
+        'Kontaktflächen wie Türklinken, Lichtschalter, Handläufe und Garderoben',
+        'Küche und Essbereiche nach Absprache mit dem Küchenteam',
+        'Flure, Eingang, Garderoben und Mitarbeiterräume',
+        'Abfall, Windeleimer und Mülltrennung',
+        'Zusätzliche Reinigung von Kontaktflächen bei Infektionswellen auf Anweisung der Leitung',
+      ],
+      beiIhnen: [
+        'Spielzeug, Kuscheltiere und Textilien – Waschen und Desinfizieren bleibt bei der Einrichtung',
+        'Lebensmittelhygiene in der Küche – die Verantwortung bleibt beim Küchenteam',
+        'Grundreinigung und Bodenpflege mit Versiegelung – eigener Termin in den Schließzeiten',
+        'Außenspielgeräte und Sandkisten – nicht Teil der laufenden Reinigung',
+      ],
+    },
+    zeiten: {
+      titel: 'Fertig, bevor das erste Kind kommt',
+      text: 'Die laufende Reinigung findet außerhalb der Betreuungszeiten statt: nach Schließung am Nachmittag oder frühmorgens vor der Öffnung. Welche Bereiche täglich und welche wöchentlich dran sind, richtet sich nach dem Hygieneplan Ihrer Einrichtung.',
+      punkte: [
+        'Täglich: Sanitär, Wickelbereiche, Gruppenräume, Kontaktflächen, Abfall',
+        'Wöchentlich oder nach Plan: Fenster innen, Heizkörper, Garderoben, Lager',
+        'Nach Betreuungsschluss oder frühmorgens vor der Öffnung',
+        'Grundreinigung in den Schließzeiten als eigener Termin',
+      ],
+    },
+    vertrauen: [
+      {
+        titel: 'Ihr Hygieneplan ist die Vorgabe',
+        text: 'Jede Kita hat einen Hygieneplan. Wir übernehmen daraus, was zur Reinigung gehört, und halten die Intervalle im Leistungsverzeichnis fest.',
+      },
+      {
+        titel: 'Geeignete Mittel für Kinderräume',
+        text: 'Wir setzen Reinigungsmittel ein, die für den Einsatz in Kindereinrichtungen geeignet sind, und lüften gereinigte Räume, bevor die Kinder kommen.',
+      },
+      {
+        titel: 'Festes Team, feste Gesichter',
+        text: 'Ein eingespieltes Team, das die Einrichtung kennt. Bei Urlaub oder Krankheit übernimmt eine eingearbeitete Vertretung.',
+      },
+      {
+        titel: 'Ein Ansprechpartner für Leitung und Träger',
+        text: 'Rückmeldungen aus dem Team, Änderungen im Plan oder ein zusätzlicher Termin – eine Person, die erreichbar ist und sich kümmert.',
+      },
+    ],
+    anfahrt: {
+      titel: 'Kita-Reinigung in ganz Kiel',
+      text: 'Von Bordesholm sind wir über die A215 in rund 20 Minuten in Kiel – bei Kitas, Krippen und Horten auf dem Westufer von der Innenstadt bis Mettenhof und Friedrichsort und auf dem Ostufer in Gaarden, Neumühlen-Dietrichsdorf und Wellsee. Kurze Wege machen Kontrollen und kurzfristige Einsätze einfach.',
+      gruppen: [
+        { titel: 'Kiel Westufer', orte: ['Innenstadt', 'Wik', 'Ravensberg', 'Brunswik', 'Südfriedhof', 'Schreventeich', 'Suchsdorf', 'Hassee', 'Mettenhof', 'Friedrichsort'] },
+        { titel: 'Kiel Ostufer', orte: ['Wellsee', 'Gaarden-Ost', 'Neumühlen-Dietrichsdorf'] },
+      ],
+      umland: ['Kronshagen', 'Altenholz', 'Molfsee', 'Flintbek', 'Schwentinental', 'Heikendorf'],
+    },
+    ablauf: [
+      {
+        title: 'Kurze Anfrage',
+        desc: 'Art und Größe der Einrichtung, Anzahl der Gruppen und Betreuungszeiten – mehr braucht es für den Anfang nicht.',
+      },
+      {
+        title: 'Besichtigung vor Ort',
+        desc: 'Kostenlos in Kiel: Wir gehen Räume, Wickel- und Sanitärbereiche durch und sehen uns Ihren Hygieneplan an.',
+      },
+      {
+        title: 'Leistungsverzeichnis und Festpreis',
+        desc: 'Bereiche, Intervalle und Preis übersichtlich in einem Angebot – auch für den Träger nachvollziehbar.',
+      },
+      {
+        title: 'Start mit Einweisung',
+        desc: 'Schlüssel, Zeiten, Ansprechpartner und Besonderheiten der Einrichtung halten wir vor dem ersten Einsatz fest.',
+      },
+      {
+        title: 'Laufende Betreuung',
+        desc: 'Regelmäßige Kontrollen, kurze Wege für Rückfragen und Anpassungen, wenn sich Gruppen oder Zeiten ändern.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Reinigen Sie Kitas in ganz Kiel?',
+        answer:
+          'Ja. Wir sind auf dem Westufer und dem Ostufer unterwegs und im Umland, etwa in Kronshagen, Altenholz, Molfsee und Schwentinental. Unser Sitz in Bordesholm liegt rund 20 Kilometer südlich von Kiel.',
+      },
+      {
+        question: 'Wann wird gereinigt?',
+        answer:
+          'Außerhalb der Betreuungszeiten: nach Schließung am Nachmittag oder frühmorgens vor der Öffnung. Zwischen den Kindern wird nicht gereinigt.',
+      },
+      {
+        question: 'Richten Sie sich nach unserem Hygieneplan?',
+        answer:
+          'Ja. Ihr Hygieneplan legt fest, welche Bereiche wie oft gereinigt werden. Wir übernehmen daraus die Reinigungsaufgaben ins Leistungsverzeichnis und halten uns daran.',
+      },
+      {
+        question: 'Gehören Wickelbereiche dazu?',
+        answer:
+          'Ja. Wickeltische, Windeleimer und die umliegenden Flächen gehören zur täglichen Reinigung, ebenso die Sanitärräume mit kindgerechten Toiletten und Waschrinnen.',
+      },
+      {
+        question: 'Was passiert bei einer Infektionswelle?',
+        answer:
+          'Auf Anweisung der Leitung reinigen wir Kontaktflächen zusätzlich und häufiger. Welche Maßnahmen die Einrichtung anordnet, richtet sich nach ihrem Hygieneplan und den Vorgaben des Gesundheitsamts.',
+      },
+      {
+        question: 'Übernehmen Sie auch die Grundreinigung in den Schließzeiten?',
+        answer:
+          'Ja. Böden gründlich reinigen und auf Wunsch versiegeln machen wir mit unserem eigenen Team in den Schließzeiten – dafür gibt es unsere Seite zur Grundreinigung für Kitas und Schulen in Kiel.',
+      },
+      {
+        question: 'Wer reinigt bei Urlaub oder Krankheit?',
+        answer:
+          'Eine eingearbeitete Vertretung, die Ihre Einrichtung kennt. So entstehen keine Lücken im Plan.',
+      },
+      {
+        question: 'Was kostet die Kita-Reinigung in Kiel?',
+        answer:
+          'Das hängt von Fläche, Gruppen, Bereichen und Intervallen ab. Nach einer kostenlosen Besichtigung erhalten Sie ein Festpreis-Angebot mit Leistungsverzeichnis.',
+      },
+    ],
+    ergaenzungen: [
+      { serviceId: 'grundreinigung', text: 'Böden in den Schließzeiten gründlich reinigen und auf Wunsch versiegeln – unsere Grundreinigung für Kitas und Schulen in Kiel.' },
+      { serviceId: 'glasreinigung', text: 'Fenster und Glastüren der Einrichtung im eigenen Turnus, innen und außen.' },
+      { serviceId: 'unterhaltsreinigung', text: 'Weitere Gebäude des Trägers in Kiel nach festem Plan – mit demselben Ansprechpartner.' },
+    ],
+    texte: {
+      zielgruppenLabel: 'Für Ihre Einrichtung',
+      zielgruppenTitel: 'Kita-Reinigung für jede Einrichtung in Kiel',
+      zielgruppenText: 'Krippe, Kindergarten oder Hort, kommunal oder frei – der Plan richtet sich nach Ihrem Hygieneplan.',
+      grenzenTitel: 'Das bleibt bei Ihnen',
+      grenzenText: 'Damit Zuständigkeiten klar sind.',
+      ablaufTitel: 'So starten wir in Ihrer Kita',
+      vertrauenLabel: 'Hygiene & Verlässlichkeit',
+      ergaenzungTitel: 'Rund um Ihre Einrichtung aus einer Hand',
+      ctaText:
+        'Wir sehen uns Ihre Einrichtung in Kiel kostenlos an und erstellen Ihnen ein Festpreis-Angebot mit Leistungsverzeichnis nach Ihrem Hygieneplan.',
+    },
+    icons: {
+      zielgruppen: [Building2, Users, Baby, Smile],
+      vertrauen: [ClipboardCheck, ShieldCheck, Users, UserCheck],
+    },
+  },
+
+  // ---- Schulreinigung · Kiel -----------------------------------------------------------
+  {
+    serviceId: 'schulreinigung',
+    citySlug: 'kiel',
+    leistung: 'Schulreinigung',
+    ort: 'Kiel',
+    seo: {
+      title: 'Schulreinigung in Kiel | KlarWerk Service',
+      description:
+        'Schulreinigung in Kiel: Klassenräume, Flure, Sanitär und Sporthallen außerhalb des Unterrichts, feste Intervalle, Grundreinigung in den Ferien.',
+      keywords:
+        'Schulreinigung Kiel, Reinigung Schule Kiel, Sporthallenreinigung Kiel, Reinigung Berufsschule Kiel, Klassenraumreinigung Kiel, Schulreinigung Kronshagen, Schulreinigung Schwentinental',
+    },
+    h1: 'Schulreinigung in Kiel',
+    intro:
+      'Große Flächen, viele Nutzer und ein enges Zeitfenster: In einer Schule müssen Klassenräume, Flure, Sanitär und Sporthalle jeden Morgen sauber sein, ohne dass die Reinigung den Unterricht berührt. KlarWerk Service reinigt Schulen und Bildungseinrichtungen in Kiel nach einem festen Leistungsverzeichnis – nachmittags nach Unterrichtsschluss oder frühmorgens, mit festem Team und einem Ansprechpartner für Schulleitung, Hausmeister und Träger. Unser Sitz in Bordesholm liegt rund 20 Kilometer südlich von Kiel.',
+    bild: {
+      // gleiches Foto wie auf /leistungen/schulreinigung (kommt aus services.ts)
+      alt: 'Sauberer Klassenraum nach Unterrichtsschluss – Schulreinigung in Kiel durch KlarWerk Service',
+    },
+    eckdaten: [
+      { titel: 'Außerhalb des Unterrichts', text: 'Nach Unterrichtsschluss oder frühmorgens' },
+      { titel: 'Intervalle je Bereich', text: 'Sanitär täglich, Klassenräume nach Plan, Hallen nach Belegung' },
+      { titel: 'Ferien für das Grobe', text: 'Grundreinigung und Bodenpflege in den Ferien, eigenes Team' },
+    ],
+    zielgruppen: [
+      {
+        titel: 'Grund- und Gemeinschaftsschulen, Gymnasien',
+        text: 'Klassenräume, Fachräume, Flure, Treppenhäuser, Mensa und Sanitär – nach Unterrichtsschluss gereinigt, abgestimmt mit dem Hausmeister und dem Ganztag.',
+      },
+      {
+        titel: 'Berufliche Schulen und Bildungsträger',
+        text: 'Unterrichtsräume, Werkstätten, Lehrküchen und Aufenthaltsbereiche mit wechselnder Belegung bis in den Abend – wir reinigen in den Lücken des Stundenplans.',
+      },
+      {
+        titel: 'Privatschulen und freie Träger',
+        text: 'Ein Ansprechpartner für Schulleitung und Verwaltung, ein klares Leistungsverzeichnis und kurze Wege, wenn sich Räume oder Zeiten ändern.',
+      },
+      {
+        titel: 'Sporthallen und Mensen',
+        text: 'Sportböden, Umkleiden, Duschen und Essbereiche: Bereiche, die täglich stark beansprucht werden und eigene Intervalle brauchen.',
+      },
+    ],
+    umfang: {
+      wir: [
+        'Klassen- und Fachräume: Böden, Tische, Tafeln und erreichbare Flächen',
+        'Flure, Treppenhäuser, Eingänge, Aula und Pausenhallen',
+        'Sanitäranlagen für Schüler und Lehrkräfte, täglich oder nach Plan',
+        'Sporthallen: Sportböden, Umkleiden, Duschen und Geräteräume nach Belegungsplan',
+        'Mensa und Essbereiche nach Absprache mit dem Küchenbetrieb',
+        'Lehrerzimmer, Verwaltung und Sekretariat',
+        'Kontaktflächen wie Türklinken, Handläufe, Lichtschalter und Trinkbrunnen',
+        'Abfall, Papierkörbe und Mülltrennung',
+      ],
+      beiIhnen: [
+        'Grundreinigung, Bodenpflege und Beschichtung – eigener Termin in den Ferien',
+        'Fenster außen – eigener Turnus in der Glasreinigung',
+        'Lebensmittelhygiene in Mensa und Lehrküche – die Verantwortung bleibt beim Küchenbetrieb',
+        'Schulhof und Außenanlagen – darum kümmert sich der Hausmeister',
+      ],
+    },
+    zeiten: {
+      titel: 'In den Lücken des Stundenplans',
+      text: 'Die laufende Reinigung findet außerhalb des Unterrichts statt – nachmittags nach Schulschluss, nach dem Ganztag oder frühmorgens. Sporthallen und Mensa bekommen eigene Zeiten nach Belegung. Was gründlicher gemacht werden muss, kommt in die Ferien.',
+      punkte: [
+        'Täglich: Sanitär, Mensa, Eingänge, Kontaktflächen, Abfall',
+        'Täglich oder nach Plan: Klassen- und Fachräume, Flure, Lehrerzimmer',
+        'Sporthallen nach Belegungsplan, auch bei Vereinsnutzung am Abend',
+        'Grundreinigung, Bodenpflege und Beschichtung in den Ferien',
+      ],
+    },
+    vertrauen: [
+      {
+        titel: 'Klares Leistungsverzeichnis',
+        text: 'Schulleitung, Hausmeister und Träger sehen, welcher Bereich wie oft gereinigt wird – nachvollziehbar und ohne Diskussionen.',
+      },
+      {
+        titel: 'Abgestimmt mit dem Hausmeister',
+        text: 'Zugänge, Alarmanlage, Belegung der Halle und Sonderveranstaltungen stimmen wir mit Ihrem Hausmeister ab, damit nichts kollidiert.',
+      },
+      {
+        titel: 'Festes Team, eingearbeitete Vertretung',
+        text: 'Ein Team, das die Schule kennt. Bei Urlaub oder Krankheit übernimmt jemand, der eingearbeitet ist.',
+      },
+      {
+        titel: 'Geeignete Mittel für Bildungseinrichtungen',
+        text: 'Wir setzen Reinigungsmittel ein, die für Schulen geeignet sind, und lüften gereinigte Räume, bevor der Unterricht beginnt.',
+      },
+    ],
+    anfahrt: {
+      titel: 'Schulreinigung in ganz Kiel',
+      text: 'Von Bordesholm sind wir über die A215 in rund 20 Minuten in Kiel – bei Schulen auf dem Westufer von der Innenstadt bis Mettenhof und Friedrichsort und auf dem Ostufer in Gaarden, Neumühlen-Dietrichsdorf und Wellsee. Kurze Wege machen Kontrollen und zusätzliche Termine nach Veranstaltungen einfach.',
+      gruppen: [
+        { titel: 'Kiel Westufer', orte: ['Innenstadt', 'Wik', 'Ravensberg', 'Brunswik', 'Südfriedhof', 'Schreventeich', 'Suchsdorf', 'Hassee', 'Mettenhof', 'Friedrichsort'] },
+        { titel: 'Kiel Ostufer', orte: ['Wellsee', 'Gaarden-Ost', 'Neumühlen-Dietrichsdorf'] },
+      ],
+      umland: ['Kronshagen', 'Altenholz', 'Molfsee', 'Flintbek', 'Schwentinental', 'Heikendorf'],
+    },
+    ablauf: [
+      {
+        title: 'Kurze Anfrage',
+        desc: 'Schulform, ungefähre Flächen, Anzahl der Räume und Unterrichtszeiten – mehr braucht es für den Anfang nicht.',
+      },
+      {
+        title: 'Besichtigung vor Ort',
+        desc: 'Kostenlos in Kiel: Wir gehen Gebäude, Halle und Sanitär mit Ihnen oder Ihrem Hausmeister durch und klären Zeiten und Zugänge.',
+      },
+      {
+        title: 'Leistungsverzeichnis und Festpreis',
+        desc: 'Bereiche, Intervalle und Preis übersichtlich in einem Angebot – auch für Träger und Gremien nachvollziehbar.',
+      },
+      {
+        title: 'Start mit Einweisung',
+        desc: 'Schlüssel, Alarmanlage, Zeiten, Ansprechpartner und Besonderheiten halten wir vor dem ersten Einsatz fest.',
+      },
+      {
+        title: 'Laufende Betreuung',
+        desc: 'Regelmäßige Kontrollen, kurze Wege für Rückfragen und Anpassungen bei neuen Stundenplänen oder Belegungen.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Reinigen Sie Schulen in ganz Kiel?',
+        answer:
+          'Ja. Wir sind auf dem Westufer und dem Ostufer unterwegs und im Umland, etwa in Kronshagen, Altenholz, Molfsee und Schwentinental. Unser Sitz in Bordesholm liegt rund 20 Kilometer südlich von Kiel.',
+      },
+      {
+        question: 'Reinigen Sie während des Unterrichts?',
+        answer:
+          'Nein. Die laufende Reinigung findet nach Unterrichtsschluss, nach dem Ganztag oder frühmorgens statt. Sporthallen und Mensa bekommen eigene Zeiten nach Belegung.',
+      },
+      {
+        question: 'Gehört die Sporthalle dazu?',
+        answer:
+          'Ja. Sportböden, Umkleiden, Duschen und Geräteräume reinigen wir nach Belegungsplan – auch wenn Vereine die Halle am Abend nutzen.',
+      },
+      {
+        question: 'Wie stimmen Sie sich mit unserem Hausmeister ab?',
+        answer:
+          'Zugänge, Alarmanlage, Hallenbelegung und Veranstaltungen klären wir direkt mit Ihrem Hausmeister. Er bleibt Ansprechpartner im Haus, wir haben einen festen Ansprechpartner bei uns.',
+      },
+      {
+        question: 'Was passiert in den Ferien?',
+        answer:
+          'In den Ferien machen wir mit unserem eigenen Team die Grundreinigung der Böden und auf Wunsch Bodenpflege und Beschichtung – dafür gibt es unsere Seite zur Grundreinigung für Kitas und Schulen in Kiel.',
+      },
+      {
+        question: 'Wer reinigt bei Urlaub oder Krankheit?',
+        answer:
+          'Eine eingearbeitete Vertretung, die die Schule kennt. So entstehen keine Lücken im Plan.',
+      },
+      {
+        question: 'Reinigen Sie auch nach Veranstaltungen?',
+        answer:
+          'Ja. Nach Elternabenden, Schulfesten oder Vereinsnutzung der Halle reinigen wir auf Abruf zusätzlich – nach Absprache mit Schulleitung oder Hausmeister.',
+      },
+      {
+        question: 'Was kostet die Schulreinigung in Kiel?',
+        answer:
+          'Das hängt von Flächen, Räumen, Bereichen und Intervallen ab. Nach einer kostenlosen Besichtigung erhalten Sie ein Festpreis-Angebot mit Leistungsverzeichnis.',
+      },
+    ],
+    ergaenzungen: [
+      { serviceId: 'grundreinigung', text: 'Böden in den Ferien gründlich reinigen und auf Wunsch versiegeln – unsere Grundreinigung für Kitas und Schulen in Kiel.' },
+      { serviceId: 'glasreinigung', text: 'Fenster, Glastüren und Glasfassaden der Schule im eigenen Turnus, innen und außen.' },
+      { serviceId: 'hausmeisterservice', text: 'Kontrollgänge, kleine Reparaturen und Außenanlagen, wenn der eigene Hausmeister Unterstützung braucht.' },
+    ],
+    texte: {
+      zielgruppenLabel: 'Für Ihre Schule',
+      zielgruppenTitel: 'Schulreinigung für jede Einrichtung in Kiel',
+      zielgruppenText: 'Grundschule, Gymnasium, Berufsschule oder Sporthalle – der Plan richtet sich nach Räumen, Stundenplan und Belegung.',
+      grenzenTitel: 'Das bleibt bei Ihnen',
+      grenzenText: 'Damit Zuständigkeiten klar sind.',
+      ablaufTitel: 'So starten wir an Ihrer Schule',
+      vertrauenLabel: 'Verlässlichkeit',
+      ergaenzungTitel: 'Rund um Ihre Schule aus einer Hand',
+      ctaText:
+        'Wir sehen uns Ihre Schule in Kiel kostenlos an und erstellen Ihnen ein Festpreis-Angebot mit klarem Leistungsverzeichnis.',
+    },
+    icons: {
+      zielgruppen: [GraduationCap, Briefcase, Building2, Activity],
+      vertrauen: [ClipboardCheck, KeyRound, Users, ShieldCheck],
     },
   },
 ];

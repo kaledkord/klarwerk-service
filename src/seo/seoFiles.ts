@@ -50,6 +50,7 @@ export const siteRoutes = [
   { path: '/leistungen/unterhaltsreinigung', changefreq: 'monthly', priority: '0.8' },
   { path: '/leistungen/unterhaltsreinigung/neumuenster', changefreq: 'monthly', priority: '0.8' },
   { path: '/leistungen/grundreinigung', changefreq: 'monthly', priority: '0.8' },
+  { path: '/leistungen/grundreinigung/kiel', changefreq: 'monthly', priority: '0.8' },
   { path: '/leistungen/gartenpflege', changefreq: 'monthly', priority: '0.7' },
   { path: '/leistungen/bauendreinigung', changefreq: 'monthly', priority: '0.7' },
   { path: '/leistungen/bauendreinigung/neumuenster', changefreq: 'monthly', priority: '0.8' },

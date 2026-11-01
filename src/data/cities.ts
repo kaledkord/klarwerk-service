@@ -48,11 +48,12 @@ export const cities: City[] = [
     intro:
       'KlarWerk Service reinigt Büros, Praxen, Geschäfte und Wohnanlagen in ganz Kiel – auf dem Westufer von der Innenstadt über Ravensberg, Schreventeich und Wik bis Mettenhof und Friedrichsort, auf dem Ostufer in Gaarden, Neumühlen-Dietrichsdorf und Wellsee. Unser Sitz in Bordesholm liegt rund 20 Kilometer südlich, über die A215 sind wir in 20 Minuten bei Ihnen.',
     eigeneSeiten: {
-      vorspann: 'Für die drei häufigsten Aufträge haben wir eigene Seiten:',
+      vorspann: 'Für die häufigsten Aufträge haben wir eigene Seiten:',
       links: [
         { label: 'Büroreinigung', to: '/leistungen/bueroreinigung/kiel' },
         { label: 'Praxisreinigung', to: '/leistungen/praxisreinigung/kiel' },
-        { label: 'Glasreinigung in Kiel', to: '/leistungen/glasreinigung/kiel' },
+        { label: 'Glasreinigung', to: '/leistungen/glasreinigung/kiel' },
+        { label: 'Grundreinigung für Kitas und Schulen in Kiel', to: '/leistungen/grundreinigung/kiel' },
       ],
     },
     highlights: [

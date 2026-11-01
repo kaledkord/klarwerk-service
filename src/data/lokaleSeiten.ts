@@ -2072,6 +2072,181 @@ export const lokaleSeiten: LokaleSeite[] = [
       vertrauen: [Sparkles, UserCheck, ShieldCheck, CalendarCheck],
     },
   },
+  {
+    serviceId: 'grundreinigung',
+    citySlug: 'kiel',
+    leistung: 'Grundreinigung',
+    ort: 'Kiel',
+    seo: {
+      title: 'Grundreinigung Kita & Schule Kiel | KlarWerk Service',
+      description:
+        'Grundreinigung für Kitas und Schulen in Kiel: Böden gründlich reinigen, auf Wunsch versiegeln, Termin in den Ferien oder am Wochenende. Jetzt anfragen.',
+      keywords:
+        'Grundreinigung Kiel, Grundreinigung Kita Kiel, Grundreinigung Schule Kiel, Bodenversiegelung Kiel, Bodengrundreinigung Kiel, Grundreinigung Ferien Kiel, Grundreinigung Kronshagen',
+    },
+    h1: 'Grundreinigung für Kitas und Schulen in Kiel',
+    intro:
+      'Böden in Kitas und Schulen werden jeden Tag stark beansprucht: Hunderte Schuhe, Sand vom Spielplatz, Stühle, die über Linoleum und PVC rutschen. Mit der Zeit setzen sich Schmutzfilme, Gebrauchsspuren und alte Pflegereste fest, die die laufende Reinigung nicht mehr herausholt. KlarWerk Service führt Grundreinigungen in Kieler Kitas und Schulen durch und versiegelt die Böden auf Wunsch – geplant in den Ferien oder außerhalb der Betriebszeiten, damit Kinder und Team nichts davon mitbekommen. Unser Sitz in Bordesholm liegt rund 20 Kilometer südlich von Kiel.',
+    bild: {
+      // gleiches Foto wie auf /leistungen/grundreinigung (kommt aus services.ts)
+      alt: 'Grundreinigung eines Bodens in einer Bildungseinrichtung in Kiel durch KlarWerk Service',
+    },
+    eckdaten: [
+      { titel: 'In den Ferien oder nach Betriebsschluss', text: 'Termin nach Absprache, wenn das Haus leer ist' },
+      { titel: 'Auf den Belag abgestimmt', text: 'Mittel und Verfahren nach Bodenart und Herstellerangaben' },
+      { titel: 'Versiegelung auf Wunsch', text: 'Nur, wenn sie zu Belag und Nutzung passt' },
+    ],
+    zielgruppen: [
+      {
+        titel: 'Kitas und Krippen',
+        text: 'Gruppenräume, Flure, Garderoben und Waschräume, in denen gekrabbelt, gespielt und gegessen wird. Wir reinigen gründlich und so, dass die Räume zum Start nach den Ferien wieder frisch sind.',
+      },
+      {
+        titel: 'Grund- und weiterführende Schulen',
+        text: 'Klassenräume, Flure, Treppenhäuser, Mensa und Sanitärbereiche mit großen Flächen und kurzen Zeitfenstern. Wir planen den Einsatz so, dass er in die Ferien passt.',
+      },
+      {
+        titel: 'Träger, Gemeinden und Gebäudemanagement',
+        text: 'Mehrere Einrichtungen, ein Ansprechpartner: Wir stimmen Termine, Umfang und Abnahme zentral mit Ihnen ab und liefern ein Angebot, das sich nach Flächen und Belägen richtet.',
+      },
+      {
+        titel: 'Hausverwaltungen von Bildungsimmobilien',
+        text: 'Wenn Böden nach Jahren im Betrieb oder nach Umbauten wieder in einen gepflegten Zustand sollen – mit klarer Dokumentation für Eigentümer und Nutzer.',
+      },
+    ],
+    umfang: {
+      wir: [
+        'Gründliche Reinigung der Bodenflächen, abgestimmt auf den jeweiligen Belag',
+        'Entfernen von Pflegeresten, Schmutzfilmen und Gebrauchsspuren',
+        'Eingangsbereiche, Flure, Gruppen- und Klassenräume, Sanitärbereiche',
+        'Versiegelung oder Einpflege des Bodens, wenn Belag und Zustand es sinnvoll machen',
+        'Abschlusskontrolle gemeinsam mit Ihnen vor Ort',
+        'Pflegehinweise für die Zeit nach der Grundreinigung',
+      ],
+      beiIhnen: [
+        'Räume freiräumen: Möbel und Spielmaterial stellen wir nach Absprache zur Seite, Regale und Schränke bleiben bei Ihnen',
+        'Beschädigte Beläge, lose Fliesen oder Fugen – Auffälliges melden wir, reparieren aber nicht',
+        'Beläge, deren Hersteller keine Versiegelung vorsieht, bleiben ohne Versiegelung',
+      ],
+    },
+    zeiten: {
+      titel: 'Grundreinigung, wenn das Haus leer ist',
+      text: 'Eine Grundreinigung braucht Zeit und freie Flächen. Deshalb planen wir sie in die Ferien, auf Schließtage oder an Wochenenden nach Absprache. Gereinigte und versiegelte Böden werden erst wieder betreten, wenn wir sie freigegeben haben – den Zeitplan stimmen wir vorher mit Ihnen ab.',
+      punkte: [
+        'In den Sommer-, Herbst- oder Frühjahrsferien',
+        'An Schließtagen und pädagogischen Tagen',
+        'Am Wochenende nach Absprache',
+        'Raum für Raum, wenn der Betrieb weiterlaufen muss',
+      ],
+    },
+    vertrauen: [
+      {
+        titel: 'Belag zuerst, dann Verfahren',
+        text: 'Linoleum, PVC, Stein oder Fliesen: Wir sehen uns die Böden vorher an und wählen Mittel und Verfahren nach Belag und Herstellerangaben. Wir empfehlen nur, was zu Ihrem Boden passt.',
+      },
+      {
+        titel: 'Ein fester Ansprechpartner',
+        text: 'Eine Person für Besichtigung, Termin, Durchführung und Abnahme. Bei Urlaub oder Krankheit übernimmt eine eingearbeitete Vertretung.',
+      },
+      {
+        titel: 'Geeignete Mittel für Kinderräume',
+        text: 'Wir setzen Reinigungs- und Pflegemittel ein, die für den Einsatz in Kitas und Schulen geeignet sind, und halten Trocknungs- und Lüftungszeiten ein, bevor die Räume wieder genutzt werden.',
+      },
+      {
+        titel: 'Abnahme vor Ort',
+        text: 'Nach der Grundreinigung gehen wir die Flächen gemeinsam durch. Sie bekommen Pflegehinweise, damit das Ergebnis lange hält.',
+      },
+    ],
+    anfahrt: {
+      titel: 'Grundreinigung in ganz Kiel',
+      text: 'Von Bordesholm sind wir über die A215 in rund 20 Minuten in Kiel – bei Kitas und Schulen auf dem Westufer von der Innenstadt bis Mettenhof und Friedrichsort und auf dem Ostufer in Gaarden, Neumühlen-Dietrichsdorf und Wellsee. Kurze Wege machen Besichtigung, Terminplanung und Abnahme einfach.',
+      gruppen: [
+        { titel: 'Kiel Westufer', orte: ['Innenstadt', 'Wik', 'Ravensberg', 'Brunswik', 'Südfriedhof', 'Schreventeich', 'Suchsdorf', 'Hassee', 'Mettenhof', 'Friedrichsort'] },
+        { titel: 'Kiel Ostufer', orte: ['Wellsee', 'Gaarden-Ost', 'Neumühlen-Dietrichsdorf'] },
+      ],
+      umland: ['Kronshagen', 'Altenholz', 'Molfsee', 'Flintbek', 'Schwentinental', 'Heikendorf'],
+    },
+    ablauf: [
+      {
+        title: 'Kurze Anfrage',
+        desc: 'Art der Einrichtung, ungefähre Flächen und Bodenbeläge – ein paar Fotos genügen für eine erste Einschätzung.',
+      },
+      {
+        title: 'Besichtigung vor Ort',
+        desc: 'Kostenlos in Kiel: Wir sehen uns Beläge, Zustand und Zugänge an und klären, ob eine Versiegelung sinnvoll ist.',
+      },
+      {
+        title: 'Schriftliches Angebot',
+        desc: 'Nach Flächen, Belägen und Umfang, mit klarem Leistungsverzeichnis – ohne Pauschalversprechen.',
+      },
+      {
+        title: 'Termin im Ferienfenster',
+        desc: 'Wir legen den Einsatz in die Ferien, auf Schließtage oder ans Wochenende – so, wie es für Ihre Einrichtung passt.',
+      },
+      {
+        title: 'Durchführung und Abnahme',
+        desc: 'Eingearbeitetes Personal mit festem Ansprechpartner, danach gemeinsame Abnahme und Pflegehinweise.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Reinigen Sie Kitas und Schulen in ganz Kiel?',
+        answer:
+          'Ja. Wir sind auf dem Westufer und dem Ostufer unterwegs und im Umland, etwa in Kronshagen, Altenholz, Molfsee und Schwentinental. Unser Sitz in Bordesholm liegt rund 20 Kilometer südlich von Kiel.',
+      },
+      {
+        question: 'Wie oft ist eine Grundreinigung nötig?',
+        answer:
+          'Das hängt von Belag, Nutzung und Zustand ab. Viele Einrichtungen planen sie einmal im Jahr in den Sommerferien, stark genutzte Bereiche auch häufiger. Nach der Besichtigung geben wir eine Empfehlung, die zu Ihren Böden passt.',
+      },
+      {
+        question: 'Muss jede Fläche versiegelt werden?',
+        answer:
+          'Nein. Die Versiegelung ist optional und nicht für jeden Belag geeignet. Wir richten uns nach Bodenart, Zustand und Herstellerangaben und empfehlen nur, was für Ihren Boden sinnvoll ist.',
+      },
+      {
+        question: 'Wann finden die Arbeiten statt?',
+        answer:
+          'Nach Absprache außerhalb der Betriebszeiten: in den Ferien, an Schließtagen oder am Wochenende. Muss der Betrieb weiterlaufen, arbeiten wir Raum für Raum.',
+      },
+      {
+        question: 'Wann dürfen die Räume wieder genutzt werden?',
+        answer:
+          'Erst nach unserer Freigabe. Trocknungs- und Lüftungszeiten hängen von Belag und Verfahren ab und stehen vorher im Zeitplan, den wir mit Ihnen abstimmen.',
+      },
+      {
+        question: 'Übernehmen Sie danach auch die laufende Reinigung?',
+        answer:
+          'Ja. Wer nach der Grundreinigung die laufende Pflege abgeben möchte, kann sie mit unserer Unterhaltsreinigung verbinden – mit demselben Ansprechpartner.',
+      },
+      {
+        question: 'Was kostet die Grundreinigung in Kiel?',
+        answer:
+          'Das hängt von Flächen, Belägen, Zustand und gewünschter Versiegelung ab. Nach einer kostenlosen Besichtigung erhalten Sie ein schriftliches Angebot mit klarem Leistungsverzeichnis.',
+      },
+    ],
+    ergaenzungen: [
+      { serviceId: 'unterhaltsreinigung', text: 'Nach der Grundreinigung die laufende Pflege abgeben – mit festem Rhythmus und demselben Ansprechpartner.' },
+      { serviceId: 'kita-reinigung', text: 'Regelmäßige Reinigung für Kitas: Gruppenräume, Waschräume und Küche nach Hygieneplan.' },
+      { serviceId: 'glasreinigung', text: 'Fenster und Glastüren in Kiel gleich mit einplanen – streifenfrei, innen und außen.' },
+    ],
+    texte: {
+      zielgruppenLabel: 'Für Ihre Einrichtung',
+      zielgruppenTitel: 'Kitas und Schulen in Kiel – jede Einrichtung anders',
+      zielgruppenText: 'Eine Krippe braucht etwas anderes als eine weiterführende Schule. Wir planen nach Ihren Räumen, Belägen und Zeitfenstern.',
+      grenzenTitel: 'Das klären wir vorab',
+      grenzenText: 'Damit am Termin nichts überrascht.',
+      ablaufTitel: 'So läuft Ihre Grundreinigung',
+      vertrauenLabel: 'Qualität & Sicherheit',
+      ergaenzungTitel: 'Rund um Ihre Einrichtung aus einer Hand',
+      ctaText:
+        'Wir sehen uns Böden und Räume Ihrer Einrichtung in Kiel kostenlos an und erstellen Ihnen ein schriftliches Angebot für Grundreinigung und Versiegelung.',
+    },
+    icons: {
+      zielgruppen: [Baby, Users, Briefcase, Home],
+      vertrauen: [ClipboardCheck, UserCheck, ShieldCheck, CalendarCheck],
+    },
+  },
 ];
 
 export function getLokaleSeite(serviceId: string, citySlug: string): LokaleSeite | undefined {

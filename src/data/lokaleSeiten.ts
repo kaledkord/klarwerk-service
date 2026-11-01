@@ -3009,6 +3009,199 @@ export const lokaleSeiten: LokaleSeite[] = [
       vertrauen: [ClipboardCheck, KeyRound, Users, ShieldCheck],
     },
   },
+
+  // ---- Grundreinigung · Neumünster -----------------------------------------------------
+  {
+    serviceId: 'grundreinigung',
+    citySlug: 'neumuenster',
+    leistung: 'Grundreinigung',
+    ort: 'Neumünster',
+    seo: {
+      title: 'Grundreinigung in Neumünster | KlarWerk Service',
+      description:
+        'Grundreinigung in Neumünster für Gewerbe, Praxen, Büros und Wohnanlagen: Böden gründlich reinigen, auf Wunsch versiegeln, eigenes Team, Festpreis.',
+      keywords:
+        'Grundreinigung Neumünster, Bodengrundreinigung Neumünster, Bodenversiegelung Neumünster, Intensivreinigung Neumünster, Grundreinigung Gewerbe Neumünster, Grundreinigung Treppenhaus Neumünster, Grundreinigung Wasbek',
+    },
+    h1: 'Grundreinigung in Neumünster',
+    intro:
+      'Irgendwann holt die laufende Reinigung nicht mehr alles heraus: Pflegefilme auf dem Linoleum, graue Laufstraßen im Flur, Kalk und Ablagerungen im Sanitärbereich, Staub auf Lampen und Heizkörpern. Dann ist eine Grundreinigung dran. KlarWerk Service reinigt Gewerbeflächen, Praxen, Büros, Wohnanlagen und Geschäfte in Neumünster einmal gründlich bis in die Tiefe – mit eigenem Team, auf Wunsch mit Versiegelung oder Einpflege der Böden, und mit einem Termin, der sich nach Ihrem Betrieb richtet. Unser Sitz in Bordesholm liegt direkt nördlich der Stadt.',
+    bild: {
+      // gleiches Foto wie auf /leistungen/grundreinigung (kommt aus services.ts)
+      alt: 'Gründlich gereinigter und eingepflegter Boden in einem Gewerbeobjekt – Grundreinigung in Neumünster durch KlarWerk Service',
+    },
+    eckdaten: [
+      { titel: 'Alles aus einer Hand', text: 'Ausräumen, Reinigung, Versiegelung und Einräumen durch unser Team' },
+      { titel: 'Festpreis mit Zeitvorgabe', text: 'Nach Besichtigung, je Fläche und Belag' },
+      { titel: 'Termin nach Ihrem Betrieb', text: 'Wochenende, Betriebsurlaub, Praxisferien oder Raum für Raum' },
+    ],
+    zielgruppen: [
+      {
+        titel: 'Gewerbe, Logistik und Werkstätten',
+        text: 'Sozialräume, Umkleiden, Sanitär, Bürotrakt und Verkehrsflächen, die das ganze Jahr durchlaufen – einmal im Jahr oder nach einer intensiven Phase gründlich aufgearbeitet, gern im Betriebsurlaub.',
+      },
+      {
+        titel: 'Praxen und Büros',
+        text: 'Behandlungs- und Arbeitsräume, Wartebereiche und Flure in den Praxisferien oder über ein Wochenende – damit am Montag alles wieder läuft.',
+      },
+      {
+        titel: 'Hausverwaltungen und Wohnanlagen',
+        text: 'Treppenhäuser, Hauseingänge, Keller- und Gemeinschaftsflächen nach Jahren im Betrieb oder beim Mieterwechsel: Böden, Geländer, Fensterbänke und Briefkastenanlagen einmal richtig.',
+      },
+      {
+        titel: 'Geschäfte und Gastronomie',
+        text: 'Verkaufsflächen, Gasträume und Nebenräume vor der Neueröffnung, nach einem Umbau oder nach der Saison – außerhalb der Öffnungszeiten.',
+      },
+      {
+        titel: 'Kitas, Schulen und Vereine',
+        text: 'Gruppen- und Klassenräume, Flure und Hallen in den Ferien oder an Schließtagen, mit Mitteln, die für Kinderräume geeignet sind.',
+      },
+    ],
+    umfang: {
+      wir: [
+        'Böden gründlich reinigen: alte Pflegefilme, Schmutzschichten und Laufstraßen entfernen, abgestimmt auf Linoleum, PVC, Fliesen, Stein oder Teppich',
+        'Versiegelung oder Einpflege des Bodens durch unser eigenes Team, wenn Belag und Zustand es sinnvoll machen',
+        'Sanitärräume und Küchen bis in die Tiefe: Kalk, Fugen, Armaturen, Fliesen, Geräteaußenflächen',
+        'Türen, Zargen, Heizkörper, Lampen, Fensterbänke, Sockelleisten und andere Flächen, die im Alltag nicht drankommen',
+        'Aus- und Einräumen der Räume: Möbel, Stühle und Material stellen wir zur Seite und wieder zurück',
+        'Abschlusskontrolle gemeinsam mit Ihnen und zügige Übergabe, damit der Betrieb pünktlich weitergeht',
+        'Pflegehinweise für die Zeit nach der Grundreinigung',
+      ],
+      beiIhnen: [
+        'Persönliche Sachen, Unterlagen und Ware – die fassen wir nicht an',
+        'Fenster außen und Glasfassaden – als Baustein unserer Glasreinigung dazu buchbar',
+        'Beschädigte Beläge, lose Fliesen oder Fugen – Auffälliges melden wir, reparieren aber nicht',
+        'Beläge, deren Hersteller keine Versiegelung vorsieht, bleiben ohne Versiegelung',
+      ],
+    },
+    zeiten: {
+      titel: 'Wenn die Räume leer sind',
+      text: 'Eine Grundreinigung braucht freie Flächen und Zeit zum Trocknen. Deshalb legen wir sie auf Zeiten, in denen bei Ihnen nichts läuft – und wenn der Betrieb weitergehen muss, arbeiten wir Raum für Raum. Die Räume werden erst wieder genutzt, wenn wir sie freigegeben haben.',
+      punkte: [
+        'Am Wochenende oder nach Feierabend',
+        'Im Betriebsurlaub oder in den Praxisferien',
+        'Vor Einzug, nach Umbau oder beim Mieterwechsel',
+        'Raum für Raum, wenn der Betrieb weiterlaufen muss',
+      ],
+    },
+    vertrauen: [
+      {
+        titel: 'Belag zuerst, dann Verfahren',
+        text: 'Wir sehen uns die Böden vorher an und wählen Mittel, Maschinen und Verfahren nach Belag und Herstellerangaben. Wir empfehlen nur, was zu Ihrem Boden passt.',
+      },
+      {
+        titel: 'Versiegelung aus einer Hand',
+        text: 'Reinigung und Versiegelung macht unser eigenes Team – kein Subunternehmer, ein Ansprechpartner, ein Zeitplan. Das Ergebnis ist professionell und die Übergabe schnell.',
+      },
+      {
+        titel: 'Festpreis mit Zeitvorgabe',
+        text: 'Nach der Besichtigung bekommen Sie ein schriftliches Angebot mit Preis und Dauer – damit Sie Betriebsurlaub oder Wiedereröffnung sicher planen können.',
+      },
+      {
+        titel: 'Abnahme vor Ort',
+        text: 'Nach der Grundreinigung gehen wir die Flächen gemeinsam durch. Sie bekommen Pflegehinweise, damit das Ergebnis lange hält.',
+      },
+    ],
+    anfahrt: {
+      titel: 'Grundreinigung in ganz Neumünster',
+      text: 'Von Bordesholm sind wir über das Bordesholmer Dreieck und die A7 schnell in Neumünster – in den Gewerbegebieten, in Praxen und Büros der Innenstadt und in Wohnanlagen der Stadtteile. Kurze Wege machen Besichtigung, Termin und Abnahme einfach.',
+      gruppen: [
+        { titel: 'Innenstadt & Kernbezirke', orte: ['Innenstadt', 'Nord', 'Ost', 'Süd', 'West'] },
+        { titel: 'Stadtteile', orte: ['Tungendorf', 'Einfeld', 'Faldera', 'Gartenstadt', 'Böcklersiedlung', 'Brachenfeld', 'Ruthenberg', 'Wittorf', 'Gadeland', 'Stör'] },
+      ],
+      umland: ['Bordesholm', 'Wasbek', 'Boostedt', 'Großenaspe', 'Groß Kummerfeld', 'Aukrug'],
+    },
+    ablauf: [
+      {
+        title: 'Kurze Anfrage',
+        desc: 'Art des Objekts, ungefähre Flächen und Bodenbeläge – ein paar Fotos genügen für eine erste Einschätzung.',
+      },
+      {
+        title: 'Besichtigung vor Ort',
+        desc: 'Kostenlos in Neumünster: Wir sehen uns Beläge, Zustand und Zugänge an und klären, ob eine Versiegelung sinnvoll ist.',
+      },
+      {
+        title: 'Festpreis mit Zeitvorgabe',
+        desc: 'Nach Flächen, Belägen und Umfang, mit klarem Leistungsverzeichnis – ohne Pauschalversprechen.',
+      },
+      {
+        title: 'Termin, wenn es passt',
+        desc: 'Wochenende, Betriebsurlaub, Praxisferien oder Raum für Raum – so, wie es für Ihren Betrieb passt.',
+      },
+      {
+        title: 'Durchführung und Abnahme',
+        desc: 'Wir räumen aus, reinigen, versiegeln auf Wunsch und räumen wieder ein – danach gemeinsame Abnahme, Pflegehinweise und zügige Übergabe.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Reinigen Sie in ganz Neumünster und im Umland?',
+        answer:
+          'Ja, in allen Stadtteilen und im Umland, etwa in Wasbek, Boostedt, Großenaspe und Groß Kummerfeld. Unser Sitz in Bordesholm liegt direkt nördlich der Stadt.',
+      },
+      {
+        question: 'Wann ist eine Grundreinigung sinnvoll?',
+        answer:
+          'Wenn die laufende Reinigung nicht mehr alles herausholt: bei Pflegefilmen und Laufstraßen auf dem Boden, vor dem Einzug, nach einem Umbau, beim Mieterwechsel oder als Jahresaktion im Betriebsurlaub.',
+      },
+      {
+        question: 'Was ist der Unterschied zur Unterhaltsreinigung?',
+        answer:
+          'Die Unterhaltsreinigung läuft regelmäßig nach Plan. Die Grundreinigung ist eine seltene, besonders gründliche Reinigung bis in die Tiefe – meist ein- bis zweimal im Jahr oder zu einem bestimmten Anlass.',
+      },
+      {
+        question: 'Machen Sie die Versiegelung selbst?',
+        answer:
+          'Ja. Reinigung und Versiegelung übernimmt unser eigenes Team, wir geben nichts an Subunternehmer ab. So bleiben Ansprechpartner, Zeitplan und Qualität in einer Hand.',
+      },
+      {
+        question: 'Muss jeder Boden versiegelt werden?',
+        answer:
+          'Nein. Die Versiegelung ist optional und nicht für jeden Belag geeignet. Wir richten uns nach Bodenart, Zustand und Herstellerangaben und empfehlen nur, was für Ihren Boden sinnvoll ist.',
+      },
+      {
+        question: 'Müssen wir die Räume vorher ausräumen?',
+        answer:
+          'Nein. Möbel, Stühle und Material stellen wir zur Seite und räumen nach der Grundreinigung wieder ein. Persönliche Sachen, Unterlagen und Ware fassen wir nicht an.',
+      },
+      {
+        question: 'Wann dürfen die Räume wieder genutzt werden?',
+        answer:
+          'Erst nach unserer Freigabe. Trocknungs- und Lüftungszeiten hängen von Belag und Verfahren ab und stehen vorher im Zeitplan, den wir mit Ihnen abstimmen.',
+      },
+      {
+        question: 'Übernehmen Sie danach auch die laufende Reinigung?',
+        answer:
+          'Ja. Wer nach der Grundreinigung die laufende Pflege abgeben möchte, kann sie mit unserer Unterhaltsreinigung in Neumünster verbinden – mit demselben Ansprechpartner.',
+      },
+      {
+        question: 'Was kostet die Grundreinigung in Neumünster?',
+        answer:
+          'Das hängt von Flächen, Belägen, Zustand und gewünschter Versiegelung ab. Nach einer kostenlosen Besichtigung erhalten Sie ein Festpreis-Angebot mit verbindlicher Zeitvorgabe.',
+      },
+    ],
+    ergaenzungen: [
+      { serviceId: 'unterhaltsreinigung', text: 'Nach der Grundreinigung die laufende Pflege in Neumünster abgeben – mit festem Rhythmus und demselben Ansprechpartner.' },
+      { serviceId: 'glasreinigung', text: 'Fenster und Glasflächen in Neumünster gleich mit einplanen – streifenfrei, innen und außen.' },
+      { serviceId: 'bauendreinigung', text: 'Nach Umbau oder Neubau in Neumünster erst Baustaub raus, dann die Böden grundreinigen und einpflegen.' },
+    ],
+    texte: {
+      zielgruppenLabel: 'Für Ihr Objekt',
+      zielgruppenTitel: 'Grundreinigung für jedes Objekt in Neumünster',
+      zielgruppenText: 'Betrieb, Praxis, Wohnanlage oder Geschäft – wir planen nach Ihren Flächen, Belägen und Zeitfenstern.',
+      grenzenTitel: 'Das klären wir vorab',
+      grenzenText: 'Damit am Termin nichts überrascht.',
+      ablaufTitel: 'So läuft Ihre Grundreinigung',
+      vertrauenLabel: 'Qualität & Verlässlichkeit',
+      ergaenzungTitel: 'Rund um Ihr Objekt aus einer Hand',
+      ctaText:
+        'Wir sehen uns Böden und Räume Ihres Objekts in Neumünster kostenlos an und erstellen Ihnen ein Festpreis-Angebot für Grundreinigung und Versiegelung – Ausräumen und Einräumen inklusive.',
+    },
+    icons: {
+      zielgruppen: [Warehouse, Stethoscope, Home, Store, Baby],
+      vertrauen: [ClipboardCheck, Sparkles, FileText, CalendarCheck],
+    },
+  },
 ];
 
 export function getLokaleSeite(serviceId: string, citySlug: string): LokaleSeite | undefined {

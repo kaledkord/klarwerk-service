@@ -76,6 +76,19 @@ export default function CityPage() {
     })),
   };
 
+  // Stand der Inhalte als dateModified (nur Städte mit `stand`, seo-geo-consultant: Aktualität sichtbar machen).
+  const webPageJsonLd = city.stand
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        url: `${BASE_URL}/einsatzgebiet/${city.slug}`,
+        name: cityTitle,
+        inLanguage: 'de-DE',
+        dateModified: city.stand.iso,
+        about: { '@id': `${BASE_URL}/#business` },
+      }
+    : null;
+
   const breadcrumbJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -93,7 +106,7 @@ export default function CityPage() {
         description={cityDesc}
         keywords={`Gebäudereinigung ${city.name}, Reinigungsfirma ${city.name}, Büroreinigung ${city.name}, Glasreinigung ${city.name}, Hausmeisterservice ${city.name}, ${city.region}`}
         canonicalPath={`/einsatzgebiet/${city.slug}`}
-        jsonLd={[jsonLd, faqJsonLd, breadcrumbJsonLd]}
+        jsonLd={webPageJsonLd ? [jsonLd, faqJsonLd, breadcrumbJsonLd, webPageJsonLd] : [jsonLd, faqJsonLd, breadcrumbJsonLd]}
       />
 
       {/* HERO */}
@@ -157,6 +170,28 @@ export default function CityPage() {
           </div>
         </SeitenKopf>
       </section>
+
+      {/* ANTWORT-ABSCHNITTE: in sich geschlossene Absätze für Suche und KI-Antworten */}
+      {city.abschnitte && city.abschnitte.length > 0 && (
+        <section className="pt-4 pb-8">
+          <div className="max-w-3xl mx-auto px-6 space-y-14">
+            {city.abschnitte.map((a) => (
+              <AnimatedSection key={a.titel}>
+                <h2 className="text-2xl md:text-3xl font-black tracking-tight">{a.titel}</h2>
+                <p className="mt-4 text-lg text-slate-300 leading-relaxed">{a.text}</p>
+                {a.link && (
+                  <Link
+                    to={a.link.to}
+                    className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-300 hover:gap-2.5 transition-all"
+                  >
+                    {a.link.label} <ArrowRight size={14} />
+                  </Link>
+                )}
+              </AnimatedSection>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* HIGHLIGHTS */}
       <section className="py-20">
@@ -252,6 +287,11 @@ export default function CityPage() {
               <FAQAccordion items={faqs} />
             </div>
           </AnimatedSection>
+          {city.stand && (
+            <p className="mt-6 text-center text-sm text-slate-400">
+              Stand: <time dateTime={city.stand.iso}>{city.stand.anzeige}</time>
+            </p>
+          )}
         </div>
       </section>
 

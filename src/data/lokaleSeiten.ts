@@ -3386,6 +3386,191 @@ export const lokaleSeiten: LokaleSeite[] = [
       vertrauen: [ClipboardCheck, ShieldCheck, Users, Car],
     },
   },
+
+  // ---- Schulreinigung · Neumünster -----------------------------------------------------
+  {
+    serviceId: 'schulreinigung',
+    citySlug: 'neumuenster',
+    leistung: 'Schulreinigung',
+    ort: 'Neumünster',
+    seo: {
+      title: 'Schulreinigung in Neumünster | KlarWerk Service',
+      description:
+        'Schulreinigung in Neumünster: Klassenräume, Mensa, Sanitär und Sporthallen nach Schulschluss, ein Plan je Standort, Grundreinigung in den Ferien.',
+      keywords:
+        'Schulreinigung Neumünster, Reinigung Schule Neumünster, Sporthallenreinigung Neumünster, Reinigung Berufsschule Neumünster, Klassenraumreinigung Neumünster, Schulreinigung Wasbek, Schulreinigung Boostedt',
+    },
+    h1: 'Schulreinigung in Neumünster',
+    intro:
+      'Eine Schule ist viele Gebäude in einem: Klassentrakt, Mensa, Sporthalle, Verwaltung, Fachräume – jeder Bereich mit anderen Nutzern und anderen Zeiten. KlarWerk Service reinigt Schulen, Berufsschulen und Bildungszentren in Neumünster nach einem Leistungsverzeichnis je Standort: nach Schulschluss oder nach dem Ganztag, Sporthallen nach Belegungsplan, Mensa nach Absprache mit dem Küchenbetrieb. Ein festes Team, ein Ansprechpartner für Schulleitung, Hausmeister und Träger. Unser Sitz in Bordesholm liegt direkt nördlich der Stadt.',
+    bild: {
+      // gleiches Foto wie auf /leistungen/schulreinigung (kommt aus services.ts)
+      alt: 'Klassenraum nach Unterrichtsschluss – Schulreinigung in Neumünster durch KlarWerk Service',
+    },
+    eckdaten: [
+      { titel: 'Ein Plan je Standort', text: 'Klassentrakt, Mensa, Halle und Verwaltung mit eigenen Intervallen' },
+      { titel: 'Nach Schulschluss', text: 'Oder nach dem Ganztag, Hallen nach Belegung' },
+      { titel: 'Ferien für das Grobe', text: 'Grundreinigung und Bodenpflege durch unser eigenes Team' },
+    ],
+    zielgruppen: [
+      {
+        titel: 'Schulträger mit mehreren Standorten',
+        text: 'Mehrere Schulen in Neumünster und im Umland: ein Leistungsverzeichnis je Standort, ein Ansprechpartner für alle, Kontrollen und Rechnungen zentral – ohne dass jede Schule einzeln koordinieren muss.',
+      },
+      {
+        titel: 'Grund- und Gemeinschaftsschulen mit Ganztag',
+        text: 'Klassenräume, Flure, Mensa und Sanitär, die bis in den Nachmittag genutzt werden – wir reinigen nach dem Ganztag und stimmen uns mit Hausmeister und Betreuung ab.',
+      },
+      {
+        titel: 'Berufliche Schulen und Ausbildungszentren',
+        text: 'Unterrichtsräume, Werkstätten, Lehrküchen, Labore und Aufenthaltsbereiche mit Belegung bis in den Abend – wir reinigen in den Lücken des Stundenplans und nach Absprache mit den Fachbereichen.',
+      },
+      {
+        titel: 'Sporthallen mit Vereinsbetrieb',
+        text: 'Sportböden, Umkleiden, Duschen und Geräteräume, die nach dem Schulsport von Vereinen weitergenutzt werden – mit Zeiten, die zum Belegungsplan passen.',
+      },
+    ],
+    umfang: {
+      wir: [
+        'Klassen- und Fachräume: Böden, Tische, Tafeln, Waschbecken und erreichbare Flächen',
+        'Flure, Treppenhäuser, Eingänge, Aula und Pausenhallen',
+        'Sanitäranlagen für Schüler und Lehrkräfte, täglich oder nach Plan',
+        'Sporthallen: Sportböden, Umkleiden, Duschen und Geräteräume nach Belegungsplan',
+        'Mensa, Ausgabe und Essbereiche nach Absprache mit dem Küchenbetrieb',
+        'Werkstätten, Lehrküchen und Labore nach Einweisung durch den Fachbereich',
+        'Lehrerzimmer, Verwaltung und Sekretariat',
+        'Kontaktflächen wie Türklinken, Handläufe, Lichtschalter und Trinkbrunnen, Abfall und Mülltrennung',
+      ],
+      beiIhnen: [
+        'Grundreinigung, Bodenpflege und Beschichtung – eigener Termin in den Ferien, durch unser eigenes Team',
+        'Fenster außen und Glasfassaden – eigener Turnus in der Glasreinigung',
+        'Lebensmittelhygiene in Mensa und Lehrküche – die Verantwortung bleibt beim Küchenbetrieb',
+        'Maschinen und Anlagen in Werkstätten und Laboren – nur nach Einweisung, sonst bleiben sie unberührt',
+      ],
+    },
+    zeiten: {
+      titel: 'Jeder Trakt zu seiner Zeit',
+      text: 'Klassentrakt, Mensa und Sporthalle werden zu unterschiedlichen Zeiten frei. Deshalb bekommt jeder Bereich im Leistungsverzeichnis seine eigene Zeit und sein eigenes Intervall – und die Ferien nutzen wir für das, was im laufenden Betrieb nicht geht.',
+      punkte: [
+        'Täglich: Sanitär, Mensa, Eingänge, Kontaktflächen, Abfall',
+        'Täglich oder nach Plan: Klassen- und Fachräume, Flure, Lehrerzimmer',
+        'Sporthallen nach Belegungsplan, auch nach dem Vereinsbetrieb am Abend',
+        'Grundreinigung, Bodenpflege und Beschichtung in den Ferien',
+      ],
+    },
+    vertrauen: [
+      {
+        titel: 'Ein Plan je Standort',
+        text: 'Schulleitung, Hausmeister und Träger sehen für jeden Standort, welcher Bereich wie oft gereinigt wird – nachvollziehbar, auch für Gremien.',
+      },
+      {
+        titel: 'Abgestimmt mit dem Hausmeister',
+        text: 'Zugänge, Alarmanlage, Belegung der Halle und Veranstaltungen stimmen wir mit Ihrem Hausmeister ab, damit nichts kollidiert.',
+      },
+      {
+        titel: 'Festes Team, eingearbeitete Vertretung',
+        text: 'Ein Team, das die Schule kennt. Bei Urlaub oder Krankheit übernimmt jemand, der eingearbeitet ist.',
+      },
+      {
+        titel: 'Kurze Wege für Kontrollen und Sonderfälle',
+        text: 'Bordesholm liegt direkt vor der Stadt. Kontrollen, ein zusätzlicher Termin nach einem Schulfest oder eine Rückfrage vor Ort sind schnell erledigt.',
+      },
+    ],
+    anfahrt: {
+      titel: 'Schulreinigung in ganz Neumünster',
+      text: 'Von Bordesholm sind wir über das Bordesholmer Dreieck und die A7 in wenigen Minuten in Neumünster – bei Schulen in der Innenstadt, in den Stadtteilen und in den Nachbargemeinden. Kurze Wege machen Kontrollen und zusätzliche Termine nach Veranstaltungen einfach.',
+      gruppen: [
+        { titel: 'Innenstadt & Kernbezirke', orte: ['Innenstadt', 'Nord', 'Ost', 'Süd', 'West'] },
+        { titel: 'Stadtteile', orte: ['Tungendorf', 'Einfeld', 'Faldera', 'Gartenstadt', 'Böcklersiedlung', 'Brachenfeld', 'Ruthenberg', 'Wittorf', 'Gadeland', 'Stör'] },
+      ],
+      umland: ['Bordesholm', 'Wasbek', 'Boostedt', 'Großenaspe', 'Groß Kummerfeld', 'Aukrug'],
+    },
+    ablauf: [
+      {
+        title: 'Kurze Anfrage',
+        desc: 'Schulform, Standorte, ungefähre Flächen und Unterrichtszeiten – mehr braucht es für den Anfang nicht.',
+      },
+      {
+        title: 'Besichtigung vor Ort',
+        desc: 'Kostenlos in Neumünster: Wir gehen Gebäude, Halle, Mensa und Sanitär mit Ihnen oder Ihrem Hausmeister durch und klären Zeiten und Zugänge.',
+      },
+      {
+        title: 'Leistungsverzeichnis und Festpreis',
+        desc: 'Bereiche, Intervalle und Preis je Standort übersichtlich in einem Angebot – auch für Träger und Gremien nachvollziehbar.',
+      },
+      {
+        title: 'Start mit Einweisung',
+        desc: 'Schlüssel, Alarmanlage, Zeiten, Ansprechpartner und Besonderheiten der Fachräume halten wir vor dem ersten Einsatz fest.',
+      },
+      {
+        title: 'Laufende Betreuung',
+        desc: 'Regelmäßige Kontrollen, kurze Wege für Rückfragen und Anpassungen bei neuen Stundenplänen oder Belegungen.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Reinigen Sie Schulen in ganz Neumünster und im Umland?',
+        answer:
+          'Ja, in allen Stadtteilen und in den Nachbargemeinden, etwa in Wasbek, Boostedt, Großenaspe und Groß Kummerfeld. Unser Sitz in Bordesholm liegt direkt nördlich der Stadt.',
+      },
+      {
+        question: 'Reinigen Sie während des Unterrichts?',
+        answer:
+          'Nein. Die laufende Reinigung findet nach Schulschluss, nach dem Ganztag oder frühmorgens statt. Sporthallen und Mensa bekommen eigene Zeiten nach Belegung.',
+      },
+      {
+        question: 'Betreuen Sie auch mehrere Schulen eines Trägers?',
+        answer:
+          'Ja. Jeder Standort bekommt sein eigenes Leistungsverzeichnis, der Träger einen Ansprechpartner für alle Schulen, Kontrollen und Rechnungen zentral.',
+      },
+      {
+        question: 'Reinigen Sie auch Werkstätten, Lehrküchen und Labore?',
+        answer:
+          'Ja, nach Einweisung durch den Fachbereich. Maschinen und Anlagen fassen wir ohne Einweisung nicht an, Böden, Flächen und Sanitär in diesen Bereichen gehören zum Plan.',
+      },
+      {
+        question: 'Gehört die Sporthalle dazu, auch bei Vereinsbetrieb?',
+        answer:
+          'Ja. Sportböden, Umkleiden, Duschen und Geräteräume reinigen wir nach Belegungsplan – auch wenn Vereine die Halle nach dem Schulsport weiternutzen.',
+      },
+      {
+        question: 'Was passiert in den Ferien?',
+        answer:
+          'In den Ferien macht unser eigenes Team die Grundreinigung der Böden und auf Wunsch Bodenpflege und Beschichtung – dafür gibt es unsere Seite zur Grundreinigung in Neumünster.',
+      },
+      {
+        question: 'Wer reinigt bei Urlaub oder Krankheit?',
+        answer:
+          'Eine eingearbeitete Vertretung, die die Schule kennt. So entstehen keine Lücken im Plan.',
+      },
+      {
+        question: 'Was kostet die Schulreinigung in Neumünster?',
+        answer:
+          'Das hängt von Flächen, Räumen, Bereichen und Intervallen ab. Nach einer kostenlosen Besichtigung erhalten Sie ein Festpreis-Angebot mit Leistungsverzeichnis je Standort.',
+      },
+    ],
+    ergaenzungen: [
+      { serviceId: 'grundreinigung', text: 'Böden in den Ferien gründlich reinigen und auf Wunsch versiegeln – unsere Grundreinigung in Neumünster.' },
+      { serviceId: 'glasreinigung', text: 'Fenster, Glastüren und Glasfassaden der Schule im eigenen Turnus, innen und außen.' },
+      { serviceId: 'kita-reinigung', text: 'Kitas und Horte desselben Trägers in Neumünster nach Hygieneplan – mit demselben Ansprechpartner.' },
+    ],
+    texte: {
+      zielgruppenLabel: 'Für Ihre Schule',
+      zielgruppenTitel: 'Schulreinigung für jede Einrichtung in Neumünster',
+      zielgruppenText: 'Grundschule, Gemeinschaftsschule, Berufsschule oder Sporthalle – der Plan richtet sich nach Trakten, Stundenplan und Belegung.',
+      grenzenTitel: 'Das bleibt bei Ihnen',
+      grenzenText: 'Damit Zuständigkeiten klar sind.',
+      ablaufTitel: 'So starten wir an Ihrer Schule',
+      vertrauenLabel: 'Verlässlichkeit',
+      ergaenzungTitel: 'Rund um Ihre Schule aus einer Hand',
+      ctaText:
+        'Wir sehen uns Ihre Schule in Neumünster kostenlos an und erstellen Ihnen ein Festpreis-Angebot mit klarem Leistungsverzeichnis je Standort.',
+    },
+    icons: {
+      zielgruppen: [Building2, GraduationCap, Briefcase, Activity],
+      vertrauen: [ClipboardCheck, KeyRound, Users, Car],
+    },
+  },
 ];
 
 export function getLokaleSeite(serviceId: string, citySlug: string): LokaleSeite | undefined {

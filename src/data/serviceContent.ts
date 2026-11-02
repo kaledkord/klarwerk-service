@@ -46,6 +46,13 @@ export interface ServiceContent {
     description: string;
     keywords: string;
   };
+  /**
+   * In sich geschlossene Antwort-Abschnitte (100–180 Wörter, Überschrift als Frage, Antwort im ersten Satz)
+   * nach dem Leistungsumfang, damit Google und KI-Suchen sie als Ganzes übernehmen (seo-geo-consultant).
+   */
+  abschnitte?: { titel: string; text: string; links?: { label: string; to: string }[] }[];
+  /** Stand der Inhalte: sichtbar unter den FAQ und als dateModified. Nur bei echten Änderungen anpassen. */
+  stand?: { iso: string; anzeige: string };
 }
 
 const defaultProcess: ProcessStep[] = [
@@ -164,26 +171,46 @@ export const serviceContents: Record<string, ServiceContent> = {
 
   glasreinigung: {
     id: 'glasreinigung',
-    h1: 'Glasreinigung für klare Sicht und ein helles Raumgefühl',
+    h1: 'Glas- und Fensterreinigung in Schleswig-Holstein',
     intro:
-      'Fenster sind die Visitenkarte Ihres Objekts – und nichts wirkt ungepflegter als Schlieren, Kalkränder und Fingerabdrücke im Gegenlicht. KlarWerk Service reinigt Fenster, Glasfassaden, Schaufenster, Vitrinen und Spiegel streifenfrei, innen wie außen, mit professioneller Wischtechnik statt Haushaltsmitteln. Hohe und schwer erreichbare Flächen erreichen wir sicher mit Teleskop- und Leitersystemen; auf Wunsch reinigen wir Rahmen, Fensterbänke und Falze gleich mit. So gewinnen Ihre Räume Licht und Klarheit zurück – regelmäßig im Turnus oder einmalig zum Anlass, in Kiel, Neumünster und ganz Schleswig-Holstein.',
+      'KlarWerk Service reinigt Fenster, Glasfassaden, Schaufenster, Vitrinen und Spiegel für Büros, Praxen, Geschäfte und Wohnanlagen in Schleswig-Holstein – streifenfrei, innen wie außen, mit professioneller Wischtechnik statt Haushaltsmitteln. Denn nichts wirkt ungepflegter als Schlieren, Kalkränder und Fingerabdrücke im Gegenlicht. Hohe und schwer erreichbare Flächen erreichen wir sicher mit Teleskop- und Leitersystemen; auf Wunsch reinigen wir Rahmen, Fensterbänke und Falze gleich mit. So gewinnen Ihre Räume Licht und Klarheit zurück – regelmäßig im Turnus oder einmalig zum Anlass, in Kiel, Neumünster und ganz Schleswig-Holstein.',
     process: defaultProcess,
     advantages: defaultAdvantages,
     areas: defaultAreas,
     sustainability: defaultSustainability,
     faqs: [
-      { question: 'Wie oft sollte eine Glasreinigung erfolgen?', answer: 'Für Innenräume empfehlen wir eine Frequenz von 4–8 Wochen, Außenflächen je nach Verschmutzung 2–4 mal pro Jahr.' },
-      { question: 'Reinigen Sie auch schwer erreichbare Fenster?', answer: 'Ja, mit Teleskopstangen und Leitersystemen erreichen wir auch hohe und schwer zugängliche Glasflächen.' },
-      { question: 'Arbeiten Sie streifenfrei?', answer: 'Wir nutzen professionelle Wischtechniken und -mittel, die ein streifenfreies Ergebnis garantieren.' },
-      { question: 'Kann die Glasreinigung kombiniert werden?', answer: 'Ja, sie lässt sich ideal mit der Büro- oder Gebäude­reinigung kombinieren. Wir erstellen einen gemeinsamen Ablaufplan.' },
-      { question: 'Reinigen Sie auch Rahmen und Fensterbänke?', answer: 'Auf Wunsch übernehmen wir die Reinigung von Rahmen, Fensterbänken und Falzen vollständig.' },
-      { question: 'Was kostet eine Glasreinigung?', answer: 'Die Kosten richten sich nach Anzahl, Größe und Zugänglichkeit der Fenster. Nach einer Besichtigung erhalten Sie ein Festpreis-Angebot.' },
+      { question: 'Was ist der Unterschied zwischen Glasreinigung und Fensterreinigung?', answer: 'Fensterreinigung ist ein Teil der Glasreinigung. Zur Glasreinigung gehören außer den Fenstern auch Glasfassaden, Schaufenster, Glastüren, Trennwände, Vitrinen und Spiegel – innen und außen.' },
+      { question: 'Wie oft sollte eine Glasreinigung erfolgen?', answer: 'Innen meist alle 4–8 Wochen, außen je nach Verschmutzung 2–4 Mal pro Jahr. Schaufenster und Eingangstüren brauchen kürzere Abstände; den Rhythmus legen wir nach der Besichtigung fest.' },
+      { question: 'Reinigen Sie auch schwer erreichbare Fenster?', answer: 'Ja, mit Teleskopstangen und Leitersystemen erreichen wir auch hohe und schwer zugängliche Glasflächen. Flächen, die einen Hubsteiger oder ein Gerüst brauchen, besprechen wir vorab.' },
+      { question: 'Arbeiten Sie streifenfrei?', answer: 'Ja. Wir arbeiten mit professioneller Wischtechnik und passenden Mitteln statt Haushaltsmitteln, damit die Scheibe auch im Gegenlicht klar bleibt.' },
+      { question: 'Kann die Glasreinigung kombiniert werden?', answer: 'Ja, mit der Büro-, Praxis- oder Unterhaltsreinigung: Glas innen kann Teil der laufenden Reinigung sein, Fenster außen kommen im eigenen Turnus dazu – mit einem gemeinsamen Plan.' },
+      { question: 'Reinigen Sie auch Rahmen und Fensterbänke?', answer: 'Ja, auf Wunsch reinigen wir Rahmen, Fensterbänke und Falze mit, wenn das im Angebot so vereinbart ist.' },
+      { question: 'Machen Sie Fensterreinigung in Plön und Eckernförde?', answer: 'Ja. Plön und Eckernförde gehören zu unserem Einsatzgebiet, ebenso Preetz, Bad Segeberg, Eutin und Lübeck. Für Kiel, Neumünster, Rendsburg und Bordesholm gibt es eigene Seiten zur Glasreinigung.' },
+      { question: 'Was kostet eine Glasreinigung?', answer: 'Das hängt von Anzahl, Größe und Erreichbarkeit der Glasflächen ab. Nach einer kostenlosen Besichtigung erhalten Sie ein Festpreis-Angebot – je Termin oder für den Turnus.' },
     ],
+    abschnitte: [
+      {
+        titel: 'Wie oft sollten Fenster gewerblich gereinigt werden?',
+        text: 'Innen reichen meist 4 bis 8 Wochen, außen je nach Verschmutzung 2 bis 4 Termine im Jahr. Wie oft es wirklich sein muss, hängt von Lage, Nutzung und Witterung ab: Ein Schaufenster an einer belebten Straße oder eine Eingangstür mit viel Laufkundschaft braucht kurze Abstände, ein Bürofenster zum Hof deutlich seltener. Pollen im Frühjahr, Regen und Spritzwasser im Herbst und die Nähe zu Wasser oder zu viel befahrenen Straßen verkürzen die Intervalle. Deshalb legen wir den Rhythmus nach der Besichtigung gemeinsam fest und passen ihn an, wenn sich etwas ändert. Glas innen lässt sich in die laufende Büro- oder Praxisreinigung einplanen, Fenster außen kommen im eigenen Turnus dazu – mit einem Ansprechpartner, der die Termine im Blick behält.',
+      },
+      {
+        titel: 'Glasreinigung in Ihrer Stadt',
+        text: 'Für die Städte mit den meisten Anfragen haben wir eigene Seiten mit Einsatzgebiet, Zielgruppen und Fragen vor Ort: Kiel, Neumünster, Rendsburg und unseren Sitz Bordesholm. Darüber hinaus reinigen wir Fenster und Glasflächen in Preetz, Plön, Eckernförde, Bad Segeberg, Eutin und Lübeck sowie in Hamburg.',
+        links: [
+          { label: 'Glasreinigung in Kiel', to: '/leistungen/glasreinigung/kiel' },
+          { label: 'Glasreinigung in Neumünster', to: '/leistungen/glasreinigung/neumuenster' },
+          { label: 'Glasreinigung in Rendsburg', to: '/leistungen/glasreinigung/rendsburg' },
+          { label: 'Glasreinigung in Bordesholm', to: '/leistungen/glasreinigung/bordesholm' },
+        ],
+      },
+    ],
+    stand: { iso: '2026-11-02', anzeige: '02.11.2026' },
     seo: {
       // Kiel, Neumünster, Rendsburg und Bordesholm haben eigene Seiten (/leistungen/glasreinigung/<stadt>).
-      title: 'Glasreinigung in Schleswig-Holstein | KlarWerk Service',
+      // „Fensterreinigung“ steht mit im Titel: allgemeine Suche „fensterreinigung“ stand auf Position 42 (Mira, 02.11.2026).
+      title: 'Glas- und Fensterreinigung in Schleswig-Holstein | KlarWerk',
       description:
-        'Glas- und Fensterreinigung für Büros, Praxen und Geschäfte in ganz Schleswig-Holstein: innen und außen, im festen Turnus oder einmalig. Angebot anfragen.',
+        'Glas- und Fensterreinigung für Büros, Praxen, Geschäfte und Wohnanlagen in Schleswig-Holstein: innen und außen, im festen Turnus. Angebot anfragen.',
       keywords: `Glasreinigung, Fensterreinigung, Fassadenreinigung, streifenfreie Reinigung, ${localKeywords}`,
     },
   },

@@ -4130,6 +4130,944 @@ export const lokaleSeiten: LokaleSeite[] = [
       vertrauen: [Sparkles, ShieldCheck, UserCheck, CalendarCheck],
     },
   },
+
+  // ---- Unterhaltsreinigung · Bordesholm ------------------------------------------------
+  {
+    serviceId: 'unterhaltsreinigung',
+    citySlug: 'bordesholm',
+    leistung: 'Unterhaltsreinigung',
+    ort: 'Bordesholm',
+    seo: {
+      title: 'Unterhaltsreinigung in Bordesholm | KlarWerk Service',
+      description:
+        'Unterhaltsreinigung in Bordesholm und im Amt für Wohnanlagen, Gewerbe, Vereine und Geschäfte: fester Plan, Kontrollen vor Ort, Ansprechpartner im Ort.',
+      keywords:
+        'Unterhaltsreinigung Bordesholm, Treppenhausreinigung Bordesholm, Reinigungsfirma Bordesholm, Gebäudereinigung Bordesholm, Unterhaltsreinigung Amt Bordesholm, Unterhaltsreinigung Wattenbek, Treppenhausreinigung Flintbek, Hausverwaltung Reinigung Bordesholm',
+    },
+    h1: 'Unterhaltsreinigung in Bordesholm',
+    intro:
+      'Das Treppenhaus der Wohnanlage, der Sozialraum im Handwerksbetrieb, das Vereinsheim in einer der Gemeinden: Im Amt Bordesholm gibt es viele Objekte, die regelmäßig sauber sein müssen, ohne dass sich jemand darum kümmern will. KlarWerk Service hat seinen Sitz selbst in Bordesholm und übernimmt die laufende Reinigung nach einem festen Leistungsverzeichnis – mit eigenen Intervallen je Bereich, persönlichen Kontrollen und einem Ansprechpartner aus dem Ort. Weil die Wege kurz sind, lohnt sich ein fester Plan bei uns auch für kleinere Objekte.',
+    bild: {
+      // gleiches Foto wie auf /leistungen/unterhaltsreinigung (kommt aus services.ts)
+      alt: 'Gepflegtes Treppenhaus einer Wohnanlage – Unterhaltsreinigung in Bordesholm durch KlarWerk Service',
+    },
+    eckdaten: [
+      { titel: 'Betrieb vor Ort', text: 'Unser Sitz ist in Bordesholm, die Wege sind kurz' },
+      { titel: 'Leistungsverzeichnis', text: 'Jeder Bereich mit eigenem Intervall, schwarz auf weiß' },
+      { titel: 'Keine Lücken', text: 'Eingearbeitete Vertretung bei Urlaub und Krankheit' },
+    ],
+    zielgruppen: [
+      {
+        titel: 'Hausverwaltungen und Wohnanlagen im Amt',
+        text: 'Treppenhäuser, Hauseingänge, Keller- und Müllräume in Bordesholm, Wattenbek und den Gemeinden ringsum – im festen Turnus, mit einem Ansprechpartner für die Verwaltung und für Rückmeldungen aus der Hausgemeinschaft.',
+      },
+      {
+        titel: 'Handwerks- und Gewerbebetriebe',
+        text: 'Sozialraum, Umkleide, Sanitär und Bürotrakt in Betrieben, in denen früh angefangen wird – wir reinigen nach Feierabend oder vor Arbeitsbeginn, ohne den Betrieb zu stören.',
+      },
+      {
+        titel: 'Vereine und Gemeinschaftsräume',
+        text: 'Vereinsheime, Versammlungsräume, Küchen und Sanitär, die abends und am Wochenende genutzt werden – wir reinigen dazwischen, wenn die Räume leer sind, und nach Veranstaltungen auf Abruf.',
+      },
+      {
+        titel: 'Geschäfte und Dienstleister im Ort',
+        text: 'Verkaufsraum, Kassenzone, Eingang und Personalräume – gereinigt vor Öffnung oder nach Ladenschluss, abgestimmt auf Ihre Öffnungszeiten.',
+      },
+      {
+        titel: 'Objekte zwischen Kiel und Neumünster',
+        text: 'Wer neben dem Objekt in Bordesholm weitere Häuser in Kiel oder Neumünster betreut, bekommt bei uns einen Ansprechpartner und ein Leistungsverzeichnis je Objekt – für beide Städte haben wir eigene Seiten zur Unterhaltsreinigung.',
+      },
+    ],
+    umfang: {
+      wir: [
+        'Böden aller Art: kehren, saugen, nass wischen – nach Belag und Nutzung',
+        'Treppenhäuser mit Handläufen, Geländern, Briefkastenanlagen und Hauseingängen',
+        'Sanitärräume, Umkleiden und Duschen',
+        'Sozial- und Pausenräume, Teeküchen und Vereinsküchen',
+        'Aufzüge, Flure, Keller- und Müllstandplätze nach Absprache',
+        'Kontaktflächen wie Türklinken, Lichtschalter und Klingeltableaus',
+        'Papierkörbe, Abfallbehälter und Mülltrennung',
+        'Glas innen: Hauseingangstüren, Trennwände und Spiegel',
+      ],
+      beiIhnen: [
+        'Grundreinigung und Bodenpflege mit Versiegelung – eigener Termin im Jahresplan',
+        'Fenster außen – eigener Turnus in der Glasreinigung',
+        'Außenanlagen und Wege – darum kümmert sich Ihr Hausmeister',
+        'Produktions- und Maschinenbereiche – nur nach Absprache und Einweisung',
+      ],
+    },
+    zeiten: {
+      titel: 'Ein Plan, der zu Objekt und Nutzung passt',
+      text: 'Ein Kellerflur braucht nicht die Frequenz einer Umkleide, ein Vereinsheim andere Zeiten als ein Geschäft. Im Leistungsverzeichnis legen wir für jeden Bereich fest, was wie oft und wann passiert, damit Bewohner, Mitarbeiter oder Kunden nichts davon mitbekommen. Weil wir in Bordesholm sitzen, sind auch frühe Zeiten und zusätzliche Termine nach Absprache gut machbar.',
+      punkte: [
+        'Täglich oder mehrmals pro Woche: Sanitär, Sozialräume, Eingänge',
+        'Wöchentlich oder vierzehntägig: Treppenhäuser, Flure, Nebenräume',
+        'Vor Öffnung, nach Feierabend oder zwischen den Nutzungen',
+        'Zusätzliche Termine, etwa nach Veranstaltungen, auf Abruf',
+      ],
+    },
+    vertrauen: [
+      {
+        titel: 'Ein Ansprechpartner aus dem Ort',
+        text: 'Kontrollen macht Ihr fester Ansprechpartner persönlich. Rückfragen, Änderungen am Plan oder ein kurzer Blick vor Ort sind bei uns ein kurzer Weg, kein Ticket.',
+      },
+      {
+        titel: 'Klares Leistungsverzeichnis',
+        text: 'Sie sehen, welcher Bereich wie oft gereinigt wird. Das gilt für die Verwaltung genauso wie für Rückfragen aus dem Haus oder aus dem Verein.',
+      },
+      {
+        titel: 'Eingearbeitete Vertretung',
+        text: 'Bei Urlaub und Krankheit übernimmt jemand, der das Objekt kennt. Die Reinigung läuft nach Plan weiter.',
+      },
+      {
+        titel: 'Schlüssel und Zutritt geregelt',
+        text: 'Schlüssel, Codes und Zugänge halten wir vor dem ersten Einsatz fest. Nur eingewiesene Mitarbeiter betreten Ihr Objekt.',
+      },
+    ],
+    anfahrt: {
+      titel: 'Unterhaltsreinigung in Bordesholm und im Amt Bordesholm',
+      text: 'Unser Sitz liegt in Bordesholm, zwischen Kiel und Neumünster an A7 und A215. In jede Gemeinde des Amtes sind es nur wenige Minuten, ebenso nach Flintbek, Molfsee und Nortorf. Für Ihr Objekt heißt das: Besichtigung, Kontrollen und kurzfristige Absprachen ohne lange Anfahrt.',
+      gruppen: [
+        { titel: 'Amt Bordesholm', orte: ['Bordesholm', 'Wattenbek', 'Brügge', 'Mühbrook', 'Schmalstede', 'Grevenkrug', 'Hoffeld', 'Loop', 'Sören', 'Reesdorf', 'Schönbek', 'Groß Buchwald', 'Bissee', 'Negenharrie'] },
+      ],
+      umland: ['Flintbek', 'Molfsee', 'Nortorf', 'Boostedt', 'Wasbek'],
+    },
+    ablauf: [
+      {
+        title: 'Kurze Anfrage',
+        desc: 'Art des Objekts, Bereiche und gewünschter Rhythmus – mehr braucht es für den Anfang nicht.',
+      },
+      {
+        title: 'Besichtigung vor Ort',
+        desc: 'Kostenlos und kurzfristig in Bordesholm und Umgebung: Wir gehen alle Bereiche durch und klären, was wie oft gereinigt werden soll.',
+      },
+      {
+        title: 'Leistungsverzeichnis und Festpreis',
+        desc: 'Bereiche, Intervalle und Preis übersichtlich in einem Angebot.',
+      },
+      {
+        title: 'Start mit Einweisung',
+        desc: 'Schlüssel, Zeiten, Ansprechpartner und Besonderheiten des Objekts halten wir vor dem ersten Einsatz fest.',
+      },
+      {
+        title: 'Laufende Betreuung',
+        desc: 'Persönliche Kontrollen, kurze Wege für Rückfragen und eine eingearbeitete Vertretung bei Urlaub oder Krankheit.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Reinigen Sie Objekte im ganzen Amt Bordesholm?',
+        answer:
+          'Ja. In Bordesholm selbst und in allen Gemeinden des Amtes, etwa in Wattenbek, Brügge, Mühbrook und Schmalstede, dazu in Flintbek, Molfsee, Nortorf und Boostedt. Unser Sitz ist in Bordesholm.',
+      },
+      {
+        question: 'Lohnt sich eine Unterhaltsreinigung auch für ein kleines Objekt?',
+        answer:
+          'Bei uns oft ja, weil die Wege kurz sind. Ein kleines Treppenhaus oder ein Vereinsheim bekommt einen Rhythmus, der zur Nutzung passt. Nach der Besichtigung erhalten Sie einen Festpreis und entscheiden dann.',
+      },
+      {
+        question: 'Was gehört zur Unterhaltsreinigung?',
+        answer:
+          'Die regelmäßige Reinigung nach festem Plan: Böden, Sanitär, Sozialräume, Treppenhäuser, Kontaktflächen und Abfall. Was genau dazugehört und wie oft, steht im Leistungsverzeichnis.',
+      },
+      {
+        question: 'Was ist der Unterschied zur Grundreinigung?',
+        answer:
+          'Die Unterhaltsreinigung läuft regelmäßig. Die Grundreinigung ist eine seltene, besonders gründliche Reinigung als eigener Termin im Jahresplan. Sie macht unser eigenes Team, auf Wunsch mit Versiegelung – dafür gibt es unsere Seite zur Grundreinigung in Bordesholm.',
+      },
+      {
+        question: 'Reinigen Sie auch Büros und Praxen?',
+        answer:
+          'Ja. Für Büros und Praxen in Bordesholm haben wir eigene Seiten, weil dort Arbeitsplätze, Unterlagen und Hygienepläne eine Rolle spielen. Liegt Ihr Büro oder Ihre Praxis in einem Haus mit Treppenhaus, nehmen wir das Treppenhaus nach Absprache mit in den Plan.',
+      },
+      {
+        question: 'Wir betreuen auch Objekte in Kiel oder Neumünster – geht das zusammen?',
+        answer:
+          'Ja. Sie bekommen einen Ansprechpartner für alle Objekte und ein Leistungsverzeichnis je Objekt. Für Kiel und Neumünster haben wir eigene Seiten zur Unterhaltsreinigung.',
+      },
+      {
+        question: 'Wer reinigt bei Urlaub oder Krankheit?',
+        answer:
+          'Eine eingearbeitete Vertretung, die Ihr Objekt kennt. So entstehen keine Lücken im Plan.',
+      },
+      {
+        question: 'Was kostet die Unterhaltsreinigung in Bordesholm?',
+        answer:
+          'Das hängt von Fläche, Bereichen und Intervallen ab. Nach einer kostenlosen Besichtigung erhalten Sie ein Festpreis-Angebot mit Leistungsverzeichnis.',
+      },
+    ],
+    ergaenzungen: [
+      { serviceId: 'glasreinigung', text: 'Treppenhausfenster, Haustüren und Schaufenster in Bordesholm im eigenen Turnus, abgestimmt mit der laufenden Reinigung.' },
+      { serviceId: 'grundreinigung', text: 'Einmal im Jahr gründlich, auf Wunsch mit Versiegelung – mit eigenem Team, Aus- und Einräumen inklusive.' },
+      { serviceId: 'bueroreinigung', text: 'Für Büros im selben Haus oder im Betrieb – unsere Büroreinigung in Bordesholm.' },
+    ],
+    texte: {
+      zielgruppenLabel: 'Für Ihr Objekt',
+      zielgruppenTitel: 'Unterhaltsreinigung für jedes Objekt im Amt Bordesholm',
+      zielgruppenText: 'Wohnanlage, Betrieb, Vereinsheim oder Geschäft – der Plan richtet sich nach Ihrem Objekt und seinen Zeiten.',
+      grenzenTitel: 'Das planen wir separat',
+      grenzenText: 'Damit das Leistungsverzeichnis klar bleibt.',
+      ablaufTitel: 'So starten wir in Ihrem Objekt',
+      vertrauenLabel: 'Vor Ort & verlässlich',
+      ergaenzungTitel: 'Ergänzt Ihre laufende Reinigung',
+      ctaText:
+        'Wir kommen kurzfristig zur kostenlosen Besichtigung in Bordesholm und erstellen Ihnen ein Festpreis-Angebot mit klarem Leistungsverzeichnis.',
+    },
+    icons: {
+      zielgruppen: [Home, Warehouse, Users, Store, Briefcase],
+      vertrauen: [UserCheck, ClipboardCheck, Users, KeyRound],
+    },
+  },
+
+  // ---- Grundreinigung · Bordesholm -----------------------------------------------------
+  {
+    serviceId: 'grundreinigung',
+    citySlug: 'bordesholm',
+    leistung: 'Grundreinigung',
+    ort: 'Bordesholm',
+    seo: {
+      title: 'Grundreinigung in Bordesholm | KlarWerk Service',
+      description:
+        'Grundreinigung in Bordesholm und im Amt: Böden gründlich reinigen, auf Wunsch versiegeln – eigenes Team, Aus- und Einräumen inklusive, schnelle Übergabe.',
+      keywords:
+        'Grundreinigung Bordesholm, Bodengrundreinigung Bordesholm, Bodenversiegelung Bordesholm, Grundreinigung Amt Bordesholm, Grundreinigung Praxis Bordesholm, Grundreinigung Kita Bordesholm, Grundreinigung Wattenbek, Grundreinigung Flintbek',
+    },
+    h1: 'Grundreinigung in Bordesholm',
+    intro:
+      'Pflegefilme auf dem Linoleum, graue Laufstraßen im Flur, Kalk und Ablagerungen im Sanitärbereich: Irgendwann holt die laufende Reinigung nicht mehr alles heraus. Dann ist eine Grundreinigung dran. KlarWerk Service hat seinen Sitz in Bordesholm und macht Grundreinigung und Versiegelung mit dem eigenen Team – für Praxen, Büros, Kitas, Schulen, Wohnanlagen und Betriebe im Amt Bordesholm. Wir räumen aus und wieder ein, arbeiten in Ihren Ferien, im Betriebsurlaub oder am Wochenende und übergeben zügig, damit Ihr Betrieb pünktlich weiterläuft. Weil wir im Ort sitzen, ist auch die Besichtigung kurzfristig möglich.',
+    bild: {
+      // gleiches Foto wie auf /leistungen/grundreinigung (kommt aus services.ts)
+      alt: 'Gründlich gereinigter und eingepflegter Boden – Grundreinigung in Bordesholm durch KlarWerk Service',
+    },
+    eckdaten: [
+      { titel: 'Eigenes Team', text: 'Reinigung und Versiegelung ohne Subunternehmer' },
+      { titel: 'Aus- und Einräumen inklusive', text: 'Möbel und Material stellen wir zur Seite und wieder zurück' },
+      { titel: 'Betrieb vor Ort', text: 'Kurzfristige Besichtigung in Bordesholm und Umgebung' },
+    ],
+    zielgruppen: [
+      {
+        titel: 'Praxen und Büros im Ort',
+        text: 'Behandlungs- und Arbeitsräume, Wartebereiche und Flure in den Praxisferien, im Betriebsurlaub oder über ein Wochenende – zur Wiedereröffnung steht alles wieder an seinem Platz.',
+      },
+      {
+        titel: 'Kitas, Schulen und ihre Träger',
+        text: 'Gruppen- und Klassenräume, Flure und Sanitär in den Ferien, an Schließtagen oder pädagogischen Tagen – mit Mitteln, die für Kinderräume geeignet sind. Für die laufende Reinigung haben wir eigene Seiten zur Kita- und Schulreinigung in Bordesholm.',
+      },
+      {
+        titel: 'Hausverwaltungen und Wohnanlagen',
+        text: 'Treppenhäuser, Hauseingänge, Keller- und Gemeinschaftsflächen nach Jahren im Betrieb oder beim Mieterwechsel: Böden, Geländer, Fensterbänke und Briefkastenanlagen einmal richtig.',
+      },
+      {
+        titel: 'Handwerk, Gewerbe und Geschäfte',
+        text: 'Sozialräume, Umkleiden, Sanitär, Bürotrakt und Verkaufsflächen – im Betriebsurlaub, vor einer Neueröffnung oder nach einem Umbau, außerhalb Ihrer Öffnungszeiten.',
+      },
+      {
+        titel: 'Häuser auch in Kiel oder Neumünster',
+        text: 'Wer neben dem Standort im Amt weitere Häuser in Kiel oder Neumünster hat, bekommt einen Ansprechpartner und einen abgestimmten Zeitplan für alle – für beide Städte haben wir eigene Seiten zur Grundreinigung.',
+      },
+    ],
+    umfang: {
+      wir: [
+        'Böden gründlich reinigen: alte Pflegefilme, Schmutzschichten und Laufstraßen entfernen, abgestimmt auf den jeweiligen Belag',
+        'Versiegelung oder Einpflege des Bodens durch unser eigenes Team, wenn Belag und Zustand es sinnvoll machen',
+        'Sanitärräume und Küchen bis in die Tiefe: Kalk, Fugen, Armaturen, Fliesen, Geräteaußenflächen',
+        'Türen, Zargen, Heizkörper, Lampen, Fensterbänke, Sockelleisten und andere Flächen, die im Alltag nicht drankommen',
+        'Aus- und Einräumen der Räume: Möbel, Stühle und Material stellen wir zur Seite und wieder zurück',
+        'Abschlusskontrolle gemeinsam mit Ihnen und zügige Übergabe, damit der Betrieb pünktlich weitergeht',
+        'Pflegehinweise für die Zeit nach der Grundreinigung',
+      ],
+      beiIhnen: [
+        'Persönliche Sachen, Unterlagen und Ware – die fassen wir nicht an',
+        'Fenster außen und Glasfassaden – als Baustein unserer Glasreinigung dazu buchbar',
+        'Beschädigte Beläge, lose Fliesen oder Fugen – Auffälliges melden wir, reparieren aber nicht',
+        'Beläge, deren Hersteller keine Versiegelung vorsieht, bleiben ohne Versiegelung',
+      ],
+    },
+    zeiten: {
+      titel: 'Gut planbar, zügig übergeben',
+      text: 'Eine Grundreinigung braucht freie Flächen. Deshalb legen wir sie in Ferien, Betriebsurlaub, auf Schließtage oder aufs Wochenende – und wenn der Betrieb weiterlaufen muss, arbeiten wir Raum für Raum. Weil wir in Bordesholm sitzen, sind Besichtigung und Abstimmung schnell erledigt. Die Räume werden erst wieder genutzt, wenn wir sie freigegeben haben – den Zeitplan stimmen wir vorher mit Ihnen ab.',
+      punkte: [
+        'In den Praxisferien oder im Betriebsurlaub',
+        'In den Ferien und an Schließtagen von Kitas und Schulen',
+        'Am Wochenende oder nach Feierabend',
+        'Vor Einzug, nach Umbau oder beim Mieterwechsel',
+      ],
+    },
+    vertrauen: [
+      {
+        titel: 'Eigenes Team, kein Subunternehmer',
+        text: 'Reinigung und Versiegelung macht unser eigenes Team – ein Ansprechpartner, ein Zeitplan. Das Ergebnis ist professionell und die Übergabe schnell.',
+      },
+      {
+        titel: 'Belag zuerst, dann Verfahren',
+        text: 'Wir sehen uns die Böden vorher an und wählen Mittel, Maschinen und Verfahren nach Belag und Herstellerangaben. Wir empfehlen nur, was zu Ihrem Boden passt.',
+      },
+      {
+        titel: 'Ansprechpartner aus dem Ort',
+        text: 'Besichtigung, Termin und Abnahme macht eine Person, die in Bordesholm sitzt. Rückfragen vor dem Termin sind ein kurzer Weg.',
+      },
+      {
+        titel: 'Abnahme vor Ort',
+        text: 'Nach der Grundreinigung gehen wir die Flächen gemeinsam durch. Sie bekommen Pflegehinweise, damit das Ergebnis lange hält.',
+      },
+    ],
+    anfahrt: {
+      titel: 'Grundreinigung in Bordesholm und im Amt Bordesholm',
+      text: 'Unser Sitz liegt in Bordesholm zwischen Kiel und Neumünster. In jede Gemeinde des Amtes sind es nur wenige Minuten, ebenso nach Flintbek, Molfsee und Nortorf. Für Ihre Grundreinigung heißt das: Besichtigung, Terminabsprache und Abnahme ohne lange Anfahrt.',
+      gruppen: [
+        { titel: 'Amt Bordesholm', orte: ['Bordesholm', 'Wattenbek', 'Brügge', 'Mühbrook', 'Schmalstede', 'Grevenkrug', 'Hoffeld', 'Loop', 'Sören', 'Reesdorf', 'Schönbek', 'Groß Buchwald', 'Bissee', 'Negenharrie'] },
+      ],
+      umland: ['Flintbek', 'Molfsee', 'Nortorf', 'Boostedt', 'Wasbek'],
+    },
+    ablauf: [
+      {
+        title: 'Kurze Anfrage',
+        desc: 'Art des Objekts, ungefähre Flächen und Bodenbeläge – ein paar Fotos genügen für eine erste Einschätzung.',
+      },
+      {
+        title: 'Besichtigung vor Ort',
+        desc: 'Kostenlos und kurzfristig in Bordesholm und Umgebung: Wir sehen uns Beläge, Zustand und Zugänge an und klären, ob eine Versiegelung sinnvoll ist.',
+      },
+      {
+        title: 'Festpreis mit Zeitvorgabe',
+        desc: 'Nach Flächen, Belägen und Umfang, mit klarem Leistungsverzeichnis – ohne Pauschalversprechen.',
+      },
+      {
+        title: 'Termin, wenn es passt',
+        desc: 'Ferien, Betriebsurlaub, Schließtage, Wochenende oder Raum für Raum – so, wie es für Sie passt.',
+      },
+      {
+        title: 'Durchführung und Abnahme',
+        desc: 'Wir räumen aus, reinigen, versiegeln auf Wunsch und räumen wieder ein – danach gemeinsame Abnahme, Pflegehinweise und zügige Übergabe.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Machen Sie Grundreinigungen im ganzen Amt Bordesholm?',
+        answer:
+          'Ja. In Bordesholm selbst und in allen Gemeinden des Amtes, etwa in Wattenbek, Brügge, Mühbrook und Schmalstede, dazu in Flintbek, Molfsee, Nortorf und Boostedt. Unser Sitz ist in Bordesholm.',
+      },
+      {
+        question: 'Wann ist eine Grundreinigung sinnvoll?',
+        answer:
+          'Wenn die laufende Reinigung nicht mehr alles herausholt: bei Pflegefilmen und Laufstraßen auf dem Boden, vor dem Einzug, nach einem Umbau, beim Mieterwechsel oder als feste Jahresaktion in den Ferien oder im Betriebsurlaub.',
+      },
+      {
+        question: 'Machen Sie die Versiegelung selbst?',
+        answer:
+          'Ja. Reinigung und Versiegelung übernimmt unser eigenes Team, wir geben nichts an Subunternehmer ab. Versiegelt wird aber nur, wo Belag, Zustand und Herstellerangaben es sinnvoll machen – wir empfehlen nur, was zu Ihrem Boden passt.',
+      },
+      {
+        question: 'Müssen wir die Räume vorher ausräumen?',
+        answer:
+          'Nein. Möbel, Stühle und Material stellen wir zur Seite und räumen nach der Grundreinigung wieder ein. Persönliche Sachen, Unterlagen und Ware fassen wir nicht an.',
+      },
+      {
+        question: 'Wann dürfen die Räume wieder genutzt werden?',
+        answer:
+          'Erst nach unserer Freigabe. Wie lange das dauert, hängt von Belag und Verfahren ab – den Zeitplan stimmen wir vor dem Termin mit Ihnen ab.',
+      },
+      {
+        question: 'Können Sie auch kurzfristig einen Termin übernehmen?',
+        answer:
+          'Am besten sprechen Sie uns früh an, dann planen wir Ihren Termin fest ein. Weil wir in Bordesholm sitzen, sind Besichtigung und Absprachen schnell erledigt. Ob ein kurzfristiger Termin klappt, sagen wir Ihnen nach einem Blick in unsere Planung offen.',
+      },
+      {
+        question: 'Wir haben auch Räume in Kiel oder Neumünster – geht das zusammen?',
+        answer:
+          'Ja. Sie bekommen einen Ansprechpartner und einen abgestimmten Zeitplan für alle Standorte. Für Kiel und Neumünster haben wir eigene Seiten zur Grundreinigung.',
+      },
+      {
+        question: 'Was kostet die Grundreinigung in Bordesholm?',
+        answer:
+          'Das hängt von Flächen, Belägen, Zustand und gewünschter Versiegelung ab. Nach einer kostenlosen Besichtigung erhalten Sie ein Festpreis-Angebot mit verbindlicher Zeitvorgabe.',
+      },
+    ],
+    ergaenzungen: [
+      { serviceId: 'unterhaltsreinigung', text: 'Nach der Grundreinigung die laufende Pflege in Bordesholm abgeben – mit festem Plan und demselben Ansprechpartner.' },
+      { serviceId: 'bauendreinigung', text: 'Nach Umbau oder Neubau im Amt erst den Baustaub raus, dann die Böden grundreinigen und einpflegen.' },
+      { serviceId: 'kita-reinigung', text: 'Für Kitas im Amt Bordesholm: laufende Reinigung nach Hygieneplan, Grundreinigung in den Schließzeiten.' },
+    ],
+    texte: {
+      zielgruppenLabel: 'Für Ihr Objekt',
+      zielgruppenTitel: 'Grundreinigung für jedes Objekt im Amt Bordesholm',
+      zielgruppenText: 'Praxis, Kita, Wohnanlage oder Betrieb – wir planen nach Ihren Flächen, Belägen und Zeitfenstern.',
+      grenzenTitel: 'Das klären wir vorab',
+      grenzenText: 'Damit am Termin nichts überrascht.',
+      ablaufTitel: 'So läuft Ihre Grundreinigung',
+      vertrauenLabel: 'Qualität & kurze Wege',
+      ergaenzungTitel: 'Rund um Ihr Objekt aus einer Hand',
+      ctaText:
+        'Wir sehen uns Böden und Räume in Bordesholm kurzfristig und kostenlos an und erstellen Ihnen ein Festpreis-Angebot für Grundreinigung und Versiegelung – Ausräumen und Einräumen inklusive.',
+    },
+    icons: {
+      zielgruppen: [Stethoscope, Baby, Home, Warehouse, Building2],
+      vertrauen: [Sparkles, ClipboardCheck, UserCheck, CalendarCheck],
+    },
+  },
+
+  // ---- Bauendreinigung · Bordesholm ----------------------------------------------------
+  {
+    serviceId: 'bauendreinigung',
+    citySlug: 'bordesholm',
+    leistung: 'Bauendreinigung',
+    ort: 'Bordesholm',
+    seo: {
+      title: 'Bauendreinigung in Bordesholm | KlarWerk Service',
+      description:
+        'Bauendreinigung in Bordesholm und im Amt: Grobreinigung zwischen den Gewerken, Feinreinigung zur Übergabe – nach Ihrem Bauzeitenplan, vom Betrieb vor Ort.',
+      keywords:
+        'Bauendreinigung Bordesholm, Baureinigung Bordesholm, Baugrobreinigung Bordesholm, Bauschlussreinigung Bordesholm, Feinreinigung Neubau Bordesholm, Bauendreinigung Amt Bordesholm, Bauendreinigung Wattenbek, Baureinigung Flintbek',
+    },
+    h1: 'Bauendreinigung in Bordesholm',
+    intro:
+      'Neubau im Amt, Sanierung im Bestand oder Umbau von Laden, Praxis und Büro im Ort: Zum Schluss steht der Übergabe nur noch der Baustaub im Weg. KlarWerk Service reinigt Baustellen in Bordesholm und den Gemeinden des Amtes in den Stufen, die Ihr Bauablauf braucht – von der Grobreinigung zwischen den Gewerken bis zur Feinreinigung vor Abnahme und Einzug. Unser Sitz ist selbst in Bordesholm: Wir sind schnell auf der Baustelle, für die Besichtigung, für Absprachen mit der Bauleitung und wenn sich der Bauzeitenplan verschiebt.',
+    bild: {
+      // gleiches Foto wie auf /leistungen/bauendreinigung (kommt aus services.ts)
+      alt: 'Übergabefertige Räume nach dem Bau – Bauendreinigung in Bordesholm durch KlarWerk Service',
+    },
+    eckdaten: [
+      { titel: 'Grob- und Feinreinigung', text: 'Zwischen den Gewerken und vor der Übergabe' },
+      { titel: 'Nach Ihrem Bauzeitenplan', text: 'Verschiebt sich ein Gewerk, verschieben wir mit' },
+      { titel: 'Betrieb vor Ort', text: 'Unser Sitz ist in Bordesholm, die Wege sind kurz' },
+    ],
+    zielgruppen: [
+      {
+        titel: 'Bauunternehmen und Handwerksbetriebe der Region',
+        text: 'Grobreinigung, damit Maler, Bodenleger und Elektriker sauber weiterarbeiten, und Feinreinigung vor der Abnahme. Liegen Ihre nächsten Baustellen in Kiel oder Neumünster, bleibt es bei einem Ansprechpartner – für beide Städte haben wir eigene Seiten.',
+      },
+      {
+        titel: 'Bauträger mit Wohnungen und Gewerbeeinheiten',
+        text: 'Neubauwohnungen und Gewerbeeinheiten im Amt Bordesholm übergabefertig für Käufer und Mieter – Einheit für Einheit, in der Reihenfolge Ihrer Übergaben.',
+      },
+      {
+        titel: 'Hausverwaltungen und Eigentümer nach Sanierung',
+        text: 'Nach Modernisierung, Dachausbau oder Mieterwechsel mit Renovierung: Baustaub raus, Treppenhaus und Wohnung bezugsfertig.',
+      },
+      {
+        titel: 'Laden-, Praxis- und Büroumbau im Ort',
+        text: 'Neue Praxisräume, umgebaute Büros oder ein Geschäft vor der Eröffnung: sauber zum Start, damit der Betrieb pünktlich beginnen kann – danach auf Wunsch nahtlos in die laufende Reinigung.',
+      },
+      {
+        titel: 'Private Bauherren im Amt',
+        text: 'Nach dem Neubau oder der Sanierung des Eigenheims in Bordesholm oder einer der Gemeinden ringsum – vor dem Einzug einmal gründlich, von den Fenstern bis zu den Böden.',
+      },
+    ],
+    umfang: {
+      wir: [
+        'Baugrobreinigung: Bauschmutz, Verpackungsreste und groben Staub besenrein entfernen',
+        'Baustaub von Böden, Heizkörpern, Türen, Zargen, Leuchten und abwaschbaren Flächen',
+        'Farb-, Mörtel-, Gips- und Klebereste schonend von Flächen, Rahmen und Profilen',
+        'Fenster, Rahmen und Fensterbänke innen und außen, Glastüren und Glasbrüstungen',
+        'Sanitär- und Küchenbereiche einschließlich Armaturen und Fliesen übergabefertig',
+        'Treppenhäuser und Gemeinschaftsflächen im Mehrfamilienhaus',
+        'Böden je nach Belag gesaugt und gewischt, auf Wunsch mit Grundreinigung und Ersteinpflege',
+      ],
+      beiIhnen: [
+        'Bauschutt und Container – klären wir vorab, Reststoffe entsorgen wir auf Wunsch',
+        'Feinreinigung erst, wenn keine staubintensiven Arbeiten mehr anstehen',
+        'Baumängel und Schäden – Auffälliges melden wir, beseitigen es aber nicht',
+        'Schutzfolien auf Fenstern und Böden – entfernen wir nach Absprache, Herstellervorgaben gehen vor',
+      ],
+    },
+    zeiten: {
+      titel: 'Reinigung im Takt Ihrer Baustelle',
+      text: 'Eine Feinreinigung, nach der noch gebohrt oder geschliffen wird, ist verschenktes Geld. Deshalb planen wir die Reinigung in Stufen nach Ihrem Bauzeitenplan. Weil wir in Bordesholm sitzen, ziehen wir mit, wenn sich ein Gewerk verschiebt, und sind auch kurz vor einer Übergabe schnell auf der Baustelle, wenn unsere Planung es zulässt.',
+      punkte: [
+        'Baugrobreinigung während der Bauphase, zwischen den Gewerken',
+        'Zwischenreinigung, bevor empfindliche Gewerke wie Bodenleger beginnen',
+        'Bauendreinigung als Feinreinigung vor Abnahme, Übergabe und Einzug',
+        'Auf Wunsch Grund- oder Glasreinigung im Anschluss',
+      ],
+    },
+    vertrauen: [
+      {
+        titel: 'Abgestimmt mit der Bauleitung',
+        text: 'Termine nach Ihrem Bauzeitenplan, Absprachen direkt mit Bauleitung, Polier oder Bauherr. Verschiebt sich ein Gewerk, verschieben wir mit.',
+      },
+      {
+        titel: 'Verbindliche Zeitvorgabe',
+        text: 'Im Angebot steht, wie lange wir für jede Stufe brauchen – damit Sie Abnahme und Übergabe sicher planen können.',
+      },
+      {
+        titel: 'Ansprechpartner aus dem Ort',
+        text: 'Eine Person für alle Reinigungsstufen, die in Bordesholm sitzt und Ihre Baustelle von der Grob- bis zur Feinreinigung kennt. Ein kurzer Blick vor Ort ist schnell gemacht.',
+      },
+      {
+        titel: 'Schonend für neue Flächen',
+        text: 'Farb-, Mörtel- und Klebereste entfernen wir so, dass neue Böden, Rahmen und Profile keinen Schaden nehmen – nach den Vorgaben der Hersteller.',
+      },
+    ],
+    anfahrt: {
+      titel: 'Bauendreinigung in Bordesholm und im Amt Bordesholm',
+      text: 'Unser Sitz liegt in Bordesholm, zwischen Kiel und Neumünster an A7 und A215. In jede Gemeinde des Amtes sind es nur wenige Minuten, ebenso nach Flintbek, Molfsee und Nortorf. So sind Besichtigung, Abstimmung mit der Bauleitung und kurzfristige Termine vor einer Übergabe einfach.',
+      gruppen: [
+        { titel: 'Amt Bordesholm', orte: ['Bordesholm', 'Wattenbek', 'Brügge', 'Mühbrook', 'Schmalstede', 'Grevenkrug', 'Hoffeld', 'Loop', 'Sören', 'Reesdorf', 'Schönbek', 'Groß Buchwald', 'Bissee', 'Negenharrie'] },
+      ],
+      umland: ['Flintbek', 'Molfsee', 'Nortorf', 'Boostedt', 'Wasbek'],
+    },
+    ablauf: [
+      {
+        title: 'Kurze Anfrage',
+        desc: 'Objektart, ungefähre Fläche, Bauphase und geplanter Übergabetermin genügen für den Anfang.',
+      },
+      {
+        title: 'Besichtigung auf der Baustelle',
+        desc: 'Kostenlos und kurzfristig in Bordesholm und Umgebung: Wir sehen uns Stand, Flächen und Verschmutzung an und klären, welche Reinigungsstufen nötig sind.',
+      },
+      {
+        title: 'Festpreis mit Zeitvorgabe',
+        desc: 'Ein verbindliches Angebot je Reinigungsstufe – mit Preis und Dauer.',
+      },
+      {
+        title: 'Reinigung nach Bauplan',
+        desc: 'Grobreinigung während der Bauphase, Feinreinigung, sobald die staubintensiven Arbeiten beendet sind.',
+      },
+      {
+        title: 'Gemeinsame Abnahme',
+        desc: 'Am Ende gehen wir die Flächen mit Ihnen durch – bereit für Übergabe oder Einzug.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Reinigen Sie Baustellen im ganzen Amt Bordesholm?',
+        answer:
+          'Ja. In Bordesholm selbst und in allen Gemeinden des Amtes, etwa in Wattenbek, Brügge, Mühbrook und Schmalstede, dazu in Flintbek, Molfsee, Nortorf und Boostedt. Unser Sitz ist in Bordesholm.',
+      },
+      {
+        question: 'Was ist der Unterschied zwischen Grob- und Feinreinigung?',
+        answer:
+          'Die Baugrobreinigung entfernt während der Bauphase groben Schmutz, Reste und Staub, damit die nächsten Gewerke sauber arbeiten können. Die Feinreinigung ist die eigentliche Bauendreinigung: Sie macht das Objekt übergabe- oder bezugsfertig.',
+      },
+      {
+        question: 'Wann sollte die Bauendreinigung stattfinden?',
+        answer:
+          'Nach Abschluss aller Gewerke, sobald keine staubintensiven Arbeiten mehr anstehen. Wir planen den Termin mit Ihrer Bauleitung und verschieben mit, wenn sich der Bauzeitenplan ändert.',
+      },
+      {
+        question: 'Wie schnell sind Sie auf der Baustelle?',
+        answer:
+          'Unser Sitz ist in Bordesholm, in jede Gemeinde des Amtes sind es nur wenige Minuten. Termine stimmen wir mit Ihrem Bauzeitenplan ab – auch kurzfristig vor einer Übergabe, wenn unsere Planung es zulässt.',
+      },
+      {
+        question: 'Wir bauen auch in Kiel oder Neumünster – geht das mit einem Ansprechpartner?',
+        answer:
+          'Ja. Sie bekommen einen Ansprechpartner für alle Baustellen und ein Angebot je Objekt. Für Kiel und Neumünster haben wir eigene Seiten zur Bauendreinigung.',
+      },
+      {
+        question: 'Entfernen Sie Farb-, Gips- und Mörtelreste?',
+        answer:
+          'Ja, wir entfernen Farb-, Gips-, Mörtel- und Klebereste schonend von Flächen, Rahmen und Profilen – so, dass neue Oberflächen keinen Schaden nehmen.',
+      },
+      {
+        question: 'Kümmern Sie sich um Bauschutt und Schutzfolien?',
+        answer:
+          'Die Entsorgung von Reststoffen organisieren wir auf Wunsch, Bauschutt und Container klären wir vorab. Schutzfolien entfernen wir nach Absprache, wenn die Herstellervorgaben es zulassen.',
+      },
+      {
+        question: 'Was kostet die Bauendreinigung in Bordesholm?',
+        answer:
+          'Das hängt von Fläche, Verschmutzung und Reinigungsstufen ab. Nach einer kostenlosen Besichtigung erhalten Sie ein Festpreis-Angebot mit verbindlicher Zeitvorgabe.',
+      },
+    ],
+    ergaenzungen: [
+      { serviceId: 'grundreinigung', text: 'Böden nach dem Bau gründlich reinigen und einpflegen – mit unserem eigenen Team, auf Wunsch mit Versiegelung.' },
+      { serviceId: 'glasreinigung', text: 'Fenster und Glasflächen nach dem Bau streifenfrei – und danach im festen Turnus, auch für kleine Objekte im Amt.' },
+      { serviceId: 'unterhaltsreinigung', text: 'Nach dem Einzug nahtlos in die laufende Reinigung in Bordesholm übergehen.' },
+    ],
+    texte: {
+      zielgruppenLabel: 'Für Ihr Bauprojekt',
+      zielgruppenTitel: 'Baureinigung für jedes Projekt im Amt Bordesholm',
+      zielgruppenText: 'Vom Eigenheim bis zum Praxisumbau – wir planen nach Ihrem Bauablauf.',
+      grenzenTitel: 'Das klären wir vorab',
+      grenzenText: 'Damit die Reinigung zum Bauablauf passt.',
+      ablaufTitel: 'So läuft Ihre Bauendreinigung',
+      vertrauenLabel: 'Vor Ort & verlässlich',
+      ergaenzungTitel: 'Nach dem Bau',
+      ctaText:
+        'Wir sehen uns Ihre Baustelle in Bordesholm kurzfristig und kostenlos an und erstellen Ihnen ein Festpreis-Angebot mit verbindlicher Zeitvorgabe.',
+    },
+    icons: {
+      zielgruppen: [HardHat, Building2, Home, Store, Users],
+      vertrauen: [CalendarCheck, ClipboardCheck, UserCheck, ShieldCheck],
+    },
+  },
+
+  // ---- Kita-Reinigung · Bordesholm -----------------------------------------------------
+  {
+    serviceId: 'kita-reinigung',
+    citySlug: 'bordesholm',
+    leistung: 'Kita-Reinigung',
+    ort: 'Bordesholm',
+    seo: {
+      title: 'Kita-Reinigung in Bordesholm | KlarWerk Service',
+      description:
+        'Kita-Reinigung in Bordesholm und im Amt: Gruppenräume, Wickel- und Sanitärbereiche nach Ihrem Hygieneplan, nach Betreuungsschluss, vom Betrieb vor Ort.',
+      keywords:
+        'Kita-Reinigung Bordesholm, Kindergartenreinigung Bordesholm, Krippenreinigung Bordesholm, Reinigung Kindertagesstätte Bordesholm, Kita Reinigung Amt Bordesholm, Kita Reinigung Wattenbek, Kita Reinigung Brügge, Kita Reinigung Flintbek',
+    },
+    h1: 'Kita-Reinigung in Bordesholm',
+    intro:
+      'In einer Kita wird auf dem Boden gespielt, gegessen, gekrabbelt und gewickelt – und am Nachmittag kommen Sand und Matsch aus dem Garten mit herein. KlarWerk Service reinigt Kitas, Krippen und Horte in Bordesholm und den Gemeinden des Amtes nach dem Hygieneplan der Einrichtung, nach Betreuungsschluss und mit festem Team. Unser Sitz ist ebenfalls in Bordesholm: Ihr Ansprechpartner kommt persönlich zur Kontrolle und ist schnell da, wenn Leitung oder Träger etwas brauchen.',
+    bild: {
+      // gleiches Foto wie auf /leistungen/kita-reinigung (kommt aus services.ts)
+      alt: 'Sauberer Gruppenraum einer Kindertagesstätte – Kita-Reinigung in Bordesholm durch KlarWerk Service',
+    },
+    eckdaten: [
+      { titel: 'Nach Ihrem Hygieneplan', text: 'Umfang und Intervalle wie in der Einrichtung festgelegt' },
+      { titel: 'Nach Betreuungsschluss', text: 'Fertig, bevor morgens das erste Kind kommt' },
+      { titel: 'Im selben Ort', text: 'Unser Sitz ist in Bordesholm, die Wege sind kurz' },
+    ],
+    zielgruppen: [
+      {
+        titel: 'Gemeinden und kommunale Träger',
+        text: 'Kitas in Bordesholm und den Gemeinden des Amtes: ein Leistungsverzeichnis je Haus, ein Ansprechpartner für Verwaltung und Leitung, Kontrollen und Rechnungen auf Wunsch zentral.',
+      },
+      {
+        titel: 'Freie Träger und Elterninitiativen',
+        text: 'Kleine Einrichtungen mit wenig Verwaltung im Hintergrund – wir halten den Aufwand für Leitung und Vorstand klein und sind schnell vor Ort, wenn sich etwas ändert.',
+      },
+      {
+        titel: 'Krippen und Kleinkindgruppen',
+        text: 'Wickelbereiche, Schlafräume und Bodenflächen, auf denen gekrabbelt wird: Hier müssen Kontaktflächen, Sanitär und Böden jeden Tag stimmen – das ist der Kern des Plans.',
+      },
+      {
+        titel: 'Kitas mit Garten und viel Draußenzeit',
+        text: 'Sand, Matsch und nasse Schuhe kommen jeden Tag mit herein. Eingang, Garderoben, Waschräume und Böden bekommen deshalb eigene Intervalle, in der nassen Jahreszeit öfter.',
+      },
+      {
+        titel: 'Träger mit Häusern in Kiel oder Neumünster',
+        text: 'Wer neben einer Kita im Amt weitere Einrichtungen in Kiel oder Neumünster führt, bekommt einen Ansprechpartner für alle Häuser – für beide Städte haben wir eigene Seiten zur Kita-Reinigung.',
+      },
+    ],
+    umfang: {
+      wir: [
+        'Gruppen- und Spielräume: Böden, Tische, Stühle und erreichbare Flächen',
+        'Wickelbereiche, Windeleimer und Sanitärräume mit kindgerechten Toiletten und Waschrinnen',
+        'Eingang, Garderoben und Flure – mit Sand und Matsch aus dem Außengelände',
+        'Kontaktflächen wie Türklinken, Lichtschalter, Handläufe und Garderobenhaken',
+        'Küche und Essbereiche nach Absprache mit dem Küchenteam',
+        'Mitarbeiterräume, Büro der Leitung und Personaltoilette',
+        'Abfall und Mülltrennung, Verbrauchsmaterial wie Seife und Papier auf Wunsch nachgefüllt',
+        'Zusätzliche Reinigung von Kontaktflächen bei Infektionswellen auf Anweisung der Leitung',
+      ],
+      beiIhnen: [
+        'Spielzeug, Kuscheltiere, Textilien und Bettwäsche – Waschen und Desinfizieren bleibt bei der Einrichtung',
+        'Lebensmittelhygiene in der Küche – die Verantwortung bleibt beim Küchenteam',
+        'Grundreinigung und Bodenversiegelung – eigener Termin in den Schließzeiten',
+        'Außenspielgeräte, Sandkiste und Gartenwege – nicht Teil der laufenden Reinigung',
+      ],
+    },
+    zeiten: {
+      titel: 'Nach Betreuungsschluss – und gründlich in den Schließzeiten',
+      text: 'Die laufende Reinigung findet statt, wenn die Kinder weg sind: am späten Nachmittag nach Schließung oder frühmorgens vor der Öffnung. Welche Bereiche täglich und welche wöchentlich dran sind, richtet sich nach Ihrem Hygieneplan und nach der Jahreszeit. In den Schließzeiten nehmen wir uns die Böden mit unserem eigenen Team gründlich vor: Wir räumen aus und wieder ein, und zur Öffnung ist alles an seinem Platz.',
+      punkte: [
+        'Täglich: Sanitär, Wickelbereiche, Gruppenräume, Eingang, Kontaktflächen, Abfall',
+        'Wöchentlich oder nach Plan: Fenster innen, Heizkörper, Regale, Lager',
+        'Öfter in der nassen Jahreszeit: Eingang, Garderoben, Flure',
+        'Grundreinigung in den Schließzeiten, auf Wunsch mit Versiegelung',
+      ],
+    },
+    vertrauen: [
+      {
+        titel: 'Ihr Hygieneplan ist die Vorgabe',
+        text: 'Jede Kita hat einen Hygieneplan. Wir übernehmen daraus, was zur Reinigung gehört, und halten die Intervalle im Leistungsverzeichnis fest – für Leitung und Träger nachlesbar.',
+      },
+      {
+        titel: 'Geeignete Mittel für Kinderräume',
+        text: 'Wir setzen Reinigungsmittel ein, die für den Einsatz in Kindereinrichtungen geeignet sind, und lüften gereinigte Räume, bevor die Kinder kommen.',
+      },
+      {
+        titel: 'Festes Team, feste Gesichter',
+        text: 'Ein eingespieltes Team, das die Einrichtung, die Schlüssel und die Besonderheiten kennt. Bei Urlaub oder Krankheit übernimmt eine eingearbeitete Vertretung.',
+      },
+      {
+        titel: 'Ansprechpartner aus dem Ort',
+        text: 'Kontrollen macht Ihr fester Ansprechpartner persönlich. Ein zusätzlicher Termin nach einer Veranstaltung oder eine Rückfrage vor Ort sind bei uns ein kurzer Weg.',
+      },
+    ],
+    anfahrt: {
+      titel: 'Kita-Reinigung in Bordesholm und im Amt Bordesholm',
+      text: 'Unser Sitz liegt in Bordesholm zwischen Kiel und Neumünster. In jede Gemeinde des Amtes sind es nur wenige Minuten, ebenso nach Flintbek, Molfsee und Nortorf. Kurze Wege machen persönliche Kontrollen und kurzfristige Einsätze einfach.',
+      gruppen: [
+        { titel: 'Amt Bordesholm', orte: ['Bordesholm', 'Wattenbek', 'Brügge', 'Mühbrook', 'Schmalstede', 'Grevenkrug', 'Hoffeld', 'Loop', 'Sören', 'Reesdorf', 'Schönbek', 'Groß Buchwald', 'Bissee', 'Negenharrie'] },
+      ],
+      umland: ['Flintbek', 'Molfsee', 'Nortorf', 'Boostedt', 'Wasbek'],
+    },
+    ablauf: [
+      {
+        title: 'Kurze Anfrage',
+        desc: 'Art und Größe der Einrichtung, Anzahl der Gruppen und Betreuungszeiten – mehr braucht es für den Anfang nicht.',
+      },
+      {
+        title: 'Besichtigung vor Ort',
+        desc: 'Kostenlos und kurzfristig in Bordesholm und Umgebung: Wir gehen Räume, Wickel- und Sanitärbereiche durch und sehen uns Ihren Hygieneplan an.',
+      },
+      {
+        title: 'Leistungsverzeichnis und Festpreis',
+        desc: 'Bereiche, Intervalle und Preis übersichtlich in einem Angebot – auch für den Träger nachvollziehbar.',
+      },
+      {
+        title: 'Start mit Einweisung',
+        desc: 'Schlüssel, Alarmanlage, Zeiten, Ansprechpartner und Besonderheiten der Einrichtung halten wir vor dem ersten Einsatz fest.',
+      },
+      {
+        title: 'Laufende Betreuung',
+        desc: 'Persönliche Kontrollen, kurze Wege für Rückfragen und Anpassungen, wenn sich Gruppen oder Zeiten ändern.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Reinigen Sie Kitas im ganzen Amt Bordesholm?',
+        answer:
+          'Ja. In Bordesholm selbst und in allen Gemeinden des Amtes, etwa in Wattenbek, Brügge, Mühbrook und Schmalstede, dazu in Flintbek, Molfsee, Nortorf und Boostedt. Unser Sitz ist in Bordesholm.',
+      },
+      {
+        question: 'Wann wird gereinigt?',
+        answer:
+          'Nach Betreuungsschluss am späten Nachmittag oder frühmorgens vor der Öffnung. Zwischen den Kindern wird nicht gereinigt.',
+      },
+      {
+        question: 'Richten Sie sich nach unserem Hygieneplan?',
+        answer:
+          'Ja. Ihr Hygieneplan legt fest, welche Bereiche wie oft gereinigt werden. Wir übernehmen daraus die Reinigungsaufgaben ins Leistungsverzeichnis und halten uns daran.',
+      },
+      {
+        question: 'Wir sind eine kleine Einrichtung – lohnt sich eine Reinigungsfirma?',
+        answer:
+          'Das entscheiden Sie nach dem Angebot. Den Umfang richten wir nach Gruppen, Räumen und Hygieneplan, nicht nach einer Standardliste. Weil wir in Bordesholm sitzen, sind die Wege auch zu kleinen Häusern in den Gemeinden des Amtes kurz.',
+      },
+      {
+        question: 'Wie gehen Sie mit Sand und Matsch aus dem Garten um?',
+        answer:
+          'Eingang, Garderoben und Flure bekommen eigene Intervalle und werden in der nassen Jahreszeit öfter gereinigt. Das legen wir im Leistungsverzeichnis fest und passen es an, wenn es nötig ist.',
+      },
+      {
+        question: 'Unser Träger hat auch Kitas in Kiel oder Neumünster – geht das zusammen?',
+        answer:
+          'Ja. Jedes Haus bekommt sein eigenes Leistungsverzeichnis, der Träger einen Ansprechpartner für alle Einrichtungen. Für Kiel und Neumünster haben wir eigene Seiten zur Kita-Reinigung.',
+      },
+      {
+        question: 'Übernehmen Sie auch die Grundreinigung in den Schließzeiten?',
+        answer:
+          'Ja. Die Grundreinigung macht unser eigenes Team: Wir räumen aus und wieder ein, reinigen die Böden gründlich und versiegeln sie auf Wunsch. Mehr dazu auf unserer Seite zur Grundreinigung in Bordesholm.',
+      },
+      {
+        question: 'Was kostet die Kita-Reinigung in Bordesholm?',
+        answer:
+          'Das hängt von Fläche, Gruppen, Bereichen und Intervallen ab. Nach einer kostenlosen Besichtigung erhalten Sie ein Festpreis-Angebot mit Leistungsverzeichnis.',
+      },
+    ],
+    ergaenzungen: [
+      { serviceId: 'grundreinigung', text: 'Böden in den Schließzeiten gründlich reinigen und auf Wunsch versiegeln – eigenes Team, Aus- und Einräumen inklusive.' },
+      { serviceId: 'schulreinigung', text: 'Schulen und Sporthallen desselben Trägers im Amt nach festem Plan – mit demselben Ansprechpartner.' },
+      { serviceId: 'glasreinigung', text: 'Fenster und Glastüren der Kita im eigenen Turnus, nach Betreuungsschluss oder in den Schließzeiten.' },
+    ],
+    texte: {
+      zielgruppenLabel: 'Für Ihre Einrichtung',
+      zielgruppenTitel: 'Kita-Reinigung für jede Einrichtung im Amt Bordesholm',
+      zielgruppenText: 'Krippe, Kindergarten oder Hort, ein Haus oder mehrere – der Plan richtet sich nach Ihrem Hygieneplan und Ihren Zeiten.',
+      grenzenTitel: 'Das bleibt bei Ihnen',
+      grenzenText: 'Damit Zuständigkeiten klar sind.',
+      ablaufTitel: 'So starten wir in Ihrer Kita',
+      vertrauenLabel: 'Hygiene & kurze Wege',
+      ergaenzungTitel: 'Rund um Ihre Einrichtung aus einer Hand',
+      ctaText:
+        'Wir kommen kurzfristig zur kostenlosen Besichtigung in Ihre Kita in Bordesholm und erstellen Ihnen ein Festpreis-Angebot mit Leistungsverzeichnis nach Ihrem Hygieneplan.',
+    },
+    icons: {
+      zielgruppen: [Building2, Users, Baby, Smile, Briefcase],
+      vertrauen: [ClipboardCheck, ShieldCheck, Users, UserCheck],
+    },
+  },
+
+  // ---- Schulreinigung · Bordesholm -----------------------------------------------------
+  {
+    serviceId: 'schulreinigung',
+    citySlug: 'bordesholm',
+    leistung: 'Schulreinigung',
+    ort: 'Bordesholm',
+    seo: {
+      title: 'Schulreinigung in Bordesholm | KlarWerk Service',
+      description:
+        'Schulreinigung in Bordesholm und im Amt: Klassenräume, Sanitär und Sporthallen nach Schulschluss, Grundreinigung in den Ferien, Ansprechpartner im Ort.',
+      keywords:
+        'Schulreinigung Bordesholm, Reinigung Schule Bordesholm, Sporthallenreinigung Bordesholm, Klassenraumreinigung Bordesholm, Schulreinigung Amt Bordesholm, Schulreinigung Wattenbek, Schulreinigung Flintbek, Turnhallenreinigung Bordesholm',
+    },
+    h1: 'Schulreinigung in Bordesholm',
+    intro:
+      'Klassenräume, Flure, Sanitär, Mensa und die Sporthalle, die abends noch der Verein nutzt: An einer Schule hat jeder Bereich andere Nutzer und andere Zeiten. KlarWerk Service reinigt Schulen in Bordesholm und den Gemeinden des Amtes nach einem festen Leistungsverzeichnis – nach Schulschluss oder nach dem Ganztag, Sporthallen nach Belegungsplan, mit festem Team. Weil unser Sitz ebenfalls in Bordesholm ist, haben Schulleitung, Hausmeister und Schulträger einen Ansprechpartner, der persönlich zur Kontrolle kommt und schnell vor Ort ist, wenn nach einer Veranstaltung zusätzlich gereinigt werden muss.',
+    bild: {
+      // gleiches Foto wie auf /leistungen/schulreinigung (kommt aus services.ts)
+      alt: 'Sauberer Klassenraum nach Unterrichtsschluss – Schulreinigung in Bordesholm durch KlarWerk Service',
+    },
+    eckdaten: [
+      { titel: 'Nach Schulschluss', text: 'Oder nach dem Ganztag, Sporthallen nach Belegung' },
+      { titel: 'Intervalle je Bereich', text: 'Sanitär täglich, Klassenräume und Flure nach Plan' },
+      { titel: 'Im selben Ort', text: 'Unser Sitz ist in Bordesholm, die Wege sind kurz' },
+    ],
+    zielgruppen: [
+      {
+        titel: 'Schulträger und Gemeinden',
+        text: 'Ein Leistungsverzeichnis je Standort, ein Ansprechpartner für Verwaltung und Schulleitung, Kontrollen und Rechnungen auf Wunsch zentral – nachvollziehbar auch für Gremien.',
+      },
+      {
+        titel: 'Grundschulen mit Ganztag und Betreuung',
+        text: 'Klassenräume, Flure, Mensa und Sanitär, die bis in den Nachmittag genutzt werden – wir reinigen nach dem Ganztag und stimmen uns mit Hausmeister und Betreuung ab.',
+      },
+      {
+        titel: 'Weiterführende Schulen mit Fachräumen',
+        text: 'Klassen- und Fachräume, Lehrküchen, Aula und Pausenhallen – nach Unterrichtsschluss gereinigt, Fachräume nach Einweisung durch den Fachbereich.',
+      },
+      {
+        titel: 'Sporthallen mit Vereinsbetrieb',
+        text: 'Sportböden, Umkleiden, Duschen und Geräteräume, die nach dem Schulsport von Vereinen weitergenutzt werden – mit Zeiten, die zum Belegungsplan passen.',
+      },
+      {
+        titel: 'Träger mit Standorten in Kiel oder Neumünster',
+        text: 'Wer neben der Schule im Amt weitere Standorte in Kiel oder Neumünster betreut, bekommt einen Ansprechpartner für alle – für beide Städte haben wir eigene Seiten zur Schulreinigung.',
+      },
+    ],
+    umfang: {
+      wir: [
+        'Klassen- und Fachräume: Böden, Tische, Tafeln, Waschbecken und erreichbare Flächen',
+        'Flure, Treppenhäuser, Eingänge, Aula und Pausenhallen',
+        'Sanitäranlagen für Schüler und Lehrkräfte, täglich oder nach Plan',
+        'Sporthallen: Sportböden, Umkleiden, Duschen und Geräteräume nach Belegungsplan',
+        'Mensa und Essbereiche nach Absprache mit dem Küchenbetrieb',
+        'Lehrküchen und Fachräume nach Einweisung durch den Fachbereich',
+        'Lehrerzimmer, Verwaltung und Sekretariat',
+        'Kontaktflächen wie Türklinken, Handläufe, Lichtschalter und Trinkbrunnen, Abfall und Mülltrennung',
+      ],
+      beiIhnen: [
+        'Grundreinigung, Bodenpflege und Versiegelung – eigener Termin in den Ferien, durch unser eigenes Team',
+        'Fenster außen und Glasfassaden – eigener Turnus in der Glasreinigung',
+        'Lebensmittelhygiene in Mensa und Lehrküche – die Verantwortung bleibt beim Küchenbetrieb',
+        'Schulhof und Außenanlagen – darum kümmert sich der Hausmeister',
+      ],
+    },
+    zeiten: {
+      titel: 'Nach Schulschluss, nach Belegung, in den Ferien',
+      text: 'Die laufende Reinigung findet außerhalb des Unterrichts statt – nach Schulschluss, nach dem Ganztag oder frühmorgens. Die Sporthalle bekommt eigene Zeiten nach Belegung, auch wenn Vereine sie abends nutzen. In den Ferien macht unser eigenes Team die Grundreinigung der Böden, räumt dafür aus und wieder ein und übergibt zügig, damit der Schulbetrieb pünktlich weitergeht.',
+      punkte: [
+        'Täglich: Sanitär, Mensa, Eingänge, Kontaktflächen, Abfall',
+        'Täglich oder nach Plan: Klassen- und Fachräume, Flure, Lehrerzimmer',
+        'Sporthallen nach Belegungsplan, auch nach dem Vereinsbetrieb am Abend',
+        'Grundreinigung, Bodenpflege und Versiegelung in den Ferien',
+      ],
+    },
+    vertrauen: [
+      {
+        titel: 'Klares Leistungsverzeichnis',
+        text: 'Schulleitung, Hausmeister und Träger sehen, welcher Bereich wie oft gereinigt wird – nachvollziehbar und ohne Diskussionen.',
+      },
+      {
+        titel: 'Abgestimmt mit dem Hausmeister',
+        text: 'Zugänge, Alarmanlage, Belegung der Halle und Veranstaltungen stimmen wir mit Ihrem Hausmeister ab, damit nichts kollidiert.',
+      },
+      {
+        titel: 'Festes Team, eingearbeitete Vertretung',
+        text: 'Ein Team, das die Schule kennt. Bei Urlaub oder Krankheit übernimmt jemand, der eingearbeitet ist.',
+      },
+      {
+        titel: 'Ansprechpartner aus dem Ort',
+        text: 'Kontrollen macht Ihr fester Ansprechpartner persönlich. Ein zusätzlicher Termin nach einem Elternabend oder einer Veranstaltung ist bei uns ein kurzer Weg.',
+      },
+    ],
+    anfahrt: {
+      titel: 'Schulreinigung in Bordesholm und im Amt Bordesholm',
+      text: 'Unser Sitz liegt in Bordesholm, zwischen Kiel und Neumünster an A7 und A215. In jede Gemeinde des Amtes sind es nur wenige Minuten, ebenso nach Flintbek, Molfsee und Nortorf. Kurze Wege machen persönliche Kontrollen und zusätzliche Termine nach Veranstaltungen einfach.',
+      gruppen: [
+        { titel: 'Amt Bordesholm', orte: ['Bordesholm', 'Wattenbek', 'Brügge', 'Mühbrook', 'Schmalstede', 'Grevenkrug', 'Hoffeld', 'Loop', 'Sören', 'Reesdorf', 'Schönbek', 'Groß Buchwald', 'Bissee', 'Negenharrie'] },
+      ],
+      umland: ['Flintbek', 'Molfsee', 'Nortorf', 'Boostedt', 'Wasbek'],
+    },
+    ablauf: [
+      {
+        title: 'Kurze Anfrage',
+        desc: 'Schulform, ungefähre Flächen, Anzahl der Räume und Unterrichtszeiten – mehr braucht es für den Anfang nicht.',
+      },
+      {
+        title: 'Besichtigung vor Ort',
+        desc: 'Kostenlos und kurzfristig in Bordesholm und Umgebung: Wir gehen Gebäude, Halle und Sanitär mit Ihnen oder Ihrem Hausmeister durch und klären Zeiten und Zugänge.',
+      },
+      {
+        title: 'Leistungsverzeichnis und Festpreis',
+        desc: 'Bereiche, Intervalle und Preis übersichtlich in einem Angebot – auch für Träger und Gremien nachvollziehbar.',
+      },
+      {
+        title: 'Start mit Einweisung',
+        desc: 'Schlüssel, Alarmanlage, Zeiten, Ansprechpartner und Besonderheiten der Fachräume halten wir vor dem ersten Einsatz fest.',
+      },
+      {
+        title: 'Laufende Betreuung',
+        desc: 'Persönliche Kontrollen, kurze Wege für Rückfragen und Anpassungen bei neuen Stundenplänen oder Belegungen.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Reinigen Sie Schulen im ganzen Amt Bordesholm?',
+        answer:
+          'Ja. In Bordesholm selbst und in allen Gemeinden des Amtes, etwa in Wattenbek, Brügge, Mühbrook und Schmalstede, dazu in Flintbek, Molfsee, Nortorf und Boostedt. Unser Sitz ist in Bordesholm.',
+      },
+      {
+        question: 'Reinigen Sie während des Unterrichts?',
+        answer:
+          'Nein. Die laufende Reinigung findet nach Schulschluss, nach dem Ganztag oder frühmorgens statt. Sporthallen und Mensa bekommen eigene Zeiten nach Belegung.',
+      },
+      {
+        question: 'Gehört die Sporthalle dazu, auch wenn Vereine sie abends nutzen?',
+        answer:
+          'Ja. Sportböden, Umkleiden, Duschen und Geräteräume reinigen wir nach Belegungsplan – auch wenn Vereine die Halle nach dem Schulsport weiternutzen.',
+      },
+      {
+        question: 'Wie stimmen Sie sich mit unserem Hausmeister ab?',
+        answer:
+          'Zugänge, Alarmanlage, Hallenbelegung und Veranstaltungen klären wir direkt mit Ihrem Hausmeister. Er bleibt Ansprechpartner im Haus, bei uns haben Sie einen festen Ansprechpartner aus Bordesholm.',
+      },
+      {
+        question: 'Was passiert in den Ferien?',
+        answer:
+          'In den Ferien macht unser eigenes Team die Grundreinigung der Böden: Wir räumen aus und wieder ein und versiegeln auf Wunsch. Mehr dazu auf unserer Seite zur Grundreinigung in Bordesholm.',
+      },
+      {
+        question: 'Können Sie nach Veranstaltungen zusätzlich kommen?',
+        answer:
+          'Nach Absprache ja, etwa nach Elternabenden oder Vereinsnutzung der Halle. Weil wir in Bordesholm sitzen, sind die Wege kurz.',
+      },
+      {
+        question: 'Wir betreuen auch Standorte in Kiel oder Neumünster – geht das zusammen?',
+        answer:
+          'Ja. Jeder Standort bekommt sein eigenes Leistungsverzeichnis, Sie einen Ansprechpartner für alle. Für Kiel und Neumünster haben wir eigene Seiten zur Schulreinigung.',
+      },
+      {
+        question: 'Was kostet die Schulreinigung in Bordesholm?',
+        answer:
+          'Das hängt von Flächen, Räumen, Bereichen und Intervallen ab. Nach einer kostenlosen Besichtigung erhalten Sie ein Festpreis-Angebot mit Leistungsverzeichnis.',
+      },
+    ],
+    ergaenzungen: [
+      { serviceId: 'grundreinigung', text: 'Böden in den Ferien gründlich reinigen und auf Wunsch versiegeln – eigenes Team, Aus- und Einräumen inklusive.' },
+      { serviceId: 'kita-reinigung', text: 'Kitas und Horte desselben Trägers im Amt Bordesholm nach Hygieneplan – mit demselben Ansprechpartner.' },
+      { serviceId: 'glasreinigung', text: 'Fenster, Glastüren und Glasflächen der Schule im eigenen Turnus, große Flächen in den Ferien.' },
+    ],
+    texte: {
+      zielgruppenLabel: 'Für Ihre Schule',
+      zielgruppenTitel: 'Schulreinigung für jede Schule im Amt Bordesholm',
+      zielgruppenText: 'Grundschule, weiterführende Schule oder Sporthalle – der Plan richtet sich nach Räumen, Stundenplan und Belegung.',
+      grenzenTitel: 'Das bleibt bei Ihnen',
+      grenzenText: 'Damit Zuständigkeiten klar sind.',
+      ablaufTitel: 'So starten wir an Ihrer Schule',
+      vertrauenLabel: 'Vor Ort & verlässlich',
+      ergaenzungTitel: 'Rund um Ihre Schule aus einer Hand',
+      ctaText:
+        'Wir kommen kurzfristig zur kostenlosen Besichtigung an Ihre Schule in Bordesholm und erstellen Ihnen ein Festpreis-Angebot mit klarem Leistungsverzeichnis.',
+    },
+    icons: {
+      zielgruppen: [Building2, Smile, GraduationCap, Activity, Briefcase],
+      vertrauen: [ClipboardCheck, KeyRound, Users, UserCheck],
+    },
+  },
 ];
 
 export function getLokaleSeite(serviceId: string, citySlug: string): LokaleSeite | undefined {

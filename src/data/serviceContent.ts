@@ -154,10 +154,10 @@ export const serviceContents: Record<string, ServiceContent> = {
       { question: 'Wie wird die Qualität sichergestellt?', answer: 'Wir arbeiten mit Reinigungsplänen und Checklisten und führen regelmäßige Qualitätskontrollen durch – so bleibt das Ergebnis dauerhaft auf hohem Niveau.' },
     ],
     seo: {
-      // Neumünster und Kiel haben eigene Seiten (/leistungen/unterhaltsreinigung/<stadt>).
+      // Kiel, Neumünster und Bordesholm haben eigene Seiten (/leistungen/unterhaltsreinigung/<stadt>).
       title: 'Unterhaltsreinigung Schleswig-Holstein | KlarWerk Service',
       description:
-        'Regelmäßige Unterhaltsreinigung für Büros, Praxen, Gewerbe und Wohnanlagen in Bordesholm und ganz Schleswig-Holstein. Fester Plan, ein Ansprechpartner.',
+        'Regelmäßige Unterhaltsreinigung für Büros, Praxen, Gewerbe und Wohnanlagen in ganz Schleswig-Holstein. Fester Plan, ein Ansprechpartner aus Bordesholm.',
       keywords: `Unterhaltsreinigung, unterhaltsreinigung Kiel, Gebäudereinigung regelmäßig, Büroreinigung Vertrag, ${localKeywords}`,
     },
   },
@@ -308,7 +308,7 @@ export const serviceContents: Record<string, ServiceContent> = {
       { question: 'Stellen Sie Container für den Bauschutt?', answer: 'Die Entsorgung von Reststoffen organisieren wir auf Wunsch gerne für Sie.' },
     ],
     seo: {
-      // Neumünster und Kiel haben eigene Seiten (/leistungen/bauendreinigung/<stadt>).
+      // Kiel, Neumünster und Bordesholm haben eigene Seiten (/leistungen/bauendreinigung/<stadt>).
       title: 'Bauendreinigung Schleswig-Holstein | KlarWerk Service',
       description:
         'Bauendreinigung in Schleswig-Holstein: Baustaub, Farb- und Mörtelreste, Fenster und Böden – übergabefertig nach Bau und Renovierung. Jetzt anfragen.',

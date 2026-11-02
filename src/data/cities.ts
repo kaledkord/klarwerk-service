@@ -35,6 +35,11 @@ export const cities: City[] = [
         { label: 'Büroreinigung in Bordesholm', to: '/leistungen/bueroreinigung/bordesholm' },
         { label: 'Praxisreinigung in Bordesholm', to: '/leistungen/praxisreinigung/bordesholm' },
         { label: 'Glasreinigung in Bordesholm', to: '/leistungen/glasreinigung/bordesholm' },
+        { label: 'Unterhaltsreinigung in Bordesholm', to: '/leistungen/unterhaltsreinigung/bordesholm' },
+        { label: 'Grundreinigung in Bordesholm', to: '/leistungen/grundreinigung/bordesholm' },
+        { label: 'Bauendreinigung in Bordesholm', to: '/leistungen/bauendreinigung/bordesholm' },
+        { label: 'Kita-Reinigung in Bordesholm', to: '/leistungen/kita-reinigung/bordesholm' },
+        { label: 'Schulreinigung in Bordesholm', to: '/leistungen/schulreinigung/bordesholm' },
       ],
     },
     highlights: [

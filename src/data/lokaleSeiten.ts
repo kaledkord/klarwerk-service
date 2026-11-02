@@ -1689,7 +1689,7 @@ export const lokaleSeiten: LokaleSeite[] = [
     ergaenzungen: [
       { serviceId: 'glasreinigung', text: 'Bürofenster, Glastüren und Eingang – im festen Turnus, innen und außen.' },
       { serviceId: 'unterhaltsreinigung', text: 'Weitere Bereiche wie Treppenhaus, Lager oder Verkaufsfläche nach festem Plan.' },
-      { serviceId: 'grundreinigung', text: 'Böden und Flächen einmal gründlich aufarbeiten – vor dem Einzug oder zum Jahreswechsel.' },
+      { serviceId: 'grundreinigung', text: 'Böden und Flächen einmal gründlich aufarbeiten – vor dem Einzug oder in ruhigen Wochen.' },
     ],
     texte: {
       zielgruppenLabel: 'Für Ihr Büro',
@@ -5066,6 +5066,948 @@ export const lokaleSeiten: LokaleSeite[] = [
     icons: {
       zielgruppen: [Building2, Smile, GraduationCap, Activity, Briefcase],
       vertrauen: [ClipboardCheck, KeyRound, Users, UserCheck],
+    },
+  },
+
+  // ---- Unterhaltsreinigung · Rendsburg -------------------------------------------------
+  {
+    serviceId: 'unterhaltsreinigung',
+    citySlug: 'rendsburg',
+    leistung: 'Unterhaltsreinigung',
+    ort: 'Rendsburg',
+    seo: {
+      title: 'Unterhaltsreinigung in Rendsburg | KlarWerk Service',
+      description:
+        'Unterhaltsreinigung in Rendsburg und Umland: Treppenhäuser, Betriebe und Geschäfte nach festem Plan, ein Ansprechpartner auch für mehrere Standorte.',
+      keywords:
+        'Unterhaltsreinigung Rendsburg, Gebäudereinigung Rendsburg, Treppenhausreinigung Rendsburg, Reinigungsfirma Rendsburg, Hausverwaltung Reinigung Rendsburg, Unterhaltsreinigung Büdelsdorf, Unterhaltsreinigung Osterrönfeld, Unterhaltsreinigung Fockbek',
+    },
+    h1: 'Unterhaltsreinigung in Rendsburg',
+    intro:
+      'Als Kreisstadt und Versorgungszentrum des Kreises Rendsburg-Eckernförde hat Rendsburg viele Objekte, die jeden Tag funktionieren müssen: Wohnanlagen nördlich der Eider, Geschäfte in der Altstadt und in Neuwerk, Betriebe am Nord-Ostsee-Kanal, dazu Standorte in Büdelsdorf, Osterrönfeld und Fockbek. KlarWerk Service übernimmt dort die laufende Reinigung nach einem festen Leistungsverzeichnis – mit eigenen Intervallen je Bereich, regelmäßigen Kontrollen und einem festen Ansprechpartner, auch wenn Ihre Objekte über Stadt und Umland verteilt sind. Von Bordesholm aus sind wir über die A7 in rund 30 Minuten bei Ihnen.',
+    bild: {
+      // gleiches Foto wie auf /leistungen/unterhaltsreinigung (kommt aus services.ts)
+      alt: 'Gepflegter Eingangsbereich und Treppenhaus – Unterhaltsreinigung in Rendsburg durch KlarWerk Service',
+    },
+    eckdaten: [
+      { titel: 'Leistungsverzeichnis', text: 'Jeder Bereich mit eigenem Intervall, schwarz auf weiß' },
+      { titel: 'Ein Ansprechpartner', text: 'Für ein Objekt oder mehrere Standorte in Stadt und Umland' },
+      { titel: 'Keine Lücken', text: 'Eingearbeitete Vertretung bei Urlaub und Krankheit' },
+    ],
+    zielgruppen: [
+      {
+        titel: 'Hausverwaltungen und Wohnanlagen',
+        text: 'Treppenhäuser, Hauseingänge, Aufzüge, Keller- und Müllräume in Wohnanlagen nördlich der Eider, an Eider und Kanal und in den Nachbargemeinden – im festen Turnus, mit einem Ansprechpartner für die Verwaltung und Rückmeldungen aus dem Haus.',
+      },
+      {
+        titel: 'Betriebe an Kanal und Eider',
+        text: 'Sozial- und Pausenräume, Umkleiden, Sanitär und Bürotrakt in Industrie-, Hafen- und Handwerksbetrieben: Bereiche mit vielen Nutzern, die sauber sein müssen, ohne den Betrieb zu stören.',
+      },
+      {
+        titel: 'Geschäfte und Dienstleister',
+        text: 'Verkaufsraum, Kassenzone, Eingang und Personalräume in der Altstadt und in Neuwerk – gereinigt vor Öffnung oder nach Ladenschluss, abgestimmt auf Ihre Öffnungszeiten.',
+      },
+      {
+        titel: 'Organisationen mit mehreren Standorten',
+        text: 'Verwaltungen, Träger und Unternehmen mit Gebäuden in Rendsburg, Büdelsdorf, Osterrönfeld oder Fockbek: ein Leistungsverzeichnis je Objekt, ein Ansprechpartner und Kontrollen für alle Standorte.',
+      },
+      {
+        titel: 'Vereine und Gemeinschaftseinrichtungen',
+        text: 'Vereinsheime, Versammlungsräume, Sanitär und Küchen, die oft abends und am Wochenende genutzt werden – wir reinigen dazwischen, wenn die Räume leer sind.',
+      },
+    ],
+    umfang: {
+      wir: [
+        'Böden aller Art: kehren, saugen, nass wischen – nach Belag und Nutzung',
+        'Eingangsbereiche, in die Nässe und Schmutz von draußen hereingetragen werden',
+        'Treppenhäuser mit Handläufen, Geländern, Briefkastenanlagen und Hauseingängen',
+        'Sanitärräume, Umkleiden und Duschen',
+        'Sozial- und Pausenräume, Teeküchen',
+        'Aufzüge, Flure, Keller- und Müllräume nach Absprache',
+        'Kontaktflächen wie Türklinken, Lichtschalter und Klingeltableaus, Papierkörbe und Mülltrennung',
+        'Glas innen: Hauseingangstüren, Trennwände und Spiegel',
+      ],
+      beiIhnen: [
+        'Grundreinigung und Bodenpflege mit Versiegelung – eigener Termin im Jahresplan',
+        'Fenster außen – eigener Turnus in der Glasreinigung',
+        'Außenanlagen und Wege – darum kümmert sich Ihr Hausmeister',
+        'Produktions- und Maschinenbereiche – nur nach Absprache und Einweisung',
+      ],
+    },
+    zeiten: {
+      titel: 'Jeder Bereich in seinem Intervall – auch bei Wind und Wetter',
+      text: 'An Eider und Kanal ist es oft windig und feucht. Das merkt man zuerst dort, wo Menschen von draußen hereinkommen: in Eingängen, Treppenhäusern und Fluren. Deshalb bekommt im Leistungsverzeichnis jeder Bereich sein eigenes Intervall – Eingänge in der nassen Jahreszeit öfter, ein Kellerflur seltener – und eine Zeit, zu der Bewohner, Mitarbeiter oder Kunden nichts davon mitbekommen.',
+      punkte: [
+        'Täglich oder mehrmals pro Woche: Sanitär, Sozialräume, Eingänge',
+        'Wöchentlich oder vierzehntägig: Treppenhäuser, Flure, Nebenräume',
+        'Öfter in der nassen Jahreszeit: Eingangsbereiche und Treppenhäuser',
+        'Vor Öffnung, nach Feierabend oder zwischen den Nutzungen',
+      ],
+    },
+    vertrauen: [
+      {
+        titel: 'Klares Leistungsverzeichnis',
+        text: 'Sie sehen, welcher Bereich wie oft gereinigt wird – je Objekt, auch wenn Sie mehrere Standorte in Rendsburg und Umgebung haben.',
+      },
+      {
+        titel: 'Ein fester Ansprechpartner',
+        text: 'Eine Person, die Ihre Objekte, Zugänge und Besonderheiten kennt und Anpassungen kurzfristig umsetzt.',
+      },
+      {
+        titel: 'Eingearbeitete Vertretung',
+        text: 'Bei Urlaub und Krankheit übernimmt jemand, der das Objekt kennt. Die Reinigung läuft nach Plan weiter.',
+      },
+      {
+        titel: 'Regelmäßige Kontrollen',
+        text: 'Wir prüfen das Ergebnis vor Ort und passen das Leistungsverzeichnis an, wenn sich Nutzung oder Jahreszeit ändern.',
+      },
+    ],
+    anfahrt: {
+      titel: 'Unterhaltsreinigung in ganz Rendsburg',
+      text: 'Von Bordesholm sind wir über die A7 in rund 30 Minuten in Rendsburg – in den Wohnlagen nördlich der Eider, in der Altstadt und in Neuwerk, bei den Betrieben am Kanal und ebenso in Büdelsdorf, Osterrönfeld und Fockbek. Kurze Wege machen Kontrollen und Rückfragen an mehreren Standorten einfach.',
+      gruppen: [
+        { titel: 'Nördlich der Eider', orte: ['Rendsburg-Nord', 'Mastbrook', 'Rotenhof', 'Kronwerk', 'Duten', 'Seemühlen', 'Suhmsheide'] },
+        { titel: 'An Eider und Kanal', orte: ['Altstadt', 'Neuwerk', 'Parksiedlung', 'Nobiskrug', 'Hoheluft', 'Schleife', 'Hochfeld', 'Kreishafen', 'Rendsburg-Süd', 'Marienhöh'] },
+      ],
+      umland: ['Büdelsdorf', 'Osterrönfeld', 'Westerrönfeld', 'Schacht-Audorf', 'Fockbek', 'Alt Duvenstedt', 'Rickert', 'Nübbel'],
+    },
+    ablauf: [
+      {
+        title: 'Kurze Anfrage',
+        desc: 'Art des Objekts, Bereiche, gewünschter Rhythmus – und ob weitere Standorte dazugehören. Mehr braucht es für den Anfang nicht.',
+      },
+      {
+        title: 'Besichtigung vor Ort',
+        desc: 'Kostenlos in Rendsburg und Umgebung: Wir gehen alle Bereiche durch und klären, was wie oft gereinigt werden soll.',
+      },
+      {
+        title: 'Leistungsverzeichnis und Festpreis',
+        desc: 'Bereiche, Intervalle und Preis übersichtlich in einem Angebot – bei mehreren Standorten je Objekt.',
+      },
+      {
+        title: 'Start mit Einweisung',
+        desc: 'Schlüssel, Zeiten, Ansprechpartner und Besonderheiten jedes Objekts halten wir vor dem ersten Einsatz fest.',
+      },
+      {
+        title: 'Laufende Betreuung',
+        desc: 'Regelmäßige Kontrollen, kurze Wege für Rückfragen und eine eingearbeitete Vertretung.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Reinigen Sie in ganz Rendsburg und im Umland?',
+        answer:
+          'Ja. Wir sind in allen Stadtteilen unterwegs – nördlich der Eider ebenso wie in der Altstadt, in Neuwerk und am Kanal – und in den Nachbargemeinden, etwa in Büdelsdorf, Osterrönfeld, Westerrönfeld und Fockbek. Von unserem Sitz in Bordesholm sind wir über die A7 in rund 30 Minuten vor Ort.',
+      },
+      {
+        question: 'Wir haben Objekte in Rendsburg und in den Nachbargemeinden. Geht das mit einem Ansprechpartner?',
+        answer:
+          'Ja. Jedes Objekt bekommt sein eigenes Leistungsverzeichnis, Sie haben einen Ansprechpartner für alle Standorte – ob in Rendsburg, Büdelsdorf, Osterrönfeld oder Fockbek. Kontrollen und Absprachen laufen über dieselbe Person.',
+      },
+      {
+        question: 'Bei Regen und Wind sehen unsere Eingänge schnell schmutzig aus. Was tun Sie dagegen?',
+        answer:
+          'Eingangsbereiche, Treppenhäuser und Flure bekommen im Leistungsverzeichnis ein eigenes Intervall und werden in der nassen Jahreszeit öfter gereinigt. Bei den Kontrollen sehen wir, ob der Rhythmus passt, und passen ihn bei Bedarf an.',
+      },
+      {
+        question: 'Reinigen Sie Treppenhäuser für Hausverwaltungen in Rendsburg?',
+        answer:
+          'Ja. Treppenhäuser, Hauseingänge, Aufzüge und Gemeinschaftsflächen reinigen wir im festen Turnus – mit einem Ansprechpartner für die Verwaltung und einem Leistungsverzeichnis, das auch Bewohner nachlesen können.',
+      },
+      {
+        question: 'Was gehört zur Unterhaltsreinigung?',
+        answer:
+          'Die regelmäßige Reinigung nach festem Plan: Böden, Sanitär, Sozialräume, Treppenhäuser, Kontaktflächen und Abfall. Was genau dazugehört und wie oft, steht im Leistungsverzeichnis. Für Büros und Praxen in Rendsburg haben wir eigene Seiten.',
+      },
+      {
+        question: 'Was ist der Unterschied zur Grundreinigung?',
+        answer:
+          'Die Unterhaltsreinigung läuft regelmäßig. Die Grundreinigung ist eine seltene, besonders gründliche Reinigung – zum Beispiel ein- bis zweimal im Jahr – und steht als eigener Termin im Jahresplan. Die Grundreinigung übernimmt unser eigenes Team, auf Wunsch mit Versiegelung.',
+      },
+      {
+        question: 'Wer reinigt bei Urlaub oder Krankheit?',
+        answer:
+          'Eine eingearbeitete Vertretung, die Ihr Objekt kennt. So entstehen keine Lücken im Plan, und Ihr Ansprechpartner bleibt derselbe.',
+      },
+      {
+        question: 'Was kostet die Unterhaltsreinigung in Rendsburg?',
+        answer:
+          'Das hängt von Fläche, Bereichen und Intervallen ab. Nach einer kostenlosen Besichtigung erhalten Sie ein Festpreis-Angebot mit Leistungsverzeichnis.',
+      },
+    ],
+    ergaenzungen: [
+      { serviceId: 'glasreinigung', text: 'Fenster und Glasflächen in Rendsburg im eigenen Turnus, abgestimmt mit der laufenden Reinigung.' },
+      { serviceId: 'grundreinigung', text: 'Einmal oder zweimal im Jahr gründlich – mit eigenem Team, auf Wunsch mit Versiegelung, Aus- und Einräumen inklusive.' },
+      { serviceId: 'bueroreinigung', text: 'Büros, Teeküchen und Sanitärräume im selben Objekt – unsere Büroreinigung in Rendsburg.' },
+    ],
+    texte: {
+      zielgruppenLabel: 'Für Ihr Objekt',
+      zielgruppenTitel: 'Unterhaltsreinigung in Rendsburg – ein Objekt oder viele',
+      zielgruppenText: 'Wohnanlage, Betrieb, Geschäft oder mehrere Standorte in Stadt und Umland – der Plan richtet sich nach Ihren Objekten.',
+      grenzenTitel: 'Das planen wir separat',
+      grenzenText: 'Damit das Leistungsverzeichnis klar bleibt.',
+      ablaufTitel: 'So starten wir in Ihrem Objekt',
+      vertrauenLabel: 'Verlässlichkeit',
+      ergaenzungTitel: 'Ergänzt Ihre laufende Reinigung',
+      ctaText:
+        'Wir kommen zur kostenlosen Besichtigung in Rendsburg und Umgebung und erstellen Ihnen ein Festpreis-Angebot mit klarem Leistungsverzeichnis.',
+    },
+    icons: {
+      zielgruppen: [Home, Warehouse, Store, Building2, Users],
+      vertrauen: [ClipboardCheck, UserCheck, Users, CalendarCheck],
+    },
+  },
+
+  // ---- Grundreinigung · Rendsburg ------------------------------------------------------
+  {
+    serviceId: 'grundreinigung',
+    citySlug: 'rendsburg',
+    leistung: 'Grundreinigung',
+    ort: 'Rendsburg',
+    seo: {
+      title: 'Grundreinigung Rendsburg mit Versiegelung | KlarWerk Service',
+      description:
+        'Grundreinigung in Rendsburg für Kitas, Schulen, Praxen, Büros und Wohnanlagen: eigenes Team, Versiegelung auf Wunsch, Aus- und Einräumen inklusive.',
+      keywords:
+        'Grundreinigung Rendsburg, Bodengrundreinigung Rendsburg, Bodenversiegelung Rendsburg, Grundreinigung Kita Rendsburg, Grundreinigung Schule Rendsburg, Grundreinigung Treppenhaus Rendsburg, Grundreinigung Büdelsdorf, Grundreinigung Osterrönfeld',
+    },
+    h1: 'Grundreinigung in Rendsburg',
+    intro:
+      'Zwischen Eider und Nord-Ostsee-Kanal kommen Nässe, Sand und Straßenschmutz an jedem Schuh mit herein. In Eingängen, Fluren und Gruppen- oder Klassenräumen bleiben davon mit der Zeit Laufstraßen, Schmutzfilme und alte Pflegereste, die die laufende Reinigung nicht mehr herausholt. KlarWerk Service macht die Grundreinigung in Rendsburg mit eigenem Team – für Kitas und Schulen, Praxen und Büros, Wohnanlagen und Betriebe, auf Wunsch mit Versiegelung, Aus- und Einräumen inklusive. Träger und Verwaltungen mit mehreren Gebäuden in Stadt und Umland bekommen einen Plan und einen Ansprechpartner. Von Bordesholm aus sind wir über die A7 in rund 30 Minuten bei Ihnen.',
+    bild: {
+      // gleiches Foto wie auf /leistungen/grundreinigung (kommt aus services.ts)
+      alt: 'Gründlich gereinigter und eingepflegter Boden – Grundreinigung in Rendsburg durch KlarWerk Service',
+    },
+    eckdaten: [
+      { titel: 'Eigenes Team', text: 'Reinigung und Versiegelung ohne Subunternehmer' },
+      { titel: 'Aus- und Einräumen inklusive', text: 'Möbel, Stühle und Material stellen wir zur Seite und zurück' },
+      { titel: 'Termin, wenn das Haus leer ist', text: 'Ferien, Schließzeiten, Betriebsurlaub oder Wochenende' },
+    ],
+    zielgruppen: [
+      {
+        titel: 'Träger und Verwaltungen mit mehreren Gebäuden',
+        text: 'Kitas, Schulen oder Verwaltungsgebäude in Rendsburg und in Nachbargemeinden wie Büdelsdorf, Osterrönfeld und Fockbek: ein Ansprechpartner, ein Plan, der die Häuser nacheinander in die freien Zeitfenster legt, und eine Abnahme je Gebäude.',
+      },
+      {
+        titel: 'Kitas und Schulen',
+        text: 'Gruppen- und Klassenräume, Flure, Garderoben und Sanitär, die jeden Tag stark beansprucht werden – gründlich gereinigt in den Ferien oder Schließzeiten, damit zum Start alles frisch ist.',
+      },
+      {
+        titel: 'Praxen und Büros',
+        text: 'Behandlungs- und Arbeitsräume, Wartebereiche und Flure in den Praxisferien oder über ein Wochenende – damit danach alles wieder läuft.',
+      },
+      {
+        titel: 'Hausverwaltungen und Wohnanlagen',
+        text: 'Treppenhäuser, Hauseingänge, Keller- und Gemeinschaftsflächen nach Jahren im Betrieb oder beim Mieterwechsel: Böden, Geländer, Fensterbänke und Briefkastenanlagen einmal richtig.',
+      },
+      {
+        titel: 'Betriebe und Geschäfte',
+        text: 'Sozialräume, Umkleiden, Sanitär und Verkehrsflächen in Betrieben am Kanal, Verkaufsflächen in der Altstadt und in Neuwerk – im Betriebsurlaub, nach einem Umbau oder außerhalb der Öffnungszeiten.',
+      },
+    ],
+    umfang: {
+      wir: [
+        'Böden gründlich reinigen: alte Pflegefilme, Schmutzschichten und Laufstraßen entfernen, abgestimmt auf Belag und Herstellerangaben',
+        'Versiegelung oder Einpflege des Bodens durch unser eigenes Team, wenn Belag und Zustand es sinnvoll machen',
+        'Eingangsbereiche und Flure, in denen sich Nässe und Schmutz von draußen festgesetzt haben',
+        'Sanitärräume und Küchen bis in die Tiefe: Kalk, Fugen, Armaturen, Fliesen, Geräteaußenflächen',
+        'Türen, Zargen, Heizkörper, Lampen, Fensterbänke, Sockelleisten und andere Flächen, die im Alltag nicht drankommen',
+        'Aus- und Einräumen der Räume: Möbel, Stühle, Spielmaterial und Material stellen wir zur Seite und wieder zurück',
+        'Abschlusskontrolle gemeinsam mit Ihnen, zügige Übergabe und Pflegehinweise für die Zeit danach',
+      ],
+      beiIhnen: [
+        'Persönliche Sachen, Unterlagen, Bastelarbeiten und Ware – die fassen wir nicht an',
+        'Fenster außen und Glasfassaden – als Baustein unserer Glasreinigung dazu buchbar',
+        'Beschädigte Beläge, lose Fliesen oder Fugen – Auffälliges melden wir, reparieren aber nicht',
+        'Beläge, deren Hersteller keine Versiegelung vorsieht, bleiben ohne Versiegelung',
+      ],
+    },
+    zeiten: {
+      titel: 'Ein Zeitfenster je Haus – auch bei mehreren Gebäuden',
+      text: 'Eine Grundreinigung braucht freie Flächen. Deshalb legen wir sie in die Zeiten, in denen bei Ihnen nichts läuft. Wer mehrere Häuser in Rendsburg und Umgebung hat, bekommt einen Plan, in dem die Gebäude nacheinander drankommen – abgestimmt mit Leitung, Hausmeister oder Verwaltung. Die Räume werden erst wieder genutzt, wenn wir sie freigegeben haben; den Zeitplan stimmen wir vorher mit Ihnen ab.',
+      punkte: [
+        'In den Sommerferien oder anderen Schulferien, an Schließtagen',
+        'Im Betriebsurlaub oder in den Praxisferien',
+        'Am Wochenende oder nach Feierabend nach Absprache',
+        'Raum für Raum, wenn der Betrieb weiterlaufen muss',
+      ],
+    },
+    vertrauen: [
+      {
+        titel: 'Belag zuerst, dann Verfahren',
+        text: 'Wir sehen uns die Böden vorher an und wählen Mittel, Maschinen und Verfahren nach Belag und Herstellerangaben. Wir empfehlen nur, was zu Ihrem Boden passt.',
+      },
+      {
+        titel: 'Versiegelung aus einer Hand',
+        text: 'Reinigung und Versiegelung macht unser eigenes Team – kein Subunternehmer, ein Ansprechpartner, ein Zeitplan. Das Ergebnis ist professionell und die Übergabe schnell.',
+      },
+      {
+        titel: 'Ein Plan für alle Gebäude',
+        text: 'Mehrere Kitas, Schulen oder Objekte in Rendsburg und Umland? Wir legen die Termine so, dass jedes Haus im passenden Zeitfenster drankommt.',
+      },
+      {
+        titel: 'Abnahme vor Ort',
+        text: 'Nach der Grundreinigung gehen wir die Flächen gemeinsam durch. Sie bekommen Pflegehinweise, damit das Ergebnis lange hält.',
+      },
+    ],
+    anfahrt: {
+      titel: 'Grundreinigung in ganz Rendsburg',
+      text: 'Von Bordesholm sind wir über die A7 in rund 30 Minuten in Rendsburg – in Kitas, Schulen und Wohnanlagen nördlich der Eider, in Praxen, Büros und Geschäften in der Altstadt und in Neuwerk, in Betrieben am Kanal und ebenso in Büdelsdorf, Osterrönfeld und Fockbek. Kurze Wege machen Besichtigung, Termin und Abnahme einfach.',
+      gruppen: [
+        { titel: 'Nördlich der Eider', orte: ['Rendsburg-Nord', 'Mastbrook', 'Rotenhof', 'Kronwerk', 'Duten', 'Seemühlen', 'Suhmsheide'] },
+        { titel: 'An Eider und Kanal', orte: ['Altstadt', 'Neuwerk', 'Parksiedlung', 'Nobiskrug', 'Hoheluft', 'Schleife', 'Hochfeld', 'Kreishafen', 'Rendsburg-Süd', 'Marienhöh'] },
+      ],
+      umland: ['Büdelsdorf', 'Osterrönfeld', 'Westerrönfeld', 'Schacht-Audorf', 'Fockbek', 'Alt Duvenstedt', 'Rickert', 'Nübbel'],
+    },
+    ablauf: [
+      {
+        title: 'Kurze Anfrage',
+        desc: 'Art des Objekts, ungefähre Flächen und Bodenbeläge, bei mehreren Gebäuden die Standorte – ein paar Fotos genügen für eine erste Einschätzung.',
+      },
+      {
+        title: 'Besichtigung vor Ort',
+        desc: 'Kostenlos in Rendsburg und Umgebung: Wir sehen uns Beläge, Zustand und Zugänge an und klären, ob eine Versiegelung sinnvoll ist.',
+      },
+      {
+        title: 'Festpreis mit Zeitvorgabe',
+        desc: 'Nach Flächen, Belägen und Umfang, mit klarem Leistungsverzeichnis – bei mehreren Gebäuden je Haus.',
+      },
+      {
+        title: 'Termin im freien Zeitfenster',
+        desc: 'Ferien, Schließtage, Betriebsurlaub, Wochenende oder Raum für Raum – so, wie es für jedes Haus passt.',
+      },
+      {
+        title: 'Durchführung und Abnahme',
+        desc: 'Wir räumen aus, reinigen, versiegeln auf Wunsch und räumen wieder ein – danach gemeinsame Abnahme, Pflegehinweise und zügige Übergabe.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Machen Sie Grundreinigungen in ganz Rendsburg und im Umland?',
+        answer:
+          'Ja. Wir sind in allen Stadtteilen unterwegs – nördlich der Eider ebenso wie in der Altstadt, in Neuwerk und am Kanal – und in den Nachbargemeinden, etwa in Büdelsdorf, Osterrönfeld, Westerrönfeld und Fockbek. Von unserem Sitz in Bordesholm sind wir über die A7 in rund 30 Minuten vor Ort.',
+      },
+      {
+        question: 'Wann ist eine Grundreinigung sinnvoll?',
+        answer:
+          'Wenn die laufende Reinigung nicht mehr alles herausholt: bei Laufstraßen und Schmutzfilmen in Eingängen und Fluren – an Eider und Kanal kommt viel Nässe und Sand mit herein –, vor dem Einzug, nach einem Umbau, beim Mieterwechsel oder als Jahresaktion in den Ferien oder im Betriebsurlaub.',
+      },
+      {
+        question: 'Wir haben mehrere Kitas oder Schulen in Rendsburg und Umgebung. Können Sie die nacheinander planen?',
+        answer:
+          'Ja. Sie bekommen einen Ansprechpartner und einen Plan, in dem jedes Gebäude ein eigenes Zeitfenster hat – in den Ferien, an Schließtagen oder am Wochenende. Angebot und Abnahme gibt es je Haus, damit es für Träger und Verwaltung nachvollziehbar bleibt.',
+      },
+      {
+        question: 'Machen Sie die Versiegelung selbst?',
+        answer:
+          'Ja. Reinigung und Versiegelung übernimmt unser eigenes Team, wir geben nichts an Subunternehmer ab. So bleiben Ansprechpartner, Zeitplan und Qualität in einer Hand.',
+      },
+      {
+        question: 'Muss jeder Boden versiegelt werden?',
+        answer:
+          'Nein. Die Versiegelung ist optional und nicht für jeden Belag geeignet. Wir richten uns nach Bodenart, Zustand und Herstellerangaben und empfehlen nur, was für Ihren Boden sinnvoll ist.',
+      },
+      {
+        question: 'Müssen wir die Räume vorher ausräumen?',
+        answer:
+          'Nein. Möbel, Stühle und Material stellen wir zur Seite und räumen nach der Grundreinigung wieder ein. Persönliche Sachen, Unterlagen und Ware fassen wir nicht an.',
+      },
+      {
+        question: 'Wann dürfen die Räume wieder genutzt werden?',
+        answer:
+          'Erst nach unserer Freigabe. Wann das ist, hängt von Belag und Verfahren ab – deshalb steht es im Zeitplan, den wir vorher mit Ihnen abstimmen.',
+      },
+      {
+        question: 'Was kostet die Grundreinigung in Rendsburg?',
+        answer:
+          'Das hängt von Flächen, Belägen, Zustand und gewünschter Versiegelung ab. Nach einer kostenlosen Besichtigung erhalten Sie ein Festpreis-Angebot mit verbindlicher Zeitvorgabe.',
+      },
+    ],
+    ergaenzungen: [
+      { serviceId: 'unterhaltsreinigung', text: 'Nach der Grundreinigung die laufende Pflege in Rendsburg abgeben – mit festem Rhythmus und demselben Ansprechpartner.' },
+      { serviceId: 'schulreinigung', text: 'Laufende Reinigung für Schulen in Rendsburg nach Unterrichtsschluss – die Grundreinigung in den Ferien gleich mit eingeplant.' },
+      { serviceId: 'bauendreinigung', text: 'Nach Umbau oder Neubau in Rendsburg erst Baustaub raus, dann die Böden grundreinigen und einpflegen.' },
+    ],
+    texte: {
+      zielgruppenLabel: 'Für Ihr Objekt',
+      zielgruppenTitel: 'Grundreinigung in Rendsburg – ein Haus oder mehrere',
+      zielgruppenText: 'Kita, Schule, Praxis, Wohnanlage oder Betrieb – wir planen nach Ihren Flächen, Belägen und Zeitfenstern.',
+      grenzenTitel: 'Das klären wir vorab',
+      grenzenText: 'Damit am Termin nichts überrascht.',
+      ablaufTitel: 'So läuft Ihre Grundreinigung',
+      vertrauenLabel: 'Qualität & Verlässlichkeit',
+      ergaenzungTitel: 'Rund um Ihr Objekt aus einer Hand',
+      ctaText:
+        'Wir sehen uns Böden und Räume in Rendsburg kostenlos an und erstellen Ihnen ein Festpreis-Angebot für Grundreinigung und Versiegelung – Ausräumen und Einräumen inklusive.',
+    },
+    icons: {
+      zielgruppen: [Building2, Baby, Stethoscope, Home, Warehouse],
+      vertrauen: [ClipboardCheck, Sparkles, CalendarCheck, UserCheck],
+    },
+  },
+
+  // ---- Bauendreinigung · Rendsburg -----------------------------------------------------
+  {
+    serviceId: 'bauendreinigung',
+    citySlug: 'rendsburg',
+    leistung: 'Bauendreinigung',
+    ort: 'Rendsburg',
+    seo: {
+      title: 'Bauendreinigung Rendsburg: grob & fein | KlarWerk Service',
+      description:
+        'Bauendreinigung in Rendsburg und Umland: Grobreinigung zwischen den Gewerken, Feinreinigung zur Übergabe, ein Ansprechpartner für alle Baustellen.',
+      keywords:
+        'Bauendreinigung Rendsburg, Baureinigung Rendsburg, Baugrobreinigung Rendsburg, Bauschlussreinigung Rendsburg, Feinreinigung Neubau Rendsburg, Reinigung nach Sanierung Rendsburg, Bauendreinigung Büdelsdorf, Bauendreinigung Osterrönfeld',
+    },
+    h1: 'Bauendreinigung in Rendsburg',
+    intro:
+      'Sanierung im Altbau der Altstadt, Umbau von Laden, Praxis oder Büro in Neuwerk, Neubau in Rendsburg oder in Büdelsdorf, Osterrönfeld und Fockbek: Am Ende steht der Übergabe nur noch der Baustaub im Weg. KlarWerk Service reinigt Baustellen in Rendsburg in den Stufen, die Ihr Bauablauf braucht – von der Grobreinigung zwischen den Gewerken bis zur Feinreinigung vor Abnahme und Einzug, abgestimmt mit Bauleitung und Handwerkern. Wer mehrere Baustellen in Stadt und Umland hat, bekommt dafür einen Ansprechpartner. Von Bordesholm aus sind wir über die A7 in rund 30 Minuten bei Ihnen.',
+    bild: {
+      // gleiches Foto wie auf /leistungen/bauendreinigung (kommt aus services.ts)
+      alt: 'Übergabefertige Räume nach dem Bau – Bauendreinigung in Rendsburg durch KlarWerk Service',
+    },
+    eckdaten: [
+      { titel: 'Grob- und Feinreinigung', text: 'Zwischen den Gewerken und vor der Übergabe' },
+      { titel: 'Nach Ihrem Bauzeitenplan', text: 'Termine abgestimmt mit Bauleitung und Gewerken' },
+      { titel: 'Verbindliches Angebot', text: 'Festpreis und Zeitvorgabe nach Besichtigung' },
+    ],
+    zielgruppen: [
+      {
+        titel: 'Bauunternehmen und Generalunternehmer',
+        text: 'Grobreinigung, damit Maler, Bodenleger und Elektriker sauber weiterarbeiten, und Feinreinigung vor der Abnahme – terminiert nach Ihrem Bauzeitenplan, auf jeder Ihrer Baustellen in Rendsburg und Umgebung mit demselben Ansprechpartner.',
+      },
+      {
+        titel: 'Bauträger mit Projekten in Stadt und Umland',
+        text: 'Wohnungen und Gewerbeeinheiten in Rendsburg, Büdelsdorf, Osterrönfeld oder Fockbek übergabefertig für Käufer und Mieter – Einheit für Einheit, in der Reihenfolge Ihrer Übergaben.',
+      },
+      {
+        titel: 'Hausverwaltungen nach Sanierung',
+        text: 'Nach Modernisierung, Dachausbau oder Mieterwechsel mit Renovierung, gerade im Altbau der Altstadt: Baustaub raus, Treppenhaus und Wohnung bezugsfertig.',
+      },
+      {
+        titel: 'Laden-, Praxis- und Büroumbau',
+        text: 'Neue Verkaufsräume in der Altstadt, umgebaute Praxen und Büros: sauber zur Eröffnung, damit der Betrieb pünktlich starten kann.',
+      },
+      {
+        titel: 'Private Bauherren',
+        text: 'Nach dem Neubau oder der Sanierung im Eigenheim in Rendsburg oder einer der Nachbargemeinden – vor dem Einzug einmal gründlich, von den Fenstern bis zu den Böden.',
+      },
+    ],
+    umfang: {
+      wir: [
+        'Baugrobreinigung: Bauschmutz, Verpackungsreste und groben Staub besenrein entfernen',
+        'Baustaub von Böden, Heizkörpern, Türen, Zargen, Leuchten und abwaschbaren Flächen',
+        'Farb-, Mörtel-, Gips- und Klebereste schonend von Flächen, Rahmen und Profilen',
+        'Fenster, Rahmen und Fensterbänke innen und außen, Glastüren und Glasbrüstungen',
+        'Sanitär- und Küchenbereiche einschließlich Armaturen und Fliesen übergabefertig',
+        'Treppenhäuser, Eingänge und Gemeinschaftsflächen im Mehrfamilienhaus',
+        'Böden je nach Belag gesaugt und gewischt, auf Wunsch mit Grundreinigung und Ersteinpflege durch unser eigenes Team',
+      ],
+      beiIhnen: [
+        'Bauschutt und Container – klären wir vorab, Reststoffe entsorgen wir auf Wunsch',
+        'Feinreinigung erst, wenn keine staubintensiven Arbeiten mehr anstehen',
+        'Baumängel und Schäden – Auffälliges melden wir, beseitigen es aber nicht',
+        'Schutzfolien auf Fenstern und Böden – entfernen wir nach Absprache, Herstellervorgaben gehen vor',
+      ],
+    },
+    zeiten: {
+      titel: 'Reinigung im Takt Ihrer Bauphasen',
+      text: 'Eine Feinreinigung, nach der noch gebohrt oder geschliffen wird, ist verschenktes Geld. Und solange Fenster und Türen offen stehen, tragen Wind und Wetter an Eider und Kanal Sand und Schmutz in den Rohbau. Deshalb planen wir die Reinigung in Stufen, richten uns nach Ihrem Bauzeitenplan und verschieben mit, wenn sich ein Gewerk verschiebt.',
+      punkte: [
+        'Baugrobreinigung während der Bauphase, zwischen den Gewerken',
+        'Zwischenreinigung, bevor empfindliche Gewerke wie Bodenleger beginnen',
+        'Bauendreinigung als Feinreinigung vor Abnahme, Übergabe und Einzug',
+        'Auf Wunsch Grund- oder Glasreinigung im Anschluss',
+      ],
+    },
+    vertrauen: [
+      {
+        titel: 'Abgestimmt mit der Bauleitung',
+        text: 'Termine nach Ihrem Bauzeitenplan, Absprachen direkt mit Bauleitung, Polier oder Bauherr. Verschiebt sich ein Gewerk, verschieben wir mit.',
+      },
+      {
+        titel: 'Verbindliche Zeitvorgabe',
+        text: 'Im Angebot steht, wie lange wir für jede Stufe brauchen – damit Sie Abnahme und Übergabe sicher planen können.',
+      },
+      {
+        titel: 'Ein Ansprechpartner für alle Baustellen',
+        text: 'Eine Person, die Ihre Objekte von der Grob- bis zur Feinreinigung kennt – auch wenn Sie gleichzeitig in Rendsburg und in den Nachbargemeinden bauen.',
+      },
+      {
+        titel: 'Schonend für neue Flächen',
+        text: 'Farb-, Mörtel- und Klebereste entfernen wir so, dass neue Böden, Rahmen und Profile keinen Schaden nehmen – nach den Vorgaben der Hersteller.',
+      },
+    ],
+    anfahrt: {
+      titel: 'Baureinigung in ganz Rendsburg',
+      text: 'Von Bordesholm sind wir über die A7 in rund 30 Minuten auf Ihrer Baustelle in Rendsburg – nördlich der Eider ebenso wie an Eider und Kanal und in Büdelsdorf, Osterrönfeld und Fockbek. Auch kurzfristige Termine vor einer Übergabe sind so machbar.',
+      gruppen: [
+        { titel: 'Nördlich der Eider', orte: ['Rendsburg-Nord', 'Mastbrook', 'Rotenhof', 'Kronwerk', 'Duten', 'Seemühlen', 'Suhmsheide'] },
+        { titel: 'An Eider und Kanal', orte: ['Altstadt', 'Neuwerk', 'Parksiedlung', 'Nobiskrug', 'Hoheluft', 'Schleife', 'Hochfeld', 'Kreishafen', 'Rendsburg-Süd', 'Marienhöh'] },
+      ],
+      umland: ['Büdelsdorf', 'Osterrönfeld', 'Westerrönfeld', 'Schacht-Audorf', 'Fockbek', 'Alt Duvenstedt', 'Rickert', 'Nübbel'],
+    },
+    ablauf: [
+      {
+        title: 'Kurze Anfrage',
+        desc: 'Objektart, ungefähre Fläche, Bauphase und geplanter Übergabetermin genügen für den Anfang.',
+      },
+      {
+        title: 'Besichtigung auf der Baustelle',
+        desc: 'Kostenlos in Rendsburg und Umgebung: Wir sehen uns Stand, Flächen und Verschmutzung an und klären, welche Reinigungsstufen nötig sind.',
+      },
+      {
+        title: 'Festpreis mit Zeitvorgabe',
+        desc: 'Ein verbindliches Angebot je Reinigungsstufe – mit Preis und Dauer.',
+      },
+      {
+        title: 'Reinigung nach Bauplan',
+        desc: 'Grobreinigung während der Bauphase, Feinreinigung, sobald die staubintensiven Arbeiten beendet sind.',
+      },
+      {
+        title: 'Gemeinsame Abnahme',
+        desc: 'Am Ende gehen wir die Flächen mit Ihnen durch – bereit für Übergabe oder Einzug.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Was ist der Unterschied zwischen Grob- und Feinreinigung?',
+        answer:
+          'Die Baugrobreinigung entfernt während der Bauphase groben Schmutz, Reste und Staub, damit die nächsten Gewerke sauber arbeiten können. Die Feinreinigung ist die eigentliche Bauendreinigung: Sie macht das Objekt übergabe- oder bezugsfertig.',
+      },
+      {
+        question: 'Wann sollte die Bauendreinigung in Rendsburg stattfinden?',
+        answer:
+          'Nach Abschluss aller Gewerke, sobald keine staubintensiven Arbeiten mehr anstehen und Fenster und Türen geschlossen bleiben. Wir planen den Termin mit Ihrer Bauleitung und verschieben mit, wenn sich der Bauzeitenplan ändert.',
+      },
+      {
+        question: 'Wir bauen an mehreren Stellen in Rendsburg und im Umland. Geht das mit einem Ansprechpartner?',
+        answer:
+          'Ja. Ob Rendsburg, Büdelsdorf, Osterrönfeld oder Fockbek: Sie haben eine Person für alle Baustellen, jede mit eigenem Angebot je Reinigungsstufe und Termin nach ihrem Bauzeitenplan.',
+      },
+      {
+        question: 'Reinigen Sie auch einzelne Wohnungen nach Sanierung, etwa im Altbau?',
+        answer:
+          'Ja. Einzelne Wohnungen, Gewerbeeinheiten oder Treppenhäuser nach Renovierung reinigen wir bezugsfertig – auch im Altbau der Rendsburger Altstadt.',
+      },
+      {
+        question: 'Wie schnell können Sie in Rendsburg vor Ort sein?',
+        answer:
+          'Von Bordesholm sind wir über die A7 in rund 30 Minuten in Rendsburg. Termine stimmen wir mit Ihrem Bauzeitenplan ab – auch kurzfristig vor einer Übergabe, wenn unsere Planung es zulässt.',
+      },
+      {
+        question: 'Entfernen Sie Farb-, Gips- und Mörtelreste?',
+        answer:
+          'Ja, wir entfernen Farb-, Gips-, Mörtel- und Klebereste schonend von Flächen, Rahmen und Profilen – so, dass neue Oberflächen keinen Schaden nehmen.',
+      },
+      {
+        question: 'Kümmern Sie sich um Bauschutt und Schutzfolien?',
+        answer:
+          'Die Entsorgung von Reststoffen organisieren wir auf Wunsch, Bauschutt und Container klären wir vorab. Schutzfolien entfernen wir nach Absprache, wenn die Herstellervorgaben es zulassen.',
+      },
+      {
+        question: 'Was kostet die Bauendreinigung in Rendsburg?',
+        answer:
+          'Das hängt von Fläche, Verschmutzung und Reinigungsstufen ab. Nach einer kostenlosen Besichtigung erhalten Sie ein Festpreis-Angebot mit verbindlicher Zeitvorgabe.',
+      },
+    ],
+    ergaenzungen: [
+      { serviceId: 'grundreinigung', text: 'Böden nach dem Bau gründlich reinigen und einpflegen – in Rendsburg mit eigenem Team, auf Wunsch mit Versiegelung.' },
+      { serviceId: 'glasreinigung', text: 'Glasfronten und Fenster in Rendsburg nach dem Bau streifenfrei – auch im festen Turnus danach.' },
+      { serviceId: 'unterhaltsreinigung', text: 'Nach dem Einzug nahtlos in die laufende Reinigung in Rendsburg übergehen.' },
+    ],
+    texte: {
+      zielgruppenLabel: 'Für Ihr Bauprojekt',
+      zielgruppenTitel: 'Baureinigung in Rendsburg – vom Altbau bis zum Neubau',
+      zielgruppenText: 'Von der Wohnung in der Altstadt bis zum Projekt im Umland – wir planen nach Ihrem Bauablauf.',
+      grenzenTitel: 'Das klären wir vorab',
+      grenzenText: 'Damit die Reinigung zum Bauablauf passt.',
+      ablaufTitel: 'So läuft Ihre Bauendreinigung',
+      vertrauenLabel: 'Verlässlichkeit',
+      ergaenzungTitel: 'Nach dem Bau',
+      ctaText:
+        'Wir sehen uns Ihre Baustelle in Rendsburg kostenlos an und erstellen Ihnen ein Festpreis-Angebot mit verbindlicher Zeitvorgabe.',
+    },
+    icons: {
+      zielgruppen: [HardHat, Building2, Home, Store, Users],
+      vertrauen: [CalendarCheck, ClipboardCheck, UserCheck, ShieldCheck],
+    },
+  },
+
+  // ---- Kita-Reinigung · Rendsburg ------------------------------------------------------
+  {
+    serviceId: 'kita-reinigung',
+    citySlug: 'rendsburg',
+    leistung: 'Kita-Reinigung',
+    ort: 'Rendsburg',
+    seo: {
+      title: 'Kita-Reinigung Rendsburg nach Hygieneplan | KlarWerk Service',
+      description:
+        'Kita-Reinigung in Rendsburg und Umland: Gruppenräume, Wickel- und Sanitärbereiche nach Hygieneplan, nach Betreuungsschluss, ein Ansprechpartner für Träger.',
+      keywords:
+        'Kita-Reinigung Rendsburg, Kindergartenreinigung Rendsburg, Krippenreinigung Rendsburg, Reinigung Kindertagesstätte Rendsburg, Hortreinigung Rendsburg, Kita Reinigung Büdelsdorf, Kita Reinigung Osterrönfeld, Kita Reinigung Fockbek',
+    },
+    h1: 'Kita-Reinigung in Rendsburg',
+    intro:
+      'An Eider und Nord-Ostsee-Kanal ist es oft windig und nass – und was draußen auf Spielplatz und Wegen liegt, kommt an Stiefeln, Matschhosen und Jacken mit herein. In einer Kita wird zugleich auf dem Boden gespielt, gegessen, gekrabbelt und gewickelt. KlarWerk Service reinigt Kindertagesstätten, Krippen und Horte in Rendsburg und in Nachbargemeinden wie Büdelsdorf, Osterrönfeld und Fockbek nach dem Hygieneplan der Einrichtung, außerhalb der Betreuungszeiten, mit festem Team und einem Ansprechpartner für Leitung und Träger – auch für mehrere Häuser. Von Bordesholm aus sind wir über die A7 in rund 30 Minuten bei Ihnen.',
+    bild: {
+      // gleiches Foto wie auf /leistungen/kita-reinigung (kommt aus services.ts)
+      alt: 'Sauberer Gruppenraum einer Kindertagesstätte – Kita-Reinigung in Rendsburg durch KlarWerk Service',
+    },
+    eckdaten: [
+      { titel: 'Nach Ihrem Hygieneplan', text: 'Umfang und Intervalle wie in der Einrichtung festgelegt' },
+      { titel: 'Außerhalb der Betreuung', text: 'Nach Schließung oder frühmorgens, nie zwischen den Kindern' },
+      { titel: 'Ein Ansprechpartner für den Träger', text: 'Für ein Haus oder mehrere in Stadt und Umland' },
+    ],
+    zielgruppen: [
+      {
+        titel: 'Träger mit Kitas in Stadt und Umland',
+        text: 'Einrichtungen in Rendsburg und in Nachbargemeinden wie Büdelsdorf, Osterrönfeld oder Fockbek: ein Leistungsverzeichnis je Haus nach dessen Hygieneplan, ein Ansprechpartner für alle, Kontrollen und Abstimmung zentral mit dem Träger.',
+      },
+      {
+        titel: 'Freie Träger und Elterninitiativen',
+        text: 'Kleine Einrichtungen mit wenig Verwaltung im Hintergrund – wir halten den Aufwand für Leitung und Vorstand klein und bleiben erreichbar, wenn sich etwas ändert.',
+      },
+      {
+        titel: 'Krippen und Kleinkindgruppen',
+        text: 'Wickelbereiche, Schlafräume und Bodenflächen, auf denen gekrabbelt wird: Hier müssen Kontaktflächen, Sanitär und Böden jeden Tag stimmen – das ist der Kern des Plans.',
+      },
+      {
+        titel: 'Kitas mit viel Draußenzeit',
+        text: 'Sand, Matsch und nasse Kleidung kommen bei Wind und Regen jeden Tag mit herein. Eingang, Garderoben, Waschräume und Flure bekommen deshalb eigene Intervalle, in der nassen Jahreszeit öfter.',
+      },
+      {
+        titel: 'Horte und Ganztagsbetreuung',
+        text: 'Räume, die nachmittags voll und abends leer sind – wir reinigen nach Betreuungsschluss, damit morgens alles bereit ist.',
+      },
+    ],
+    umfang: {
+      wir: [
+        'Gruppen- und Spielräume: Böden, Tische, Stühle und erreichbare Flächen',
+        'Wickelbereiche, Windeleimer und Sanitärräume mit kindgerechten Toiletten und Waschrinnen',
+        'Eingang, Garderoben und Flure – mit Sand, Matsch und Nässe von draußen',
+        'Kontaktflächen wie Türklinken, Lichtschalter, Handläufe und Garderobenhaken',
+        'Küche und Essbereiche nach Absprache mit dem Küchenteam',
+        'Mitarbeiterräume, Büro der Leitung, Abfall und Mülltrennung',
+        'Zusätzliche Reinigung von Kontaktflächen bei Infektionswellen auf Anweisung der Leitung',
+      ],
+      beiIhnen: [
+        'Spielzeug, Kuscheltiere, Textilien und Bettwäsche – Waschen und Desinfizieren bleibt bei der Einrichtung',
+        'Lebensmittelhygiene in der Küche – die Verantwortung bleibt beim Küchenteam',
+        'Grundreinigung und Bodenversiegelung – eigener Termin in den Schließzeiten',
+        'Außenspielgeräte, Sandkiste und Gartenwege – nicht Teil der laufenden Reinigung',
+      ],
+    },
+    zeiten: {
+      titel: 'Fertig, bevor das erste Kind kommt – bei jedem Wetter',
+      text: 'Die laufende Reinigung findet statt, wenn die Kinder weg sind: nach Schließung am Nachmittag oder frühmorgens vor der Öffnung. Welche Bereiche täglich und welche wöchentlich dran sind, richtet sich nach dem Hygieneplan Ihrer Einrichtung – und nach dem Wetter an Eider und Kanal: Bei Regen und Wind brauchen Eingang und Garderoben mehr als an trockenen Tagen.',
+      punkte: [
+        'Täglich: Sanitär, Wickelbereiche, Gruppenräume, Kontaktflächen, Abfall',
+        'Öfter in der nassen Jahreszeit: Eingang, Garderoben, Flure',
+        'Wöchentlich oder nach Plan: Fenster innen, Heizkörper, Regale, Lager',
+        'Grundreinigung in den Schließzeiten als eigener Termin',
+      ],
+    },
+    vertrauen: [
+      {
+        titel: 'Ihr Hygieneplan ist die Vorgabe',
+        text: 'Jede Kita hat einen Hygieneplan. Wir übernehmen daraus, was zur Reinigung gehört, und halten die Intervalle im Leistungsverzeichnis fest – für Leitung und Träger nachlesbar.',
+      },
+      {
+        titel: 'Geeignete Mittel für Kinderräume',
+        text: 'Wir setzen Reinigungsmittel ein, die für den Einsatz in Kindereinrichtungen geeignet sind, und lüften gereinigte Räume, bevor die Kinder kommen.',
+      },
+      {
+        titel: 'Festes Team, feste Gesichter',
+        text: 'Ein eingespieltes Team, das die Einrichtung, die Schlüssel und die Besonderheiten kennt. Bei Urlaub oder Krankheit übernimmt eine eingearbeitete Vertretung.',
+      },
+      {
+        titel: 'Ein Ansprechpartner für Leitung und Träger',
+        text: 'Rückmeldungen aus dem Team, Änderungen im Plan oder ein zusätzlicher Termin – eine Person, die erreichbar ist und sich kümmert, für ein Haus oder alle Häuser des Trägers.',
+      },
+    ],
+    anfahrt: {
+      titel: 'Kita-Reinigung in ganz Rendsburg',
+      text: 'Von Bordesholm sind wir über die A7 in rund 30 Minuten in Rendsburg – bei Kitas, Krippen und Horten in den Wohnlagen nördlich der Eider, in der Altstadt, in Neuwerk und am Kanal und ebenso in Büdelsdorf, Osterrönfeld und Fockbek. Kurze Wege machen Kontrollen und kurzfristige Einsätze einfach.',
+      gruppen: [
+        { titel: 'Nördlich der Eider', orte: ['Rendsburg-Nord', 'Mastbrook', 'Rotenhof', 'Kronwerk', 'Duten', 'Seemühlen', 'Suhmsheide'] },
+        { titel: 'An Eider und Kanal', orte: ['Altstadt', 'Neuwerk', 'Parksiedlung', 'Nobiskrug', 'Hoheluft', 'Schleife', 'Hochfeld', 'Kreishafen', 'Rendsburg-Süd', 'Marienhöh'] },
+      ],
+      umland: ['Büdelsdorf', 'Osterrönfeld', 'Westerrönfeld', 'Schacht-Audorf', 'Fockbek', 'Alt Duvenstedt', 'Rickert', 'Nübbel'],
+    },
+    ablauf: [
+      {
+        title: 'Kurze Anfrage',
+        desc: 'Art und Größe der Einrichtung, Anzahl der Gruppen und Betreuungszeiten – bei mehreren Häusern die Standorte. Mehr braucht es für den Anfang nicht.',
+      },
+      {
+        title: 'Besichtigung vor Ort',
+        desc: 'Kostenlos in Rendsburg und Umgebung: Wir gehen Räume, Wickel- und Sanitärbereiche durch und sehen uns Ihren Hygieneplan an.',
+      },
+      {
+        title: 'Leistungsverzeichnis und Festpreis',
+        desc: 'Bereiche, Intervalle und Preis übersichtlich in einem Angebot – je Haus und auch für den Träger nachvollziehbar.',
+      },
+      {
+        title: 'Start mit Einweisung',
+        desc: 'Schlüssel, Alarmanlage, Zeiten, Ansprechpartner und Besonderheiten der Einrichtung halten wir vor dem ersten Einsatz fest.',
+      },
+      {
+        title: 'Laufende Betreuung',
+        desc: 'Regelmäßige Kontrollen, kurze Wege für Rückfragen und Anpassungen, wenn sich Gruppen, Zeiten oder die Jahreszeit ändern.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Reinigen Sie Kitas in ganz Rendsburg und im Umland?',
+        answer:
+          'Ja. Wir sind in allen Stadtteilen unterwegs – nördlich der Eider ebenso wie in der Altstadt, in Neuwerk und am Kanal – und in den Nachbargemeinden, etwa in Büdelsdorf, Osterrönfeld, Westerrönfeld und Fockbek. Von unserem Sitz in Bordesholm sind wir über die A7 in rund 30 Minuten vor Ort.',
+      },
+      {
+        question: 'Wann wird gereinigt?',
+        answer:
+          'Nach Schließung am Nachmittag oder frühmorgens vor der Öffnung. Zwischen den Kindern wird nicht gereinigt.',
+      },
+      {
+        question: 'Richten Sie sich nach unserem Hygieneplan?',
+        answer:
+          'Ja. Ihr Hygieneplan legt fest, welche Bereiche wie oft gereinigt werden. Wir übernehmen daraus die Reinigungsaufgaben ins Leistungsverzeichnis und halten uns daran.',
+      },
+      {
+        question: 'Unser Träger hat Kitas in Rendsburg und in Nachbargemeinden. Betreuen Sie alle?',
+        answer:
+          'Ja. Jedes Haus bekommt sein eigenes Leistungsverzeichnis nach seinem Hygieneplan, der Träger einen Ansprechpartner für alle Einrichtungen – ob in Rendsburg, Büdelsdorf, Osterrönfeld oder Fockbek. Kontrollen und Abstimmung laufen zentral.',
+      },
+      {
+        question: 'Bei Regen kommt viel Matsch und Sand mit herein. Wie gehen Sie damit um?',
+        answer:
+          'Eingang, Garderoben und Flure bekommen eigene Intervalle und werden in der nassen Jahreszeit öfter gereinigt. Das legen wir im Leistungsverzeichnis fest und passen es an, wenn Ihr Team merkt, dass es nicht reicht.',
+      },
+      {
+        question: 'Gehören Wickelbereiche dazu?',
+        answer:
+          'Ja. Wickeltische, Windeleimer und die umliegenden Flächen gehören zur täglichen Reinigung, ebenso die Sanitärräume mit kindgerechten Toiletten und Waschrinnen.',
+      },
+      {
+        question: 'Übernehmen Sie auch die Grundreinigung in den Schließzeiten?',
+        answer:
+          'Ja. Böden gründlich reinigen und auf Wunsch versiegeln machen wir mit unserem eigenen Team in den Schließzeiten, Aus- und Einräumen inklusive – dafür gibt es unsere Seite zur Grundreinigung in Rendsburg.',
+      },
+      {
+        question: 'Was kostet die Kita-Reinigung in Rendsburg?',
+        answer:
+          'Das hängt von Fläche, Gruppen, Bereichen und Intervallen ab. Nach einer kostenlosen Besichtigung erhalten Sie ein Festpreis-Angebot mit Leistungsverzeichnis.',
+      },
+    ],
+    ergaenzungen: [
+      { serviceId: 'grundreinigung', text: 'Böden in den Schließzeiten gründlich reinigen und auf Wunsch versiegeln – unsere Grundreinigung in Rendsburg, mit eigenem Team.' },
+      { serviceId: 'schulreinigung', text: 'Schulen und Ganztag desselben Trägers in Rendsburg nach festem Plan – mit demselben Ansprechpartner.' },
+      { serviceId: 'glasreinigung', text: 'Fenster und Glastüren der Einrichtung in Rendsburg im eigenen Turnus, innen und außen.' },
+    ],
+    texte: {
+      zielgruppenLabel: 'Für Ihre Einrichtung',
+      zielgruppenTitel: 'Kita-Reinigung in Rendsburg – ein Haus oder viele',
+      zielgruppenText: 'Krippe, Kindergarten oder Hort, in der Stadt oder im Umland – der Plan richtet sich nach Ihrem Hygieneplan und Ihren Zeiten.',
+      grenzenTitel: 'Das bleibt bei Ihnen',
+      grenzenText: 'Damit Zuständigkeiten klar sind.',
+      ablaufTitel: 'So starten wir in Ihrer Kita',
+      vertrauenLabel: 'Hygiene & Verlässlichkeit',
+      ergaenzungTitel: 'Rund um Ihre Einrichtung aus einer Hand',
+      ctaText:
+        'Wir sehen uns Ihre Einrichtung in Rendsburg kostenlos an und erstellen Ihnen ein Festpreis-Angebot mit Leistungsverzeichnis nach Ihrem Hygieneplan.',
+    },
+    icons: {
+      zielgruppen: [Building2, Users, Baby, Activity, Smile],
+      vertrauen: [ClipboardCheck, ShieldCheck, Users, UserCheck],
+    },
+  },
+
+  // ---- Schulreinigung · Rendsburg ------------------------------------------------------
+  {
+    serviceId: 'schulreinigung',
+    citySlug: 'rendsburg',
+    leistung: 'Schulreinigung',
+    ort: 'Rendsburg',
+    seo: {
+      title: 'Schulreinigung in Rendsburg | KlarWerk Service',
+      description:
+        'Schulreinigung in Rendsburg und Umland: Klassenräume, Mensa, Sanitär und Sporthallen nach Schulschluss, ein Plan je Standort, Grundreinigung in den Ferien.',
+      keywords:
+        'Schulreinigung Rendsburg, Reinigung Schule Rendsburg, Sporthallenreinigung Rendsburg, Reinigung Berufsschule Rendsburg, Klassenraumreinigung Rendsburg, Schulreinigung Büdelsdorf, Schulreinigung Osterrönfeld, Schulreinigung Fockbek',
+    },
+    h1: 'Schulreinigung in Rendsburg',
+    intro:
+      'Rendsburg ist Kreisstadt und Versorgungszentrum des Kreises Rendsburg-Eckernförde – auch für Bildung: Grund- und Gemeinschaftsschulen, weiterführende und berufliche Schulen in der Stadt, dazu Schulen in den eng verbundenen Nachbargemeinden wie Büdelsdorf, Osterrönfeld und Fockbek. KlarWerk Service reinigt Schulen in Rendsburg nach einem Leistungsverzeichnis je Standort – nach Unterrichtsschluss oder nach dem Ganztag, Sporthallen nach Belegungsplan, Mensa nach Absprache mit dem Küchenbetrieb. Ein festes Team und ein Ansprechpartner für Schulleitung, Hausmeister und Träger. Von Bordesholm aus sind wir über die A7 in rund 30 Minuten bei Ihnen.',
+    bild: {
+      // gleiches Foto wie auf /leistungen/schulreinigung (kommt aus services.ts)
+      alt: 'Sauberer Klassenraum nach Unterrichtsschluss – Schulreinigung in Rendsburg durch KlarWerk Service',
+    },
+    eckdaten: [
+      { titel: 'Ein Plan je Standort', text: 'Ein Ansprechpartner für alle Schulen des Trägers' },
+      { titel: 'Außerhalb des Unterrichts', text: 'Nach Schulschluss, nach dem Ganztag oder frühmorgens' },
+      { titel: 'Ferien für das Grobe', text: 'Grundreinigung und Bodenpflege durch unser eigenes Team' },
+    ],
+    zielgruppen: [
+      {
+        titel: 'Schulträger mit mehreren Standorten',
+        text: 'Schulen in Rendsburg und in Nachbargemeinden wie Büdelsdorf, Osterrönfeld oder Fockbek: ein Leistungsverzeichnis je Standort, ein Ansprechpartner für alle, Kontrollen und Abstimmung zentral – ohne dass jede Schule einzeln koordinieren muss.',
+      },
+      {
+        titel: 'Grund- und Gemeinschaftsschulen mit Ganztag',
+        text: 'Klassenräume, Flure, Mensa und Sanitär, die bis in den Nachmittag genutzt werden – wir reinigen nach dem Ganztag und stimmen uns mit Hausmeister und Betreuung ab.',
+      },
+      {
+        titel: 'Weiterführende Schulen und Gymnasien',
+        text: 'Klassen- und Fachräume, Aula, Pausenhallen und Treppenhäuser mit vielen Schülern auf engem Raum – nach Unterrichtsschluss gereinigt, mit eigenen Intervallen je Bereich.',
+      },
+      {
+        titel: 'Berufliche Schulen und Bildungsträger',
+        text: 'Unterrichtsräume, Werkstätten, Lehrküchen und Aufenthaltsbereiche mit Belegung bis in den Abend – wir reinigen in den Lücken des Stundenplans und nach Einweisung durch die Fachbereiche.',
+      },
+      {
+        titel: 'Sporthallen mit Vereinsbetrieb',
+        text: 'Sportböden, Umkleiden, Duschen und Geräteräume, die nach dem Schulsport von Vereinen weitergenutzt werden – mit Zeiten, die zum Belegungsplan passen.',
+      },
+    ],
+    umfang: {
+      wir: [
+        'Klassen- und Fachräume: Böden, Tische, Tafeln, Waschbecken und erreichbare Flächen',
+        'Flure, Treppenhäuser, Eingänge, Aula und Pausenhallen – mit Nässe und Sand vom Schulhof',
+        'Sanitäranlagen für Schüler und Lehrkräfte, täglich oder nach Plan',
+        'Sporthallen: Sportböden, Umkleiden, Duschen und Geräteräume nach Belegungsplan',
+        'Mensa, Ausgabe und Essbereiche nach Absprache mit dem Küchenbetrieb',
+        'Werkstätten und Lehrküchen nach Einweisung durch den Fachbereich',
+        'Lehrerzimmer, Verwaltung und Sekretariat',
+        'Kontaktflächen wie Türklinken, Handläufe, Lichtschalter und Trinkbrunnen, Abfall und Mülltrennung',
+      ],
+      beiIhnen: [
+        'Grundreinigung, Bodenpflege und Beschichtung – eigener Termin in den Ferien, durch unser eigenes Team',
+        'Fenster außen und Glasfassaden – eigener Turnus in der Glasreinigung',
+        'Lebensmittelhygiene in Mensa und Lehrküche – die Verantwortung bleibt beim Küchenbetrieb',
+        'Schulhof und Außenanlagen – darum kümmert sich der Hausmeister',
+      ],
+    },
+    zeiten: {
+      titel: 'Zwischen letzter und erster Stunde',
+      text: 'Klassentrakt, Mensa und Sporthalle werden zu unterschiedlichen Zeiten frei. Deshalb bekommt jeder Bereich im Leistungsverzeichnis seine eigene Zeit und sein eigenes Intervall. Eingänge und Pausenhallen, in die bei Wind und Regen an Eider und Kanal viel Nässe und Sand getragen wird, kommen in der nassen Jahreszeit öfter dran. Was im laufenden Betrieb nicht geht, legen wir in die Ferien.',
+      punkte: [
+        'Täglich: Sanitär, Mensa, Eingänge, Kontaktflächen, Abfall',
+        'Täglich oder nach Plan: Klassen- und Fachräume, Flure, Lehrerzimmer',
+        'Sporthallen nach Belegungsplan, auch nach dem Vereinsbetrieb am Abend',
+        'Grundreinigung, Bodenpflege und Beschichtung in den Ferien',
+      ],
+    },
+    vertrauen: [
+      {
+        titel: 'Ein Plan je Standort',
+        text: 'Schulleitung, Hausmeister und Träger sehen für jeden Standort, welcher Bereich wie oft gereinigt wird – nachvollziehbar, auch für Gremien.',
+      },
+      {
+        titel: 'Abgestimmt mit dem Hausmeister',
+        text: 'Zugänge, Alarmanlage, Belegung der Halle und Veranstaltungen stimmen wir mit Ihrem Hausmeister ab, damit nichts kollidiert.',
+      },
+      {
+        titel: 'Festes Team, eingearbeitete Vertretung',
+        text: 'Ein Team, das die Schule kennt. Bei Urlaub oder Krankheit übernimmt jemand, der eingearbeitet ist.',
+      },
+      {
+        titel: 'Geeignete Mittel für Bildungseinrichtungen',
+        text: 'Wir setzen Reinigungsmittel ein, die für Schulen geeignet sind, und lüften gereinigte Räume, bevor der Unterricht beginnt.',
+      },
+    ],
+    anfahrt: {
+      titel: 'Schulreinigung in ganz Rendsburg',
+      text: 'Von Bordesholm sind wir über die A7 in rund 30 Minuten in Rendsburg – bei Schulen nördlich der Eider, in der Altstadt, in Neuwerk und am Kanal und ebenso in Büdelsdorf, Osterrönfeld und Fockbek. Kurze Wege machen Kontrollen und zusätzliche Termine nach Veranstaltungen einfach.',
+      gruppen: [
+        { titel: 'Nördlich der Eider', orte: ['Rendsburg-Nord', 'Mastbrook', 'Rotenhof', 'Kronwerk', 'Duten', 'Seemühlen', 'Suhmsheide'] },
+        { titel: 'An Eider und Kanal', orte: ['Altstadt', 'Neuwerk', 'Parksiedlung', 'Nobiskrug', 'Hoheluft', 'Schleife', 'Hochfeld', 'Kreishafen', 'Rendsburg-Süd', 'Marienhöh'] },
+      ],
+      umland: ['Büdelsdorf', 'Osterrönfeld', 'Westerrönfeld', 'Schacht-Audorf', 'Fockbek', 'Alt Duvenstedt', 'Rickert', 'Nübbel'],
+    },
+    ablauf: [
+      {
+        title: 'Kurze Anfrage',
+        desc: 'Schulform, Standorte, ungefähre Flächen und Unterrichtszeiten – mehr braucht es für den Anfang nicht.',
+      },
+      {
+        title: 'Besichtigung vor Ort',
+        desc: 'Kostenlos in Rendsburg und Umgebung: Wir gehen Gebäude, Halle, Mensa und Sanitär mit Ihnen oder Ihrem Hausmeister durch und klären Zeiten und Zugänge.',
+      },
+      {
+        title: 'Leistungsverzeichnis und Festpreis',
+        desc: 'Bereiche, Intervalle und Preis je Standort übersichtlich in einem Angebot – auch für Träger und Gremien nachvollziehbar.',
+      },
+      {
+        title: 'Start mit Einweisung',
+        desc: 'Schlüssel, Alarmanlage, Zeiten, Ansprechpartner und Besonderheiten der Fachräume halten wir vor dem ersten Einsatz fest.',
+      },
+      {
+        title: 'Laufende Betreuung',
+        desc: 'Regelmäßige Kontrollen, kurze Wege für Rückfragen und Anpassungen bei neuen Stundenplänen oder Belegungen.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Reinigen Sie Schulen in ganz Rendsburg und im Umland?',
+        answer:
+          'Ja. Wir sind in allen Stadtteilen unterwegs – nördlich der Eider ebenso wie in der Altstadt, in Neuwerk und am Kanal – und in den Nachbargemeinden, etwa in Büdelsdorf, Osterrönfeld, Westerrönfeld und Fockbek. Von unserem Sitz in Bordesholm sind wir über die A7 in rund 30 Minuten vor Ort.',
+      },
+      {
+        question: 'Reinigen Sie während des Unterrichts?',
+        answer:
+          'Nein. Die laufende Reinigung findet nach Schulschluss, nach dem Ganztag oder frühmorgens statt. Sporthallen und Mensa bekommen eigene Zeiten nach Belegung.',
+      },
+      {
+        question: 'Betreuen Sie mehrere Schulen eines Trägers in Rendsburg und den Nachbargemeinden?',
+        answer:
+          'Ja. Jeder Standort bekommt sein eigenes Leistungsverzeichnis, der Träger einen Ansprechpartner für alle Schulen – ob in Rendsburg, Büdelsdorf, Osterrönfeld oder Fockbek. Kontrollen und Abstimmung laufen zentral.',
+      },
+      {
+        question: 'Bei Regenwetter sehen Eingänge und Pausenhallen schnell schmutzig aus. Was tun Sie?',
+        answer:
+          'Eingänge, Pausenhallen und Flure bekommen im Leistungsverzeichnis eigene Intervalle und kommen in der nassen Jahreszeit öfter dran. Bei den Kontrollen prüfen wir, ob das reicht, und passen den Plan mit Ihnen an.',
+      },
+      {
+        question: 'Gehört die Sporthalle dazu, auch bei Vereinsbetrieb?',
+        answer:
+          'Ja. Sportböden, Umkleiden, Duschen und Geräteräume reinigen wir nach Belegungsplan – auch wenn Vereine die Halle nach dem Schulsport weiternutzen.',
+      },
+      {
+        question: 'Wie stimmen Sie sich mit unserem Hausmeister ab?',
+        answer:
+          'Zugänge, Alarmanlage, Hallenbelegung und Veranstaltungen klären wir direkt mit Ihrem Hausmeister. Er bleibt Ansprechpartner im Haus, wir haben einen festen Ansprechpartner bei uns.',
+      },
+      {
+        question: 'Was passiert in den Ferien?',
+        answer:
+          'In den Ferien macht unser eigenes Team die Grundreinigung der Böden und auf Wunsch Bodenpflege und Versiegelung, Aus- und Einräumen inklusive – dafür gibt es unsere Seite zur Grundreinigung in Rendsburg.',
+      },
+      {
+        question: 'Was kostet die Schulreinigung in Rendsburg?',
+        answer:
+          'Das hängt von Flächen, Räumen, Bereichen und Intervallen ab. Nach einer kostenlosen Besichtigung erhalten Sie ein Festpreis-Angebot mit Leistungsverzeichnis je Standort.',
+      },
+    ],
+    ergaenzungen: [
+      { serviceId: 'grundreinigung', text: 'Böden in den Ferien gründlich reinigen und auf Wunsch versiegeln – unsere Grundreinigung in Rendsburg, mit eigenem Team.' },
+      { serviceId: 'kita-reinigung', text: 'Kitas und Horte desselben Trägers in Rendsburg nach Hygieneplan – mit demselben Ansprechpartner.' },
+      { serviceId: 'glasreinigung', text: 'Fenster, Glastüren und Glasfassaden der Schule in Rendsburg im eigenen Turnus, innen und außen.' },
+    ],
+    texte: {
+      zielgruppenLabel: 'Für Ihre Schule',
+      zielgruppenTitel: 'Schulreinigung in Rendsburg – eine Schule oder alle Standorte',
+      zielgruppenText: 'Grundschule, Gymnasium, Berufsschule oder Sporthalle, in der Stadt oder im Umland – der Plan richtet sich nach Trakten, Stundenplan und Belegung.',
+      grenzenTitel: 'Das bleibt bei Ihnen',
+      grenzenText: 'Damit Zuständigkeiten klar sind.',
+      ablaufTitel: 'So starten wir an Ihrer Schule',
+      vertrauenLabel: 'Verlässlichkeit',
+      ergaenzungTitel: 'Rund um Ihre Schule aus einer Hand',
+      ctaText:
+        'Wir sehen uns Ihre Schule in Rendsburg kostenlos an und erstellen Ihnen ein Festpreis-Angebot mit klarem Leistungsverzeichnis je Standort.',
+    },
+    icons: {
+      zielgruppen: [Building2, GraduationCap, Users, Briefcase, Activity],
+      vertrauen: [ClipboardCheck, KeyRound, Users, ShieldCheck],
     },
   },
 ];

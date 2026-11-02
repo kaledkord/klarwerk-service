@@ -34,6 +34,7 @@ const stats = [
 
 /** Städte mit eigener Seite, verlinkt unter den Vertrauenszahlen. */
 const staedteLinks = [
+  { label: 'Gebäudereinigung in Bordesholm', to: '/einsatzgebiet/bordesholm' },
   { label: 'Gebäudereinigung in Kiel', to: '/einsatzgebiet/kiel' },
   { label: 'Gebäudereinigung in Neumünster', to: '/einsatzgebiet/neumuenster' },
   { label: 'Gebäudereinigung in Rendsburg', to: '/einsatzgebiet/rendsburg' },
@@ -53,24 +54,45 @@ const processSteps = [
   { num: '04', title: 'Professionelle Reinigung', desc: 'Wir kümmern uns zuverlässig um alles Weitere.' },
 ];
 
+// Antworten beginnen mit der Antwort selbst (seo-geo-consultant: „Lead with the answer“), damit Google
+// und KI-Suchen sie als ganzen Absatz übernehmen können.
 const faqs = [
-  { question: 'In welchen Regionen sind Sie tätig?', answer: 'KlarWerk Service ist schwerpunktmäßig in Schleswig-Holstein tätig – insbesondere in Kiel, Neumünster, Rendsburg, Preetz und Umgebung. Darüber hinaus sind wir in Hamburg im Einsatz.' },
+  { question: 'Was ist KlarWerk Service?', answer: 'KlarWerk Service ist ein inhabergeführtes Gebäudereinigungsunternehmen mit Sitz in Bordesholm in Schleswig-Holstein. Wir reinigen Büros, Praxen, Kitas, Schulen, Wohnanlagen und Gewerbeobjekte – regelmäßig nach festem Plan oder einmalig, etwa als Grund- oder Bauendreinigung.' },
+  { question: 'In welchen Regionen sind Sie tätig?', answer: 'In Schleswig-Holstein und Hamburg. Unser Sitz ist Bordesholm; im Schwerpunkt reinigen wir in Kiel, Neumünster, Rendsburg und im Amt Bordesholm, außerdem in Preetz, Plön, Eckernförde, Bad Segeberg, Eutin und Lübeck.' },
+  { question: 'Reinigen Sie auch Arztpraxen?', answer: 'Ja. Wir reinigen Arzt-, Zahnarzt- und Therapiepraxen nach dem Hygieneplan der Praxis und außerhalb der Sprechzeiten. Für Kiel, Neumünster, Rendsburg und Bordesholm gibt es eigene Seiten zur Praxisreinigung.' },
   { question: 'Für welche Kunden bieten Sie Reinigungsleistungen an?', answer: 'Wir betreuen Unternehmen, medizinische Praxen, Büros, Wohn- und Geschäftshäuser sowie private Immobilien. Unser Angebot richtet sich an gewerbliche und private Kunden gleichermaßen.' },
-  { question: 'Wie schnell erhalte ich ein Angebot?', answer: 'Nach Ihrer Anfrage vereinbaren wir eine kurze Besichtigung vor Ort. Alle Angaben erfassen wir anschließend in unserem eigenen Kalkulationsprogramm für Gebäudereinigung – daraus erhalten Sie ein individuelles, faires und transparentes Festpreis-Angebot.' },
+  { question: 'Wie erhalte ich ein Angebot?', answer: 'Über eine kostenlose Besichtigung vor Ort. Alle Angaben erfassen wir anschließend in unserem eigenen Kalkulationsprogramm für Gebäudereinigung – daraus erhalten Sie ein individuelles, faires und transparentes Festpreis-Angebot.' },
+  { question: 'Wer ist mein Ansprechpartner?', answer: 'Eine feste Person für Reinigungsplan, Schlüssel und Rückfragen. Bei Urlaub und Krankheit übernimmt eine eingearbeitete Vertretung, damit die Reinigung nach Plan weiterläuft.' },
   { question: 'Sind Ihre Mitarbeiter versichert?', answer: 'Ja, alle unsere Mitarbeiter sind sozialversicherungspflichtig beschäftigt und vollständig haftpflichtversichert. Sie können sich auf verlässliche und sichere Dienstleistungen verlassen.' },
   { question: 'Bieten Sie auch Einmalreinigungen an?', answer: 'Ja. Neben regelmäßigen Reinigungsverträgen führen wir auch Einmalreinigungen durch, z.B. Grundreinigungen, Entrümpelungen oder saisonale Reinigungen.' },
-  { question: 'Wie werden die Preise berechnet?', answer: 'Preise richten sich nach Fläche, Häufigkeit, Art der Leistung und besonderen Anforderungen. Nach einer kostenfreien Besichtigung erhalten Sie einen Festpreis ohne versteckte Kosten.' },
+  { question: 'Wie werden die Preise berechnet?', answer: 'Nach Fläche, Häufigkeit, Art der Leistung und besonderen Anforderungen. Nach einer kostenfreien Besichtigung erhalten Sie einen Festpreis ohne versteckte Kosten.' },
 ];
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: faqs.map((f) => ({
-    '@type': 'Question',
-    name: f.question,
-    acceptedAnswer: { '@type': 'Answer', text: f.answer },
-  })),
-};
+/** Stand der Inhalte dieser Seite. Nur ändern, wenn sich Inhalte wirklich ändern (sichtbar unter den FAQ und als dateModified). */
+const STAND = '2026-11-02';
+const STAND_ANZEIGE = '02.11.2026';
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((f) => ({
+      '@type': 'Question',
+      name: f.question,
+      acceptedAnswer: { '@type': 'Answer', text: f.answer },
+    })),
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': 'https://klarwerk-service.com/#webpage',
+    url: 'https://klarwerk-service.com/',
+    name: 'KlarWerk Service – Gebäudereinigung in Schleswig-Holstein',
+    inLanguage: 'de-DE',
+    dateModified: STAND,
+    about: { '@id': 'https://klarwerk-service.com/#business' },
+  },
+];
 
 // Größtes Element über dem Falz: Foto hinter dem Startbereich. Vorab laden, damit der Browser es
 // nicht erst nach CSS und JavaScript entdeckt (LCP). AVIF-Browser nehmen die AVIF-Liste, alle anderen
@@ -146,15 +168,17 @@ export default function Home() {
         {/* Abfolge per CSS (index.css, „Startbereich“): läuft schon im vorgerenderten HTML und wartet beim ersten Besuch auf den Loader. */}
         <div className="relative z-[4] w-full max-w-7xl mx-auto px-6 pt-28 pb-16">
           <motion.div className="max-w-2xl" style={effekte ? { y: textY, opacity: textOpacity } : undefined}>
-            <p className="klw-hero-dach text-sm font-semibold uppercase tracking-widest text-brand-300">
-              Gebäudereinigung · Schleswig-Holstein &amp; Hamburg
-            </p>
-            <h1 className="mt-4 text-white font-black tracking-tight leading-[1.02] text-5xl sm:text-6xl lg:text-7xl">
+            {/* H1 mit dem Suchbegriff, optisch weiter die kleine Dachzeile; der Leitspruch bleibt groß, ist aber
+                keine Überschrift mehr (seo-geo-consultant: eine H1 mit dem Hauptbegriff, Mira 02.11.2026). */}
+            <h1 className="klw-hero-dach text-sm font-semibold uppercase tracking-widest text-brand-300">
+              Gebäudereinigung aus Bordesholm · Schleswig-Holstein &amp; Hamburg
+            </h1>
+            <p className="mt-4 font-display text-white font-black tracking-tight leading-[1.02] text-5xl sm:text-6xl lg:text-7xl">
               <span className="klw-hero-z1">Erst unklar.</span>{' '}
               <span className="klw-hero-z2">
                 Dann <span className="klw-glanz">klar.</span>
               </span>
-            </h1>
+            </p>
             <p className="klw-hero-text mt-6 max-w-xl text-lg text-slate-200 leading-relaxed">
               Professionelle Gebäudereinigung, die man sieht — für Büros, Praxen und
               Objekte in Kiel, Neumünster, Rendsburg und Umgebung.
@@ -191,9 +215,17 @@ export default function Home() {
           </div>
           {/* Nähe-Signal für die Suche: Sitz und die drei Städte mit eigener Seite (Konrad/Mira, 31.10.2026). */}
           <AnimatedSection delay={0.3} className="mt-10 border-t border-white/10 pt-8">
-            <p className="text-slate-300 text-base leading-relaxed max-w-3xl">
-              Wir sitzen in Bordesholm, mitten zwischen Kiel, Neumünster und Rendsburg. Besichtigung, Kontrolle und
-              kurzfristige Absprachen sind so immer kurze Wege.
+            {/* Kurzporträt als in sich geschlossener Absatz: so übernehmen Google und KI-Suchen ihn als Antwort
+                auf „Wer ist KlarWerk Service?“ (seo-geo-consultant: definitional statement). Nur belegte Angaben. */}
+            <h2 className="text-white text-xl font-bold tracking-tight">Gebäudereinigung aus Bordesholm</h2>
+            <p className="mt-3 text-slate-300 text-base leading-relaxed max-w-3xl">
+              KlarWerk Service ist ein inhabergeführtes Gebäudereinigungsunternehmen mit Sitz in Bordesholm, mitten
+              zwischen Kiel, Neumünster und Rendsburg. Wir reinigen Büros, Praxen, Kitas, Schulen, Wohnanlagen und
+              Gewerbeobjekte in Schleswig-Holstein und Hamburg: Unterhalts-, Büro-, Praxis- und Glasreinigung, Grund-
+              und Bauendreinigung sowie Hausmeisterservice. Vor jedem Angebot sehen wir uns Ihr Objekt kostenlos an und
+              kalkulieren den Festpreis mit unserem eigenen Programm für die Gebäudereinigung. Sie haben einen festen
+              Ansprechpartner, bei Urlaub und Krankheit übernimmt eine eingearbeitete Vertretung. Weil wir in
+              Bordesholm sitzen, sind Besichtigung, Kontrolle und kurzfristige Absprachen immer kurze Wege.
             </p>
             <p className="mt-3 flex flex-wrap gap-x-6 gap-y-2 text-sm font-semibold">
               {staedteLinks.map((s) => (
@@ -219,7 +251,7 @@ export default function Home() {
             </span>
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mt-3">
               <h2 className="text-4xl md:text-5xl font-black tracking-tight">
-                Gebäudereinigung in Kiel, Neumünster und Rendsburg
+                Gebäudereinigung in Kiel, Neumünster, Rendsburg und Bordesholm
               </h2>
               <Link
                 to="/leistungen"
@@ -313,7 +345,7 @@ export default function Home() {
           </AnimatedSection>
           <AnimatedSection delay={0.15} className="mt-8 text-center">
             <p className="text-slate-300 text-sm">
-              Weitere Fragen?{' '}
+              Stand: <time dateTime={STAND}>{STAND_ANZEIGE}</time> · Weitere Fragen?{' '}
               <Link
                 to="/kontakt"
                 className="text-brand-300 font-semibold underline underline-offset-2 hover:no-underline"

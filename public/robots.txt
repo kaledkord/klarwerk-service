@@ -6,8 +6,14 @@
 # Claude, Perplexity, etc.) can discover and understand our business.
 
 # ── AI Crawlers (explicit allow) ──────────────────────────────────────────────
-# OpenAI / ChatGPT — GPTBot
+# OpenAI / ChatGPT — GPTBot (Training), OAI-SearchBot (ChatGPT-Suche), ChatGPT-User (Abruf im Chat)
 User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
 Allow: /
 
 # Google Gemini / Vertex AI — Google-Extended (Gemini API training & indexing)
@@ -21,8 +27,21 @@ Allow: /
 User-agent: anthropic-ai
 Allow: /
 
-# Perplexity — PerplexityBot
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+# Perplexity — PerplexityBot (Index), Perplexity-User (Abruf im Chat)
 User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot-Extended
 Allow: /
 
 # You.com — YouBot
@@ -63,3 +82,5 @@ Disallow: /*?*token=
 
 # ── Sitemap ───────────────────────────────────────────────────────────────────
 Sitemap: https://klarwerk-service.com/sitemap.xml
+
+# KI-lesbare Zusammenfassung: https://klarwerk-service.com/llms.txt

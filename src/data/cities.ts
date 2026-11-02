@@ -155,10 +155,13 @@ export const cities: City[] = [
     slug: 'neumuenster',
     name: 'Neumünster',
     region: 'Schleswig-Holstein',
+    // Suchen: „reinigungsfirma neumünster“ (Pos. 49), „gebäudereinigung neumünster“ (Pos. 34), „unterhaltsreinigung
+    // neumünster“ (Pos. 22) – alle ohne Klick. Eigener Titel mit „Reinigungsfirma“, Antwort-Abschnitte (Mira, 02.11.2026).
     description:
-      'Gebäudereinigung in Neumünster für Büros, Praxen und Gewerbe: Unterhalts-, Glas- und Grundreinigung, fester Ansprechpartner, kurze Anfahrt aus Bordesholm.',
+      'Gebäudereinigung in Neumünster: Unterhalts-, Treppenhaus-, Büro- und Glasreinigung in allen Stadtteilen, fester Ansprechpartner. Angebot anfragen.',
+    seoTitle: 'Gebäudereinigung Neumünster – Reinigungsfirma | KlarWerk',
     intro:
-      'In Neumünster bieten wir umfassende Gebäudereinigung für gewerbliche und private Kunden an. Ob Büroreinigung, Glasreinigung oder Hausmeisterservice – KlarWerk Service sorgt für Sauberkeit in der Mittelstadt zwischen Kiel und Hamburg.',
+      'KlarWerk Service reinigt Büros, Praxen, Kitas, Schulen, Wohnanlagen und Gewerbeobjekte in ganz Neumünster – in der Innenstadt, in allen Stadtteilen und in den Gewerbegebieten. Von unserem Sitz in Bordesholm sind wir über das Bordesholmer Dreieck und die A7 schnell bei Ihnen.',
     eigeneSeiten: {
       vorspann: 'Für die häufigsten Aufträge haben wir eigene Seiten:',
       links: [
@@ -173,11 +176,40 @@ export const cities: City[] = [
       ],
     },
     highlights: [
-      'Büroreinigung im Neumünsteraner Stadtgebiet',
-      'Treppenhausreinigung für Mehrfamilienhäuser',
-      'Glasreinigung für Geschäfte und Praxen',
-      'Grundreinigung und Bauendreinigung in Neumünster',
+      { text: 'Büroreinigung im Neumünsteraner Stadtgebiet', to: '/leistungen/bueroreinigung/neumuenster' },
+      { text: 'Treppenhaus- und Unterhaltsreinigung für Wohnanlagen', to: '/leistungen/unterhaltsreinigung/neumuenster' },
+      { text: 'Glasreinigung für Geschäfte und Praxen', to: '/leistungen/glasreinigung/neumuenster' },
+      { text: 'Grundreinigung und Bauendreinigung in Neumünster', to: '/leistungen/grundreinigung/neumuenster' },
     ],
+    abschnitte: [
+      {
+        titel: 'Welche Reinigungsfirma reinigt Gebäude in Neumünster?',
+        text: 'KlarWerk Service ist ein inhabergeführtes Gebäudereinigungsunternehmen aus Bordesholm, das Büros, Praxen, Kitas, Schulen, Wohnanlagen, Geschäfte und Gewerbeobjekte in ganz Neumünster reinigt: in der Innenstadt und den Kernbezirken Nord, Ost, Süd und West, in Tungendorf, Einfeld, Gartenstadt, Faldera, Wittorf, Gadeland, Brachenfeld, Ruthenberg, Böcklersiedlung und Stör sowie im Umland mit Wasbek, Boostedt, Großenaspe, Groß Kummerfeld und Aukrug. Zum Angebot gehören Unterhalts- und Treppenhausreinigung, Büro-, Praxis- und Glasreinigung, Kita- und Schulreinigung, Grund- und Bauendreinigung sowie Hausmeisterservice. Vor jedem Auftrag sehen wir uns das Objekt kostenlos an und kalkulieren einen Festpreis mit unserem eigenen Programm für die Gebäudereinigung. Jedes Objekt hat einen festen Ansprechpartner, bei Urlaub oder Krankheit übernimmt eine eingearbeitete Vertretung.',
+      },
+      {
+        titel: 'Unterhalts- und Treppenhausreinigung in Neumünster',
+        text: 'Unterhaltsreinigung heißt: Ihr Objekt bleibt dauerhaft sauber nach einem festen Leistungsverzeichnis, in dem jeder Bereich sein eigenes Intervall hat. Treppenhäuser, Flure, Eingänge und Nebenräume reinigen wir meist wöchentlich oder vierzehntägig, Sanitär und Sozialräume häufiger. Hausverwaltungen und Wohnanlagen haben einen Ansprechpartner für Verwaltung und Hausbewohner, Gewerbe- und Logistikbetriebe, Geschäfte, Kitas, Büros und Praxen einen Plan, der zu ihren Zeiten passt. Ihr fester Ansprechpartner kontrolliert regelmäßig vor Ort, und bei Urlaub oder Krankheit übernimmt eine eingearbeitete Vertretung. Umfang, Ablauf und Antworten im Detail stehen auf unserer Seite zur Unterhaltsreinigung in Neumünster.',
+        link: { label: 'Unterhaltsreinigung in Neumünster', to: '/leistungen/unterhaltsreinigung/neumuenster' },
+      },
+    ],
+    faqs: [
+      {
+        question: 'In welchen Stadtteilen von Neumünster reinigen Sie?',
+        answer:
+          'In allen: Innenstadt, Nord, Ost, Süd und West, dazu Tungendorf, Einfeld, Gartenstadt, Faldera, Wittorf, Gadeland, Brachenfeld, Ruthenberg, Böcklersiedlung und Stör. Im Umland sind wir in Wasbek, Boostedt, Großenaspe, Groß Kummerfeld, Aukrug und Bordesholm unterwegs.',
+      },
+      {
+        question: 'Machen Sie Treppenhausreinigung in Neumünster?',
+        answer:
+          'Ja, als Teil der Unterhaltsreinigung: Treppenhäuser, Flure, Eingänge und Gemeinschaftsflächen im festen Turnus, meist wöchentlich oder vierzehntägig, mit einem Ansprechpartner für die Verwaltung.',
+      },
+      {
+        question: 'Wie schnell sind Sie in Neumünster?',
+        answer:
+          'Schnell: Von unserem Sitz in Bordesholm sind wir über das Bordesholmer Dreieck und die A7 schnell in der Stadt. Besichtigung, Kontrollen und kurzfristige Absprachen sind so kurze Wege.',
+      },
+    ],
+    stand: { iso: '2026-11-02', anzeige: '02.11.2026' },
     image: '/bilder/stadt-neumuenster.jpg',
     tier: 1,
   },

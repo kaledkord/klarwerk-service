@@ -12,9 +12,11 @@ interface SeoEntry {
 export const seoConfig = {
   // ── Static pages ───────────────────────────────────────────────────────────
   '/': {
-    title: 'Gebäudereinigung Kiel & Schleswig-Holstein | KlarWerk',
+    // Marke zuerst: Die meisten Klicks der Startseite kommen über „klarwerk service“. „Kiel“ steht nicht
+    // mehr im Titel, weil /einsatzgebiet/kiel und die Kieler Ortsseiten diese Suchen tragen (Mira, 02.11.2026).
+    title: 'KlarWerk Service – Gebäudereinigung in Schleswig-Holstein',
     description:
-      'Gebäudereinigung aus Bordesholm für Kiel, Neumünster, Rendsburg und Schleswig-Holstein: Büro-, Glas- und Praxisreinigung mit festem Ansprechpartner.',
+      'Inhabergeführte Gebäudereinigung aus Bordesholm für Kiel, Neumünster, Rendsburg und ganz Schleswig-Holstein. Fester Ansprechpartner. Angebot anfragen.',
     canonical: '/',
   },
   '/ueber-uns': {

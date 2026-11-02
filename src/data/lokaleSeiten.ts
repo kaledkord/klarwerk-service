@@ -3571,6 +3571,194 @@ export const lokaleSeiten: LokaleSeite[] = [
       vertrauen: [ClipboardCheck, KeyRound, Users, Car],
     },
   },
+
+  // ---- Büroreinigung · Bordesholm ------------------------------------------------------
+  {
+    serviceId: 'bueroreinigung',
+    citySlug: 'bordesholm',
+    leistung: 'Büroreinigung',
+    ort: 'Bordesholm',
+    seo: {
+      title: 'Büroreinigung in Bordesholm | KlarWerk Service',
+      description:
+        'Büroreinigung in Bordesholm und im Amt Bordesholm vom Betrieb vor Ort: außerhalb der Arbeitszeit, fester Ansprechpartner, eingearbeitete Vertretung.',
+      keywords:
+        'Büroreinigung Bordesholm, Reinigungsfirma Bordesholm, Gebäudereinigung Bordesholm, Büroreinigung Amt Bordesholm, Büroreinigung Wattenbek, Büroreinigung Brügge, Büroreinigung Flintbek, Unterhaltsreinigung Büro Bordesholm',
+    },
+    h1: 'Büroreinigung in Bordesholm',
+    intro:
+      'Bordesholm ist unser Zuhause: Hier hat KlarWerk Service seinen Sitz, von hier fahren wir jeden Morgen los. Für Büros, Kanzleien, Verwaltungen und Betriebe in Bordesholm und den Gemeinden des Amtes heißt das kürzeste Wege, ein Ansprechpartner, den Sie persönlich kennen, und Reinigung nach Feierabend oder frühmorgens, bevor die ersten Mitarbeiter kommen. Nach festem Plan, mit regelmäßigen Kontrollen und einer eingearbeiteten Vertretung, wenn jemand ausfällt.',
+    bild: {
+      // gleiches Foto wie auf /leistungen/bueroreinigung (kommt aus services.ts)
+      alt: 'Sauberer Büroarbeitsplatz nach Feierabend – Büroreinigung in Bordesholm durch KlarWerk Service',
+    },
+    eckdaten: [
+      { titel: 'Betrieb vor Ort', text: 'Unser Sitz ist in Bordesholm, die Wege sind kurz' },
+      { titel: 'Außerhalb der Arbeitszeit', text: 'Nach Feierabend oder frühmorgens, wie es Ihnen passt' },
+      { titel: 'Fester Ansprechpartner', text: 'Eine Person für Plan, Schlüssel und Rückfragen' },
+    ],
+    zielgruppen: [
+      {
+        titel: 'Kanzleien, Steuerberater und Versicherungsbüros',
+        text: 'Besprechungsräume, Empfang und Arbeitsplätze mit Akten und vertraulichen Unterlagen – wir reinigen diskret, lassen Papier liegen und halten uns an Ihre Vorgaben zu Zutritt und Schlüsseln.',
+      },
+      {
+        titel: 'Handwerks- und Gewerbebetriebe mit Bürotrakt',
+        text: 'Büro, Sozialraum, Umkleide und Sanitär in einem Betrieb, in dem morgens früh angefangen wird – wir sind fertig, bevor der erste Kollege den Schlüssel umdreht.',
+      },
+      {
+        titel: 'Verwaltungen, Vereine und Einrichtungen',
+        text: 'Büros mit Publikumsverkehr, Besprechungsräume und Gemeinschaftsflächen im Amt Bordesholm – nach festem Plan, abgestimmt auf Öffnungs- und Sprechzeiten.',
+      },
+      {
+        titel: 'Büros in Wohn- und Geschäftshäusern',
+        text: 'Kleine Büroeinheiten in Bordesholm, Wattenbek oder Brügge, oft mit gemeinsamem Treppenhaus – wir reinigen das Büro und auf Wunsch das Treppenhaus gleich mit.',
+      },
+      {
+        titel: 'Pendlerbetriebe zwischen Kiel und Neumünster',
+        text: 'Wer in Bordesholm sitzt und Standorte in Kiel oder Neumünster hat, bekommt bei uns einen Ansprechpartner für alle Häuser – mit eigenen Seiten für beide Städte.',
+      },
+    ],
+    umfang: {
+      wir: [
+        'Schreibtische, Ablagen und Arbeitsflächen – Papier und Unterlagen bleiben liegen',
+        'Böden: saugen, kehren, nass wischen, je nach Belag und Nutzung',
+        'Teeküche: Spüle, Arbeitsflächen, Geräteaußenflächen, Tische',
+        'Sanitärräume mit Nachfüllen von Seife, Papier und Handtüchern auf Wunsch',
+        'Empfang, Besprechungsräume, Flure und Treppenhaus nach Absprache',
+        'Kontaktflächen wie Türklinken, Lichtschalter und Handläufe',
+        'Papierkörbe, Mülltrennung und Abfallbehälter',
+        'Glas innen: Glastüren, Trennwände und Spiegel',
+      ],
+      beiIhnen: [
+        'Bildschirme, Tastaturen und Technik – wischen wir nur nach Absprache',
+        'Akten, Unterlagen und persönliche Sachen auf dem Schreibtisch – fassen wir nicht an',
+        'Fenster außen – eigener Turnus in der Glasreinigung',
+        'Grundreinigung und Bodenpflege – eigener Termin im Jahresplan',
+      ],
+    },
+    zeiten: {
+      titel: 'Fertig, bevor der Arbeitstag beginnt',
+      text: 'Wir reinigen, wenn das Büro leer ist: abends nach Feierabend oder frühmorgens vor Arbeitsbeginn. Weil wir in Bordesholm sitzen, sind auch frühe Zeiten und kurzfristige Termine kein Problem. Wie oft gereinigt wird, legen wir je Bereich im Leistungsverzeichnis fest.',
+      punkte: [
+        'Abends nach Feierabend oder frühmorgens vor Arbeitsbeginn',
+        'Täglich, mehrmals pro Woche oder wöchentlich, je Bereich',
+        'Sanitär und Teeküche häufiger als Besprechungsräume und Archiv',
+        'Zusätzliche Termine nach Veranstaltungen oder Umzügen auf Abruf',
+      ],
+    },
+    vertrauen: [
+      {
+        titel: 'Ein Ansprechpartner, den Sie kennen',
+        text: 'Wir sitzen im selben Ort. Rückfragen, Änderungen am Plan oder ein kurzer Blick vor Ort sind bei uns ein kurzer Weg, kein Ticket.',
+      },
+      {
+        titel: 'Schlüssel und Zutritt geregelt',
+        text: 'Schlüssel, Codes und Alarmanlage halten wir vor dem ersten Einsatz fest. Nur eingewiesene Mitarbeiter betreten Ihr Büro.',
+      },
+      {
+        titel: 'Klares Leistungsverzeichnis',
+        text: 'Sie sehen, welcher Bereich wie oft gereinigt wird – nachvollziehbar und ohne Überraschungen auf der Rechnung.',
+      },
+      {
+        titel: 'Eingearbeitete Vertretung',
+        text: 'Bei Urlaub und Krankheit übernimmt jemand, der Ihr Büro kennt. Die Reinigung läuft nach Plan weiter.',
+      },
+    ],
+    anfahrt: {
+      titel: 'Büroreinigung in Bordesholm und im Amt Bordesholm',
+      text: 'Unser Sitz liegt in Bordesholm, direkt zwischen Kiel und Neumünster an A7 und A215. In jede Gemeinde des Amtes sind es nur wenige Minuten – ebenso nach Flintbek und Nortorf. Kurze Wege machen Besichtigung, Kontrollen und kurzfristige Absprachen einfach.',
+      gruppen: [
+        { titel: 'Amt Bordesholm', orte: ['Bordesholm', 'Wattenbek', 'Brügge', 'Mühbrook', 'Schmalstede', 'Grevenkrug', 'Hoffeld', 'Loop', 'Sören', 'Reesdorf', 'Schönbek', 'Groß Buchwald', 'Bissee', 'Negenharrie'] },
+      ],
+      umland: ['Flintbek', 'Molfsee', 'Nortorf', 'Boostedt', 'Wasbek'],
+    },
+    ablauf: [
+      {
+        title: 'Kurze Anfrage',
+        desc: 'Bürogröße, Bereiche und gewünschter Rhythmus – mehr braucht es für den Anfang nicht.',
+      },
+      {
+        title: 'Besichtigung vor Ort',
+        desc: 'Kostenlos und kurzfristig in Bordesholm und Umgebung: Wir gehen alle Bereiche durch und klären, was wie oft gereinigt werden soll.',
+      },
+      {
+        title: 'Leistungsverzeichnis und Festpreis',
+        desc: 'Bereiche, Intervalle und Preis übersichtlich in einem Angebot.',
+      },
+      {
+        title: 'Start mit Einweisung',
+        desc: 'Schlüssel, Zeiten, Ansprechpartner und Besonderheiten des Büros halten wir vor dem ersten Einsatz fest.',
+      },
+      {
+        title: 'Laufende Betreuung',
+        desc: 'Regelmäßige Kontrollen, kurze Wege für Rückfragen und eine eingearbeitete Vertretung.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Reinigen Sie Büros im ganzen Amt Bordesholm?',
+        answer:
+          'Ja. In Bordesholm selbst und in allen Gemeinden des Amtes, etwa in Wattenbek, Brügge, Mühbrook und Schmalstede, dazu in Flintbek, Nortorf und Boostedt. Unser Sitz ist in Bordesholm.',
+      },
+      {
+        question: 'Wann wird gereinigt?',
+        answer:
+          'Außerhalb Ihrer Arbeitszeit: abends nach Feierabend oder frühmorgens vor Arbeitsbeginn. Den Rhythmus legen wir je Bereich fest – Sanitär und Teeküche häufiger, Besprechungsräume seltener.',
+      },
+      {
+        question: 'Wie gehen Sie mit Akten und vertraulichen Unterlagen um?',
+        answer:
+          'Papier und Unterlagen auf den Schreibtischen bleiben liegen, wir reinigen drumherum. Nur eingewiesene Mitarbeiter betreten Ihr Büro, Schlüssel und Zutritt sind vor dem ersten Einsatz geregelt.',
+      },
+      {
+        question: 'Können Sie auch das Treppenhaus mit reinigen?',
+        answer:
+          'Ja. Wenn Ihr Büro in einem Wohn- oder Geschäftshaus liegt, nehmen wir Treppenhaus und Eingang nach Absprache mit in den Plan.',
+      },
+      {
+        question: 'Wir haben auch einen Standort in Kiel oder Neumünster – geht das zusammen?',
+        answer:
+          'Ja. Sie bekommen einen Ansprechpartner für alle Häuser und ein Leistungsverzeichnis je Standort. Für Kiel und Neumünster haben wir eigene Seiten zur Büroreinigung.',
+      },
+      {
+        question: 'Wer reinigt bei Urlaub oder Krankheit?',
+        answer:
+          'Eine eingearbeitete Vertretung, die Ihr Büro kennt. So entstehen keine Lücken im Plan.',
+      },
+      {
+        question: 'Sind Reinigungsmittel und Material inklusive?',
+        answer:
+          'Ja, Reinigungsmittel, Material und Technik bringen wir mit. Verbrauchsmaterial wie Seife oder Papier können wir auf Wunsch mitliefern.',
+      },
+      {
+        question: 'Was kostet die Büroreinigung in Bordesholm?',
+        answer:
+          'Das hängt von Fläche, Bereichen und Intervallen ab. Nach einer kostenlosen Besichtigung erhalten Sie ein Festpreis-Angebot mit Leistungsverzeichnis.',
+      },
+    ],
+    ergaenzungen: [
+      { serviceId: 'glasreinigung', text: 'Bürofenster, Glastüren und Eingang im festen Turnus, innen und außen.' },
+      { serviceId: 'unterhaltsreinigung', text: 'Weitere Bereiche wie Treppenhaus, Lager oder Werkstatt-Sozialräume nach festem Plan.' },
+      { serviceId: 'hausmeisterservice', text: 'Kleine Reparaturen, Kontrollgänge und Außenanlagen für Ihr Bürogebäude im Amt Bordesholm.' },
+    ],
+    texte: {
+      zielgruppenLabel: 'Für Ihr Büro',
+      zielgruppenTitel: 'Büroreinigung für jedes Büro in Bordesholm',
+      zielgruppenText: 'Kanzlei, Betrieb, Verwaltung oder Büro im Wohnhaus – der Plan richtet sich nach Ihren Räumen und Zeiten.',
+      grenzenTitel: 'Das bleibt bei Ihnen',
+      grenzenText: 'Damit nichts verrutscht und nichts fehlt.',
+      ablaufTitel: 'So starten wir in Ihrem Büro',
+      vertrauenLabel: 'Vor Ort & verlässlich',
+      ergaenzungTitel: 'Rund um Ihr Büro aus einer Hand',
+      ctaText:
+        'Wir kommen kurzfristig zur kostenlosen Besichtigung in Bordesholm und erstellen Ihnen ein Festpreis-Angebot mit klarem Leistungsverzeichnis.',
+    },
+    icons: {
+      zielgruppen: [Scale, Warehouse, Building2, Home, Briefcase],
+      vertrauen: [UserCheck, KeyRound, ClipboardCheck, Users],
+    },
+  },
 ];
 
 export function getLokaleSeite(serviceId: string, citySlug: string): LokaleSeite | undefined {

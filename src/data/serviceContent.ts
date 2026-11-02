@@ -128,10 +128,10 @@ export const serviceContents: Record<string, ServiceContent> = {
       { question: 'Wie schnell können Sie starten?', answer: 'Nach der Besichtigung und Angebotsfreigabe starten wir in der Regel innerhalb von ein bis zwei Wochen.' },
     ],
     seo: {
-      // Kiel und Neumünster haben eigene Seiten (/leistungen/bueroreinigung/kiel, /neumuenster).
-      title: 'Büroreinigung Bordesholm, Rendsburg & SH | KlarWerk Service',
+      // Kiel, Neumünster, Rendsburg und Bordesholm haben eigene Seiten (/leistungen/bueroreinigung/<stadt>).
+      title: 'Büroreinigung in Schleswig-Holstein | KlarWerk Service',
       description:
-        'Büroreinigung in Bordesholm, Rendsburg und Schleswig-Holstein: fester Reinigungsplan, fester Ansprechpartner, Vertretung bei Urlaub und Krankheit.',
+        'Büroreinigung in ganz Schleswig-Holstein vom Betrieb in Bordesholm: fester Reinigungsplan, fester Ansprechpartner, Vertretung bei Urlaub und Krankheit.',
       keywords: `Büroreinigung, Büroreinigung Bordesholm, Büroreinigung Rendsburg, Schreibtischreinigung, Bodenpflege, ${localKeywords}`,
     },
   },

@@ -29,6 +29,12 @@ export const cities: City[] = [
     seoTitle: 'Gebäudereinigung aus Bordesholm | KlarWerk Service',
     intro:
       'In Bordesholm und im gesamten Amt Bordesholm zwischen Kiel und Neumünster betreut KlarWerk Service Unternehmen, Praxen, Immobilienverwaltungen und private Auftraggeber. Feste Ansprechpartner, verlässliche Termine und gründliche Ergebnisse – von der regelmäßigen Unterhaltsreinigung bis zur einmaligen Grund- und Sonderreinigung.',
+    eigeneSeiten: {
+      vorspann: 'Für die häufigsten Aufträge haben wir eigene Seiten:',
+      links: [
+        { label: 'Büroreinigung in Bordesholm', to: '/leistungen/bueroreinigung/bordesholm' },
+      ],
+    },
     highlights: [
       'Reinigung für Gewerbe, Büros und Praxen in Bordesholm',
       'Treppenhaus- und Unterhaltsreinigung für Wohnanlagen im Amt Bordesholm',

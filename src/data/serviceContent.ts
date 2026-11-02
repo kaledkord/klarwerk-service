@@ -268,27 +268,46 @@ export const serviceContents: Record<string, ServiceContent> = {
 
   praxisreinigung: {
     id: 'praxisreinigung',
-    h1: 'Praxisreinigung nach hygienischen Standards',
+    h1: 'Praxisreinigung in Schleswig-Holstein',
     intro:
-      'In einer Praxis entscheidet Sauberkeit über Vertrauen – und über die Sicherheit von Patienten und Team. KlarWerk Service reinigt Wartebereiche, Behandlungsräume und Sanitäranlagen nach hygienischen Standards, mit fachgerechter Flächendesinfektion und nachvollziehbarer Dokumentation. Wir arbeiten bevorzugt außerhalb der Sprechzeiten, damit Ihr Praxisablauf ungestört bleibt, setzen VAH-gelistete Desinfektionsmittel gezielt nach Einsatzbereich ein und stellen auf Wunsch Hygienepläne bereit. So übergeben wir Ihnen Räume, die den Anforderungen an eine medizinische Einrichtung wirklich gerecht werden.',
+      'KlarWerk Service reinigt Arzt-, Zahnarzt- und Therapiepraxen in Schleswig-Holstein nach dem Hygieneplan Ihrer Praxis und außerhalb der Sprechzeiten: Wartebereiche, Behandlungsräume und Sanitäranlagen, mit fachgerechter Flächendesinfektion und nachvollziehbarer Dokumentation. Wir setzen VAH-gelistete Desinfektionsmittel gezielt nach Einsatzbereich ein, und Sie haben einen festen Ansprechpartner. Denn in einer Praxis entscheidet Sauberkeit über Vertrauen – und über die Sicherheit von Patienten und Team.',
     process: defaultProcess,
     advantages: defaultAdvantages,
     areas: defaultAreas,
     sustainability: defaultSustainability,
     faqs: [
       { question: 'Welche Hygienevorschriften beachten Sie?', answer: 'Wir arbeiten nach den Vorgaben des Arbeitsschutzes und der RKI-Richtlinien, inklusive sachgerechter Desinfektion von Oberflächen.' },
-      { question: 'Reinigen Sie auch Behandlungsräume?', answer: 'Ja, Behandlungsräume inklusive Liegen, Instrumententische und Ablagen gehören zu unserem Leistungsumfang.' },
-      { question: 'Welche Desinfektionsmittel verwenden Sie?', answer: 'Wir nutzen VAH-zertifizierte Desinfektionsmittel und passen die Wahl dem Einsatzbereich an.' },
-      { question: 'Dokumentieren Sie die Reinigung?', answer: 'Ja, wir stellen Reinigungs- und Hygienepläne bereit und dokumentieren die durchgeführten Maßnahmen nachvollziehbar.' },
-      { question: 'Können Sie außerhalb der Sprechzeiten arbeiten?', answer: 'Selbstverständlich. Wir reinigen vorzugsweise außerhalb der Praxiszeiten, um den Praxisablauf nicht zu stören.' },
+      { question: 'Reinigen Sie auch Behandlungsräume?', answer: 'Ja. Böden, Liegen, Arbeitsflächen und Ablagen in Behandlungs- und Therapieräumen gehören dazu. Die Aufbereitung von Instrumenten und die Desinfektion medizinischer Geräte bleiben bei Ihrem Praxisteam.' },
+      { question: 'Welche Desinfektionsmittel verwenden Sie?', answer: 'VAH-gelistete Desinfektionsmittel, ausgewählt nach Einsatzbereich und den Vorgaben Ihres Hygieneplans.' },
+      { question: 'Dokumentieren Sie die Reinigung?', answer: 'Ja. Jede Reinigung wird nachvollziehbar dokumentiert – hilfreich für Ihre Hygienedokumentation und bei Begehungen. Grundlage ist der Reinigungsplan, den wir aus Ihrem Hygieneplan ableiten.' },
+      { question: 'Können Sie außerhalb der Sprechzeiten arbeiten?', answer: 'Ja, das ist die Regel: abends nach der letzten Sprechstunde, früh morgens vor Praxisbeginn oder an Ihren freien Nachmittagen.' },
+      { question: 'Wer reinigt bei Urlaub oder Krankheit?', answer: 'Eine eingearbeitete Vertretung, die Ihre Praxis und den Reinigungsplan kennt. Ihr fester Ansprechpartner bleibt derselbe.' },
+      { question: 'Wie gehen Sie mit Patientendaten um?', answer: 'Diskret: Akten, Unterlagen und Bildschirme fassen wir nicht an. Auf Wunsch unterschreiben wir eine Verschwiegenheitsvereinbarung für Ihre Praxis.' },
       { question: 'Bieten Sie auch die Entsorgung von Praxisabfällen an?', answer: 'Die Entsorgung von Hausmüll übernehmen wir; für medizinische Abfälle arbeiten wir mit zertifizierten Partnern zusammen.' },
     ],
+    abschnitte: [
+      {
+        titel: 'Was gehört zur Praxisreinigung – und was nicht?',
+        text: 'Zur Praxisreinigung gehören die Böden in allen Räumen, in sensiblen Bereichen desinfizierend gewischt, dazu Wartebereich, Empfang und Flure, Kontaktflächen wie Türklinken, Lichtschalter, Tresen und Armlehnen, Liegen, Arbeitsflächen und Ablagen in Behandlungs- und Therapieräumen, die Sanitärbereiche für Patienten und Team, Sozialraum und Teeküche sowie Glas innen an Eingangstür, Glaswänden und Spiegeln. Bewusst beim Praxisteam bleiben die Aufbereitung von Instrumenten und Medizinprodukten und die Desinfektion medizinischer Geräte nach Herstellervorgabe. Patientenakten, Unterlagen und Bildschirme fassen wir nicht an. Welche Bereiche wie oft und mit welchen Mitteln gereinigt werden, übernehmen wir aus Ihrem Hygieneplan in ein Leistungsverzeichnis – so sind die Zuständigkeiten klar und Ihre Haftung geschützt.',
+      },
+      {
+        titel: 'Praxisreinigung in Ihrer Stadt',
+        text: 'Für Kiel, Neumünster, Rendsburg und unseren Sitz Bordesholm gibt es eigene Seiten mit Einsatzgebiet, Praxisarten und Fragen vor Ort. Darüber hinaus reinigen wir Praxen in Preetz, Plön, Eckernförde, Bad Segeberg, Eutin und Lübeck sowie in Hamburg.',
+        links: [
+          { label: 'Praxisreinigung in Kiel', to: '/leistungen/praxisreinigung/kiel' },
+          { label: 'Praxisreinigung in Neumünster', to: '/leistungen/praxisreinigung/neumuenster' },
+          { label: 'Praxisreinigung in Rendsburg', to: '/leistungen/praxisreinigung/rendsburg' },
+          { label: 'Praxisreinigung in Bordesholm', to: '/leistungen/praxisreinigung/bordesholm' },
+        ],
+      },
+    ],
+    stand: { iso: '2026-11-03', anzeige: '03.11.2026' },
     seo: {
       // Kiel, Neumünster, Rendsburg und Bordesholm haben eigene Seiten (/leistungen/praxisreinigung/<stadt>);
       // die allgemeine Seite trägt deshalb keinen Stadtnamen im Title (Mira, 01.11.2026).
       title: 'Praxisreinigung in Schleswig-Holstein | KlarWerk Service',
       description:
-        'Praxisreinigung in Schleswig-Holstein für Arzt-, Zahnarzt- und Therapiepraxen: nach Sprechschluss, nach Hygieneplan, fester Ansprechpartner aus Bordesholm.',
+        'Praxisreinigung für Arzt-, Zahnarzt- und Therapiepraxen in Schleswig-Holstein: nach Ihrem Hygieneplan, nach Sprechschluss, dokumentiert. Angebot anfragen.',
       keywords: `Praxisreinigung, Arztpraxisreinigung, Desinfektion, Hygiene, Reinigung medizinische Einrichtungen, ${localKeywords}`,
     },
   },

@@ -315,16 +315,41 @@ export const cities: City[] = [
     slug: 'luebeck',
     name: 'Lübeck',
     region: 'Schleswig-Holstein',
+    // „gebäudereinigung lübeck“ Pos. 27, „praxisreinigung lübeck“ Pos. 12, „büroreinigung lübeck“ Pos. 22 (Mira, 03.11.2026).
     description:
-      'Gebäudereinigung in Lübeck: Professionelle Reinigung für Büros, Praxen, Wohnanlagen und Geschäftsobjekte. Regelmäßig, zuverlässig und persönlich betreut.',
+      'Gebäudereinigung in Lübeck für Büros, Praxen, Wohnanlagen und Geschäfte: fester Plan, fester Ansprechpartner, Festpreis. Angebot anfragen.',
     intro:
-      'KlarWerk Service bietet Gebäudereinigung in Lübeck für Unternehmen, Praxen, Immobilienverwaltungen und private Auftraggeber. Von der Hansestadt bis ins Umland sorgen wir für Sauberkeit in Bürogebäuden, Wohnanlagen und Geschäftsobjekten.',
+      'KlarWerk Service reinigt Büros, Praxen, Wohnanlagen und Geschäftsobjekte in Lübeck – für Unternehmen, Praxen, Immobilienverwaltungen und private Auftraggeber, von der Hansestadt bis ins Umland. Regelmäßig nach festem Plan, zuverlässig und persönlich betreut.',
     highlights: [
       'Büroreinigung im Lübecker Zentrum und Vororten',
       'Glasreinigung für historische und moderne Fassaden',
       'Treppenhausreinigung für Wohnanlagen in Lübeck',
       'Hausmeisterservice für Wohnanlagen und Gewerbe',
     ],
+    abschnitte: [
+      {
+        titel: 'Welche Reinigungsfirma reinigt Gebäude in Lübeck?',
+        text: 'KlarWerk Service ist ein inhabergeführtes Gebäudereinigungsunternehmen aus Bordesholm, das auch in Lübeck Büros, Praxen, Wohnanlagen und Geschäftsobjekte reinigt. Zum Angebot gehören Unterhalts- und Treppenhausreinigung, Büro-, Praxis- und Glasreinigung, Grund- und Bauendreinigung sowie Hausmeisterservice. Vor jedem Auftrag sehen wir uns das Objekt kostenlos an und kalkulieren einen Festpreis mit unserem eigenen Programm für die Gebäudereinigung; Bereiche und Intervalle stehen in einem Leistungsverzeichnis. Jedes Objekt hat einen festen Ansprechpartner, und bei Urlaub oder Krankheit übernimmt eine eingearbeitete Vertretung, die Ihr Objekt kennt.',
+      },
+      {
+        titel: 'Praxisreinigung in Lübeck',
+        text: 'Arzt-, Zahnarzt- und Therapiepraxen in Lübeck reinigen wir nach dem Hygieneplan der Praxis und außerhalb der Sprechzeiten: Wartebereich und Empfang, Behandlungs- und Therapieräume, Kontaktflächen und Sanitär, mit VAH-gelisteten Desinfektionsmitteln und nachvollziehbarer Dokumentation. Die Aufbereitung von Instrumenten und die Desinfektion medizinischer Geräte bleiben beim Praxisteam, Akten und Bildschirme fassen wir nicht an. Den Rhythmus – täglich oder an festen Wochentagen – legen wir nach Praxisgröße und Hygieneplan gemeinsam fest.',
+        link: { label: 'Mehr zur Praxisreinigung', to: '/leistungen/praxisreinigung' },
+      },
+    ],
+    faqs: [
+      {
+        question: 'Reinigen Sie auch Praxen in Lübeck?',
+        answer:
+          'Ja. Arzt-, Zahnarzt- und Therapiepraxen reinigen wir nach Ihrem Hygieneplan, außerhalb der Sprechzeiten und mit nachvollziehbarer Dokumentation.',
+      },
+      {
+        question: 'Machen Sie Treppenhausreinigung in Lübeck?',
+        answer:
+          'Ja, für Wohnanlagen und Hausverwaltungen: Treppenhäuser, Eingänge und Gemeinschaftsflächen im festen Turnus, mit einem Ansprechpartner für die Verwaltung.',
+      },
+    ],
+    stand: { iso: '2026-11-03', anzeige: '03.11.2026' },
     image: '/bilder/stadt-luebeck.jpg',
     tier: 1,
   },

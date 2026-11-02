@@ -268,53 +268,90 @@ export const serviceContents: Record<string, ServiceContent> = {
 
   praxisreinigung: {
     id: 'praxisreinigung',
-    h1: 'Praxisreinigung nach hygienischen Standards',
+    h1: 'Praxisreinigung in Schleswig-Holstein',
     intro:
-      'In einer Praxis entscheidet Sauberkeit über Vertrauen – und über die Sicherheit von Patienten und Team. KlarWerk Service reinigt Wartebereiche, Behandlungsräume und Sanitäranlagen nach hygienischen Standards, mit fachgerechter Flächendesinfektion und nachvollziehbarer Dokumentation. Wir arbeiten bevorzugt außerhalb der Sprechzeiten, damit Ihr Praxisablauf ungestört bleibt, setzen VAH-gelistete Desinfektionsmittel gezielt nach Einsatzbereich ein und stellen auf Wunsch Hygienepläne bereit. So übergeben wir Ihnen Räume, die den Anforderungen an eine medizinische Einrichtung wirklich gerecht werden.',
+      'KlarWerk Service reinigt Arzt-, Zahnarzt- und Therapiepraxen in Schleswig-Holstein nach dem Hygieneplan Ihrer Praxis und außerhalb der Sprechzeiten: Wartebereiche, Behandlungsräume und Sanitäranlagen, mit fachgerechter Flächendesinfektion und nachvollziehbarer Dokumentation. Wir setzen VAH-gelistete Desinfektionsmittel gezielt nach Einsatzbereich ein, und Sie haben einen festen Ansprechpartner. Denn in einer Praxis entscheidet Sauberkeit über Vertrauen – und über die Sicherheit von Patienten und Team.',
     process: defaultProcess,
     advantages: defaultAdvantages,
     areas: defaultAreas,
     sustainability: defaultSustainability,
     faqs: [
       { question: 'Welche Hygienevorschriften beachten Sie?', answer: 'Wir arbeiten nach den Vorgaben des Arbeitsschutzes und der RKI-Richtlinien, inklusive sachgerechter Desinfektion von Oberflächen.' },
-      { question: 'Reinigen Sie auch Behandlungsräume?', answer: 'Ja, Behandlungsräume inklusive Liegen, Instrumententische und Ablagen gehören zu unserem Leistungsumfang.' },
-      { question: 'Welche Desinfektionsmittel verwenden Sie?', answer: 'Wir nutzen VAH-zertifizierte Desinfektionsmittel und passen die Wahl dem Einsatzbereich an.' },
-      { question: 'Dokumentieren Sie die Reinigung?', answer: 'Ja, wir stellen Reinigungs- und Hygienepläne bereit und dokumentieren die durchgeführten Maßnahmen nachvollziehbar.' },
-      { question: 'Können Sie außerhalb der Sprechzeiten arbeiten?', answer: 'Selbstverständlich. Wir reinigen vorzugsweise außerhalb der Praxiszeiten, um den Praxisablauf nicht zu stören.' },
+      { question: 'Reinigen Sie auch Behandlungsräume?', answer: 'Ja. Böden, Liegen, Arbeitsflächen und Ablagen in Behandlungs- und Therapieräumen gehören dazu. Die Aufbereitung von Instrumenten und die Desinfektion medizinischer Geräte bleiben bei Ihrem Praxisteam.' },
+      { question: 'Welche Desinfektionsmittel verwenden Sie?', answer: 'VAH-gelistete Desinfektionsmittel, ausgewählt nach Einsatzbereich und den Vorgaben Ihres Hygieneplans.' },
+      { question: 'Dokumentieren Sie die Reinigung?', answer: 'Ja. Jede Reinigung wird nachvollziehbar dokumentiert – hilfreich für Ihre Hygienedokumentation und bei Begehungen. Grundlage ist der Reinigungsplan, den wir aus Ihrem Hygieneplan ableiten.' },
+      { question: 'Können Sie außerhalb der Sprechzeiten arbeiten?', answer: 'Ja, das ist die Regel: abends nach der letzten Sprechstunde, früh morgens vor Praxisbeginn oder an Ihren freien Nachmittagen.' },
+      { question: 'Wer reinigt bei Urlaub oder Krankheit?', answer: 'Eine eingearbeitete Vertretung, die Ihre Praxis und den Reinigungsplan kennt. Ihr fester Ansprechpartner bleibt derselbe.' },
+      { question: 'Wie gehen Sie mit Patientendaten um?', answer: 'Diskret: Akten, Unterlagen und Bildschirme fassen wir nicht an. Auf Wunsch unterschreiben wir eine Verschwiegenheitsvereinbarung für Ihre Praxis.' },
       { question: 'Bieten Sie auch die Entsorgung von Praxisabfällen an?', answer: 'Die Entsorgung von Hausmüll übernehmen wir; für medizinische Abfälle arbeiten wir mit zertifizierten Partnern zusammen.' },
     ],
+    abschnitte: [
+      {
+        titel: 'Was gehört zur Praxisreinigung – und was nicht?',
+        text: 'Zur Praxisreinigung gehören die Böden in allen Räumen, in sensiblen Bereichen desinfizierend gewischt, dazu Wartebereich, Empfang und Flure, Kontaktflächen wie Türklinken, Lichtschalter, Tresen und Armlehnen, Liegen, Arbeitsflächen und Ablagen in Behandlungs- und Therapieräumen, die Sanitärbereiche für Patienten und Team, Sozialraum und Teeküche sowie Glas innen an Eingangstür, Glaswänden und Spiegeln. Bewusst beim Praxisteam bleiben die Aufbereitung von Instrumenten und Medizinprodukten und die Desinfektion medizinischer Geräte nach Herstellervorgabe. Patientenakten, Unterlagen und Bildschirme fassen wir nicht an. Welche Bereiche wie oft und mit welchen Mitteln gereinigt werden, übernehmen wir aus Ihrem Hygieneplan in ein Leistungsverzeichnis – so sind die Zuständigkeiten klar und Ihre Haftung geschützt.',
+      },
+      {
+        titel: 'Praxisreinigung in Ihrer Stadt',
+        text: 'Für Kiel, Neumünster, Rendsburg und unseren Sitz Bordesholm gibt es eigene Seiten mit Einsatzgebiet, Praxisarten und Fragen vor Ort. Darüber hinaus reinigen wir Praxen in Preetz, Plön, Eckernförde, Bad Segeberg, Eutin und Lübeck sowie in Hamburg.',
+        links: [
+          { label: 'Praxisreinigung in Kiel', to: '/leistungen/praxisreinigung/kiel' },
+          { label: 'Praxisreinigung in Neumünster', to: '/leistungen/praxisreinigung/neumuenster' },
+          { label: 'Praxisreinigung in Rendsburg', to: '/leistungen/praxisreinigung/rendsburg' },
+          { label: 'Praxisreinigung in Bordesholm', to: '/leistungen/praxisreinigung/bordesholm' },
+        ],
+      },
+    ],
+    stand: { iso: '2026-11-03', anzeige: '03.11.2026' },
     seo: {
       // Kiel, Neumünster, Rendsburg und Bordesholm haben eigene Seiten (/leistungen/praxisreinigung/<stadt>);
       // die allgemeine Seite trägt deshalb keinen Stadtnamen im Title (Mira, 01.11.2026).
       title: 'Praxisreinigung in Schleswig-Holstein | KlarWerk Service',
       description:
-        'Praxisreinigung in Schleswig-Holstein für Arzt-, Zahnarzt- und Therapiepraxen: nach Sprechschluss, nach Hygieneplan, fester Ansprechpartner aus Bordesholm.',
+        'Praxisreinigung für Arzt-, Zahnarzt- und Therapiepraxen in Schleswig-Holstein: nach Ihrem Hygieneplan, nach Sprechschluss, dokumentiert. Angebot anfragen.',
       keywords: `Praxisreinigung, Arztpraxisreinigung, Desinfektion, Hygiene, Reinigung medizinische Einrichtungen, ${localKeywords}`,
     },
   },
 
   hausmeisterservice: {
     id: 'hausmeisterservice',
-    h1: 'Hausmeisterservice – Ihr zuverlässiger Partner vor Ort',
+    h1: 'Hausmeisterservice in Schleswig-Holstein',
     intro:
-      'Ein Objekt läuft nur rund, wenn sich jemand verlässlich kümmert – vom sauberen Treppenhaus bis zur schnell gewechselten Lampe. Als Hausmeisterservice betreut KlarWerk Service Wohnanlagen und Gewerbeobjekte mit festem Personal und festen Einsatztagen: Treppenhaus- und Grünflächenpflege, Winterdienst, kleine Reparaturen, Kontrolle der Haustechnik und allgemeine Objektbetreuung. Über durchgeführte Tätigkeiten und den Zustand des Objekts berichten wir Ihnen regelmäßig. Ob einzelne Liegenschaft oder größeres Portfolio – Sie haben einen festen Ansprechpartner, der weiß, was zu tun ist.',
+      'KlarWerk Service betreut Wohnanlagen und Gewerbeobjekte in Schleswig-Holstein als Hausmeisterservice – mit festem Personal und festen Einsatztagen: Treppenhaus- und Grünflächenpflege, kleine Reparaturen, Kontrolle der Haustechnik und allgemeine Objektbetreuung. Denn ein Objekt läuft nur rund, wenn sich jemand verlässlich kümmert, vom sauberen Treppenhaus bis zur schnell gewechselten Lampe. Über durchgeführte Tätigkeiten und den Zustand des Objekts berichten wir Ihnen regelmäßig. Ob einzelne Liegenschaft oder größeres Portfolio – Sie haben einen festen Ansprechpartner, der weiß, was zu tun ist.',
     process: defaultProcess,
     advantages: defaultAdvantages,
     areas: defaultAreas,
     sustainability: defaultSustainability,
     faqs: [
-      { question: 'Welche Aufgaben übernimmt der Hausmeister?', answer: 'Treppenhausreinigung, Winterdienst, kleine Reparaturen, Objektbetreuung, Grünflächenpflege und Kontrolle der Haustechnik gehören zum Standardumfang.' },
+      { question: 'Welche Aufgaben übernimmt der Hausmeister?', answer: 'Treppenhausreinigung, kleine Reparaturen, Objektbetreuung, Grünflächenpflege und Kontrolle der Haustechnik gehören zum Standardumfang.' },
+      { question: 'Was ist der Unterschied zwischen Hausmeisterservice und Gebäudereinigung?', answer: 'Die Gebäudereinigung hält Flächen sauber, der Hausmeisterservice kümmert sich um das Objekt als Ganzes: Kontrollgänge, kleine Reparaturen, Haustechnik und Außenanlagen. Beides lässt sich bei uns mit einem Ansprechpartner kombinieren.' },
       { question: 'Bieten Sie den Service dauerhaft an?', answer: 'Ja, wir übernehmen die langfristige Betreuung Ihres Objekts mit festem Personal und festen Einsatztagen.' },
-      { question: 'Ist der Winterdienst inklusive?', answer: 'Der Winterdienst kann als Baustein gebucht werden – mit Räumung, Streuung und rechtssicherer Dokumentation.' },
       { question: 'Übernehmen Sie auch kleinere Reparaturen?', answer: 'Ja, kleinere handwerkliche Tätigkeiten wie Lampenwechsel, Türwartung oder Montagearbeiten übernehmen wir direkt.' },
       { question: 'Wie werden die Einsätze dokumentiert?', answer: 'Sie erhalten regelmäßige Berichte über die durchgeführten Tätigkeiten und den Zustand des Objekts.' },
       { question: 'Können Sie mehrere Objekte betreuen?', answer: 'Ja, wir betreuen sowohl einzelne Wohnanlagen als auch größere Portfolios mit mehreren Liegenschaften.' },
     ],
+    abschnitte: [
+      {
+        titel: 'Was macht ein Hausmeisterservice?',
+        text: 'Ein Hausmeisterservice sorgt dafür, dass ein Wohn- oder Gewerbeobjekt im Alltag funktioniert. Bei KlarWerk Service gehören dazu die Reinigung von Treppenhäusern und Gemeinschaftsflächen, die Pflege von Grünflächen und Außenanlagen, kleine Reparaturen wie Lampenwechsel, Türwartung oder Montagearbeiten, die Kontrolle der Haustechnik und regelmäßige Kontrollgänge. Wir arbeiten mit festem Personal an festen Einsatztagen, berichten Ihnen regelmäßig über die erledigten Arbeiten und den Zustand des Objekts und sind für Hausverwaltung und Eigentümer ein fester Ansprechpartner. Ob einzelne Wohnanlage oder mehrere Liegenschaften: Den Umfang legen wir nach einer kostenlosen Besichtigung fest.',
+      },
+      {
+        titel: 'Hausmeisterservice in Ihrer Region',
+        text: 'Unser Sitz ist Bordesholm. Von hier betreuen wir Objekte in Bordesholm und im Amt, in Kiel, Neumünster und Rendsburg mit den Nachbargemeinden wie Osterrönfeld und Büdelsdorf sowie in weiteren Orten Schleswig-Holsteins und in Hamburg. Die Hausmeisterleistungen lassen sich mit der laufenden Unterhaltsreinigung und der Glasreinigung in einem Plan verbinden.',
+        links: [
+          { label: 'Bordesholm', to: '/einsatzgebiet/bordesholm' },
+          { label: 'Kiel', to: '/einsatzgebiet/kiel' },
+          { label: 'Neumünster', to: '/einsatzgebiet/neumuenster' },
+          { label: 'Rendsburg', to: '/einsatzgebiet/rendsburg' },
+        ],
+      },
+    ],
+    stand: { iso: '2026-11-03', anzeige: '03.11.2026' },
     seo: {
-      title: 'Hausmeisterservice Schleswig-Holstein & Hamburg | KlarWerk',
+      // Winterdienst wird nicht angeboten und nicht beworben (Khaled); die eigene Winterdienst-Seite bleibt.
+      title: 'Hausmeisterservice in Schleswig-Holstein | KlarWerk Service',
       description:
-        'Hausmeisterservice in Schleswig-Holstein und Hamburg: Treppenhausreinigung, Grünpflege, kleine Reparaturen und Objektbetreuung mit festem Personal.',
-      keywords: `Hausmeisterservice, Hausmeister, Objektbetreuung, Winterdienst, Treppenhausreinigung, ${localKeywords}`,
+        'Hausmeisterservice in Schleswig-Holstein: Treppenhausreinigung, Grünpflege, kleine Reparaturen und Objektbetreuung mit festem Personal. Angebot anfragen.',
+      keywords: `Hausmeisterservice, Hausmeister, Objektbetreuung, Grünpflege, Treppenhausreinigung, ${localKeywords}`,
     },
   },
 

@@ -206,7 +206,7 @@ export const serviceContents: Record<string, ServiceContent> = {
       { question: 'Bieten Sie auch die Entsorgung von Praxisabfällen an?', answer: 'Die Entsorgung von Hausmüll übernehmen wir; für medizinische Abfälle arbeiten wir mit zertifizierten Partnern zusammen.' },
     ],
     seo: {
-      // Kiel, Neumünster und Rendsburg haben eigene Seiten (/leistungen/praxisreinigung/<stadt>);
+      // Kiel, Neumünster, Rendsburg und Bordesholm haben eigene Seiten (/leistungen/praxisreinigung/<stadt>);
       // die allgemeine Seite trägt deshalb keinen Stadtnamen im Title (Mira, 01.11.2026).
       title: 'Praxisreinigung in Schleswig-Holstein | KlarWerk Service',
       description:

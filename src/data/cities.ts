@@ -33,6 +33,7 @@ export const cities: City[] = [
       vorspann: 'Für die häufigsten Aufträge haben wir eigene Seiten:',
       links: [
         { label: 'Büroreinigung in Bordesholm', to: '/leistungen/bueroreinigung/bordesholm' },
+        { label: 'Praxisreinigung in Bordesholm', to: '/leistungen/praxisreinigung/bordesholm' },
       ],
     },
     highlights: [

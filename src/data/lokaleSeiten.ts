@@ -3759,6 +3759,192 @@ export const lokaleSeiten: LokaleSeite[] = [
       vertrauen: [UserCheck, KeyRound, ClipboardCheck, Users],
     },
   },
+
+  // ---- Praxisreinigung · Bordesholm ----------------------------------------------------
+  {
+    serviceId: 'praxisreinigung',
+    citySlug: 'bordesholm',
+    leistung: 'Praxisreinigung',
+    ort: 'Bordesholm',
+    seo: {
+      title: 'Praxisreinigung in Bordesholm | KlarWerk Service',
+      description:
+        'Praxisreinigung in Bordesholm und im Amt Bordesholm: nach Ihrem Hygieneplan, nach Sprechschluss, vom Reinigungsbetrieb im selben Ort.',
+      keywords:
+        'Praxisreinigung Bordesholm, Reinigung Arztpraxis Bordesholm, Zahnarztpraxis Reinigung Bordesholm, Physiotherapie Reinigung Bordesholm, Praxisreinigung Amt Bordesholm, Praxisreinigung Wattenbek, Praxisreinigung Flintbek',
+    },
+    h1: 'Praxisreinigung in Bordesholm',
+    intro:
+      'Ihre Praxis in Bordesholm versorgt Patienten aus dem ganzen Amt – aus Wattenbek, Brügge, Mühbrook und den Dörfern ringsum. Damit Wartezimmer, Behandlungsräume und Sanitär jeden Morgen bereitstehen, reinigt KlarWerk Service nach Ihrem Hygieneplan und außerhalb der Sprechzeiten. Unser Sitz ist ebenfalls in Bordesholm: Ihr Ansprechpartner ist schnell vor Ort, für die Besichtigung, für Kontrollen und wenn einmal ein zusätzlicher Termin nötig ist.',
+    bild: {
+      // gleiches Foto wie auf /leistungen/praxisreinigung (kommt aus services.ts)
+      alt: 'Gereinigter Wartebereich einer Praxis – Praxisreinigung in Bordesholm durch KlarWerk Service',
+    },
+    eckdaten: [
+      { titel: 'Im selben Ort', text: 'Unser Sitz ist in Bordesholm, die Wege sind kurz' },
+      { titel: 'Nach Ihrem Hygieneplan', text: 'Bereiche, Mittel und Intervalle wie bei Ihnen festgelegt' },
+      { titel: 'Nach Sprechschluss', text: 'Abends, früh morgens oder am freien Nachmittag' },
+    ],
+    zielgruppen: [
+      {
+        titel: 'Hausarztpraxen für Ort und Amt',
+        text: 'Eine Praxis, viele Gemeinden: Wartezimmer und Empfang sind den ganzen Tag voll. Böden, Sitzplätze und häufig berührte Flächen wie Tresen, Türklinken und Armlehnen werden bei jeder Reinigung gereinigt und nach Plan desinfiziert.',
+      },
+      {
+        titel: 'Zahnarztpraxen',
+        text: 'Böden und Oberflächen rund um die Behandlungseinheit, Rezeption, Wartebereich und Sanitär. Was am Gerät selbst passiert, bleibt bei Ihrem Praxisteam.',
+      },
+      {
+        titel: 'Physio-, Ergo- und Logopädiepraxen',
+        text: 'Therapieliegen, Matten, Trainingsflächen, Umkleiden und Duschen – Räume, die vom ersten bis zum letzten Termin genutzt werden und eine feste Routine brauchen.',
+      },
+      {
+        titel: 'Kleine Praxen mit wenigen Räumen',
+        text: 'Psychotherapie, Podologie oder eine Einzelpraxis im Wohnhaus: Oft reicht eine Reinigung an festen Wochentagen, dazu auf Wunsch Eingang und Treppenhaus.',
+      },
+      {
+        titel: 'Praxen mit Standort in Kiel oder Neumünster',
+        text: 'Wer eine zweite Praxis in Kiel oder Neumünster führt, bekommt bei uns einen Ansprechpartner und einen abgestimmten Plan für beide Häuser – für beide Städte haben wir eigene Seiten.',
+      },
+    ],
+    umfang: {
+      wir: [
+        'Böden in allen Räumen – feucht gewischt, in sensiblen Bereichen desinfizierend',
+        'Wartezimmer, Empfang und Flure',
+        'Kontaktflächen wie Türklinken, Lichtschalter, Tresen und Armlehnen',
+        'Behandlungs- und Therapieräume: Liegen, Arbeitsflächen und Ablagen',
+        'Sanitärbereiche für Patienten und Team, Nachfüllen auf Wunsch',
+        'Sozialraum und Teeküche, Papierkörbe und Hausmüll',
+        'Glasflächen innen: Eingangstür, Glaswände und Spiegel',
+      ],
+      beiIhnen: [
+        'Aufbereitung von Instrumenten und Medizinprodukten',
+        'Desinfektion medizinischer Geräte nach Herstellervorgabe',
+        'Patientenakten, Unterlagen und Bildschirme – die fassen wir nicht an',
+      ],
+    },
+    zeiten: {
+      titel: 'Nach Sprechschluss – und gründlich in den Praxisferien',
+      text: 'Die laufende Reinigung erledigen wir, wenn Ihre Praxis leer ist. Die Böden nehmen wir uns einmal gründlich vor, wenn die Praxis geschlossen hat: mit unserem eigenen Team, wir räumen die Räume aus und wieder ein, und zur Wiedereröffnung ist alles an seinem Platz.',
+      punkte: [
+        'Abends nach der letzten Sprechstunde oder früh morgens vor Praxisbeginn',
+        'An Ihren freien Nachmittagen, täglich oder an festen Wochentagen',
+        'Grundreinigung der Böden in den Praxisferien, auf Wunsch mit Versiegelung',
+        'Zusätzliche Termine, etwa nach Umbau oder vor einer Begehung, nach Absprache',
+      ],
+    },
+    vertrauen: [
+      {
+        titel: 'Ihr Hygieneplan ist die Vorgabe',
+        text: 'Wir übernehmen Ihre Festlegungen zu Bereichen, Mitteln und Intervallen und setzen VAH-gelistete Desinfektionsmittel passend zum Einsatzbereich ein.',
+      },
+      {
+        titel: 'Jede Reinigung dokumentiert',
+        text: 'Sie sehen, was wann gereinigt wurde – hilfreich für Ihre Hygienedokumentation und bei Begehungen.',
+      },
+      {
+        titel: 'Diskret und verschwiegen',
+        text: 'Akten, Unterlagen und Bildschirme bleiben unberührt. Auf Wunsch unterschreiben wir eine Verschwiegenheitsvereinbarung für Ihre Praxis.',
+      },
+      {
+        titel: 'Ansprechpartner aus dem Ort',
+        text: 'Kontrollen macht Ihr fester Ansprechpartner persönlich. Rückfragen und Änderungen am Plan sind bei uns ein kurzer Weg.',
+      },
+    ],
+    anfahrt: {
+      titel: 'Praxisreinigung in Bordesholm und im Amt Bordesholm',
+      text: 'Unser Sitz liegt in Bordesholm zwischen Kiel und Neumünster. In jede Gemeinde des Amtes sind es nur wenige Minuten, ebenso nach Flintbek, Molfsee und Nortorf. Für Ihre Praxis heißt das: Besichtigung, Kontrollen und Absprachen ohne lange Anfahrt.',
+      gruppen: [
+        { titel: 'Amt Bordesholm', orte: ['Bordesholm', 'Wattenbek', 'Brügge', 'Mühbrook', 'Schmalstede', 'Grevenkrug', 'Hoffeld', 'Loop', 'Sören', 'Reesdorf', 'Schönbek', 'Groß Buchwald', 'Bissee', 'Negenharrie'] },
+      ],
+      umland: ['Flintbek', 'Molfsee', 'Nortorf', 'Boostedt', 'Wasbek'],
+    },
+    ablauf: [
+      {
+        title: 'Kurze Anfrage',
+        desc: 'Praxisart, ungefähre Raumzahl und Ihre Sprechzeiten genügen für den Anfang.',
+      },
+      {
+        title: 'Besichtigung in Ihrer Praxis',
+        desc: 'Kostenlos und kurzfristig in Bordesholm und Umgebung: Wir gehen Räume, Bodenbeläge und Ihren Hygieneplan gemeinsam durch.',
+      },
+      {
+        title: 'Festpreis-Angebot',
+        desc: 'Mit klarem Leistungsverzeichnis nach Räumen und Rhythmus, auf Wunsch mit Termin für die Grundreinigung in den Praxisferien.',
+      },
+      {
+        title: 'Start mit Einweisung',
+        desc: 'Schlüssel- und Alarmregelung, Zuständigkeiten und Reinigungsplan halten wir vor dem ersten Einsatz schriftlich fest.',
+      },
+      {
+        title: 'Laufende Betreuung',
+        desc: 'Persönliche Kontrollen, kurze Wege für Rückfragen und eine eingearbeitete Vertretung bei Urlaub oder Krankheit.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Reinigen Sie Praxen im ganzen Amt Bordesholm?',
+        answer:
+          'Ja. In Bordesholm selbst und in allen Gemeinden des Amtes, etwa in Wattenbek, Brügge, Mühbrook und Schmalstede, dazu in Flintbek, Molfsee, Nortorf und Boostedt. Unser Sitz ist in Bordesholm.',
+      },
+      {
+        question: 'Wir sind eine kleine Praxis – lohnt sich eine Reinigungsfirma?',
+        answer:
+          'Das entscheiden Sie nach dem Angebot. Bei wenigen Räumen reicht oft eine Reinigung an festen Wochentagen statt täglich. Den Rhythmus legen wir nach Praxisgröße und Hygieneplan gemeinsam fest.',
+      },
+      {
+        question: 'Arbeiten Sie nach unserem Hygieneplan?',
+        answer:
+          'Ja. Wir übernehmen die Vorgaben Ihres Hygieneplans zu Bereichen, Mitteln und Intervallen, setzen VAH-gelistete Desinfektionsmittel ein und dokumentieren jede Reinigung nachvollziehbar.',
+      },
+      {
+        question: 'Wer räumt bei der Grundreinigung in den Praxisferien aus?',
+        answer:
+          'Wir. Die Grundreinigung macht unser eigenes Team, wir räumen die Räume aus und wieder ein, auf Wunsch versiegeln wir die Böden. Zur Wiedereröffnung steht alles wieder an seinem Platz.',
+      },
+      {
+        question: 'Können Sie auch kurzfristig zusätzlich kommen?',
+        answer:
+          'Nach Absprache ja, etwa nach einem Umbau oder vor einer Begehung. Weil wir in Bordesholm sitzen, sind die Wege kurz.',
+      },
+      {
+        question: 'Übernehmen Sie auch die Aufbereitung von Instrumenten?',
+        answer:
+          'Nein. Die Aufbereitung von Medizinprodukten und die Desinfektion medizinischer Geräte bleiben bei Ihrem Praxisteam. Wir reinigen und desinfizieren Böden, Oberflächen, Kontaktflächen und Sanitärbereiche.',
+      },
+      {
+        question: 'Wer reinigt bei Urlaub oder Krankheit?',
+        answer:
+          'Eine eingearbeitete Vertretung, die Ihre Praxis und den Reinigungsplan kennt. Ihr Ansprechpartner bleibt derselbe.',
+      },
+      {
+        question: 'Was kostet die Praxisreinigung in Bordesholm?',
+        answer:
+          'Das hängt von Praxisgröße, Raumanzahl, Bodenbelägen und Rhythmus ab. Nach einer kostenlosen Besichtigung erhalten Sie ein Festpreis-Angebot mit klarem Leistungsverzeichnis.',
+      },
+    ],
+    ergaenzungen: [
+      { serviceId: 'grundreinigung', text: 'Böden in den Praxisferien gründlich reinigen und auf Wunsch versiegeln – mit eigenem Team, Aus- und Einräumen inklusive.' },
+      { serviceId: 'glasreinigung', text: 'Praxisfenster, Eingangstür und Praxisschild – streifenfrei, innen und außen.' },
+      { serviceId: 'bueroreinigung', text: 'Für Büro- und Verwaltungsräume im selben Haus – unsere Büroreinigung in Bordesholm.' },
+    ],
+    texte: {
+      zielgruppenLabel: 'Für Ihre Praxis',
+      zielgruppenTitel: 'Jede Praxis im Amt Bordesholm braucht etwas anderes',
+      zielgruppenText: 'Reinigungsplan und Rhythmus richten sich nach Ihrer Praxisart und Ihren Sprechzeiten, nicht nach einer Standardliste.',
+      grenzenTitel: 'Das bleibt bei Ihrem Praxisteam',
+      grenzenText: 'Klare Grenzen schützen Patienten, Geräte und Ihre Haftung.',
+      ablaufTitel: 'So starten wir in Ihrer Praxis',
+      vertrauenLabel: 'Hygiene & Vertrauen',
+      ergaenzungTitel: 'Alles für Ihre Praxis aus einer Hand',
+      ctaText:
+        'Wir kommen kurzfristig zur kostenlosen Besichtigung in Ihre Praxis in Bordesholm und erstellen Ihnen ein Festpreis-Angebot mit klarem Leistungsverzeichnis.',
+    },
+    icons: {
+      zielgruppen: [Stethoscope, Smile, Activity, Home, Building2],
+      vertrauen: [ClipboardCheck, FileText, Lock, UserCheck],
+    },
+  },
 ];
 
 export function getLokaleSeite(serviceId: string, citySlug: string): LokaleSeite | undefined {

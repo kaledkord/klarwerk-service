@@ -39,6 +39,7 @@ export const siteRoutes = [
   { path: '/leistungen/bueroreinigung/neumuenster', changefreq: 'monthly', priority: '0.8' },
   { path: '/leistungen/bueroreinigung/rendsburg', changefreq: 'monthly', priority: '0.8' },
   { path: '/leistungen/bueroreinigung/bordesholm', changefreq: 'monthly', priority: '0.8' },
+  { path: '/leistungen/praxisreinigung/bordesholm', changefreq: 'monthly', priority: '0.8' },
   { path: '/leistungen/glasreinigung', changefreq: 'monthly', priority: '0.8' },
   { path: '/leistungen/glasreinigung/neumuenster', changefreq: 'monthly', priority: '0.8' },
   { path: '/leistungen/glasreinigung/kiel', changefreq: 'monthly', priority: '0.8' },

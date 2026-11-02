@@ -128,10 +128,10 @@ export const serviceContents: Record<string, ServiceContent> = {
       { question: 'Wie schnell können Sie starten?', answer: 'Nach der Besichtigung und Angebotsfreigabe starten wir in der Regel innerhalb von ein bis zwei Wochen.' },
     ],
     seo: {
-      // Kiel und Neumünster haben eigene Seiten (/leistungen/bueroreinigung/kiel, /neumuenster).
-      title: 'Büroreinigung Bordesholm, Rendsburg & SH | KlarWerk Service',
+      // Kiel, Neumünster, Rendsburg und Bordesholm haben eigene Seiten (/leistungen/bueroreinigung/<stadt>).
+      title: 'Büroreinigung in Schleswig-Holstein | KlarWerk Service',
       description:
-        'Büroreinigung in Bordesholm, Rendsburg und Schleswig-Holstein: fester Reinigungsplan, fester Ansprechpartner, Vertretung bei Urlaub und Krankheit.',
+        'Büroreinigung in ganz Schleswig-Holstein vom Betrieb in Bordesholm: fester Reinigungsplan, fester Ansprechpartner, Vertretung bei Urlaub und Krankheit.',
       keywords: `Büroreinigung, Büroreinigung Bordesholm, Büroreinigung Rendsburg, Schreibtischreinigung, Bodenpflege, ${localKeywords}`,
     },
   },
@@ -154,10 +154,10 @@ export const serviceContents: Record<string, ServiceContent> = {
       { question: 'Wie wird die Qualität sichergestellt?', answer: 'Wir arbeiten mit Reinigungsplänen und Checklisten und führen regelmäßige Qualitätskontrollen durch – so bleibt das Ergebnis dauerhaft auf hohem Niveau.' },
     ],
     seo: {
-      // Neumünster und Kiel haben eigene Seiten (/leistungen/unterhaltsreinigung/<stadt>).
+      // Kiel, Neumünster und Bordesholm haben eigene Seiten (/leistungen/unterhaltsreinigung/<stadt>).
       title: 'Unterhaltsreinigung Schleswig-Holstein | KlarWerk Service',
       description:
-        'Regelmäßige Unterhaltsreinigung für Büros, Praxen, Gewerbe und Wohnanlagen in Bordesholm und ganz Schleswig-Holstein. Fester Plan, ein Ansprechpartner.',
+        'Regelmäßige Unterhaltsreinigung für Büros, Praxen, Gewerbe und Wohnanlagen in ganz Schleswig-Holstein. Fester Plan, ein Ansprechpartner aus Bordesholm.',
       keywords: `Unterhaltsreinigung, unterhaltsreinigung Kiel, Gebäudereinigung regelmäßig, Büroreinigung Vertrag, ${localKeywords}`,
     },
   },
@@ -180,10 +180,10 @@ export const serviceContents: Record<string, ServiceContent> = {
       { question: 'Was kostet eine Glasreinigung?', answer: 'Die Kosten richten sich nach Anzahl, Größe und Zugänglichkeit der Fenster. Nach einer Besichtigung erhalten Sie ein Festpreis-Angebot.' },
     ],
     seo: {
-      // Kiel, Neumünster und Rendsburg haben eigene Seiten (/leistungen/glasreinigung/<stadt>).
+      // Kiel, Neumünster, Rendsburg und Bordesholm haben eigene Seiten (/leistungen/glasreinigung/<stadt>).
       title: 'Glasreinigung in Schleswig-Holstein | KlarWerk Service',
       description:
-        'Glas- und Fensterreinigung für Büros, Praxen und Geschäfte in Bordesholm und ganz Schleswig-Holstein. Innen und außen, feste Termine. Angebot anfragen.',
+        'Glas- und Fensterreinigung für Büros, Praxen und Geschäfte in ganz Schleswig-Holstein: innen und außen, im festen Turnus oder einmalig. Angebot anfragen.',
       keywords: `Glasreinigung, Fensterreinigung, Fassadenreinigung, streifenfreie Reinigung, ${localKeywords}`,
     },
   },
@@ -206,7 +206,7 @@ export const serviceContents: Record<string, ServiceContent> = {
       { question: 'Bieten Sie auch die Entsorgung von Praxisabfällen an?', answer: 'Die Entsorgung von Hausmüll übernehmen wir; für medizinische Abfälle arbeiten wir mit zertifizierten Partnern zusammen.' },
     ],
     seo: {
-      // Kiel, Neumünster und Rendsburg haben eigene Seiten (/leistungen/praxisreinigung/<stadt>);
+      // Kiel, Neumünster, Rendsburg und Bordesholm haben eigene Seiten (/leistungen/praxisreinigung/<stadt>);
       // die allgemeine Seite trägt deshalb keinen Stadtnamen im Title (Mira, 01.11.2026).
       title: 'Praxisreinigung in Schleswig-Holstein | KlarWerk Service',
       description:
@@ -308,7 +308,7 @@ export const serviceContents: Record<string, ServiceContent> = {
       { question: 'Stellen Sie Container für den Bauschutt?', answer: 'Die Entsorgung von Reststoffen organisieren wir auf Wunsch gerne für Sie.' },
     ],
     seo: {
-      // Neumünster und Kiel haben eigene Seiten (/leistungen/bauendreinigung/<stadt>).
+      // Kiel, Neumünster und Bordesholm haben eigene Seiten (/leistungen/bauendreinigung/<stadt>).
       title: 'Bauendreinigung Schleswig-Holstein | KlarWerk Service',
       description:
         'Bauendreinigung in Schleswig-Holstein: Baustaub, Farb- und Mörtelreste, Fenster und Böden – übergabefertig nach Bau und Renovierung. Jetzt anfragen.',

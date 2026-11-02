@@ -17,6 +17,14 @@ export interface City {
   tier: 1 | 2 | 3;
   /** Optionaler eigener Seitentitel (inkl. Marke), sonst „Gebäudereinigung {Ort} | KlarWerk Service“. */
   seoTitle?: string;
+  /**
+   * In sich geschlossene Antwort-Abschnitte (je 100–180 Wörter, Überschrift als Frage oder Thema, Antwort im
+   * ersten Satz) direkt nach dem Kopf. So können Google und KI-Suchen sie als Ganzes übernehmen
+   * (seo-geo-consultant). Nur belegte Angaben.
+   */
+  abschnitte?: { titel: string; text: string; link?: { label: string; to: string } }[];
+  /** Stand der Inhalte: sichtbar unter den FAQ und als dateModified. Nur bei echten Änderungen anpassen. */
+  stand?: { iso: string; anzeige: string };
 }
 
 export const cities: City[] = [
@@ -55,9 +63,11 @@ export const cities: City[] = [
     slug: 'kiel',
     name: 'Kiel',
     region: 'Schleswig-Holstein',
+    // „Praxis“ nicht mehr im Titel: „praxisreinigung kiel“ landete auf dieser Seite statt auf
+    // /leistungen/praxisreinigung/kiel. Die Stadtseite trägt „gebäudereinigung/reinigungsfirma kiel“ (Mira, 02.11.2026).
     description:
-      'Gebäudereinigung in Kiel: Büro-, Praxis- und Glasreinigung mit festem Ansprechpartner, von Bordesholm in 20 Minuten im ganzen Stadtgebiet und Umland.',
-    seoTitle: 'Gebäudereinigung Kiel für Büro & Praxis | KlarWerk Service',
+      'Gebäudereinigung in Kiel für Wohnanlagen, Büros, Praxen und Gewerbe: Treppenhaus-, Unterhalts- und Glasreinigung, fester Ansprechpartner. Angebot anfragen.',
+    seoTitle: 'Gebäudereinigung in Kiel – Reinigungsfirma | KlarWerk',
     intro:
       'KlarWerk Service reinigt Büros, Praxen, Geschäfte und Wohnanlagen in ganz Kiel – auf dem Westufer von der Innenstadt über Ravensberg, Schreventeich und Wik bis Mettenhof und Friedrichsort, auf dem Ostufer in Gaarden, Neumühlen-Dietrichsdorf und Wellsee. Unser Sitz in Bordesholm liegt rund 20 Kilometer südlich, über die A215 sind wir in 20 Minuten bei Ihnen.',
     eigeneSeiten: {
@@ -79,13 +89,35 @@ export const cities: City[] = [
       { text: 'Glasreinigung in Kiel, streifenfrei innen und außen', to: '/leistungen/glasreinigung/kiel' },
       { text: 'Treppenhausreinigung für Wohnanlagen in Kiel', to: '/leistungen/unterhaltsreinigung/kiel' },
     ],
+    abschnitte: [
+      {
+        titel: 'Welche Reinigungsfirma reinigt Gebäude in Kiel?',
+        text: 'KlarWerk Service ist ein inhabergeführtes Gebäudereinigungsunternehmen aus Bordesholm, das Wohnanlagen, Büros, Praxen, Kitas, Schulen und Gewerbeobjekte in ganz Kiel reinigt. Unser Sitz liegt rund 20 Kilometer südlich, über die A215 sind wir in 20 Minuten in der Stadt – auf dem Westufer ebenso wie in Gaarden, Neumühlen-Dietrichsdorf und Wellsee. Zum Angebot gehören Unterhalts- und Treppenhausreinigung, Büro-, Praxis- und Glasreinigung, Grund- und Bauendreinigung sowie Hausmeisterservice. Vor jedem Auftrag sehen wir uns das Objekt kostenlos an und kalkulieren einen Festpreis mit unserem eigenen Programm für die Gebäudereinigung; Bereiche und Intervalle stehen in einem Leistungsverzeichnis. Jedes Objekt hat einen festen Ansprechpartner, und bei Urlaub oder Krankheit übernimmt eine eingearbeitete Vertretung.',
+      },
+      {
+        titel: 'Treppenhausreinigung in Kiel für Wohnanlagen und Hausverwaltungen',
+        text: 'Treppenhäuser, Hauseingänge, Aufzüge, Keller- und Müllräume in Kieler Wohnanlagen reinigen wir im festen Turnus, meist wöchentlich oder vierzehntägig. Was in welchem Rhythmus gereinigt wird – Stufen und Podeste, Handläufe, Türen und auf Wunsch die Treppenhausfenster –, steht im Leistungsverzeichnis, das auch Bewohner nachlesen können. Die Hausverwaltung hat einen Ansprechpartner für alle Häuser und für Rückmeldungen aus der Hausgemeinschaft. Regelmäßige Kontrollen sorgen dafür, dass der Plan eingehalten wird, und bei Urlaub oder Krankheit übernimmt eine eingearbeitete Vertretung. Bei uns gehört die Treppenhausreinigung zur Unterhaltsreinigung; dort finden Sie Umfang, Ablauf und Antworten im Detail.',
+        link: { label: 'Unterhaltsreinigung in Kiel', to: '/leistungen/unterhaltsreinigung/kiel' },
+      },
+    ],
     faqs: [
       {
         question: 'In welchen Stadtteilen von Kiel reinigen Sie?',
         answer:
           'Im ganzen Stadtgebiet: auf dem Westufer in der Innenstadt, in Ravensberg, Brunswik, Schreventeich, Wik, Hassee, Suchsdorf, am Südfriedhof, in Mettenhof und Friedrichsort, auf dem Ostufer in Gaarden, Neumühlen-Dietrichsdorf und Wellsee. Dazu kommt das Umland mit Kronshagen, Altenholz, Molfsee, Flintbek, Schwentinental und Heikendorf.',
       },
+      {
+        question: 'Wie schnell sind Sie in Kiel vor Ort?',
+        answer:
+          'In rund 20 Minuten. Unser Sitz in Bordesholm liegt rund 20 Kilometer südlich von Kiel, über die A215 sind wir schnell im Stadtgebiet. Besichtigung, Kontrollen und kurzfristige Absprachen sind so kurze Wege.',
+      },
+      {
+        question: 'Machen Sie Treppenhausreinigung in Kiel?',
+        answer:
+          'Ja, als Teil der Unterhaltsreinigung: Treppenhäuser, Hauseingänge, Aufzüge und Gemeinschaftsflächen im festen Turnus, meist wöchentlich oder vierzehntägig, mit einem Ansprechpartner für die Hausverwaltung und einem Leistungsverzeichnis.',
+      },
     ],
+    stand: { iso: '2026-11-02', anzeige: '02.11.2026' },
     image: '/bilder/stadt-kiel.jpg',
     tier: 1,
   },

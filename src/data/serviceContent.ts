@@ -314,26 +314,44 @@ export const serviceContents: Record<string, ServiceContent> = {
 
   hausmeisterservice: {
     id: 'hausmeisterservice',
-    h1: 'Hausmeisterservice – Ihr zuverlässiger Partner vor Ort',
+    h1: 'Hausmeisterservice in Schleswig-Holstein',
     intro:
-      'Ein Objekt läuft nur rund, wenn sich jemand verlässlich kümmert – vom sauberen Treppenhaus bis zur schnell gewechselten Lampe. Als Hausmeisterservice betreut KlarWerk Service Wohnanlagen und Gewerbeobjekte mit festem Personal und festen Einsatztagen: Treppenhaus- und Grünflächenpflege, Winterdienst, kleine Reparaturen, Kontrolle der Haustechnik und allgemeine Objektbetreuung. Über durchgeführte Tätigkeiten und den Zustand des Objekts berichten wir Ihnen regelmäßig. Ob einzelne Liegenschaft oder größeres Portfolio – Sie haben einen festen Ansprechpartner, der weiß, was zu tun ist.',
+      'KlarWerk Service betreut Wohnanlagen und Gewerbeobjekte in Schleswig-Holstein als Hausmeisterservice – mit festem Personal und festen Einsatztagen: Treppenhaus- und Grünflächenpflege, kleine Reparaturen, Kontrolle der Haustechnik und allgemeine Objektbetreuung. Denn ein Objekt läuft nur rund, wenn sich jemand verlässlich kümmert, vom sauberen Treppenhaus bis zur schnell gewechselten Lampe. Über durchgeführte Tätigkeiten und den Zustand des Objekts berichten wir Ihnen regelmäßig. Ob einzelne Liegenschaft oder größeres Portfolio – Sie haben einen festen Ansprechpartner, der weiß, was zu tun ist.',
     process: defaultProcess,
     advantages: defaultAdvantages,
     areas: defaultAreas,
     sustainability: defaultSustainability,
     faqs: [
-      { question: 'Welche Aufgaben übernimmt der Hausmeister?', answer: 'Treppenhausreinigung, Winterdienst, kleine Reparaturen, Objektbetreuung, Grünflächenpflege und Kontrolle der Haustechnik gehören zum Standardumfang.' },
+      { question: 'Welche Aufgaben übernimmt der Hausmeister?', answer: 'Treppenhausreinigung, kleine Reparaturen, Objektbetreuung, Grünflächenpflege und Kontrolle der Haustechnik gehören zum Standardumfang.' },
+      { question: 'Was ist der Unterschied zwischen Hausmeisterservice und Gebäudereinigung?', answer: 'Die Gebäudereinigung hält Flächen sauber, der Hausmeisterservice kümmert sich um das Objekt als Ganzes: Kontrollgänge, kleine Reparaturen, Haustechnik und Außenanlagen. Beides lässt sich bei uns mit einem Ansprechpartner kombinieren.' },
       { question: 'Bieten Sie den Service dauerhaft an?', answer: 'Ja, wir übernehmen die langfristige Betreuung Ihres Objekts mit festem Personal und festen Einsatztagen.' },
-      { question: 'Ist der Winterdienst inklusive?', answer: 'Der Winterdienst kann als Baustein gebucht werden – mit Räumung, Streuung und rechtssicherer Dokumentation.' },
       { question: 'Übernehmen Sie auch kleinere Reparaturen?', answer: 'Ja, kleinere handwerkliche Tätigkeiten wie Lampenwechsel, Türwartung oder Montagearbeiten übernehmen wir direkt.' },
       { question: 'Wie werden die Einsätze dokumentiert?', answer: 'Sie erhalten regelmäßige Berichte über die durchgeführten Tätigkeiten und den Zustand des Objekts.' },
       { question: 'Können Sie mehrere Objekte betreuen?', answer: 'Ja, wir betreuen sowohl einzelne Wohnanlagen als auch größere Portfolios mit mehreren Liegenschaften.' },
     ],
+    abschnitte: [
+      {
+        titel: 'Was macht ein Hausmeisterservice?',
+        text: 'Ein Hausmeisterservice sorgt dafür, dass ein Wohn- oder Gewerbeobjekt im Alltag funktioniert. Bei KlarWerk Service gehören dazu die Reinigung von Treppenhäusern und Gemeinschaftsflächen, die Pflege von Grünflächen und Außenanlagen, kleine Reparaturen wie Lampenwechsel, Türwartung oder Montagearbeiten, die Kontrolle der Haustechnik und regelmäßige Kontrollgänge. Wir arbeiten mit festem Personal an festen Einsatztagen, berichten Ihnen regelmäßig über die erledigten Arbeiten und den Zustand des Objekts und sind für Hausverwaltung und Eigentümer ein fester Ansprechpartner. Ob einzelne Wohnanlage oder mehrere Liegenschaften: Den Umfang legen wir nach einer kostenlosen Besichtigung fest.',
+      },
+      {
+        titel: 'Hausmeisterservice in Ihrer Region',
+        text: 'Unser Sitz ist Bordesholm. Von hier betreuen wir Objekte in Bordesholm und im Amt, in Kiel, Neumünster und Rendsburg mit den Nachbargemeinden wie Osterrönfeld und Büdelsdorf sowie in weiteren Orten Schleswig-Holsteins und in Hamburg. Die Hausmeisterleistungen lassen sich mit der laufenden Unterhaltsreinigung und der Glasreinigung in einem Plan verbinden.',
+        links: [
+          { label: 'Bordesholm', to: '/einsatzgebiet/bordesholm' },
+          { label: 'Kiel', to: '/einsatzgebiet/kiel' },
+          { label: 'Neumünster', to: '/einsatzgebiet/neumuenster' },
+          { label: 'Rendsburg', to: '/einsatzgebiet/rendsburg' },
+        ],
+      },
+    ],
+    stand: { iso: '2026-11-03', anzeige: '03.11.2026' },
     seo: {
-      title: 'Hausmeisterservice Schleswig-Holstein & Hamburg | KlarWerk',
+      // Winterdienst wird nicht angeboten und nicht beworben (Khaled); die eigene Winterdienst-Seite bleibt.
+      title: 'Hausmeisterservice in Schleswig-Holstein | KlarWerk Service',
       description:
-        'Hausmeisterservice in Schleswig-Holstein und Hamburg: Treppenhausreinigung, Grünpflege, kleine Reparaturen und Objektbetreuung mit festem Personal.',
-      keywords: `Hausmeisterservice, Hausmeister, Objektbetreuung, Winterdienst, Treppenhausreinigung, ${localKeywords}`,
+        'Hausmeisterservice in Schleswig-Holstein: Treppenhausreinigung, Grünpflege, kleine Reparaturen und Objektbetreuung mit festem Personal. Angebot anfragen.',
+      keywords: `Hausmeisterservice, Hausmeister, Objektbetreuung, Grünpflege, Treppenhausreinigung, ${localKeywords}`,
     },
   },
 

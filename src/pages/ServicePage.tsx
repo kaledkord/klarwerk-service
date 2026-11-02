@@ -94,6 +94,19 @@ export default function ServicePage() {
     })),
   };
 
+  // Stand der Inhalte als dateModified (nur Leistungen mit `stand`, seo-geo-consultant).
+  const webPageJsonLd = content.stand
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        url: `${businessConfig.url}/leistungen/${service.id}`,
+        name: content.seo.title,
+        inLanguage: 'de-DE',
+        dateModified: content.stand.iso,
+        about: { '@id': `${businessConfig.url}/#business` },
+      }
+    : null;
+
   const breadcrumbJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -111,7 +124,7 @@ export default function ServicePage() {
         description={content.seo.description}
         keywords={content.seo.keywords}
         canonicalPath={`/leistungen/${service.id}`}
-        jsonLd={[jsonLd, faqJsonLd, breadcrumbJsonLd]}
+        jsonLd={webPageJsonLd ? [jsonLd, faqJsonLd, breadcrumbJsonLd, webPageJsonLd] : [jsonLd, faqJsonLd, breadcrumbJsonLd]}
       />
 
       {/* Hero */}
@@ -182,6 +195,33 @@ export default function ServicePage() {
           </AnimatedSection>
         </div>
       </section>
+
+      {/* Antwort-Abschnitte: in sich geschlossene Absätze für Suche und KI-Antworten */}
+      {content.abschnitte && content.abschnitte.length > 0 && (
+        <section className="pb-12">
+          <div className="max-w-3xl mx-auto px-6 space-y-14">
+            {content.abschnitte.map((a) => (
+              <AnimatedSection key={a.titel}>
+                <h2 className="text-2xl md:text-3xl font-black tracking-tight">{a.titel}</h2>
+                <p className="mt-4 text-lg text-slate-300 leading-relaxed">{a.text}</p>
+                {a.links && (
+                  <p className="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-sm font-semibold">
+                    {a.links.map((l) => (
+                      <Link
+                        key={l.to}
+                        to={l.to}
+                        className="inline-flex items-center gap-1.5 text-brand-300 hover:gap-2.5 transition-all"
+                      >
+                        {l.label} <ArrowRight size={14} />
+                      </Link>
+                    ))}
+                  </p>
+                )}
+              </AnimatedSection>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Process (angeheftet wie auf der Startseite) */}
       <AblaufAngeheftet
@@ -415,6 +455,11 @@ export default function ServicePage() {
           <AnimatedSection delay={0.1}>
             <FAQAccordion items={content.faqs} />
           </AnimatedSection>
+          {content.stand && (
+            <p className="mt-6 text-center text-sm text-slate-400">
+              Stand: <time dateTime={content.stand.iso}>{content.stand.anzeige}</time>
+            </p>
+          )}
         </div>
       </section>
 

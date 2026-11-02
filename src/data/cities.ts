@@ -84,6 +84,19 @@ export const cities: City[] = [
       'Gebäudereinigung in Neumünster für Büros, Praxen und Gewerbe: Unterhalts-, Glas- und Grundreinigung, fester Ansprechpartner, kurze Anfahrt aus Bordesholm.',
     intro:
       'In Neumünster bieten wir umfassende Gebäudereinigung für gewerbliche und private Kunden an. Ob Büroreinigung, Glasreinigung oder Hausmeisterservice – KlarWerk Service sorgt für Sauberkeit in der Mittelstadt zwischen Kiel und Hamburg.',
+    eigeneSeiten: {
+      vorspann: 'Für die häufigsten Aufträge haben wir eigene Seiten:',
+      links: [
+        { label: 'Büroreinigung', to: '/leistungen/bueroreinigung/neumuenster' },
+        { label: 'Praxisreinigung', to: '/leistungen/praxisreinigung/neumuenster' },
+        { label: 'Glasreinigung', to: '/leistungen/glasreinigung/neumuenster' },
+        { label: 'Unterhaltsreinigung', to: '/leistungen/unterhaltsreinigung/neumuenster' },
+        { label: 'Grundreinigung', to: '/leistungen/grundreinigung/neumuenster' },
+        { label: 'Bauendreinigung', to: '/leistungen/bauendreinigung/neumuenster' },
+        { label: 'Kita-Reinigung', to: '/leistungen/kita-reinigung/neumuenster' },
+        { label: 'Schulreinigung', to: '/leistungen/schulreinigung/neumuenster' },
+      ],
+    },
     highlights: [
       'Büroreinigung im Neumünsteraner Stadtgebiet',
       'Treppenhausreinigung für Mehrfamilienhäuser',

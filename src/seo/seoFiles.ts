@@ -64,6 +64,7 @@ export const siteRoutes = [
   { path: '/leistungen/schulreinigung/kiel', changefreq: 'monthly', priority: '0.8' },
   { path: '/leistungen/kita-reinigung', changefreq: 'monthly', priority: '0.7' },
   { path: '/leistungen/kita-reinigung/kiel', changefreq: 'monthly', priority: '0.8' },
+  { path: '/leistungen/kita-reinigung/neumuenster', changefreq: 'monthly', priority: '0.8' },
   { path: '/leistungen/pflegeheimreinigung', changefreq: 'monthly', priority: '0.7' },
   { path: '/leistungen/lagerhallenreinigung', changefreq: 'monthly', priority: '0.7' },
   { path: '/leistungen/schwimmbadreinigung', changefreq: 'monthly', priority: '0.7' },

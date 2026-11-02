@@ -3202,6 +3202,190 @@ export const lokaleSeiten: LokaleSeite[] = [
       vertrauen: [ClipboardCheck, Sparkles, FileText, CalendarCheck],
     },
   },
+
+  // ---- Kita-Reinigung · Neumünster -----------------------------------------------------
+  {
+    serviceId: 'kita-reinigung',
+    citySlug: 'neumuenster',
+    leistung: 'Kita-Reinigung',
+    ort: 'Neumünster',
+    seo: {
+      title: 'Kita-Reinigung in Neumünster | KlarWerk Service',
+      description:
+        'Kita-Reinigung in Neumünster: Gruppenräume, Wickel- und Sanitärbereiche täglich nach Betreuungsschluss, festes Team, ein Ansprechpartner für den Träger.',
+      keywords:
+        'Kita-Reinigung Neumünster, Kindergartenreinigung Neumünster, Krippenreinigung Neumünster, Reinigung Kindertagesstätte Neumünster, Hortreinigung Neumünster, Kita Reinigung Wasbek, Kita Reinigung Boostedt',
+    },
+    h1: 'Kita-Reinigung in Neumünster',
+    intro:
+      'Sand aus dem Garten, Matsch von der Außenzeit, Essensreste unter dem Tisch und viele kleine Hände an jeder Klinke: In einer Kita sieht der Boden am Nachmittag anders aus als in jedem Büro. KlarWerk Service reinigt Kindertagesstätten, Krippen und Horte in Neumünster jeden Tag nach Betreuungsschluss – nach dem Hygieneplan der Einrichtung, mit einem festen Team, das die Räume kennt, und einem Ansprechpartner für Leitung und Träger. Unser Sitz in Bordesholm liegt direkt nördlich der Stadt, die Wege sind kurz.',
+    bild: {
+      // gleiches Foto wie auf /leistungen/kita-reinigung (kommt aus services.ts)
+      alt: 'Gruppenraum einer Kindertagesstätte nach der Reinigung – Kita-Reinigung in Neumünster durch KlarWerk Service',
+    },
+    eckdaten: [
+      { titel: 'Täglich nach Betreuungsschluss', text: 'Fertig, bevor morgens das erste Kind kommt' },
+      { titel: 'Festes Team', text: 'Bekannte Gesichter, eingearbeitete Vertretung bei Urlaub und Krankheit' },
+      { titel: 'Kurze Wege', text: 'Von Bordesholm in wenigen Minuten in jeder Kita der Stadt' },
+    ],
+    zielgruppen: [
+      {
+        titel: 'Träger mit mehreren Einrichtungen',
+        text: 'Kitas in Neumünster und im Umland unter einem Dach: ein Leistungsverzeichnis je Haus, ein Ansprechpartner für alle, Kontrollen und Rechnungen zentral für den Träger.',
+      },
+      {
+        titel: 'Krippen und Kleinkindgruppen',
+        text: 'Wickelbereiche, Schlafräume, Bodenflächen zum Krabbeln: Hier müssen Kontaktflächen, Sanitär und Böden jeden Tag stimmen – das ist der Kern des Plans.',
+      },
+      {
+        titel: 'Kitas mit Außengelände und Naturgruppen',
+        text: 'Sand, Matsch und nasse Schuhe kommen jeden Tag mit herein. Eingang, Garderoben, Waschräume und Böden bekommen deshalb eigene Intervalle, in der nassen Jahreszeit öfter.',
+      },
+      {
+        titel: 'Horte und Ganztagsbetreuung',
+        text: 'Räume, die nachmittags voll und abends leer sind – wir reinigen nach Betreuungsschluss, damit morgens alles bereit ist.',
+      },
+    ],
+    umfang: {
+      wir: [
+        'Gruppen- und Spielräume: Böden, Tische, Stühle und erreichbare Flächen',
+        'Wickelbereiche, Windeleimer und Sanitärräume mit kindgerechten Toiletten und Waschrinnen',
+        'Eingang, Garderoben und Flure – mit Sand und Matsch aus dem Außengelände',
+        'Kontaktflächen wie Türklinken, Lichtschalter, Handläufe und Garderobenhaken',
+        'Küche und Essbereiche nach Absprache mit dem Küchenteam',
+        'Mitarbeiterräume, Büro der Leitung und Personaltoilette',
+        'Abfall und Mülltrennung, Verbrauchsmaterial wie Seife und Papier auf Wunsch nachgefüllt',
+      ],
+      beiIhnen: [
+        'Spielzeug, Kuscheltiere, Textilien und Bettwäsche – Waschen und Desinfizieren bleibt bei der Einrichtung',
+        'Lebensmittelhygiene in der Küche – die Verantwortung bleibt beim Küchenteam',
+        'Grundreinigung und Bodenversiegelung – eigener Termin in den Schließzeiten',
+        'Außenspielgeräte, Sandkiste und Gartenwege – nicht Teil der laufenden Reinigung',
+      ],
+    },
+    zeiten: {
+      titel: 'Nach Betreuungsschluss, jeden Tag',
+      text: 'Die laufende Reinigung findet statt, wenn die Kinder weg sind: am späten Nachmittag nach Schließung oder frühmorgens vor der Öffnung. Welche Bereiche täglich und welche wöchentlich dran sind, richtet sich nach dem Hygieneplan Ihrer Einrichtung und nach der Jahreszeit.',
+      punkte: [
+        'Täglich: Sanitär, Wickelbereiche, Gruppenräume, Eingang, Kontaktflächen, Abfall',
+        'Wöchentlich oder nach Plan: Fenster innen, Heizkörper, Regale, Lager',
+        'Öfter in der nassen Jahreszeit: Eingang, Garderoben, Flure',
+        'Grundreinigung in den Schließzeiten als eigener Termin',
+      ],
+    },
+    vertrauen: [
+      {
+        titel: 'Ihr Hygieneplan ist die Vorgabe',
+        text: 'Jede Kita hat einen Hygieneplan. Wir übernehmen daraus, was zur Reinigung gehört, und halten die Intervalle im Leistungsverzeichnis fest – für Leitung und Träger nachlesbar.',
+      },
+      {
+        titel: 'Geeignete Mittel für Kinderräume',
+        text: 'Wir setzen Reinigungsmittel ein, die für den Einsatz in Kindereinrichtungen geeignet sind, und lüften gereinigte Räume, bevor die Kinder kommen.',
+      },
+      {
+        titel: 'Festes Team, feste Gesichter',
+        text: 'Ein eingespieltes Team, das die Einrichtung, die Schlüssel und die Besonderheiten kennt. Bei Urlaub oder Krankheit übernimmt eine eingearbeitete Vertretung.',
+      },
+      {
+        titel: 'Kurze Wege für Kontrollen und Sonderfälle',
+        text: 'Bordesholm liegt direkt vor der Stadt. Kontrollen, ein zusätzlicher Termin nach einem Fest oder eine Rückfrage vor Ort sind schnell erledigt.',
+      },
+    ],
+    anfahrt: {
+      titel: 'Kita-Reinigung in ganz Neumünster',
+      text: 'Von Bordesholm sind wir über das Bordesholmer Dreieck und die A7 in wenigen Minuten in Neumünster – bei Kitas, Krippen und Horten in der Innenstadt, in den Stadtteilen und in den Nachbargemeinden. Kurze Wege machen Kontrollen und kurzfristige Einsätze einfach.',
+      gruppen: [
+        { titel: 'Innenstadt & Kernbezirke', orte: ['Innenstadt', 'Nord', 'Ost', 'Süd', 'West'] },
+        { titel: 'Stadtteile', orte: ['Tungendorf', 'Einfeld', 'Faldera', 'Gartenstadt', 'Böcklersiedlung', 'Brachenfeld', 'Ruthenberg', 'Wittorf', 'Gadeland', 'Stör'] },
+      ],
+      umland: ['Bordesholm', 'Wasbek', 'Boostedt', 'Großenaspe', 'Groß Kummerfeld', 'Aukrug'],
+    },
+    ablauf: [
+      {
+        title: 'Kurze Anfrage',
+        desc: 'Art und Größe der Einrichtung, Anzahl der Gruppen und Betreuungszeiten – mehr braucht es für den Anfang nicht.',
+      },
+      {
+        title: 'Besichtigung vor Ort',
+        desc: 'Kostenlos in Neumünster: Wir gehen Räume, Wickel- und Sanitärbereiche durch und sehen uns Ihren Hygieneplan an.',
+      },
+      {
+        title: 'Leistungsverzeichnis und Festpreis',
+        desc: 'Bereiche, Intervalle und Preis übersichtlich in einem Angebot – auch für den Träger nachvollziehbar.',
+      },
+      {
+        title: 'Start mit Einweisung',
+        desc: 'Schlüssel, Alarmanlage, Zeiten, Ansprechpartner und Besonderheiten der Einrichtung halten wir vor dem ersten Einsatz fest.',
+      },
+      {
+        title: 'Laufende Betreuung',
+        desc: 'Regelmäßige Kontrollen, kurze Wege für Rückfragen und Anpassungen, wenn sich Gruppen oder Zeiten ändern.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Reinigen Sie Kitas in ganz Neumünster und im Umland?',
+        answer:
+          'Ja, in allen Stadtteilen und in den Nachbargemeinden, etwa in Wasbek, Boostedt, Großenaspe und Groß Kummerfeld. Unser Sitz in Bordesholm liegt direkt nördlich der Stadt.',
+      },
+      {
+        question: 'Wann wird gereinigt?',
+        answer:
+          'Nach Betreuungsschluss am späten Nachmittag oder frühmorgens vor der Öffnung. Zwischen den Kindern wird nicht gereinigt.',
+      },
+      {
+        question: 'Richten Sie sich nach unserem Hygieneplan?',
+        answer:
+          'Ja. Ihr Hygieneplan legt fest, welche Bereiche wie oft gereinigt werden. Wir übernehmen daraus die Reinigungsaufgaben ins Leistungsverzeichnis und halten uns daran.',
+      },
+      {
+        question: 'Wie gehen Sie mit Sand und Matsch aus dem Außengelände um?',
+        answer:
+          'Eingang, Garderoben und Flure bekommen eigene Intervalle und werden in der nassen Jahreszeit öfter gereinigt. Das legen wir im Leistungsverzeichnis fest und passen es an, wenn es nötig ist.',
+      },
+      {
+        question: 'Betreuen Sie auch mehrere Kitas eines Trägers?',
+        answer:
+          'Ja. Jedes Haus bekommt sein eigenes Leistungsverzeichnis, der Träger einen Ansprechpartner für alle Einrichtungen, Kontrollen und Rechnungen zentral.',
+      },
+      {
+        question: 'Wer reinigt bei Urlaub oder Krankheit?',
+        answer:
+          'Eine eingearbeitete Vertretung, die Ihre Einrichtung kennt. So entstehen keine Lücken im Plan.',
+      },
+      {
+        question: 'Übernehmen Sie auch die Grundreinigung in den Schließzeiten?',
+        answer:
+          'Ja. Böden gründlich reinigen und auf Wunsch versiegeln machen wir mit unserem eigenen Team in den Schließzeiten – dafür gibt es unsere Seite zur Grundreinigung in Neumünster.',
+      },
+      {
+        question: 'Was kostet die Kita-Reinigung in Neumünster?',
+        answer:
+          'Das hängt von Fläche, Gruppen, Bereichen und Intervallen ab. Nach einer kostenlosen Besichtigung erhalten Sie ein Festpreis-Angebot mit Leistungsverzeichnis.',
+      },
+    ],
+    ergaenzungen: [
+      { serviceId: 'grundreinigung', text: 'Böden in den Schließzeiten gründlich reinigen und auf Wunsch versiegeln – unsere Grundreinigung in Neumünster.' },
+      { serviceId: 'glasreinigung', text: 'Fenster und Glastüren der Einrichtung im eigenen Turnus, innen und außen.' },
+      { serviceId: 'unterhaltsreinigung', text: 'Weitere Gebäude des Trägers in Neumünster nach festem Plan – mit demselben Ansprechpartner.' },
+    ],
+    texte: {
+      zielgruppenLabel: 'Für Ihre Einrichtung',
+      zielgruppenTitel: 'Kita-Reinigung für jede Einrichtung in Neumünster',
+      zielgruppenText: 'Krippe, Kindergarten oder Hort, ein Haus oder mehrere – der Plan richtet sich nach Ihrem Hygieneplan und Ihren Zeiten.',
+      grenzenTitel: 'Das bleibt bei Ihnen',
+      grenzenText: 'Damit Zuständigkeiten klar sind.',
+      ablaufTitel: 'So starten wir in Ihrer Kita',
+      vertrauenLabel: 'Hygiene & Verlässlichkeit',
+      ergaenzungTitel: 'Rund um Ihre Einrichtung aus einer Hand',
+      ctaText:
+        'Wir sehen uns Ihre Einrichtung in Neumünster kostenlos an und erstellen Ihnen ein Festpreis-Angebot mit Leistungsverzeichnis nach Ihrem Hygieneplan.',
+    },
+    icons: {
+      zielgruppen: [Building2, Baby, Smile, Users],
+      vertrauen: [ClipboardCheck, ShieldCheck, Users, Car],
+    },
+  },
 ];
 
 export function getLokaleSeite(serviceId: string, citySlug: string): LokaleSeite | undefined {

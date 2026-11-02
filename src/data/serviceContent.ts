@@ -119,26 +119,44 @@ export const serviceContents: Record<string, ServiceContent> = {
 
   bueroreinigung: {
     id: 'bueroreinigung',
-    h1: 'Büroreinigung für produktive Arbeitsräume',
+    h1: 'Büroreinigung in Schleswig-Holstein',
     intro:
-      'Volle Papierkörbe, streifige Konferenztische und vernachlässigte Sanitärbereiche kosten kein Geld, aber Ansehen – bei Mitarbeitern wie bei Besuchern. KlarWerk Service hält Ihre Büroräume, Besprechungszimmer, Küchen und Sanitäranlagen zuverlässig sauber, auf Wunsch früh morgens, abends oder am Wochenende, damit der Betrieb ungestört läuft. Sie erhalten ein festes Team mit festem Ansprechpartner, einen klaren Reinigungsplan und gleichbleibende Qualität – geprüft per Checkliste. Das Ergebnis ist ein professionelles Arbeitsumfeld, in dem sich konzentriert arbeiten lässt.',
+      'KlarWerk Service reinigt Büros, Besprechungsräume, Teeküchen und Sanitäranlagen für Unternehmen, Kanzleien und Verwaltungen in Schleswig-Holstein – nach festem Plan, früh morgens, abends oder am Wochenende, damit der Betrieb ungestört läuft. Denn volle Papierkörbe, streifige Konferenztische und vernachlässigte Sanitärbereiche kosten Ansehen, bei Mitarbeitern wie bei Besuchern. Sie erhalten ein festes Team mit festem Ansprechpartner, einen klaren Reinigungsplan und gleichbleibende Qualität – geprüft per Checkliste. Das Ergebnis ist ein professionelles Arbeitsumfeld, in dem sich konzentriert arbeiten lässt.',
     process: defaultProcess,
     advantages: defaultAdvantages,
     areas: defaultAreas,
     sustainability: defaultSustainability,
     faqs: [
-      { question: 'Wann wird unser Büro gereinigt?', answer: 'In der Regel außerhalb der Arbeitszeiten – frühmorgens, abends oder am Wochenende. Wir richten uns nach Ihrem Betriebsablauf.' },
-      { question: 'Reinigen Sie auch Bildschirme und Tastaturen?', answer: 'Ja, auf Wunsch übernehmen wir die hygienische Reinigung von Arbeitsplätzen inklusive Bildschirmen und Tastaturen.' },
-      { question: 'Können wir einen Zugangsschlüssel hinterlegen?', answer: 'Selbstverständlich. Wir behandeln Ihre Schlüssel vertraulich und dokumentieren die Übergabe sorgfältig.' },
+      { question: 'Wann wird unser Büro gereinigt?', answer: 'Außerhalb Ihrer Arbeitszeit – frühmorgens, abends oder am Wochenende. Wir richten uns nach Ihrem Betriebsablauf.' },
+      { question: 'Wie oft sollte ein Büro gereinigt werden?', answer: 'Je Bereich unterschiedlich: Sanitär und Teeküche meist täglich oder mehrmals pro Woche, Arbeitsplätze und Böden mehrmals pro Woche oder wöchentlich, Besprechungsräume und Archiv seltener. Der Rhythmus steht im Leistungsverzeichnis und lässt sich anpassen.' },
+      { question: 'Reinigen Sie auch Bildschirme und Tastaturen?', answer: 'Ja, auf Wunsch und nach Absprache reinigen wir Arbeitsplätze inklusive Bildschirmen und Tastaturen. Akten und Unterlagen auf dem Schreibtisch bleiben liegen.' },
+      { question: 'Können wir einen Zugangsschlüssel hinterlegen?', answer: 'Ja. Wir behandeln Ihre Schlüssel vertraulich und dokumentieren die Übergabe sorgfältig; Zutritt und Alarmanlage halten wir vor dem ersten Einsatz fest.' },
       { question: 'Was ist mit Küche und Sanitärbereichen?', answer: 'Beides gehört zum Standardumfang: Küchenzeilen, Kaffeemaschinen, Sanitärbereiche und Waschbecken reinigen wir bei jedem Einsatz.' },
       { question: 'Bieten Sie auch Glasreinigung fürs Büro an?', answer: 'Ja, wir reinigen Innen- und Außengläser – als Teil der Büroreinigung oder als separater Termin.' },
-      { question: 'Wie schnell können Sie starten?', answer: 'Nach der Besichtigung und Angebotsfreigabe starten wir in der Regel innerhalb von ein bis zwei Wochen.' },
+      { question: 'Wie schnell können Sie starten?', answer: 'In der Regel innerhalb von ein bis zwei Wochen nach der Besichtigung und Ihrer Angebotsfreigabe.' },
     ],
+    abschnitte: [
+      {
+        titel: 'Was gehört zur Büroreinigung?',
+        text: 'Zur Büroreinigung gehören alle Flächen, die im Arbeitsalltag genutzt werden: Schreibtische, Ablagen und Arbeitsflächen (Papier und Unterlagen bleiben liegen), Böden je nach Belag gesaugt oder nass gewischt, Teeküche mit Spüle, Arbeitsflächen und Geräteaußenflächen, Sanitärräume mit Nachfüllen von Seife und Papier auf Wunsch, Empfang, Besprechungsräume und Flure, Kontaktflächen wie Türklinken und Lichtschalter, Papierkörbe und Mülltrennung sowie Glas innen an Glastüren, Trennwänden und Spiegeln. Bildschirme und Technik reinigen wir nur nach Absprache. Fenster außen laufen im eigenen Turnus der Glasreinigung, die Grundreinigung der Böden ist ein eigener Termin im Jahresplan. Was in Ihrem Büro wie oft gereinigt wird, legen wir je Bereich in einem Leistungsverzeichnis fest.',
+      },
+      {
+        titel: 'Büroreinigung in Ihrer Stadt',
+        text: 'Für Kiel, Neumünster, Rendsburg und unseren Sitz Bordesholm gibt es eigene Seiten mit Einsatzgebiet, Zielgruppen und Fragen vor Ort. Darüber hinaus reinigen wir Büros in Preetz, Plön, Eckernförde, Bad Segeberg, Eutin und Lübeck sowie in Hamburg.',
+        links: [
+          { label: 'Büroreinigung in Kiel', to: '/leistungen/bueroreinigung/kiel' },
+          { label: 'Büroreinigung in Neumünster', to: '/leistungen/bueroreinigung/neumuenster' },
+          { label: 'Büroreinigung in Rendsburg', to: '/leistungen/bueroreinigung/rendsburg' },
+          { label: 'Büroreinigung in Bordesholm', to: '/leistungen/bueroreinigung/bordesholm' },
+        ],
+      },
+    ],
+    stand: { iso: '2026-11-02', anzeige: '02.11.2026' },
     seo: {
       // Kiel, Neumünster, Bordesholm und Rendsburg haben eigene Seiten (/leistungen/bueroreinigung/<stadt>).
       title: 'Büroreinigung in Schleswig-Holstein | KlarWerk Service',
       description:
-        'Büroreinigung in ganz Schleswig-Holstein vom Betrieb in Bordesholm: fester Reinigungsplan, fester Ansprechpartner, Vertretung bei Urlaub und Krankheit.',
+        'Büroreinigung für Büros, Kanzleien und Verwaltungen in Schleswig-Holstein: außerhalb der Arbeitszeit, fester Ansprechpartner. Angebot anfragen.',
       keywords: `Büroreinigung, Büroreinigung Bordesholm, Büroreinigung Rendsburg, Schreibtischreinigung, Bodenpflege, ${localKeywords}`,
     },
   },

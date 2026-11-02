@@ -32,11 +32,13 @@ export const cities: City[] = [
     slug: 'bordesholm',
     name: 'Bordesholm',
     region: 'Schleswig-Holstein',
+    // „gebäudereinigung bordesholm“ steht auf Position 9 ohne Klick: Suchbegriff wörtlich an den Anfang,
+    // Beschreibung nennt die Leistungen mit eigener Seite (Mira, 02.11.2026).
     description:
-      'Gebäudereinigung mit Firmensitz in Bordesholm: Büros, Praxen und Wohnanlagen im Amt Bordesholm, kurze Wege, fester Ansprechpartner. Angebot anfragen.',
-    seoTitle: 'Gebäudereinigung aus Bordesholm | KlarWerk Service',
+      'Gebäudereinigung in Bordesholm vom Betrieb vor Ort: Büro, Praxis, Glas, Unterhalt, Kita und Schule im ganzen Amt Bordesholm. Angebot anfragen.',
+    seoTitle: 'Gebäudereinigung Bordesholm – Betrieb vor Ort | KlarWerk',
     intro:
-      'In Bordesholm und im gesamten Amt Bordesholm zwischen Kiel und Neumünster betreut KlarWerk Service Unternehmen, Praxen, Immobilienverwaltungen und private Auftraggeber. Feste Ansprechpartner, verlässliche Termine und gründliche Ergebnisse – von der regelmäßigen Unterhaltsreinigung bis zur einmaligen Grund- und Sonderreinigung.',
+      'KlarWerk Service hat seinen Sitz in Bordesholm und reinigt Büros, Praxen, Kitas, Schulen, Wohnanlagen und Gewerbeobjekte im ganzen Amt Bordesholm zwischen Kiel und Neumünster. Feste Ansprechpartner, verlässliche Termine und gründliche Ergebnisse – von der regelmäßigen Unterhaltsreinigung bis zur einmaligen Grund- und Bauendreinigung.',
     eigeneSeiten: {
       vorspann: 'Für die häufigsten Aufträge haben wir eigene Seiten:',
       links: [
@@ -51,11 +53,39 @@ export const cities: City[] = [
       ],
     },
     highlights: [
-      'Reinigung für Gewerbe, Büros und Praxen in Bordesholm',
-      'Treppenhaus- und Unterhaltsreinigung für Wohnanlagen im Amt Bordesholm',
-      'Feste Ansprechpartner und verlässliche Termine',
-      'Hausmeisterservice und Gartenpflege aus einer Hand',
+      { text: 'Büroreinigung in Bordesholm außerhalb der Arbeitszeit', to: '/leistungen/bueroreinigung/bordesholm' },
+      { text: 'Praxisreinigung in Bordesholm nach Hygieneplan', to: '/leistungen/praxisreinigung/bordesholm' },
+      { text: 'Treppenhaus- und Unterhaltsreinigung im Amt Bordesholm', to: '/leistungen/unterhaltsreinigung/bordesholm' },
+      { text: 'Glasreinigung in Bordesholm, innen und außen', to: '/leistungen/glasreinigung/bordesholm' },
     ],
+    abschnitte: [
+      {
+        titel: 'Welche Reinigungsfirma sitzt in Bordesholm?',
+        text: 'KlarWerk Service ist ein inhabergeführtes Gebäudereinigungsunternehmen mit Sitz in Bordesholm. Von hier aus reinigen wir Büros, Kanzleien, Praxen, Kitas, Schulen, Wohnanlagen und Gewerbeobjekte in Bordesholm und allen Gemeinden des Amtes – Wattenbek, Brügge, Mühbrook, Schmalstede, Grevenkrug, Hoffeld, Loop, Sören, Reesdorf, Schönbek, Groß Buchwald, Bissee und Negenharrie – sowie in Flintbek, Molfsee, Nortorf, Boostedt und Wasbek. Zum Angebot gehören Unterhalts-, Büro-, Praxis- und Glasreinigung, Kita- und Schulreinigung, Grund- und Bauendreinigung sowie Hausmeisterservice. Grundreinigung und Versiegelung macht unser eigenes Team, das Aus- und Einräumen der Räume übernehmen wir. Vor jedem Angebot sehen wir uns Ihr Objekt kostenlos an und kalkulieren einen Festpreis mit unserem eigenen Programm für die Gebäudereinigung.',
+      },
+      {
+        titel: 'Was bringt eine Reinigungsfirma aus dem eigenen Ort?',
+        text: 'Kurze Wege – und die merken Sie im Alltag. Weil wir in Bordesholm sitzen, kommen wir kurzfristig zur Besichtigung, Ihr Ansprechpartner macht die Kontrollen persönlich, und Rückfragen oder Änderungen am Plan sind ein kurzer Weg statt eines Tickets. Auch ein fester Turnus lohnt sich so für kleinere Objekte, und ein Außentermin der Glasreinigung, der wegen Regen oder Frost ausfällt, ist schnell nachgeholt. Bei Urlaub und Krankheit übernimmt eine eingearbeitete Vertretung, die Ihr Objekt kennt. Betriebe und Träger mit weiteren Standorten in Kiel oder Neumünster bekommen einen Ansprechpartner für alle Häuser.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Welche Gemeinden im Amt Bordesholm betreuen Sie?',
+        answer:
+          'Alle: Bordesholm, Wattenbek, Brügge, Mühbrook, Schmalstede, Grevenkrug, Hoffeld, Loop, Sören, Reesdorf, Schönbek, Groß Buchwald, Bissee und Negenharrie. Dazu kommen Flintbek, Molfsee, Nortorf, Boostedt und Wasbek.',
+      },
+      {
+        question: 'Wie schnell können Sie zur Besichtigung kommen?',
+        answer:
+          'Kurzfristig. Unser Sitz ist in Bordesholm, in jede Gemeinde des Amtes sind es nur wenige Minuten. Die Besichtigung ist kostenlos.',
+      },
+      {
+        question: 'Machen Sie die Grundreinigung selbst?',
+        answer:
+          'Ja. Grundreinigung und Versiegelung macht unser eigenes Team, ohne Subunternehmer. Das Aus- und Einräumen der Räume übernehmen wir, damit die Übergabe schnell geht.',
+      },
+    ],
+    stand: { iso: '2026-11-02', anzeige: '02.11.2026' },
     image: '/bilder/leistung-unterhaltsreinigung.jpg',
     tier: 1,
   },

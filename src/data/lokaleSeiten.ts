@@ -3945,6 +3945,191 @@ export const lokaleSeiten: LokaleSeite[] = [
       vertrauen: [ClipboardCheck, FileText, Lock, UserCheck],
     },
   },
+
+  // ---- Glasreinigung · Bordesholm ------------------------------------------------------
+  {
+    serviceId: 'glasreinigung',
+    citySlug: 'bordesholm',
+    leistung: 'Glasreinigung',
+    ort: 'Bordesholm',
+    seo: {
+      title: 'Glasreinigung in Bordesholm | KlarWerk Service',
+      description:
+        'Glas- und Fensterreinigung in Bordesholm und im Amt Bordesholm für Büros, Praxen, Geschäfte und Wohnanlagen: innen und außen, im festen Turnus.',
+      keywords:
+        'Glasreinigung Bordesholm, Fensterreinigung Bordesholm, Fensterputzer Bordesholm, Schaufensterreinigung Bordesholm, Glasreinigung Amt Bordesholm, Glasreinigung Wattenbek, Glasreinigung Flintbek',
+    },
+    h1: 'Glasreinigung in Bordesholm',
+    intro:
+      'Ob Bürofenster, Praxiseingang, Schaufenster oder Treppenhausfenster einer Wohnanlage: KlarWerk Service reinigt Glasflächen in Bordesholm und den Gemeinden des Amtes streifenfrei, innen und außen. Weil unser Sitz in Bordesholm ist, lohnt sich bei uns auch der feste Turnus für ein kleines Objekt, und ein Termin, der wegen Regen oder Frost ausfällt, ist schnell nachgeholt. Glas lässt sich mit Ihrer Büro- oder Praxisreinigung in einem Plan verbinden.',
+    bild: {
+      // gleiches Foto wie auf /leistungen/glasreinigung (kommt aus services.ts)
+      alt: 'Streifenfreie Fensterscheibe – Glasreinigung in Bordesholm durch KlarWerk Service',
+    },
+    eckdaten: [
+      { titel: 'Betrieb vor Ort', text: 'Unser Sitz ist in Bordesholm, die Wege sind kurz' },
+      { titel: 'Innen und außen', text: 'Scheiben, auf Wunsch mit Rahmen und Fensterbänken' },
+      { titel: 'Im festen Turnus', text: 'Auch für kleine Objekte, abgestimmt mit der laufenden Reinigung' },
+    ],
+    zielgruppen: [
+      {
+        titel: 'Büros, Kanzleien und Verwaltungen',
+        text: 'Bürofenster, Glastüren und Trennwände im festen Rhythmus – außerhalb Ihrer Arbeitszeit oder so, dass der Betrieb weiterläuft.',
+      },
+      {
+        titel: 'Praxen',
+        text: 'Praxisfenster, Eingangstür und Praxisschild, gereinigt außerhalb der Sprechzeiten. Wenn wir Ihre Praxis ohnehin reinigen, planen wir das Glas gleich mit.',
+      },
+      {
+        titel: 'Geschäfte und Gastronomie im Ort',
+        text: 'Schaufenster und Eingangstür sind das Erste, was Kunden sehen. Wir reinigen vor Ladenöffnung oder nach Geschäftsschluss, in kurzen Abständen, wenn viel Laufkundschaft kommt.',
+      },
+      {
+        titel: 'Kitas, Schulen und öffentliche Gebäude',
+        text: 'Viele Fenster, viele Hände auf den Scheiben: Wir reinigen nach Betreuungs- oder Schulschluss und große Flächen in den Ferien.',
+      },
+      {
+        titel: 'Wohnanlagen und Hausverwaltungen',
+        text: 'Treppenhausfenster, Haustüren und Glas in Gemeinschaftsbereichen im Amt Bordesholm – planbar im Turnus, mit einem Ansprechpartner für die ganze Anlage.',
+      },
+    ],
+    umfang: {
+      wir: [
+        'Fensterscheiben innen und außen, streifenfrei',
+        'Rahmen, Falze und Fensterbänke auf Wunsch',
+        'Schaufenster, Eingangstüren und Glasvordächer, soweit sicher erreichbar',
+        'Glastüren, Glaswände und Trennwände im Innenbereich',
+        'Treppenhausfenster und Glas in Gemeinschaftsbereichen',
+        'Höher gelegene Flächen mit Teleskop- und Leitersystemen',
+      ],
+      beiIhnen: [
+        'Fensterbänke freiräumen, Deko und Pflanzen zur Seite stellen',
+        'Fassadenflächen, die Hubsteiger oder Gerüst brauchen – nur nach Absprache',
+        'Beschädigte oder undichte Fenster – Auffälliges melden wir, reparieren aber nicht',
+      ],
+    },
+    zeiten: {
+      titel: 'Ein Turnus, der zu Ihrem Objekt passt',
+      text: 'Pollen im Frühjahr, Regen und Laub im Herbst, Streusalz und Spritzwasser im Winter: Wie oft sich die Glasreinigung lohnt, hängt von Lage und Nutzung ab. Ein Schaufenster braucht kurze Abstände, ein Bürofenster zum Hof seltener. Den Rhythmus legen wir nach der Besichtigung fest. Fällt ein Außentermin ins Wasser, holen wir ihn zeitnah nach.',
+      punkte: [
+        'Schaufenster und Eingangstüren in kurzen Abständen',
+        'Bürofenster und Praxisfenster im festen Turnus über das Jahr',
+        'Kitas und Schulen in den Ferien oder nach Betreuungsschluss',
+        'Einmalig nach dem Winter, nach Bauarbeiten oder vor einem Anlass',
+      ],
+    },
+    vertrauen: [
+      {
+        titel: 'Streifenfrei mit Profi-Technik',
+        text: 'Professionelle Wischtechnik statt Haushaltsmittel – damit die Scheibe auch im Gegenlicht klar bleibt.',
+      },
+      {
+        titel: 'Sicher in der Höhe',
+        text: 'Teleskop- und Leitersysteme für höher gelegene Fenster. Was nur mit Hubsteiger oder Gerüst geht, klären wir vorab offen.',
+      },
+      {
+        titel: 'Ansprechpartner aus dem Ort',
+        text: 'Eine Person für Termine, Rückfragen und Kontrollen, die in Bordesholm sitzt. Bei Urlaub und Krankheit übernimmt eine eingearbeitete Vertretung.',
+      },
+      {
+        titel: 'Ein Plan mit Ihrer Reinigung',
+        text: 'Glas innen kann Teil der Büro- oder Praxisreinigung sein, Fenster außen kommen im eigenen Turnus dazu – ein Plan, ein Ansprechpartner.',
+      },
+    ],
+    anfahrt: {
+      titel: 'Glasreinigung in Bordesholm und im Amt Bordesholm',
+      text: 'Unser Sitz liegt in Bordesholm zwischen Kiel und Neumünster. In jede Gemeinde des Amtes sind es nur wenige Minuten, ebenso nach Flintbek, Molfsee und Nortorf. Darum planen wir auch kleine Objekte im festen Turnus und holen ausgefallene Außentermine schnell nach.',
+      gruppen: [
+        { titel: 'Amt Bordesholm', orte: ['Bordesholm', 'Wattenbek', 'Brügge', 'Mühbrook', 'Schmalstede', 'Grevenkrug', 'Hoffeld', 'Loop', 'Sören', 'Reesdorf', 'Schönbek', 'Groß Buchwald', 'Bissee', 'Negenharrie'] },
+      ],
+      umland: ['Flintbek', 'Molfsee', 'Nortorf', 'Boostedt', 'Wasbek'],
+    },
+    ablauf: [
+      {
+        title: 'Kurze Anfrage',
+        desc: 'Art des Objekts, ungefähre Zahl und Größe der Fenster – ein paar Fotos genügen für eine erste Einschätzung.',
+      },
+      {
+        title: 'Besichtigung vor Ort',
+        desc: 'Kostenlos und kurzfristig in Bordesholm und Umgebung: Wir sehen uns Glasflächen, Höhen und Zugänge an.',
+      },
+      {
+        title: 'Festpreis-Angebot',
+        desc: 'Ein fester Preis je Termin oder für den Turnus – Sie wissen vorher, was Sie zahlen.',
+      },
+      {
+        title: 'Erster Termin',
+        desc: 'Zu einer Zeit, die Ihren Betrieb nicht stört: vor Öffnung, nach Feierabend oder in den Ferien.',
+      },
+      {
+        title: 'Fester Turnus',
+        desc: 'Wir kommen regelmäßig wieder. Ihr Ansprechpartner hält die Termine im Blick und kontrolliert das Ergebnis.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Reinigen Sie Fenster im ganzen Amt Bordesholm?',
+        answer:
+          'Ja. In Bordesholm selbst und in allen Gemeinden des Amtes, etwa in Wattenbek, Brügge, Mühbrook und Schmalstede, dazu in Flintbek, Molfsee, Nortorf und Boostedt. Unser Sitz ist in Bordesholm.',
+      },
+      {
+        question: 'Lohnt sich ein fester Turnus auch für ein kleines Objekt?',
+        answer:
+          'Bei uns oft ja, weil die Anfahrt kurz ist. Ob Praxis mit wenigen Fenstern oder kleiner Laden: Nach der Besichtigung erhalten Sie einen festen Preis je Termin und entscheiden dann.',
+      },
+      {
+        question: 'Wie oft sollten die Fenster gereinigt werden?',
+        answer:
+          'Das hängt von Lage und Nutzung ab. Schaufenster und Eingangstüren brauchen kurze Abstände, Bürofenster meist einen festen Turnus über das Jahr. Nach der Besichtigung empfehlen wir einen Rhythmus und passen ihn bei Bedarf an.',
+      },
+      {
+        question: 'Was passiert bei Regen oder Frost?',
+        answer:
+          'Bei Frost oder starkem Regen ist eine Reinigung außen nicht sinnvoll. Fällt ein Termin deshalb aus, legen wir zeitnah einen neuen fest – die Wege von unserem Sitz in Bordesholm sind kurz.',
+      },
+      {
+        question: 'Reinigen Sie auch Fenster in oberen Etagen?',
+        answer:
+          'Ja, soweit sie mit Teleskop- und Leitersystemen sicher erreichbar sind. Flächen, die einen Hubsteiger oder ein Gerüst brauchen, besprechen wir vorab mit Ihnen.',
+      },
+      {
+        question: 'Gehören Rahmen und Fensterbänke dazu?',
+        answer:
+          'Auf Wunsch ja. Rahmen, Falze und Fensterbänke reinigen wir mit, wenn das im Angebot so vereinbart ist.',
+      },
+      {
+        question: 'Lässt sich die Glasreinigung mit der Büro- oder Praxisreinigung verbinden?',
+        answer:
+          'Ja. Glas innen kann Teil der laufenden Reinigung sein, Fenster außen kommen im eigenen Turnus dazu. Für Bordesholm haben wir eigene Seiten zur Büroreinigung und zur Praxisreinigung.',
+      },
+      {
+        question: 'Was kostet die Glasreinigung in Bordesholm?',
+        answer:
+          'Das hängt von Anzahl, Größe und Erreichbarkeit der Glasflächen ab. Nach einer kostenlosen Besichtigung erhalten Sie ein Festpreis-Angebot – einmalig oder für den Turnus.',
+      },
+    ],
+    ergaenzungen: [
+      { serviceId: 'bueroreinigung', text: 'Büros, Teeküchen und Sanitärräume in Bordesholm aus einer Hand mit Ihren Fenstern.' },
+      { serviceId: 'praxisreinigung', text: 'Praxisräume in Bordesholm nach Hygieneplan, außerhalb der Sprechzeiten – Glas gleich mit eingeplant.' },
+      { serviceId: 'unterhaltsreinigung', text: 'Treppenhaus und Gemeinschaftsflächen Ihrer Wohnanlage nach festem Plan.' },
+    ],
+    texte: {
+      zielgruppenLabel: 'Für Ihr Objekt',
+      zielgruppenTitel: 'Glasflächen im Amt Bordesholm – je nach Objekt anders',
+      zielgruppenText: 'Ein Schaufenster braucht einen anderen Rhythmus als ein Treppenhausfenster. Wir planen nach Ihrem Objekt.',
+      grenzenTitel: 'Das klären wir vorab',
+      grenzenText: 'Damit am Termin nichts überrascht.',
+      ablaufTitel: 'So läuft Ihre Glasreinigung',
+      vertrauenLabel: 'Qualität',
+      ergaenzungTitel: 'Rund um Ihr Objekt aus einer Hand',
+      ctaText:
+        'Wir sehen uns Ihre Glasflächen in Bordesholm kostenlos an und erstellen Ihnen ein Festpreis-Angebot – einmalig oder im festen Turnus.',
+    },
+    icons: {
+      zielgruppen: [Building2, Stethoscope, Store, GraduationCap, Home],
+      vertrauen: [Sparkles, ShieldCheck, UserCheck, CalendarCheck],
+    },
+  },
 ];
 
 export function getLokaleSeite(serviceId: string, citySlug: string): LokaleSeite | undefined {

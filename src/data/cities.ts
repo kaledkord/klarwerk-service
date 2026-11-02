@@ -34,6 +34,7 @@ export const cities: City[] = [
       links: [
         { label: 'Büroreinigung in Bordesholm', to: '/leistungen/bueroreinigung/bordesholm' },
         { label: 'Praxisreinigung in Bordesholm', to: '/leistungen/praxisreinigung/bordesholm' },
+        { label: 'Glasreinigung in Bordesholm', to: '/leistungen/glasreinigung/bordesholm' },
       ],
     },
     highlights: [

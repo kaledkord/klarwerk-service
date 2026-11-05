@@ -357,7 +357,7 @@ export const serviceContents: Record<string, ServiceContent> = {
 
   gartenpflege: {
     id: 'gartenpflege',
-    h1: 'Gartenpflege für gepflegte Außenanlagen',
+    h1: 'Gartenpflege in Schleswig-Holstein',
     intro:
       'Eine gepflegte Außenanlage ist der erste Eindruck – und der lässt sich nur mit kontinuierlicher Pflege halten. KlarWerk Service hält Ihre Grünflächen das ganze Jahr in Form: Rasenpflege, Heckenschnitt, Laubentfernung, Baumschnitt und saisonale Bepflanzung, abgestimmt auf die Vegetationsphasen. Auf Wunsch beraten wir bei der Pflanzenwahl, übernehmen die Anwuchspflege und entsorgen den Grünschnitt fachgerecht. Als Einzelleistung oder ganzjähriger Pflegevertrag, für private Gärten ebenso wie für gewerbliche und öffentliche Flächen in Schleswig-Holstein und Hamburg.',
     process: defaultProcess,
@@ -458,7 +458,7 @@ export const serviceContents: Record<string, ServiceContent> = {
 
   entruempelung: {
     id: 'entruempelung',
-    h1: 'Entrümpelung & fachgerechte Entsorgung',
+    h1: 'Entrümpelung in Schleswig-Holstein',
     intro:
       'Eine Wohnungsauflösung oder ein voller Keller kostet Nerven, Zeit und oft auch Diskretion. KlarWerk Service entrümpelt Wohnungen, Keller, Dachböden, Garagen und Gewerbeobjekte vollständig – zuverlässig, sauber und diskret, gerade bei sensiblen Anlässen. Vorab besprechen wir, was behalten, verkauft oder entsorgt wird, und dokumentieren alles nachvollziehbar; die Materialien trennen und entsorgen wir fachgerecht, den Transport übernehmen wir. Nach einer Besichtigung erhalten Sie ein Festpreis-Angebot mit klarer Zeitvorgabe – und danach einen leeren, besenreinen Raum.',
     process: defaultProcess,
@@ -483,7 +483,7 @@ export const serviceContents: Record<string, ServiceContent> = {
 
   moebelreinigung: {
     id: 'moebelreinigung',
-    h1: 'Möbelreinigung für Polster, Teppiche & Matratzen',
+    h1: 'Möbel- und Polsterreinigung in Schleswig-Holstein',
     intro:
       'Polster, Matratzen und Teppiche nehmen im Alltag Flecken, Staub und Gerüche auf – sichtbar und spürbar. KlarWerk Service reinigt sie in der Tiefe und trotzdem materialschonend: Flecken behandeln wir mit geeigneten Spezialmitteln, Hausstaub, Milben und Allergene werden gründlich entfernt, unangenehme Gerüche neutralisiert. Wir reinigen vor Ort – zu Hause oder im Büro – und nutzen schnelltrocknende Verfahren, damit Möbel rasch wieder nutzbar sind. So gewinnen Ihre Sitzmöbel, Matratzen und Teppiche Frische und Hygiene zurück, ohne dass etwas ausgebaut werden muss.',
     process: defaultProcess,
@@ -508,7 +508,7 @@ export const serviceContents: Record<string, ServiceContent> = {
 
   schulreinigung: {
     id: 'schulreinigung',
-    h1: 'Schulreinigung – Saubere Lernumgebungen für Schüler und Lehrkräfte',
+    h1: 'Schulreinigung in Schleswig-Holstein',
     intro:
       'Lernen gelingt in Räumen, die sauber und gesund sind – und in Schulen zählt dabei jede Fläche, von der Tafel bis zur Sporthalle. KlarWerk Service reinigt Bildungseinrichtungen nach einem abgestimmten Konzept: Klassenräume, Flure, Sanitäranlagen und Sportbereiche, außerhalb der Unterrichtszeiten und ohne Störung des Betriebs. In den Ferien führen wir intensive Grundreinigungen sowie Bodenpflege und -beschichtung durch, die im laufenden Betrieb nicht möglich sind. Wir setzen umwelt- und gesundheitsschonende Mittel ein – für hygienische Lernumgebungen, in denen sich Schüler und Lehrkräfte wohlfühlen.',
     process: defaultProcess,
@@ -538,7 +538,7 @@ export const serviceContents: Record<string, ServiceContent> = {
 
   'kita-reinigung': {
     id: 'kita-reinigung',
-    h1: 'Kita-Reinigung – Hygiene und Sicherheit für Kinder',
+    h1: 'Kita-Reinigung in Schleswig-Holstein',
     intro:
       'Kleine Kinder fassen alles an, sitzen auf dem Boden und stecken Dinge in den Mund – deshalb gelten in Kitas besondere Hygienestandards. KlarWerk Service entwickelt Reinigungskonzepte speziell für sensible Bereiche: Gruppen- und Spielräume, Wickelbereiche und Sanitäranlagen werden mit geprüften, für Kindereinrichtungen zugelassenen Hygienemitteln gereinigt und desinfiziert. Bei Infektionswellen führen wir zusätzliche Desinfektionsreinigungen durch; Böden aus Linoleum, PVC oder Fliesen pflegen wir dauerhaft. Gereinigt wird außerhalb der Betreuungszeiten – für eine Umgebung, in der Kinder sicher spielen und lernen können.',
     process: defaultProcess,
@@ -568,7 +568,7 @@ export const serviceContents: Record<string, ServiceContent> = {
 
   pflegeheimreinigung: {
     id: 'pflegeheimreinigung',
-    h1: 'Pflegeheim-Reinigung – Hygiene mit Verantwortung',
+    h1: 'Pflegeheimreinigung in Schleswig-Holstein',
     intro:
       'In Pflegeeinrichtungen ist Reinigung mehr als Sauberkeit – sie ist Teil des Infektionsschutzes und der Würde der Bewohner. KlarWerk Service reinigt Bewohnerzimmer, Gemeinschaftsräume und Sanitäranlagen nach hygienischen Vorgaben, mit regelmäßiger Hygienereinigung und VAH-gelisteten Desinfektionsmitteln, die für den Einsatz in Pflegeeinrichtungen zugelassen sind. Wir stimmen uns rücksichtsvoll mit Bewohnern und Personal ab, dokumentieren alle Maßnahmen nachvollziehbar und übernehmen auf Wunsch auch die Fensterreinigung. So entsteht eine Umgebung, in der sich Bewohner und Pflegekräfte sicher und wohl fühlen.',
     process: defaultProcess,
@@ -598,7 +598,7 @@ export const serviceContents: Record<string, ServiceContent> = {
 
   lagerhallenreinigung: {
     id: 'lagerhallenreinigung',
-    h1: 'Lagerhallenreinigung – Saubere Arbeitsbereiche für effiziente Prozesse',
+    h1: 'Lagerhallenreinigung in Schleswig-Holstein',
     intro:
       'In Lager und Logistik entscheiden saubere Böden und freie Verkehrswege über Sicherheit und reibungslose Abläufe – Staub und Ablagerungen dagegen bremsen und gefährden. KlarWerk Service reinigt Lagerhallen, Logistikzentren und Produktionsbetriebe jeder Größe: Böden per Scheuersaugmaschine, Regale und Ablagen staubfrei, Verladerampen und Verkehrswege sicher begehbar. Auf Wunsch arbeiten wir außerhalb der Betriebszeiten, damit Ihr Ablauf nicht ins Stocken gerät. Die Frequenz richtet sich nach Nutzung und Verschmutzung – wir erstellen dazu einen individuellen Reinigungsplan für dauerhaft sichere Arbeitsbereiche.',
     process: defaultProcess,
@@ -628,7 +628,7 @@ export const serviceContents: Record<string, ServiceContent> = {
 
   gastronomiereinigung: {
     id: 'gastronomiereinigung',
-    h1: 'Gastronomiereinigung – Hygiene für Ihre Gäste und Mitarbeiter',
+    h1: 'Gastronomiereinigung in Schleswig-Holstein',
     intro:
       'In der Gastronomie ist Hygiene kein Detail, sondern Geschäftsgrundlage – ein Kontrollbesuch oder eine schlechte Bewertung genügt, um Vertrauen zu kosten. KlarWerk Service reinigt Restaurants, Cafés, Kantinen und Gastronomiebetriebe gründlich: Küche inklusive Fettentfernung an Oberflächen, Abzügen und Böden, dazu Gasträume, Glasflächen und Sanitärbereiche. Gearbeitet wird außerhalb der Öffnungszeiten, nachts oder frühmorgens, damit Ihr Betrieb ungestört bleibt. Wir richten uns nach den Vorgaben der Lebensmittelhygiene und erstellen auf Wunsch einen festen Pflegevertrag – für Sauberkeit, auf die sich Gäste und Team verlassen.',
     process: defaultProcess,
@@ -658,7 +658,7 @@ export const serviceContents: Record<string, ServiceContent> = {
 
   supermarktreinigung: {
     id: 'supermarktreinigung',
-    h1: 'Supermarkt-Reinigung – Professionelle Sauberkeit für Verkaufsflächen',
+    h1: 'Supermarktreinigung in Schleswig-Holstein',
     intro:
       'Im Einzelhandel entscheidet der erste Eindruck über den Einkauf – klebrige Böden oder staubige Regale schrecken Kunden ab, bevor sie den ersten Artikel in den Wagen legen. KlarWerk Service reinigt Supermärkte, Discounter, Fach- und Biomärkte sowie Einkaufszentren vor Öffnung oder nach Schließung, ohne den Kundenverkehr zu stören. Große Verkaufsflächen reinigen wir maschinell und streifenfrei, dazu Regale, Kühlbereiche, Kassenzonen und Sanitäranlagen; auf Wunsch übernehmen wir Grundreinigung, Bodenversiegelung, Fenster- und Fassadenreinigung. So präsentiert sich Ihr Markt jeden Tag von seiner besten Seite.',
     process: defaultProcess,
@@ -690,7 +690,7 @@ export const serviceContents: Record<string, ServiceContent> = {
 
   schwimmbadreinigung: {
     id: 'schwimmbadreinigung',
-    h1: 'Schwimmbad- & Schwimmhallenreinigung mit Hygiene-Fokus',
+    h1: 'Schwimmbad- und Schwimmhallenreinigung in Schleswig-Holstein',
     intro:
       'Wo viele Menschen barfuß und im Nassen unterwegs sind, sind Hygiene und Trittsicherheit entscheidend – und genau hier verzeihen Gäste keine Nachlässigkeit. KlarWerk Service reinigt Schwimmbäder, Schwimmhallen und Wellnessbereiche mit klarem Hygiene-Fokus: Beckenumgänge, Umkleiden, Duschen und Sanitäranlagen werden hygienisch gereinigt und desinfiziert, Kalk-, Wasser- und Urinstein-Ablagerungen an Fliesen, Armaturen und Rinnen entfernt. An Nassbereichen setzen wir rutschhemmende Verfahren ein, Sauna- und Spa-Bereiche behandeln wir materialschonend. Gereinigt wird außerhalb der Badezeiten – nach einem individuellen Reinigungs- und Hygieneplan.',
     process: defaultProcess,

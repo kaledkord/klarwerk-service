@@ -55,7 +55,7 @@ export default function CitiesOverview() {
             Schleswig-Holstein, Hamburg &amp; NRW
           </p>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.1]">
-            Unser Einsatzgebiet
+            Unser Einsatzgebiet in Schleswig-Holstein
           </h1>
           <p className="mt-6 text-lg text-slate-400 leading-relaxed max-w-2xl">
             KlarWerk Service ist in ganz Schleswig-Holstein, Hamburg und Nordrhein-Westfalen für Sie da.

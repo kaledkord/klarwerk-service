@@ -71,7 +71,7 @@ export default function Services() {
         <SeitenKopf className="max-w-7xl mx-auto px-6">
           <div className="klw-auftritt">
             <span className="text-brand-300 text-sm font-semibold uppercase tracking-widest">Leistungen</span>
-            <h1 className="mt-3 text-4xl sm:text-5xl md:text-6xl font-black tracking-tight hyphens-auto">Unsere Dienstleistungen</h1>
+            <h1 className="mt-3 text-4xl sm:text-5xl md:text-6xl font-black tracking-tight hyphens-auto">Leistungen der Gebäudereinigung</h1>
             <p className="mt-6 text-lg text-slate-300 max-w-2xl leading-relaxed">
               Von der regelmäßigen Büroreinigung bis zum kompletten Hausmeisterservice – wir bieten Ihnen maßgeschneiderte Lösungen für Ihr Objekt.
             </p>

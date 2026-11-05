@@ -196,26 +196,44 @@ export const serviceContents: Record<string, ServiceContent> = {
 
   unterhaltsreinigung: {
     id: 'unterhaltsreinigung',
-    h1: 'Unterhaltsreinigung für dauerhaft saubere Räume',
+    h1: 'Unterhaltsreinigung in Schleswig-Holstein',
     intro:
-      'Sauberkeit, die man nicht organisieren muss: Die Unterhaltsreinigung von KlarWerk Service hält Büros, Praxen, Gewerbe und Wohnanlagen dauerhaft in Form – nach einem festen Plan, in der Frequenz, die zu Ihrer Nutzung passt. Ein festes Team kennt Ihr Objekt, hält Termine verlässlich ein und sichert die Qualität über Reinigungspläne und regelmäßige Kontrollen. Böden, Oberflächen, Sanitär- und Sozialräume bleiben so konstant gepflegt, Ihre Flächen behalten ihren Wert – und Sie haben den Kopf frei fürs Kerngeschäft.',
+      'Die Unterhaltsreinigung von KlarWerk Service hält Büros, Praxen, Gewerbe und Wohnanlagen in Schleswig-Holstein dauerhaft sauber – nach einem festen Plan, in der Frequenz, die zu Ihrer Nutzung passt. Sauberkeit, die Sie nicht organisieren müssen. Ein festes Team kennt Ihr Objekt, hält Termine verlässlich ein und sichert die Qualität über Reinigungspläne und regelmäßige Kontrollen. Böden, Oberflächen, Sanitär- und Sozialräume bleiben so konstant gepflegt, Ihre Flächen behalten ihren Wert – und Sie haben den Kopf frei fürs Kerngeschäft.',
     process: defaultProcess,
     advantages: defaultAdvantages,
     areas: defaultAreas,
     sustainability: defaultSustainability,
     faqs: [
       { question: 'Was ist der Unterschied zwischen Unterhalts- und Grundreinigung?', answer: 'Die Unterhaltsreinigung ist die regelmäßige, wiederkehrende Reinigung nach festem Plan. Die Grundreinigung ist eine seltene, besonders gründliche Intensivreinigung – ideal ergänzend ein- bis zweimal im Jahr.' },
-      { question: 'Wie oft findet die Unterhaltsreinigung statt?', answer: 'Das legen wir gemeinsam fest – täglich, mehrmals pro Woche, wöchentlich oder vierzehntägig. Frequenz und Umfang richten sich nach Nutzung und Anforderungen.' },
+      { question: 'Wie oft findet die Unterhaltsreinigung statt?', answer: 'Täglich, mehrmals pro Woche, wöchentlich oder vierzehntägig – je Bereich so, wie Nutzung und Anforderungen es verlangen. Den Rhythmus legen wir gemeinsam im Leistungsverzeichnis fest.' },
+      { question: 'Gehört die Treppenhausreinigung dazu?', answer: 'Ja. Treppenhäuser, Eingänge, Flure und Gemeinschaftsflächen reinigen wir im festen Turnus, meist wöchentlich oder vierzehntägig, mit einem Ansprechpartner für die Hausverwaltung.' },
       { question: 'Bekommen wir ein festes Reinigungsteam?', answer: 'Ja. Sie erhalten ein festes Team mit festem Ansprechpartner, das Ihr Objekt kennt – das sichert gleichbleibende Qualität und kurze Wege.' },
-      { question: 'Wird außerhalb unserer Arbeitszeiten gereinigt?', answer: 'Auf Wunsch reinigen wir frühmorgens, abends oder am Wochenende, damit Ihr Betrieb ungestört bleibt.' },
+      { question: 'Wird außerhalb unserer Arbeitszeiten gereinigt?', answer: 'Ja, auf Wunsch frühmorgens, abends oder am Wochenende, damit Ihr Betrieb ungestört bleibt.' },
       { question: 'Sind Reinigungsmittel und Material inklusive?', answer: 'Ja, wir bringen alle benötigten Reinigungsmittel, Materialien und die passende Technik mit. Verbrauchsmaterial wie Seife oder Papier können wir auf Wunsch mitliefern.' },
-      { question: 'Wie wird die Qualität sichergestellt?', answer: 'Wir arbeiten mit Reinigungsplänen und Checklisten und führen regelmäßige Qualitätskontrollen durch – so bleibt das Ergebnis dauerhaft auf hohem Niveau.' },
+      { question: 'Wie wird die Qualität sichergestellt?', answer: 'Mit Reinigungsplänen, Checklisten und regelmäßigen Qualitätskontrollen durch Ihren festen Ansprechpartner – so bleibt das Ergebnis dauerhaft auf hohem Niveau.' },
     ],
+    abschnitte: [
+      {
+        titel: 'Was ist Unterhaltsreinigung?',
+        text: 'Unterhaltsreinigung ist die regelmäßige, wiederkehrende Reinigung eines Gebäudes nach festem Plan – der größte Teil jeder Gebäudereinigung. Dazu gehören Böden, Sanitär- und Sozialräume, Teeküchen, Treppenhäuser, Flure und Eingänge, Kontaktflächen wie Türklinken und Handläufe sowie Papierkörbe und Abfall. Jeder Bereich bekommt im Leistungsverzeichnis sein eigenes Intervall: Sanitär und Sozialräume meist täglich oder mehrmals pro Woche, Treppenhäuser und Flure wöchentlich oder vierzehntägig. Anders als die Grundreinigung, die ein- bis zweimal im Jahr in die Tiefe geht, hält die Unterhaltsreinigung den Zustand dauerhaft. Ein festes Team kennt Ihr Objekt, Ihr Ansprechpartner kontrolliert regelmäßig, und bei Urlaub oder Krankheit übernimmt eine eingearbeitete Vertretung.',
+      },
+      {
+        titel: 'Unterhaltsreinigung in Ihrer Stadt',
+        text: 'Für Kiel, Neumünster, Rendsburg und unseren Sitz Bordesholm gibt es eigene Seiten mit Einsatzgebiet, Zielgruppen und Fragen vor Ort. Darüber hinaus übernehmen wir die Unterhaltsreinigung in Preetz, Plön, Eckernförde, Bad Segeberg, Eutin und Lübeck sowie in Hamburg.',
+        links: [
+          { label: 'Unterhaltsreinigung in Kiel', to: '/leistungen/unterhaltsreinigung/kiel' },
+          { label: 'Unterhaltsreinigung in Neumünster', to: '/leistungen/unterhaltsreinigung/neumuenster' },
+          { label: 'Unterhaltsreinigung in Rendsburg', to: '/leistungen/unterhaltsreinigung/rendsburg' },
+          { label: 'Unterhaltsreinigung in Bordesholm', to: '/leistungen/unterhaltsreinigung/bordesholm' },
+        ],
+      },
+    ],
+    stand: { iso: '2026-11-05', anzeige: '05.11.2026' },
     seo: {
       // Kiel, Neumünster, Bordesholm und Rendsburg haben eigene Seiten (/leistungen/unterhaltsreinigung/<stadt>).
       title: 'Unterhaltsreinigung Schleswig-Holstein | KlarWerk Service',
       description:
-        'Regelmäßige Unterhaltsreinigung für Büros, Praxen, Gewerbe und Wohnanlagen in ganz Schleswig-Holstein. Fester Plan, ein Ansprechpartner aus Bordesholm.',
+        'Unterhaltsreinigung für Büros, Praxen, Gewerbe und Wohnanlagen in Schleswig-Holstein: fester Plan, fester Ansprechpartner. Angebot anfragen.',
       keywords: `Unterhaltsreinigung, unterhaltsreinigung Kiel, Gebäudereinigung regelmäßig, Büroreinigung Vertrag, ${localKeywords}`,
     },
   },
@@ -382,32 +400,51 @@ export const serviceContents: Record<string, ServiceContent> = {
 
   grundreinigung: {
     id: 'grundreinigung',
-    h1: 'Grundreinigung für einen sauberen Neuanfang',
+    h1: 'Grundreinigung in Schleswig-Holstein',
     intro:
-      'Manchmal reicht die normale Reinigung nicht – vor dem Einzug, nach dem Umbau oder wenn sich über die Zeit Schichten festgesetzt haben. Die Grundreinigung von KlarWerk Service geht in die Tiefe: Böden, Sanitär, Küchen und schwer zugängliche Bereiche werden intensiv gereinigt, auf Wunsch inklusive Bodenversiegelung und Fensterreinigung. Vorab erhalten Sie ein transparentes Festpreis-Angebot mit klarer Zeitvorgabe, das benötigte Material und die Technik bringen wir mit. Das Ergebnis ist ein sauberer Neuanfang – bis in die letzte Ecke.',
+      'Die Grundreinigung von KlarWerk Service geht in die Tiefe: Böden, Sanitär, Küchen und schwer zugängliche Bereiche werden intensiv gereinigt, auf Wunsch inklusive Bodenversiegelung und Fensterreinigung – mit unserem eigenen Team, das auch das Aus- und Einräumen der Räume übernimmt. Sinnvoll ist sie vor dem Einzug, nach dem Umbau oder wenn sich über die Zeit Schichten festgesetzt haben. Vorab erhalten Sie ein transparentes Festpreis-Angebot mit klarer Zeitvorgabe, das benötigte Material und die Technik bringen wir mit. Das Ergebnis ist ein sauberer Neuanfang – bis in die letzte Ecke.',
     process: defaultProcess,
     advantages: defaultAdvantages,
     areas: defaultAreas,
     sustainability: defaultSustainability,
     faqs: [
-      { question: 'Wann ist eine Grundreinigung sinnvoll?', answer: 'Vor Einzug, nach Bauarbeiten, bei Objektübergabe oder als tiefgehende Jahresaktion – immer, wenn es besonders gründlich sein muss.' },
+      { question: 'Wann ist eine Grundreinigung sinnvoll?', answer: 'Vor Einzug, nach Bauarbeiten, bei Objektübergabe oder als tiefgehende Jahresaktion – immer, wenn es besonders gründlich sein muss. In Kitas und Schulen bieten sich die Ferien an.' },
       { question: 'Ist die Grundreinigung teurer als die Unterhaltsreinigung?', answer: 'Ja, da sie deutlich aufwendiger ist. Sie erhalten vorab ein transparentes Festpreis-Angebot.' },
-      { question: 'Reinigen Sie auch Böden versiegelungsreif?', answer: 'Ja, auf Wunsch übernehmen wir Bodenversiegelung und -pflege als Teil der Grundreinigung.' },
+      { question: 'Machen Sie auch die Versiegelung?', answer: 'Ja, mit unserem eigenen Team, ohne Subunternehmer. Bodenversiegelung und -pflege übernehmen wir auf Wunsch als Teil der Grundreinigung.' },
+      { question: 'Müssen wir die Räume vorher ausräumen?', answer: 'Nein. Das Aus- und Einräumen der Räume übernehmen wir, damit die Übergabe schnell geht.' },
       { question: 'Sind Fenster inklusive?', answer: 'Fenster- und Glasreinigung können als Baustein hinzugebucht werden.' },
       { question: 'Wie lange dauert eine Grundreinigung?', answer: 'Je nach Größe und Zustand des Objekts – von einem Tag bis zu mehreren Tagen. Wir nennen Ihnen eine klare Zeitvorgabe.' },
       { question: 'Stellen Sie das Material bereit?', answer: 'Ja, wir bringen alle benötigten Reinigungs- und Pflegemittel sowie die passende Technik mit.' },
     ],
+    abschnitte: [
+      {
+        titel: 'Was ist eine Grundreinigung?',
+        text: 'Eine Grundreinigung ist eine einmalige, besonders gründliche Reinigung, die entfernt, was die laufende Unterhaltsreinigung nicht mehr schafft: Laufstraßen und alte Pflegefilme auf Böden, Kalk und Ablagerungen im Sanitär, Schmutz in Ecken, an Sockelleisten und in schwer zugänglichen Bereichen. Bei KlarWerk Service macht das unser eigenes Team, ohne Subunternehmer, und auf Wunsch versiegeln wir die Böden anschließend. Das Aus- und Einräumen der Räume übernehmen wir, damit die Übergabe schnell geht. Sinnvoll ist eine Grundreinigung vor dem Einzug, nach Bauarbeiten, bei der Objektübergabe oder einmal im Jahr – in Kitas und Schulen in den Ferien, in Praxen in den Praxisferien. Vorab erhalten Sie ein Festpreis-Angebot mit Zeitplan.',
+      },
+      {
+        titel: 'Grundreinigung in Ihrer Stadt',
+        text: 'Für Kiel, Neumünster, Rendsburg und unseren Sitz Bordesholm gibt es eigene Seiten mit Einsatzgebiet, Zielgruppen und Fragen vor Ort. Darüber hinaus übernehmen wir Grundreinigungen in weiteren Orten Schleswig-Holsteins und in Hamburg.',
+        links: [
+          { label: 'Grundreinigung in Kiel', to: '/leistungen/grundreinigung/kiel' },
+          { label: 'Grundreinigung in Neumünster', to: '/leistungen/grundreinigung/neumuenster' },
+          { label: 'Grundreinigung in Rendsburg', to: '/leistungen/grundreinigung/rendsburg' },
+          { label: 'Grundreinigung in Bordesholm', to: '/leistungen/grundreinigung/bordesholm' },
+        ],
+      },
+    ],
+    stand: { iso: '2026-11-05', anzeige: '05.11.2026' },
     seo: {
       title: 'Grundreinigung in Schleswig-Holstein & Hamburg | KlarWerk',
+      // Khaleds Festlegung (01.11.2026): Grundreinigung und Versiegelung mit eigenem Team, Aus- und Einräumen inklusive.
       description:
-        'Grundreinigung für Büros, Praxen und Gewerbe in Schleswig-Holstein und Hamburg: gründlich bis in die Tiefe, vor Einzug oder nach Umbau, zum Festpreis.',
+        'Grundreinigung und Versiegelung in Schleswig-Holstein mit eigenem Team: Aus- und Einräumen inklusive, Festpreis, schnelle Übergabe. Angebot anfragen.',
       keywords: `Grundreinigung, Intensivreinigung, Bodenversiegelung, Desinfektion, ${localKeywords}`,
     },
   },
 
   bauendreinigung: {
     id: 'bauendreinigung',
-    h1: 'Bauendreinigung – sauberer Abschluss nach Bauarbeiten',
+    h1: 'Bauendreinigung in Schleswig-Holstein',
     intro:
       'Nach dem letzten Gewerk steht der Übergabe nur noch der Baustaub im Weg – und der sitzt hartnäckig auf jeder Fläche. KlarWerk Service übernimmt die Bauendreinigung, sobald keine staubintensiven Arbeiten mehr anstehen: Wir entfernen Baustaub, Farb-, Mörtel- und Klebereste schonend von Flächen, Rahmen und Profilen und reinigen Fenster und Böden übergabefertig. Auf Wunsch ergänzen wir eine intensive Grundreinigung und organisieren die Entsorgung von Reststoffen. Sie erhalten eine verbindliche Zeitvorgabe im Angebot – und am Ende ein Objekt, das bezugsfertig ist.',
     process: defaultProcess,
@@ -415,18 +452,36 @@ export const serviceContents: Record<string, ServiceContent> = {
     areas: defaultAreas,
     sustainability: defaultSustainability,
     faqs: [
-      { question: 'Wann sollte die Bauendreinigung erfolgen?', answer: 'Nach Abschluss aller Gewerke, sobald keine staubintensiven Arbeiten mehr anstehen.' },
+      { question: 'Was ist der Unterschied zwischen Grob- und Feinreinigung?', answer: 'Die Grobreinigung räumt zwischen den Gewerken Baustaub und grobe Reste weg, damit die nächsten Arbeiten sauber starten können. Die Feinreinigung kommt am Ende und macht das Objekt übergabefertig – Böden, Fenster, Rahmen, Sanitär und alle Oberflächen.' },
+      { question: 'Wann sollte die Bauendreinigung erfolgen?', answer: 'Nach Abschluss aller Gewerke, sobald keine staubintensiven Arbeiten mehr anstehen. Grobreinigungen zwischendurch stimmen wir mit Ihrem Bauzeitenplan ab.' },
       { question: 'Entfernen Sie auch Farb- und Mörtelreste?', answer: 'Ja, wir entfernen schonend Farb-, Mörtel- und Klebereste von Flächen, Rahmen und Profilen.' },
       { question: 'Reinigen Sie auch die Fenster nach Baustaub?', answer: 'Fenster- und Glasreinigung gehören zum Standardumfang der Bauendreinigung.' },
       { question: 'Wie lange dauert die Bauendreinigung?', answer: 'Abhängig von Objektgröße und Verschmutzungsgrad – wir nennen Ihnen eine verbindliche Zeitvorgabe im Angebot.' },
       { question: 'Können Sie die Reinigung mit einer Grundreinigung kombinieren?', answer: 'Ja, auf Wunsch ergänzen wir die Bauendreinigung um eine intensive Grundreinigung für alle Flächen.' },
-      { question: 'Stellen Sie Container für den Bauschutt?', answer: 'Die Entsorgung von Reststoffen organisieren wir auf Wunsch gerne für Sie.' },
+      { question: 'Stellen Sie Container für den Bauschutt?', answer: 'Die Entsorgung von Reststoffen organisieren wir auf Wunsch. Bauschutt und Containerstellung klären wir vorab mit Ihnen.' },
     ],
+    abschnitte: [
+      {
+        titel: 'Was gehört zur Bauendreinigung?',
+        text: 'Zur Bauendreinigung gehört alles, was nach Neubau, Umbau oder Sanierung zwischen Baustelle und Übergabe steht: Baustaub auf allen Flächen, Farb-, Mörtel- und Klebereste an Böden, Rahmen und Profilen, Fenster und Glas, Sanitär und Küchen. Wir arbeiten in den Stufen, die Ihr Bauablauf braucht – mit Grobreinigung zwischen den Gewerken und Feinreinigung vor der Übergabe. Reste entfernen wir so, dass neue Böden, Rahmen und Profile keinen Schaden nehmen, nach den Vorgaben der Hersteller. Die Termine stimmen wir mit Bauleitung und Gewerken ab, im Angebot steht eine verbindliche Zeitvorgabe, und auf Wunsch schließen wir eine Grundreinigung mit Ersteinpflege der Böden an.',
+      },
+      {
+        titel: 'Bauendreinigung in Ihrer Stadt',
+        text: 'Für Kiel, Neumünster, Rendsburg und unseren Sitz Bordesholm gibt es eigene Seiten mit Einsatzgebiet, Zielgruppen und Fragen vor Ort. Darüber hinaus reinigen wir Baustellen in weiteren Orten Schleswig-Holsteins und in Hamburg.',
+        links: [
+          { label: 'Bauendreinigung in Kiel', to: '/leistungen/bauendreinigung/kiel' },
+          { label: 'Bauendreinigung in Neumünster', to: '/leistungen/bauendreinigung/neumuenster' },
+          { label: 'Bauendreinigung in Rendsburg', to: '/leistungen/bauendreinigung/rendsburg' },
+          { label: 'Bauendreinigung in Bordesholm', to: '/leistungen/bauendreinigung/bordesholm' },
+        ],
+      },
+    ],
+    stand: { iso: '2026-11-05', anzeige: '05.11.2026' },
     seo: {
       // Kiel, Neumünster, Bordesholm und Rendsburg haben eigene Seiten (/leistungen/bauendreinigung/<stadt>).
       title: 'Bauendreinigung Schleswig-Holstein | KlarWerk Service',
       description:
-        'Bauendreinigung in Schleswig-Holstein: Baustaub, Farb- und Mörtelreste, Fenster und Böden – übergabefertig nach Bau und Renovierung. Jetzt anfragen.',
+        'Bauendreinigung in Schleswig-Holstein: Grob- und Feinreinigung nach Bau und Renovierung, Baustaub, Farb- und Mörtelreste entfernt. Angebot anfragen.',
       keywords: `Bauendreinigung, Baureinigung, Baustaub entfernen, Farbreste entfernen, ${localKeywords}`,
     },
   },

@@ -2,7 +2,7 @@
 
 > KlarWerk Service ist ein inhabergeführtes Gebäudereinigungs- und Gebäudeservice-Unternehmen mit Sitz in Bordesholm, Schleswig-Holstein (Inhaber: Khaled Saleh). Wir reinigen und pflegen Büros, Praxen, Kitas, Schulen, Wohnanlagen und Gewerbeobjekte – zuverlässig, flexibel und mit festen Ansprechpartnern. Schwerpunkt: Kiel, Neumünster, Rendsburg, das Amt Bordesholm, Preetz und Umgebung; dazu Hamburg.
 
-Zuletzt aktualisiert: 2026-11-02
+Zuletzt aktualisiert: 2026-11-05
 
 ## Über das Unternehmen
 
@@ -37,6 +37,15 @@ A: KlarWerk Service aus Bordesholm reinigt Büros und Praxen in Kiel, Neumünste
 Q: Wie kommt man bei KlarWerk Service zu einem Angebot?
 A: Über eine kostenlose Besichtigung vor Ort. KlarWerk Service kalkuliert den Festpreis mit einem eigenen Programm für die Gebäudereinigung und legt Bereiche und Intervalle in einem Leistungsverzeichnis fest.
 
+Q: Welche Reinigungsfirma macht Gebäudereinigung in Rendsburg?
+A: KlarWerk Service aus Bordesholm reinigt Büros, Praxen, Kitas, Schulen, Wohnanlagen und Geschäftsobjekte in allen Stadtteilen von Rendsburg und in den Nachbargemeinden Büdelsdorf, Osterrönfeld, Westerrönfeld, Schacht-Audorf, Fockbek, Alt Duvenstedt, Rickert und Nübbel; von Bordesholm über die A7 in rund 30 Minuten. Übersicht: https://klarwerk-service.com/einsatzgebiet/rendsburg
+
+Q: Wer macht Gebäudereinigung oder Fensterreinigung in Preetz und Plön?
+A: KlarWerk Service reinigt Wohnanlagen, Büros, Praxen und Geschäftsobjekte in Preetz, Plön und Eckernförde, dazu Fenster und Glasflächen innen und außen im festen Turnus. Seiten: https://klarwerk-service.com/einsatzgebiet/preetz und https://klarwerk-service.com/einsatzgebiet/ploen-eckernfoerde
+
+Q: Was ist der Unterschied zwischen Unterhaltsreinigung und Grundreinigung?
+A: Die Unterhaltsreinigung ist die regelmäßige Reinigung nach festem Plan (Sanitär und Sozialräume meist täglich oder mehrmals pro Woche, Treppenhäuser und Flure wöchentlich oder vierzehntägig). Die Grundreinigung ist eine einmalige, besonders gründliche Reinigung, etwa vor dem Einzug, nach Bauarbeiten oder in den Ferien.
+
 Q: Macht KlarWerk Service Grundreinigung und Versiegelung selbst?
 A: Ja, mit eigenem Team, ohne Subunternehmer. Das Aus- und Einräumen der Räume übernimmt KlarWerk Service, z. B. in Kitas und Schulen in den Ferien.
 
@@ -60,8 +69,15 @@ A: Ja, mit eigenem Team, ohne Subunternehmer. Das Aus- und Einräumen der Räume
 
 - [Startseite](https://klarwerk-service.com/)
 - [Leistungen](https://klarwerk-service.com/leistungen)
-- [Glasreinigung](https://klarwerk-service.com/leistungen/glasreinigung)
-- [Praxisreinigung](https://klarwerk-service.com/leistungen/praxisreinigung)
+- [Gebäudereinigung in Schleswig-Holstein](https://klarwerk-service.com/leistungen/gebaeudereinigung): Überblick über alle Reinigungsleistungen
+- [Unterhaltsreinigung](https://klarwerk-service.com/leistungen/unterhaltsreinigung): regelmäßige Reinigung nach festem Leistungsverzeichnis, inkl. Treppenhausreinigung
+- [Büroreinigung](https://klarwerk-service.com/leistungen/bueroreinigung): Büros, Kanzleien und Verwaltungen außerhalb der Arbeitszeit
+- [Praxisreinigung](https://klarwerk-service.com/leistungen/praxisreinigung): Arzt-, Zahnarzt- und Therapiepraxen nach Hygieneplan
+- [Glas- und Fensterreinigung](https://klarwerk-service.com/leistungen/glasreinigung): innen und außen, im festen Turnus oder einmalig
+- [Grundreinigung](https://klarwerk-service.com/leistungen/grundreinigung): mit eigenem Team inkl. Versiegelung, Aus- und Einräumen
+- [Bauendreinigung](https://klarwerk-service.com/leistungen/bauendreinigung): Grob- und Feinreinigung nach Bau und Renovierung
+- [Hausmeisterservice](https://klarwerk-service.com/leistungen/hausmeisterservice): Objektbetreuung, kleine Reparaturen, Grünpflege
+- [Gebäudereinigung in Bordesholm](https://klarwerk-service.com/einsatzgebiet/bordesholm) · [Kiel](https://klarwerk-service.com/einsatzgebiet/kiel) · [Neumünster](https://klarwerk-service.com/einsatzgebiet/neumuenster) · [Rendsburg](https://klarwerk-service.com/einsatzgebiet/rendsburg) · [Preetz](https://klarwerk-service.com/einsatzgebiet/preetz) · [Plön & Eckernförde](https://klarwerk-service.com/einsatzgebiet/ploen-eckernfoerde) · [Bad Segeberg](https://klarwerk-service.com/einsatzgebiet/bad-segeberg) · [Eutin](https://klarwerk-service.com/einsatzgebiet/eutin) · [Lübeck](https://klarwerk-service.com/einsatzgebiet/luebeck) · [Hamburg](https://klarwerk-service.com/einsatzgebiet/hamburg)
 - [Büroreinigung in Kiel](https://klarwerk-service.com/leistungen/bueroreinigung/kiel): Büros, Kanzleien und Agenturen in Kiel und Umland, außerhalb der Arbeitszeit, mit festem Ansprechpartner und eingearbeiteter Vertretung
 - [Praxisreinigung in Kiel](https://klarwerk-service.com/leistungen/praxisreinigung/kiel): Arzt-, Zahnarzt- und Therapiepraxen in Kiel und Umland, außerhalb der Sprechzeiten, nach dem Hygieneplan der Praxis
 - [Glasreinigung in Neumünster](https://klarwerk-service.com/leistungen/glasreinigung/neumuenster): Fenster und Glasflächen für Geschäfte, Büros, Praxen und Wohnanlagen in Neumünster, innen und außen, im Turnus oder einmalig

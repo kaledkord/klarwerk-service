@@ -247,16 +247,37 @@ export const cities: City[] = [
     slug: 'preetz',
     name: 'Preetz',
     region: 'Schleswig-Holstein',
+    // „gebäudereinigung preetz“ 73 Impressionen (Pos. 32), landete auf Kiel-, Büro- und Gebäudeseite statt hier (Mira, 05.11.2026).
     description:
-      'Gebäudereinigung in Preetz: Zuverlässige Reinigung für Wohn- und Geschäftsobjekte. Persönlicher Service für Preetz und Umgebung.',
+      'Gebäudereinigung in Preetz: Unterhalts-, Treppenhaus-, Büro-, Praxis- und Glasreinigung für Wohnanlagen und Gewerbe. Angebot anfragen.',
+    seoTitle: 'Gebäudereinigung Preetz – Reinigungsfirma | KlarWerk',
     intro:
-      'KlarWerk Service bietet professionelle Gebäudereinigung in Preetz und Umgebung an. Wir betreuen Wohnanlagen, Büros und Geschäftsobjekte in der Schusterstadt mit persönlichem Engagement und regionaler Nähe.',
+      'KlarWerk Service reinigt Wohnanlagen, Büros, Praxen und Geschäftsobjekte in Preetz und Umgebung – in der Schusterstadt zwischen Kiel und Plön. Regelmäßig nach festem Plan, mit festem Ansprechpartner und regionaler Nähe.',
     highlights: [
-      'Regelmäßige Reinigung für Wohnanlagen in Preetz',
-      'Büroreinigung für kleine und mittlere Unternehmen',
-      'Hausmeisterservice für Wohnanlagen und Gewerbe',
-      'Gartenpflege für Außenanlagen in Preetz',
+      { text: 'Unterhalts- und Treppenhausreinigung für Wohnanlagen in Preetz', to: '/leistungen/unterhaltsreinigung' },
+      { text: 'Büroreinigung für kleine und mittlere Unternehmen', to: '/leistungen/bueroreinigung' },
+      { text: 'Praxisreinigung nach Hygieneplan', to: '/leistungen/praxisreinigung' },
+      { text: 'Hausmeisterservice für Wohnanlagen und Gewerbe', to: '/leistungen/hausmeisterservice' },
     ],
+    abschnitte: [
+      {
+        titel: 'Welche Reinigungsfirma reinigt Gebäude in Preetz?',
+        text: 'KlarWerk Service ist ein inhabergeführtes Gebäudereinigungsunternehmen aus Bordesholm, das Wohnanlagen, Büros, Praxen und Geschäftsobjekte in Preetz und Umgebung reinigt. Zum Angebot gehören Unterhalts- und Treppenhausreinigung, Büro-, Praxis- und Glasreinigung, Grund- und Bauendreinigung sowie Hausmeisterservice und Gartenpflege. Grundreinigung und Versiegelung macht unser eigenes Team, das Aus- und Einräumen der Räume übernehmen wir. Vor jedem Auftrag sehen wir uns das Objekt kostenlos an und kalkulieren einen Festpreis mit unserem eigenen Programm für die Gebäudereinigung; Bereiche und Intervalle stehen in einem Leistungsverzeichnis. Jedes Objekt hat einen festen Ansprechpartner, und bei Urlaub oder Krankheit übernimmt eine eingearbeitete Vertretung.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Machen Sie Treppenhausreinigung in Preetz?',
+        answer:
+          'Ja, als Teil der Unterhaltsreinigung: Treppenhäuser, Eingänge und Gemeinschaftsflächen im festen Turnus, meist wöchentlich oder vierzehntägig, mit einem Ansprechpartner für die Hausverwaltung.',
+      },
+      {
+        question: 'Reinigen Sie auch Praxen und Büros in Preetz?',
+        answer:
+          'Ja. Büros reinigen wir außerhalb der Arbeitszeit, Praxen nach dem Hygieneplan der Praxis und außerhalb der Sprechzeiten.',
+      },
+    ],
+    stand: { iso: '2026-11-05', anzeige: '05.11.2026' },
     image: '/bilder/stadt-preetz.jpg',
     tier: 1,
   },
@@ -264,16 +285,42 @@ export const cities: City[] = [
     slug: 'ploen-eckernfoerde',
     name: 'Plön & Eckernförde',
     region: 'Schleswig-Holstein',
+    // „gebäudereinigung plön“ 76 Impressionen (Pos. 52) und Fensterreinigungs-Suchen für Plön landeten auf
+    // Startseite und Glasseite statt hier (Mira, 05.11.2026).
     description:
-      'Gebäudereinigung in Plön und Eckernförde: Professionelle Reinigung für Wohn- und Geschäftsobjekte. Zuverlässig, flexibel und persönlich betreut.',
+      'Gebäudereinigung in Plön und Eckernförde: Unterhalts-, Büro- und Praxisreinigung, Fenster- und Glasreinigung, fester Ansprechpartner. Angebot anfragen.',
     intro:
-      'KlarWerk Service bietet Gebäudereinigung in Plön und Eckernförde an. Von der Holsteinischen Schweiz bis zur Ostseeküste sorgen wir für Sauberkeit in Wohnanlagen, Büros und Geschäftsobjekten – mit regionaler Nähe und persönlichem Engagement.',
+      'KlarWerk Service reinigt Wohnanlagen, Büros, Praxen und Geschäftsobjekte in Plön und Eckernförde – von der Holsteinischen Schweiz bis zur Ostseeküste. Dazu kommen Fenster- und Glasreinigung im festen Turnus, mit regionaler Nähe und einem festen Ansprechpartner.',
     highlights: [
-      'Büroreinigung für Unternehmen in Plön und Eckernförde',
-      'Treppenhausreinigung für Wohnanlagen',
-      'Hausmeisterservice für Wohnanlagen und Gewerbe',
-      'Gartenpflege und Außenanlagenpflege',
+      { text: 'Büroreinigung für Unternehmen in Plön und Eckernförde', to: '/leistungen/bueroreinigung' },
+      { text: 'Fenster- und Glasreinigung, innen und außen', to: '/leistungen/glasreinigung' },
+      { text: 'Treppenhaus- und Unterhaltsreinigung für Wohnanlagen', to: '/leistungen/unterhaltsreinigung' },
+      { text: 'Hausmeisterservice für Wohnanlagen und Gewerbe', to: '/leistungen/hausmeisterservice' },
     ],
+    abschnitte: [
+      {
+        titel: 'Gebäudereinigung in Plön',
+        text: 'In Plön reinigt KlarWerk Service Wohnanlagen, Büros, Praxen und Geschäftsobjekte – regelmäßig nach festem Plan oder einmalig, etwa als Grund- oder Bauendreinigung. Ein Schwerpunkt ist die Fenster- und Glasreinigung: Fenster, Glastüren und Schaufenster reinigen wir streifenfrei, innen und außen, im festen Turnus oder einmalig zum Anlass, auf Wunsch mit Rahmen und Fensterbänken. Höher gelegene Flächen erreichen wir mit Teleskop- und Leitersystemen; was nur mit Hubsteiger oder Gerüst geht, klären wir vorab. Glas innen lässt sich in die laufende Büro- oder Praxisreinigung einplanen, Fenster außen kommen im eigenen Turnus dazu. Vor jedem Auftrag sehen wir uns das Objekt kostenlos an und kalkulieren einen Festpreis mit unserem eigenen Programm für die Gebäudereinigung; Bereiche und Intervalle stehen in einem Leistungsverzeichnis. Jedes Objekt hat einen festen Ansprechpartner, und bei Urlaub oder Krankheit übernimmt eine eingearbeitete Vertretung.',
+        link: { label: 'Mehr zur Glasreinigung', to: '/leistungen/glasreinigung' },
+      },
+      {
+        titel: 'Gebäudereinigung in Eckernförde',
+        text: 'In Eckernförde übernehmen wir die laufende Unterhalts- und Treppenhausreinigung für Wohnanlagen, die Büroreinigung außerhalb der Arbeitszeit, die Praxisreinigung nach Hygieneplan und die Glasreinigung im festen Turnus. Grundreinigung und Versiegelung macht unser eigenes Team, das Aus- und Einräumen der Räume übernehmen wir. Hausverwaltungen und Betriebe mit Objekten in Plön und Eckernförde haben einen Ansprechpartner für alle Häuser.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Machen Sie Fensterreinigung in Plön?',
+        answer:
+          'Ja. Fenster, Glastüren und Schaufenster reinigen wir in Plön streifenfrei, innen und außen, im festen Turnus oder einmalig – auf Wunsch mit Rahmen und Fensterbänken.',
+      },
+      {
+        question: 'Reinigen Sie auch in Eckernförde?',
+        answer:
+          'Ja. In Eckernförde übernehmen wir Unterhalts- und Treppenhausreinigung, Büro- und Praxisreinigung, Glasreinigung sowie Grund- und Bauendreinigung.',
+      },
+    ],
+    stand: { iso: '2026-11-05', anzeige: '05.11.2026' },
     image: '/bilder/stadt-ploen-eckernfoerde.jpg',
     tier: 1,
   },
@@ -282,15 +329,22 @@ export const cities: City[] = [
     name: 'Bad Segeberg',
     region: 'Schleswig-Holstein',
     description:
-      'Gebäudereinigung in Bad Segeberg für Büros, Praxen, Wohnanlagen und Geschäftsobjekte: regelmäßig, zuverlässig und persönlich betreut.',
+      'Gebäudereinigung in Bad Segeberg für Büros, Praxen, Wohnanlagen und Geschäfte: fester Plan, fester Ansprechpartner, Festpreis. Angebot anfragen.',
     intro:
-      'In Bad Segeberg bietet KlarWerk Service umfassende Gebäudereinigung für gewerbliche und private Kunden. Vom Kurort bis ins Umland sorgen wir für Sauberkeit in Bürogebäuden, Wohnanlagen und Geschäftsobjekten.',
+      'KlarWerk Service reinigt Büros, Praxen, Wohnanlagen und Geschäftsobjekte in Bad Segeberg und im Kreis Segeberg – für gewerbliche und private Auftraggeber, vom Kurort bis ins Umland.',
     highlights: [
       'Büroreinigung im Bad Segeberger Stadtgebiet',
       'Treppenhausreinigung für Wohnanlagen',
       'Glasreinigung für Geschäfte und Praxen',
       'Hausmeisterservice für Wohnanlagen in Bad Segeberg',
     ],
+    abschnitte: [
+      {
+        titel: 'Welche Reinigungsfirma reinigt Gebäude in Bad Segeberg?',
+        text: 'KlarWerk Service ist ein inhabergeführtes Gebäudereinigungsunternehmen aus Bordesholm, das auch in Bad Segeberg und im Kreis Segeberg reinigt: Büros, Praxen, Wohnanlagen und Geschäftsobjekte. Zum Angebot gehören Unterhalts- und Treppenhausreinigung, Büro-, Praxis- und Glasreinigung, Grund- und Bauendreinigung sowie Hausmeisterservice. Vor jedem Auftrag sehen wir uns das Objekt kostenlos an und kalkulieren einen Festpreis mit unserem eigenen Programm für die Gebäudereinigung; Bereiche und Intervalle stehen in einem Leistungsverzeichnis. Jedes Objekt hat einen festen Ansprechpartner, und bei Urlaub oder Krankheit übernimmt eine eingearbeitete Vertretung.',
+      },
+    ],
+    stand: { iso: '2026-11-05', anzeige: '05.11.2026' },
     image: '/bilder/stadt-bad-segeberg.jpg',
     tier: 1,
   },
@@ -299,15 +353,22 @@ export const cities: City[] = [
     name: 'Eutin',
     region: 'Schleswig-Holstein',
     description:
-      'Gebäudereinigung in Eutin: Professionelle Reinigung für Wohn- und Geschäftsobjekte. Zuverlässig, flexibel und persönlich betreut.',
+      'Gebäudereinigung in Eutin für Wohnanlagen, Büros, Praxen und Geschäfte: fester Plan, fester Ansprechpartner, Festpreis. Angebot anfragen.',
     intro:
-      'KlarWerk Service bietet Gebäudereinigung in Eutin und Umgebung an. In der Rosenstadt und im gesamten Kreis Ostholstein sorgen wir für Sauberkeit in Wohnanlagen, Büros und Geschäftsobjekten mit persönlichem Engagement.',
+      'KlarWerk Service reinigt Wohnanlagen, Büros, Praxen und Geschäftsobjekte in Eutin und Umgebung – in der Rosenstadt und im Kreis Ostholstein, regelmäßig nach festem Plan und mit persönlichem Engagement.',
     highlights: [
       'Büroreinigung für Unternehmen in Eutin',
       'Treppenhausreinigung für Wohnanlagen',
       'Hausmeisterservice für Wohnanlagen und Gewerbe',
       'Gartenpflege und Außenanlagenpflege in Eutin',
     ],
+    abschnitte: [
+      {
+        titel: 'Welche Reinigungsfirma reinigt Gebäude in Eutin?',
+        text: 'KlarWerk Service ist ein inhabergeführtes Gebäudereinigungsunternehmen aus Bordesholm, das auch in Eutin und im Kreis Ostholstein reinigt: Wohnanlagen, Büros, Praxen und Geschäftsobjekte. Zum Angebot gehören Unterhalts- und Treppenhausreinigung, Büro-, Praxis- und Glasreinigung, Grund- und Bauendreinigung sowie Hausmeisterservice und Gartenpflege. Vor jedem Auftrag sehen wir uns das Objekt kostenlos an und kalkulieren einen Festpreis mit unserem eigenen Programm für die Gebäudereinigung; Bereiche und Intervalle stehen in einem Leistungsverzeichnis. Jedes Objekt hat einen festen Ansprechpartner, und bei Urlaub oder Krankheit übernimmt eine eingearbeitete Vertretung.',
+      },
+    ],
+    stand: { iso: '2026-11-05', anzeige: '05.11.2026' },
     image: '/bilder/stadt-eutin.jpg',
     tier: 1,
   },

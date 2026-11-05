@@ -114,15 +114,20 @@ function preloadTags(route) {
 /** Rendert einen React-Baum vollständig (wartet auch auf lazy()-Seiten) zu einem HTML-String. */
 function renderToHtml(element) {
   return new Promise((resolvePromise, reject) => {
-    let html = '';
+    // React 18 (renderToPipeableStream) schiebt vor manchen Umlauten und Gedankenstrichen an
+    // Puffergrenzen Nullbytes ein; das Zeichen selbst bleibt richtig (gefunden 05.11.2026, u. a.
+    // „Lagerhallenreinigung NUL NUL– …“). Deshalb Bytes sammeln, am Ende als UTF-8 lesen und
+    // Nullzeichen entfernen – in HTML sind sie nie gültig.
+    const teile = [];
     const sink = new Writable({
       write(chunk, _encoding, callback) {
-        html += chunk;
+        // Kopie, weil React den Puffer hinter dem Block weiterverwenden kann.
+        teile.push(Buffer.from(chunk));
         callback();
       },
       final(callback) {
         callback();
-        resolvePromise(html);
+        resolvePromise(Buffer.concat(teile).toString('utf8').replaceAll('\u0000', ''));
       },
     });
     const { pipe } = renderToPipeableStream(element, {

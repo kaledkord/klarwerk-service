@@ -20,7 +20,7 @@ export const seoConfig = {
     canonical: '/',
   },
   '/ueber-uns': {
-    title: 'Über uns',
+    title: 'Über uns – Gebäudereinigung aus Bordesholm | KlarWerk',
     description:
       'Über KlarWerk Service: inhabergeführte Gebäudereinigung und Gebäudeservice für Schleswig-Holstein, Hamburg und NRW mit persönlicher Betreuung.',
     canonical: '/ueber-uns',

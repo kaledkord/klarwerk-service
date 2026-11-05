@@ -283,7 +283,7 @@ export const serviceContents: Record<string, ServiceContent> = {
       { question: 'Können Sie außerhalb der Sprechzeiten arbeiten?', answer: 'Ja, das ist die Regel: abends nach der letzten Sprechstunde, früh morgens vor Praxisbeginn oder an Ihren freien Nachmittagen.' },
       { question: 'Wer reinigt bei Urlaub oder Krankheit?', answer: 'Eine eingearbeitete Vertretung, die Ihre Praxis und den Reinigungsplan kennt. Ihr fester Ansprechpartner bleibt derselbe.' },
       { question: 'Wie gehen Sie mit Patientendaten um?', answer: 'Diskret: Akten, Unterlagen und Bildschirme fassen wir nicht an. Auf Wunsch unterschreiben wir eine Verschwiegenheitsvereinbarung für Ihre Praxis.' },
-      { question: 'Bieten Sie auch die Entsorgung von Praxisabfällen an?', answer: 'Die Entsorgung von Hausmüll übernehmen wir; für medizinische Abfälle arbeiten wir mit zertifizierten Partnern zusammen.' },
+      { question: 'Bieten Sie auch die Entsorgung von Praxisabfällen an?', answer: 'Papierkörbe und Hausmüll leeren wir bei jeder Reinigung. Medizinische Abfälle gehören nicht zu unserem Leistungsumfang; sie bleiben bei Ihrer Praxis und Ihrem Entsorger.' },
     ],
     abschnitte: [
       {
@@ -301,7 +301,7 @@ export const serviceContents: Record<string, ServiceContent> = {
         ],
       },
     ],
-    stand: { iso: '2026-11-03', anzeige: '03.11.2026' },
+    stand: { iso: '2026-11-05', anzeige: '05.11.2026' },
     seo: {
       // Kiel, Neumünster, Rendsburg und Bordesholm haben eigene Seiten (/leistungen/praxisreinigung/<stadt>);
       // die allgemeine Seite trägt deshalb keinen Stadtnamen im Title (Mira, 01.11.2026).

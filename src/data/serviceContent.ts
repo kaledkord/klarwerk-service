@@ -444,7 +444,7 @@ export const serviceContents: Record<string, ServiceContent> = {
 
   bauendreinigung: {
     id: 'bauendreinigung',
-    h1: 'Bauendreinigung – sauberer Abschluss nach Bauarbeiten',
+    h1: 'Bauendreinigung in Schleswig-Holstein',
     intro:
       'Nach dem letzten Gewerk steht der Übergabe nur noch der Baustaub im Weg – und der sitzt hartnäckig auf jeder Fläche. KlarWerk Service übernimmt die Bauendreinigung, sobald keine staubintensiven Arbeiten mehr anstehen: Wir entfernen Baustaub, Farb-, Mörtel- und Klebereste schonend von Flächen, Rahmen und Profilen und reinigen Fenster und Böden übergabefertig. Auf Wunsch ergänzen wir eine intensive Grundreinigung und organisieren die Entsorgung von Reststoffen. Sie erhalten eine verbindliche Zeitvorgabe im Angebot – und am Ende ein Objekt, das bezugsfertig ist.',
     process: defaultProcess,
@@ -452,18 +452,36 @@ export const serviceContents: Record<string, ServiceContent> = {
     areas: defaultAreas,
     sustainability: defaultSustainability,
     faqs: [
-      { question: 'Wann sollte die Bauendreinigung erfolgen?', answer: 'Nach Abschluss aller Gewerke, sobald keine staubintensiven Arbeiten mehr anstehen.' },
+      { question: 'Was ist der Unterschied zwischen Grob- und Feinreinigung?', answer: 'Die Grobreinigung räumt zwischen den Gewerken Baustaub und grobe Reste weg, damit die nächsten Arbeiten sauber starten können. Die Feinreinigung kommt am Ende und macht das Objekt übergabefertig – Böden, Fenster, Rahmen, Sanitär und alle Oberflächen.' },
+      { question: 'Wann sollte die Bauendreinigung erfolgen?', answer: 'Nach Abschluss aller Gewerke, sobald keine staubintensiven Arbeiten mehr anstehen. Grobreinigungen zwischendurch stimmen wir mit Ihrem Bauzeitenplan ab.' },
       { question: 'Entfernen Sie auch Farb- und Mörtelreste?', answer: 'Ja, wir entfernen schonend Farb-, Mörtel- und Klebereste von Flächen, Rahmen und Profilen.' },
       { question: 'Reinigen Sie auch die Fenster nach Baustaub?', answer: 'Fenster- und Glasreinigung gehören zum Standardumfang der Bauendreinigung.' },
       { question: 'Wie lange dauert die Bauendreinigung?', answer: 'Abhängig von Objektgröße und Verschmutzungsgrad – wir nennen Ihnen eine verbindliche Zeitvorgabe im Angebot.' },
       { question: 'Können Sie die Reinigung mit einer Grundreinigung kombinieren?', answer: 'Ja, auf Wunsch ergänzen wir die Bauendreinigung um eine intensive Grundreinigung für alle Flächen.' },
-      { question: 'Stellen Sie Container für den Bauschutt?', answer: 'Die Entsorgung von Reststoffen organisieren wir auf Wunsch gerne für Sie.' },
+      { question: 'Stellen Sie Container für den Bauschutt?', answer: 'Die Entsorgung von Reststoffen organisieren wir auf Wunsch. Bauschutt und Containerstellung klären wir vorab mit Ihnen.' },
     ],
+    abschnitte: [
+      {
+        titel: 'Was gehört zur Bauendreinigung?',
+        text: 'Zur Bauendreinigung gehört alles, was nach Neubau, Umbau oder Sanierung zwischen Baustelle und Übergabe steht: Baustaub auf allen Flächen, Farb-, Mörtel- und Klebereste an Böden, Rahmen und Profilen, Fenster und Glas, Sanitär und Küchen. Wir arbeiten in den Stufen, die Ihr Bauablauf braucht – mit Grobreinigung zwischen den Gewerken und Feinreinigung vor der Übergabe. Reste entfernen wir so, dass neue Böden, Rahmen und Profile keinen Schaden nehmen, nach den Vorgaben der Hersteller. Die Termine stimmen wir mit Bauleitung und Gewerken ab, im Angebot steht eine verbindliche Zeitvorgabe, und auf Wunsch schließen wir eine Grundreinigung mit Ersteinpflege der Böden an.',
+      },
+      {
+        titel: 'Bauendreinigung in Ihrer Stadt',
+        text: 'Für Kiel, Neumünster, Rendsburg und unseren Sitz Bordesholm gibt es eigene Seiten mit Einsatzgebiet, Zielgruppen und Fragen vor Ort. Darüber hinaus reinigen wir Baustellen in weiteren Orten Schleswig-Holsteins und in Hamburg.',
+        links: [
+          { label: 'Bauendreinigung in Kiel', to: '/leistungen/bauendreinigung/kiel' },
+          { label: 'Bauendreinigung in Neumünster', to: '/leistungen/bauendreinigung/neumuenster' },
+          { label: 'Bauendreinigung in Rendsburg', to: '/leistungen/bauendreinigung/rendsburg' },
+          { label: 'Bauendreinigung in Bordesholm', to: '/leistungen/bauendreinigung/bordesholm' },
+        ],
+      },
+    ],
+    stand: { iso: '2026-11-05', anzeige: '05.11.2026' },
     seo: {
       // Kiel, Neumünster, Bordesholm und Rendsburg haben eigene Seiten (/leistungen/bauendreinigung/<stadt>).
       title: 'Bauendreinigung Schleswig-Holstein | KlarWerk Service',
       description:
-        'Bauendreinigung in Schleswig-Holstein: Baustaub, Farb- und Mörtelreste, Fenster und Böden – übergabefertig nach Bau und Renovierung. Jetzt anfragen.',
+        'Bauendreinigung in Schleswig-Holstein: Grob- und Feinreinigung nach Bau und Renovierung, Baustaub, Farb- und Mörtelreste entfernt. Angebot anfragen.',
       keywords: `Bauendreinigung, Baureinigung, Baustaub entfernen, Farbreste entfernen, ${localKeywords}`,
     },
   },

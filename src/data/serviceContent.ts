@@ -400,25 +400,44 @@ export const serviceContents: Record<string, ServiceContent> = {
 
   grundreinigung: {
     id: 'grundreinigung',
-    h1: 'Grundreinigung für einen sauberen Neuanfang',
+    h1: 'Grundreinigung in Schleswig-Holstein',
     intro:
-      'Manchmal reicht die normale Reinigung nicht – vor dem Einzug, nach dem Umbau oder wenn sich über die Zeit Schichten festgesetzt haben. Die Grundreinigung von KlarWerk Service geht in die Tiefe: Böden, Sanitär, Küchen und schwer zugängliche Bereiche werden intensiv gereinigt, auf Wunsch inklusive Bodenversiegelung und Fensterreinigung. Vorab erhalten Sie ein transparentes Festpreis-Angebot mit klarer Zeitvorgabe, das benötigte Material und die Technik bringen wir mit. Das Ergebnis ist ein sauberer Neuanfang – bis in die letzte Ecke.',
+      'Die Grundreinigung von KlarWerk Service geht in die Tiefe: Böden, Sanitär, Küchen und schwer zugängliche Bereiche werden intensiv gereinigt, auf Wunsch inklusive Bodenversiegelung und Fensterreinigung – mit unserem eigenen Team, das auch das Aus- und Einräumen der Räume übernimmt. Sinnvoll ist sie vor dem Einzug, nach dem Umbau oder wenn sich über die Zeit Schichten festgesetzt haben. Vorab erhalten Sie ein transparentes Festpreis-Angebot mit klarer Zeitvorgabe, das benötigte Material und die Technik bringen wir mit. Das Ergebnis ist ein sauberer Neuanfang – bis in die letzte Ecke.',
     process: defaultProcess,
     advantages: defaultAdvantages,
     areas: defaultAreas,
     sustainability: defaultSustainability,
     faqs: [
-      { question: 'Wann ist eine Grundreinigung sinnvoll?', answer: 'Vor Einzug, nach Bauarbeiten, bei Objektübergabe oder als tiefgehende Jahresaktion – immer, wenn es besonders gründlich sein muss.' },
+      { question: 'Wann ist eine Grundreinigung sinnvoll?', answer: 'Vor Einzug, nach Bauarbeiten, bei Objektübergabe oder als tiefgehende Jahresaktion – immer, wenn es besonders gründlich sein muss. In Kitas und Schulen bieten sich die Ferien an.' },
       { question: 'Ist die Grundreinigung teurer als die Unterhaltsreinigung?', answer: 'Ja, da sie deutlich aufwendiger ist. Sie erhalten vorab ein transparentes Festpreis-Angebot.' },
-      { question: 'Reinigen Sie auch Böden versiegelungsreif?', answer: 'Ja, auf Wunsch übernehmen wir Bodenversiegelung und -pflege als Teil der Grundreinigung.' },
+      { question: 'Machen Sie auch die Versiegelung?', answer: 'Ja, mit unserem eigenen Team, ohne Subunternehmer. Bodenversiegelung und -pflege übernehmen wir auf Wunsch als Teil der Grundreinigung.' },
+      { question: 'Müssen wir die Räume vorher ausräumen?', answer: 'Nein. Das Aus- und Einräumen der Räume übernehmen wir, damit die Übergabe schnell geht.' },
       { question: 'Sind Fenster inklusive?', answer: 'Fenster- und Glasreinigung können als Baustein hinzugebucht werden.' },
       { question: 'Wie lange dauert eine Grundreinigung?', answer: 'Je nach Größe und Zustand des Objekts – von einem Tag bis zu mehreren Tagen. Wir nennen Ihnen eine klare Zeitvorgabe.' },
       { question: 'Stellen Sie das Material bereit?', answer: 'Ja, wir bringen alle benötigten Reinigungs- und Pflegemittel sowie die passende Technik mit.' },
     ],
+    abschnitte: [
+      {
+        titel: 'Was ist eine Grundreinigung?',
+        text: 'Eine Grundreinigung ist eine einmalige, besonders gründliche Reinigung, die entfernt, was die laufende Unterhaltsreinigung nicht mehr schafft: Laufstraßen und alte Pflegefilme auf Böden, Kalk und Ablagerungen im Sanitär, Schmutz in Ecken, an Sockelleisten und in schwer zugänglichen Bereichen. Bei KlarWerk Service macht das unser eigenes Team, ohne Subunternehmer, und auf Wunsch versiegeln wir die Böden anschließend. Das Aus- und Einräumen der Räume übernehmen wir, damit die Übergabe schnell geht. Sinnvoll ist eine Grundreinigung vor dem Einzug, nach Bauarbeiten, bei der Objektübergabe oder einmal im Jahr – in Kitas und Schulen in den Ferien, in Praxen in den Praxisferien. Vorab erhalten Sie ein Festpreis-Angebot mit Zeitplan.',
+      },
+      {
+        titel: 'Grundreinigung in Ihrer Stadt',
+        text: 'Für Kiel, Neumünster, Rendsburg und unseren Sitz Bordesholm gibt es eigene Seiten mit Einsatzgebiet, Zielgruppen und Fragen vor Ort. Darüber hinaus übernehmen wir Grundreinigungen in weiteren Orten Schleswig-Holsteins und in Hamburg.',
+        links: [
+          { label: 'Grundreinigung in Kiel', to: '/leistungen/grundreinigung/kiel' },
+          { label: 'Grundreinigung in Neumünster', to: '/leistungen/grundreinigung/neumuenster' },
+          { label: 'Grundreinigung in Rendsburg', to: '/leistungen/grundreinigung/rendsburg' },
+          { label: 'Grundreinigung in Bordesholm', to: '/leistungen/grundreinigung/bordesholm' },
+        ],
+      },
+    ],
+    stand: { iso: '2026-11-05', anzeige: '05.11.2026' },
     seo: {
       title: 'Grundreinigung in Schleswig-Holstein & Hamburg | KlarWerk',
+      // Khaleds Festlegung (01.11.2026): Grundreinigung und Versiegelung mit eigenem Team, Aus- und Einräumen inklusive.
       description:
-        'Grundreinigung für Büros, Praxen und Gewerbe in Schleswig-Holstein und Hamburg: gründlich bis in die Tiefe, vor Einzug oder nach Umbau, zum Festpreis.',
+        'Grundreinigung und Versiegelung in Schleswig-Holstein mit eigenem Team: Aus- und Einräumen inklusive, Festpreis, schnelle Übergabe. Angebot anfragen.',
       keywords: `Grundreinigung, Intensivreinigung, Bodenversiegelung, Desinfektion, ${localKeywords}`,
     },
   },

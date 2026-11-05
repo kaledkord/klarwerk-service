@@ -218,9 +218,10 @@ export const cities: City[] = [
     name: 'Rendsburg',
     region: 'Schleswig-Holstein',
     description:
-      'Gebäudereinigung in Rendsburg für Büros, Praxen, Wohnanlagen und Geschäftsobjekte: regelmäßig, zuverlässig und persönlich betreut.',
+      'Gebäudereinigung in Rendsburg und Umgebung: Unterhalts-, Treppenhaus-, Büro-, Praxis- und Glasreinigung, fester Ansprechpartner. Angebot anfragen.',
+    seoTitle: 'Gebäudereinigung Rendsburg – Reinigungsfirma | KlarWerk',
     intro:
-      'KlarWerk Service bietet Gebäudereinigung in Rendsburg für Unternehmen, Praxen, Immobilienverwaltungen und private Auftraggeber. An der Eider und im gesamten Kreis Rendsburg-Eckernförde sorgen wir für Sauberkeit in Bürogebäuden, Wohnanlagen und Geschäftsobjekten.',
+      'KlarWerk Service reinigt Büros, Praxen, Kitas, Schulen, Wohnanlagen und Geschäftsobjekte in Rendsburg – nördlich der Eider ebenso wie an Eider und Kanal – und in den Nachbargemeinden wie Büdelsdorf, Osterrönfeld und Fockbek. Von unserem Sitz in Bordesholm sind wir über die A7 in rund 30 Minuten bei Ihnen.',
     eigeneSeiten: {
       vorspann: 'Für die häufigsten Aufträge in Rendsburg haben wir eigene Seiten:',
       links: [
@@ -238,8 +239,37 @@ export const cities: City[] = [
       { text: 'Büroreinigung in Rendsburg nach Feierabend', to: '/leistungen/bueroreinigung/rendsburg' },
       { text: 'Praxisreinigung in Rendsburg nach Hygieneplan', to: '/leistungen/praxisreinigung/rendsburg' },
       { text: 'Glasreinigung in Rendsburg, streifenfrei innen und außen', to: '/leistungen/glasreinigung/rendsburg' },
-      'Treppenhausreinigung für Wohnanlagen in Rendsburg',
+      { text: 'Treppenhaus- und Unterhaltsreinigung für Wohnanlagen in Rendsburg', to: '/leistungen/unterhaltsreinigung/rendsburg' },
     ],
+    abschnitte: [
+      {
+        titel: 'Welche Reinigungsfirma reinigt Gebäude in Rendsburg?',
+        text: 'KlarWerk Service ist ein inhabergeführtes Gebäudereinigungsunternehmen aus Bordesholm, das Büros, Praxen, Kitas, Schulen, Wohnanlagen und Geschäftsobjekte in ganz Rendsburg reinigt: nördlich der Eider in Rendsburg-Nord, Mastbrook, Rotenhof, Kronwerk, Duten, Seemühlen und Suhmsheide, an Eider und Kanal in der Altstadt, in Neuwerk, Parksiedlung, Nobiskrug, Hoheluft, Schleife, Hochfeld, Kreishafen, Rendsburg-Süd und Marienhöh, dazu in Büdelsdorf, Osterrönfeld, Westerrönfeld, Schacht-Audorf, Fockbek, Alt Duvenstedt, Rickert und Nübbel. Zum Angebot gehören Unterhalts- und Treppenhausreinigung, Büro-, Praxis- und Glasreinigung, Kita- und Schulreinigung, Grund- und Bauendreinigung sowie Hausmeisterservice. Vor jedem Auftrag sehen wir uns das Objekt kostenlos an und kalkulieren einen Festpreis mit unserem eigenen Programm für die Gebäudereinigung.',
+      },
+      {
+        titel: 'Unterhalts- und Treppenhausreinigung in Rendsburg',
+        text: 'Die laufende Reinigung läuft nach einem festen Leistungsverzeichnis, in dem jeder Bereich sein eigenes Intervall hat: Treppenhäuser, Eingänge und Flure meist wöchentlich oder vierzehntägig, Sanitär und Sozialräume häufiger. Eingänge, in die bei Wind und Regen an Eider und Kanal viel Nässe und Schmutz hereingetragen wird, reinigen wir in der nassen Jahreszeit öfter. Hausverwaltungen und Betriebe mit Objekten in Rendsburg und den Nachbargemeinden haben einen Ansprechpartner für alle Häuser. Regelmäßige Kontrollen sorgen dafür, dass der Plan eingehalten wird, und bei Urlaub oder Krankheit übernimmt eine eingearbeitete Vertretung.',
+        link: { label: 'Unterhaltsreinigung in Rendsburg', to: '/leistungen/unterhaltsreinigung/rendsburg' },
+      },
+    ],
+    faqs: [
+      {
+        question: 'In welchen Stadtteilen von Rendsburg reinigen Sie?',
+        answer:
+          'In allen: nördlich der Eider ebenso wie in der Altstadt, in Neuwerk und am Kanal. Dazu kommen die Nachbargemeinden Büdelsdorf, Osterrönfeld, Westerrönfeld, Schacht-Audorf, Fockbek, Alt Duvenstedt, Rickert und Nübbel.',
+      },
+      {
+        question: 'Wie schnell sind Sie in Rendsburg?',
+        answer:
+          'In rund 30 Minuten: Von unserem Sitz in Bordesholm fahren wir über die A7 nach Rendsburg. Besichtigung, Kontrollen und Absprachen sind so gut planbar.',
+      },
+      {
+        question: 'Machen Sie Treppenhausreinigung in Rendsburg?',
+        answer:
+          'Ja, als Teil der Unterhaltsreinigung: Treppenhäuser, Eingänge und Gemeinschaftsflächen im festen Turnus, meist wöchentlich oder vierzehntägig, mit einem Ansprechpartner für die Verwaltung.',
+      },
+    ],
+    stand: { iso: '2026-11-05', anzeige: '05.11.2026' },
     image: '/bilder/stadt-rendsburg.jpg',
     tier: 1,
   },
